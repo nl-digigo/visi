@@ -1,17 +1,18 @@
 SCHEMA visiXML_MessageSchema;
 
 -- Peter Bonsma (TNO)
+-- Peter Willems (TNO)
 
 -- Complete model Systematics Part II
 
 ENTITY GroupTemplate;
  name : STRING;
  description : STRING;
- creationDate : DATE;
- startDate : DATE;
- endDate : DATE;
+ creationDate : DATETIME;
+ startDate : DATETIME;
+ endDate : DATETIME;
  state : STRING;
- dateLamu : DATE;
+ dateLamu : DATETIME;
  userLamu : STRING;
  versionNo : STRING;
 
@@ -20,7 +21,7 @@ END_ENTITY;
 
 ENTITY AppendixGroup;
  state : STRING;
- dateLamu : DATE;
+ dateLamu : DATETIME;
  userLamu : STRING;
 
  group : GroupTemplate;
@@ -28,17 +29,17 @@ END_ENTITY;
 
 ENTITY AppendixTemplate;
  name : STRING;
- fileLokation : STRING;
+ fileLocation : STRING;
  fileType : STRING;
  fileVersion : STRING;
  documentIdentification : STRING;
  documentVersion : STRING;
  documentReference : STRING;
  objectCode : OPTIONAL STRING;
- startDate : DATE;
- endDate : DATE;
+ startDate : DATETIME;
+ endDate : DATETIME;
  state : STRING;
- dateLamu : DATE;
+ dateLamu : DATETIME;
  userLamu : STRING;
  language : OPTIONAL STRING;
 
@@ -49,24 +50,35 @@ END_ENTITY;
 
 ENTITY MessageTemplate;
  identification : STRING;
- dateSend : DATE;
- dateRead : DATE;
+ dateSend : DATETIME;
+ dateRead : DATETIME;
  state : STRING;
- dateLamu : DATE;
+ dateLamu : DATETIME;
  userLamu : STRING;
+ initiatingTransactionMessageID : OPTIONAL STRING;
  initiatorToExecutor : BOOLEAN;
 
+ messageInTransaction : MessageInTransactionTemplate;
  transaction : TransactionTemplate;
  template : ComplexElementTemplate;
+END_ENTITY;
+
+ENTITY MessageInTransactionTemplate;
+ identification : STRING;
+ dateSend : DATETIME;
+ dateRead : DATETIME;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
 END_ENTITY;
 
 ENTITY TransactionTemplate;
  name : STRING;
  description : STRING;
- startDate : DATE;
- endDate : DATE;
+ startDate : DATETIME;
+ endDate : DATETIME;
  state : STRING;
- dateLamu : DATE;
+ dateLamu : DATETIME;
  userLamu : STRING;
  result : OPTIONAL STRING;
 
@@ -78,9 +90,9 @@ END_ENTITY;
 ENTITY TransactionPhaseTemplate;
  name : STRING;
  description : STRING;
- dateReached : DATE;
+ dateReached : DATETIME;
  state : STRING;
- dateLamu : DATE;
+ dateLamu : DATETIME;
  userLamu : STRING;
 
  transaction : TransactionTemplate;
@@ -90,7 +102,7 @@ ENTITY PersonTemplate;
  userName : STRING;
  name : STRING;
  state : STRING;
- dateLamu : DATE;
+ dateLamu : DATETIME;
  userLamu : STRING;
 
  template : ComplexElementTemplate;
@@ -99,7 +111,7 @@ END_ENTITY;
 ENTITY OrganisationTemplate;
  name : STRING;
  state : STRING;
- dateLamu : DATE;
+ dateLamu : DATETIME;
  userLamu : STRING;
 
  contactPerson : PersonTemplate;
@@ -108,10 +120,10 @@ END_ENTITY;
 
 ENTITY PersonInRole;
  state : STRING;
- dateLamu : DATE;
+ dateLamu : DATETIME;
  userLamu : STRING;
 
- authorise : OPTIONAL SET [1:?] OF PersonTemplate;
+ successor : OPTIONAL PersonInRole;
  contactPerson : PersonTemplate;
  organisation : OrganisationTemplate;
  role : RoleTemplate;
@@ -121,7 +133,7 @@ ENTITY RoleTemplate;
  name : STRING;
  description : STRING;
  state : STRING;
- dateLamu : DATE;
+ dateLamu : DATETIME;
  userLamu : STRING;
  category : OPTIONAL STRING;
 END_ENTITY;
@@ -129,10 +141,10 @@ END_ENTITY;
 ENTITY ProjectTypeInstance;
  name : STRING;
  description : STRING;
- startDate : DATE;
- endDate : DATE;
+ startDate : DATETIME;
+ endDate : DATETIME;
  state : STRING;
- dateLamu : DATE;
+ dateLamu : DATETIME;
  userLamu : STRING;
 
  template : ComplexElementTemplate;
