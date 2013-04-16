@@ -1,16 +1,15 @@
 SCHEMA visiXML_VISI_Systematics;
 
--- Peter Bonsma (TNO)
+-- Complete model Part I, version 1.3, Release Candidate 30 November 2011
 
--- Complete model Systematics Part I
-
-ENTITY ProjectType;	--	Definitie van een bepaalde groep projecten, in het algemeen 1 instance aanwezig in een raamwerk met als reden het definieren van de structuur van elementen die door voor elke instance van dit tot object gepromote ProjectType ingevuld moet worden.
+ENTITY ProjectType;	--	The definition of a specific group of projects. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of project should expose.
+ namespace : STRING;
  description : STRING;
- startDate : DATETIME;
- endDate : DATETIME;
- state : STRING;
- dateLamu : DATETIME;
- userLamu : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
  language : OPTIONAL STRING;
  category : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;
@@ -19,13 +18,13 @@ ENTITY ProjectType;	--	Definitie van een bepaalde groep projecten, in het algeme
  complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
 END_ENTITY;
 
-ENTITY PersonType;	--	Definitie van een bepaalde groep personen, in het algemeen 1 instance aanwezig in een raamwerk met als reden het definieren van de structuur van elementen die door voor elke instance van dit tot object gepromote PersonType ingevuld moet worden.
+ENTITY PersonType;	--	The definition of a specific group of persons. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of person should expose.
  description : STRING;
- startDate : DATETIME;
- endDate : DATETIME;
- state : STRING;
- dateLamu : DATETIME;
- userLamu : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
  language : OPTIONAL STRING;
  category : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;
@@ -34,13 +33,13 @@ ENTITY PersonType;	--	Definitie van een bepaalde groep personen, in het algemeen
  complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
 END_ENTITY;
 
-ENTITY OrganisationType;	--	Definitie van een bepaalde groep organisaties, in het algemeen 1 instance aanwezig in een raamwerk met als reden het definieren van de structuur van elementen die door voor elke instance van dit tot object gepromote OrganisationType ingevuld moet worden.
+ENTITY OrganisationType;	--	The definition of a specific group of organizations. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of organisation should expose.
  description : STRING;
- startDate : DATETIME;
- endDate : DATETIME;
- state : STRING;
- dateLamu : DATETIME;
- userLamu : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
  language : OPTIONAL STRING;
  category : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;
@@ -49,13 +48,13 @@ ENTITY OrganisationType;	--	Definitie van een bepaalde groep organisaties, in he
  complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
 END_ENTITY;
 
-ENTITY AppendixType;	--	Een AppendixType bevat de definitie van een bijlage. Welke gegevens bijgehouden worden bij een bijlage is te definieren in het xml veld.
+ENTITY AppendixType;	--	An AppendixType contains the definition of an appendix. Which data items should be recorded with an appendix can be specified in the complex element section.
  description : STRING;
- startDate : DATETIME;
- endDate : DATETIME;
- state : STRING;
- dateLamu : DATETIME;
- userLamu : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
  language : OPTIONAL STRING;
  category : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;
@@ -64,13 +63,13 @@ ENTITY AppendixType;	--	Een AppendixType bevat de definitie van een bijlage. Wel
  complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
 END_ENTITY;
 
-ENTITY ComplexElementType;	--	Een ComplexElementType is een verzameling van SimpleElementTypes, elk genoemd SimpleElementType komt precies het aantal keer voor dat hij genoemd wordt.
+ENTITY ComplexElementType;	--	A ComplexElementType contains a set of SimpleElementTypes. Each stated SimpleElementType occurs exactly the number of times mentioned.
  description : STRING;
- startDate : DATETIME;
- endDate : DATETIME;
- state : STRING;
- dateLamu : DATETIME;
- userLamu : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
  language : OPTIONAL STRING;
  category : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;
@@ -79,22 +78,23 @@ ENTITY ComplexElementType;	--	Een ComplexElementType is een verzameling van Simp
  simpleElements : OPTIONAL SET [0:?] OF SimpleElementType;
 END_ENTITY;
 
-ENTITY MessageType;	--	De definitie van een type bericht (MessageType), hierin is ook gedefineerd hoe dit bericht gestructureerd is en welke verzameling van SimpleElementType's (via ComplexElementType's) hierbij horen.
+ENTITY MessageType;	--	The definition of a type of message (MessageType), specifying the structure of the message and which set of SimpleElementType's (via ComplexElementType's) may accompany.
  description : STRING;
- startDate : DATETIME;
- endDate : DATETIME;
- state : STRING;
- dateLamu : DATETIME;
- userLamu : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
  language : OPTIONAL STRING;
  category : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;
  code : OPTIONAL STRING;
 
  complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+ appendixTypes : OPTIONAL SET [1:?] OF AppendixType;
 END_ENTITY;
 
-ENTITY ElementCondition;	--	De conditie op een SimpleElementType gebruikt binnen een specifiek MessageType.
+ENTITY ElementCondition;	--	The condition of a SimpleElementType as used within a specific MessageType.
  description : STRING;
  condition : STRING;
  helpInfo : OPTIONAL STRING;
@@ -104,12 +104,12 @@ ENTITY ElementCondition;	--	De conditie op een SimpleElementType gebruikt binnen
  messageInTransaction : OPTIONAL MessageInTransactionType;
 END_ENTITY;
 
-ENTITY SimpleElementType;	--	Een specificatie van een simpel element type (SimpleElementType). Dit ElementType beschrijft een eigenschap die binnen verschillende objectstructuren zoals bijv. in MessageType kan voorkomen (zie ook AppendixType, ProjectType, PersonType en OrganisationType), de relatie is dan altijd via ComplexElementType.
+ENTITY SimpleElementType;	--	The definition of a simple element type (SimpleElementType). This element type specifies a property whic may occur within various object structures like for example in MessageType (see also AppendixType, ProjectType, PersonType and OrganisationType). A SimpleElementType is always embedded in a ComplexElementType.
  description : STRING;
- interfaceType : STRING;
- state : STRING;
- dateLamu : DATETIME;
- userLamu : STRING;
+ interfaceType : OPTIONAL STRING;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
  language : OPTIONAL STRING;
  category : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;
@@ -118,73 +118,75 @@ ENTITY SimpleElementType;	--	Een specificatie van een simpel element type (Simpl
  userDefinedType : UserDefinedType;
 END_ENTITY;
 
-ENTITY UserDefinedType;		--	Een specificatie van een data type (v.e. SimpleElementType). Dit DataType geeft de vorm aan invulvelden in het uiteindelijk bericht, zoals bijvoorbeeld een postcode begint altijd met 4 cijfers en dan volgen verplicht 2 letters.
+ENTITY UserDefinedType;		--	A specification of a data type (to be used in a SimpleElementType). This data type encapsulates fill in areas in the final message, like for example a Dutch zip code starts always with four digits and then two characters.
  description : STRING;
- state : STRING;
- dateLamu : DATETIME;
- userLamu : STRING;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
  baseType : STRING;
  xsdRestriction : OPTIONAL STRING;
  language : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;
 END_ENTITY;
 
-ENTITY MessageInTransactionType;	--	De instantiatie van een MessageType binnen een TransactionType behorende bij een bepaald groep type (GroupType).
- requiredNotify : INTEGER;
- dateLamu : DATETIME;
- userLamu : STRING;
- received : BOOLEAN;
- send : BOOLEAN;
- state : STRING;
+ENTITY MessageInTransactionType;	--	The occurrence of a MessageType within a TransactionType related to a certain group type (GroupType).
+ requiredNotify : OPTIONAL INTEGER;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ received : OPTIONAL BOOLEAN;
+ send : OPTIONAL BOOLEAN;
+ state : OPTIONAL STRING;
  initiatorToExecutor : OPTIONAL BOOLEAN;
  openSecondaryTransactionsAllowed : OPTIONAL BOOLEAN;
+ firstMessage : OPTIONAL BOOLEAN;
 
  message : MessageType;
  previous : OPTIONAL SET [0:?] OF MessageInTransactionType;
  transaction : TransactionType;
  transactionPhase : OPTIONAL TransactionPhaseType;
- group : GroupType;
+ group : OPTIONAL GroupType;
+ appendixTypes : OPTIONAL SET [1:?] OF AppendixType;
 END_ENTITY;
 
-ENTITY TransactionPhaseType;		--	Het definieren van de transactie fase types waarin een transactie zich kan bevinden. Voorbeelden zijn 'opdracht geaccepteerd' en 'deelresultaat ontvangen'.
+ENTITY TransactionPhaseType;		--	The definition of a phase related to a transaction. Examples are 'assignment accepted' or 'result part received'.
  description : STRING;
- startDate : DATETIME;
- endDate : DATETIME;
- state : STRING;
- dateLamu : DATETIME;
- userLamu : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
  language : OPTIONAL STRING;
  category : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;
  code : OPTIONAL STRING;
 END_ENTITY;
 
-ENTITY TransactionType;		--	De definitie van een type transactie, een transtactie type kan tevens zelf weer naar transactie types verwijzen. Een transactie wordt geiniteerd door een persoon behorend bij een oragnisatie in een bepaalde rol, op dit niveau geven we aan welk roltype deze initiator moet bezitten (het gepromote schema zal dit vervolgens afdwingen) idem voor executor.
+ENTITY TransactionType;		--	The definition of a type of transaction. A transaction type may reference again other transaction types. A transaction will be initiated by a person belonging to an organisation fulfilling a certain role. At this level the role type of the initiator should be stated (the promoted schema will enforce this). The same holds for the executor.
  description : STRING;
- startDate : DATETIME;
- endDate : DATETIME;
- state : STRING;
- dateLamu : DATETIME;
- userLamu : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
  language : OPTIONAL STRING;
  category : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;
  code : OPTIONAL STRING;
  result : OPTIONAL STRING;
- basePoint : OPTIONAL STRING;
  
  subTransactions : OPTIONAL SET [1:?] OF TransactionType;
  initiator : RoleType;
  executor : RoleType;
+ appendixTypes : OPTIONAL SET [1:?] OF AppendixType;
 END_ENTITY;
 
-ENTITY RoleType;		--	De definitie van een bepaald rol type, belangrijk voor TransactionType.
+ENTITY RoleType;		--	The definition of a specific role type.
  description : STRING;
- startDate : DATETIME;
- endDate : DATETIME;
- state : STRING;
- dateLamu : DATETIME;
- userLamu : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
  language : OPTIONAL STRING;
  category : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;
@@ -195,13 +197,13 @@ ENTITY RoleType;		--	De definitie van een bepaald rol type, belangrijk voor Tran
  responsibilityFeedback : OPTIONAL STRING;
 END_ENTITY;
 
-ENTITY GroupType;		--	De definitie van de groep voor het opslaan van bijlagen verzonden met een bericht binnen een transactie.
+ENTITY GroupType;		--	The definition of a group to store appendices sent with a message within a transaction.
  description : STRING;
- startDate : DATETIME;
- endDate : DATETIME;
- state : STRING;
- dateLamu : DATETIME;
- userLamu : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
  language : OPTIONAL STRING;
  category : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;

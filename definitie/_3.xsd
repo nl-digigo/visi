@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema targetNamespace="http://www.visi.nl/schemas/20071218" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:visi="http://www.visi.nl/schemas/20071218" elementFormDefault="qualified">
+<xsd:schema targetNamespace="http://www.visi.nl/schemas/20110819" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:visi="http://www.visi.nl/schemas/20110819" elementFormDefault="qualified">
 
 	<!-- root element declaration (for SCHEMA definitions) -->
 	<xsd:element name="visiXML_VISI_Systematics">
@@ -26,72 +26,72 @@
 	<!-- element declarations (for ENTITY definitions) -->
 	<xsd:element name="AppendixType" type="visi:AppendixTypeType">
 		<xsd:annotation>
-			<xsd:documentation>Een AppendixType bevat de definitie van een bijlage. Welke gegevens bijgehouden worden bij een bijlage is te definieren in het xml veld.</xsd:documentation>
+			<xsd:documentation>An AppendixType contains the definition of an appendix. Which data items should be recorded with an appendix can be specified in the complex element section.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="ComplexElementType" type="visi:ComplexElementTypeType">
 		<xsd:annotation>
-			<xsd:documentation>Een ComplexElementType is een verzameling van SimpleElementTypes, elk genoemd SimpleElementType komt precies het aantal keer voor dat hij genoemd wordt.</xsd:documentation>
+			<xsd:documentation>A ComplexElementType contains a set of SimpleElementTypes. Each stated SimpleElementType occurs exactly the number of times mentioned.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="ElementCondition" type="visi:ElementConditionType">
 		<xsd:annotation>
-			<xsd:documentation>De conditie op een SimpleElementType gebruikt binnen een specifiek MessageType.</xsd:documentation>
+			<xsd:documentation>The condition of a SimpleElementType as used within a specific MessageType.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="GroupType" type="visi:GroupTypeType">
 		<xsd:annotation>
-			<xsd:documentation>De definitie van de groep voor het opslaan van bijlagen verzonden met een bericht binnen een transactie.</xsd:documentation>
+			<xsd:documentation>The definition of a group to store appendices sent with a message within a transaction.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="MessageInTransactionType" type="visi:MessageInTransactionTypeType">
 		<xsd:annotation>
-			<xsd:documentation>De instantiatie van een MessageType binnen een TransactionType behorende bij een bepaald groep type (GroupType).</xsd:documentation>
+			<xsd:documentation>The occurrence of a MessageType within a TransactionType related to a certain group type (GroupType).</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="MessageType" type="visi:MessageTypeType">
 		<xsd:annotation>
-			<xsd:documentation>De definitie van een type bericht (MessageType), hierin is ook gedefineerd hoe dit bericht gestructureerd is en welke verzameling van SimpleElementType's (via ComplexElementType's) hierbij horen.</xsd:documentation>
+			<xsd:documentation>The definition of a type of message (MessageType), specifying the structure of the message and which set of SimpleElementType's (via ComplexElementType's) may accompany.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="OrganisationType" type="visi:OrganisationTypeType">
 		<xsd:annotation>
-			<xsd:documentation>Definitie van een bepaalde groep organisaties, in het algemeen 1 instance aanwezig in een raamwerk met als reden het definieren van de structuur van elementen die door voor elke instance van dit tot object gepromote OrganisationType ingevuld moet worden.</xsd:documentation>
+			<xsd:documentation>The definition of a specific group of organizations. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of organisation should expose.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="PersonType" type="visi:PersonTypeType">
 		<xsd:annotation>
-			<xsd:documentation>Definitie van een bepaalde groep personen, in het algemeen 1 instance aanwezig in een raamwerk met als reden het definieren van de structuur van elementen die door voor elke instance van dit tot object gepromote PersonType ingevuld moet worden.</xsd:documentation>
+			<xsd:documentation>The definition of a specific group of persons. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of person should expose.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="ProjectType" type="visi:ProjectTypeType">
 		<xsd:annotation>
-			<xsd:documentation>Definitie van een bepaalde groep projecten, in het algemeen 1 instance aanwezig in een raamwerk met als reden het definieren van de structuur van elementen die door voor elke instance van dit tot object gepromote ProjectType ingevuld moet worden.</xsd:documentation>
+			<xsd:documentation>The definition of a specific group of projects. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of project should expose.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="RoleType" type="visi:RoleTypeType">
 		<xsd:annotation>
-			<xsd:documentation>De definitie van een bepaald rol type, belangrijk voor TransactionType.</xsd:documentation>
+			<xsd:documentation>The definition of a specific role type.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="SimpleElementType" type="visi:SimpleElementTypeType">
 		<xsd:annotation>
-			<xsd:documentation>Een specificatie van een simpel element type (SimpleElementType). Dit ElementType beschrijft een eigenschap die binnen verschillende objectstructuren zoals bijv. in MessageType kan voorkomen (zie ook AppendixType, ProjectType, PersonType en OrganisationType), de relatie is dan altijd via ComplexElementType.</xsd:documentation>
+			<xsd:documentation>The definition of a simple element type (SimpleElementType). This element type specifies a property whic may occur within various object structures like for example in MessageType (see also AppendixType, ProjectType, PersonType and OrganisationType). A SimpleElementType is always embedded in a ComplexElementType.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="TransactionPhaseType" type="visi:TransactionPhaseTypeType">
 		<xsd:annotation>
-			<xsd:documentation>Het definieren van de transactie fase types waarin een transactie zich kan bevinden. Voorbeelden zijn 'opdracht geaccepteerd' en 'deelresultaat ontvangen'.</xsd:documentation>
+			<xsd:documentation>The definition of a phase related to a transaction. Examples are 'assignment accepted' or 'result part received'.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="TransactionType" type="visi:TransactionTypeType">
 		<xsd:annotation>
-			<xsd:documentation>De definitie van een type transactie, een transtactie type kan tevens zelf weer naar transactie types verwijzen. Een transactie wordt geiniteerd door een persoon behorend bij een oragnisatie in een bepaalde rol, op dit niveau geven we aan welk roltype deze initiator moet bezitten (het gepromote schema zal dit vervolgens afdwingen) idem voor executor.</xsd:documentation>
+			<xsd:documentation>The definition of a type of transaction. A transaction type may reference again other transaction types. A transaction will be initiated by a person belonging to an organisation fulfilling a certain role. At this level the role type of the initiator should be stated (the promoted schema will enforce this). The same holds for the executor.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="UserDefinedType" type="visi:UserDefinedTypeType">
 		<xsd:annotation>
-			<xsd:documentation>Een specificatie van een data type (v.e. SimpleElementType). Dit DataType geeft de vorm aan invulvelden in het uiteindelijk bericht, zoals bijvoorbeeld een postcode begint altijd met 4 cijfers en dan volgen verplicht 2 letters.</xsd:documentation>
+			<xsd:documentation>A specification of a data type (to be used in a SimpleElementType). This data type encapsulates fill in areas in the final message, like for example a Dutch zip code starts always with four digits and then two characters.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 
@@ -117,11 +117,11 @@
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
 					<xsd:element name="description" type="xsd:string"/>
-					<xsd:element name="startDate" type="xsd:dateTime"/>
-					<xsd:element name="endDate" type="xsd:dateTime"/>
-					<xsd:element name="state" type="xsd:string"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
@@ -143,11 +143,11 @@
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
 					<xsd:element name="description" type="xsd:string"/>
-					<xsd:element name="startDate" type="xsd:dateTime"/>
-					<xsd:element name="endDate" type="xsd:dateTime"/>
-					<xsd:element name="state" type="xsd:string"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
@@ -211,11 +211,11 @@
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
 					<xsd:element name="description" type="xsd:string"/>
-					<xsd:element name="startDate" type="xsd:dateTime"/>
-					<xsd:element name="endDate" type="xsd:dateTime"/>
-					<xsd:element name="state" type="xsd:string"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
@@ -227,14 +227,15 @@
 		<xsd:complexContent>
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
-					<xsd:element name="requiredNotify" type="xsd:integer"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
-					<xsd:element name="received" type="xsd:boolean"/>
-					<xsd:element name="send" type="xsd:boolean"/>
-					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="requiredNotify" type="xsd:integer" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="received" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="send" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="initiatorToExecutor" type="xsd:boolean" minOccurs="0"/>
 					<xsd:element name="openSecondaryTransactionsAllowed" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="firstMessage" type="xsd:boolean" minOccurs="0"/>
 					<xsd:element name="message">
 						<xsd:complexType>
 							<xsd:choice>
@@ -267,11 +268,19 @@
 							</xsd:choice>
 						</xsd:complexType>
 					</xsd:element>
-					<xsd:element name="group">
+					<xsd:element name="group" minOccurs="0">
 						<xsd:complexType>
 							<xsd:choice>
 								<xsd:element ref="visi:GroupType"/>
 								<xsd:element ref="visi:GroupTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="appendixTypes" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:AppendixType"/>
+								<xsd:element ref="visi:AppendixTypeRef"/>
 							</xsd:choice>
 						</xsd:complexType>
 					</xsd:element>
@@ -284,11 +293,11 @@
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
 					<xsd:element name="description" type="xsd:string"/>
-					<xsd:element name="startDate" type="xsd:dateTime"/>
-					<xsd:element name="endDate" type="xsd:dateTime"/>
-					<xsd:element name="state" type="xsd:string"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
@@ -301,6 +310,14 @@
 							</xsd:choice>
 						</xsd:complexType>
 					</xsd:element>
+					<xsd:element name="appendixTypes" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:AppendixType"/>
+								<xsd:element ref="visi:AppendixTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -310,11 +327,11 @@
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
 					<xsd:element name="description" type="xsd:string"/>
-					<xsd:element name="startDate" type="xsd:dateTime"/>
-					<xsd:element name="endDate" type="xsd:dateTime"/>
-					<xsd:element name="state" type="xsd:string"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
@@ -336,11 +353,11 @@
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
 					<xsd:element name="description" type="xsd:string"/>
-					<xsd:element name="startDate" type="xsd:dateTime"/>
-					<xsd:element name="endDate" type="xsd:dateTime"/>
-					<xsd:element name="state" type="xsd:string"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
@@ -361,12 +378,13 @@
 		<xsd:complexContent>
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
+					<xsd:element name="namespace" type="xsd:string"/>
 					<xsd:element name="description" type="xsd:string"/>
-					<xsd:element name="startDate" type="xsd:dateTime"/>
-					<xsd:element name="endDate" type="xsd:dateTime"/>
-					<xsd:element name="state" type="xsd:string"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
@@ -388,11 +406,11 @@
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
 					<xsd:element name="description" type="xsd:string"/>
-					<xsd:element name="startDate" type="xsd:dateTime"/>
-					<xsd:element name="endDate" type="xsd:dateTime"/>
-					<xsd:element name="state" type="xsd:string"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
@@ -410,10 +428,10 @@
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
 					<xsd:element name="description" type="xsd:string"/>
-					<xsd:element name="interfaceType" type="xsd:string"/>
-					<xsd:element name="state" type="xsd:string"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="interfaceType" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
@@ -435,11 +453,11 @@
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
 					<xsd:element name="description" type="xsd:string"/>
-					<xsd:element name="startDate" type="xsd:dateTime"/>
-					<xsd:element name="endDate" type="xsd:dateTime"/>
-					<xsd:element name="state" type="xsd:string"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
@@ -453,17 +471,16 @@
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
 					<xsd:element name="description" type="xsd:string"/>
-					<xsd:element name="startDate" type="xsd:dateTime"/>
-					<xsd:element name="endDate" type="xsd:dateTime"/>
-					<xsd:element name="state" type="xsd:string"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="code" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="result" type="xsd:string" minOccurs="0"/>
-					<xsd:element name="basePoint" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="subTransactions" minOccurs="0">
 						<xsd:complexType>
 							<xsd:choice maxOccurs="unbounded">
@@ -488,6 +505,14 @@
 							</xsd:choice>
 						</xsd:complexType>
 					</xsd:element>
+					<xsd:element name="appendixTypes" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:AppendixType"/>
+								<xsd:element ref="visi:AppendixTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -497,9 +522,9 @@
 			<xsd:extension base="visi:elementType">
 				<xsd:sequence>
 					<xsd:element name="description" type="xsd:string"/>
-					<xsd:element name="state" type="xsd:string"/>
-					<xsd:element name="dateLamu" type="xsd:dateTime"/>
-					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="baseType" type="xsd:string"/>
 					<xsd:element name="xsdRestriction" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
