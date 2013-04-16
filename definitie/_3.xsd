@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema targetNamespace="http://www.visi.nl/schemas/20021106" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:visi="http://www.visi.nl/schemas/20021106" elementFormDefault="qualified">
+<xsd:schema targetNamespace="http://www.visi.nl/schemas/20060807" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:visi="http://www.visi.nl/schemas/20060807" elementFormDefault="qualified">
 
 	<!-- root element declaration (for SCHEMA definitions) -->
 	<xsd:element name="visiXML_VISI_Systematics">
@@ -169,7 +169,7 @@
 					<xsd:element name="requiredNotify" type="xsd:integer"/>
 					<xsd:element name="dateLamu" type="xsd:date"/>
 					<xsd:element name="userLamu" type="xsd:string"/>
-					<xsd:element name="recieved" type="xsd:boolean"/>
+					<xsd:element name="received" type="xsd:boolean"/>
 					<xsd:element name="send" type="xsd:boolean"/>
 					<xsd:element name="state" type="xsd:string"/>
 					<xsd:element name="initiatorToExecutor" type="xsd:boolean" minOccurs="0"/>
@@ -335,6 +335,10 @@
 					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="code" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="responsibilityScope" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="responsibilityTask" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="responsibilitySupportTask" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="responsibilityFeedback" type="xsd:string" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
