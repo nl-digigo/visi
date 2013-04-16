@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.visi.nl/schemas/20021106" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:visi="http://www.visi.nl/schemas/20021106" elementFormDefault="qualified">
+
+	<!-- root element declaration (for SCHEMA definitions) -->
+	<xsd:element name="visiXML_VISI_Systematics">
+		<xsd:complexType>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="visi:AppendixType"/>
+				<xsd:element ref="visi:ComplexElementType"/>
+				<xsd:element ref="visi:ElementCondition"/>
+				<xsd:element ref="visi:GroupType"/>
+				<xsd:element ref="visi:MessageInTransactionType"/>
+				<xsd:element ref="visi:MessageType"/>
+				<xsd:element ref="visi:OrganisationType"/>
+				<xsd:element ref="visi:PersonType"/>
+				<xsd:element ref="visi:ProjectType"/>
+				<xsd:element ref="visi:RoleType"/>
+				<xsd:element ref="visi:SimpleElementType"/>
+				<xsd:element ref="visi:TransactionPhaseType"/>
+				<xsd:element ref="visi:TransactionType"/>
+				<xsd:element ref="visi:UserDefinedType"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- element declarations (for ENTITY definitions) -->
+	<xsd:element name="AppendixType" type="visi:AppendixTypeType"/>
+	<xsd:element name="ComplexElementType" type="visi:ComplexElementTypeType"/>
+	<xsd:element name="ElementCondition" type="visi:ElementConditionType"/>
+	<xsd:element name="GroupType" type="visi:GroupTypeType"/>
+	<xsd:element name="MessageInTransactionType" type="visi:MessageInTransactionTypeType"/>
+	<xsd:element name="MessageType" type="visi:MessageTypeType"/>
+	<xsd:element name="OrganisationType" type="visi:OrganisationTypeType"/>
+	<xsd:element name="PersonType" type="visi:PersonTypeType"/>
+	<xsd:element name="ProjectType" type="visi:ProjectTypeType"/>
+	<xsd:element name="RoleType" type="visi:RoleTypeType"/>
+	<xsd:element name="SimpleElementType" type="visi:SimpleElementTypeType"/>
+	<xsd:element name="TransactionPhaseType" type="visi:TransactionPhaseTypeType"/>
+	<xsd:element name="TransactionType" type="visi:TransactionTypeType"/>
+	<xsd:element name="UserDefinedType" type="visi:UserDefinedTypeType"/>
+
+	<!-- element reference declarations (for ENTITY definitions) -->
+	<xsd:element name="AppendixTypeRef" type="visi:AppendixTypeTypeRef"/>
+	<xsd:element name="ComplexElementTypeRef" type="visi:ComplexElementTypeTypeRef"/>
+	<xsd:element name="ElementConditionRef" type="visi:ElementConditionTypeRef"/>
+	<xsd:element name="GroupTypeRef" type="visi:GroupTypeTypeRef"/>
+	<xsd:element name="MessageInTransactionTypeRef" type="visi:MessageInTransactionTypeTypeRef"/>
+	<xsd:element name="MessageTypeRef" type="visi:MessageTypeTypeRef"/>
+	<xsd:element name="OrganisationTypeRef" type="visi:OrganisationTypeTypeRef"/>
+	<xsd:element name="PersonTypeRef" type="visi:PersonTypeTypeRef"/>
+	<xsd:element name="ProjectTypeRef" type="visi:ProjectTypeTypeRef"/>
+	<xsd:element name="RoleTypeRef" type="visi:RoleTypeTypeRef"/>
+	<xsd:element name="SimpleElementTypeRef" type="visi:SimpleElementTypeTypeRef"/>
+	<xsd:element name="TransactionPhaseTypeRef" type="visi:TransactionPhaseTypeTypeRef"/>
+	<xsd:element name="TransactionTypeRef" type="visi:TransactionTypeTypeRef"/>
+	<xsd:element name="UserDefinedTypeRef" type="visi:UserDefinedTypeTypeRef"/>
+
+	<!-- complex types for element declarations (for ENTITY definitions) -->
+	<xsd:complexType name="AppendixTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:date"/>
+					<xsd:element name="endDate" type="xsd:date"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="code" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="complexElements" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:ComplexElementType"/>
+								<xsd:element ref="visi:ComplexElementTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ComplexElementTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:date"/>
+					<xsd:element name="endDate" type="xsd:date"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="complexElements" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:ComplexElementType"/>
+								<xsd:element ref="visi:ComplexElementTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="simpleElements" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:SimpleElementType"/>
+								<xsd:element ref="visi:SimpleElementTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ElementConditionType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="requiredNotify" type="xsd:integer"/>
+					<xsd:element name="minValue" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="maxValue" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="format" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="element">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:SimpleElementType"/>
+								<xsd:element ref="visi:SimpleElementTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="message">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:MessageType"/>
+								<xsd:element ref="visi:MessageTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="GroupTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:date"/>
+					<xsd:element name="endDate" type="xsd:date"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MessageInTransactionTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="requiredNotify" type="xsd:integer"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="recieved" type="xsd:boolean"/>
+					<xsd:element name="send" type="xsd:boolean"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="message">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:MessageType"/>
+								<xsd:element ref="visi:MessageTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="previous" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:MessageInTransactionType"/>
+								<xsd:element ref="visi:MessageInTransactionTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:TransactionType"/>
+								<xsd:element ref="visi:TransactionTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transactionPhase" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:TransactionPhaseType"/>
+								<xsd:element ref="visi:TransactionPhaseTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="group">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:GroupType"/>
+								<xsd:element ref="visi:GroupTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MessageTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:date"/>
+					<xsd:element name="endDate" type="xsd:date"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="code" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="complexElements" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:ComplexElementType"/>
+								<xsd:element ref="visi:ComplexElementTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="OrganisationTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:date"/>
+					<xsd:element name="endDate" type="xsd:date"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="code" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="complexElements" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:ComplexElementType"/>
+								<xsd:element ref="visi:ComplexElementTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PersonTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:date"/>
+					<xsd:element name="endDate" type="xsd:date"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="code" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="complexElements" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:ComplexElementType"/>
+								<xsd:element ref="visi:ComplexElementTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ProjectTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:date"/>
+					<xsd:element name="endDate" type="xsd:date"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="code" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="complexElements" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:ComplexElementType"/>
+								<xsd:element ref="visi:ComplexElementTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RoleTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:date"/>
+					<xsd:element name="endDate" type="xsd:date"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="code" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="SimpleElementTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="interfaceType" type="xsd:string"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="valueList" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="userDefinedType">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:UserDefinedType"/>
+								<xsd:element ref="visi:UserDefinedTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TransactionPhaseTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:date"/>
+					<xsd:element name="endDate" type="xsd:date"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="code" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TransactionTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:date"/>
+					<xsd:element name="endDate" type="xsd:date"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="code" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="result" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="basePoint" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="subTransactions" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:TransactionType"/>
+								<xsd:element ref="visi:TransactionTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="initiator">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:RoleType"/>
+								<xsd:element ref="visi:RoleTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="executor">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:RoleType"/>
+								<xsd:element ref="visi:RoleTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="UserDefinedTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="state" type="xsd:string"/>
+					<xsd:element name="dateLamu" type="xsd:date"/>
+					<xsd:element name="userLamu" type="xsd:string"/>
+					<xsd:element name="baseType" type="xsd:string"/>
+					<xsd:element name="xsdRestriction" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="helpInfo" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- complex types for element reference declarations (for ENTITY definitions) -->
+	<xsd:complexType name="AppendixTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ComplexElementTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ElementConditionTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="GroupTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MessageInTransactionTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MessageTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="OrganisationTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PersonTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ProjectTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RoleTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="SimpleElementTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TransactionPhaseTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TransactionTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="UserDefinedTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- group declarations (for SELECT data type definitions) -->
+
+	<!-- enumeration type declarations (for ENUMERATION data type definitions) -->
+
+	<!-- simple type declarations (for TYPE defined data type definitions) -->
+
+	<!-- standard declarations, elementType, simpleType, logical (for each translation) -->
+	<xsd:complexType name="elementType">
+		<xsd:attribute name="id" type="xsd:ID" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="elementTypeRef">
+		<xsd:attribute name="idref" type="xsd:IDREF" use="required"/>
+	</xsd:complexType>
+	<xsd:simpleType name="logical">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="true"/>
+			<xsd:enumeration value="false"/>
+			<xsd:enumeration value="unknown"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

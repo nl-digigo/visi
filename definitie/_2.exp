@@ -1,0 +1,207 @@
+SCHEMA visiXML_VISI_Systematics;
+
+-- Peter Bonsma (TNO)
+
+-- Complete model Systematics Part I
+
+ENTITY ProjectType;
+ description : STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+
+ complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+END_ENTITY;
+
+ENTITY PersonType;
+ description : STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+
+ complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+END_ENTITY;
+
+ENTITY OrganisationType;
+ description : STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+
+ complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+END_ENTITY;
+
+ENTITY AppendixType;
+ description : STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+
+ complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+END_ENTITY;
+
+ENTITY ComplexElementType;
+ description : STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+
+ complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+ simpleElements : OPTIONAL SET [0:?] OF SimpleElementType;
+END_ENTITY;
+
+ENTITY MessageType;
+ description : STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+
+ complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+END_ENTITY;
+
+ENTITY ElementCondition;
+ description : STRING;
+ requiredNotify : INTEGER;
+ minValue : OPTIONAL STRING;
+ maxValue : OPTIONAL STRING;
+ format : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+
+ element : SimpleElementType;
+ message : MessageType;
+END_ENTITY;
+
+ENTITY SimpleElementType;
+ description : STRING;
+ interfaceType : STRING;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ valueList : OPTIONAL STRING;
+
+ userDefinedType : UserDefinedType;
+END_ENTITY;
+
+ENTITY UserDefinedType;
+ description : STRING;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ baseType : STRING;
+ xsdRestriction : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+END_ENTITY;
+
+ENTITY MessageInTransactionType;
+ requiredNotify : INTEGER;
+ dateLamu : DATE;
+ userLamu : STRING;
+ recieved : BOOLEAN;
+ send : BOOLEAN;
+ state : STRING;
+ initiatorToExecutor : OPTIONAL BOOLEAN;
+
+ message : MessageType;
+ previous : OPTIONAL SET [0:?] OF MessageInTransactionType;
+ transaction : TransactionType;
+ transactionPhase : OPTIONAL TransactionPhaseType;
+ group : GroupType;
+END_ENTITY;
+
+ENTITY TransactionPhaseType;
+ description : STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+END_ENTITY;
+
+ENTITY TransactionType;
+ description : STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+ result : OPTIONAL STRING;
+ basePoint : OPTIONAL STRING;
+ 
+ subTransactions : OPTIONAL SET [1:?] OF TransactionType;
+ initiator : RoleType;
+ executor : RoleType;
+END_ENTITY;
+
+ENTITY RoleType;
+ description : STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+END_ENTITY;
+
+ENTITY GroupType;
+ description : STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+END_ENTITY;
+
+END_SCHEMA;
