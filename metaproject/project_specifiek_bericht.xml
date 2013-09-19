@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/20110819/metaframework">
+  <PRT-Meta-raamwerk id="PRO-META-RW">
+    <name>Meta Raamwerk Project</name>
+    <description>Meta Raamwerk Project</description>
+    <startDate>2011-12-22T12:30:23.0Z</startDate>
+    <endDate>2012-12-22T12:30:23.0Z</endDate>
+  </PRT-Meta-raamwerk>
+  <standaardPersoon id="PER-COMG">
+    <userName>comg@visi.nl</userName>
+    <name>VISI communicatie manager</name>
+  </standaardPersoon>
+  <R01-VISI-communicatiemanager id="ROL-COMG">
+    <name>R01-VISI-communicatiemanager</name>
+    <description>R01-VISI-communicatiemanager</description>
+    <category>-</category>
+  </R01-VISI-communicatiemanager>
+  <standaardOrganisatie id="ORG-INF">
+    <name>org1</name>
+    <abbreviation>INF</abbreviation>
+    <contactPerson>
+      <standaardPersoonRef idref="PER-COMG" />
+    </contactPerson>
+    <ceOrganisatieSOAPServer>
+      <CeOrganisatieSOAPServerRef idref="SCE-INF" />
+    </ceOrganisatieSOAPServer>
+  </standaardOrganisatie>
+  <CeOrganisatieSOAPServer id="SCE-INF">
+    <sOAPServerURL>http://visi.nl/soapservice.asmx</sOAPServerURL>
+  </CeOrganisatieSOAPServer>
+  <PersonInRole id="PIR-COMG">
+    <contactPerson>
+      <standaardPersoonRef idref="PER-COMG" />
+    </contactPerson>
+    <organisation>
+      <standaardOrganisatieRef idref="ORG-INF" />
+    </organisation>
+    <role>
+      <R01-VISI-communicatiemanagerRef idref="ROL-COMG" />
+    </role>
+  </PersonInRole>
+  <standaardPersoon id="PER-WZGI">
+    <userName>wzgi@visi.nl</userName>
+    <name>Wijzigingsinitiator</name>
+  </standaardPersoon>
+  <R02-Wijzigingsinitiator id="ROL-WZGI">
+    <name>R02-Wijzigingsinitiator</name>
+    <description>R02-Wijzigingsinitiator</description>
+    <category>-</category>
+  </R02-Wijzigingsinitiator>
+  <PersonInRole id="PIR-WZGI">
+    <contactPerson>
+      <standaardPersoonRef idref="PER-WZGI" />
+    </contactPerson>
+    <organisation>
+      <standaardOrganisatieRef idref="ORG-INF" />
+    </organisation>
+    <role>
+      <R02-WijzigingsinitiatorRef idref="ROL-WZGI" />
+    </role>
+  </PersonInRole>
+</visiXML_MessageSchema>

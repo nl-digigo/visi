@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20110819" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <PersonType id="standaardPersoon">
+    <description>Standaard Persoon</description>
+  </PersonType>
+  <OrganisationType id="standaardOrganisatie">
+    <description>Standaard Organisatie</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeOrganisatieSOAPServer" />
+    </complexElements>
+  </OrganisationType>
+  <ComplexElementType id="CeOrganisatieSOAPServer">
+    <description>Gegevens van SOAP server</description>
+    <helpInfo>Hier kan een omschrijving worden weergegeven</helpInfo>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SOAPServerURL" />
+    </simpleElements>
+  </ComplexElementType>
+  <SimpleElementType id="SOAPServerURL">
+    <description>SOAP server URL</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="String" />
+    </userDefinedType>
+  </SimpleElementType>
+  <AppendixType id="APT-NieuwOfGewijzigdRaamwerkOfProjectspecifiekBericht">
+    <description>Nieuw of gewijzigd raamwerk of projectspecifiek bericht</description>
+  </AppendixType>
+  <ComplexElementType id="C00-Algemeen">
+    <description>Algemeen</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="S00-Algemeen" />
+    </simpleElements>
+  </ComplexElementType>
+  <ComplexElementType id="C01-MotivatieVoorstelNietAkkoord">
+    <description>Motivatie voorstel niet akkoord</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="S01-MotivatieVoorstelNietAkkoord" />
+    </simpleElements>
+  </ComplexElementType>
+  <ComplexElementType id="C02-MotivatieVoorstelGecanceld">
+    <description>Motivatie voorstel gecanceld</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="S02-MotivatieVoorstelGecanceld" />
+    </simpleElements>
+  </ComplexElementType>
+  <ComplexElementType id="C03-Ingangsdatum">
+    <description>Ingangsdatum</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="S03-Ingangsdatum" />
+    </simpleElements>
+  </ComplexElementType>
+  <GroupType id="StandardGroupType">
+    <description></description>
+  </GroupType>
+  <MessageInTransactionType id="Mitt_1">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBericht" />
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+    </transaction>
+  </MessageInTransactionType>
+  <MessageInTransactionType id="Mitt_2">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="M02-VoorstelAkkoord" />
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_1" />
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+    </transaction>
+  </MessageInTransactionType>
+  <MessageInTransactionType id="Mitt_3">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="M03-VoorstelNietAkkoord" />
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_1" />
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+    </transaction>
+  </MessageInTransactionType>
+  <MessageInTransactionType id="Mitt_4">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="M04-VoorstelGecanceld" />
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_3" />
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+    </transaction>
+  </MessageInTransactionType>
+  <MessageInTransactionType id="Mitt_5">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="M05-VoorstelIngangsdatum" />
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_2" />
+      <MessageInTransactionTypeRef idref="Mitt_7" />
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+    </transaction>
+  </MessageInTransactionType>
+  <MessageInTransactionType id="Mitt_6">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="M06-IngangsdatumAkkoord" />
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_5" />
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+    </transaction>
+  </MessageInTransactionType>
+  <MessageInTransactionType id="Mitt_7">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="M07-IngangsdatumNietAkkoord" />
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_5" />
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+    </transaction>
+  </MessageInTransactionType>
+  <MessageInTransactionType id="Mitt_8">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="M08-BevestigingIngangsdatum" />
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_6" />
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+    </transaction>
+  </MessageInTransactionType>
+  <MessageType id="M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBericht">
+    <description>Voorstel voor een nieuw of gewijzigd raamwerk of projectspecifiekbericht</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="C00-Algemeen" />
+    </complexElements>
+  </MessageType>
+  <MessageType id="M02-VoorstelAkkoord">
+    <description>Voorstel akkoord</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="C00-Algemeen" />
+    </complexElements>
+  </MessageType>
+  <MessageType id="M03-VoorstelNietAkkoord">
+    <description>Voorstel niet akkoord</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="C00-Algemeen" />
+      <ComplexElementTypeRef idref="C01-MotivatieVoorstelNietAkkoord" />
+    </complexElements>
+  </MessageType>
+  <MessageType id="M04-VoorstelGecanceld">
+    <description>Voorstel is gecanceld</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="C00-Algemeen" />
+      <ComplexElementTypeRef idref="C02-MotivatieVoorstelGecanceld" />
+    </complexElements>
+  </MessageType>
+  <MessageType id="M05-VoorstelIngangsdatum">
+    <description>Voorstel ingangsdatum</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="C00-Algemeen" />
+      <ComplexElementTypeRef idref="C03-Ingangsdatum" />
+    </complexElements>
+  </MessageType>
+  <MessageType id="M06-IngangsdatumAkkoord">
+    <description>Ingangsdatum akkoord</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="C00-Algemeen" />
+      <ComplexElementTypeRef idref="C03-Ingangsdatum" />
+    </complexElements>
+  </MessageType>
+  <MessageType id="M07-IngangsdatumNietAkkoord">
+    <description>Ingangsdatum niet akkoord</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="C00-Algemeen" />
+      <ComplexElementTypeRef idref="C01-MotivatieVoorstelNietAkkoord" />
+    </complexElements>
+  </MessageType>
+  <MessageType id="M08-BevestigingIngangsdatum">
+    <description>Bevestiging ingangsdatum</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="C00-Algemeen" />
+      <ComplexElementTypeRef idref="C03-Ingangsdatum" />
+    </complexElements>
+  </MessageType>
+  <ProjectType id="PRT-Meta-raamwerk">
+    <namespace>http://www.visi.nl/schemas/20110819/metaframework</namespace>
+    <description>Meta-raamwerk projecttype</description>
+  </ProjectType>
+  <RoleType id="R01-VISI-communicatiemanager">
+    <description>VISI Communicatiemanager</description>
+  </RoleType>
+  <RoleType id="R02-Wijzigingsinitiator">
+    <description>Wijzigingsinitiator</description>
+  </RoleType>
+  <SimpleElementType id="S01-MotivatieVoorstelNietAkkoord">
+    <description>Motivatie voorstel niet akkoord</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="String" />
+    </userDefinedType>
+  </SimpleElementType>
+  <SimpleElementType id="S02-MotivatieVoorstelGecanceld">
+    <description>Motivatie voorstel gecanceld</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="String" />
+    </userDefinedType>
+  </SimpleElementType>
+  <SimpleElementType id="S00-Algemeen">
+    <description>Eventuele opmerkingen</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="String" />
+    </userDefinedType>
+  </SimpleElementType>
+  <ElementCondition id="EL-S00-Algemeen">
+    <description>-</description>
+    <condition>FREE</condition>
+    <simpleElement>
+      <SimpleElementTypeRef idref="S00-Algemeen"/>
+    </simpleElement>
+  </ElementCondition>
+  <SimpleElementType id="S03-Ingangsdatum">
+    <description>Ingangsdatum</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="Datum" />
+    </userDefinedType>
+  </SimpleElementType>
+  <TransactionPhaseType id="AanvaardEinde">
+    <description>Aanvaard/Einde</description>
+  </TransactionPhaseType>
+  <TransactionPhaseType id="BeloofdExecutie">
+    <description>Beloofd / Executie</description>
+  </TransactionPhaseType>
+  <TransactionPhaseType id="MeldingGereed">
+    <description>Melding Gereed</description>
+  </TransactionPhaseType>
+  <TransactionPhaseType id="Start">
+    <description>Start</description>
+  </TransactionPhaseType>
+  <TransactionPhaseType id="Verzocht">
+    <description>Verzocht</description>
+  </TransactionPhaseType>
+  <TransactionPhaseType id="WijzigingHold">
+    <description>Wijziging/Hold</description>
+  </TransactionPhaseType>
+  <TransactionType id="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie">
+    <description>Nieuw of gewijzigd raamwerk of projectspecifiekbericht transactie</description>
+    <initiator>
+      <RoleTypeRef idref="R02-Wijzigingsinitiator" />
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="R01-VISI-communicatiemanager" />
+    </executor>
+  </TransactionType>
+  <UserDefinedType id="Datum">
+    <description>Datum</description>
+    <baseType>DATE</baseType>
+  </UserDefinedType>
+  <UserDefinedType id="String">
+    <description>String</description>
+    <baseType>STRING</baseType>
+  </UserDefinedType>
+</visiXML_VISI_Systematics>
