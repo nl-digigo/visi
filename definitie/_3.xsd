@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema targetNamespace="http://www.visi.nl/schemas/20110819" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:visi="http://www.visi.nl/schemas/20110819" elementFormDefault="qualified">
+<!-- created with VISI DLL, EXP2XSD part, created by Peter Bonsma  -->
+<xsd:schema targetNamespace="http://www.visi.nl/schemas/20140331" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:visi="http://www.visi.nl/schemas/20140331" elementFormDefault="qualified">
 
 	<!-- root element declaration (for SCHEMA definitions) -->
 	<xsd:element name="visiXML_VISI_Systematics">
@@ -11,6 +12,7 @@
 				<xsd:element ref="visi:GroupType"/>
 				<xsd:element ref="visi:MessageInTransactionType"/>
 				<xsd:element ref="visi:MessageType"/>
+				<xsd:element ref="visi:MittCondition"/>
 				<xsd:element ref="visi:OrganisationType"/>
 				<xsd:element ref="visi:PersonType"/>
 				<xsd:element ref="visi:ProjectType"/>
@@ -54,6 +56,7 @@
 			<xsd:documentation>The definition of a type of message (MessageType), specifying the structure of the message and which set of SimpleElementType's (via ComplexElementType's) may accompany.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
+	<xsd:element name="MittCondition" type="visi:MittConditionType"/>
 	<xsd:element name="OrganisationType" type="visi:OrganisationTypeType">
 		<xsd:annotation>
 			<xsd:documentation>The definition of a specific group of organizations. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of organisation should expose.</xsd:documentation>
@@ -102,6 +105,7 @@
 	<xsd:element name="GroupTypeRef" type="visi:GroupTypeTypeRef"/>
 	<xsd:element name="MessageInTransactionTypeRef" type="visi:MessageInTransactionTypeTypeRef"/>
 	<xsd:element name="MessageTypeRef" type="visi:MessageTypeTypeRef"/>
+	<xsd:element name="MittConditionRef" type="visi:MittConditionTypeRef"/>
 	<xsd:element name="OrganisationTypeRef" type="visi:OrganisationTypeTypeRef"/>
 	<xsd:element name="PersonTypeRef" type="visi:PersonTypeTypeRef"/>
 	<xsd:element name="ProjectTypeRef" type="visi:ProjectTypeTypeRef"/>
@@ -284,6 +288,14 @@
 							</xsd:choice>
 						</xsd:complexType>
 					</xsd:element>
+					<xsd:element name="conditions" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:MittCondition"/>
+								<xsd:element ref="visi:MittConditionRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -318,6 +330,15 @@
 							</xsd:choice>
 						</xsd:complexType>
 					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MittConditionType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="sendAfter" type="xsd:" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -561,6 +582,11 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="MessageTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MittConditionTypeRef">
 		<xsd:complexContent>
 			<xsd:extension base="visi:elementTypeRef"/>
 		</xsd:complexContent>

@@ -146,6 +146,12 @@ ENTITY MessageInTransactionType;	--	The occurrence of a MessageType within a Tra
  transactionPhase : OPTIONAL TransactionPhaseType;
  group : OPTIONAL GroupType;
  appendixTypes : OPTIONAL SET [1:?] OF AppendixType;
+ conditions : OPTIONAL SET[1:?] OF MittCondition;
+END_ENTITY;
+
+ENTITY MittCondition;
+ sendAfter : OPTIONAL SET [1:?] MessageInTransactionType;
+ sendBefore : OPTIONAL SET [1:?] MessageInTransactionType;
 END_ENTITY;
 
 ENTITY TransactionPhaseType;		--	The definition of a phase related to a transaction. Examples are 'assignment accepted' or 'result part received'.
