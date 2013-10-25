@@ -1,6 +1,6 @@
 SCHEMA visiXML_MessageSchema;
 
--- Complete model Part II, version 1.3, Release Candidate 30 November 2011
+-- Complete model Part II, version 1.4, work version
 
 ENTITY GroupTemplate;
  name : STRING;

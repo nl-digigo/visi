@@ -1,6 +1,6 @@
 SCHEMA visiXML_VISI_Systematics;
 
--- Complete model Part I, version 1.3, Release Candidate 30 November 2011
+-- Complete model Part I, version 1.4, work version
 
 ENTITY ProjectType;	--	The definition of a specific group of projects. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of project should expose.
  namespace : STRING;
@@ -150,8 +150,8 @@ ENTITY MessageInTransactionType;	--	The occurrence of a MessageType within a Tra
 END_ENTITY;
 
 ENTITY MessageInTransactionTypeCondition;
- sendAfter : OPTIONAL SET [1:?] MessageInTransactionType;
- sendBefore : OPTIONAL SET [1:?] MessageInTransactionType;
+ sendAfter : OPTIONAL SET [1:?] OF MessageInTransactionType;
+ sendBefore : OPTIONAL SET [1:?] OF MessageInTransactionType;
  state : OPTIONAL STRING;
  dateLaMu : OPTIONAL DATETIME;
  userLaMu : OPTIONAL STRING;
