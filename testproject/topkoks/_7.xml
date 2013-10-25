@@ -2,8 +2,8 @@
 <visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20140331">
 	<AppendixType id="AppRapport">
 		<description>Rapport</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
 		<state>active</state>
 		<dateLaMu>2009-02-03T00:00:00.0Z</dateLaMu>
 		<userLaMu>PWI</userLaMu>
@@ -13,8 +13,8 @@
 	</AppendixType>
 	<AppendixType id="AppTekening">
 		<description>Tekening</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
 		<state>active</state>
 		<dateLaMu>2009-02-03T00:00:00.0Z</dateLaMu>
 		<userLaMu>PWI</userLaMu>
@@ -24,8 +24,8 @@
 	</AppendixType>
 	<AppendixType id="AppVideo">
 		<description>Video</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
 		<state>active</state>
 		<dateLaMu>2009-02-03T00:00:00.0Z</dateLaMu>
 		<userLaMu>PWI</userLaMu>
@@ -42,6 +42,24 @@
 		<userLaMu>PWI</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="Antwoord"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeBaseTypeTest">
+		<description>Veldsoorten test</description>
+		<startDate>2013-10-25T00:00:00</startDate>
+		<endDate>2013-10-25T00:00:00</endDate>
+		<state>active</state>
+		<dateLaMu>2013-10-25T14:52:10</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SeBoolean"/>
+			<SimpleElementTypeRef idref="SeDate"/>
+			<SimpleElementTypeRef idref="SeDatetime"/>
+			<SimpleElementTypeRef idref="SeTime"/>
+			<SimpleElementTypeRef idref="SeDecimal"/>
+			<SimpleElementTypeRef idref="SeInteger"/>
+			<SimpleElementTypeRef idref="SeKeuzelijst"/>
+			<SimpleElementTypeRef idref="SeString"/>
 		</simpleElements>
 	</ComplexElementType>
 	<ComplexElementType id="CeBestelling">
@@ -117,10 +135,10 @@
 	</ComplexElementType>
 	<ComplexElementType id="CeOrganisatie">
 		<description>Organisatie specs</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
 		<state>active</state>
-    <dateLaMu>2011-10-26T17:00:19.619+02:00</dateLaMu>
+		<dateLaMu>2011-10-26T17:00:19.619+02:00</dateLaMu>
 		<userLaMu>PWi</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="SOAPServerURL"/>
@@ -128,8 +146,8 @@
 	</ComplexElementType>
 	<ComplexElementType id="CeRapport">
 		<description>Rapport</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
 		<state>active</state>
 		<dateLaMu>2009-02-03T00:00:00.0Z</dateLaMu>
 		<userLaMu>PWI</userLaMu>
@@ -151,10 +169,10 @@
 	</ComplexElementType>
 	<ComplexElementType id="CeSOAP">
 		<description>SOAP specificaties</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
 		<state>active</state>
-    <dateLaMu>2011-10-26T16:58:25.455+02:00</dateLaMu>
+		<dateLaMu>2011-10-26T16:58:25.455+02:00</dateLaMu>
 		<userLaMu>PWi</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="SOAPProtocol"/>
@@ -634,7 +652,7 @@
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie6">
 		<requiredNotify>0</requiredNotify>
-    <dateLaMu>2011-10-26T15:19:36.089+02:00</dateLaMu>
+		<dateLaMu>2011-10-26T15:19:36.089+02:00</dateLaMu>
 		<userLaMu>PWi</userLaMu>
 		<received>true</received>
 		<send>true</send>
@@ -752,10 +770,10 @@
 	</MessageType>
 	<MessageType id="msgAntwoord">
 		<description>Antwoord</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
-    <state>active</state>
-    <dateLaMu>2011-10-26T15:18:08.881+02:00</dateLaMu>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<state>active</state>
+		<dateLaMu>2011-10-26T15:18:08.881+02:00</dateLaMu>
 		<userLaMu>PWi</userLaMu>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeVraag"/>
@@ -806,10 +824,10 @@
 	</MessageType>
 	<MessageType id="msgBestellingAkkoord">
 		<description>Bestelling: akkoord</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
-    <state>active</state>
-    <dateLaMu>2011-10-26T16:50:45.542+02:00</dateLaMu>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<state>active</state>
+		<dateLaMu>2011-10-26T16:50:45.542+02:00</dateLaMu>
 		<userLaMu>PWi</userLaMu>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeBestelling"/>
@@ -833,7 +851,7 @@
 		<startDate>2009-01-01T00:00:00.0Z</startDate>
 		<endDate>2010-01-01T00:00:00.0Z</endDate>
 		<state>active</state>
-    <dateLaMu>2011-10-26T16:50:52.943+02:00</dateLaMu>
+		<dateLaMu>2011-10-26T16:50:52.943+02:00</dateLaMu>
 		<userLaMu>PWi</userLaMu>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeBestelling"/>
@@ -882,13 +900,14 @@
 	</MessageType>
 	<MessageType id="msgWiltuDeKaartZien">
 		<description>Wilt u de menukaart zien?</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
 		<state>active</state>
 		<dateLaMu>2009-01-28T00:00:00.0Z</dateLaMu>
 		<userLaMu>PWI</userLaMu>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeReactieTermijn"/>
+			<ComplexElementTypeRef idref="CeBaseTypeTest"/>
 		</complexElements>
 	</MessageType>
 	<MessageInTransactionTypeCondition id="MC_AfkeuringIsVerstuurd">
@@ -906,7 +925,7 @@
 	<MessageInTransactionTypeCondition id="MC_AntwoordIsVerstuurd">
 		<sendAfter>
 			<MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
-		</sendAfter>		
+		</sendAfter>
 		<helpInfo>Antwoord is overgenomen mag alleen aangeboden worden nadat de kok een antwoord terug aan de ober gegeven heeft.</helpInfo>
 	</MessageInTransactionTypeCondition>
 	<MessageInTransactionTypeCondition id="MC_AntwoordNietGebruikt">
@@ -933,8 +952,8 @@
 	</MessageInTransactionTypeCondition>
 	<OrganisationType id="StandardOrganisationType">
 		<description>Standard organisation type</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
 		<state>active</state>
 		<dateLaMu>2009-01-28T00:00:00.0Z</dateLaMu>
 		<userLaMu>PWI</userLaMu>
@@ -951,10 +970,10 @@
 		<userLaMu>PWI</userLaMu>
 	</PersonType>
 	<ProjectType id="ProjectType1">
-		<namespace>http://www.visi.nl/schemas/20110819/TestFramework</namespace>
+		<namespace>http://www.visi.nl/schemas/20140331/TestFramework</namespace>
 		<description>VISI Testscenario's Raamwerk</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
 		<state>active</state>
 		<dateLaMu>2009-01-28T00:00:00.0Z</dateLaMu>
 		<userLaMu>PWI</userLaMu>
@@ -964,8 +983,8 @@
 	</ProjectType>
 	<RoleType id="keukenhulp">
 		<description>Keukenhulp</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
 		<state>active</state>
 		<dateLaMu>2009-02-02T00:00:00.0Z</dateLaMu>
 		<userLaMu>PWI</userLaMu>
@@ -1164,18 +1183,103 @@
 			<UserDefinedTypeRef idref="INTEGER"/>
 		</userDefinedType>
 	</SimpleElementType>
+	<SimpleElementType id="SeBoolean">
+		<description>Boolean</description>
+		<interfaceType></interfaceType>
+		<state>active</state>
+		<dateLaMu>2013-10-25T15:04:02</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="BOOLEAN"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SeDate">
+		<description>Date / Datum</description>
+		<interfaceType></interfaceType>
+		<state>active</state>
+		<dateLaMu>2013-10-25T15:04:27</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="DATE"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SeDatetime">
+		<description>Datetime / Datum en tijd</description>
+		<interfaceType></interfaceType>
+		<state>active</state>
+		<dateLaMu>2013-10-25T15:05:08</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<helpInfo></helpInfo>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="DATETIME"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SeDecimal">
+		<description>Decimal / Decimaal</description>
+		<interfaceType></interfaceType>
+		<state>active</state>
+		<dateLaMu>2013-10-25T15:06:56</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<helpInfo></helpInfo>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="DECIMAL"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SeInteger">
+		<description>Integer / Geheel getal</description>
+		<interfaceType></interfaceType>
+		<state>active</state>
+		<dateLaMu>2013-10-25T15:02:05</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="INTEGER"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SeKeuzelijst">
+		<description>Keuzelijst</description>
+		<interfaceType></interfaceType>
+		<state>active</state>
+		<dateLaMu>2013-10-25T15:12:19</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<helpInfo></helpInfo>    
+		<userDefinedType>
+			<UserDefinedTypeRef idref="Keuzelijst"/>
+		</userDefinedType>    
+	</SimpleElementType>
+	<SimpleElementType id="SeString">
+		<description>String / Vrije tekst</description>
+		<interfaceType></interfaceType>
+		<state>active</state>
+		<dateLaMu>2013-10-25T15:13:17</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<helpInfo></helpInfo>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SeTime">
+		<description>Time / Tijd</description>
+		<interfaceType></interfaceType>
+		<state>active</state>
+		<dateLaMu>2013-10-25T15:05:35</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<helpInfo></helpInfo>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="TIME"/>
+		</userDefinedType>
+	</SimpleElementType>
 	<TransactionPhaseType id="aanvaardEinde">
 		<description>Aanvaard/Einde</description>
-    <startDate>2008-05-04T02:00:00.000+02:00</startDate>
-    <endDate>2008-05-04T02:00:00.000+02:00</endDate>
+		<startDate>2008-05-04T02:00:00.000+02:00</startDate>
+		<endDate>2008-05-04T02:00:00.000+02:00</endDate>
 		<state>active</state>
 		<dateLaMu>2008-05-04T00:00:00.0Z</dateLaMu>
 		<userLaMu>MMA</userLaMu>
 	</TransactionPhaseType>
 	<TransactionPhaseType id="beloofdExecutie">
 		<description>Beloofd/Executie</description>
-    <startDate>2008-05-04T02:00:00.000+02:00</startDate>
-    <endDate>2008-05-04T02:00:00.000+02:00</endDate>
+		<startDate>2008-05-04T02:00:00.000+02:00</startDate>
+		<endDate>2008-05-04T02:00:00.000+02:00</endDate>
 		<state>active</state>
 		<dateLaMu>2008-05-04T00:00:00.0Z</dateLaMu>
 		<userLaMu>MMA</userLaMu>
@@ -1214,10 +1318,10 @@
 	</TransactionPhaseType>
 	<TransactionType id="t1_OpnameBestelling">
 		<description>T1 Opname van bestelling (ober aan klant)</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
-    <state>active</state>
-    <dateLaMu>2011-10-26T15:42:02.570+02:00</dateLaMu>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<state>active</state>
+		<dateLaMu>2011-10-26T15:42:02.570+02:00</dateLaMu>
 		<userLaMu>PWi</userLaMu>
 		<initiator>
 			<RoleTypeRef idref="ober"/>
@@ -1256,10 +1360,10 @@
 	</TransactionType>
 	<TransactionType id="t4_VraagKokAanKeukenhulp">
 		<description>T4 Vraag (kok aan keukenhulp)</description>
-    <startDate>2009-01-01T01:00:00.000+01:00</startDate>
-    <endDate>2010-01-01T01:00:00.000+01:00</endDate>
-    <state>active</state>
-    <dateLaMu>2011-10-26T17:21:17.132+02:00</dateLaMu>
+		<startDate>2009-01-01T01:00:00.000+01:00</startDate>
+		<endDate>2010-01-01T01:00:00.000+01:00</endDate>
+		<state>active</state>
+		<dateLaMu>2011-10-26T17:21:17.132+02:00</dateLaMu>
 		<userLaMu>PWi</userLaMu>
 		<initiator>
 			<RoleTypeRef idref="kok"/>
@@ -1274,22 +1378,58 @@
 	<UserDefinedType id="BOOLEAN">
 		<description>BOOLEAN</description>
 		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00.0Z</dateLaMu>
+    <dateLaMu>2009-01-29T00:00:00.0Z</dateLaMu>
 		<userLaMu>PWI</userLaMu>
 		<baseType>BOOLEAN</baseType>
+	</UserDefinedType>
+	<UserDefinedType id="DATE">
+		<description>DATE</description>
+		<state>active</state>
+		<dateLaMu>2013-10-25T14:54:41</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<baseType>DATE</baseType>
+	</UserDefinedType>
+	<UserDefinedType id="DATETIME">
+		<description>DATETIME</description>
+		<state>active</state>
+		<dateLaMu>2013-10-25T14:55:07</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<baseType>DATETIME</baseType>
+	</UserDefinedType>
+	<UserDefinedType id="DECIMAL">
+		<description>DECIMAL</description>
+		<state>active</state>
+		<dateLaMu>2013-10-25T14:55:51</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<baseType>DECIMAL</baseType>
 	</UserDefinedType>
 	<UserDefinedType id="INTEGER">
 		<description>INTEGER</description>
 		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00.0Z</dateLaMu>
+    <dateLaMu>2009-01-29T00:00:00.0Z</dateLaMu>
 		<userLaMu>PWI</userLaMu>
 		<baseType>INTEGER</baseType>
+	</UserDefinedType>
+	<UserDefinedType id="Keuzelijst">
+		<description>Keuzelijst</description>
+		<state>active</state>
+		<dateLaMu>2013-10-25T15:11:48</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<baseType>STRING</baseType>
+		<xsdRestriction>&lt;xs:enumeration value="Keuze 1"/&gt;&lt;xs:enumeration value="Keuze 2"/&gt;&lt;xs:enumeration value="Keuze 3"/&gt;</xsdRestriction>
 	</UserDefinedType>
 	<UserDefinedType id="STRING">
 		<description>STRING</description>
 		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00.0Z</dateLaMu>
+    <dateLaMu>2009-01-29T00:00:00.0Z</dateLaMu>
 		<userLaMu>PWI</userLaMu>
 		<baseType>STRING</baseType>
+	</UserDefinedType>
+	<UserDefinedType id="TIME">
+		<description>TIME</description>
+		<state>active</state>
+		<dateLaMu>2013-10-25T14:55:30</dateLaMu>
+		<userLaMu>Arne</userLaMu>
+		<baseType>TIME</baseType>
 	</UserDefinedType>
 </visiXML_VISI_Systematics>
