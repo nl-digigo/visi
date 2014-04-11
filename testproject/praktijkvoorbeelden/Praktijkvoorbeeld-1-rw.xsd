@@ -1,0 +1,2426 @@
+<!-- Produced by ALFAmail. More information: www.alfamail.nl. -->
+<xsd:schema targetNamespace="http://www.visi.nl/schemas/20110819/Raamwerk_Praktijkvoorbeeld_1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:x="http://www.visi.nl/schemas/20110819/Raamwerk_Praktijkvoorbeeld_1" elementFormDefault="qualified">
+  <!-- root element declaration (for SCHEMA definitions) -->
+  <xsd:element name="visiXML_MessageSchema">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element ref="x:Adviseur" />
+        <xsd:element ref="x:AppendixGroup" />
+        <xsd:element ref="x:BerichtInTransactie19" />
+        <xsd:element ref="x:BerichtInTransactie20" />
+        <xsd:element ref="x:CeAfgiftePrestatieverklaring" />
+        <xsd:element ref="x:CeBijAfwezigheid" />
+        <xsd:element ref="x:CeInterneOpmerkingen" />
+        <xsd:element ref="x:CeMotivatie" />
+        <xsd:element ref="x:CeOrganisatieSOAPServer" />
+        <xsd:element ref="x:CePersoonSpecifiekeInformatie" />
+        <xsd:element ref="x:CeReactietermijn" />
+        <xsd:element ref="x:CeVerzendingNamens" />
+        <xsd:element ref="x:CeVisiVolgnummer" />
+        <xsd:element ref="x:Contractmanagende" />
+        <xsd:element ref="x:DocumentattributenComplexElement" />
+        <xsd:element ref="x:Opdrachtgevende" />
+        <xsd:element ref="x:Opdrachtnemende" />
+        <xsd:element ref="x:PersonInRole" />
+        <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1" />
+        <xsd:element ref="x:StandaardOrganisatie" />
+        <xsd:element ref="x:T1_13_Verzoek_Afgifte_Prestatieverklaring" />
+        <xsd:element ref="x:T1_13_Verzoek_Afgifte_Prestatieverklaring_2" />
+        <xsd:element ref="x:T1_13_Verzoek_Afgifte_Prestatieverklaring_3" />
+        <xsd:element ref="x:T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring" />
+        <xsd:element ref="x:T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2" />
+        <xsd:element ref="x:T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3" />
+        <xsd:element ref="x:T5_12_VerzoekafgifteprestatieveklaringHtoe" />
+        <xsd:element ref="x:T5_12_VerzoekafgifteprestatieveklaringHtoe_2" />
+        <xsd:element ref="x:T5_12_VerzoekafgifteprestatieveklaringHtoe_3" />
+        <xsd:element ref="x:TekeningattributenComplexElement" />
+        <xsd:element ref="x:berichtAfgiftePrestatieVerklaringIntern" />
+        <xsd:element ref="x:berichtAfgiftePrestatieverklaring" />
+        <xsd:element ref="x:berichtAkkoordAfgiftePrestatieverklaring" />
+        <xsd:element ref="x:berichtNietAkkoordAfgiftePrestatieverklaring" />
+        <xsd:element ref="x:berichtVerzoekAfgiftePrestatieVerklaringIntern" />
+        <xsd:element ref="x:berichtVerzoekAfgiftePrestatieverklaring" />
+        <xsd:element ref="x:berichtVerzoekAkkoordAfgiftePrestatieverklaring" />
+        <xsd:element ref="x:berichtWeigeringkAfgiftePrestatieverklaring" />
+        <xsd:element ref="x:documentAppendix" />
+        <xsd:element ref="x:mit15144" />
+        <xsd:element ref="x:mit16038" />
+        <xsd:element ref="x:mit16039" />
+        <xsd:element ref="x:mit16040" />
+        <xsd:element ref="x:mit16041" />
+        <xsd:element ref="x:mit16042" />
+        <xsd:element ref="x:mit16043" />
+        <xsd:element ref="x:mit16044" />
+        <xsd:element ref="x:mit16045" />
+        <xsd:element ref="x:mit16046" />
+        <xsd:element ref="x:mit16047" />
+        <xsd:element ref="x:mit16048" />
+        <xsd:element ref="x:mit16049" />
+        <xsd:element ref="x:mit16050" />
+        <xsd:element ref="x:mit16051" />
+        <xsd:element ref="x:mit16052" />
+        <xsd:element ref="x:mit16053" />
+        <xsd:element ref="x:mit16054" />
+        <xsd:element ref="x:mit16055" />
+        <xsd:element ref="x:mit5037" />
+        <xsd:element ref="x:mit5038" />
+        <xsd:element ref="x:mit5039" />
+        <xsd:element ref="x:mit856" />
+        <xsd:element ref="x:mit857" />
+        <xsd:element ref="x:mit858" />
+        <xsd:element ref="x:standaardGroep" />
+        <xsd:element ref="x:standaardPersoon" />
+        <xsd:element ref="x:tekeningAppendix" />
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  <!-- element declarations (for ENTITY definitions) -->
+  <xsd:element name="Adviseur" type="x:AdviseurType" />
+  <xsd:element name="AppendixGroup" type="x:AppendixGroupType" />
+  <xsd:element name="BerichtInTransactie19" type="x:BerichtInTransactie19Type" />
+  <xsd:element name="BerichtInTransactie20" type="x:BerichtInTransactie20Type" />
+  <xsd:element name="CeAfgiftePrestatieverklaring" type="x:CeAfgiftePrestatieverklaringType" />
+  <xsd:element name="CeBijAfwezigheid" type="x:CeBijAfwezigheidType" />
+  <xsd:element name="CeInterneOpmerkingen" type="x:CeInterneOpmerkingenType" />
+  <xsd:element name="CeMotivatie" type="x:CeMotivatieType" />
+  <xsd:element name="CeOrganisatieSOAPServer" type="x:CeOrganisatieSOAPServerType" />
+  <xsd:element name="CePersoonSpecifiekeInformatie" type="x:CePersoonSpecifiekeInformatieType" />
+  <xsd:element name="CeReactietermijn" type="x:CeReactietermijnType" />
+  <xsd:element name="CeVerzendingNamens" type="x:CeVerzendingNamensType" />
+  <xsd:element name="CeVisiVolgnummer" type="x:CeVisiVolgnummerType" />
+  <xsd:element name="Contractmanagende" type="x:ContractmanagendeType" />
+  <xsd:element name="DocumentattributenComplexElement" type="x:DocumentattributenComplexElementType" />
+  <xsd:element name="Opdrachtgevende" type="x:OpdrachtgevendeType" />
+  <xsd:element name="Opdrachtnemende" type="x:OpdrachtnemendeType" />
+  <xsd:element name="PersonInRole" type="x:PersonInRoleType" />
+  <xsd:element name="Raamwerk_Praktijkvoorbeeld_1" type="x:Raamwerk_Praktijkvoorbeeld_1Type" />
+  <xsd:element name="StandaardOrganisatie" type="x:StandaardOrganisatieType" />
+  <xsd:element name="T1_13_Verzoek_Afgifte_Prestatieverklaring" type="x:T1_13_Verzoek_Afgifte_PrestatieverklaringType" />
+  <xsd:element name="T1_13_Verzoek_Afgifte_Prestatieverklaring_2" type="x:T1_13_Verzoek_Afgifte_Prestatieverklaring_2Type" />
+  <xsd:element name="T1_13_Verzoek_Afgifte_Prestatieverklaring_3" type="x:T1_13_Verzoek_Afgifte_Prestatieverklaring_3Type" />
+  <xsd:element name="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring" type="x:T2_3_Verzoek_Akkoord_Afgifte_PrestatieverklaringType" />
+  <xsd:element name="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2" type="x:T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2Type" />
+  <xsd:element name="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3" type="x:T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3Type" />
+  <xsd:element name="T5_12_VerzoekafgifteprestatieveklaringHtoe" type="x:T5_12_VerzoekafgifteprestatieveklaringHtoeType" />
+  <xsd:element name="T5_12_VerzoekafgifteprestatieveklaringHtoe_2" type="x:T5_12_VerzoekafgifteprestatieveklaringHtoe_2Type" />
+  <xsd:element name="T5_12_VerzoekafgifteprestatieveklaringHtoe_3" type="x:T5_12_VerzoekafgifteprestatieveklaringHtoe_3Type" />
+  <xsd:element name="TekeningattributenComplexElement" type="x:TekeningattributenComplexElementType" />
+  <xsd:element name="berichtAfgiftePrestatieVerklaringIntern" type="x:berichtAfgiftePrestatieVerklaringInternType" />
+  <xsd:element name="berichtAfgiftePrestatieverklaring" type="x:berichtAfgiftePrestatieverklaringType" />
+  <xsd:element name="berichtAkkoordAfgiftePrestatieverklaring" type="x:berichtAkkoordAfgiftePrestatieverklaringType" />
+  <xsd:element name="berichtNietAkkoordAfgiftePrestatieverklaring" type="x:berichtNietAkkoordAfgiftePrestatieverklaringType" />
+  <xsd:element name="berichtVerzoekAfgiftePrestatieVerklaringIntern" type="x:berichtVerzoekAfgiftePrestatieVerklaringInternType" />
+  <xsd:element name="berichtVerzoekAfgiftePrestatieverklaring" type="x:berichtVerzoekAfgiftePrestatieverklaringType" />
+  <xsd:element name="berichtVerzoekAkkoordAfgiftePrestatieverklaring" type="x:berichtVerzoekAkkoordAfgiftePrestatieverklaringType" />
+  <xsd:element name="berichtWeigeringkAfgiftePrestatieverklaring" type="x:berichtWeigeringkAfgiftePrestatieverklaringType" />
+  <xsd:element name="documentAppendix" type="x:documentAppendixType" />
+  <xsd:element name="mit15144" type="x:mit15144Type" />
+  <xsd:element name="mit16038" type="x:mit16038Type" />
+  <xsd:element name="mit16039" type="x:mit16039Type" />
+  <xsd:element name="mit16040" type="x:mit16040Type" />
+  <xsd:element name="mit16041" type="x:mit16041Type" />
+  <xsd:element name="mit16042" type="x:mit16042Type" />
+  <xsd:element name="mit16043" type="x:mit16043Type" />
+  <xsd:element name="mit16044" type="x:mit16044Type" />
+  <xsd:element name="mit16045" type="x:mit16045Type" />
+  <xsd:element name="mit16046" type="x:mit16046Type" />
+  <xsd:element name="mit16047" type="x:mit16047Type" />
+  <xsd:element name="mit16048" type="x:mit16048Type" />
+  <xsd:element name="mit16049" type="x:mit16049Type" />
+  <xsd:element name="mit16050" type="x:mit16050Type" />
+  <xsd:element name="mit16051" type="x:mit16051Type" />
+  <xsd:element name="mit16052" type="x:mit16052Type" />
+  <xsd:element name="mit16053" type="x:mit16053Type" />
+  <xsd:element name="mit16054" type="x:mit16054Type" />
+  <xsd:element name="mit16055" type="x:mit16055Type" />
+  <xsd:element name="mit5037" type="x:mit5037Type" />
+  <xsd:element name="mit5038" type="x:mit5038Type" />
+  <xsd:element name="mit5039" type="x:mit5039Type" />
+  <xsd:element name="mit856" type="x:mit856Type" />
+  <xsd:element name="mit857" type="x:mit857Type" />
+  <xsd:element name="mit858" type="x:mit858Type" />
+  <xsd:element name="standaardGroep" type="x:standaardGroepType" />
+  <xsd:element name="standaardPersoon" type="x:standaardPersoonType" />
+  <xsd:element name="tekeningAppendix" type="x:tekeningAppendixType" />
+  <!-- element reference declarations (for ENTITY definitions) -->
+  <xsd:element name="AdviseurRef" type="x:AdviseurTypeRef" />
+  <xsd:element name="AppendixGroupRef" type="x:AppendixGroupTypeRef" />
+  <xsd:element name="BerichtInTransactie19Ref" type="x:BerichtInTransactie19TypeRef" />
+  <xsd:element name="BerichtInTransactie20Ref" type="x:BerichtInTransactie20TypeRef" />
+  <xsd:element name="CeAfgiftePrestatieverklaringRef" type="x:CeAfgiftePrestatieverklaringTypeRef" />
+  <xsd:element name="CeBijAfwezigheidRef" type="x:CeBijAfwezigheidTypeRef" />
+  <xsd:element name="CeInterneOpmerkingenRef" type="x:CeInterneOpmerkingenTypeRef" />
+  <xsd:element name="CeMotivatieRef" type="x:CeMotivatieTypeRef" />
+  <xsd:element name="CeOrganisatieSOAPServerRef" type="x:CeOrganisatieSOAPServerTypeRef" />
+  <xsd:element name="CePersoonSpecifiekeInformatieRef" type="x:CePersoonSpecifiekeInformatieTypeRef" />
+  <xsd:element name="CeReactietermijnRef" type="x:CeReactietermijnTypeRef" />
+  <xsd:element name="CeVerzendingNamensRef" type="x:CeVerzendingNamensTypeRef" />
+  <xsd:element name="CeVisiVolgnummerRef" type="x:CeVisiVolgnummerTypeRef" />
+  <xsd:element name="ContractmanagendeRef" type="x:ContractmanagendeTypeRef" />
+  <xsd:element name="DocumentattributenComplexElementRef" type="x:DocumentattributenComplexElementTypeRef" />
+  <xsd:element name="OpdrachtgevendeRef" type="x:OpdrachtgevendeTypeRef" />
+  <xsd:element name="OpdrachtnemendeRef" type="x:OpdrachtnemendeTypeRef" />
+  <xsd:element name="PersonInRoleRef" type="x:PersonInRoleTypeRef" />
+  <xsd:element name="Raamwerk_Praktijkvoorbeeld_1Ref" type="x:Raamwerk_Praktijkvoorbeeld_1TypeRef" />
+  <xsd:element name="StandaardOrganisatieRef" type="x:StandaardOrganisatieTypeRef" />
+  <xsd:element name="T1_13_Verzoek_Afgifte_PrestatieverklaringRef" type="x:T1_13_Verzoek_Afgifte_PrestatieverklaringTypeRef" />
+  <xsd:element name="T1_13_Verzoek_Afgifte_Prestatieverklaring_2Ref" type="x:T1_13_Verzoek_Afgifte_Prestatieverklaring_2TypeRef" />
+  <xsd:element name="T1_13_Verzoek_Afgifte_Prestatieverklaring_3Ref" type="x:T1_13_Verzoek_Afgifte_Prestatieverklaring_3TypeRef" />
+  <xsd:element name="T2_3_Verzoek_Akkoord_Afgifte_PrestatieverklaringRef" type="x:T2_3_Verzoek_Akkoord_Afgifte_PrestatieverklaringTypeRef" />
+  <xsd:element name="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2Ref" type="x:T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2TypeRef" />
+  <xsd:element name="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3Ref" type="x:T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3TypeRef" />
+  <xsd:element name="T5_12_VerzoekafgifteprestatieveklaringHtoeRef" type="x:T5_12_VerzoekafgifteprestatieveklaringHtoeTypeRef" />
+  <xsd:element name="T5_12_VerzoekafgifteprestatieveklaringHtoe_2Ref" type="x:T5_12_VerzoekafgifteprestatieveklaringHtoe_2TypeRef" />
+  <xsd:element name="T5_12_VerzoekafgifteprestatieveklaringHtoe_3Ref" type="x:T5_12_VerzoekafgifteprestatieveklaringHtoe_3TypeRef" />
+  <xsd:element name="TekeningattributenComplexElementRef" type="x:TekeningattributenComplexElementTypeRef" />
+  <xsd:element name="berichtAfgiftePrestatieVerklaringInternRef" type="x:berichtAfgiftePrestatieVerklaringInternTypeRef" />
+  <xsd:element name="berichtAfgiftePrestatieverklaringRef" type="x:berichtAfgiftePrestatieverklaringTypeRef" />
+  <xsd:element name="berichtAkkoordAfgiftePrestatieverklaringRef" type="x:berichtAkkoordAfgiftePrestatieverklaringTypeRef" />
+  <xsd:element name="berichtNietAkkoordAfgiftePrestatieverklaringRef" type="x:berichtNietAkkoordAfgiftePrestatieverklaringTypeRef" />
+  <xsd:element name="berichtVerzoekAfgiftePrestatieVerklaringInternRef" type="x:berichtVerzoekAfgiftePrestatieVerklaringInternTypeRef" />
+  <xsd:element name="berichtVerzoekAfgiftePrestatieverklaringRef" type="x:berichtVerzoekAfgiftePrestatieverklaringTypeRef" />
+  <xsd:element name="berichtVerzoekAkkoordAfgiftePrestatieverklaringRef" type="x:berichtVerzoekAkkoordAfgiftePrestatieverklaringTypeRef" />
+  <xsd:element name="berichtWeigeringkAfgiftePrestatieverklaringRef" type="x:berichtWeigeringkAfgiftePrestatieverklaringTypeRef" />
+  <xsd:element name="documentAppendixRef" type="x:documentAppendixTypeRef" />
+  <xsd:element name="mit15144Ref" type="x:mit15144TypeRef" />
+  <xsd:element name="mit16038Ref" type="x:mit16038TypeRef" />
+  <xsd:element name="mit16039Ref" type="x:mit16039TypeRef" />
+  <xsd:element name="mit16040Ref" type="x:mit16040TypeRef" />
+  <xsd:element name="mit16041Ref" type="x:mit16041TypeRef" />
+  <xsd:element name="mit16042Ref" type="x:mit16042TypeRef" />
+  <xsd:element name="mit16043Ref" type="x:mit16043TypeRef" />
+  <xsd:element name="mit16044Ref" type="x:mit16044TypeRef" />
+  <xsd:element name="mit16045Ref" type="x:mit16045TypeRef" />
+  <xsd:element name="mit16046Ref" type="x:mit16046TypeRef" />
+  <xsd:element name="mit16047Ref" type="x:mit16047TypeRef" />
+  <xsd:element name="mit16048Ref" type="x:mit16048TypeRef" />
+  <xsd:element name="mit16049Ref" type="x:mit16049TypeRef" />
+  <xsd:element name="mit16050Ref" type="x:mit16050TypeRef" />
+  <xsd:element name="mit16051Ref" type="x:mit16051TypeRef" />
+  <xsd:element name="mit16052Ref" type="x:mit16052TypeRef" />
+  <xsd:element name="mit16053Ref" type="x:mit16053TypeRef" />
+  <xsd:element name="mit16054Ref" type="x:mit16054TypeRef" />
+  <xsd:element name="mit16055Ref" type="x:mit16055TypeRef" />
+  <xsd:element name="mit5037Ref" type="x:mit5037TypeRef" />
+  <xsd:element name="mit5038Ref" type="x:mit5038TypeRef" />
+  <xsd:element name="mit5039Ref" type="x:mit5039TypeRef" />
+  <xsd:element name="mit856Ref" type="x:mit856TypeRef" />
+  <xsd:element name="mit857Ref" type="x:mit857TypeRef" />
+  <xsd:element name="mit858Ref" type="x:mit858TypeRef" />
+  <xsd:element name="standaardGroepRef" type="x:standaardGroepTypeRef" />
+  <xsd:element name="standaardPersoonRef" type="x:standaardPersoonTypeRef" />
+  <xsd:element name="tekeningAppendixRef" type="x:tekeningAppendixTypeRef" />
+  <!-- complex types for element declarations (for ENTITY definitions) -->
+  <xsd:complexType name="AdviseurType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="category" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="AppendixGroupType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="group" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:standaardGroep" />
+                <xsd:element ref="x:standaardGroepRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="BerichtInTransactie19Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="BerichtInTransactie20Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeAfgiftePrestatieverklaringType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="werkID" type="xsd:string" />
+          <xsd:element name="opdrachtNaam" type="xsd:string" />
+          <xsd:element name="prestatieverklaringPrijs">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="verwijzigingGoedkeurTermijnen" type="xsd:string" />
+          <xsd:element name="aantalTermijnen" type="xsd:integer" />
+          <xsd:element name="opmerkingen" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeBijAfwezigheidType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="verzondenDoor" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeInterneOpmerkingenType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="interneOpmerkingen" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeMotivatieType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="motivatie" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeOrganisatieSOAPServerType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="sOAPServerURL" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CePersoonSpecifiekeInformatieType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="afdeling" type="xsd:string" />
+          <xsd:element name="vasteTelefoon" type="xsd:string" />
+          <xsd:element name="fax" type="xsd:string" />
+          <xsd:element name="mobieleTelefoon" type="xsd:string" />
+          <xsd:element name="email" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeReactietermijnType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="reactietermijn" type="xsd:date" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeVerzendingNamensType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="verzondenNamens">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="Jos Maassen" />
+                <xsd:enumeration value="Lars Teulings" />
+                <xsd:enumeration value="Mart Goffau" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeVisiVolgnummerType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="sE_volgnummer">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:minLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ContractmanagendeType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="category" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentattributenComplexElementType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="documentTitel">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:minLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="documentKenmerk">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:minLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="documentVersie">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:minLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="documentAuteur">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:minLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="documentStatus">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="Concept" />
+                <xsd:enumeration value="Definitief" />
+                <xsd:enumeration value="Geautoriseerd" />
+                <xsd:enumeration value="N.V.T." />
+                <xsd:enumeration value="Vervallen" />
+                <xsd:enumeration value="Vrijgegeven" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="documentDatum" type="xsd:date" />
+          <xsd:element name="documentOpmerkingen" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OpdrachtgevendeType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="category" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OpdrachtnemendeType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="category" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PersonInRoleType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="successor" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="substituting" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="contactPerson">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:standaardPersoon" />
+                <xsd:element ref="x:standaardPersoonRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="organisation">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:StandaardOrganisatie" />
+                <xsd:element ref="x:StandaardOrganisatieRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="role">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:RoleTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Raamwerk_Praktijkvoorbeeld_1Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="StandaardOrganisatieType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="abbreviation" type="xsd:string" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="contactPerson">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:standaardPersoon" />
+                <xsd:element ref="x:standaardPersoonRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceOrganisatieSOAPServer" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeOrganisatieSOAPServer" />
+                <xsd:element ref="x:CeOrganisatieSOAPServerRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T1_13_Verzoek_Afgifte_PrestatieverklaringType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:integer" />
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="result" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiator">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="executor">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="project">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1" />
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1Ref" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T1_13_Verzoek_Afgifte_Prestatieverklaring_2Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:integer" />
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="result" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiator">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="executor">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="project">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1" />
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1Ref" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T1_13_Verzoek_Afgifte_Prestatieverklaring_3Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:integer" />
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="result" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiator">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="executor">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="project">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1" />
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1Ref" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T2_3_Verzoek_Akkoord_Afgifte_PrestatieverklaringType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:integer" />
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="result" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiator">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="executor">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="project">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1" />
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1Ref" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:integer" />
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="result" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiator">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="executor">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="project">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1" />
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1Ref" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:integer" />
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="result" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiator">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="executor">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="project">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1" />
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1Ref" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T5_12_VerzoekafgifteprestatieveklaringHtoeType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:integer" />
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="result" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiator">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="executor">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="project">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1" />
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1Ref" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T5_12_VerzoekafgifteprestatieveklaringHtoe_2Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:integer" />
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="result" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiator">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="executor">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="project">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1" />
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1Ref" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T5_12_VerzoekafgifteprestatieveklaringHtoe_3Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:integer" />
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="result" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiator">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="executor">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:PersonInRole" />
+                <xsd:element ref="x:PersonInRoleRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="project">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1" />
+                <xsd:element ref="x:Raamwerk_Praktijkvoorbeeld_1Ref" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="TekeningattributenComplexElementType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="tekeningKenmerk">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:minLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="tekeningVersie">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:minLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="tekeningStatus">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="Concept" />
+                <xsd:enumeration value="Definitief" />
+                <xsd:enumeration value="Geautoriseerd" />
+                <xsd:enumeration value="N.V.T." />
+                <xsd:enumeration value="Vervallen" />
+                <xsd:enumeration value="Vrijgegeven" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="tekeningTekenaar">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:minLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="tekeningSchaal">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:minLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtAfgiftePrestatieVerklaringInternType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+          <xsd:element name="messageInTransaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:MessageInTransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="transaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:TransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceVisiVolgnummer" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeVisiVolgnummer" />
+                <xsd:element ref="x:CeVisiVolgnummerRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceAfgiftePrestatieverklaring" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeAfgiftePrestatieverklaring" />
+                <xsd:element ref="x:CeAfgiftePrestatieverklaringRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceInterneOpmerkingen" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeInterneOpmerkingen" />
+                <xsd:element ref="x:CeInterneOpmerkingenRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtAfgiftePrestatieverklaringType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+          <xsd:element name="messageInTransaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:MessageInTransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="transaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:TransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceVisiVolgnummer" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeVisiVolgnummer" />
+                <xsd:element ref="x:CeVisiVolgnummerRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceAfgiftePrestatieverklaring" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeAfgiftePrestatieverklaring" />
+                <xsd:element ref="x:CeAfgiftePrestatieverklaringRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceBijAfwezigheid" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeBijAfwezigheid" />
+                <xsd:element ref="x:CeBijAfwezigheidRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtAkkoordAfgiftePrestatieverklaringType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+          <xsd:element name="messageInTransaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:MessageInTransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="transaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:TransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceVisiVolgnummer" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeVisiVolgnummer" />
+                <xsd:element ref="x:CeVisiVolgnummerRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceAfgiftePrestatieverklaring" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeAfgiftePrestatieverklaring" />
+                <xsd:element ref="x:CeAfgiftePrestatieverklaringRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceReactietermijn" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeReactietermijn" />
+                <xsd:element ref="x:CeReactietermijnRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceInterneOpmerkingen" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeInterneOpmerkingen" />
+                <xsd:element ref="x:CeInterneOpmerkingenRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceMotivatie" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeMotivatie" />
+                <xsd:element ref="x:CeMotivatieRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtNietAkkoordAfgiftePrestatieverklaringType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+          <xsd:element name="messageInTransaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:MessageInTransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="transaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:TransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceVisiVolgnummer" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeVisiVolgnummer" />
+                <xsd:element ref="x:CeVisiVolgnummerRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceAfgiftePrestatieverklaring" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeAfgiftePrestatieverklaring" />
+                <xsd:element ref="x:CeAfgiftePrestatieverklaringRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceReactietermijn" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeReactietermijn" />
+                <xsd:element ref="x:CeReactietermijnRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceInterneOpmerkingen" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeInterneOpmerkingen" />
+                <xsd:element ref="x:CeInterneOpmerkingenRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceMotivatie" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeMotivatie" />
+                <xsd:element ref="x:CeMotivatieRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtVerzoekAfgiftePrestatieVerklaringInternType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+          <xsd:element name="messageInTransaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:MessageInTransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="transaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:TransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceVisiVolgnummer" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeVisiVolgnummer" />
+                <xsd:element ref="x:CeVisiVolgnummerRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceAfgiftePrestatieverklaring" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeAfgiftePrestatieverklaring" />
+                <xsd:element ref="x:CeAfgiftePrestatieverklaringRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceInterneOpmerkingen" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeInterneOpmerkingen" />
+                <xsd:element ref="x:CeInterneOpmerkingenRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceReactietermijn" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeReactietermijn" />
+                <xsd:element ref="x:CeReactietermijnRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtVerzoekAfgiftePrestatieverklaringType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+          <xsd:element name="messageInTransaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:MessageInTransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="transaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:TransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceVisiVolgnummer" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeVisiVolgnummer" />
+                <xsd:element ref="x:CeVisiVolgnummerRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceAfgiftePrestatieverklaring" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeAfgiftePrestatieverklaring" />
+                <xsd:element ref="x:CeAfgiftePrestatieverklaringRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceReactietermijn" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeReactietermijn" />
+                <xsd:element ref="x:CeReactietermijnRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtVerzoekAkkoordAfgiftePrestatieverklaringType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+          <xsd:element name="messageInTransaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:MessageInTransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="transaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:TransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceVisiVolgnummer" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeVisiVolgnummer" />
+                <xsd:element ref="x:CeVisiVolgnummerRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceAfgiftePrestatieverklaring" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeAfgiftePrestatieverklaring" />
+                <xsd:element ref="x:CeAfgiftePrestatieverklaringRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceReactietermijn" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeReactietermijn" />
+                <xsd:element ref="x:CeReactietermijnRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceInterneOpmerkingen" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeInterneOpmerkingen" />
+                <xsd:element ref="x:CeInterneOpmerkingenRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtWeigeringkAfgiftePrestatieverklaringType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+          <xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+          <xsd:element name="messageInTransaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:MessageInTransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="transaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:TransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceVisiVolgnummer" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeVisiVolgnummer" />
+                <xsd:element ref="x:CeVisiVolgnummerRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceAfgiftePrestatieverklaring" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeAfgiftePrestatieverklaring" />
+                <xsd:element ref="x:CeAfgiftePrestatieverklaringRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceMotivatie" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeMotivatie" />
+                <xsd:element ref="x:CeMotivatieRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ceBijAfwezigheid" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CeBijAfwezigheid" />
+                <xsd:element ref="x:CeBijAfwezigheidRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="documentAppendixType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="fileLocation" type="xsd:string" />
+          <xsd:element name="fileType" type="xsd:string" />
+          <xsd:element name="fileVersion" type="xsd:string" />
+          <xsd:element name="documentIdentification" type="xsd:string" minOccurs="0" />
+          <xsd:element name="documentVersion" type="xsd:string" minOccurs="0" />
+          <xsd:element name="documentReference" type="xsd:string" minOccurs="0" />
+          <xsd:element name="objectCode" type="xsd:string" minOccurs="0" />
+          <xsd:element name="startDate" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="endDate" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="language" type="xsd:string" minOccurs="0" />
+          <xsd:element name="message">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:MessageTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="appendixGroup" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:AppendixGroup" />
+                <xsd:element ref="x:AppendixGroupRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="documentattributenComplexElement" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:DocumentattributenComplexElement" />
+                <xsd:element ref="x:DocumentattributenComplexElementRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit15144Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16038Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16039Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16040Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16041Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16042Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16043Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16044Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16045Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16046Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16047Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16048Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16049Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16050Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16051Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16052Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16053Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16054Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16055Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit5037Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit5038Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit5039Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit856Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit857Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit858Type">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="identification" type="xsd:string" />
+          <xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="standaardGroepType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="creationDate" type="xsd:dateTime" />
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="versionNo" type="xsd:string" />
+          <xsd:element name="transaction">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:TransactionTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="standaardPersoonType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="userName" type="xsd:string" />
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="cePersoonSpecifiekeInformatie" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:CePersoonSpecifiekeInformatie" />
+                <xsd:element ref="x:CePersoonSpecifiekeInformatieRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="tekeningAppendixType">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementType">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="fileLocation" type="xsd:string" />
+          <xsd:element name="fileType" type="xsd:string" />
+          <xsd:element name="fileVersion" type="xsd:string" />
+          <xsd:element name="documentIdentification" type="xsd:string" minOccurs="0" />
+          <xsd:element name="documentVersion" type="xsd:string" minOccurs="0" />
+          <xsd:element name="documentReference" type="xsd:string" minOccurs="0" />
+          <xsd:element name="objectCode" type="xsd:string" minOccurs="0" />
+          <xsd:element name="startDate" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="endDate" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="state" type="xsd:string" minOccurs="0" />
+          <xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+          <xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+          <xsd:element name="language" type="xsd:string" minOccurs="0" />
+          <xsd:element name="message">
+            <xsd:complexType>
+              <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:group ref="x:MessageTypeInstanceSet" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="appendixGroup" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice>
+                <xsd:element ref="x:AppendixGroup" />
+                <xsd:element ref="x:AppendixGroupRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="tekeningattributenComplexElement" minOccurs="0">
+            <xsd:complexType>
+              <xsd:choice maxOccurs="unbounded">
+                <xsd:element ref="x:TekeningattributenComplexElement" />
+                <xsd:element ref="x:TekeningattributenComplexElementRef" />
+              </xsd:choice>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <!-- complex types for element reference declarations (for ENTITY definitions) -->
+  <xsd:complexType name="AdviseurTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="AppendixGroupTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="BerichtInTransactie19TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="BerichtInTransactie20TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeAfgiftePrestatieverklaringTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeBijAfwezigheidTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeInterneOpmerkingenTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeMotivatieTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeOrganisatieSOAPServerTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CePersoonSpecifiekeInformatieTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeReactietermijnTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeVerzendingNamensTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CeVisiVolgnummerTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ContractmanagendeTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentattributenComplexElementTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OpdrachtgevendeTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OpdrachtnemendeTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PersonInRoleTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Raamwerk_Praktijkvoorbeeld_1TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="StandaardOrganisatieTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T1_13_Verzoek_Afgifte_PrestatieverklaringTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T1_13_Verzoek_Afgifte_Prestatieverklaring_2TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T1_13_Verzoek_Afgifte_Prestatieverklaring_3TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T2_3_Verzoek_Akkoord_Afgifte_PrestatieverklaringTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T5_12_VerzoekafgifteprestatieveklaringHtoeTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T5_12_VerzoekafgifteprestatieveklaringHtoe_2TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="T5_12_VerzoekafgifteprestatieveklaringHtoe_3TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="TekeningattributenComplexElementTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtAfgiftePrestatieVerklaringInternTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtAfgiftePrestatieverklaringTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtAkkoordAfgiftePrestatieverklaringTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtNietAkkoordAfgiftePrestatieverklaringTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtVerzoekAfgiftePrestatieVerklaringInternTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtVerzoekAfgiftePrestatieverklaringTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtVerzoekAkkoordAfgiftePrestatieverklaringTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="berichtWeigeringkAfgiftePrestatieverklaringTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="documentAppendixTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit15144TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16038TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16039TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16040TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16041TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16042TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16043TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16044TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16045TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16046TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16047TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16048TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16049TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16050TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16051TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16052TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16053TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16054TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit16055TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit5037TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit5038TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit5039TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit856TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit857TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="mit858TypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="standaardGroepTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="standaardPersoonTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="tekeningAppendixTypeRef">
+    <xsd:complexContent>
+      <xsd:extension base="x:elementTypeRef" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <!-- group declarations (for SELECT data type definitions) -->
+  <xsd:group name="MessageInTransactionTypeInstanceSet">
+    <xsd:choice>
+      <xsd:element ref="x:BerichtInTransactie19" />
+      <xsd:element ref="x:BerichtInTransactie19Ref" />
+      <xsd:element ref="x:BerichtInTransactie20" />
+      <xsd:element ref="x:BerichtInTransactie20Ref" />
+      <xsd:element ref="x:mit15144" />
+      <xsd:element ref="x:mit15144Ref" />
+      <xsd:element ref="x:mit16038" />
+      <xsd:element ref="x:mit16038Ref" />
+      <xsd:element ref="x:mit16039" />
+      <xsd:element ref="x:mit16039Ref" />
+      <xsd:element ref="x:mit16040" />
+      <xsd:element ref="x:mit16040Ref" />
+      <xsd:element ref="x:mit16041" />
+      <xsd:element ref="x:mit16041Ref" />
+      <xsd:element ref="x:mit16042" />
+      <xsd:element ref="x:mit16042Ref" />
+      <xsd:element ref="x:mit16043" />
+      <xsd:element ref="x:mit16043Ref" />
+      <xsd:element ref="x:mit16044" />
+      <xsd:element ref="x:mit16044Ref" />
+      <xsd:element ref="x:mit16045" />
+      <xsd:element ref="x:mit16045Ref" />
+      <xsd:element ref="x:mit16046" />
+      <xsd:element ref="x:mit16046Ref" />
+      <xsd:element ref="x:mit16047" />
+      <xsd:element ref="x:mit16047Ref" />
+      <xsd:element ref="x:mit16048" />
+      <xsd:element ref="x:mit16048Ref" />
+      <xsd:element ref="x:mit16049" />
+      <xsd:element ref="x:mit16049Ref" />
+      <xsd:element ref="x:mit16050" />
+      <xsd:element ref="x:mit16050Ref" />
+      <xsd:element ref="x:mit16051" />
+      <xsd:element ref="x:mit16051Ref" />
+      <xsd:element ref="x:mit16052" />
+      <xsd:element ref="x:mit16052Ref" />
+      <xsd:element ref="x:mit16053" />
+      <xsd:element ref="x:mit16053Ref" />
+      <xsd:element ref="x:mit16054" />
+      <xsd:element ref="x:mit16054Ref" />
+      <xsd:element ref="x:mit16055" />
+      <xsd:element ref="x:mit16055Ref" />
+      <xsd:element ref="x:mit5037" />
+      <xsd:element ref="x:mit5037Ref" />
+      <xsd:element ref="x:mit5038" />
+      <xsd:element ref="x:mit5038Ref" />
+      <xsd:element ref="x:mit5039" />
+      <xsd:element ref="x:mit5039Ref" />
+      <xsd:element ref="x:mit856" />
+      <xsd:element ref="x:mit856Ref" />
+      <xsd:element ref="x:mit857" />
+      <xsd:element ref="x:mit857Ref" />
+      <xsd:element ref="x:mit858" />
+      <xsd:element ref="x:mit858Ref" />
+    </xsd:choice>
+  </xsd:group>
+  <xsd:group name="MessageTypeInstanceSet">
+    <xsd:choice>
+      <xsd:element ref="x:berichtAfgiftePrestatieVerklaringIntern" />
+      <xsd:element ref="x:berichtAfgiftePrestatieVerklaringInternRef" />
+      <xsd:element ref="x:berichtAfgiftePrestatieverklaring" />
+      <xsd:element ref="x:berichtAfgiftePrestatieverklaringRef" />
+      <xsd:element ref="x:berichtAkkoordAfgiftePrestatieverklaring" />
+      <xsd:element ref="x:berichtAkkoordAfgiftePrestatieverklaringRef" />
+      <xsd:element ref="x:berichtNietAkkoordAfgiftePrestatieverklaring" />
+      <xsd:element ref="x:berichtNietAkkoordAfgiftePrestatieverklaringRef" />
+      <xsd:element ref="x:berichtVerzoekAfgiftePrestatieVerklaringIntern" />
+      <xsd:element ref="x:berichtVerzoekAfgiftePrestatieVerklaringInternRef" />
+      <xsd:element ref="x:berichtVerzoekAfgiftePrestatieverklaring" />
+      <xsd:element ref="x:berichtVerzoekAfgiftePrestatieverklaringRef" />
+      <xsd:element ref="x:berichtVerzoekAkkoordAfgiftePrestatieverklaring" />
+      <xsd:element ref="x:berichtVerzoekAkkoordAfgiftePrestatieverklaringRef" />
+      <xsd:element ref="x:berichtWeigeringkAfgiftePrestatieverklaring" />
+      <xsd:element ref="x:berichtWeigeringkAfgiftePrestatieverklaringRef" />
+    </xsd:choice>
+  </xsd:group>
+  <xsd:group name="RoleTypeInstanceSet">
+    <xsd:choice>
+      <xsd:element ref="x:Adviseur" />
+      <xsd:element ref="x:AdviseurRef" />
+      <xsd:element ref="x:Contractmanagende" />
+      <xsd:element ref="x:ContractmanagendeRef" />
+      <xsd:element ref="x:Opdrachtgevende" />
+      <xsd:element ref="x:OpdrachtgevendeRef" />
+      <xsd:element ref="x:Opdrachtnemende" />
+      <xsd:element ref="x:OpdrachtnemendeRef" />
+    </xsd:choice>
+  </xsd:group>
+  <xsd:group name="TransactionTypeInstanceSet">
+    <xsd:choice>
+      <xsd:element ref="x:T1_13_Verzoek_Afgifte_Prestatieverklaring" />
+      <xsd:element ref="x:T1_13_Verzoek_Afgifte_PrestatieverklaringRef" />
+      <xsd:element ref="x:T1_13_Verzoek_Afgifte_Prestatieverklaring_2" />
+      <xsd:element ref="x:T1_13_Verzoek_Afgifte_Prestatieverklaring_2Ref" />
+      <xsd:element ref="x:T1_13_Verzoek_Afgifte_Prestatieverklaring_3" />
+      <xsd:element ref="x:T1_13_Verzoek_Afgifte_Prestatieverklaring_3Ref" />
+      <xsd:element ref="x:T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring" />
+      <xsd:element ref="x:T2_3_Verzoek_Akkoord_Afgifte_PrestatieverklaringRef" />
+      <xsd:element ref="x:T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2" />
+      <xsd:element ref="x:T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2Ref" />
+      <xsd:element ref="x:T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3" />
+      <xsd:element ref="x:T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3Ref" />
+      <xsd:element ref="x:T5_12_VerzoekafgifteprestatieveklaringHtoe" />
+      <xsd:element ref="x:T5_12_VerzoekafgifteprestatieveklaringHtoeRef" />
+      <xsd:element ref="x:T5_12_VerzoekafgifteprestatieveklaringHtoe_2" />
+      <xsd:element ref="x:T5_12_VerzoekafgifteprestatieveklaringHtoe_2Ref" />
+      <xsd:element ref="x:T5_12_VerzoekafgifteprestatieveklaringHtoe_3" />
+      <xsd:element ref="x:T5_12_VerzoekafgifteprestatieveklaringHtoe_3Ref" />
+    </xsd:choice>
+  </xsd:group>
+  <!-- enumeration type declarations (for ENUMERATION data type definitions) -->
+  <!-- simple type declarations (for TYPE defined data type definitions) -->
+  <!-- standard declarations, elementType, simpleType, logical (for each translation) -->
+  <xsd:complexType name="elementType">
+    <xsd:attribute name="id" type="xsd:ID" use="required" />
+  </xsd:complexType>
+  <xsd:complexType name="elementTypeRef">
+    <xsd:attribute name="idref" type="xsd:IDREF" use="required" />
+  </xsd:complexType>
+  <xsd:simpleType name="logical">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="true" />
+      <xsd:enumeration value="false" />
+      <xsd:enumeration value="unknown" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

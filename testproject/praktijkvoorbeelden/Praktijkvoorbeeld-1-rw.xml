@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Jeroen van Geijlswijk (infostrait) -->
+<visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20110819" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20110819 c:\20110819.xsd">
+	<AppendixType id="documentAppendix">
+		<description>Document</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="DocumentattributenComplexElement"/>
+		</complexElements>
+	</AppendixType>
+	<AppendixType id="tekeningAppendix">
+		<description>Tekening</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="TekeningattributenComplexElement"/>
+		</complexElements>
+	</AppendixType>
+	<ComplexElementType id="CeAfgiftePrestatieverklaring">
+		<description>Prestatieverklaring</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="werkID"/>
+			<SimpleElementTypeRef idref="opdrachtNaam"/>
+			<SimpleElementTypeRef idref="prestatieverklaringPrijs"/>
+			<SimpleElementTypeRef idref="verwijzigingGoedkeurTermijnen"/>
+			<SimpleElementTypeRef idref="aantalTermijnen"/>
+			<SimpleElementTypeRef idref="opmerkingen"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeBijAfwezigheid">
+		<description>Bij afwezigheid</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="verzondenDoor"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeInterneOpmerkingen">
+		<description>Interne opmerkingen</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="interneOpmerkingen"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeMotivatie">
+		<description>Motivatie</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="motivatie"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeOrganisatieSOAPServer">
+		<description>Gegevens van SOAP server</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SOAPServerURL"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CePersoonSpecifiekeInformatie">
+		<description>Persoonsgegevens</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="afdeling"/>
+			<SimpleElementTypeRef idref="vasteTelefoon"/>
+			<SimpleElementTypeRef idref="fax"/>
+			<SimpleElementTypeRef idref="mobieleTelefoon"/>
+			<SimpleElementTypeRef idref="email"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeReactietermijn">
+		<description>Reactietermijn</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="reactietermijn"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeVerzendingNamens">
+		<description>Verzending namens</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="verzondenNamens"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeVisiVolgnummer">
+		<description>VISI volgnummer</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SE_volgnummer"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="DocumentattributenComplexElement">
+		<description>Documentgegevens</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="documentTitel"/>
+			<SimpleElementTypeRef idref="documentKenmerk"/>
+			<SimpleElementTypeRef idref="documentVersie"/>
+			<SimpleElementTypeRef idref="documentAuteur"/>
+			<SimpleElementTypeRef idref="documentStatus"/>
+			<SimpleElementTypeRef idref="documentDatum"/>
+			<SimpleElementTypeRef idref="documentOpmerkingen"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="TekeningattributenComplexElement">
+		<description>Tekeninggegevens</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="tekeningKenmerk"/>
+			<SimpleElementTypeRef idref="tekeningVersie"/>
+			<SimpleElementTypeRef idref="tekeningStatus"/>
+			<SimpleElementTypeRef idref="tekeningTekenaar"/>
+			<SimpleElementTypeRef idref="tekeningSchaal"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ElementCondition id="ec2088">
+		<description>New element condition</description>
+		<condition>FREE</condition>
+		<complexElement>
+			<ComplexElementTypeRef idref="CeReactietermijn"/>
+		</complexElement>
+		<simpleElement>
+			<SimpleElementTypeRef idref="reactietermijn"/>
+		</simpleElement>
+		<messageInTransaction>
+			<MessageInTransactionTypeRef idref="mit856"/>
+		</messageInTransaction>
+	</ElementCondition>
+	<ElementCondition id="ec2897">
+		<description>New element condition</description>
+		<condition>FREE</condition>
+		<simpleElement>
+			<SimpleElementTypeRef idref="documentOpmerkingen"/>
+		</simpleElement>
+	</ElementCondition>
+	<ElementCondition id="ec2898">
+		<description>New element condition</description>
+		<condition>EMPTY</condition>
+		<simpleElement>
+			<SimpleElementTypeRef idref="opmerkingen"/>
+		</simpleElement>
+	</ElementCondition>
+	<ElementCondition id="ec2899">
+		<description>New element condition</description>
+		<condition>FREE</condition>
+		<simpleElement>
+			<SimpleElementTypeRef idref="SeReactietermijn"/>
+		</simpleElement>
+	</ElementCondition>
+	<ElementCondition id="ec2900">
+		<description>New element condition</description>
+		<condition>FREE</condition>
+		<simpleElement>
+			<SimpleElementTypeRef idref="reactietermijn"/>
+		</simpleElement>
+	</ElementCondition>
+	<ElementCondition id="ec2901">
+		<description>New element condition</description>
+		<condition>EMPTY</condition>
+		<simpleElement>
+			<SimpleElementTypeRef idref="motivatie"/>
+		</simpleElement>
+	</ElementCondition>
+	<ElementCondition id="ec2902">
+		<description>New element condition</description>
+		<condition>FIXED</condition>
+		<simpleElement>
+			<SimpleElementTypeRef idref="werkID"/>
+		</simpleElement>
+	</ElementCondition>
+	<ElementCondition id="ec2904">
+		<description>New element condition</description>
+		<condition>FREE</condition>
+		<complexElement>
+			<ComplexElementTypeRef idref="CeVerzendingNamens"/>
+		</complexElement>
+	</ElementCondition>
+	<GroupType id="standaardGroep">
+		<description>Standaard groep</description>
+	</GroupType>
+	<MessageInTransactionType id="BerichtInTransactie19">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit857"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T1_13_Verzoek_Afgifte_Prestatieverklaring"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie20">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtWeigeringkAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit858"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T1_13_Verzoek_Afgifte_Prestatieverklaring"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit15144">
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<firstMessage>true</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtVerzoekAfgiftePrestatieverklaring"/>
+		</message>
+		<transaction>
+			<TransactionTypeRef idref="T1_13_Verzoek_Afgifte_Prestatieverklaring"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16038">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16044"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T1_13_Verzoek_Afgifte_Prestatieverklaring_2"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16039">
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<firstMessage>true</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtVerzoekAfgiftePrestatieverklaring"/>
+		</message>
+		<transaction>
+			<TransactionTypeRef idref="T1_13_Verzoek_Afgifte_Prestatieverklaring_2"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16040">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtWeigeringkAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16039"/>
+			<MessageInTransactionTypeRef idref="mit16046"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T1_13_Verzoek_Afgifte_Prestatieverklaring_2"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16041">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtAkkoordAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16043"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16042">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtNietAkkoordAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16043"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16043">
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<firstMessage>true</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtVerzoekAkkoordAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16045"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16044">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtAfgiftePrestatieVerklaringIntern"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16045"/>
+			<MessageInTransactionTypeRef idref="mit16041"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T5_12_VerzoekafgifteprestatieveklaringHtoe_2"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16045">
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<firstMessage>true</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtVerzoekAfgiftePrestatieVerklaringIntern"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16039"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T5_12_VerzoekafgifteprestatieveklaringHtoe_2"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16046">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtWeigeringkAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16045"/>
+			<MessageInTransactionTypeRef idref="mit16042"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T5_12_VerzoekafgifteprestatieveklaringHtoe_2"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16047">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16048"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T1_13_Verzoek_Afgifte_Prestatieverklaring_3"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16048">
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<firstMessage>true</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtVerzoekAfgiftePrestatieverklaring"/>
+		</message>
+		<transaction>
+			<TransactionTypeRef idref="T1_13_Verzoek_Afgifte_Prestatieverklaring_3"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16049">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtWeigeringkAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16048"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T1_13_Verzoek_Afgifte_Prestatieverklaring_3"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16050">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtAkkoordAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16052"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16051">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtNietAkkoordAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16052"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16052">
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<firstMessage>true</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtVerzoekAkkoordAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16054"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16053">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtAfgiftePrestatieVerklaringIntern"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16054"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T5_12_VerzoekafgifteprestatieveklaringHtoe_3"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16054">
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<firstMessage>true</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtVerzoekAfgiftePrestatieVerklaringIntern"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16048"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T5_12_VerzoekafgifteprestatieveklaringHtoe_3"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit16055">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtWeigeringkAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit16054"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T5_12_VerzoekafgifteprestatieveklaringHtoe_3"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit5037">
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<firstMessage>true</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtVerzoekAkkoordAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit856"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit5038">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtAkkoordAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit5037"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit5039">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtNietAkkoordAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit5037"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit856">
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<firstMessage>true</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtVerzoekAfgiftePrestatieVerklaringIntern"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit15144"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T5_12_VerzoekafgifteprestatieveklaringHtoe"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit857">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtAfgiftePrestatieVerklaringIntern"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit856"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T5_12_VerzoekafgifteprestatieveklaringHtoe"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="mit858">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="berichtWeigeringkAfgiftePrestatieverklaring"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="mit856"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="T5_12_VerzoekafgifteprestatieveklaringHtoe"/>
+		</transaction>
+	</MessageInTransactionType>
+	<MessageType id="berichtAfgiftePrestatieVerklaringIntern">
+		<description>Afgifte prestatieverklaring</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeVisiVolgnummer"/>
+			<ComplexElementTypeRef idref="CeAfgiftePrestatieverklaring"/>
+			<ComplexElementTypeRef idref="CeInterneOpmerkingen"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="berichtAfgiftePrestatieverklaring">
+		<description>Afgifte prestatieverklaring</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeVisiVolgnummer"/>
+			<ComplexElementTypeRef idref="CeAfgiftePrestatieverklaring"/>
+			<ComplexElementTypeRef idref="CeBijAfwezigheid"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="berichtAkkoordAfgiftePrestatieverklaring">
+		<description>Afgifte prestatieverklaring akkoord</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeVisiVolgnummer"/>
+			<ComplexElementTypeRef idref="CeAfgiftePrestatieverklaring"/>
+			<ComplexElementTypeRef idref="CeReactietermijn"/>
+			<ComplexElementTypeRef idref="CeInterneOpmerkingen"/>
+			<ComplexElementTypeRef idref="CeMotivatie"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="berichtNietAkkoordAfgiftePrestatieverklaring">
+		<description>Afgifte prestatieverklaring niet akkoord</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeVisiVolgnummer"/>
+			<ComplexElementTypeRef idref="CeAfgiftePrestatieverklaring"/>
+			<ComplexElementTypeRef idref="CeReactietermijn"/>
+			<ComplexElementTypeRef idref="CeInterneOpmerkingen"/>
+			<ComplexElementTypeRef idref="CeMotivatie"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="berichtVerzoekAfgiftePrestatieVerklaringIntern">
+		<description>Verzoek afgifte prestatieverklaring</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeVisiVolgnummer"/>
+			<ComplexElementTypeRef idref="CeAfgiftePrestatieverklaring"/>
+			<ComplexElementTypeRef idref="CeInterneOpmerkingen"/>
+			<ComplexElementTypeRef idref="CeReactietermijn"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="berichtVerzoekAfgiftePrestatieverklaring">
+		<description>Verzoek afgifte prestatieverklaring</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeVisiVolgnummer"/>
+			<ComplexElementTypeRef idref="CeAfgiftePrestatieverklaring"/>
+			<ComplexElementTypeRef idref="CeReactietermijn"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="berichtVerzoekAkkoordAfgiftePrestatieverklaring">
+		<description>Verzoek akkoord afgifte prestatieverklaring</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeVisiVolgnummer"/>
+			<ComplexElementTypeRef idref="CeAfgiftePrestatieverklaring"/>
+			<ComplexElementTypeRef idref="CeReactietermijn"/>
+			<ComplexElementTypeRef idref="CeInterneOpmerkingen"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="berichtWeigeringkAfgiftePrestatieverklaring">
+		<description>Weigering afgifte prestatieverklaring</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeVisiVolgnummer"/>
+			<ComplexElementTypeRef idref="CeAfgiftePrestatieverklaring"/>
+			<ComplexElementTypeRef idref="CeMotivatie"/>
+			<ComplexElementTypeRef idref="CeBijAfwezigheid"/>
+		</complexElements>
+	</MessageType>
+	<OrganisationType id="StandaardOrganisatie">
+		<description>Standaard organisatie</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeOrganisatieSOAPServer"/>
+		</complexElements>
+	</OrganisationType>
+	<PersonType id="standaardPersoon">
+		<description>Standaard Persoon</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CePersoonSpecifiekeInformatie"/>
+		</complexElements>
+	</PersonType>
+	<ProjectType id="Raamwerk_Praktijkvoorbeeld_1">
+		<namespace>http://www.visi.nl/schemas/20110819/Raamwerk_Praktijkvoorbeeld_1</namespace>
+		<description>Raamwerk Praktijkvoorbeeld 1</description>
+	</ProjectType>
+	<RoleType id="Adviseur">
+		<description>Adviseur</description>
+	</RoleType>
+	<RoleType id="Contractmanagende">
+		<description>Contractmanagende</description>
+	</RoleType>
+	<RoleType id="Opdrachtgevende">
+		<description>Gemachtigde van de Opdrachtgever</description>
+	</RoleType>
+	<RoleType id="Opdrachtnemende">
+		<description>Gemachtigde van de Opdrachtnemer</description>
+	</RoleType>
+	<SimpleElementType id="aantalTermijnen">
+		<description>Aantal termijnen</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="INTEGER"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="afdeling">
+		<description>Afdeling</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="documentAuteur">
+		<description>Auteur</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="RequiredType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="documentDatum">
+		<description>Datum</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="DATE"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="documentKenmerk">
+		<description>Kenmerk</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="RequiredType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="documentOpmerkingen">
+		<description>Opmerkingen</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="documentStatus">
+		<description>Status</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="CATEGORIEDOCUMENTSTATUS"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="documentTitel">
+		<description>Titel</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="RequiredType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="documentVersie">
+		<description>Versie</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="RequiredType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="tekeningTekenaar">
+		<description>Tekenaar</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="RequiredType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="tekeningKenmerk">
+		<description>Kenmerk</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="RequiredType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="tekeningStatus">
+		<description>Status</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="CATEGORIEDOCUMENTSTATUS"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="tekeningSchaal">
+		<description>Schaal</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="RequiredType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="tekeningVersie">
+		<description>Versie</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="RequiredType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="email">
+		<description>Email</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="fax">
+		<description>Fax</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="interneOpmerkingen">
+		<description>Interne opmerkingen</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="MemoType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="mobieleTelefoon">
+		<description>Mobiele telefoon</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="motivatie">
+		<description>Motivatie</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="MemoType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="opdrachtNaam">
+		<description>Opdrachtnaam</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="opmerkingen">
+		<description>Opmerkingen</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="MemoType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="prestatieverklaringPrijs">
+		<description>Bedrag prestatieverklaring</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="EURO"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="reactietermijn">
+		<description>Reactietermijn</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="DATE"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SE_volgnummer">
+		<description>Volgnummer</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="RequiredType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SeReactietermijn">
+		<description>Reactietermijn intern</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="DATE"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SOAPServerURL">
+		<description>SOAP server URL</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="vasteTelefoon">
+		<description>Vaste telefoon</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="verwijzigingGoedkeurTermijnen">
+		<description>Verwijzing naar goedgekeurde termijnstaten</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="verzondenDoor">
+		<description>Bij afwezigheid (bij afwezigheid)</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="verzondenNamens">
+		<description>Verzonden namens</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="CATEGORIEVERZENDER"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="werkID">
+		<description>Zaak ID</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<TransactionType id="T1_13_Verzoek_Afgifte_Prestatieverklaring">
+		<description>T1.13 Verzoek afgifte prestatieverklaring (variant 1)</description>
+		<initiator>
+			<RoleTypeRef idref="Opdrachtnemende"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="Opdrachtgevende"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="T1_13_Verzoek_Afgifte_Prestatieverklaring_2">
+		<description>T1.13 Verzoek afgifte prestatieverklaring (variant 2)</description>
+		<initiator>
+			<RoleTypeRef idref="Opdrachtnemende"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="Opdrachtgevende"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="T1_13_Verzoek_Afgifte_Prestatieverklaring_3">
+		<description>T1.13 Verzoek afgifte prestatieverklaring (variant 3)</description>
+		<initiator>
+			<RoleTypeRef idref="Opdrachtnemende"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="Opdrachtgevende"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring">
+		<description>T2.03 Verzoek akkoord afgifte prestatieverklaring (variant 1)</description>
+		<initiator>
+			<RoleTypeRef idref="Opdrachtgevende"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="Contractmanagende"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_2">
+		<description>T2.03 Verzoek akkoord afgifte prestatieverklaring (variant 2)</description>
+		<initiator>
+			<RoleTypeRef idref="Opdrachtgevende"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="Contractmanagende"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="T2_3_Verzoek_Akkoord_Afgifte_Prestatieverklaring_3">
+		<description>T2.03 Verzoek akkoord afgifte prestatieverklaring (variant 3)</description>
+		<initiator>
+			<RoleTypeRef idref="Opdrachtgevende"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="Contractmanagende"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="T5_12_VerzoekafgifteprestatieveklaringHtoe">
+		<description>T5.12 Intern verzoek afgifte prestatieverklaring (variant 1)</description>
+		<initiator>
+			<RoleTypeRef idref="Opdrachtgevende"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="Adviseur"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="T5_12_VerzoekafgifteprestatieveklaringHtoe_2">
+		<description>T5.12 Intern verzoek afgifte prestatieverklaring (variant 2)</description>
+		<initiator>
+			<RoleTypeRef idref="Opdrachtgevende"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="Adviseur"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="T5_12_VerzoekafgifteprestatieveklaringHtoe_3">
+		<description>T5.12 Intern verzoek afgifte prestatieverklaring (variant 3)</description>
+		<initiator>
+			<RoleTypeRef idref="Opdrachtgevende"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="Adviseur"/>
+		</executor>
+	</TransactionType>
+	<UserDefinedType id="CATEGORIEDOCUMENTSTATUS">
+		<description>Status van het document (picklist)</description>
+		<baseType>STRING</baseType>
+		<xsdRestriction>&lt;xs:enumeration value="Concept"/&gt;&lt;xs:enumeration value="Definitief"/&gt;&lt;xs:enumeration value="Geautoriseerd"/&gt;&lt;xs:enumeration value="N.V.T."/&gt;&lt;xs:enumeration value="Vervallen"/&gt;&lt;xs:enumeration value="Vrijgegeven"/&gt;</xsdRestriction>
+	</UserDefinedType>
+	<UserDefinedType id="CATEGORIEVERZENDER">
+		<description>Categorie verzender (picklist)</description>
+		<baseType>STRING</baseType>
+		<xsdRestriction>&lt;xs:enumeration value="Jos Maassen"/&gt;&lt;xs:enumeration value="Lars Teulings"/&gt;&lt;xs:enumeration value="Mart Goffau"/&gt;</xsdRestriction>
+	</UserDefinedType>
+	<UserDefinedType id="DATE">
+		<description>Globaal datum type</description>
+		<baseType>DATE</baseType>
+	</UserDefinedType>
+	<UserDefinedType id="EURO">
+		<description>Euro's (verplicht)</description>
+		<baseType>DECIMAL</baseType>
+		<xsdRestriction>&lt;xs:fractionDigits value ="2"/&gt;</xsdRestriction>
+	</UserDefinedType>
+	<UserDefinedType id="INTEGER">
+		<description>Geheel getal (verplicht)</description>
+		<baseType>INTEGER</baseType>
+	</UserDefinedType>
+	<UserDefinedType id="MemoType">
+		<description>Memo (optioneel)</description>
+		<baseType>STRING</baseType>
+	</UserDefinedType>
+	<UserDefinedType id="RequiredType">
+		<description>Tekst (verplicht)</description>
+		<baseType>STRING</baseType>
+		<xsdRestriction>&lt;xs:minLength value="1"/&gt;</xsdRestriction>
+	</UserDefinedType>
+	<UserDefinedType id="STRING">
+		<description>Tekst (optioneel)</description>
+		<baseType>STRING</baseType>
+	</UserDefinedType>
+</visiXML_VISI_Systematics>

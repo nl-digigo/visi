@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/20110819/Raamwerk_Praktijkvoorbeeld_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20110819/TestFramework c:\exchange\Praktijkvoorbeeld-1-rw.xsd ">
+	<Raamwerk_Praktijkvoorbeeld_1 id="PRO3d43e507-6bed-498b-885b-834b3d8e2da1">
+		<name>Praktijkvoorbeeld 1</name>
+		<description>Praktijkvoorbeeld 1</description>
+		<startDate>2014-04-11T12:58:16.0Z</startDate>
+		<endDate>2015-04-11T12:58:16.0Z</endDate>
+	</Raamwerk_Praktijkvoorbeeld_1>
+	<standaardPersoon id="PER8a411efc-dbef-4c77-b43b-c416460a2527">
+		<userName>I. Adviseur</userName>
+		<name>I. Adviseur</name>
+	</standaardPersoon>
+	<Adviseur id="ROL1baa1399-d56c-4f6e-94b3-594e6bb675dc">
+		<name>Adviseur</name>
+		<description>Adviseur</description>
+		<category>-</category>
+	</Adviseur>
+	<StandaardOrganisatie id="ORG97b2c158-015d-41e3-baf1-5fa7edfb9e13">
+		<name>infostrait</name>
+		<abbreviation>INF</abbreviation>
+		<contactPerson>
+			<standaardPersoonRef idref="PER8a411efc-dbef-4c77-b43b-c416460a2527"/>
+		</contactPerson>
+		<ceOrganisatieSOAPServer>
+			<CeOrganisatieSOAPServerRef idref="SCEc369fb03-ec26-4ab2-aa28-9a03cdcaa7b4"/>
+		</ceOrganisatieSOAPServer>
+	</StandaardOrganisatie>
+	<CeOrganisatieSOAPServer id="SCEc369fb03-ec26-4ab2-aa28-9a03cdcaa7b4">
+		<sOAPServerURL>https://visidemo.alfamail.nl/ps/visiservice.asmx?wsdl</sOAPServerURL>
+	</CeOrganisatieSOAPServer>
+	<PersonInRole id="PIR95eeeb3f-cfe1-4c09-8df5-4e7b8759bee3">
+		<contactPerson>
+			<standaardPersoonRef idref="PER8a411efc-dbef-4c77-b43b-c416460a2527"/>
+		</contactPerson>
+		<organisation>
+			<StandaardOrganisatieRef idref="ORG97b2c158-015d-41e3-baf1-5fa7edfb9e13"/>
+		</organisation>
+		<role>
+			<AdviseurRef idref="ROL1baa1399-d56c-4f6e-94b3-594e6bb675dc"/>
+		</role>
+	</PersonInRole>
+	<standaardPersoon id="PER10b44af5-0e9d-4f92-abbb-9710212f9b6d">
+		<userName>I. Contractmanager</userName>
+		<name>I. Contractmanager</name>
+	</standaardPersoon>
+	<Contractmanagende id="ROL1f41b6c1-bf24-4a73-b64c-f650d4d307ac">
+		<name>Contractmanagende</name>
+		<description>Contractmanagende</description>
+		<category>-</category>
+	</Contractmanagende>
+	<PersonInRole id="PIRb3c03496-f46f-4ad9-af1b-f7599f8b8b12">
+		<contactPerson>
+			<standaardPersoonRef idref="PER10b44af5-0e9d-4f92-abbb-9710212f9b6d"/>
+		</contactPerson>
+		<organisation>
+			<StandaardOrganisatieRef idref="ORG97b2c158-015d-41e3-baf1-5fa7edfb9e13"/>
+		</organisation>
+		<role>
+			<ContractmanagendeRef idref="ROL1f41b6c1-bf24-4a73-b64c-f650d4d307ac"/>
+		</role>
+	</PersonInRole>
+	<standaardPersoon id="PER78163d20-5428-4ad8-b3cc-ea22d751aa4b">
+		<userName>I. Opdrachtgever</userName>
+		<name>I. Opdrachtgever</name>
+	</standaardPersoon>
+	<Opdrachtgevende id="ROLf14727dc-49c7-4189-9631-3a742b362730">
+		<name>Opdrachtgevende</name>
+		<description>Opdrachtgevende</description>
+		<category>-</category>
+	</Opdrachtgevende>
+	<PersonInRole id="PIR111fc9d7-a4fa-429f-ba10-d493c9c4debb">
+		<contactPerson>
+			<standaardPersoonRef idref="PER78163d20-5428-4ad8-b3cc-ea22d751aa4b"/>
+		</contactPerson>
+		<organisation>
+			<StandaardOrganisatieRef idref="ORG97b2c158-015d-41e3-baf1-5fa7edfb9e13"/>
+		</organisation>
+		<role>
+			<OpdrachtgevendeRef idref="ROLf14727dc-49c7-4189-9631-3a742b362730"/>
+		</role>
+	</PersonInRole>
+	<standaardPersoon id="PERdbbafd7c-580d-48e5-9130-e93e66d2a743">
+		<userName>I. Opdrachtnemer</userName>
+		<name>I. Opdrachtnemer</name>
+	</standaardPersoon>
+	<Opdrachtnemende id="ROL4f58f8ea-fdce-4215-aa96-41dcc1309eb7">
+		<name>Opdrachtnemende</name>
+		<description>Opdrachtnemende</description>
+		<category>-</category>
+	</Opdrachtnemende>
+	<PersonInRole id="PIRd32af766-1596-4cd5-969f-2a7be5c4cc44">
+		<contactPerson>
+			<standaardPersoonRef idref="PERdbbafd7c-580d-48e5-9130-e93e66d2a743"/>
+		</contactPerson>
+		<organisation>
+			<StandaardOrganisatieRef idref="ORG97b2c158-015d-41e3-baf1-5fa7edfb9e13"/>
+		</organisation>
+		<role>
+			<OpdrachtnemendeRef idref="ROL4f58f8ea-fdce-4215-aa96-41dcc1309eb7"/>
+		</role>
+	</PersonInRole>
+	<standaardPersoon id="PER1cabd491-6caa-4386-90ab-278ea53abae1">
+		<userName>B.S. Adviseur</userName>
+		<name>B.S. Adviseur</name>
+	</standaardPersoon>
+	<StandaardOrganisatie id="ORG28a170ac-79b6-4e74-b929-17fd236cf67d">
+		<name>Bakker en Spees</name>
+		<abbreviation>BAK</abbreviation>
+		<contactPerson>
+			<standaardPersoonRef idref="PER1cabd491-6caa-4386-90ab-278ea53abae1"/>
+		</contactPerson>
+		<ceOrganisatieSOAPServer>
+			<CeOrganisatieSOAPServerRef idref="SCE118e4525-5a16-4b06-8084-c8956845e04d"/>
+		</ceOrganisatieSOAPServer>
+	</StandaardOrganisatie>
+	<CeOrganisatieSOAPServer id="SCE118e4525-5a16-4b06-8084-c8956845e04d">
+		<sOAPServerURL>https://bsvisi.bakkerspees.nl/bssoapnet/service.asmx</sOAPServerURL>
+	</CeOrganisatieSOAPServer>
+	<PersonInRole id="PIR90526310-ef38-4173-a9e7-b9b1663fb7fe">
+		<contactPerson>
+			<standaardPersoonRef idref="PER1cabd491-6caa-4386-90ab-278ea53abae1"/>
+		</contactPerson>
+		<organisation>
+			<StandaardOrganisatieRef idref="ORG28a170ac-79b6-4e74-b929-17fd236cf67d"/>
+		</organisation>
+		<role>
+			<AdviseurRef idref="ROL1baa1399-d56c-4f6e-94b3-594e6bb675dc"/>
+		</role>
+	</PersonInRole>
+	<standaardPersoon id="PER510d68f3-c8bf-41cc-9520-eaca54a6745c">
+		<userName>B.S. Contractmanager</userName>
+		<name>B.S. Contractmanager</name>
+	</standaardPersoon>
+	<PersonInRole id="PIRbc0f6ef6-fd0e-4f8b-81ff-5cead6e5d12d">
+		<contactPerson>
+			<standaardPersoonRef idref="PER510d68f3-c8bf-41cc-9520-eaca54a6745c"/>
+		</contactPerson>
+		<organisation>
+			<StandaardOrganisatieRef idref="ORG28a170ac-79b6-4e74-b929-17fd236cf67d"/>
+		</organisation>
+		<role>
+			<ContractmanagendeRef idref="ROL1f41b6c1-bf24-4a73-b64c-f650d4d307ac"/>
+		</role>
+	</PersonInRole>
+	<standaardPersoon id="PERa3d192bf-89f0-49a3-bd38-8d2720a3f7ac">
+		<userName>B.S. Opdrachtgever</userName>
+		<name>B.S. Opdrachtgever</name>
+	</standaardPersoon>
+	<PersonInRole id="PIR28296ac2-e6c8-4470-bd3a-300630e2a58f">
+		<contactPerson>
+			<standaardPersoonRef idref="PERa3d192bf-89f0-49a3-bd38-8d2720a3f7ac"/>
+		</contactPerson>
+		<organisation>
+			<StandaardOrganisatieRef idref="ORG28a170ac-79b6-4e74-b929-17fd236cf67d"/>
+		</organisation>
+		<role>
+			<OpdrachtgevendeRef idref="ROLf14727dc-49c7-4189-9631-3a742b362730"/>
+		</role>
+	</PersonInRole>
+	<standaardPersoon id="PERc073f7d1-b149-48a7-a2ff-b06d062a18ec">
+		<userName>B.S. Opdrachtnemer</userName>
+		<name>B.S. Opdrachtnemer</name>
+	</standaardPersoon>
+	<PersonInRole id="PIR28898ea0-de9c-4490-a9c0-731e17d0530f">
+		<contactPerson>
+			<standaardPersoonRef idref="PERc073f7d1-b149-48a7-a2ff-b06d062a18ec"/>
+		</contactPerson>
+		<organisation>
+			<StandaardOrganisatieRef idref="ORG28a170ac-79b6-4e74-b929-17fd236cf67d"/>
+		</organisation>
+		<role>
+			<OpdrachtnemendeRef idref="ROL4f58f8ea-fdce-4215-aa96-41dcc1309eb7"/>
+		</role>
+	</PersonInRole>
+	<standaardPersoon id="PER771dfee9-b4cf-47ca-a073-9edf4a94b01c">
+		<userName>C. Adviseur</userName>
+		<name>C. Adviseur</name>
+	</standaardPersoon>
+	<StandaardOrganisatie id="ORGebab45e4-9342-468c-8976-b43ffe35b909">
+		<name>Cenosco</name>
+		<abbreviation>CEN</abbreviation>
+		<contactPerson>
+			<standaardPersoonRef idref="PER771dfee9-b4cf-47ca-a073-9edf4a94b01c"/>
+		</contactPerson>
+		<ceOrganisatieSOAPServer>
+			<CeOrganisatieSOAPServerRef idref="SCEbabd3954-5e48-4dd5-a82c-9f18198e4e8a"/>
+		</ceOrganisatieSOAPServer>
+	</StandaardOrganisatie>
+	<CeOrganisatieSOAPServer id="SCEbabd3954-5e48-4dd5-a82c-9f18198e4e8a">
+		<sOAPServerURL>http://berrypostoffice.cenosco.nl/visipostoffice.asmx</sOAPServerURL>
+	</CeOrganisatieSOAPServer>
+	<PersonInRole id="PIR9e40e4f6-b1d4-4379-b822-bdefb1bef73a">
+		<contactPerson>
+			<standaardPersoonRef idref="PER771dfee9-b4cf-47ca-a073-9edf4a94b01c"/>
+		</contactPerson>
+		<organisation>
+			<StandaardOrganisatieRef idref="ORGebab45e4-9342-468c-8976-b43ffe35b909"/>
+		</organisation>
+		<role>
+			<AdviseurRef idref="ROL1baa1399-d56c-4f6e-94b3-594e6bb675dc"/>
+		</role>
+	</PersonInRole>
+	<standaardPersoon id="PERd71ee718-69a0-4b57-8f3a-15dd077d86fe">
+		<userName>C. Contractmanager</userName>
+		<name>C. Contractmanager</name>
+	</standaardPersoon>
+	<PersonInRole id="PIR3b27c110-6f31-4178-aecd-b603ab88c9b8">
+		<contactPerson>
+			<standaardPersoonRef idref="PERd71ee718-69a0-4b57-8f3a-15dd077d86fe"/>
+		</contactPerson>
+		<organisation>
+			<StandaardOrganisatieRef idref="ORGebab45e4-9342-468c-8976-b43ffe35b909"/>
+		</organisation>
+		<role>
+			<ContractmanagendeRef idref="ROL1f41b6c1-bf24-4a73-b64c-f650d4d307ac"/>
+		</role>
+	</PersonInRole>
+	<standaardPersoon id="PERbd87b591-1a7a-4ecb-91db-e88927e78371">
+		<userName>C. Opdrachtgever</userName>
+		<name>C. Opdrachtgever</name>
+	</standaardPersoon>
+	<PersonInRole id="PIR97d37483-5c70-4e58-aaf3-9e9085f7cb2a">
+		<contactPerson>
+			<standaardPersoonRef idref="PERbd87b591-1a7a-4ecb-91db-e88927e78371"/>
+		</contactPerson>
+		<organisation>
+			<StandaardOrganisatieRef idref="ORGebab45e4-9342-468c-8976-b43ffe35b909"/>
+		</organisation>
+		<role>
+			<OpdrachtgevendeRef idref="ROLf14727dc-49c7-4189-9631-3a742b362730"/>
+		</role>
+	</PersonInRole>
+	<standaardPersoon id="PERd5b80618-9023-49b1-9a53-da987ec55ef0">
+		<userName>C. Opdrachtnemer</userName>
+		<name>C. Opdrachtnemer</name>
+	</standaardPersoon>
+	<PersonInRole id="PIRbe2f2eec-0e2c-4f50-962f-29de22a6884e">
+		<contactPerson>
+			<standaardPersoonRef idref="PERd5b80618-9023-49b1-9a53-da987ec55ef0"/>
+		</contactPerson>
+		<organisation>
+			<StandaardOrganisatieRef idref="ORGebab45e4-9342-468c-8976-b43ffe35b909"/>
+		</organisation>
+		<role>
+			<OpdrachtnemendeRef idref="ROL4f58f8ea-fdce-4215-aa96-41dcc1309eb7"/>
+		</role>
+	</PersonInRole>
+</visiXML_MessageSchema>
