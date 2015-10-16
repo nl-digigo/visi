@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- created with VISI DLL, EXP2XSD part, created by Peter Bonsma  -->
-<xsd:schema targetNamespace="http://www.visi.nl/schemas/20140331" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:visi="http://www.visi.nl/schemas/20140331" elementFormDefault="qualified">
+<xsd:schema targetNamespace="http://www.visi.nl/schemas/20150331" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:visi="http://www.visi.nl/schemas/20150331" elementFormDefault="qualified">
 
 	<!-- root element declaration (for SCHEMA definitions) -->
 	<xsd:element name="visiXML_VISI_Systematics">
@@ -171,6 +171,8 @@
 							</xsd:choice>
 						</xsd:complexType>
 					</xsd:element>
+					<xsd:element name="minOccurs" type="xsd:integer" minOccurs="0"/>
+					<xsd:element name="maxOccurs" type="xsd:integer" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>

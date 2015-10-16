@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/20140331/TestFramework"
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/20150331/TestFramework"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.visi.nl/schemas/20140331/TestFramework 10.xsd">
+	xsi:schemaLocation="http://www.visi.nl/schemas/20150331/TestFramework 10.xsd">
 	<ProjectType1 id="Project1">
 		<name>Project Top Koks</name>
 		<description>Project voor het opnemen van een bestelling</description>

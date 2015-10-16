@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20140331">
+<visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20150331">
 
   <AppendixType id="AppRapport">
     <description>Rapport</description>
@@ -90,12 +90,13 @@
     <startDate>2009-01-01T00:00:00</startDate>
     <endDate>2010-01-01T00:00:00</endDate>
     <state>active</state>
-    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-    <userLaMu>PWI</userLaMu>
+    <dateLaMu>2015-03-31T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
     <simpleElements>
       <SimpleElementTypeRef idref="NaamGerecht"/>
       <SimpleElementTypeRef idref="Opmerking"/>
     </simpleElements>
+	<minOccurs>1</minOccurs>
   </ComplexElementType>
 
   <ComplexElementType id="CeInhoudDrankbestelling">
@@ -103,13 +104,15 @@
     <startDate>2014-06-20T00:00:00</startDate>
     <endDate>2014-06-20T00:00:00</endDate>
     <state>active</state>
-    <dateLaMu>2014-06-20T15:11:28</dateLaMu>
+    <dateLaMu>2015-03-31T00:00:00</dateLaMu>
     <userLaMu>Arne</userLaMu>
     <simpleElements>
       <SimpleElementTypeRef idref="SeSoortDrank"/>
       <SimpleElementTypeRef idref="SeHoeveelheid"/>
       <SimpleElementTypeRef idref="Opmerking"/>
     </simpleElements>
+	<minOccurs>1</minOccurs>
+	<maxOccurs>1</maxOccurs>	
   </ComplexElementType>
 
   <ComplexElementType id="CeInhoudMenuKaart">
@@ -117,13 +120,14 @@
     <startDate>2009-01-01T00:00:00</startDate>
     <endDate>2010-01-01T00:00:00</endDate>
     <state>active</state>
-    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-    <userLaMu>PWI</userLaMu>
+    <dateLaMu>2015-03-31T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
     <simpleElements>
       <SimpleElementTypeRef idref="NaamMenukaartItem"/>
       <SimpleElementTypeRef idref="Omschrijving"/>
       <SimpleElementTypeRef idref="Prijs"/>
     </simpleElements>
+	<maxOccurs>3</maxOccurs>
   </ComplexElementType>
 
   <ComplexElementType id="CeJaNee">
@@ -1053,13 +1057,13 @@
   </PersonType>
 
   <ProjectType id="ProjectType1">
-    <namespace>http://www.visi.nl/schemas/20140331/TestFramework</namespace>
+    <namespace>http://www.visi.nl/schemas/20150331/TestFramework</namespace>
     <description>VISI Testscenario's Raamwerk</description>
     <startDate>2009-01-01T00:00:00</startDate>
     <endDate>2010-01-01T00:00:00</endDate>
     <state>active</state>
-    <dateLaMu>2009-01-28T00:00:00</dateLaMu>
-    <userLaMu>PWI</userLaMu>
+    <dateLaMu>2015-03-31T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
     <complexElements>
       <ComplexElementTypeRef idref="CeSOAP"/>
     </complexElements>

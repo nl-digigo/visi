@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<visiXML_MessageSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20140331/TestFramework 10.xsd"
-	xmlns="http://www.visi.nl/schemas/20140331/TestFramework">
+<visiXML_MessageSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20150331/TestFramework 10.xsd"
+	xmlns="http://www.visi.nl/schemas/20150331/TestFramework">
 	<msgWiltuDeKaartZien id="bericht001">
 		<identification />
 		<dateSend>2008-05-04T00:00:00.0Z</dateSend>

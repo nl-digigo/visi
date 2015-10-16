@@ -1,0 +1,2518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- created with VISI DLL, EXP2XSD part, created by Peter Bonsma  -->
+<xsd:schema targetNamespace="http://www.visi.nl/schemas/20150331" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:visi="http://www.visi.nl/schemas/20150331" elementFormDefault="qualified">
+
+	<!-- root element declaration (for SCHEMA definitions) -->
+	<xsd:element name="visiXML_MessageSchema">
+		<xsd:complexType>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="visi:APT-NieuwOfGewijzigdRaamwerkOfProjectspecifiekBericht"/>
+				<xsd:element ref="visi:AanvaardEinde"/>
+				<xsd:element ref="visi:AppendixGroup"/>
+				<xsd:element ref="visi:BeloofdExecutie"/>
+				<xsd:element ref="visi:C00-Algemeen"/>
+				<xsd:element ref="visi:C01-MotivatieVoorstelNietAkkoord"/>
+				<xsd:element ref="visi:C02-MotivatieVoorstelGecanceld"/>
+				<xsd:element ref="visi:C03-Ingangsdatum"/>
+				<xsd:element ref="visi:C04-Start-project"/>
+				<xsd:element ref="visi:C05-Projectgegevens"/>
+				<xsd:element ref="visi:C06-Beeindiging-project"/>
+				<xsd:element ref="visi:CeOrganisatieSOAPServer"/>
+				<xsd:element ref="visi:M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBericht"/>
+				<xsd:element ref="visi:M02-VoorstelAkkoord"/>
+				<xsd:element ref="visi:M03-VoorstelNietAkkoord"/>
+				<xsd:element ref="visi:M04-VoorstelGecanceld"/>
+				<xsd:element ref="visi:M05-VoorstelIngangsdatum"/>
+				<xsd:element ref="visi:M06-IngangsdatumAkkoord"/>
+				<xsd:element ref="visi:M07-IngangsdatumNietAkkoord"/>
+				<xsd:element ref="visi:M08-BevestigingIngangsdatum"/>
+				<xsd:element ref="visi:M10-VoorstelNieuwVISIproject"/>
+				<xsd:element ref="visi:M11-AfwijzingVoorgesteldVISIproject"/>
+				<xsd:element ref="visi:M12-AcceptatieNieuwVISIproject"/>
+				<xsd:element ref="visi:M13-AnnuleringProjectInitiatie"/>
+				<xsd:element ref="visi:M14-BevestigingProjectInitiatie"/>
+				<xsd:element ref="visi:M15-ProjectIngericht"/>
+				<xsd:element ref="visi:M16-VerzoekBeeindigingProject"/>
+				<xsd:element ref="visi:M17-AkkoordBeeindigingProject"/>
+				<xsd:element ref="visi:M18-AfwijzingBeeindigingProject"/>
+				<xsd:element ref="visi:M19-AnnuleringProjectbeeindiging"/>
+				<xsd:element ref="visi:M20-BevestigingBeeindigingProject"/>
+				<xsd:element ref="visi:M21-BevestigingVoortzettingProject"/>
+				<xsd:element ref="visi:MeldingGereed"/>
+				<xsd:element ref="visi:Mitt_1"/>
+				<xsd:element ref="visi:Mitt_10"/>
+				<xsd:element ref="visi:Mitt_11"/>
+				<xsd:element ref="visi:Mitt_12"/>
+				<xsd:element ref="visi:Mitt_13"/>
+				<xsd:element ref="visi:Mitt_14"/>
+				<xsd:element ref="visi:Mitt_15"/>
+				<xsd:element ref="visi:Mitt_16"/>
+				<xsd:element ref="visi:Mitt_17"/>
+				<xsd:element ref="visi:Mitt_18"/>
+				<xsd:element ref="visi:Mitt_19"/>
+				<xsd:element ref="visi:Mitt_2"/>
+				<xsd:element ref="visi:Mitt_20"/>
+				<xsd:element ref="visi:Mitt_21"/>
+				<xsd:element ref="visi:Mitt_3"/>
+				<xsd:element ref="visi:Mitt_4"/>
+				<xsd:element ref="visi:Mitt_5"/>
+				<xsd:element ref="visi:Mitt_6"/>
+				<xsd:element ref="visi:Mitt_7"/>
+				<xsd:element ref="visi:Mitt_8"/>
+				<xsd:element ref="visi:PRT-Meta-raamwerk"/>
+				<xsd:element ref="visi:PersonInRole"/>
+				<xsd:element ref="visi:R01-VISI-communicatiemanager"/>
+				<xsd:element ref="visi:R02-Wijzigingsinitiator"/>
+				<xsd:element ref="visi:R03-Initiator-VISI-project"/>
+				<xsd:element ref="visi:R04-Executor-VISI-project"/>
+				<xsd:element ref="visi:StandardGroupType"/>
+				<xsd:element ref="visi:Start"/>
+				<xsd:element ref="visi:T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie"/>
+				<xsd:element ref="visi:T02-"/>
+				<xsd:element ref="visi:Verzocht"/>
+				<xsd:element ref="visi:WijzigingHold"/>
+				<xsd:element ref="visi:standaardOrganisatie"/>
+				<xsd:element ref="visi:standaardPersoon"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- element declarations (for ENTITY definitions) -->
+	<xsd:element name="APT-NieuwOfGewijzigdRaamwerkOfProjectspecifiekBericht" type="visi:APT-NieuwOfGewijzigdRaamwerkOfProjectspecifiekBerichtType"/>
+	<xsd:element name="AanvaardEinde" type="visi:AanvaardEindeType"/>
+	<xsd:element name="AppendixGroup" type="visi:AppendixGroupType"/>
+	<xsd:element name="BeloofdExecutie" type="visi:BeloofdExecutieType"/>
+	<xsd:element name="C00-Algemeen" type="visi:C00-AlgemeenType"/>
+	<xsd:element name="C01-MotivatieVoorstelNietAkkoord" type="visi:C01-MotivatieVoorstelNietAkkoordType"/>
+	<xsd:element name="C02-MotivatieVoorstelGecanceld" type="visi:C02-MotivatieVoorstelGecanceldType"/>
+	<xsd:element name="C03-Ingangsdatum" type="visi:C03-IngangsdatumType"/>
+	<xsd:element name="C04-Start-project" type="visi:C04-Start-projectType"/>
+	<xsd:element name="C05-Projectgegevens" type="visi:C05-ProjectgegevensType"/>
+	<xsd:element name="C06-Beeindiging-project" type="visi:C06-Beeindiging-projectType"/>
+	<xsd:element name="CeOrganisatieSOAPServer" type="visi:CeOrganisatieSOAPServerType"/>
+	<xsd:element name="M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBericht" type="visi:M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtType"/>
+	<xsd:element name="M02-VoorstelAkkoord" type="visi:M02-VoorstelAkkoordType"/>
+	<xsd:element name="M03-VoorstelNietAkkoord" type="visi:M03-VoorstelNietAkkoordType"/>
+	<xsd:element name="M04-VoorstelGecanceld" type="visi:M04-VoorstelGecanceldType"/>
+	<xsd:element name="M05-VoorstelIngangsdatum" type="visi:M05-VoorstelIngangsdatumType"/>
+	<xsd:element name="M06-IngangsdatumAkkoord" type="visi:M06-IngangsdatumAkkoordType"/>
+	<xsd:element name="M07-IngangsdatumNietAkkoord" type="visi:M07-IngangsdatumNietAkkoordType"/>
+	<xsd:element name="M08-BevestigingIngangsdatum" type="visi:M08-BevestigingIngangsdatumType"/>
+	<xsd:element name="M10-VoorstelNieuwVISIproject" type="visi:M10-VoorstelNieuwVISIprojectType"/>
+	<xsd:element name="M11-AfwijzingVoorgesteldVISIproject" type="visi:M11-AfwijzingVoorgesteldVISIprojectType"/>
+	<xsd:element name="M12-AcceptatieNieuwVISIproject" type="visi:M12-AcceptatieNieuwVISIprojectType"/>
+	<xsd:element name="M13-AnnuleringProjectInitiatie" type="visi:M13-AnnuleringProjectInitiatieType"/>
+	<xsd:element name="M14-BevestigingProjectInitiatie" type="visi:M14-BevestigingProjectInitiatieType"/>
+	<xsd:element name="M15-ProjectIngericht" type="visi:M15-ProjectIngerichtType"/>
+	<xsd:element name="M16-VerzoekBeeindigingProject" type="visi:M16-VerzoekBeeindigingProjectType"/>
+	<xsd:element name="M17-AkkoordBeeindigingProject" type="visi:M17-AkkoordBeeindigingProjectType"/>
+	<xsd:element name="M18-AfwijzingBeeindigingProject" type="visi:M18-AfwijzingBeeindigingProjectType"/>
+	<xsd:element name="M19-AnnuleringProjectbeeindiging" type="visi:M19-AnnuleringProjectbeeindigingType"/>
+	<xsd:element name="M20-BevestigingBeeindigingProject" type="visi:M20-BevestigingBeeindigingProjectType"/>
+	<xsd:element name="M21-BevestigingVoortzettingProject" type="visi:M21-BevestigingVoortzettingProjectType"/>
+	<xsd:element name="MeldingGereed" type="visi:MeldingGereedType"/>
+	<xsd:element name="Mitt_1" type="visi:Mitt_1Type"/>
+	<xsd:element name="Mitt_10" type="visi:Mitt_10Type"/>
+	<xsd:element name="Mitt_11" type="visi:Mitt_11Type"/>
+	<xsd:element name="Mitt_12" type="visi:Mitt_12Type"/>
+	<xsd:element name="Mitt_13" type="visi:Mitt_13Type"/>
+	<xsd:element name="Mitt_14" type="visi:Mitt_14Type"/>
+	<xsd:element name="Mitt_15" type="visi:Mitt_15Type"/>
+	<xsd:element name="Mitt_16" type="visi:Mitt_16Type"/>
+	<xsd:element name="Mitt_17" type="visi:Mitt_17Type"/>
+	<xsd:element name="Mitt_18" type="visi:Mitt_18Type"/>
+	<xsd:element name="Mitt_19" type="visi:Mitt_19Type"/>
+	<xsd:element name="Mitt_2" type="visi:Mitt_2Type"/>
+	<xsd:element name="Mitt_20" type="visi:Mitt_20Type"/>
+	<xsd:element name="Mitt_21" type="visi:Mitt_21Type"/>
+	<xsd:element name="Mitt_3" type="visi:Mitt_3Type"/>
+	<xsd:element name="Mitt_4" type="visi:Mitt_4Type"/>
+	<xsd:element name="Mitt_5" type="visi:Mitt_5Type"/>
+	<xsd:element name="Mitt_6" type="visi:Mitt_6Type"/>
+	<xsd:element name="Mitt_7" type="visi:Mitt_7Type"/>
+	<xsd:element name="Mitt_8" type="visi:Mitt_8Type"/>
+	<xsd:element name="PRT-Meta-raamwerk" type="visi:PRT-Meta-raamwerkType"/>
+	<xsd:element name="PersonInRole" type="visi:PersonInRoleType"/>
+	<xsd:element name="R01-VISI-communicatiemanager" type="visi:R01-VISI-communicatiemanagerType"/>
+	<xsd:element name="R02-Wijzigingsinitiator" type="visi:R02-WijzigingsinitiatorType"/>
+	<xsd:element name="R03-Initiator-VISI-project" type="visi:R03-Initiator-VISI-projectType"/>
+	<xsd:element name="R04-Executor-VISI-project" type="visi:R04-Executor-VISI-projectType"/>
+	<xsd:element name="StandardGroupType" type="visi:StandardGroupTypeType"/>
+	<xsd:element name="Start" type="visi:StartType"/>
+	<xsd:element name="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" type="visi:T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactieType"/>
+	<xsd:element name="T02-" type="visi:T02-Type"/>
+	<xsd:element name="Verzocht" type="visi:VerzochtType"/>
+	<xsd:element name="WijzigingHold" type="visi:WijzigingHoldType"/>
+	<xsd:element name="standaardOrganisatie" type="visi:standaardOrganisatieType"/>
+	<xsd:element name="standaardPersoon" type="visi:standaardPersoonType"/>
+
+	<!-- element reference declarations (for ENTITY definitions) -->
+	<xsd:element name="APT-NieuwOfGewijzigdRaamwerkOfProjectspecifiekBerichtRef" type="visi:APT-NieuwOfGewijzigdRaamwerkOfProjectspecifiekBerichtTypeRef"/>
+	<xsd:element name="AanvaardEindeRef" type="visi:AanvaardEindeTypeRef"/>
+	<xsd:element name="AppendixGroupRef" type="visi:AppendixGroupTypeRef"/>
+	<xsd:element name="BeloofdExecutieRef" type="visi:BeloofdExecutieTypeRef"/>
+	<xsd:element name="C00-AlgemeenRef" type="visi:C00-AlgemeenTypeRef"/>
+	<xsd:element name="C01-MotivatieVoorstelNietAkkoordRef" type="visi:C01-MotivatieVoorstelNietAkkoordTypeRef"/>
+	<xsd:element name="C02-MotivatieVoorstelGecanceldRef" type="visi:C02-MotivatieVoorstelGecanceldTypeRef"/>
+	<xsd:element name="C03-IngangsdatumRef" type="visi:C03-IngangsdatumTypeRef"/>
+	<xsd:element name="C04-Start-projectRef" type="visi:C04-Start-projectTypeRef"/>
+	<xsd:element name="C05-ProjectgegevensRef" type="visi:C05-ProjectgegevensTypeRef"/>
+	<xsd:element name="C06-Beeindiging-projectRef" type="visi:C06-Beeindiging-projectTypeRef"/>
+	<xsd:element name="CeOrganisatieSOAPServerRef" type="visi:CeOrganisatieSOAPServerTypeRef"/>
+	<xsd:element name="M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtRef" type="visi:M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTypeRef"/>
+	<xsd:element name="M02-VoorstelAkkoordRef" type="visi:M02-VoorstelAkkoordTypeRef"/>
+	<xsd:element name="M03-VoorstelNietAkkoordRef" type="visi:M03-VoorstelNietAkkoordTypeRef"/>
+	<xsd:element name="M04-VoorstelGecanceldRef" type="visi:M04-VoorstelGecanceldTypeRef"/>
+	<xsd:element name="M05-VoorstelIngangsdatumRef" type="visi:M05-VoorstelIngangsdatumTypeRef"/>
+	<xsd:element name="M06-IngangsdatumAkkoordRef" type="visi:M06-IngangsdatumAkkoordTypeRef"/>
+	<xsd:element name="M07-IngangsdatumNietAkkoordRef" type="visi:M07-IngangsdatumNietAkkoordTypeRef"/>
+	<xsd:element name="M08-BevestigingIngangsdatumRef" type="visi:M08-BevestigingIngangsdatumTypeRef"/>
+	<xsd:element name="M10-VoorstelNieuwVISIprojectRef" type="visi:M10-VoorstelNieuwVISIprojectTypeRef"/>
+	<xsd:element name="M11-AfwijzingVoorgesteldVISIprojectRef" type="visi:M11-AfwijzingVoorgesteldVISIprojectTypeRef"/>
+	<xsd:element name="M12-AcceptatieNieuwVISIprojectRef" type="visi:M12-AcceptatieNieuwVISIprojectTypeRef"/>
+	<xsd:element name="M13-AnnuleringProjectInitiatieRef" type="visi:M13-AnnuleringProjectInitiatieTypeRef"/>
+	<xsd:element name="M14-BevestigingProjectInitiatieRef" type="visi:M14-BevestigingProjectInitiatieTypeRef"/>
+	<xsd:element name="M15-ProjectIngerichtRef" type="visi:M15-ProjectIngerichtTypeRef"/>
+	<xsd:element name="M16-VerzoekBeeindigingProjectRef" type="visi:M16-VerzoekBeeindigingProjectTypeRef"/>
+	<xsd:element name="M17-AkkoordBeeindigingProjectRef" type="visi:M17-AkkoordBeeindigingProjectTypeRef"/>
+	<xsd:element name="M18-AfwijzingBeeindigingProjectRef" type="visi:M18-AfwijzingBeeindigingProjectTypeRef"/>
+	<xsd:element name="M19-AnnuleringProjectbeeindigingRef" type="visi:M19-AnnuleringProjectbeeindigingTypeRef"/>
+	<xsd:element name="M20-BevestigingBeeindigingProjectRef" type="visi:M20-BevestigingBeeindigingProjectTypeRef"/>
+	<xsd:element name="M21-BevestigingVoortzettingProjectRef" type="visi:M21-BevestigingVoortzettingProjectTypeRef"/>
+	<xsd:element name="MeldingGereedRef" type="visi:MeldingGereedTypeRef"/>
+	<xsd:element name="Mitt_1Ref" type="visi:Mitt_1TypeRef"/>
+	<xsd:element name="Mitt_10Ref" type="visi:Mitt_10TypeRef"/>
+	<xsd:element name="Mitt_11Ref" type="visi:Mitt_11TypeRef"/>
+	<xsd:element name="Mitt_12Ref" type="visi:Mitt_12TypeRef"/>
+	<xsd:element name="Mitt_13Ref" type="visi:Mitt_13TypeRef"/>
+	<xsd:element name="Mitt_14Ref" type="visi:Mitt_14TypeRef"/>
+	<xsd:element name="Mitt_15Ref" type="visi:Mitt_15TypeRef"/>
+	<xsd:element name="Mitt_16Ref" type="visi:Mitt_16TypeRef"/>
+	<xsd:element name="Mitt_17Ref" type="visi:Mitt_17TypeRef"/>
+	<xsd:element name="Mitt_18Ref" type="visi:Mitt_18TypeRef"/>
+	<xsd:element name="Mitt_19Ref" type="visi:Mitt_19TypeRef"/>
+	<xsd:element name="Mitt_2Ref" type="visi:Mitt_2TypeRef"/>
+	<xsd:element name="Mitt_20Ref" type="visi:Mitt_20TypeRef"/>
+	<xsd:element name="Mitt_21Ref" type="visi:Mitt_21TypeRef"/>
+	<xsd:element name="Mitt_3Ref" type="visi:Mitt_3TypeRef"/>
+	<xsd:element name="Mitt_4Ref" type="visi:Mitt_4TypeRef"/>
+	<xsd:element name="Mitt_5Ref" type="visi:Mitt_5TypeRef"/>
+	<xsd:element name="Mitt_6Ref" type="visi:Mitt_6TypeRef"/>
+	<xsd:element name="Mitt_7Ref" type="visi:Mitt_7TypeRef"/>
+	<xsd:element name="Mitt_8Ref" type="visi:Mitt_8TypeRef"/>
+	<xsd:element name="PRT-Meta-raamwerkRef" type="visi:PRT-Meta-raamwerkTypeRef"/>
+	<xsd:element name="PersonInRoleRef" type="visi:PersonInRoleTypeRef"/>
+	<xsd:element name="R01-VISI-communicatiemanagerRef" type="visi:R01-VISI-communicatiemanagerTypeRef"/>
+	<xsd:element name="R02-WijzigingsinitiatorRef" type="visi:R02-WijzigingsinitiatorTypeRef"/>
+	<xsd:element name="R03-Initiator-VISI-projectRef" type="visi:R03-Initiator-VISI-projectTypeRef"/>
+	<xsd:element name="R04-Executor-VISI-projectRef" type="visi:R04-Executor-VISI-projectTypeRef"/>
+	<xsd:element name="StandardGroupTypeRef" type="visi:StandardGroupTypeTypeRef"/>
+	<xsd:element name="StartRef" type="visi:StartTypeRef"/>
+	<xsd:element name="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactieRef" type="visi:T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactieTypeRef"/>
+	<xsd:element name="T02-Ref" type="visi:T02-TypeRef"/>
+	<xsd:element name="VerzochtRef" type="visi:VerzochtTypeRef"/>
+	<xsd:element name="WijzigingHoldRef" type="visi:WijzigingHoldTypeRef"/>
+	<xsd:element name="standaardOrganisatieRef" type="visi:standaardOrganisatieTypeRef"/>
+	<xsd:element name="standaardPersoonRef" type="visi:standaardPersoonTypeRef"/>
+
+	<!-- complex types for element declarations (for ENTITY definitions) -->
+	<xsd:complexType name="APT-NieuwOfGewijzigdRaamwerkOfProjectspecifiekBerichtType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="fileLocation" type="xsd:string"/>
+					<xsd:element name="fileType" type="xsd:string"/>
+					<xsd:element name="fileVersion" type="xsd:string"/>
+					<xsd:element name="documentIdentification" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="documentVersion" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="documentReference" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="objectCode" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="language" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="message">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="appendixGroup" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:AppendixGroup"/>
+								<xsd:element ref="visi:AppendixGroupRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AanvaardEindeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="dateReached" type="xsd:dateTime"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AppendixGroupType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="group" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:StandardGroupType"/>
+								<xsd:element ref="visi:StandardGroupTypeRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BeloofdExecutieType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="dateReached" type="xsd:dateTime"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C00-AlgemeenType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="s00-Algemeen" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C01-MotivatieVoorstelNietAkkoordType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="s01-MotivatieVoorstelNietAkkoord" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C02-MotivatieVoorstelGecanceldType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="s02-MotivatieVoorstelGecanceld" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C03-IngangsdatumType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="s03-Ingangsdatum" type="xsd:dateTime"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C04-Start-projectType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="s04-Moment-start-project" type="xsd:dateTime"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C05-ProjectgegevensType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="s05-Project-ID">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:pattern value="[a-zA-Z][\w-]*"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="s06-Projectnaam">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:minLength value="1"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C06-Beeindiging-projectType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="s04-Moment-beeindiging-project" type="xsd:dateTime"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeOrganisatieSOAPServerType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="sOAPServerURL" type="xsd:string"/>
+					<xsd:element name="publicKey" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M02-VoorstelAkkoordType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M03-VoorstelNietAkkoordType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c01-MotivatieVoorstelNietAkkoord" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C01-MotivatieVoorstelNietAkkoord"/>
+								<xsd:element ref="visi:C01-MotivatieVoorstelNietAkkoordRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M04-VoorstelGecanceldType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c02-MotivatieVoorstelGecanceld" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C02-MotivatieVoorstelGecanceld"/>
+								<xsd:element ref="visi:C02-MotivatieVoorstelGecanceldRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M05-VoorstelIngangsdatumType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c03-Ingangsdatum" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C03-Ingangsdatum"/>
+								<xsd:element ref="visi:C03-IngangsdatumRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M06-IngangsdatumAkkoordType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c03-Ingangsdatum" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C03-Ingangsdatum"/>
+								<xsd:element ref="visi:C03-IngangsdatumRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M07-IngangsdatumNietAkkoordType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c01-MotivatieVoorstelNietAkkoord" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C01-MotivatieVoorstelNietAkkoord"/>
+								<xsd:element ref="visi:C01-MotivatieVoorstelNietAkkoordRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M08-BevestigingIngangsdatumType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c03-Ingangsdatum" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C03-Ingangsdatum"/>
+								<xsd:element ref="visi:C03-IngangsdatumRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M10-VoorstelNieuwVISIprojectType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c04-Start-project" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C04-Start-project"/>
+								<xsd:element ref="visi:C04-Start-projectRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M11-AfwijzingVoorgesteldVISIprojectType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M12-AcceptatieNieuwVISIprojectType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c04-Start-project" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C04-Start-project"/>
+								<xsd:element ref="visi:C04-Start-projectRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M13-AnnuleringProjectInitiatieType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M14-BevestigingProjectInitiatieType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c04-Start-project" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C04-Start-project"/>
+								<xsd:element ref="visi:C04-Start-projectRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M15-ProjectIngerichtType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M16-VerzoekBeeindigingProjectType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c06-Beeindiging-project" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C06-Beeindiging-project"/>
+								<xsd:element ref="visi:C06-Beeindiging-projectRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M17-AkkoordBeeindigingProjectType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c06-Beeindiging-project" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C06-Beeindiging-project"/>
+								<xsd:element ref="visi:C06-Beeindiging-projectRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M18-AfwijzingBeeindigingProjectType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M19-AnnuleringProjectbeeindigingType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M20-BevestigingBeeindigingProjectType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c06-Beeindiging-project" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C06-Beeindiging-project"/>
+								<xsd:element ref="visi:C06-Beeindiging-projectRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M21-BevestigingVoortzettingProjectType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean"/>
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:MessageInTransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c00-Algemeen" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C00-Algemeen"/>
+								<xsd:element ref="visi:C00-AlgemeenRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="c05-Projectgegevens" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:C05-Projectgegevens"/>
+								<xsd:element ref="visi:C05-ProjectgegevensRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MeldingGereedType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="dateReached" type="xsd:dateTime"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_1Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_10Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_11Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_12Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_13Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_14Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_15Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_16Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_17Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_18Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_19Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_2Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_20Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_21Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_3Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_4Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_5Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_6Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_7Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_8Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string"/>
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PRT-Meta-raamwerkType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime"/>
+					<xsd:element name="endDate" type="xsd:dateTime"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PersonInRoleType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="successor" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:PersonInRole"/>
+								<xsd:element ref="visi:PersonInRoleRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="substituting" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:PersonInRole"/>
+								<xsd:element ref="visi:PersonInRoleRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="contactPerson">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:standaardPersoon"/>
+								<xsd:element ref="visi:standaardPersoonRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="organisation">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:standaardOrganisatie"/>
+								<xsd:element ref="visi:standaardOrganisatieRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="role">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:RoleTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="R01-VISI-communicatiemanagerType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="R02-WijzigingsinitiatorType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="R03-Initiator-VISI-projectType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="R04-Executor-VISI-projectType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="category" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StandardGroupTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="creationDate" type="xsd:dateTime"/>
+					<xsd:element name="startDate" type="xsd:dateTime"/>
+					<xsd:element name="endDate" type="xsd:dateTime"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="versionNo" type="xsd:string"/>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StartType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="dateReached" type="xsd:dateTime"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactieType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="number" type="xsd:integer"/>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime"/>
+					<xsd:element name="endDate" type="xsd:dateTime"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="result" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiator">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:PersonInRole"/>
+								<xsd:element ref="visi:PersonInRoleRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="executor">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:PersonInRole"/>
+								<xsd:element ref="visi:PersonInRoleRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="project">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:PRT-Meta-raamwerk"/>
+								<xsd:element ref="visi:PRT-Meta-raamwerkRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="T02-Type">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="number" type="xsd:integer"/>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="startDate" type="xsd:dateTime"/>
+					<xsd:element name="endDate" type="xsd:dateTime"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="result" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="initiator">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:PersonInRole"/>
+								<xsd:element ref="visi:PersonInRoleRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="executor">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:PersonInRole"/>
+								<xsd:element ref="visi:PersonInRoleRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="project">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:PRT-Meta-raamwerk"/>
+								<xsd:element ref="visi:PRT-Meta-raamwerkRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="VerzochtType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="dateReached" type="xsd:dateTime"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="WijzigingHoldType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="description" type="xsd:string"/>
+					<xsd:element name="dateReached" type="xsd:dateTime"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="visi:TransactionTypeInstanceSet"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="standaardOrganisatieType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="abbreviation" type="xsd:string"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="contactPerson">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="visi:standaardPersoon"/>
+								<xsd:element ref="visi:standaardPersoonRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceOrganisatieSOAPServer" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="visi:CeOrganisatieSOAPServer"/>
+								<xsd:element ref="visi:CeOrganisatieSOAPServerRef"/>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="standaardPersoonType">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementType">
+				<xsd:sequence>
+					<xsd:element name="userName" type="xsd:string"/>
+					<xsd:element name="name" type="xsd:string"/>
+					<xsd:element name="state" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0"/>
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- complex types for element reference declarations (for ENTITY definitions) -->
+	<xsd:complexType name="APT-NieuwOfGewijzigdRaamwerkOfProjectspecifiekBerichtTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AanvaardEindeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AppendixGroupTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BeloofdExecutieTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C00-AlgemeenTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C01-MotivatieVoorstelNietAkkoordTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C02-MotivatieVoorstelGecanceldTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C03-IngangsdatumTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C04-Start-projectTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C05-ProjectgegevensTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="C06-Beeindiging-projectTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeOrganisatieSOAPServerTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M02-VoorstelAkkoordTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M03-VoorstelNietAkkoordTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M04-VoorstelGecanceldTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M05-VoorstelIngangsdatumTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M06-IngangsdatumAkkoordTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M07-IngangsdatumNietAkkoordTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M08-BevestigingIngangsdatumTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M10-VoorstelNieuwVISIprojectTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M11-AfwijzingVoorgesteldVISIprojectTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M12-AcceptatieNieuwVISIprojectTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M13-AnnuleringProjectInitiatieTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M14-BevestigingProjectInitiatieTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M15-ProjectIngerichtTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M16-VerzoekBeeindigingProjectTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M17-AkkoordBeeindigingProjectTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M18-AfwijzingBeeindigingProjectTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M19-AnnuleringProjectbeeindigingTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M20-BevestigingBeeindigingProjectTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M21-BevestigingVoortzettingProjectTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MeldingGereedTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_1TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_10TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_11TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_12TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_13TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_14TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_15TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_16TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_17TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_18TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_19TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_2TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_20TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_21TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_3TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_4TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_5TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_6TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_7TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Mitt_8TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PRT-Meta-raamwerkTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PersonInRoleTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="R01-VISI-communicatiemanagerTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="R02-WijzigingsinitiatorTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="R03-Initiator-VISI-projectTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="R04-Executor-VISI-projectTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StandardGroupTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StartTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactieTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="T02-TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="VerzochtTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="WijzigingHoldTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="standaardOrganisatieTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="standaardPersoonTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="visi:elementTypeRef"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- group declarations (for SELECT data type definitions) -->
+	<xsd:group name="MessageInTransactionTypeInstanceSet">
+		<xsd:choice>
+			<xsd:element ref="visi:Mitt_1"/>
+			<xsd:element ref="visi:Mitt_1Ref"/>
+			<xsd:element ref="visi:Mitt_10"/>
+			<xsd:element ref="visi:Mitt_10Ref"/>
+			<xsd:element ref="visi:Mitt_11"/>
+			<xsd:element ref="visi:Mitt_11Ref"/>
+			<xsd:element ref="visi:Mitt_12"/>
+			<xsd:element ref="visi:Mitt_12Ref"/>
+			<xsd:element ref="visi:Mitt_13"/>
+			<xsd:element ref="visi:Mitt_13Ref"/>
+			<xsd:element ref="visi:Mitt_14"/>
+			<xsd:element ref="visi:Mitt_14Ref"/>
+			<xsd:element ref="visi:Mitt_15"/>
+			<xsd:element ref="visi:Mitt_15Ref"/>
+			<xsd:element ref="visi:Mitt_16"/>
+			<xsd:element ref="visi:Mitt_16Ref"/>
+			<xsd:element ref="visi:Mitt_17"/>
+			<xsd:element ref="visi:Mitt_17Ref"/>
+			<xsd:element ref="visi:Mitt_18"/>
+			<xsd:element ref="visi:Mitt_18Ref"/>
+			<xsd:element ref="visi:Mitt_19"/>
+			<xsd:element ref="visi:Mitt_19Ref"/>
+			<xsd:element ref="visi:Mitt_2"/>
+			<xsd:element ref="visi:Mitt_2Ref"/>
+			<xsd:element ref="visi:Mitt_20"/>
+			<xsd:element ref="visi:Mitt_20Ref"/>
+			<xsd:element ref="visi:Mitt_21"/>
+			<xsd:element ref="visi:Mitt_21Ref"/>
+			<xsd:element ref="visi:Mitt_3"/>
+			<xsd:element ref="visi:Mitt_3Ref"/>
+			<xsd:element ref="visi:Mitt_4"/>
+			<xsd:element ref="visi:Mitt_4Ref"/>
+			<xsd:element ref="visi:Mitt_5"/>
+			<xsd:element ref="visi:Mitt_5Ref"/>
+			<xsd:element ref="visi:Mitt_6"/>
+			<xsd:element ref="visi:Mitt_6Ref"/>
+			<xsd:element ref="visi:Mitt_7"/>
+			<xsd:element ref="visi:Mitt_7Ref"/>
+			<xsd:element ref="visi:Mitt_8"/>
+			<xsd:element ref="visi:Mitt_8Ref"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="MessageTypeInstanceSet">
+		<xsd:choice>
+			<xsd:element ref="visi:M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBericht"/>
+			<xsd:element ref="visi:M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtRef"/>
+			<xsd:element ref="visi:M02-VoorstelAkkoord"/>
+			<xsd:element ref="visi:M02-VoorstelAkkoordRef"/>
+			<xsd:element ref="visi:M03-VoorstelNietAkkoord"/>
+			<xsd:element ref="visi:M03-VoorstelNietAkkoordRef"/>
+			<xsd:element ref="visi:M04-VoorstelGecanceld"/>
+			<xsd:element ref="visi:M04-VoorstelGecanceldRef"/>
+			<xsd:element ref="visi:M05-VoorstelIngangsdatum"/>
+			<xsd:element ref="visi:M05-VoorstelIngangsdatumRef"/>
+			<xsd:element ref="visi:M06-IngangsdatumAkkoord"/>
+			<xsd:element ref="visi:M06-IngangsdatumAkkoordRef"/>
+			<xsd:element ref="visi:M07-IngangsdatumNietAkkoord"/>
+			<xsd:element ref="visi:M07-IngangsdatumNietAkkoordRef"/>
+			<xsd:element ref="visi:M08-BevestigingIngangsdatum"/>
+			<xsd:element ref="visi:M08-BevestigingIngangsdatumRef"/>
+			<xsd:element ref="visi:M10-VoorstelNieuwVISIproject"/>
+			<xsd:element ref="visi:M10-VoorstelNieuwVISIprojectRef"/>
+			<xsd:element ref="visi:M11-AfwijzingVoorgesteldVISIproject"/>
+			<xsd:element ref="visi:M11-AfwijzingVoorgesteldVISIprojectRef"/>
+			<xsd:element ref="visi:M12-AcceptatieNieuwVISIproject"/>
+			<xsd:element ref="visi:M12-AcceptatieNieuwVISIprojectRef"/>
+			<xsd:element ref="visi:M13-AnnuleringProjectInitiatie"/>
+			<xsd:element ref="visi:M13-AnnuleringProjectInitiatieRef"/>
+			<xsd:element ref="visi:M14-BevestigingProjectInitiatie"/>
+			<xsd:element ref="visi:M14-BevestigingProjectInitiatieRef"/>
+			<xsd:element ref="visi:M15-ProjectIngericht"/>
+			<xsd:element ref="visi:M15-ProjectIngerichtRef"/>
+			<xsd:element ref="visi:M16-VerzoekBeeindigingProject"/>
+			<xsd:element ref="visi:M16-VerzoekBeeindigingProjectRef"/>
+			<xsd:element ref="visi:M17-AkkoordBeeindigingProject"/>
+			<xsd:element ref="visi:M17-AkkoordBeeindigingProjectRef"/>
+			<xsd:element ref="visi:M18-AfwijzingBeeindigingProject"/>
+			<xsd:element ref="visi:M18-AfwijzingBeeindigingProjectRef"/>
+			<xsd:element ref="visi:M19-AnnuleringProjectbeeindiging"/>
+			<xsd:element ref="visi:M19-AnnuleringProjectbeeindigingRef"/>
+			<xsd:element ref="visi:M20-BevestigingBeeindigingProject"/>
+			<xsd:element ref="visi:M20-BevestigingBeeindigingProjectRef"/>
+			<xsd:element ref="visi:M21-BevestigingVoortzettingProject"/>
+			<xsd:element ref="visi:M21-BevestigingVoortzettingProjectRef"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="RoleTypeInstanceSet">
+		<xsd:choice>
+			<xsd:element ref="visi:R01-VISI-communicatiemanager"/>
+			<xsd:element ref="visi:R01-VISI-communicatiemanagerRef"/>
+			<xsd:element ref="visi:R02-Wijzigingsinitiator"/>
+			<xsd:element ref="visi:R02-WijzigingsinitiatorRef"/>
+			<xsd:element ref="visi:R03-Initiator-VISI-project"/>
+			<xsd:element ref="visi:R03-Initiator-VISI-projectRef"/>
+			<xsd:element ref="visi:R04-Executor-VISI-project"/>
+			<xsd:element ref="visi:R04-Executor-VISI-projectRef"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="TransactionTypeInstanceSet">
+		<xsd:choice>
+			<xsd:element ref="visi:T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie"/>
+			<xsd:element ref="visi:T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactieRef"/>
+			<xsd:element ref="visi:T02-"/>
+			<xsd:element ref="visi:T02-Ref"/>
+		</xsd:choice>
+	</xsd:group>
+
+	<!-- enumeration type declarations (for ENUMERATION data type definitions) -->
+
+	<!-- simple type declarations (for TYPE defined data type definitions) -->
+
+	<!-- standard declarations, elementType, simpleType, logical (for each translation) -->
+	<xsd:complexType name="elementType">
+		<xsd:attribute name="id" type="xsd:ID" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="elementTypeRef">
+		<xsd:attribute name="idref" type="xsd:IDREF" use="required"/>
+	</xsd:complexType>
+	<xsd:simpleType name="logical">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="true"/>
+			<xsd:enumeration value="false"/>
+			<xsd:enumeration value="unknown"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

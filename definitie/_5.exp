@@ -1,6 +1,6 @@
 SCHEMA visiXML_MessageSchema;
 
--- Complete model Part II, version 1.4, work version
+-- Complete model Part II, version 1.5, work version
 
 ENTITY GroupTemplate;
  name : STRING;

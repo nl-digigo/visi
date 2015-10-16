@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/20140331/metaframework">
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/20150331/metaframework">
   <PRT-Meta-raamwerk id="PRO-META-RW">
     <name>Meta Raamwerk Project</name>
     <description>Meta Raamwerk Project</description>
@@ -27,6 +27,7 @@
   </standaardOrganisatie>
   <CeOrganisatieSOAPServer id="SCE-INF">
     <sOAPServerURL>http://visi.nl/soapservice.asmx</sOAPServerURL>
+    <publicKey>dummy</publicKey>
   </CeOrganisatieSOAPServer>
   <PersonInRole id="PIR-COMG">
     <contactPerson>
