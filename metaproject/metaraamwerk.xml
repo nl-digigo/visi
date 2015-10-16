@@ -549,8 +549,15 @@
 
   <SimpleElementType id="publicKey">
     <description>Public Key</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2015-10-16T11:07:48</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <language></language>
+    <helpInfo></helpInfo>
+    <valueList></valueList>
     <userDefinedType>
-      <UserDefinedTypeRef idref="String"/>
+      <UserDefinedTypeRef idref="StringVerplicht"/>
     </userDefinedType>
   </SimpleElementType>
 
