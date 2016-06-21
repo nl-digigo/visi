@@ -104,7 +104,7 @@ ENTITY ElementCondition;	--	The condition of a SimpleElementType as used within 
  condition : STRING;
  helpInfo : OPTIONAL STRING;
 
- complexElement : OPTIONAL ComplexElementType;
+ complexElements : OPTIONAL SET [0:2] OF ComplexElementType;
  simpleElement : OPTIONAL SimpleElementType;
  messageInTransaction : OPTIONAL MessageInTransactionType;
 END_ENTITY;
