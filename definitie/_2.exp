@@ -1,6 +1,6 @@
 SCHEMA visiXML_VISI_Systematics;
 
--- Complete model Part I, version 1.5, work version
+-- Complete model Part I, version 1.6, work version
 
 ENTITY ProjectType;	--	The definition of a specific group of projects. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of project should expose.
  namespace : STRING;
