@@ -93,6 +93,8 @@ ENTITY MessageType;	--	The definition of a type of message (MessageType), specif
  helpInfo : OPTIONAL STRING;
  code : OPTIONAL STRING;
 
+ appendixMandatory: OPTIONAL BOOLEAN;
+
  complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
  appendixTypes : OPTIONAL SET [1:?] OF AppendixType;
 END_ENTITY;
