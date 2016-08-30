@@ -290,9 +290,9 @@
 		<description>Free op Prijs SE in Child CE Inhoud van de menukaart</description>
 		<condition>FREE</condition>
 		<helpInfo/>
-		<complexElement>
+		<complexElements>
 			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-		</complexElement>
+		</complexElements>
 		<simpleElement>
 			<SimpleElementTypeRef idref="Prijs"/>
 		</simpleElement>
@@ -302,9 +302,9 @@
 		<description>Free op Omschrijving SE in Parent CE Menukaart</description>
 		<condition>FREE</condition>
 		<helpInfo/>
-		<complexElement>
+		<complexElements>
 			<ComplexElementTypeRef idref="CeMenuKaart"/>
-		</complexElement>
+		</complexElements>
 		<simpleElement>
 			<SimpleElementTypeRef idref="Omschrijving"/>
 		</simpleElement>
@@ -314,19 +314,19 @@
 		<description>Empty op Parent CE Dagmenu</description>
 		<condition>EMPTY</condition>
 		<helpInfo/>
-		<complexElement>
+		<complexElements>
 			<ComplexElementTypeRef idref="CeDagMenu"/>
-		</complexElement>
+		</complexElements>
 	</ElementCondition>
 
 	<ElementCondition id="ElementCondition4vanScenario10">
 		<description>Free op MITT, Parent CE, Child CE, en SE</description>
 		<condition>FREE</condition>
 		<helpInfo/>
-		<complexElement>
+		<complexElements>
 			<ComplexElementTypeRef idref="CeDagMenu"/>
 			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-		</complexElement>
+		</complexElements>
 		<simpleElement>
 			<SimpleElementTypeRef idref="NaamMenukaartItem"/>
 		</simpleElement>
@@ -338,20 +338,20 @@
 	<ElementCondition id="ElementCondition5vanScenario10">
 		<description>Free op Parent en Child CE</description>
 		<condition>FREE</condition>
-		<complexElement>
+		<complexElements>
 			<ComplexElementTypeRef idref="CeDrankenKaart"/>
 			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-		</complexElement>
+		</complexElements>
 	</ElementCondition>
 
 	<ElementCondition id="ElementCondition6vanScenario10">
 		<description>Fixed op parent en child CE en op SE prijs</description>
 		<condition>FIXED</condition>
 		<helpInfo/>
-		<complexElement>
+		<complexElements>
 			<ComplexElementTypeRef idref="CeDrankenKaart"/>
 			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-		</complexElement>
+		</complexElements>
 		<simpleElement>
 			<SimpleElementTypeRef idref="Prijs"/>
 		</simpleElement>
@@ -361,10 +361,10 @@
 		<description>Foute element condition: Inhoud van de menukaart is child CE en menukaart is parent CE. Deze EC heeft inhoud als parant gedefinieerd en menukaart als child. Deze situatie bestaat niet in dit raamwerk.</description>
 		<condition>FREE</condition>
 		<helpInfo/>
-		<complexElement>
+		<complexElements>
 			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
 			<ComplexElementTypeRef idref="CeMenuKaart"/>
-		</complexElement>
+		</complexElements>
 		<messageInTransaction>
 			<MessageInTransactionTypeRef idref="BerichtInTransactie6"/>
 		</messageInTransaction>
