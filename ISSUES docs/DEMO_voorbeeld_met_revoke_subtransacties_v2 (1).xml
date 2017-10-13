@@ -1,0 +1,1674 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Jeroen van Geijlswijk (infostrait) -->
+<visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20140331" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20140331 C:\20140331.xsd">
+	<TransactionPhaseType id="TPT_DEMO_STATE_ACCEPTED">
+		<description>ACCEPTED</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_DECLINED">
+		<description>DECLINED</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_PROMISED">
+		<description>PROMISED</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_QUITTED">
+		<description>QUITTED</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_REJECTED">
+		<description>REJECTED</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_REQUESTED">
+		<description>REQUESTED</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_STATED">
+		<description>STATED</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_STOPPED">
+		<description>STOPPED</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_REVOKED_ACCEPT">
+		<description>REVOKED ACCEPT</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_ALLOWED_REVOKE_ACCEPT">
+		<description>ALLOWED REVOKE ACCEPT</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_REFUSED_REVOKE_ACCEPT">
+		<description>REFUSED REVOKE ACCEPT</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_REVOKED_PROMISE">
+		<description>REVOKED PROMISE</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_ALLOWED_REVOKE_PROMISE">
+		<description>ALLOWED REVOKE PROMISE</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_REFUSED_REVOKE_PROMISE">
+		<description>REFUSED REVOKE PROMISE</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_REVOKED_REQUEST">
+		<description>REVOKED REQUEST</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_ALLOWED_REVOKE_REQUEST">
+		<description>ALLOWED REVOKE REQUEST</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_REFUSED_REVOKE_REQUEST">
+		<description>REFUSED REVOKE REQUEST</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_REVOKED_STATE">
+		<description>REVOKED STATE</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_ALLOWED_REVOKE_STATE">
+		<description>ALLOWED REVOKE STATE</description>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="TPT_DEMO_STATE_REFUSED_REVOKE_STATE">
+		<description>REFUSED REVOKE STATE</description>
+	</TransactionPhaseType>
+	<AppendixType id="AT_StandardAppendixType">
+		<description>Standard Appendix Type</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_StandardAppendixTypeProperties"/>
+		</complexElements>
+	</AppendixType>
+	<ComplexElementType id="CET_StandardAppendixTypeProperties">
+		<description>Properties</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SET_Author"/>
+			<SimpleElementTypeRef idref="SET_Date"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CET_StandardOrganisationTypeProperties">
+		<description>Properties</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SOAPServerURL"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CET_Transaction">
+		<description>Transaction</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SET_TransactionType"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CET_Request">
+		<description>Request</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SET_Request"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CET_State">
+		<description>State</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SET_Fact1"/>
+			<SimpleElementTypeRef idref="SET_Fact2"/>
+			<SimpleElementTypeRef idref="SET_Fact3"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CET_Response">
+		<description>Response</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SET_ResponseDate"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CET_Comments">
+		<description>Comments</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SET_Comment"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CET_DeclineOrReject">
+		<description>Motivation</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SET_Motivation"/>
+			<SimpleElementTypeRef idref="SET_CorrectiveMeasure"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CET_Motivation">
+		<description>Motivation</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SET_Motivation"/>
+		</simpleElements>
+	</ComplexElementType>
+	<GroupType id="GT_Standard">
+		<description>Standard Group Type</description>
+	</GroupType>
+	<MessageInTransactionType id="MITT_40159">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Request"/>
+		</message>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REQUESTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40160">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_State"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40235"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_STATED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40161">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Accept"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40160"/>
+			<MessageInTransactionTypeRef idref="MITT_40167"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_ACCEPTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40162">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Decline"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40159"/>
+			<MessageInTransactionTypeRef idref="MITT_40166"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_DECLINED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40163">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Reject"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40160"/>
+			<MessageInTransactionTypeRef idref="MITT_40167"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REJECTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40164">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Quit"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40162"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_QUITTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40165">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Stop"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40163"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_STOPPED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40166">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Request"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40162"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REQUESTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40167">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_State"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40163"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_STATED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40168">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Accept"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40174"/>
+			<MessageInTransactionTypeRef idref="MITT_40175"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_with_Revokes"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_ACCEPTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40169">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Decline"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40172"/>
+			<MessageInTransactionTypeRef idref="MITT_40173"/>
+			<MessageInTransactionTypeRef idref="MITT_40207"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_with_Revokes"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_DECLINED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40170">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Quit"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40169"/>
+			<MessageInTransactionTypeRef idref="MITT_40187"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_with_Revokes"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_QUITTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40171">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Reject"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40174"/>
+			<MessageInTransactionTypeRef idref="MITT_40175"/>
+			<MessageInTransactionTypeRef idref="MITT_40224"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_with_Revokes"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REJECTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40172">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Request"/>
+		</message>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_with_Revokes"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REQUESTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40173">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Request"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40169"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_with_Revokes"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_PROMISED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40174">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_State"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40240"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_with_Revokes"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_STATED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40175">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_State"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40171"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_with_Revokes"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_STATED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40176">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Stop"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40171"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_with_Revokes"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_STOPPED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40187">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Allow"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40200"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Revoke_Pattern_Request"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_ALLOWED_REVOKE_REQUEST"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40192">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Refuse"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40200"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Revoke_Pattern_Request"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REFUSED_REVOKE_REQUEST"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40200">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<firstMessage>true</firstMessage>
+		<message>
+			<MessageTypeRef idref="MT_Revoke_Request"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40172"/>
+			<MessageInTransactionTypeRef idref="MITT_40173"/>
+			<MessageInTransactionTypeRef idref="MITT_40240"/>
+			<MessageInTransactionTypeRef idref="MITT_40174"/>
+			<MessageInTransactionTypeRef idref="MITT_40168"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Revoke_Pattern_Request"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REVOKED_REQUEST"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40207">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Allow"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40217"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Revoke_Pattern_Promise"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_ALLOWED_REVOKE_PROMISE"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40212">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Refuse"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40217"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Revoke_Pattern_Promise"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REFUSED_REVOKE_PROMISE"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40217">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Revoke_Promise"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40174"/>
+			<MessageInTransactionTypeRef idref="MITT_40168"/>
+			<MessageInTransactionTypeRef idref="MITT_40240"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Revoke_Pattern_Promise"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REVOKED_PROMISE"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40224">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Allow"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40234"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Revoke_Pattern_Accept"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_ALLOWED_REVOKE_ACCEPT"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40229">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Refuse"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40234"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Revoke_Pattern_Accept"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REFUSED_REVOKE_ACCEPT"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40234">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<firstMessage>true</firstMessage>
+		<message>
+			<MessageTypeRef idref="MT_Revoke_Accept"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40168"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Revoke_Pattern_Accept"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REVOKED_ACCEPT"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40235">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Promise"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40159"/>
+			<MessageInTransactionTypeRef idref="MITT_40166"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_PROMISED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+		<conditions>
+			<MessageInTransactionTypeConditionRef idref="MITTC_75"/>
+		</conditions>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40237">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Allow"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40239"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Revoke_Pattern_State"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_ALLOWED_REVOKE_STATE"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40238">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Refuse"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40239"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Revoke_Pattern_State"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REFUSED_REVOKE_STATE"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40239">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Revoke_State"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40174"/>
+			<MessageInTransactionTypeRef idref="MITT_40168"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Revoke_Pattern_State"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REVOKED_STATE"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_40240">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Promise"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_40172"/>
+			<MessageInTransactionTypeRef idref="MITT_40173"/>
+			<MessageInTransactionTypeRef idref="MITT_40237"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_with_Revokes"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_PROMISED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+		<conditions>
+			<MessageInTransactionTypeConditionRef idref="MITTC_74"/>
+		</conditions>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49429">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Accept"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_49436"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_short"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_ACCEPTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49431">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Promise"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_49434"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_short"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_PROMISED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+		<conditions>
+			<MessageInTransactionTypeConditionRef idref="MITTC_76"/>
+		</conditions>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49434">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Request"/>
+		</message>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_short"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REQUESTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49436">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_State"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_49431"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_short"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_STATED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49481">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Accept"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_49489"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_2"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_ACCEPTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49482">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Decline"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_49486"/>
+			<MessageInTransactionTypeRef idref="MITT_49487"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_2"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_DECLINED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49483">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Promise"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_49486"/>
+			<MessageInTransactionTypeRef idref="MITT_49487"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_2"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_PROMISED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+		<conditions>
+			<MessageInTransactionTypeConditionRef idref="MITTC_77"/>
+		</conditions>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49484">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Quit"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_49482"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_2"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_QUITTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49485">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Reject"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_49489"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_2"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REJECTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49486">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Request"/>
+		</message>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_2"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REQUESTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49487">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Request"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_49482"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_2"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REQUESTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49489">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<firstMessage>false</firstMessage>
+		<message>
+			<MessageTypeRef idref="MT_State"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_49485"/>
+			<MessageInTransactionTypeRef idref="MITT_49483"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_2"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_STATED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_49490">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_Stop"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_49485"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_2"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_STOPPED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionTypeCondition id="MITTC_74">
+		<sendAfter>
+			<MessageInTransactionTypeRef idref="MITT_40174"/>
+		</sendAfter>
+	</MessageInTransactionTypeCondition>
+	<MessageInTransactionTypeCondition id="MITTC_75">
+		<sendAfter>
+			<MessageInTransactionTypeRef idref="MITT_40160"/>
+		</sendAfter>
+	</MessageInTransactionTypeCondition>
+	<MessageInTransactionTypeCondition id="MITTC_76">
+		<sendAfter>
+			<MessageInTransactionTypeRef idref="MITT_49436"/>
+		</sendAfter>
+	</MessageInTransactionTypeCondition>
+	<MessageInTransactionTypeCondition id="MITTC_77">
+		<sendAfter>
+			<MessageInTransactionTypeRef idref="MITT_49489"/>
+		</sendAfter>
+	</MessageInTransactionTypeCondition>
+	<MessageType id="MT_Request">
+		<description>... (REQUEST)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_Request"/>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+			<ComplexElementTypeRef idref="CET_Response"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_Promise">
+		<description>... (PROMISE)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_Accept">
+		<description>... (ACCEPT)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+			<ComplexElementTypeRef idref="CET_Response"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_State">
+		<description>... (STATE)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_State"/>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+			<ComplexElementTypeRef idref="CET_Response"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_Decline">
+		<description>... (DECLINE)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_DeclineOrReject"/>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+			<ComplexElementTypeRef idref="CET_Response"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_Quit">
+		<description>... (QUIT)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_Motivation"/>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_Reject">
+		<description>... (REJECT)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_DeclineOrReject"/>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+			<ComplexElementTypeRef idref="CET_Response"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_Stop">
+		<description>... (STOP)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_Motivation"/>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_Revoke_Accept">
+		<description>... (REVOKE ACCEPT)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+			<ComplexElementTypeRef idref="CET_Response"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_Revoke_Promise">
+		<description>... (REVOKE PROMISE)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+			<ComplexElementTypeRef idref="CET_Response"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_Revoke_Request">
+		<description>... (REVOKE REQUEST)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_Request"/>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+			<ComplexElementTypeRef idref="CET_Response"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_Revoke_State">
+		<description>... (REVOKE STATE)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_State"/>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+			<ComplexElementTypeRef idref="CET_Response"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_Allow">
+		<description>... (ALLOW)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_Motivation"/>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="MT_Refuse">
+		<description>... (REFUSE)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_Motivation"/>
+			<ComplexElementTypeRef idref="CET_Comments"/>
+		</complexElements>
+	</MessageType>
+	<OrganisationType id="OT_Standard">
+		<description>Standard Organisation Type</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CET_StandardOrganisationTypeProperties"/>
+		</complexElements>
+	</OrganisationType>
+	<PersonType id="PT_Standard">
+		<description>Standard Person Type</description>
+	</PersonType>
+	<ProjectType id="PT_DEMO_Framework_version_1">
+		<namespace>http://www.visi.nl/schemas/20160331/DEMO/DEMO_Framework_version_1</namespace>
+		<description>DEMO Framework version 1</description>
+	</ProjectType>
+	<RoleType id="RT_Executor">
+		<description>... (EXECUTOR)</description>
+	</RoleType>
+	<RoleType id="RT_Initiator">
+		<description>... (INITIATOR)</description>
+	</RoleType>
+	<SimpleElementType id="SET_Date">
+		<description>date</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="UDT_Date"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SET_Author">
+		<description>author</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="UDT_StringMandatory"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SOAPServerURL">
+		<description>SOAP server URL</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="UDT_StringOptional"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SET_TransactionType">
+		<description>transaction type</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="UDT_EnumerationTransactionType"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SET_Request">
+		<description>request</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="UDT_StringMandatory"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SET_Fact1">
+		<description>fact 1</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="UDT_StringMandatory"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SET_Fact2">
+		<description>fact 2</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="UDT_StringMandatory"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SET_Fact3">
+		<description>fact 3</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="UDT_StringMandatory"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SET_Comment">
+		<description>comment</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="UDT_StringOptional"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SET_ResponseDate">
+		<description>response date</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="UDT_Date"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SET_Motivation">
+		<description>motivation</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="UDT_StringMandatory"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SET_CorrectiveMeasure">
+		<description>corrective measure</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="UDT_StringOptional"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<TransactionType id="TT_DEMO_Default_Transaction_Pattern_short">
+		<description>DEMO DEFAULT TRANSACTION PATTERN - 4 STATES</description>
+		<initiator>
+			<RoleTypeRef idref="RT_Initiator"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="RT_Executor"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="TT_DEMO_Default_Transaction_Pattern_option_1">
+		<description>DEMO DEFAULT TRANSACTION PATTERN - 8 STATES, option 1</description>
+		<initiator>
+			<RoleTypeRef idref="RT_Initiator"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="RT_Executor"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="TT_DEMO_Default_Transaction_Pattern_option_2">
+		<description>DEMO DEFAULT TRANSACTION PATTERN - 8 STATES, option 2</description>
+		<initiator>
+			<RoleTypeRef idref="RT_Initiator"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="RT_Executor"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="TT_DEMO_Default_Transaction_Pattern_with_Revokes">
+		<description>DEMO DEFAULT TRANSACTION PATTERN WITH REVOKE PATTERNS</description>
+		<initiator>
+			<RoleTypeRef idref="RT_Initiator"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="RT_Executor"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="TT_DEMO_Revoke_Pattern_Request">
+		<description>DEMO REVOKE PATTERN - REQUEST</description>
+		<initiator>
+			<RoleTypeRef idref="RT_Initiator"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="RT_Executor"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="TT_DEMO_Revoke_Pattern_Promise">
+		<description>DEMO REVOKE PATTERN - PROMISE</description>
+		<initiator>
+			<RoleTypeRef idref="RT_Initiator"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="RT_Executor"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="TT_DEMO_Revoke_Pattern_State">
+		<description>DEMO REVOKE PATTERN - STATE</description>
+		<initiator>
+			<RoleTypeRef idref="RT_Initiator"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="RT_Executor"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="TT_DEMO_Revoke_Pattern_Accept">
+		<description>DEMO REVOKE PATTERN - ACCEPT</description>
+		<initiator>
+			<RoleTypeRef idref="RT_Initiator"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="RT_Executor"/>
+		</executor>
+	</TransactionType>
+	<UserDefinedType id="UDT_Date">
+		<description>Date (mandatory)</description>
+		<baseType>DATE</baseType>
+	</UserDefinedType>
+	<UserDefinedType id="UDT_StringMandatory">
+		<description>String (mandatory)</description>
+		<baseType>STRING</baseType>
+		<xsdRestriction>&lt;xs:minLength value="1"/&gt;</xsdRestriction>
+	</UserDefinedType>
+	<UserDefinedType id="UDT_StringOptional">
+		<description>String (optional)</description>
+		<baseType>STRING</baseType>
+	</UserDefinedType>
+	<UserDefinedType id="UDT_EnumerationTransactionType">
+		<description>Enumeration transaction type (Red, Green, Blue)</description>
+		<baseType>STRING</baseType>
+		<xsdRestriction>&lt;xs:enumeration value="Red"/&gt;&lt;xs:enumeration value="Green"/&gt;&lt;xs:enumeration value="Blue"/&gt;</xsdRestriction>
+	</UserDefinedType>
+	<ElementCondition id="EC_2907">
+		<description>...</description>
+		<condition>EMPTY</condition>
+		<simpleElement>
+			<SimpleElementTypeRef idref="SET_Comment"/>
+		</simpleElement>
+	</ElementCondition>
+	<ElementCondition id="EC_2909">
+		<description>...</description>
+		<condition>EMPTY</condition>
+		<simpleElement>
+			<SimpleElementTypeRef idref="SET_ResponseDate"/>
+		</simpleElement>
+	</ElementCondition>
+	<TransactionType id="TT_DEMO_Default_Transaction_Pattern_option_1_passive">
+		<description>DEMO DEFAULT TRANSACTION PATTERN - 8 STATES, option 1 - no</description>
+		<initiator>
+			<RoleTypeRef idref="RT_Initiator"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="RT_Executor"/>
+		</executor>
+	</TransactionType>
+	<MessageType id="MT_NO_REQUEST">
+		<description>no request</description>
+		<state>passive</state>
+	</MessageType>
+	<MessageType id="MT_NO_PROMISE">
+		<description>no promise</description>
+		<state>passive</state>
+	</MessageType>
+	<MessageType id="MT_NO_ACCEPT">
+		<description>no accept</description>
+		<state>passive</state>
+	</MessageType>
+	<MessageType id="MT_NO_STATE">
+		<description>no state</description>
+		<state>passive</state>
+	</MessageType>
+	<MessageType id="MT_NO_DECLINE">
+		<description>no decline</description>
+		<state>passive</state>
+	</MessageType>
+	<MessageType id="MT_NO_QUIT">
+		<description>no quit</description>
+		<state>passive</state>
+	</MessageType>
+	<MessageType id="MT_NO_REJECT">
+		<description>no reject</description>
+		<state>passive</state>
+	</MessageType>
+	<MessageType id="MT_NO_STOP">
+		<description>no stop</description>
+		<state>passive</state>
+	</MessageType>
+	<MessageInTransactionType id="MITT_80159">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_NO_REQUEST"/>
+		</message>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1_passive"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REQUESTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_80160">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_NO_STATE"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_80235"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1_passive"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_STATED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_80161">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_NO_ACCEPT"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_80160"/>
+			<MessageInTransactionTypeRef idref="MITT_80167"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1_passive"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_ACCEPTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_80162">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_NO_DECLINE"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_80159"/>
+			<MessageInTransactionTypeRef idref="MITT_80166"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1_passive"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_DECLINED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_80163">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_NO_REJECT"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_80160"/>
+			<MessageInTransactionTypeRef idref="MITT_80167"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1_passive"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REJECTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_80164">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_NO_QUIT"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_80162"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1_passive"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_QUITTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_80165">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_NO_STOP"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_80163"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1_passive"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_STOPPED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_80166">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_NO_REQUEST"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_80162"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1_passive"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_REQUESTED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_80167">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_NO_STATE"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_80163"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1_passive"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_STATED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="MITT_80235">
+		<requiredNotify>0</requiredNotify>
+		<received>false</received>
+		<send>false</send>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<message>
+			<MessageTypeRef idref="MT_NO_PROMISE"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="MITT_80159"/>
+			<MessageInTransactionTypeRef idref="MITT_80166"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="TT_DEMO_Default_Transaction_Pattern_option_1_passive"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="TPT_DEMO_STATE_PROMISED"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="GT_Standard"/>
+		</group>
+		<conditions>
+			<MessageInTransactionTypeConditionRef idref="MITTC_75"/>
+		</conditions>
+	</MessageInTransactionType>
+</visiXML_VISI_Systematics>

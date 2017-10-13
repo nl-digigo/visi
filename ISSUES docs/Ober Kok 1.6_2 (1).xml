@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20140331" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20140331 C:\_3_3dot3.xsd">
+
+  <AppendixType id="StandaardAppendix">
+    <description>Standaard bijlage</description>
+    <startDate>2011-03-19T00:00:00</startDate>
+    <endDate>2011-03-19T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2011-04-14T00:00:00</dateLaMu>
+    <userLaMu>kok</userLaMu>
+  </AppendixType>
+
+  <GroupType id="StandaardGroep">
+    <description>Standaard Groep</description>
+    <startDate>2011-02-15T00:00:00</startDate>
+    <endDate>2099-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2011-04-14T00:00:00</dateLaMu>
+    <userLaMu>kok</userLaMu>
+  </GroupType>
+
+  <GroupType id="standaardGroep">
+    <description>Standaard groep</description>
+    <startDate>2006-01-01T00:00:00</startDate>
+    <endDate>9999-12-31T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </GroupType>
+
+  <MessageInTransactionType id="mit49495">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept_OrderTaking"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49502"/>
+      <MessageInTransactionTypeRef idref="mit49503"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Accept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49496">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Decline_OrderTaking"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49500"/>
+      <MessageInTransactionTypeRef idref="mit49501"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Decline"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49497">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Promise_OrderTaking"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49500"/>
+      <MessageInTransactionTypeRef idref="mit49501"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Promise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49498">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Quit_OrderTaking"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49496"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Quit"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49499">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Reject_OrderTaking"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49502"/>
+      <MessageInTransactionTypeRef idref="mit49503"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Reject"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49500">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request_OrderTaking"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49501">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request_OrderTaking"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49496"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49502">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State_OrderTaking"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49497"/>
+      <MessageInTransactionTypeRef idref="mit49525"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49503">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State_OrderTaking"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49499"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49504">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Stop_OrderTaking"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49499"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Stop"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49505">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:45:55</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept_QuestionAnswering"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49512"/>
+      <MessageInTransactionTypeRef idref="mit49513"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Accept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49506">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:45:55</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Decline_QuestionAnswering"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49510"/>
+      <MessageInTransactionTypeRef idref="mit49511"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Decline"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49507">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:45:55</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Promise_QuestionAnswering"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49510"/>
+      <MessageInTransactionTypeRef idref="mit49511"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Promise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49508">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:45:55</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Quit_QuestionAnswering"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49506"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Quit"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49509">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:45:55</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Reject_QuestionAnswering"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49512"/>
+      <MessageInTransactionTypeRef idref="mit49513"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Reject"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49510">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:45:55</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Request_QuestionAnswering"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49497"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="mtc384"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49511">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:45:55</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request_QuestionAnswering"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49506"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49512">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:45:55</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State_QuestionAnswering"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49507"/>
+      <MessageInTransactionTypeRef idref="mit49515"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49513">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:45:55</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State_QuestionAnswering"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49509"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49514">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:45:55</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Stop_QuestionAnswering"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49509"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Stop"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49515">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:53:50</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_AcceptQuestionAnsweringCooksHelper"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49522"/>
+      <MessageInTransactionTypeRef idref="mit49523"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_3"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Accept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49516">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:53:50</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_DeclineQuestionAnsweringCooksHelper"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49520"/>
+      <MessageInTransactionTypeRef idref="mit49521"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_3"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Decline"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49517">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:53:50</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_PromiseQuestionAnsweringCooksHelper"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49520"/>
+      <MessageInTransactionTypeRef idref="mit49521"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_3"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Promise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49518">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:53:50</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_QuitQuestionAnsweringCooksHelper"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49516"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_3"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Quit"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49519">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:53:50</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_RejectQuestionAnsweringCooksHelper"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49522"/>
+      <MessageInTransactionTypeRef idref="mit49523"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_3"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Reject"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49520">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:53:50</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_RequestQuestionAnsweringCooksHelper"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49507"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_3"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49521">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:53:50</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_RequestQuestionAnsweringCooksHelper"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49516"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_3"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49522">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:53:50</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_StateQuestionAnsweringCooksHelper"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49517"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_3"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49523">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:53:50</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_StateQuestionAnsweringCooksHelper"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49519"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_3"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49524">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:53:50</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_StopQuestionAnsweringCooksHelper"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49519"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_3"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Stop"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49525">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:58:04</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept_OrderDelivery"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49532"/>
+      <MessageInTransactionTypeRef idref="mit49533"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_4"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Accept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="mtc386"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49526">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:58:04</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Decline_OrderDelivery"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49530"/>
+      <MessageInTransactionTypeRef idref="mit49531"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_4"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Decline"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49527">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:58:04</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Promise_OrderDelivery"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49530"/>
+      <MessageInTransactionTypeRef idref="mit49531"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_4"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Promise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49528">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:58:04</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Quit_OrderDelivery"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49526"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_4"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Quit"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49529">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:58:04</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Reject_OrderDelivery"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49532"/>
+      <MessageInTransactionTypeRef idref="mit49533"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_4"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Reject"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49530">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:58:04</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Request_OrderDelivery"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49497"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_4"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="mtc385"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49531">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:58:04</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request_OrderDelivery"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49526"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_4"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49532">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:58:04</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State_OrderDelivery"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49527"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_4"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49533">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:58:04</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State_OrderDelivery"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49529"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_4"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49534">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-09-08T14:58:04</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Stop_OrderDelivery"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49529"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_4"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Stop"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionTypeCondition id="mtc384">
+    <sendBefore>
+      <MessageInTransactionTypeRef idref="mit49530"/>
+    </sendBefore>
+    <state>active</state>
+    <dateLaMu>2017-09-08T16:40:54</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="mtc385">
+    <sendBefore>
+      <MessageInTransactionTypeRef idref="mit49530"/>
+    </sendBefore>
+    <state>active</state>
+    <dateLaMu>2017-09-08T17:27:13</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="mtc386">
+    <sendBefore>
+      <MessageInTransactionTypeRef idref="mit49502"/>
+    </sendBefore>
+    <state>active</state>
+    <dateLaMu>2017-09-08T17:30:40</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageType id="MS_AcceptQuestionAnsweringCooksHelper">
+    <description>Accept Question Answering Cooks Helper</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:55:49</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Accept_OrderDelivery">
+    <description>Accept order delivery</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T15:08:25</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <language></language>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Accept_OrderTaking">
+    <description>Accept order taking</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:44:37</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Accept_QuestionAnswering">
+    <description>Accept question answering</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:46:54</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_DeclineQuestionAnsweringCooksHelper">
+    <description>Decline Question Answering Cooks Helper</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:56:02</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Decline_OrderDelivery">
+    <description>Decline order delivery</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T15:07:49</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Decline_OrderTaking">
+    <description>Decline order taking</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:44:50</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Decline_QuestionAnswering">
+    <description>Decline question answering</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:47:07</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_PromiseQuestionAnsweringCooksHelper">
+    <description>Promise Question Answering Cooks Helper</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:56:06</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Promise_OrderDelivery">
+    <description>Promise order delivery</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T15:07:45</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Promise_OrderTaking">
+    <description>Promise order taking</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:44:55</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Promise_QuestionAnswering">
+    <description>Promise question answering</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:47:10</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_QuitQuestionAnsweringCooksHelper">
+    <description>Quit Question Answering Cooks Helper</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:56:09</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Quit_OrderDelivery">
+    <description>Quit order delivery</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T15:07:41</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Quit_OrderTaking">
+    <description>Quit order taking</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:45:01</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Quit_QuestionAnswering">
+    <description>Quit question answering</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:47:14</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_RejectQuestionAnsweringCooksHelper">
+    <description>Reject Question Answering Cooks Helper</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:56:13</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Reject_OrderDelivery">
+    <description>Reject order delivery</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T15:07:37</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Reject_OrderTaking">
+    <description>Reject order taking</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:45:06</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Reject_QuestionAnswering">
+    <description>Reject question answering</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:47:17</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_RequestQuestionAnsweringCooksHelper">
+    <description>Request Question Answering Cooks Helper</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:56:17</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Request_OrderDelivery">
+    <description>Request order delivery</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T15:07:33</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Request_OrderTaking">
+    <description>Request order taking</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:45:12</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Request_QuestionAnswering">
+    <description>Request question answering</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:47:20</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_StateQuestionAnsweringCooksHelper">
+    <description>State Question Answering Cooks Helper</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:56:21</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_State_OrderDelivery">
+    <description>State order delivery</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T15:07:27</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_State_OrderTaking">
+    <description>State  order taking</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:45:23</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_State_QuestionAnswering">
+    <description>State question answering</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:48:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_StopQuestionAnsweringCooksHelper">
+    <description>Stop Question Answering Cooks Helper</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:56:27</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Stop_OrderDelivery">
+    <description>Stop order delivery</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T15:07:11</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Stop_OrderTaking">
+    <description>Stop order taking</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:45:32</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Stop_QuestionAnswering">
+    <description>Stop question answering</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:48:19</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </MessageType>
+
+  <OrganisationType id="StandaardOrganisatie">
+    <description>Standaard organisatie</description>
+    <startDate>2011-03-19T00:00:00</startDate>
+    <endDate>2011-03-19T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2011-04-14T00:00:00</dateLaMu>
+    <userLaMu>kok</userLaMu>
+  </OrganisationType>
+
+  <PersonType id="StandaardPersoon">
+    <description>Standaard persoon</description>
+    <startDate>2011-03-19T00:00:00</startDate>
+    <endDate>2011-03-19T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2011-04-14T00:00:00</dateLaMu>
+    <userLaMu>kok</userLaMu>
+  </PersonType>
+
+  <ProjectType id="idProject_6">
+    <namespace>http://www.visi.nl/schemas/20140331/Ober%20Kok%201.6_2</namespace>
+    <description>Leeg raamwerk</description>
+    <startDate>2011-03-19T00:00:00</startDate>
+    <endDate>2011-03-19T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T18:04:41</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+  </ProjectType>
+
+  <RoleType id="RL_Executor">
+    <description>Executor</description>
+    <startDate>2012-05-02T00:00:00</startDate>
+    <endDate>2012-05-02T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <language></language>
+    <category></category>
+  </RoleType>
+
+  <RoleType id="RL_Initiator">
+    <description>Initiator</description>
+    <startDate>2012-12-12T00:00:00</startDate>
+    <endDate>2012-12-12T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </RoleType>
+
+  <RoleType id="rol10">
+    <description>Order taker</description>
+    <startDate>2017-09-08T00:00:00</startDate>
+    <endDate>2017-09-08T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:29:46</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </RoleType>
+
+  <RoleType id="rol10_2">
+    <description>Customer</description>
+    <startDate>2017-09-08T00:00:00</startDate>
+    <endDate>2017-09-08T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:30:27</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </RoleType>
+
+  <RoleType id="rol10_2_2">
+    <description>Cook</description>
+    <startDate>2017-09-08T00:00:00</startDate>
+    <endDate>2017-09-08T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:31:05</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </RoleType>
+
+  <RoleType id="rol10_2_3">
+    <description>Cooks helper</description>
+    <startDate>2017-09-08T00:00:00</startDate>
+    <endDate>2017-09-08T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:32:01</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </RoleType>
+
+  <TransactionPhaseType id="State_Accept">
+    <description>Accept</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Decline">
+    <description>Decline</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Promise">
+    <description>Promise</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Quit">
+    <description>Quit</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Reject">
+    <description>Reject</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Request">
+    <description>Request</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_State">
+    <description>State</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Stop">
+    <description>Stop</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:35:15</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="tph3">
+    <description>New transaction phase</description>
+    <startDate>2015-06-01T00:00:00</startDate>
+    <endDate>2015-06-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2015-06-01T10:18:00</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionType id="TR_DEMO_standaard_patroon">
+    <description>Order taking</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:35:45</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+    <initiator>
+      <RoleTypeRef idref="rol10_2"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="rol10"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_DEMO_standaard_patroon_2">
+    <description>Question answering</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:48:26</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+    <initiator>
+      <RoleTypeRef idref="RL_Initiator"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RL_Executor"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_DEMO_standaard_patroon_3">
+    <description>Question answering by cooks helper</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T14:54:13</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+    <initiator>
+      <RoleTypeRef idref="RL_Initiator"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RL_Executor"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_DEMO_standaard_patroon_4">
+    <description>Order delivery ordered</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-09-08T16:50:01</dateLaMu>
+    <userLaMu>gspees</userLaMu>
+    <helpInfo></helpInfo>
+    <initiator>
+      <RoleTypeRef idref="RL_Initiator"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RL_Executor"/>
+    </executor>
+  </TransactionType>
+
+  <UserDefinedType id="RequiredType">
+    <description>Tekst (verplicht)</description>
+    <state>active</state>
+    <dateLaMu>2011-04-14T00:00:00</dateLaMu>
+    <userLaMu>kok</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:minLength value="1"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="STRING">
+    <description>Tekst (vrije tekst)</description>
+    <state>active</state>
+    <dateLaMu>2011-04-14T00:00:00</dateLaMu>
+    <userLaMu>kok</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction></xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="UDT_Datum">
+    <description>Datum</description>
+    <state>active</state>
+    <dateLaMu>2012-07-20T00:00:00</dateLaMu>
+    <userLaMu>kok</userLaMu>
+    <baseType>DATE</baseType>
+    <xsdRestriction></xsdRestriction>
+    <language></language>
+    <helpInfo></helpInfo>
+  </UserDefinedType>
+
+  <UserDefinedType id="UDT_Euro_niet_verplicht">
+    <description>Euro (niet verplicht)</description>
+    <state>active</state>
+    <dateLaMu>2012-06-29T00:00:00</dateLaMu>
+    <userLaMu>kok</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:pattern value="(-?([1-9]\d{0,2}(\.\d{3})*|[1-9]\d*|0),\d{2})?"/&gt;</xsdRestriction>
+    <language></language>
+    <helpInfo></helpInfo>
+  </UserDefinedType>
+
+  <UserDefinedType id="UDT_Euro_verplicht">
+    <description>Euro (verplicht)</description>
+    <state>active</state>
+    <dateLaMu>2012-06-29T00:00:00</dateLaMu>
+    <userLaMu>kok</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:minLength value="1"/&gt;&lt;xs:pattern value="(-?([1-9]\d{0,2}(\.\d{3})*|[1-9]\d*|0),\d{2})?"/&gt;</xsdRestriction>
+    <language></language>
+    <helpInfo></helpInfo>
+  </UserDefinedType>
+
+  <UserDefinedType id="UDT_Keuzelijst_Ja_Nee_NVT">
+    <description>Keuzelijst met ja/nee/nvt</description>
+    <state>active</state>
+    <dateLaMu>2012-06-29T00:00:00</dateLaMu>
+    <userLaMu>kok</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:enumeration value="NVT"/&gt;&lt;xs:enumeration value="Ja"/&gt;&lt;xs:enumeration value="Nee"/&gt;&lt;xs:enumeration value="NTB"/&gt;</xsdRestriction>
+    <language></language>
+    <helpInfo></helpInfo>
+  </UserDefinedType>
+
+</visiXML_VISI_Systematics>

@@ -1,0 +1,2517 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20160331" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <AppendixType id="apx1">
+    <description>New appendix type</description>
+    <startDate>2010-12-10T00:00:00</startDate>
+    <endDate>2010-12-10T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2010-12-10T00:00:00</dateLaMu>
+    <userLaMu>Charlotte</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="ceDocumentgegevens"/>
+    </complexElements>
+  </AppendixType>
+
+  <ComplexElementType id="ceDocumentgegevens">
+    <description>Documentgegevens</description>
+    <startDate>2005-11-24T00:00:00</startDate>
+    <endDate>2005-11-24T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2012-11-15T00:00:00</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="seDocumentTitel"/>
+      <SimpleElementTypeRef idref="seTypeDocument"/>
+      <SimpleElementTypeRef idref="seDatumDocument"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="ceEenmaligeOpmerking">
+    <description>Eenmalige opmerking</description>
+    <startDate>2009-02-25T00:00:00</startDate>
+    <endDate>2099-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:53:04</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="seOpmerking"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="ceOrganisatieSOAPServer">
+    <description>Gegevens van SOAP server</description>
+    <startDate>2007-02-12T00:00:00</startDate>
+    <endDate>9999-12-31T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2012-11-15T00:00:00</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="seSOAPServerURL"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="cePersoonSpecifiekeInformatie">
+    <description>Persoon specifieke informatie</description>
+    <startDate>2006-02-09T00:00:00</startDate>
+    <endDate>2006-02-09T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:52:21</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="seAdministratienummer"/>
+      <SimpleElementTypeRef idref="seAfdeling"/>
+      <SimpleElementTypeRef idref="seVasteTelefoon"/>
+      <SimpleElementTypeRef idref="seFax"/>
+      <SimpleElementTypeRef idref="seMobieleTelefoon"/>
+      <SimpleElementTypeRef idref="seEmail"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="ceToDo">
+    <description>ToDo</description>
+    <startDate>2009-02-25T00:00:00</startDate>
+    <endDate>2099-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2012-12-12T18:09:05</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="seToDo"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <GroupType id="standaardGroep">
+    <description>Standaard groep</description>
+    <startDate>2006-01-01T00:00:00</startDate>
+    <endDate>9999-12-31T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2003-09-12T00:00:00</dateLaMu>
+    <userLaMu>bapa</userLaMu>
+  </GroupType>
+
+  <MessageInTransactionType id="mit40159">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T11:56:33</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40160">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T11:56:34</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40235"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40161">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T11:56:36</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40160"/>
+      <MessageInTransactionTypeRef idref="mit40167"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Accept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40162">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:01:23</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Decline"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40159"/>
+      <MessageInTransactionTypeRef idref="mit40166"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Decline"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40163">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:01:40</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Reject"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40160"/>
+      <MessageInTransactionTypeRef idref="mit40167"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Reject"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40164">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:02:48</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Quit"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40162"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Quit"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40165">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:03:00</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Stop"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40163"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Stop"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40166">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:08:05</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40162"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40167">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:08:34</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40163"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40168">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:12:41</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40174"/>
+      <MessageInTransactionTypeRef idref="mit40175"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Accept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40169">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:12:41</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Decline"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40172"/>
+      <MessageInTransactionTypeRef idref="mit40173"/>
+      <MessageInTransactionTypeRef idref="mit40207"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Decline"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40170">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:12:41</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Quit"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40169"/>
+      <MessageInTransactionTypeRef idref="mit40187"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Quit"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40171">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:12:41</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Reject"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40174"/>
+      <MessageInTransactionTypeRef idref="mit40175"/>
+      <MessageInTransactionTypeRef idref="mit40224"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Reject"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40172">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:12:41</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40173">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:12:41</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40169"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Promise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40174">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:12:41</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40240"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40175">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:12:41</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40171"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40176">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T12:12:42</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Stop"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40171"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Stop"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40187">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:41:31</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Allow"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40200"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes_Request"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Revoke_Request_Allow"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40192">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:41:32</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Refuse"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40200"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes_Request"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Revoke_Request_Refuse"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40200">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:41:33</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Revoke_Request"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40172"/>
+      <MessageInTransactionTypeRef idref="mit40173"/>
+      <MessageInTransactionTypeRef idref="mit40240"/>
+      <MessageInTransactionTypeRef idref="mit40174"/>
+      <MessageInTransactionTypeRef idref="mit40168"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes_Request"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Revoke_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40207">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:41:36</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Allow"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40217"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes_Promise"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Revoke_Promise_Allow"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40212">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:41:37</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Refuse"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40217"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes_Promise"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Revoke_Promise_Refuse"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40217">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:41:38</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Revoke_Promise"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40174"/>
+      <MessageInTransactionTypeRef idref="mit40168"/>
+      <MessageInTransactionTypeRef idref="mit40240"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes_Promise"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Revoke_Promise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40224">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:41:40</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Allow"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40234"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes_Acceptance"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Revoke_Acceptance_Allow"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40229">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:41:41</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Refuse"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40234"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes_Acceptance"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Revoke_Acceptance_Refuse"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40234">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:41:42</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Revoke_Acceptance"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40168"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes_Acceptance"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Revoke_Acceptance"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40235">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:47:28</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Promise"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40159"/>
+      <MessageInTransactionTypeRef idref="mit40166"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Promise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="mtc75"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40237">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:49:06</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Allow"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40239"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes_Statement"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Revoke_Statement_Allow"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40238">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:49:06</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Refuse"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40239"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes_Statement"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Revoke_Statement_Refuse"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40239">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:49:27</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Revoke_Statement"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40174"/>
+      <MessageInTransactionTypeRef idref="mit40168"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes_Statement"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Revoke_Statement"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit40240">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-07-27T13:50:20</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Promise"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit40172"/>
+      <MessageInTransactionTypeRef idref="mit40173"/>
+      <MessageInTransactionTypeRef idref="mit40237"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_Revokes"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Promise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="mtc74"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49429">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:11:51</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49436"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_kort"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Accept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49431">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:11:51</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Promise"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49434"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_kort"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Promise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="mtc76"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49434">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:11:51</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_kort"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49436">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:11:51</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49431"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_kort"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49437">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:44:46</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49444"/>
+      <MessageInTransactionTypeRef idref="mit49445"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Accept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="mtc79"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49438">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:44:46</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Decline"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49442"/>
+      <MessageInTransactionTypeRef idref="mit49443"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Decline"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49439">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:44:46</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Promise"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49442"/>
+      <MessageInTransactionTypeRef idref="mit49443"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Promise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="mtc78"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49440">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:44:46</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Quit"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49438"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Quit"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49441">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:44:46</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Reject"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49444"/>
+      <MessageInTransactionTypeRef idref="mit49445"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Reject"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49442">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:44:46</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49443">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:44:46</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49438"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49444">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:44:47</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49439"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49445">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:44:47</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_State"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49441"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49446">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:44:47</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Stop"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49441"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Stop"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49447">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:53:16</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49437"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49448">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:53:19</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Decline"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49447"/>
+      <MessageInTransactionTypeRef idref="mit49449"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Decline"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49449">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:53:23</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49448"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49450">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:53:25</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Quit"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49448"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Quit"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49451">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:53:41</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Promise"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49447"/>
+      <MessageInTransactionTypeRef idref="mit49449"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Promise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="mtc80"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49452">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:53:50</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_State"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49451"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49453">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:53:52</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Reject"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49452"/>
+      <MessageInTransactionTypeRef idref="mit49454"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Reject"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49454">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:53:56</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_State"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49453"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49455">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:53:59</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Stop"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49453"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Stop"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49456">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-02T15:54:01</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49454"/>
+      <MessageInTransactionTypeRef idref="mit49452"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_2_keer"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Accept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49481">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-23T14:26:20</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49489"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_met_1_state"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Accept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49482">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-23T14:26:21</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Decline"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49486"/>
+      <MessageInTransactionTypeRef idref="mit49487"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_met_1_state"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Decline"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49483">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-23T14:26:21</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Promise"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49486"/>
+      <MessageInTransactionTypeRef idref="mit49487"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_met_1_state"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Promise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="mtc77"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49484">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-23T14:26:21</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Quit"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49482"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_met_1_state"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Quit"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49485">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-23T14:26:21</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Reject"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49489"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_met_1_state"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Reject"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49486">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-23T14:26:21</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_met_1_state"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49487">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-23T14:26:21</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49482"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_met_1_state"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Request"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49489">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-23T14:26:21</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_State"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49485"/>
+      <MessageInTransactionTypeRef idref="mit49483"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_met_1_state"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_State"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="mit49490">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2017-08-23T14:26:21</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Stop"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="mit49485"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_DEMO_standaard_patroon_met_1_state"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="State_Stop"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionTypeCondition id="mtc74">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="mit40174"/>
+    </sendAfter>
+    <state>active</state>
+    <dateLaMu>2017-08-02T13:58:44</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="mtc75">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="mit40160"/>
+    </sendAfter>
+    <state>active</state>
+    <dateLaMu>2017-08-02T15:17:17</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="mtc76">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="mit49436"/>
+    </sendAfter>
+    <state>active</state>
+    <dateLaMu>2017-08-02T15:17:42</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="mtc77">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="mit49489"/>
+    </sendAfter>
+    <state>active</state>
+    <dateLaMu>2017-08-23T14:34:37</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="mtc78">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="mit49444"/>
+    </sendAfter>
+    <state>active</state>
+    <dateLaMu>2017-08-23T14:35:04</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="mtc79">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="mit49447"/>
+    </sendAfter>
+    <state>active</state>
+    <dateLaMu>2017-08-23T14:35:07</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="mtc80">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="mit49452"/>
+    </sendAfter>
+    <state>active</state>
+    <dateLaMu>2017-08-23T14:35:10</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageType id="MS_Accept">
+    <description>Accept</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-08-23T13:50:35</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <category></category>
+    <code></code>
+  </MessageType>
+
+  <MessageType id="MS_Allow">
+    <description>Allow</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:11:02</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Decline">
+    <description>Decline</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:10:18</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_DUMMY_NEGEERDIT">
+    <description>Execute</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:48:45</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Promise">
+    <description>Promise</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:47:23</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Quit">
+    <description>Quit</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:10:13</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Refuse">
+    <description>Refuse</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:11:13</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Reject">
+    <description>Reject</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:10:31</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Request">
+    <description>Request</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:10:00</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <helpInfo></helpInfo>
+  </MessageType>
+
+  <MessageType id="MS_Revoke_Acceptance">
+    <description>Revoke Acceptance</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:12:05</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Revoke_Promise">
+    <description>Revoke Promise</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:11:42</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Revoke_Request">
+    <description>Revoke Request</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:11:31</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Revoke_Statement">
+    <description>Revoke Statement</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:11:52</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_State">
+    <description>State</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:10:03</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Stop">
+    <description>Stop</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:10:24</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </MessageType>
+
+  <OrganisationType id="StandaardOrganisatie">
+    <description>Standaard organisatie</description>
+    <startDate>2006-01-01T00:00:00</startDate>
+    <endDate>9999-12-31T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2003-09-12T00:00:00</dateLaMu>
+    <userLaMu>bapa</userLaMu>
+    <code>-</code>
+    <complexElements>
+      <ComplexElementTypeRef idref="ceOrganisatieSOAPServer"/>
+    </complexElements>
+  </OrganisationType>
+
+  <PersonType id="standaardPersoon">
+    <description>Standaard Persoon</description>
+    <startDate>2005-08-15T00:00:00</startDate>
+    <endDate>2005-08-15T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2005-08-15T00:00:00</dateLaMu>
+    <userLaMu>Michon</userLaMu>
+    <helpInfo>Standaard persoon</helpInfo>
+    <code>-</code>
+    <complexElements>
+      <ComplexElementTypeRef idref="cePersoonSpecifiekeInformatie"/>
+    </complexElements>
+  </PersonType>
+
+  <ProjectType id="DEMO_raamwerk_v1">
+    <namespace>http://www.visi.nl/schemas/20160331/DEMO_voorbeeld_met_revoke_subtransacties_v1_1</namespace>
+    <description>DEMO_raamwerk_v1</description>
+    <startDate>2006-02-09T00:00:00</startDate>
+    <endDate>2006-02-09T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-08-23T14:58:13</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <category></category>
+    <code>-</code>
+  </ProjectType>
+
+  <RoleType id="RL_Executor">
+    <description>Executor</description>
+    <startDate>2012-05-02T00:00:00</startDate>
+    <endDate>2012-05-02T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T14:07:48</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <language></language>
+    <category></category>
+  </RoleType>
+
+  <RoleType id="RL_Initiator">
+    <description>Initiator</description>
+    <startDate>2012-12-12T00:00:00</startDate>
+    <endDate>2012-12-12T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T14:07:33</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </RoleType>
+
+  <SimpleElementType id="seAdministratienummer">
+    <description>Administratienummer</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:53:12</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udtTekstOptioneel"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="seAfdeling">
+    <description>Afdeling</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:53:20</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udtGlobaalStringType"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="seDatumDocument">
+    <description>Datum document</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:53:27</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <helpInfo>De datum waarop het document is aangemaakt</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udtDate"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="seDocumentTitel">
+    <description>Documenttitel</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:53:30</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <helpInfo>De titel van het document</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udtGlobaalStringType"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="seEmail">
+    <description>Email</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:53:36</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <helpInfo>Het emailadres van het persoon</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udtTekstOptioneel"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="seFax">
+    <description>Fax</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:53:41</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udtTekstOptioneel"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="seMobieleTelefoon">
+    <description>Mobiele telefoon</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:53:46</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udtTekstOptioneel"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="seOpmerking">
+    <description>Opmerking</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:54:13</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <helpInfo>Vrij veld voor een opmerking</helpInfo>
+    <valueList></valueList>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udtTekstOptioneel"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="seSOAPServerURL">
+    <description>SOAP server URL</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2012-12-12T18:22:57</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udtTekstOptioneel"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="seToDo">
+    <description>ToDo</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2012-12-12T18:08:46</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <helpInfo>Vrij veld voor een ToDo</helpInfo>
+    <valueList></valueList>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udtTekstOptioneel"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="seTypeDocument">
+    <description>Type document</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:53:59</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <helpInfo>Keuzelijst met de type documenten</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udtTypeKeuzelijst"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="seVasteTelefoon">
+    <description>Vaste telefoon</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:54:08</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udtTekstOptioneel"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <TransactionPhaseType id="State_Accept">
+    <description>Accept</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:56:10</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Decline">
+    <description>Decline</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:56:53</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Promise">
+    <description>Promise</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:55:50</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Quit">
+    <description>Quit</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:56:43</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Reject">
+    <description>Reject</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:57:30</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Request">
+    <description>Request</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:55:40</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Revoke_Acceptance">
+    <description>Revoke Acceptance</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:58:43</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Revoke_Acceptance_Allow">
+    <description>Revoke Acceptance Allow</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T14:00:29</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Revoke_Acceptance_Refuse">
+    <description>Revoke Acceptance Refuse</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T14:00:40</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Revoke_Promise">
+    <description>Revoke Promise</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:58:17</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Revoke_Promise_Allow">
+    <description>Revoke Promise Allow</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:59:45</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Revoke_Promise_Refuse">
+    <description>Revoke Promise Refuse</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:59:55</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Revoke_Request">
+    <description>Revoke Request</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:57:56</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Revoke_Request_Allow">
+    <description>Revoke Request Allow</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:59:13</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Revoke_Request_Refuse">
+    <description>Revoke Request Refuse</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:59:23</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Revoke_Statement">
+    <description>Revoke Statement</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:58:31</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Revoke_Statement_Allow">
+    <description>Revoke Statement Allow</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T14:00:06</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Revoke_Statement_Refuse">
+    <description>Revoke Statement Refuse</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T14:00:16</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_State">
+    <description>State</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:56:01</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="State_Stop">
+    <description>Stop</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:57:20</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionType id="TR_DEMO_Revokes">
+    <description>DEMO Revokes</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T12:12:55</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RL_Initiator"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RL_Executor"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_DEMO_Revokes_Acceptance">
+    <description>DEMO Revokes Acceptance</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:43:46</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RL_Initiator"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RL_Executor"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_DEMO_Revokes_Promise">
+    <description>DEMO Revokes Promise</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:42:42</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RL_Initiator"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RL_Executor"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_DEMO_Revokes_Request">
+    <description>DEMO Revokes Request</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:42:31</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RL_Initiator"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RL_Executor"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_DEMO_Revokes_Statement">
+    <description>DEMO Revokes Statement</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-07-27T13:49:19</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RL_Initiator"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RL_Executor"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_DEMO_standaard_patroon">
+    <description>DEMO standaard patroon</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-08-03T09:52:08</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <helpInfo></helpInfo>
+    <initiator>
+      <RoleTypeRef idref="RL_Initiator"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RL_Executor"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_DEMO_standaard_patroon_2_keer">
+    <description>DEMO standaard patroon 2 keer</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-08-03T09:52:56</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RL_Initiator"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RL_Executor"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_DEMO_standaard_patroon_kort">
+    <description>DEMO standaard patroon kort</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-08-03T09:52:25</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RL_Initiator"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RL_Executor"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_DEMO_standaard_patroon_met_1_state">
+    <description>DEMO standaard patroon met 1 state</description>
+    <startDate>2017-07-27T00:00:00</startDate>
+    <endDate>2017-07-27T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2017-08-23T14:32:47</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <helpInfo></helpInfo>
+    <initiator>
+      <RoleTypeRef idref="RL_Initiator"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RL_Executor"/>
+    </executor>
+  </TransactionType>
+
+  <UserDefinedType id="udtDate">
+    <description>Datum (verplicht)</description>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:55:05</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <baseType>DATE</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="udtGlobaalStringType">
+    <description>Globaal string type</description>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:55:20</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <baseType>STRING</baseType>
+    <helpInfo>Represents character strings. Represents character strings. Represents character strings. Represents character strings. Represents character strings.</helpInfo>
+  </UserDefinedType>
+
+  <UserDefinedType id="udtTekstOptioneel">
+    <description>Tekst (optioneel)</description>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:56:05</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <baseType>STRING</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="udtTypeKeuzelijst">
+    <description>Keuzelijst Documenttypen</description>
+    <state>active</state>
+    <dateLaMu>2012-11-15T13:55:38</dateLaMu>
+    <userLaMu>Looij</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:enumeration value="Aantekening"/&gt;&lt;xs:enumeration value="Afspraak"/&gt;&lt;xs:enumeration value="Brief"/&gt;&lt;xs:enumeration value="CD / DVD"/&gt;&lt;xs:enumeration value="Demonstratie"/&gt;&lt;xs:enumeration value="Declaratie (scan/PDF)"/&gt;&lt;xs:enumeration value="Documentatie"/&gt;&lt;xs:enumeration value="Emailbericht"/&gt;&lt;xs:enumeration value="Factuur"/&gt;&lt;xs:enumeration value="FIguur"/&gt;&lt;xs:enumeration value="Handleiding"/&gt;&lt;xs:enumeration value="Licentie"/&gt;&lt;xs:enumeration value="Notitie"/&gt;&lt;xs:enumeration value="Offerte (PDF)"/&gt;&lt;xs:enumeration value="Offerte (Word)"/&gt;&lt;xs:enumeration value="Onderhoudscontract"/&gt;&lt;xs:enumeration value="Opdrachtbevestiging (PDF)"/&gt;&lt;xs:enumeration value="Opdrachtbevestiging (Word)"/&gt;&lt;xs:enumeration value="Opdrachtbevestiging getekend"/&gt;&lt;xs:enumeration value="Presentatie"/&gt;&lt;xs:enumeration value="Telefoongesprek"/&gt;&lt;xs:enumeration value="Verslag"/&gt;&lt;xs:enumeration value="Raamwerk"/&gt;&lt;xs:enumeration value="Schemadefinitie"/&gt;&lt;xs:enumeration value="Software"/&gt;&lt;xs:enumeration value="Projectspecifiek bericht"/&gt;&lt;xs:enumeration value="Transactieschema"/&gt;&lt;xs:enumeration value="Overig"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+</visiXML_VISI_Systematics>
