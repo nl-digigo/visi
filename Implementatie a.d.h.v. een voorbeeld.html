@@ -1,0 +1,138 @@
+<div class="wikidoc">
+<h1>Implementatie a.d.h.v. een voorbeeld</h1>
+<h2>Inleiding</h2>
+<p><span>Het onderstaande voorbeeld vormt de rode draad bij de toelichting op de implementatie van VISI. Het voorbeeld is bewust buiten de scope van de bouw gekozen om de brede toepasbaarheid van de VISI-systematiek weer te geven en eventueel mogelijke applicatieafhankelijkheden
+ te voorkomen.</span><span style="font-size:10pt">&nbsp;</span></p>
+<p><span>Het voorbeeld wordt hier ingeleid met een algemene beschrijving. De volledige uitwerking is opgenomen in Bijlage 4.</span></p>
+<h2>Voorbeeld specialiteitenrestaurant</h2>
+<p><span>In specialiteitenrestaurant de Top Kok werken drie bekende gespecialiseerde chef koks. Het restaurant richt zich op de kritische culinair onderlegde consument. Klanten zijn ge&iuml;nteresseerd in eten en kritisch ten aanzien van het eindproduct dat
+ ze voorgezet krijgen. Elke Kok heeft zijn of haar eigen specia&shy;lisme. Afhankelijk van de werkdruk en kennis zijn zij in de gelegenheid, via de ober, vragen van klanten te beantwoorden. Als de ober de reactie van de koks te lang vindt duren, kijkt de ober
+ op Wikipedia en komt zelf met een antwoord/advies op de proppen. Om misverstanden tussen het bedienend personeel en de keuken te voorkomen, is afgesproken dat de ober bestellingen bij koks op een formele wijze plaatst. De kok die als eerste akkoord gaat met
+ een bestelling, dient de bestelling uit te voeren. Als alle Koks de bestelling weigeren zal de klant door de ober worden medegedeeld dat de bestelling in de huidige vorm niet mogelijk is. De klant dient de bestelling dan opnieuw in te dienen bij de ober.
+</span></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731794" alt=""></p>
+<p><em>Figuur 1 Interactiekaart Top Kok specialiteitenrestaurant.</em><em><span>&nbsp;</span></em></p>
+<p><span>In dit voorbeeld wordt de afhandeling van een bestelling vertaald in VISI-communicatie. De volgende rollen en transacties zijn nodig voor de afhandeling van de bestelling.</span></p>
+<p><em>Tabel </em><em>1&nbsp;</em><em>Rollen</em></p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="177" valign="top">
+<p><span>Rol</span></p>
+</td>
+<td width="437" valign="top">
+<p><span>Verantwoordelijk voor:</span></p>
+</td>
+</tr>
+<tr>
+<td width="177" valign="top">
+<p><span>Klant</span></p>
+</td>
+<td width="437" valign="top">
+<p><span>het plaatsen van een bestelling</span></p>
+</td>
+</tr>
+<tr>
+<td width="177" valign="top">
+<p><span>Ober</span></p>
+</td>
+<td width="437" valign="top">
+<p><span>logistiek verwerken van een bestelling</span></p>
+</td>
+</tr>
+<tr>
+<td width="177" valign="top">
+<p><span>Kok</span></p>
+</td>
+<td width="437" valign="top">
+<p><span>het realiseren van een bestelling</span></p>
+</td>
+</tr>
+<tr>
+<td width="177" valign="top">
+<p><span>Keukenhulp</span></p>
+</td>
+<td width="437" valign="top">
+<p><span>het beantwoorden van vragen van de Kok</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><em style="font-size:10pt">Tabel </em><em style="font-size:10pt">2&nbsp;</em><em style="font-size:10pt">Transacties</em></p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="177" valign="top">
+<p><span>Code</span></p>
+</td>
+<td width="437" valign="top">
+<p><span>Naam</span></p>
+</td>
+</tr>
+<tr>
+<td width="177" valign="top">
+<p><span>T1</span></p>
+</td>
+<td width="437" valign="top">
+<p><span>Opname bestelling</span></p>
+</td>
+</tr>
+<tr>
+<td width="177" valign="top">
+<p><span>T2</span></p>
+</td>
+<td width="437" valign="top">
+<p><span>Vraag Ober aan Kok</span></p>
+</td>
+</tr>
+<tr>
+<td width="177" valign="top">
+<p><span>T3</span></p>
+</td>
+<td width="437" valign="top">
+<p><span>Opdracht Kok</span></p>
+</td>
+</tr>
+<tr>
+<td width="177" valign="top">
+<p><span>T4</span></p>
+</td>
+<td width="437" valign="top">
+<p><span>Vraag Kok aan Keukenhulp</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong style="font-size:10pt"><em>Communicatie</em></strong></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731796" alt=""></p>
+<p><em>Figuur 2 Transactieschema T1: Opname bestelling.</em></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731797" alt=""></p>
+<p><em>Figuur 3 Transactieschema T2: Vraag ober aan kok.</em></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731798" alt=""></p>
+<p><em>Figuur 4 Transactieschema T3: Opdracht aan kok.</em></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731799" alt=""></p>
+<p><em>Figuur 5 Transactieschema T4: Vraag kok aan keukenhulp.</em></p>
+<p>&nbsp;</p>
+<p><span>Op basis van de bovenstaande rollen en transacties kan de communicatie als volgt verlopen:</span></p>
+<p><span>Ober &gt;</span><span>&nbsp;Klant&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wilt u de kaart zien?</span></p>
+<p><span>Klant &gt;&nbsp;</span><span>Ober &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ja graag / Nee, nog niet (transactie eindigt dan).</span></p>
+<p><span>Ober &gt;&nbsp;</span><span>Klant&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aanbieding menukaart met kaart als bijlage bij het bericht.</span></p>
+<p><span>Klant &gt;&nbsp;</span><span>Ober &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Kan gerecht x ook in variant Y worden bereid?</span></p>
+<p><span>&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ober &gt;&nbsp;</span><span>Kok(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vraag: Kan gerecht x ook in variant Y worden bereid?</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kok(s) &gt;&nbsp;</span><span>Ober &nbsp; &nbsp; &nbsp;Antwoord/Advies: Ja, maar ik adviseer deze bereidingswijze.</span></p>
+<p><span>&nbsp;</span></p>
+<p><span>Ober &gt;&nbsp;</span><span>Klant&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Antwoord/Advies: Het kan maar we adviseren deze bereidingswijze.</span></p>
+<p><span>Klant &gt;&nbsp;</span><span>Ober &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Plaatsing bestelling.</span></p>
+<p><span>&nbsp;</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ober &gt;&nbsp;</span><span>Kok&nbsp;&nbsp;&nbsp;&nbsp; Plaatsing bestelling.</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kok &gt;&nbsp;</span><span>Keukenhulp&nbsp;&nbsp;&nbsp;&nbsp; Is dit
+ gerecht nog voorradig?</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keukenhulp &gt;&nbsp;</span><span>Kok &nbsp; &nbsp; Ja/Nee</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kok &gt;&nbsp;</span><span>Ober&nbsp;&nbsp;&nbsp; Akkoord/Niet Akkoord.</span></p>
+<p><span>&nbsp;</span></p>
+<p><span>Ober &gt;&nbsp;</span><span>Klant&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bevestiging bestelling/Bestelling niet mogelijk.</span></p>
+<p><span>&nbsp;</span></p>
+<p><span>In het volgende schema zijn alle transacties en berichten uit het voorbeeld in relatie tot elkaar weergegeven.
+<strong>Dit schema is leidend voor het testscenario voor VISI compatibele software.</strong></span></p>
+</div><div class="ClearBoth"></div>

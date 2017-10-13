@@ -1,0 +1,1074 @@
+<div class="wikidoc">
+<table border="0" width="1030" cellspacing="0" cellpadding="0">
+<colgroup><col width="19"><col width="138"><col width="448"><col width="64"><col width="24"><col width="319"><col width="18"></colgroup>
+<tbody>
+<tr>
+<td width="19" height="27">&nbsp;</td>
+<td colspan="2" width="586">VISI Software conformance test</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">Datum:</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">Leverancier:</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">Adres:</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">Contactpersoon:</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">VISI Systematiek:</td>
+<td width="448">1.6 nog te beschrijven: min-max rows, authenticatie soap</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">Software product:</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">Versie code:</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">Test uitgevoerd door:</td>
+<td width="448">Peter Willems</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">Keuringinstituut</td>
+<td width="448">TNO</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="159">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Een softwareproduct dat VISI-communicatie ondersteunt en voldoet aan de conformance eisen is in staat om, op basis van een willekeurig aangeboden VISI-raamwerk, berichten te genereren voor, en berichten te interpreteren van, elk ander softwareproduct
+ dat VISI-communicatie ondersteunt en voldoet aan de conformance eisen. Vanaf systematiek versie 1.2 worden ook zaken vastgelegd in het VISI raamwerk die het gedrag van de software be&iuml;nvloeden. Aangezien het gedrag op deze punten conform het VISI-raamwerk
+ dienen te zijn wordt getoetst of de software deze punten op de juiste wijzen interpreteert.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="36">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>Resultaat</td>
+<td>&nbsp;</td>
+<td width="319">Opmerkingen</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="21">&nbsp;</td>
+<td width="138">Test omgeving</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="56">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Twee afzonderlijke omgevingen die met een eigen soapserver met elkaar kunnen communiceren (zodat de afhandeling van VISI berichten op basis van het afgesproken SOAP protocol kan worden getest)</td>
+<td>&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td height="59">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">De afzonderlijke systemen dienen ingericht te worden op basis van de VISI systematiek 1.3 met het standaard testraamwerk en projectspecifieke bericht voor toetsing.</td>
+<td>&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td height="20">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Een werkplek met toegang tot het informatiesysteem</td>
+<td>&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td height="66">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Een medewerker die voldoende technische achtergrond heeft van VISI en het eigen systeem om vragen te beantwoorden en de persoon van TNO die de toets uitvoert te ondersteunen bij de handelingen die verricht dienen te worden om bepaald eisen aantoonbaar
+ te maken.</td>
+<td>&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="21">&nbsp;</td>
+<td width="138">Test</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="34">&nbsp;</td>
+<td width="138">http/https</td>
+<td width="448">Adressen verifi&euml;ren op HTTPS</td>
+<td>&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td height="34">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Een projectspecifiek bericht waarin een (http) SOAP server adres voorkomt dient te worden geweigerd.</td>
+<td>&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td height="34" style="height:15px">&nbsp;</td>
+<td width="138" style="height:15px">&nbsp;</td>
+<td width="448" style="height:15px">&nbsp;</td>
+<td style="height:15px">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td height="34">&nbsp;</td>
+<td width="138">10.xsd validatie</td>
+<td width="448">Uitgaande VISI berichten dienen in overeenstemming te zijn met de 10.xsd definitie van het vigerende raamwerk van het betreffende project.&nbsp;</td>
+<td>&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Een verzonden bericht checken tegen de 10.xsd validatie in een XML editor.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="52">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">De leverancier aantoonbaar laten maken dat uitgaande berichten met de 10.xsd worden vergeleken en niet worden verzonden indien deze niet met elkaar overeenkomen</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="51">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Inkomende berichten dienen niet door het systeem geaccepteerd te worden indien deze niet overeenkomen met de 10.xsd definitie van het vigerende raamwerk van het betreffende project.&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="52">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">De leverancier aantoonbaar laten maken dat binnenkomende berichten met de 10.xsd worden vergeleken en niet worden geaccepteerd indien deze niet met elkaar overeenkomen.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="35">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Daarnaast dient het systeem bij een niet valide bericht de juiste errorcode in het reactie bericht van de soapserver te versturen.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="34">&nbsp;</td>
+<td width="138">Soapserver</td>
+<td width="448">De soapserver dient te functioneren volgens de vigerende versie van de SOAP richtlijn.&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="35">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">De leverancier aantoonbaar laten maken dat de reactieberichten op de juiste wijze worden afgehandeld.&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="68">&nbsp;</td>
+<td width="138">Opvolging en machtiging</td>
+<td width="448">Als in het projectspecifieke bericht een successor wordt aangegeven voor een persoon dient alle communicatie te worden overgedragen naar de successor van de betreffende persoon. Ook kunnen personen worden gemachtigd namens de rolvervuller op
+ te treden.&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="69">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Een transactie opstarten op basis van een specifiek persoon in een rol. Vervolgens wordt een successor in het projectspecifieke bericht vastgelegd voor deze persoon. De communicatie dient nu afgehandeld te kunnen worden door de successor.&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="35">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">In het projectspecifiek bericht wordt een persoon gemachtigd namens de rolvervuller op te treden. De software geeft hiervoor gelegenheid.</td>
+<td width="64">&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="35">&nbsp;</td>
+<td width="138">Bijlage capaciteit</td>
+<td width="448">Een bijlage van maximaal 120 Mb moet met het VISI-bericht meegestuurd kunnen worden.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="35">&nbsp;</td>
+<td width="138">Appendixtypes</td>
+<td width="448">Softwareproduct toont alleen de appendixtypes die daadwerkelijk gekozen kunnen worden.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="35">&nbsp;</td>
+<td width="138">Verplicht onderwerp</td>
+<td width="448">Een bericht kan niet worden verzonden zonder dat het onderwerpsveld is ingevuld.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="20">&nbsp;</td>
+<td width="138">Transactie nummer</td>
+<td width="448">Iedere transactie krijgt een unieke identificatie.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="20">&nbsp;</td>
+<td width="138">Metaraamwerk</td>
+<td width="448">De metaraamwerk transactie wordt correct doorlopen.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="35">&nbsp;</td>
+<td width="138">Raamwerk namespace</td>
+<td width="448">Het softwareproduct is in staat meer dan &eacute;&eacute;n raamwerk tegelijktijd operationeel te hebben.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="35">&nbsp;</td>
+<td width="138">element conditions</td>
+<td width="448">Als meer dan &eacute;&eacute;n element condition geldt in een bepaalde situatie moet de voorrangstabel correct worden gehanteerd.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="34">&nbsp;</td>
+<td width="138">Scenario's</td>
+<td width="448">Van het VISI testraamwerk zijn een aantal scenario's uitgewerkt. Een aantal scenario's in toenemende complexiteit zullen worden beproefd.&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="52">&nbsp;</td>
+<td width="138">Scenario 2a:</td>
+<td width="448">Pogingen om wijzigingen aan te brengen in berichten, daar waar die volgens het raamwerk niet zijn toegestaan, moeten door de software worden geweigerd.&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="35">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Checken of de bestelling correct wordt overgenomen van klant naar ober en van ober naar kok.&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="35">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Checken dat geen berichten verstuurd kunnen worden die in strijd zijn met de structuur van het raamwerk .</td>
+<td width="64">&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="20">&nbsp;</td>
+<td width="138">Scenario 4c:</td>
+<td width="448">Correcte werking bij loopstructuren.</td>
+<td width="64">&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="20">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">ElementCondition wordt correct verwerkt bij bericht 6</td>
+<td width="64">&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="35">&nbsp;</td>
+<td width="138">Scenario 5b:</td>
+<td width="448">Correcte werking berichten-flow (open-secondary-transaction attribuutwaarden).&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="36">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Leverancier toont aan dat het verloop van het berichtenverkeer is te traceren op basis van de afzonderlijke berichten (previous attribuutwaarden).</td>
+<td width="64">&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17" style="height:17px">&nbsp;</td>
+<td width="138" style="height:17px"><br>
+<p>VISI 1.4 features</p>
+</td>
+<td width="448" style="height:17px">&nbsp;</td>
+<td style="height:17px">&nbsp;</td>
+<td style="height:17px">&nbsp;</td>
+<td width="319" style="height:17px">&nbsp;</td>
+<td style="height:17px">&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">
+<p>Beveiliging VISI communicatie<br>
+workitem 1003</p>
+</td>
+<td width="448">Een projectspecifiek bericht waarin een (http) SOAP server adres voorkomt dient te worden geweigerd.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">
+<p>Test op DateTime, Boolean, etc.<br>
+workitem 1026</p>
+</td>
+<td width="448">Test of de volgende velden als volgt werken (Testscenario 1):</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Boolean: Hier moet een vinkjes veldje &nbsp;of 0 - 1 of true-false of waar-onwaar staan (verplicht)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Datetime / Datum en tijd: Datum en tijd moeten ingevuld worden (verplicht)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Time / Tijd: Een tijdstip moet ingevoerd worden (verplicht)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Decimal / Decimaal: Een getal, al dan niet met decimale waarden moet ingevoerd worden (verplicht)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">
+<p>Integer / Geheel getal: Een geheel getal moet ingevoerd worden (verplicht)</p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">
+<p>Keuzelijst: Een van de waarden &quot;Keuze 1&quot;, &quot;Keuze 2&quot; of &quot;Keuze 3&quot; moet ingevoerd worden (verplicht)</p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">
+<p>String / Vrije tekst: Willekeurige tekens kunnen ingevoerd worden (niet verplicht)</p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">
+<p>Archiveren en weer activeren van projecten workitem 1024</p>
+</td>
+<td width="448">&nbsp; &nbsp;
+<p>* Archiveer een VISI-Project;<br>
+* Importeer het gearchiveerde VISI-Project in een andere VISI-omgeving;<br>
+* Vergelijk het originele project met het opnieuw&nbsp;</p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">
+<table cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="middle">
+<p>De inhoud van beide projecten, inclusief raamwerken, project specifieke berichten, transacties, berichten, bijlagen etc moet exact gelijk zijn.&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Eventueel na aanpassing van het soap adres moet communicatie met het project mogelijk zijn</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">Volgordelijkheid van te versturen berichten workitem 1025</td>
+<td width="448">De ober stuurt de bestelling naar de kok. Controleer dat de ober niet nog een nieuwe bestellingssubtransactie mag starten.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">Testen op de functionaliteit voor het initi&euml;ren van een project met het meta-raamwerk.&nbsp;</td>
+<td width="448">Scenario A.1: Project-initiator biedt aan Project-executor een voorstel voor een nieuw VISI project aan met als bijlagen een nieuw raamwerk en projectspecifiek bericht. Project-executor beantwoordt het voorstel met acceptatie van het nieuwe
+ VISI project. Project-initiator bevestigt de projectinitiatie aan Project-executor. Project-executor meldt terug aan Project-initiator dat het project ingericht is.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Scenario A.2: Project-initiator biedt aan Project-executor een voorstel voor een nieuw VISI project aan met als bijlagen een nieuw raamwerk en projectspecifiek bericht. Project-executor beantwoordt het voorstel met acceptatie van het nieuwe
+ VISI project. Project-initiator bevestigt de projectinitiatie aan Project-executor. Project-executor meldt terug aan Project-initiator dat het project ingericht is.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Scenario B: Wijzigingsinitiator biedt aan VISI Communicatiemanager een voorstel voor het wijzigen van een bestaand VISI project aan met als bijlagen een gewijzigd raamwerk en een gewijzigd projectspecifiek bericht. VISI Communicatiemanager beantwoordt
+ het voorstel met akkoord. Wijzigingsinitiator bevestigt de voorgestelde wijziging met een voorstel van een ingangsdatum en -tijdstip aan VISI Communicator. VISI Communicator beantwoordt het voorstel met akkoord. Wijzigingsinitiator bevestigt de ingangsdatum
+ en -tijdstip.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">VISI 1.5 features</td>
+<td width="448">minrow - maxrow</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">VISI 1.6 features</td>
+<td width="448">&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">Grootte van bijlagen</td>
+<td width="448">Een bijlage van maximaal 10&nbsp;Gb moet met het VISI-bericht meegestuurd kunnen worden.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">Aanvullende eisen</td>
+<td width="448">&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">A</td>
+<td colspan="2" width="586">Het borgen van de authenticiteit van uitgewisselde VISI-berichten en bijbehorende bestanden.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="68">&nbsp;</td>
+<td width="138">A1</td>
+<td width="448">Een VISI-bericht met eventueel gekoppeld(e) bestand(en) dient zodanig in het VISIproduct te worden opgeslagen dat het bericht en bijbehorend(e) bestand(en) te allen tijde in relatie tot elkaar opvraagbaar zijn. Die relatie mag nooit worden verbroken.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="69">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Analyseer de werking van de geboden zoekfuncties. Kunnen de bestanden van berichten in het zoekresultaat worden getoond? En kan het bijbehorende bericht in een zoekresultaat van bestanden worden verkregen? De relatie tussen bericht en gekoppeld
+ bestand mag tijdens de test niet verloren gaan.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="68">&nbsp;</td>
+<td width="138">A2</td>
+<td width="448">Het mag niet mogelijk zijn om oorspronkelijk verzonden en/of ontvangen VISI-berichten en gekoppelde bestanden te wijzigen in het VISI-product of te verwijderen uit het VISI-product.<br>
+N.B. Kopi&euml;ren t.b.v. het maken van een nieuw bericht valt hier niet onder.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="52">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Analyseer de user-interface op functies die een mogelijkheid lijken te bieden om een bericht en/of gekoppeld bestand te wijzigen en/of the verwijderen. Test vervolgens het effect van de gevonden functies.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="68">&nbsp;</td>
+<td width="138">A3</td>
+<td width="448">Het VISI-product moet checken of een gebruiker gerechtigd is om toegang tot het systeem te krijgen. Het toegangverkrijgen dient te gebeuren met middelen die de persoon in kwestie onder zijn/haar uitsluitende controle kan houden.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="35">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Onderneem een aantal pogingen om ongeautoriseerd toegang tot het systeem te verkrijgen.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="51">&nbsp;</td>
+<td width="138">A4</td>
+<td width="448">Uitsluitend de personen die in het projectspecifieke bericht zijn vermeld mogen in het VISI-product VISI-communicatie uitvoeren overeenkomstig de VISI-rollen die hen zijn toebedeeld.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="35">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Test of berichten zichtbaar zijn die niet voor de betreffende rol/persoon bedoeld zijn.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="36">B</td>
+<td colspan="2" width="586">Het op een herkenbare wijze presenteren van de communicatiestructuur die in een VISI-raamwerk is vastgelegd.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="104">&nbsp;</td>
+<td width="138">B1</td>
+<td width="448">De software mag een gebruiker uitsluitend die transacties laten zien waarvoor de gebruiker vanuit zijn rol(len) verantwoordelijk is. Deze eis geldt echter niet voor een zogenaamde &ldquo;meekijkfunctie&rdquo;. Dit is een faciliteit ten behoeve
+ van de beheerder van de het VISI-product die mogelijkheid biedt al het berichtenverkeer zichtbaar te maken (echter zonder de mogelijkheid het verloop van het berichtenverkeer te be&iuml;nvloeden).</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="20">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Analyseer de user-interface om te bezien of dit inderdaad het geval is</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="34">&nbsp;</td>
+<td width="138">B2</td>
+<td width="448">Voor een gebruiker dient na het selecteren van een VISI-bericht inzichtelijk te zijn welke bestanden aan het bericht zijn gekoppeld.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="35">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Analyseer de user-interface om te bezien of deze koppeling na het selecteren van een bericht visueel onderscheidend wordt gepresenteerd.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="119">&nbsp;</td>
+<td width="138">B3</td>
+<td width="448">Zodra een bericht is geselecteerd dienen de volgende gegevens opvraagbaar te zijn:<br>
+- Het transactietype met bijbehorende &lsquo;description&rsquo;<br>
+- De naamgeving van het berichttype<br>
+- De initiator<br>
+- De executor<br>
+- De datum waarop het bericht verzonden is</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="35">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Check de user-interface op de opvraagbaarheid van de genoemde informatievelden.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="51">&nbsp;</td>
+<td width="138">B4</td>
+<td width="448">Het dient mogelijk te zijn transacties in relatie tot elkaar te tonen op de wijze zoals vastgelegd in het onderliggende VISI-raamwerk en waar de gebruiker als person-in-role (initiator of executor) bij betrokken is.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="137">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Als er een transactie is waarvan de huidige transactie een subtransactie is dan moet dat gegeven getoond kunnen worden.<br>
+Als vanuit de actuele knoop in het raamwerk een subtransactie gestart kan worden dan moet dat gegeven getoond kunnen worden.<br>
+Als vanuit de actuele knoop &eacute;&eacute;n of meer subtransacties zijn gestart dan moet dat gegeven getoond kunnen worden.<br>
+Wordt getoond dat de huidige transactie (niet) kan worden voortgezet als er nog subtransacties zijn die nog niet zijn voltooid?</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">C</td>
+<td colspan="2" width="586">Het na afsluiten van het project kunnen reproduceren van gevoerde VISI-communicatie.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="68">&nbsp;</td>
+<td width="138">C1</td>
+<td width="448">Om een audit-trail te kunnen uitvoeren moeten berichten kunnen worden gereproduceerd in de volgorde waarin zij zijn verzonden of ontvangen, binnen de kaders van de eigen organisatie van een VISI-gebruiker en diens gebruikte systeem.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="35">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Biedt het VISI-product een mogelijkheid alle communicatie na afloop van het project te traceren en te analyseren?</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="34">&nbsp;</td>
+<td width="138">C2</td>
+<td width="448">Gekoppelde bestanden moeten kunnen worden ge&euml;xporteerd in het formaat waarin ze zijn meegezonden.</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="52">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">Vergelijk voor een aantal bestandstypen het oorspronkelijke bestand met het ge&euml;xporteerde bestand. Bijvoorbeeld d.m.v. een checksum (MD5 of SHA-1 hash).</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+<tr>
+<td width="19" height="17">&nbsp;</td>
+<td width="138">&nbsp;</td>
+<td width="448">&nbsp;</td>
+<td width="64">&nbsp;</td>
+<td width="24">&nbsp;</td>
+<td width="319">&nbsp;</td>
+<td width="18">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div><div class="ClearBoth"></div>

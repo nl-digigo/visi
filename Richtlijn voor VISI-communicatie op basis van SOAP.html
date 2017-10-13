@@ -1,0 +1,511 @@
+<div class="wikidoc">
+<div>
+<p>&nbsp;</p>
+</div>
+<h1>Inleiding</h1>
+<p>Dit document bevat de richtlijn voor implementatie van VISI communicatie op basis van het SOAP protocol. Het doel van de richtlijn is om handreikingen te geven voor de implementatie van VISI communicatie waardoor gewaarborgd wordt dat het betreffende informatiesysteem
+ in technische zin VISI-berichten met bijlagen kan uitwisselen met een ander informatiesysteem dat volgens de richtlijn is ingericht.</p>
+<p>&nbsp;</p>
+<p><strong>Wijzigingen ten opzichte van eerdere versie</strong></p>
+<p>De voorliggende richtlijn is een licht aangepaste versie (1.2) van de eerste versie (1.0). Wijzigingen ten opzichte van versie 1.1 zijn geel gemarkeerd. In&nbsp;versie 1.6 is&nbsp;de grootte van bijlagen 10Gb aangepast naar 10 GB.&nbsp;</p>
+<p>&nbsp;</p>
+<p>De maximale grootte van een VISI-bericht (inclusief attachments) is 10&nbsp;GB. Deze oplossing is gebaseerd op de MTOM-SOAP
+<a href="file:///C:/Local/My%20Documents/My%20Projects/TNO/VISI/trunk/VISI%201.4%20documentatie/VISI%20syst.1.4%20Bijlage%208%20Richtlijn%20VISI%20communicatie%20met%20SOAP%20CC-BY-NC-SA.doc#_ftn1">
+<sup><sup>[1]</sup></sup></a> implementatie van XOP (XML-binary Optimized Packaging) Zie ook:
+<a href="http://www.w3.org/TR/soap12-mtom/">http://www.w3.org/TR/soap12-mtom/</a>. Dit wordt voor verdere optimalisatie gecombineerd met &lsquo;chunking&rsquo;, een methode om bestanden in kleine stukken te versturen en vervolgens weer samen te voegen.<br>
+Tot versie 1.2 was de maximale&nbsp;berichtgrootte 24MB, tot versie 1.6 was de maximale berichtgrootte 120MB.</p>
+<p>De VISI Standaard dient af te dwingen dat de communicatie tussen SOAP Servers plaatsvindt via https en SSL, waardoor de inhoud van ontvangen berichten niet onderschept kan worden.<br>
+<br>
+Het gebruik van HTTPS (TLS 1.0 of hoger, met minimaal 128 bits encryptie) voor het ver&shy;sturen van VISI berichten en bijlagen is verplicht. Het is niet toegestaan om de &quot;parseMessage&quot; SOAP service aan te bieden over een onbeveiligd http kanaal.<br>
+<br>
+Verder dient alle communicatie (indien deze over internet verloopt) tussen een VISI gebruiker en een VISI applicatie gebruik te maken van HTTPS met dezelfde specificaties.<br>
+<br>
+Overige beveiligingsmaatregelen kunnen desgewenst op infrastructuur niveau worden getroffen.</p>
+<p>Verder kunnen SOAP Servers de techniek &quot;whitelist&quot; gebruiken, waardoor alleen geautori&shy;seerde SOAP server berichten naar een SOAP Server kunnen sturen .</p>
+<p>&nbsp;</p>
+<h1>Doel</h1>
+<p>Het doel van dit document is om een protocol vast te stellen waarmee we communicatie van VISI berichten tussen alle VISI ondersteunende software partijen kunnen beschrijven. Dit dient op een zodanige manier beschreven te zijn dat het protocol voor alle partijen
+ implementeerbaar is, geen ongewone eisen aan implementatie en/of hardware worden vereist en het strikt genoeg is om communicatie mogelijk te maken.</p>
+<p>&nbsp;</p>
+<p>De onderliggende eisen van dit protocol:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strikt en eenduidig genoeg om communicatie tussen alle softwarepartijen, welke implemen&shy;taties van dit protocol uitvoeren, mogelijk te maken.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; duidelijk en eenvoudig genoeg voor implementatie.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; geen eisen aan VISI compatibiliteit voor de nieuwe/extra software/servers.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mogelijkheid een kopie van alle bilaterale communicatie op 1 of meerdere servers te plaatsen.</p>
+<p>&nbsp;</p>
+<p>Het doel van de SOAP Central Server is het opslaan van alle berichten (m.u.v. berichten binnen 1 organisatie) die binnen een project plaatsvinden. Wat er vervolgens met deze berichten gedaan wordt, welke partijen toegang tot welke berichten hebben en hoe
+ de beveiliging en opslag van deze berichten is geregeld valt buiten dit protocol.&nbsp;</p>
+<p>&nbsp;</p>
+<h1>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Protocollen</h1>
+<p>&nbsp;</p>
+<p>De volgende protocollen worden gebruikt:</p>
+<p>Voor implementatie wordt het MTOM (SOAP Message Transmission Optimization Mechanism) protocol vereist. De laatste versie van MTOM op het moment van uitbrengen van deze notitie is:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.w3.org/TR/soap12-mtom/">
+http://www.w3.org/TR/soap12-mtom/</a></p>
+<p>Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit bericht bevat onder project&shy;informatie een simpel element &lsquo;SOAPProtocol&rsquo;. De huidige mogelijkheid is alleen &lsquo;MTOM&rsquo;, dit ziet er dus bijv. uit als onderdeel
+ van het raamwerk:&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;ProjectType id=&quot;Project_xyz&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;description&gt;Standaard project&lt;/description&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;complexElements&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ComplexElementTypeRef idref=&quot;AnderWillekeurigComplexElement&quot;/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/complexElements&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ProjectType&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;ComplexElementType id=&quot;AnderWillekeurigComplexElement&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;description&gt;Een ander willekeurig complex element&lt;/description&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;simpleElements&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SimpleElementTypeRef idref=&quot;SOAPProtocol&quot;/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/simpleElements&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ComplexElementType&gt;</p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp; </span>&lt;SimpleElementType id=&quot;SOAPProtocol&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SimpleElementType&gt;</p>
+<p>&nbsp;</p>
+<p>En voor het projectspecifieke bericht:</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;Project_xyz id=&quot;Project-000&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;anderWillekeurigComplexElement&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;AnderWillekeurigComplexElementRef idref=&quot;ProjectGegevens&quot;/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/anderWillekeurigComplexElement&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Project_xyz&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;AnderWillekeurigComplexElement id=&quot;ProjectGegevens&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAPProtocol&gt;MTOM&lt;/SOAPProtocol&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/AnderWillekeurigComplexElement&gt;</p>
+<p>&nbsp;</p>
+<h1>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Architectuur</h1>
+<p>&nbsp;</p>
+<p>De architectuur is simpel gehouden door slechts &eacute;&eacute;n scenario te ondersteunen. Voorheen waren er meerdere architecturen waarbij de communicatie optioneel ook via een centrale server of gecombi&shy;neerde server liep. Het scenario bevat onderlinge
+ communicatie tussen SOAP servers met een kopie van deze berichten naar &eacute;&eacute;n of meerdere centrale servers indien aanwezig.</p>
+<p>&nbsp;</p>
+<p>Het doel en de achtergrond van deze architectuur:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de architectuur moet onderlinge communicatie tussen servers in een project kunnen onder&shy;steunen zonder tussenkomst van andere servers,</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de architectuur moet opslag van alle berichten op &eacute;&eacute;n of meerdere servers binnen een VISI project kunnen ondersteunen,</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de gebruikte SOAP servers hoeven geen kennis van VISI te hebben,</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; communicatie moet beveiligd uitgevoerd kunnen worden,</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; berichten moeten eenduidig gecommuniceerd en opgeslagen kunnen worden,</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; attachments moeten meegestuurd kunnen worden,</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; de verzender moet te weten kunnen komen of een bericht goed is aangekomen,</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elke server moet in staat zijn zonder extra kennis meerdere projecten te kunnen ondersteunen.</p>
+<p>&nbsp;</p>
+<p><strong>Architectuur:</strong></p>
+<p>&nbsp;</p>
+<p>Figuur 1 Architectuur</p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731802" alt="Figuur 1 Architectuur" width="776" height="547"></p>
+<p><strong>Scenario</strong></p>
+<p>In dit geschetste scenario zijn de volgende objecten te vinden:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Het Informatie Systeem (<strong>IS</strong>), dit is de applicatie die VISI berichten verwerkt en genereert en daarnaast de user interface is naar de eindgebruiker .</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De eindgebruiker (<strong>P</strong> van persoon), dit is een persoon die voor een bepaalde organisatie een bepaalde rol vervuld.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De SOAP Server (<strong>SOAP Server</strong>), dit is de server welke de afhandeling van VISI berichten volgens het in dit document beschreven pad afhandelt.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Een SOAP Central Server (<strong>SOAP Central Server</strong>), dit is een SOAP server welke een kopie krijgt van al het berichtenverkeer. Deze server doet niets anders dan het opslaan van deze berichten
+ en het vermelden aan de verzendende SOAP server dat het bericht in goede orde ontvangen is. Er kunnen in een project 0 tot n (meerdere) SOAP Central Servers aanwezig zijn. Elke SOAP server is verplicht alle gecommuniceerde berichten ook naar alle aanwezige
+ SOAP Central Servers te sturen (exacte kopie van gecommuniceerd bericht).&nbsp;</p>
+<p><strong><br>
+</strong></p>
+<h1>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scenario berichtuitwisseling</h1>
+<p>De berichtuitwisseling (header etc., server address)&nbsp; is opgezet op basis van drie randvoorwaarden:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De SOAP Servers en de SOAP Central Server(s) zijn niet in staat VISI berichten te parsen (inhoudelijk te begrijpen).</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Het informatie systeem (IS) en de SOAP Server hebben geen (statische) kennis van het wel of niet aanwezig zijn van SOAP Central Servers, aanwezigheid van &eacute;&eacute;n of meerdere SOAP Central Servers
+ moet dus ondersteund kunnen worden zonder iets aan het informatiesysteem of de SOAP server te wijzigen.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alle informatie over de aanwezige configuratie, URL adressen van personen in een bepaalde rol e.d. zijn gevat in VISI berichten volgens het raamwerk voor het uit te voeren project (natuurlijk mag deze
+ randvoorwaarde de software niet van een specifiek VISI raamwerk afhankelijk maken).</p>
+<p>Om aan bovenstaande randvoorwaarden te kunnen voldoen zullen we een nieuw concept binnen VISI lanceren.</p>
+<p>&nbsp;</p>
+<p><strong>Ter info gebruikt nieuw VISI concept:</strong></p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enkele SimpleElementType objecten welk gedefinieerd kunnen worden in het raamwerk zul&shy;len op basis van hun naamgeving (attribuut:
+<em>id</em>) over alle raamwerken heen een specifiek gedrag/invulling toegekend krijgen.&nbsp;</p>
+<p>We zullen aan de volgende SimpleElementTypes raamwerk-overschrijdend gedrag/invulling toekennen:</p>
+<p>&nbsp;</p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="287">
+<p><strong>SimpleElementType</strong></p>
+</td>
+<td valign="top" width="281">
+<p><strong>Behavior</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="287">
+<p>SOAPServerURL</p>
+</td>
+<td valign="top" width="281">
+<p>Bevat het URL van de SOAP server behorende bij deze Persoon, Rol of Organisatie</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="287">
+<p>SOAPCentralServerURL</p>
+</td>
+<td valign="top" width="281">
+<p>Bevat het URL van de SOAP central servers behorende bij dit project</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="287">
+<p>SOAPProtocol</p>
+</td>
+<td valign="top" width="281">
+<p>Bevat het gebruikte SOAP protocol</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>3.1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Berichtuitwisseling vaste elementen op raamwerkniveau</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>Binnen deze notitie zullen we het volgende gebruik voorstellen (let wel: dit valt buiten het nieuwe VISI concept):</p>
+<p>&nbsp;</p>
+<p><strong>Op raamwerkniveau: </strong></p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elk raamwerk zal het volgende stukje XML bevatten om de SOAPServerURL aan een organisatie toe te kunnen wijzen:</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;OrganisationType id=&quot;Organisatie&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;description&gt;Standaard organisatie&lt;/description&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;complexElements&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ComplexElementTypeRef idref=&quot;WillekeurigComplexElement&quot;/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/complexElements&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/OrganisationType&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;ComplexElementType id=&quot;WillekeurigComplexElement&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;description&gt;Een willekeurig complex element&lt;/description&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;simpleElements&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SimpleElementTypeRef idref=&quot;SOAPServerURL&quot;/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/simpleElements&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; <span lang="EN-GB">&lt;/</span><span lang="EN-GB">ComplexElementType</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="EN-GB">&lt;</span><span lang="EN-GB">SimpleElementType</span><span lang="EN-GB"> id</span><span lang="EN-GB">=&quot;</span><span lang="EN-GB">SOAPServerURL</span><span lang="EN-GB">&quot;&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<span lang="EN-GB">&hellip;</span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SimpleElementType&gt;</p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p>&nbsp;</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elk raamwerk zal het volgende stukje XML bevatten om de SOAPCentralServerURL aan een project toe te kunnen wijzen:</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;ProjectType id=&quot;Project_xyz&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;description&gt;Standaard project&lt;/description&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;complexElements&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ComplexElementTypeRef idref=&quot;AnderWillekeurigComplexElement&quot;/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/complexElements&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ProjectType&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;ComplexElementType id=&quot;AnderWillekeurigComplexElement&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;description&gt;Een ander willekeurig complex element&lt;/description&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;simpleElements&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SimpleElementTypeRef idref=&quot;SOAPCentralServerURL&quot;/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/simpleElements&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ComplexElementType&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;SimpleElementType id=&quot;SOAPCentralServerURL&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SimpleElementType&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p><span lang="EN-GB">&nbsp;</span></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Alternatieven:</strong></p>
+<p>De gemaakte keuze lijkt de meest elegante, een alternatief zou kunnen zijn het veld SOAPServerURL aan PersonInRole toe te kennen bij de promotiestap. Deze keuze zou de VISI systematiek echter afhankelijk maken van SOAP en de conceptuele keuze om deze communicatie
+ voor te schrijven.</p>
+<p>&nbsp;</p>
+<p><strong>3.2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Berichtuitwisseling vaste elementen op berichtniveau</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Op berichtniveau:</strong> we gaan er vanuit dat er bij een project een projectspecifiek bericht aanwezig is zoals in
+<strong>9.</strong> is beschreven.</p>
+<p>&nbsp;</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In dit projectspecifieke bericht is voor elke organisatie gedefinieerd wat zijn SOAPServerURL is:</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;Organisatie id=&quot;Kraaijeveld&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;name&gt;Kraaijeveld's Aannemingsbedrijf BV&lt;/name&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;willekeurigComplexElement&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;WillekeurigComplexElementRef idref=&quot;KraaijeveldGegevens&quot;/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/willekeurigComplexElement&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Organisatie&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;WillekeurigComplexElement id=&quot;KraaijeveldGegevens&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAPServerURL&gt;http://192.168.0.102/visi.wsdl-&lt;/SOAPServerURL&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/WillekeurigComplexElement&gt;</p>
+<p>&nbsp;</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bij de projectdefinitie in het projectspecifieke bericht zal de SOAPCentralServerURL te vinden zijn:</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;Project_xyz id=&quot;Project-000&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;name&gt;VISI-Showcase&lt;/name&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;anderWillekeurigComplexElement&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;AnderWillekeurigComplexElementRef idref=&quot;ProjectGegevens&quot;/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/anderWillekeurigComplexElement&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Project_xyz&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;AnderWillekeurigComplexElement id=&quot;ProjectGegevens&quot;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAPCentralServerURL&gt;http://192.168.0.1/visi.wsdl&lt;/SOAPCentralServerURL&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/AnderWillekeurigComplexElement&gt;</p>
+<p>&nbsp;</p>
+<p><strong>3.2.1.&nbsp;&nbsp; Gevolgen</strong></p>
+<p>De gevolgen van deze aanpak is dat het informatie systeem (IS) in staat is bij elk bericht binnen een transactie te achterhalen welke URL behoort tot de afzender en welke URL behoort tot de ontvanger. Daarnaast kan in het geval van aanwezigheid van Central
+ Servers direct gezien worden welke URL behoort tot de centrale server. Deze gegevens (URL afzender, URL ontvanger en optioneel &eacute;&eacute;n of meerdere URL&rsquo;s centrale server(s)) zullen gecommuniceerd moeten worden met de SOAP server behorende bij
+ dit informatiesysteem, natuurlijk samen met het VISI bericht zelf. Deze communicatie tussen het informatiesysteem en bijbehorende SOAP server valt buiten deze notitie en is aan de ontwikkelaar van het informatiesysteem en de bijbehorende SOAP server zelf.</p>
+<p><strong>3.3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Berichtuitwisseling initialisatie</strong>&nbsp;</p>
+<p>Om een project te beginnen zullen alle partijen moeten weten met wie ze communiceren, welk raam&shy;werk gebruikt wordt en alle andere projectspecifieke informatie beschikbaar moeten hebben. Om deze informatie altijd up-to-date te houden en te voorkomen
+ dat ongeautoriseerde partijen deze informatie kunnen aanpassen is een projectspecifiek bericht gedefinieerd. Dit projectspecifieke bericht bevindt zich op een door de projectleider aangegeven locatie (bestaande infrastructuren verzorgen vervolgens beveiliging
+ en beschikbaarheid). Meer informatie over het projectspecifieke bericht is te vinden in hoofdstuk 5 en 9.</p>
+<p>De initialisatie van elk informatiesysteem begint met het invoeren van het adres van het projectspecifieke bericht (dus bij ieder afzonderlijk informatiesysteem). Dit projectspecifieke bericht bevat de link naar het meest recente raamwerk (zoals ieder bericht
+ naar een raamwerk verwijst) en bevat alle relevante projectinformatie waaronder de rollen, personen en organisaties die participeren (incl. URL adressen).</p>
+<p><strong>3.4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Berichtuitwisseling scenario</strong></p>
+<p>Deze beschrijving is geschikt voor alle type berichten binnen transacties, zowel een eerste bericht binnen een transactie als reacties op ontvangen berichten binnen een transactie. Belangrijk is dat berichten binnen een organisatie niet via dit pad hoeven
+ te lopen, dit betekent ook dat deze berichten niet op de centrale server komen te staan.</p>
+<p>Bij de voorbeelden:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL SOAP server versturende partij: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; http://192.168.0.102</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL SOAP server ontvangende partij:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; http://192.168.0.138</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL SOAP central server:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &lt;empty&gt;</p>
+<p>&nbsp;</p>
+<p>Figuur 2</p>
+<p>&nbsp;<img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731804" alt="Figuur 2" width="569" height="482"></p>
+<p>De volgorde van berichtuitwisseling:&nbsp;</p>
+<p>&nbsp;</p>
+<p>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Het VISI bericht wordt opgemaakt door het versturende IS op basis van het ontvangen bericht (in geval van een nieuwe transactie wordt de informatie uit het projectspecifieke bericht gehaald).<br>
+</p>
+<p>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De URL adressen van het versturende en het ontvangende IS worden door het versturende IS uit het opgemaakte bericht gehaald.<br>
+</p>
+<p>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Het URL adres van de SOAP central server wordt gezocht maar niet gevonden in het project&lt;ins datetime=&quot;2011-08-02T14:00&quot; cite=&quot;mailto:Peter%20Willems&quot;&gt;&shy;&lt;/ins&gt;specifieke bericht (anders bevonden
+ we ons in scenario II).<br>
+</p>
+<p>4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Het opgestelde VISI bericht &#43; URL adres van versturende SOAP server &#43; URL adres van ontvangende SOAP server &#43; URL adres van SOAP central server (deze is in dit scenario leeg) worden naar de bijbehorende server
+ gecommuniceerd (wijze van communicatie wordt aan de softwarepartijen zelf overgelaten).</p>
+<p>&nbsp;</p>
+<p>5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De SOAP server van de versturende partij bouwt een SOAP bericht als volgt op:<br>
+</p>
+<p>&lt;SOAP-ENV:Envelope ...&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAP-ENV:Header&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAPServerURL ...&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;sender&gt;http://192.168.0.102&lt;/sender&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;receiver&gt;http://192.168.0.138&lt;/reciever&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAPServerURL&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAPCentralServerURL ...&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;server/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAPCentralServerURL&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span lang="EN-GB">&lt;</span><span lang="EN-GB">UniqueID</span><span lang="EN-GB"> ...</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span lang="EN-GB">&lt;</span><span lang="EN-GB">ID</span><span lang="EN-GB">&gt;</span>UniqueIDonMessageInitiatingSOAPServer_XYZ<span lang="EN-GB">&lt;/</span><span lang="EN-GB">ID</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<span lang="EN-GB">&lt;/</span><span lang="EN-GB">UniqueID</span><span lang="EN-GB">&gt;</span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span lang="EN-GB">&lt;</span><span lang="EN-GB">Attachments</span><span lang="EN-GB"> ...</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span lang="EN-GB">&lt;</span><span lang="EN-GB">count</span><span lang="EN-GB">&gt;</span>2<span lang="EN-GB">&lt;/</span><span lang="EN-GB">count</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<span lang="EN-GB">&lt;/</span><span lang="EN-GB">Attachments</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp; </span>&lt;/SOAP-ENV:Header&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAP-ENV:Body&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;parseMessage &hellip;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Data &hellip;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ //&nbsp;&nbsp; Attachment I</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Data&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Data &hellip;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ //&nbsp;&nbsp; Attachment II</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Data&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;visiXML_MessageSchema &hellip;&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ //&nbsp;&nbsp; VISI Bericht</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/visiXML_MessageSchema&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/parseMessage&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAP-ENV:Body&gt;</p>
+<p>&lt;/SOAP-ENV:Envelope&gt;</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>note</strong>: de id van elke attachment is gelijk aan de id die in het VISI bericht</p>
+<p>wordt gebruikt om de metadata van een attachment te beschrijven. (&lt;Data id=&rdquo;abc&rdquo;&gt;)<br>
+</p>
+<p>6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De SOAP server van de versturende partij verstuurt dit bericht naar de SOAP Central Server of indien dit niet mogelijk is (bij dit scenario niet mogelijk) naar de SOAP server van de ontvangende partij.<br>
+</p>
+<p>7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De SOAP server van de ontvangende partij stuurt een standaard SOAP exception error bericht naar de versturende partij.</p>
+<ol>
+<li>De SOAP server van de ontvangende partij stuurt het VISI message deel van het bericht door naar het IS van de ontvangende partij (wijze van communicatie wordt aan de softwarepartijen zelf overgelaten).<br>
+</li></ol>
+<p>8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Het IS van de ontvangende partij interpreteert het VISI bericht en indien akkoord verstuurt hij dit bericht &#43; URL adres van versturende SOAP server &#43; URL adres van ontvan&shy;gende SOAP server &#43; URL adres van SOAP
+ central server (deze is in dit scenario leeg) naar zijn eigen SOAP server (dus van de ontvangende partij). De wijze van communicatie wordt aan de softwarepartijen zelf overgelaten.</p>
+<p>9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De SOAP server van de ontvangende partij bouwt bij succes een SOAP reactiebericht op als volgt:<br>
+</p>
+<p>&lt;SOAP-ENV:Envelope ...&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAP-ENV:Header&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAPServerURL ...&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;sender&gt;http://192.168.0.102&lt;/sender&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;reciever&gt;http://192.168.0.138&lt;/reciever&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAPServerURL&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAPCentralServerURL ...&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;server/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAPCentralServerURL&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span lang="EN-GB">&lt;</span><span lang="EN-GB">UniqueID</span><span lang="EN-GB"> ...</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span lang="EN-GB">&lt;</span><span lang="EN-GB">ID</span><span lang="EN-GB">&gt;</span>UniqueIDonMessageInitiatingSOAPServer_XYZ<span lang="EN-GB">&lt;/</span><span lang="EN-GB">ID</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+&lt;/UniqueID&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAP-ENV:Header&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAP-ENV:Body&gt;</p>
+<p>&nbsp;&nbsp;&nbsp; &lt;ERRORS&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ERROR CODE=&rdquo;0&rdquo;&gt;&lt;/ERROR&gt;</p>
+<p>&nbsp;<span lang="EN-GB">&lt;</span><span lang="EN-GB">ERRORS</span><span lang="EN-GB">&gt;</span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAP-ENV:Body&gt;</p>
+<p>&lt;/SOAP-ENV:Envelope&gt;</p>
+<p>&nbsp;</p>
+<p>bij een enkelvoudige fout:<br>
+</p>
+<p>&lt;SOAP-ENV:Envelope ...&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAP-ENV:Header&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAPServerURL ...&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;sender&gt;http://192.168.0.102&lt;/sender&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;receiver&gt;http://192.168.0.138&lt;/reciever&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAPServerURL&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAPCentralServerURL ...&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;server/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAPCentralServerURL&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span lang="EN-GB">&lt;</span><span lang="EN-GB">UniqueID</span><span lang="EN-GB"> ...</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span lang="EN-GB">&lt;</span><span lang="EN-GB">ID</span><span lang="EN-GB">&gt;</span>UniqueIDonMessageInitiatingSOAPServer_XYZ<span lang="EN-GB">&lt;/</span><span lang="EN-GB">ID</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<span lang="EN-GB">&lt;/</span><span lang="EN-GB">UniqueID</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp; </span>&lt;/SOAP-ENV:Header&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAP-ENV:Body&gt;</p>
+<p>&nbsp;&nbsp;&nbsp; &lt;ERRORS&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ERROR CODE=&rdquo;1&rdquo;&gt; Er is een fout opgetreden bij &hellip;&lt;/ERROR&gt;</p>
+<p>&nbsp;<span lang="EN-GB">&lt;</span><span lang="EN-GB">ERRORS</span><span lang="EN-GB">&gt;</span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAP-ENV:Body&gt;</p>
+<p>&lt;/SOAP-ENV:Envelope&gt;<br>
+</p>
+<p>Bij meerdere fouten (bijvoorbeeld bij validatie van de xsd):<br>
+</p>
+<p><span lang="EN-GB">&lt;</span><span lang="EN-GB">SOAP-ENV:Envelope</span><span lang="EN-GB"> ...</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp; </span>&lt;SOAP-ENV:Header&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAPServerURL ...&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;sender&gt;http://192.168.0.102&lt;/sender&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;receiver&gt;http://192.168.0.138&lt;/reciever&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAPServerURL&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAPCentralServerURL ...&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;server/&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAPCentralServerURL&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span lang="EN-GB">&lt;</span><span lang="EN-GB">UniqueID</span><span lang="EN-GB"> ...</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span lang="EN-GB">&lt;</span><span lang="EN-GB">ID</span><span lang="EN-GB">&gt;</span>UniqueIDonMessageInitiatingSOAPServer_XYZ<span lang="EN-GB">&lt;/</span><span lang="EN-GB">ID</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<span lang="EN-GB">&lt;/</span><span lang="EN-GB">UniqueID</span><span lang="EN-GB">&gt;</span></p>
+<p><span lang="EN-GB">&nbsp;&nbsp;&nbsp;&nbsp; </span>&lt;/SOAP-ENV:Header&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;SOAP-ENV:Body&gt;</p>
+<p>&nbsp;&nbsp;&nbsp; &lt;ERRORS&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ERROR CODE=&rdquo;1&rdquo;&gt;Waarden van simpel element1 is niet volgens definitie&lt;/ERROR&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ERROR CODE=&rdquo;1&rdquo;&gt;Waarden van simpel element2 is niet volgens definitie&lt;/ERROR&gt;</p>
+<p>&nbsp;<span lang="EN-GB">&lt;</span><span lang="EN-GB">ERRORS</span><span lang="EN-GB">&gt;</span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/SOAP-ENV:Body&gt;</p>
+<p>&lt;/SOAP-ENV:Envelope&gt;</p>
+<p>&nbsp;</p>
+<p>In geval van geen fout is de code 0, bij een onbekende fout &nbsp;is de code 1, deze foutmeldingen zullen moeten worden opgelost door de programmeurs. Alle foutmeldingen met een hogere code betreffen fouten die door de software begrepen kunnen worden.<br>
+</p>
+<p>10&nbsp;&nbsp;&nbsp; De SOAP server van de ontvangende partij verstuurt dit reactiebericht naar de SOAP server van de versturende partij en naar elke SOAP central server.</p>
+<p>11&nbsp;&nbsp;&nbsp; Reactiebericht terug bij af, controleer of de informatie overeenkomt met het verstuurde bericht en indien akkoord notificeer het IS van de ontvangende partij dat het bericht volgens afspraak is verstuurd en ontvangen.</p>
+<p>&nbsp;</p>
+<p>Opmerking:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bovengenoemde proces blijft hanteerbaar indien beide partijen dezelfde IS gebruiken. In dat geval is het URL adres van de ontvangende en de versturende SOAP server identiek.<strong>&nbsp;</strong></p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tijdens het uitkomen van dit protocol zijn er geen standaard fout codes hoger dan 1 gedefinieerd. Zodra een dergelijke fout code is vastgelegd wordt duidelijk aangegeven wat de fout code is, een omschrijving
+ van de fout en een eenduidige omschrijving van hoe de software zou moeten reageren.<strong>&nbsp;</strong></p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Indien er niet (&lsquo;op tijd&rsquo;) gereageerd wordt op een bericht wordt niet nogmaals hetzelfde bericht verstuurd. We blijven wachten op het antwoord of vinden een oplossing buiten VISI om.<strong>&nbsp;</strong></p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In stap 7 en stap 10 is een bericht altijd eerst naar de andere partij gestuurd. Pas als via het standaard SOAP protocol een goede reactie is ontvangen (7a en 10a) wordt een kopie naar de SOAP Central
+ Server(s) gestuurd.<strong>&nbsp;</strong></p>
+<p><strong><br>
+</strong></p>
+<h1>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ontsluiten Raamwerk en update scenario<strong>&nbsp;</strong></h1>
+<p>Raamwerken zijn voor een informatiesysteem via een URI bereikbaar. Elk VISI compatible bericht binnen een specifiek project verwijst naar dit raamwerk (dus ook het projectspecifieke bericht).&nbsp;</p>
+<p>Het binnen de VISI gebruikte XML/XSD concept dwingt af dat ieder bericht een referentie naar zijn schema bevat via een URI. De VISI systematiek schrijft vervolgens voor dat op deze URI (welke altijd de extensie XSD bevat) echter met extensie xml het raamwerk
+ is opgeslagen.</p>
+<p>Verder schrijft VISI voor eens gebruikte raamwerken voor altijd te bevriezen. Bij wijzigingen in het raamwerk zal een nieuwe URI voor dit nieuwe raamwerk moet worden bedacht. De applicaties worden automatisch op de hoogte gesteld door het projectspecifieke
+ bericht te laten verwijzen naar de XSD behorende bij dit nieuwe raamwerk.</p>
+<p>Hiermee garandeert gebruik van VISI dat alle raamwerken en alle berichten eenduidig blijven in de tijd ondanks aanpassingen aan de raamwerken, rollen, personen of organisaties of zelfs de systematiek.</p>
+<p>Bij het aanpassen van een raamwerk zijn de volgende stappen te nemen:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pas het raamwerk aan, bijvoorbeeld met behulp van een VISI raamwerkeditor.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Distribueer de voorgestelde wijzigingen met behulp van het metaraamwerk en wacht op instemming van alle betrokken VISI partners in het project.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Promote het raamwerk en plaats zowel het raamwerk als het gepromote raamwerk (met dezelfde naam, maar andere extensie) in de gewenste directory.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pas het projectspecifieke bericht aan En distribueer dit over alle betrokken VISI partners en stel de ingangsdatum en tijd vast.</p>
+<p>Op de afgesproken tijd wordt het gewijzigde raamwerk en het bijbehorende projectspecifieke bericht actief voor nieuwe transacties.</p>
+<p>De applicaties zullen bestaande transacties en nieuwe &lsquo;subtransacties&rsquo; via het oude raamwerk laten lopen. Nieuwe transacties zullen via het nieuwe raamwerk opgestart worden.</p>
+<p><strong><br>
+</strong></p>
+<h1>5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ontsluiten projectspecifiek bericht scenario</h1>
+<p>De exacte inhoud van een projectspecifiek bericht is elders beschreven. Hier is beschreven wat er met updates moet gebeuren.</p>
+<p>Er kunnen verschillende redenen zijn om een projectspecifiek bericht te updaten, dit kan zijn omdat personen, organisaties en/of rollen zijn aangepast, meer informatie bekend is omtrent personen, organisatie, rollen of het project dan wel omdat het raamwerk
+ is aangepast.</p>
+<p>In principe is de informatie van een projectspecifiek bericht vluchtig, het kan gezien worden als een &lsquo;vergaarbak&rsquo; van belangrijke projectspecifieke informatie welke altijd up-to-date beschikbaar is voor de verschillende informatie systemen die
+ een rol spelen in dit project. De informatie is in tegenstelling tot raamwerken dan ook dynamisch waarbij hier de locatie (URI) statisch is, i.e. elk informatiesysteem weet waar hij de laatste meest up-to-date informatie van het project kan vinden (deze URI
+ wordt gebruikt om een project mee op te starten, zie ook <strong>3.3.</strong>). Om de verschillende versies van het projectspecifieke bericht te kunnen achterhalen schrijft VISI voor als volgt een update uit te voeren:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Maak een kopie van het bestaande projectspecifieke bericht, dit bericht krijgt dezelfde naam met een volgnummer direct achter de naam.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Verzorg de update van het projectspecifieke bericht.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Distribueer het projectspecifieke bericht over de VISI projectpartners en stel de ingangsdatum plus tijd vast.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Op de afgesproken datum en tijd wordt het nieuwe projectspecifieke bericht geactiveerd.</p>
+<p><strong><br>
+</strong></p>
+<h1>6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attachments, Ref&rsquo;s en Id&rsquo;s</h1>
+<p>De attachments en elementen in de header file worden zoals in 3. beschreven verwerkt. Gebruik van het MTOM concept verzorgt de afhandeling van attachments en het VISI bericht zelf. Tevens zal bij encryptie van de body van een SOAP bericht automatisch deze
+ encryptie op de attachments aanwezig zijn. Voor de laatste info over MTOM zie ook:
+<span lang="EN"><a href="http://www.w3.org/TR/soap12-mtom/">http://www.w3.org/TR/soap12-mtom/</a></span></p>
+<p><strong><br>
+</strong></p>
+<h1>7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Encryptie</h1>
+<p>Het gekozen protocol MTOM heeft in de Microsoft Web Services Enhancements (WSE) 3.0 een integratie van MTOM en security voor de implementeur. Mijn voorstel zou zijn deze door Microsoft gekozen bij MTOM passende security aan te houden en op basis van ervaringen
+ van eerste implementaties uitspraken voor deze VISI notitie vast te stellen.</p>
+<p><strong>NB:</strong></p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alleen geldig indien deze encryptie ondersteund wordt door alle systemen.</p>
+<p><strong><br>
+</strong></p>
+<h1>8.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SOAP function calls<strong>&nbsp;</strong></h1>
+<p>De gekozen oplossing vereist slechts twee function calls.</p>
+<p>functioncall <strong>parseMessage</strong></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1 inputvariabele van het type string, bevat een XML file, zie ook 3.4)</em></p>
+<p>functioncall <strong>parseMessageConfirmation</strong></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2 inputvariabelen van het type string, t.w.
+</em></p>
+<p><em>UniqueIDonMessageInitiatingSOAPServer_XYZ en de gevonden errors, geeft </em>
+</p>
+<p><em>wel een XML file terug, zie ook 3.4)</em></p>
+<p>De inhoud is in beide gevallen gelijk, namelijk het VISI bericht voorafgegaan aan de attachments. De vorm van het SOAP bericht behoort te voldoen aan het protocol welke gekozen is in het project&shy;specifieke bericht.</p>
+<p>&lsquo;Meta&rsquo; informatie over de verschillende URL adressen en het unieke ID voor de versturende SOAP server worden in de header van het SOAP bericht opgenomen.</p>
+<p>De wijze van implementatie en gebruik is beschreven in paragraaf 3.4.<strong>&nbsp;</strong></p>
+<p><strong><br>
+</strong></p>
+<h1>9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Project specifiek bericht&nbsp;</h1>
+<p>De inhoud projectspecifiek bericht is reeds in een eerder document beschreven. De wijze van handelen bij updates van een projectspecifiek bericht is te vinden in hoofdstuk 5.&nbsp;</p>
+<p>&lt; einde Bijlage 8 &gt;</p>
+<div><br>
+<hr size="1">
+<div>
+<p><a href="file:///C:/Local/My%20Documents/My%20Projects/TNO/VISI/trunk/VISI%201.4%20documentatie/VISI%20syst.1.4%20Bijlage%208%20Richtlijn%20VISI%20communicatie%20met%20SOAP%20CC-BY-NC-SA.doc#_ftnref1"><sup><sup>[1]</sup></sup></a> MTOM staat voor &lsquo;Message
+ Transmission Optimization Mechanism&rsquo;. Dit is een W3C-standaardmethode om op effici&euml;nte wijze binaire data naar en van webservices te versturen. Het maakt gebruik van XML-binary Optimized Packaging (XOP) om binaire data over te brengen en is bedoeld
+ om zowel MIME- als DIME-bijlagen te vervangen (MIME staat voor &lsquo;Multipurpose Internet Mail Extensions&rsquo;, een internetstandaard voor e-mail die de structuur en codering van e-mailberichten vastlegt. DIME staat voor &lsquo;Direct Internet Message
+ Encapsulation).</p>
+<p>Binaire bestanden worden gewoonlijk gezien als een opeenvolging van bytes. Binaire bestanden bevatten typisch bytes die niet als tekstkarakters ge&iuml;nterpreteerd moeten worden, maar die iets anders moeten voorstellen. In een SOAP-bericht wordt zo'n zogenaamde
+ &lsquo;array of bytes&rsquo; echter vaak gecodeerd als tekstdata. MTOM maakt het mogelijk om effici&euml;nter de binary data van grote bestanden in a SOAP-request (aanvraag) of response (reactie) te plaatsen.</p>
+<p>Bron: <a href="http://nl.wikipedia.org/wiki/Message_Transmission_Optimization_Mechanism">
+http://nl.wikipedia.org/wiki/Message_Transmission_Optimization_Mechanism</a>.</p>
+</div>
+</div>
+</div><div class="ClearBoth"></div>

@@ -1,0 +1,105 @@
+<div class="wikidoc">
+<h3>1. Inleiding</h3>
+<p><span>Vanuit het VISI Technisch Comit&eacute; is in 2010/2011 namens de VISI Gebruikersgroep een voorstel ingediend om - nadat een aanpassing van het raamwerk heeft plaatsgevonden - de traceerbaarheid van berichten te kunnen waarborgen. De motivatie is als
+ volgt verwoord:</span></p>
+<p><em style="font-size:10pt">Bij (langlopende) projecten is het wenselijk om gedurende het project het raamwerk aan te kunnen passen. Dit kan bijvoorbeeld bestaan uit:</em></p>
+<p><em>a. </em><em>het toevoegen van transacties, maar ook </em></p>
+<p><em>b. </em><em>het wijzigen van transacties, of </em></p>
+<p><em>c. </em><em>het verwijderen van transacties.</em></p>
+<p><em>&nbsp;</em></p>
+<p><span>In aanvulling is vanuit het VISI Technisch Comit&eacute; in mei 2013 namens de VISI Gebruikersgroep een voorstel ingediend voor het geautomatiseerd verspreiden van projectgegevens (raamwerk en projectspecifiek bericht).</span></p>
+<p><span>In deze notitie wordt de technische oplossing (meta-raamwerk) voor beide functionele vragen beschreven.</span></p>
+<h3>2. Meta-raamwerk</h3>
+<p>Het VISI-metaraamwerk is een uitwerking voor het gebruik van VISI zelf voor het managen van VISI communicatie in een bouwproject.</p>
+<h3>2.1. Algemeen</h3>
+<p><span>Het meta-raamwerk is een uitwerking voor het gebruik van de VISI Standaard voor het managen van communicatie over raamwerk en projectspecifiek bericht.</span></p>
+<p><span>Het meta-raamwerk bevat transacties voor het distribueren van raamwerken en projectspecifieke berichten. De eerste vraag die dan uiteraard opdoemt is: hoe wordt dat meta-raamwerk gedistribueerd? In ieder geval niet met een meta-meta-raamwerk, want
+ dat verplaatst het probleem alleen maar. De oplossing is dat het meta-raamwerk standaard beschikbaar moet zijn in de gecertificeerde VISI-software. In dit geval is distributie van het meta-raamwerk niet nodig. Logisch gevolg is dat het meta-raamwerk niet gewijzigd
+ kan worden voor een bepaalde versie van de VISI Standaard. Gezien de aard van het raamwerk is dat echter geen probleem. Als een wijziging noodzakelijk is zal dat te maken hebben met een wijziging in de VISI Standaard zelf en hebben we het dus over een nieuwe
+ versie van de Standaard.</span></p>
+<p><span>Een meta-projectspecifiek bericht bevat de gegevens van de betrokken partijen/organisaties (o.a. de SOAP Servers).</span></p>
+<h3>2.2. Rollen</h3>
+<p><span>Binnen een meta-raamwerk is er sprake van twee rollen: </span></p>
+<p><strong><span>VISI-communicatiemanager</span></strong><span><br>
+met als verantwoordelijkheid een aanpassing te autoriseren. </span></p>
+<p><strong><span>Wijzigingsinitiator</span></strong><span><br>
+voor het initi&euml;ren van een wijziging.</span></p>
+<p><span>Omdat het hier om een meta-raamwerk gaat en niet van tevoren bekend is welke positie de betreffende partij/organisatie in het specifieke VISI-project heeft kunnen beide rollen door alle partijen/organisaties worden ingevuld.</span></p>
+<h3>2.3. Transacties</h3>
+<p><span>Het meta-raamwerk bevat twee transacties.</span></p>
+<h3>2.3.1. <span>Verspreiden van een initieel raamwerk en projectspecifiek bericht</span></h3>
+<p><span><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731867" alt=""></span></p>
+<h3>2.3.2. Verspreiden van een gewijzigd&nbsp;raamwerk en/of projectspecifiek bericht</h3>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731866" alt=""></p>
+<p>Een transactie om een nieuw of een gewijzigd raamwerk of projectspecifiek bericht aan de VISI-communicatie toe te voegen.</p>
+<p>1. Bericht (i2e): <em>Voorstel start van een nieuw of gewijzigd raamwerk of projectspecifiek bericht</em><br>
+Dit bericht kan worden verzonden aan alle partners voor wie dit raamwerk of projectspecifiek bericht van belang is.
+<br>
+Als appendix wordt het nieuwe of gewijzigde raamwerk of projectspecifiek bericht toegevoegd met eventueel andere documenten die voor de beoordeling van het raamwerk of projectspecifiek bericht van belang kunnen zijn.</p>
+<p>2. Bericht (e2i): <em>Akkoord met voorstel van een nieuw of gewijzigd raamwerk of projectspecifiek bericht<br>
+</em>Met dit bericht kan de ontvanger van bericht 1 het voorstel accepteren.</p>
+<p>3. Bericht (e2i): <strong><em>Niet</em></strong><em> akkoord met voorstel van een nieuw of gewijzigd raamwerk of projectspecifiek bericht<br>
+</em>Met dit bericht kan de ontvanger van bericht 1 het voorstel afwijzen. Eventueel kan een nadere toelichting voor de afwijzing als appendix worden toegevoegd. Omdat een voorstel unaniem moet worden geaccepteerd weet de betreffende partner op dit moment al
+ dat het voorstel het niet gehaald heeft en kan hiermee de transactie als be&euml;indigd zien.</p>
+<p>4. Bericht (i2e): <em>Voorstel</em> <em>start van een nieuw of gewijzigd raamwerk niet geaccepteerd</em><br>
+Indien het voorstel <strong>niet</strong> unaniem is geaccepteerd kan met dit bericht deze uitkomst aan de partners die wel akkoord waren worden gedistribueerd, eventueel voorzien van een nadere toelichting als appendix.</p>
+<p>5. Bericht (i2e): <em>Voorstel ingangsdatum van een geaccepteerd nieuw of gewijzigd raamwerk of projectspecifiek bericht</em><br>
+Indien het voorstel unaniem is geaccepteerd kan met dit bericht de ingangsdatum worden bepaald. Het bericht informeert dus impliciet dat het voorstel unaniem is geaccepteerd. Bij een gewijzigd raamwerk bepaalt de ingangsdatum het moment dat nieuwe transacties
+ overgaan op het gewijzigde raamwerk. Al lopende transacties dienen volgens het oorspronkelijke raamwerk te worden afgehandeld.<br>
+De ingangsdatum wordt in een niet wijzigbaar simple-typed datum/tijd-veld meegestuurd.</p>
+<p>6. Bericht (e2i): <em>Akkoord met voorstel ingangsdatum van een nieuw of gewijzigd raamwerk of projectspecifiek bericht<br>
+</em>Met dit bericht kan de ontvanger van bericht 5 het voorstel accepteren.</p>
+<p>7. Bericht (e2i): <strong><em>Niet</em></strong><em> akkoord met voorstel ingangsdatum van een nieuw of gewijzigd raamwerk of projectspecifiek bericht<br>
+</em>Met dit bericht kan de ontvanger van bericht 5 het voorstel afwijzen. Eventueel kan een toelichting op dat besluit worden meegestuurd.<br>
+Omdat het voorstel voor een nieuw of gewijzigd raamwerk echter al unaniem was geaccepteerd wordt een lus doorlopen met nieuwe voorstellen voor ingangsdata totdat iedereen dat geaccepteerd heeft.</p>
+<p>8. Bericht (i2e): <em>Bevestiging ingangsdatum van een geaccepteerd nieuw of gewijzigd raamwerk of projectspecifiek bericht</em><br>
+Indien het ingangsdatum-voorstel unaniem is geaccepteerd kan met dit bericht de ingangsdatum worden bevestigd. In het geval van een gewijzigd raamwerk zal de software transacties volgens het voorgaande raamwerk na de bevestigde ingangsdatum niet meer toestaan.</p>
+<h3>2.4. Meta-raamwerk in XML</h3>
+<p><span>Het meta-raamwerk is als volgt gedefinieerd in XML.</span></p>
+<p><a href="https://visi.codeplex.com/SourceControl/changeset/25442" style="font-size:10pt">meta-raamwerk</a></p>
+<h3>2.5. Meta-projectspecifiek bericht in XML</h3>
+<p><span>Het meta-projectspecifiek bericht is niet universeel, maar zal per partij/organisatie verschillen. Hieronder staat als voorbeeld het meta-projectspecifiek bericht van de test voor certificering.</span></p>
+<p><span><a href="https://visi.codeplex.com/SourceControl/changeset/25452">meta-projectspecifiek bericht</a></span></p>
+<h3>3. <span>Scenario voor het gebruik van meta-raamwerk en meta-projectspecifiek bericht</span></h3>
+<h3>3.1. Inleiding</h3>
+<p><span>Om de werking van het meta-raamwerk en meta-projectspecifiek bericht tussen de verschillende organisaties te verduidelijken is scenario uitgewerkt.</span></p>
+<h3>3.2. Scenario</h3>
+<p>STAP 0</p>
+<p>Organisatie A heeft VISI-software X met SOAP server 2222. Deze partij heeft de beschikking over een meta-project (m-p-A) met daarin het universele meta-raamwerk (m-rw) en een meta-projectspecifiek bericht van deze organisatie (m-psb-A-0).</p>
+<p>Organisatie B heeft VISI-software Y met SOAP server 4444.</p>
+<p>Organisatie C heeft VISI-software Y met SOAP server 4444.</p>
+<p>Organisatie R heeft VISI-software Z met SOAP server 8888. Deze partij heeft de beschikking over een meta-project (m-p-R) met daarin het universele meta-raamwerk (m-rw) en een meta-projectspecifiek bericht van deze organisatie (m-psb-R-0).</p>
+<p>STAP 1</p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731847" alt=""></p>
+<p>Organisatie B geeft door aan Organisatie A: SOAP server en de persoon die optreedt als VISI-communicatiemanager.</p>
+<p>Organisatie A breidt het meta-projectspecifiek bericht uit met o.a. de SOAP server van Organisatie B (m-psb-A-1).</p>
+<p><span style="font-size:10pt">Organisatie B ontvangt per e-mail van Organisatie A het meta-projectspecifiek bericht (m-psb-A-1). Organisatie B richt een meta-project in met dit meta-projectspecifiek bericht.</span></p>
+<p><span style="font-size:10pt">Organisatie A richt een VISI-project (p-A-555) in, en verstuurt middels een bericht in het meta-project het project-raamwerk (rw-A-555-0) en project-projectspecifieke bericht (psb-A-555-0) naar Organisatie B.</span></p>
+<p><span style="font-size:10pt">Organisatie B ontvangt in het meta-project de gegevens van het nieuwe VISI-project, en richt dit project in.</span></p>
+<p><span style="font-size:10pt">STAP 2</span></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731850" alt=""></p>
+<p>Organisatie A past het raamwerk en/of projectspecifieke bericht van het VISI-project (p-A-555) aan, en verstuurt middels een bericht in het meta-project (m-p-A) het project-raamwerk (rw-A-555-1) en/of project-projectspecifieke bericht (psb-A-555-1) naar
+ Organisatie B.</p>
+<p><span style="font-size:10pt">Organisatie B ontvangt in het meta-project de aangepaste gegevens van het VISI-project, en actualiseert dit bestaande VISI-project.</span></p>
+<p><span style="font-size:10pt">STAP 3</span></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731851" alt=""></p>
+<p>Organisatie C geeft door aan Organisatie A: SOAP server en de persoon die optreedt als VISI-communicatiemanager.</p>
+<p>Organisatie A breidt het meta-projectspecifiek bericht uit met o.a. de SOAP server van Organisatie C (m-psb-A-2).</p>
+<p><span>Optioneel: Organisatie B ontvangt per e-mail van Organisatie A het aangepaste meta-projectspecifiek bericht (m-psb-A-2). Organisatie B actualiseert het corresponderende meta-project in met dit meta-projectspecifiek bericht.</span></p>
+<p>Organisatie C ontvangt per e-mail van Organisatie A het meta-projectspecifiek bericht (m-psb-A-2). Organisatie C richt een meta-project in met dit meta-projectspecifiek bericht.</p>
+<p><span style="font-size:10pt">STAP 4</span></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731852" alt=""></p>
+<p>Organisatie A richt een VISI-project (p-A-777) in, en verstuurt middels een bericht in het meta-project het project-raamwerk (rw-A-777-0) en project-projectspecifieke bericht (psb-A-777-0) naar Organisatie C.</p>
+<p><span style="font-size:10pt">Organisatie C ontvangt in het meta-project de gegevens van het nieuwe VISI-project, en richt dit project in.</span></p>
+<p><span style="font-size:10pt">STAP 5</span></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731853" alt=""></p>
+<p>Organisatie C geeft door aan Organisatie R: SOAP server en de persoon die optreedt als VISI-communicatiemanager.</p>
+<p>Organisatie R breidt het meta-projectspecifiek bericht uit met o.a. de SOAP server van Organisatie C (m-psb-R-1).</p>
+<p>STAP 6</p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731854" alt=""></p>
+<p>Organisatie C ontvangt per e-mail van Organisatie R het meta-projectspecifiek bericht (m-psb-R-1). Organisatie B richt een meta-project in met dit meta-projectspecifiek bericht.</p>
+<p><span style="font-size:10pt">Organisatie R richt een VISI-project (p-R-999) in, en verstuurt middels een bericht in het meta-project het project-raamwerk (rw-R-999-0) en project-projectspecifieke bericht (psb-R-999-0) naar Organisatie C.</span></p>
+<p><span style="font-size:10pt">Organisatie C ontvangt in het meta-project de gegevens van het nieuwe VISI-project, en richt dit project in.</span></p>
+<p><span style="font-size:10pt">STAP 7</span></p>
+<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731855" alt=""></p>
+</div><div class="ClearBoth"></div>

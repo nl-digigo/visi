@@ -1,0 +1,14 @@
+**Project omschrijving**
+Beheeromgeving van de VISI open standaard.
+
+**Wat is VISI?**
+VISI is een Open Standaard om binnen projecten de samenwerking tussen alle deelnemende partijen expliciet te maken: de structuur, de taakverdeling en het primaire proces worden in een 'raamwerk' vastgelegd. 
+
+VISI vormt de basis voor (formele) communicatie en informatieoverdracht in organisaties en (bouw)projecten. Met deze algemeen geaccepteerde en sectorbrede standaard structureert, bewaakt en bewaart u communicatieafspraken. Met andere woorden: m.b.v. VISI wordt bepaald wanneer (proces), wie (rol), wat (informatie) aan wie (rol) aanlevert. 
+
+VISI definieert het proces in termen van raamwerk, rollen, transacties en berichten. Een raakmwerk omvat alle gewenste rollen en transacties in een (bouw)proces. Een transactie weerspiegelt de communicatie-afspraken tussen twee rollen. De informatie-uitwisseling vindt plaats door het versturen van berichten (inclusief documenten) in de volgorde die in de transactie is vastgelegd. De rolverdeling legt de taken en verantwoordelijkheden vast.
+
+**Meer informatie**
+[http://www.crow.nl/visi](http://www.crow.nl/visi)
+
+![](Home_Logo-VISI.jpg)
