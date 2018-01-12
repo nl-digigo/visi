@@ -6,17 +6,17 @@
 
 #### When issuing bugs 
 
-1. Describe actual behavior
-2. Describe expected behavior
-3. Steps to reproduce the problem
+4. Describe actual behavior
+5. Describe expected behavior
+6. Steps to reproduce the problem
 
 #### When issuing enhancements
 
-1. Describe problem / functional need
-2. Propose solution / expected behaviour
-3. Describe benefits of enhancement
+4. Describe problem / functional need
+5. Propose solution / expected behaviour
+6. Describe benefits of enhancement
 
 #### When issuing other requests
 
-1. Describe request with as much detail as possible
-2. Describe benefits of meeting the request
+4. Describe request with as much detail as possible
+5. Describe benefits of meeting the request
