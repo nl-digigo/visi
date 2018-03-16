@@ -12,9 +12,10 @@
 
 #### When issuing enhancements
 
-4. Describe problem / functional need
-5. Propose solution / expected behaviour
-6. Describe benefits of enhancement
+4. Describe problem
+5. Describe impact of problem (money / quality / time)
+6. Propose functional need / solution / expected behaviour
+7. Describe benefits of enhancement
 
 #### When issuing other requests
 
