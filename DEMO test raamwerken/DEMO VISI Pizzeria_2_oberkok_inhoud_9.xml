@@ -354,12 +354,84 @@
     </simpleElement>
   </ElementCondition>
 
-  <ElementCondition id="EC_15">
-    <description>Wachttijd mag nooit worden overschreven.</description>
-    <condition>FIXED</condition>
-    <simpleElement>
-      <SimpleElementTypeRef idref="SeExpectedCompletionDateTime"/>
-    </simpleElement>
+  <ElementCondition id="EC_16">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="mit49499"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_17">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="mit49493"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_18">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="MT_186"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_19">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="MT_187"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_20">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="mit49513"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_21">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="mit49518"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_22">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="mit49506"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_23">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="mit49507"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_24">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="mit49523"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_25">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="mit49528"/>
+    </messageInTransaction>
   </ElementCondition>
 
   <GroupType id="Standaard_groep">
@@ -2555,12 +2627,12 @@
   </PersonType>
 
   <ProjectType id="Standaard_raamwerk">
-    <namespace>http://www.visi.nl/schemas/20160331/DEMO%20VISI%20Pizzeria_2_oberkok_inhoud_8</namespace>
+    <namespace>http://www.visi.nl/schemas/20160331/DEMO%20VISI%20Pizzeria_2_oberkok_inhoud_9</namespace>
     <description>Standaard raamwerk</description>
     <startDate>2006-02-09T00:00:00</startDate>
     <endDate>2006-02-09T00:00:00</endDate>
     <state>active</state>
-    <dateLaMu>2018-06-08T14:09:51</dateLaMu>
+    <dateLaMu>2018-06-08T14:48:07</dateLaMu>
     <userLaMu>janax</userLaMu>
     <helpInfo></helpInfo>
     <code>-</code>
