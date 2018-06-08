@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- created with VISI DLL, EXP2XSD part, created by Peter Bonsma  -->
-<xsd:schema targetNamespace="http://www.visi.nl/schemas/20160331/DEMO%20VISI%20Pizzeria_2_oberkok_inhoud_8" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:visi="http://www.visi.nl/schemas/20160331/DEMO%20VISI%20Pizzeria_2_oberkok_inhoud_8" elementFormDefault="qualified">
+<xsd:schema targetNamespace="http://www.visi.nl/schemas/20160331/DEMO%20VISI%20Pizzeria_2_oberkok_inhoud_9" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:visi="http://www.visi.nl/schemas/20160331/DEMO%20VISI%20Pizzeria_2_oberkok_inhoud_9" elementFormDefault="qualified">
 
 	<!-- root element declaration (for SCHEMA definitions) -->
 	<xsd:element name="visiXML_MessageSchema">
