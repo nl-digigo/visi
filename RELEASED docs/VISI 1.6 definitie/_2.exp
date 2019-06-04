@@ -1,0 +1,227 @@
+SCHEMA visiXML_VISI_Systematics;
+
+-- Complete model Part I, version 1.6, work version
+
+ENTITY ProjectType;	--	The definition of a specific group of projects. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of project should expose.
+ namespace : STRING;
+ description : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+
+ complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+END_ENTITY;
+
+ENTITY PersonType;	--	The definition of a specific group of persons. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of person should expose.
+ description : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+
+ complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+END_ENTITY;
+
+ENTITY OrganisationType;	--	The definition of a specific group of organizations. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of organisation should expose.
+ description : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+
+ complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+END_ENTITY;
+
+ENTITY AppendixType;	--	An AppendixType contains the definition of an appendix. Which data items should be recorded with an appendix can be specified in the complex element section.
+ description : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+
+ complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+END_ENTITY;
+
+ENTITY ComplexElementType;	--	A ComplexElementType contains a set of SimpleElementTypes. Each stated SimpleElementType occurs exactly the number of times mentioned.
+ description : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+
+ complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+ simpleElements : OPTIONAL SET [0:?] OF SimpleElementType;
+
+ minOccurs : OPTIONAL INTEGER;
+ maxOccurs : OPTIONAL INTEGER;
+END_ENTITY;
+
+ENTITY MessageType;	--	The definition of a type of message (MessageType), specifying the structure of the message and which set of SimpleElementType's (via ComplexElementType's) may accompany.
+ description : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+
+ appendixMandatory: OPTIONAL BOOLEAN;
+
+ complexElements : OPTIONAL SET [0:?] OF ComplexElementType;
+ appendixTypes : OPTIONAL SET [1:?] OF AppendixType;
+END_ENTITY;
+
+ENTITY ElementCondition;	--	The condition of a SimpleElementType as used within a specific MessageType.
+ description : STRING;
+ condition : STRING;
+ helpInfo : OPTIONAL STRING;
+
+ complexElements : OPTIONAL SET [0:2] OF ComplexElementType;
+ simpleElement : OPTIONAL SimpleElementType;
+ messageInTransaction : OPTIONAL MessageInTransactionType;
+END_ENTITY;
+
+ENTITY SimpleElementType;	--	The definition of a simple element type (SimpleElementType). This element type specifies a property whic may occur within various object structures like for example in MessageType (see also AppendixType, ProjectType, PersonType and OrganisationType). A SimpleElementType is always embedded in a ComplexElementType.
+ description : STRING;
+ interfaceType : OPTIONAL STRING;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ valueList : OPTIONAL STRING;
+
+ userDefinedType : UserDefinedType;
+END_ENTITY;
+
+ENTITY UserDefinedType;		--	A specification of a data type (to be used in a SimpleElementType). This data type encapsulates fill in areas in the final message, like for example a Dutch zip code starts always with four digits and then two characters.
+ description : STRING;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ baseType : STRING;
+ xsdRestriction : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+END_ENTITY;
+
+ENTITY MessageInTransactionType;	--	The occurrence of a MessageType within a TransactionType related to a certain group type (GroupType).
+ requiredNotify : OPTIONAL INTEGER;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ received : OPTIONAL BOOLEAN;
+ send : OPTIONAL BOOLEAN;
+ state : OPTIONAL STRING;
+ initiatorToExecutor : OPTIONAL BOOLEAN;
+ openSecondaryTransactionsAllowed : OPTIONAL BOOLEAN;
+ firstMessage : OPTIONAL BOOLEAN;
+
+ message : MessageType;
+ previous : OPTIONAL SET [0:?] OF MessageInTransactionType;
+ transaction : TransactionType;
+ transactionPhase : OPTIONAL TransactionPhaseType;
+ group : OPTIONAL GroupType;
+ appendixTypes : OPTIONAL SET [1:?] OF AppendixType;
+ conditions : OPTIONAL SET[1:?] OF MessageInTransactionTypeCondition;
+END_ENTITY;
+
+ENTITY MessageInTransactionTypeCondition;
+ sendAfter : OPTIONAL SET [1:?] OF MessageInTransactionType;
+ sendBefore : OPTIONAL SET [1:?] OF MessageInTransactionType;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+END_ENTITY;
+
+ENTITY TransactionPhaseType;		--	The definition of a phase related to a transaction. Examples are 'assignment accepted' or 'result part received'.
+ description : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+END_ENTITY;
+
+ENTITY TransactionType;		--	The definition of a type of transaction. A transaction type may reference again other transaction types. A transaction will be initiated by a person belonging to an organisation fulfilling a certain role. At this level the role type of the initiator should be stated (the promoted schema will enforce this). The same holds for the executor.
+ description : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+ result : OPTIONAL STRING;
+ 
+ subTransactions : OPTIONAL SET [1:?] OF TransactionType;
+ initiator : RoleType;
+ executor : RoleType;
+ appendixTypes : OPTIONAL SET [1:?] OF AppendixType;
+END_ENTITY;
+
+ENTITY RoleType;		--	The definition of a specific role type.
+ description : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+ code : OPTIONAL STRING;
+ responsibilityScope : OPTIONAL STRING;
+ responsibilityTask : OPTIONAL STRING;
+ responsibilitySupportTask : OPTIONAL STRING;
+ responsibilityFeedback : OPTIONAL STRING;
+END_ENTITY;
+
+ENTITY GroupType;		--	The definition of a group to store appendices sent with a message within a transaction.
+ description : STRING;
+ startDate : OPTIONAL DATETIME;
+ endDate : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ language : OPTIONAL STRING;
+ category : OPTIONAL STRING;
+ helpInfo : OPTIONAL STRING;
+END_ENTITY;
+
+END_SCHEMA;
