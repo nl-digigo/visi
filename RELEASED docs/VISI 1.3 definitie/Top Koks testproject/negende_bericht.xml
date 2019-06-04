@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/TestFramework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.visi.nl/TestFramework 10.xsd ">
+	<msgPlaatsingBestelling id="bericht009">
+		<identification />
+		<dateSend>2008-05-04T00:00:00.0Z</dateSend>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<messageInTransaction>
+			<BerichtInTransactie7Ref idref="BiT001" />
+		</messageInTransaction>
+		<transaction>
+			<t1_OpnameBestellingRef idref="transactie001" />
+		</transaction>
+		<ceBestelling>
+			<CeBestelling id="bestelling001">
+				<ceInhoudBestelling>
+					<CeInhoudBestelling id="inhoudBestelling001">
+						<naamGerecht>Biefstuk</naamGerecht>
+						<opmerking>met mayonaise</opmerking>
+					</CeInhoudBestelling>
+				</ceInhoudBestelling>
+			</CeBestelling>
+		</ceBestelling>
+	</msgPlaatsingBestelling>
+	<BerichtInTransactie7 id="BiT001">
+		<identification />
+	</BerichtInTransactie7>
+	<t1_OpnameBestelling id="transactie001">
+		<number>1</number>
+		<name />
+		<description />
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2009-05-04T00:00:00.0Z</endDate>
+		<initiator>
+			<PersonInRoleRef idref="PiR002" />
+		</initiator>
+		<executor>
+			<PersonInRoleRef idref="PiR001" />
+		</executor>
+		<project>
+			<ProjectType1Ref idref="Project1" />
+		</project>
+	</t1_OpnameBestelling>
+	<ProjectType1 id="Project1">
+		<name>Project Top Koks</name>
+		<description>Project voor het opnemen van een bestelling </description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2009-05-04T00:00:00.0Z</endDate>
+		<ceSOAP>
+			<CeSOAP id="ProjectGegevens">
+				<sOAPProtocol>MTOM</sOAPProtocol>
+				<sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+				<sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+			</CeSOAP>
+		</ceSOAP>
+	</ProjectType1>
+	<StandardOrganisationType id="consument">
+		<name>Consument</name>
+		<abbreviation>CSMT</abbreviation>
+		<contactPerson>
+			<StandardPersonTypeRef idref="KeesDeVries" />
+		</contactPerson>
+		<ceOrganisatie>
+			<CeOrganisatie id="OrganisatieGegevensConsument">
+				<sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
+			</CeOrganisatie>
+		</ceOrganisatie>
+	</StandardOrganisationType>
+	<StandardOrganisationType id="restaurant">
+		<name>Restaurant</name>
+		<abbreviation>RSTR</abbreviation>
+		<contactPerson>
+			<StandardPersonTypeRef idref="PietJansen" />
+		</contactPerson>
+		<ceOrganisatie>
+			<CeOrganisatie id="OrganisatieGegevensRestaurant">
+				<sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+			</CeOrganisatie>
+		</ceOrganisatie>
+	</StandardOrganisationType>
+	<StandardPersonType id="KeesDeVries">
+		<userName>kvd</userName>
+		<name>Kees de Vries</name>
+	</StandardPersonType>
+	<StandardPersonType id="PietJansen">
+		<userName>pj</userName>
+		<name>Piet Jansen</name>
+	</StandardPersonType>
+	<klant id="klantRol">
+		<name>Klant Rol</name>
+		<description>Diegene die de klant is</description>
+	</klant>
+	<ober id="oberRol">
+		<name>Ober Rol</name>
+		<description>Diegene die serveert</description>
+	</ober>
+	<PersonInRole id="PiR001">
+		<contactPerson>
+			<StandardPersonTypeRef idref="KeesDeVries" />
+		</contactPerson>
+		<organisation>
+			<StandardOrganisationTypeRef idref="consument" />
+		</organisation>
+		<role>
+			<klantRef idref="klantRol" />
+		</role>
+	</PersonInRole>
+	<PersonInRole id="PiR002">
+		<contactPerson>
+			<StandardPersonTypeRef idref="PietJansen" />
+		</contactPerson>
+		<organisation>
+			<StandardOrganisationTypeRef idref="restaurant" />
+		</organisation>
+		<role>
+			<klantRef idref="oberRol" />
+		</role>
+	</PersonInRole>
+</visiXML_MessageSchema>
