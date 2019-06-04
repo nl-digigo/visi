@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?><visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20060807" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20021106 C:\_3.xsd">
+<ProjectType id="Project1">    <description></description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+</ProjectType>
+<GroupType id="Standaard_Groep">    <description></description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+</GroupType>
+<TransactionPhaseType id="Start">    <description>Start</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code>-</code>
+</TransactionPhaseType>
+<TransactionPhaseType id="Aanvaard_Einde">    <description>Aanvaard/Einde</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code>-</code>
+</TransactionPhaseType>
+<TransactionPhaseType id="Verzocht">    <description>Verzocht</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code>-</code>
+</TransactionPhaseType>
+<TransactionPhaseType id="Wijziging_Hold">    <description>Wijziging/Hold</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code>-</code>
+</TransactionPhaseType>
+<TransactionPhaseType id="Melding_Gereed">    <description>Melding Gereed</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code>-</code>
+</TransactionPhaseType>
+<RoleType id="Ober">    <description></description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+    <responsibilityScope></responsibilityScope>
+    <responsibilityTask></responsibilityTask>
+    <responsibilitySupportTask></responsibilitySupportTask>
+    <responsibilityFeedback></responsibilityFeedback>
+</RoleType>
+<RoleType id="Klant">    <description></description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+    <responsibilityScope></responsibilityScope>
+    <responsibilityTask></responsibilityTask>
+    <responsibilitySupportTask></responsibilitySupportTask>
+    <responsibilityFeedback></responsibilityFeedback>
+</RoleType>
+<TransactionType id="T1">    <description>Opnemen bestelling</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+    <result>Opgenomen bestelling</result>
+    <basePoint></basePoint>
+<initiator><RoleTypeRef idref="Ober"></RoleTypeRef>
+</initiator>
+<executor><RoleTypeRef idref="Klant"></RoleTypeRef>
+</executor>
+</TransactionType>
+<MessageType id="msgWilt_U_de_kaart_zien">    <description>Wilt U de menukaart zien?</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+</MessageType>
+<MessageType id="msgNee">    <description>Nee</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+</MessageType>
+<MessageType id="msgJa">    <description>Ja</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+</MessageType>
+<MessageType id="msgAanbieden_kaart">    <description>Aanbieden menukaart</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+</MessageType>
+<MessageType id="msgVraag">    <description>Vraag</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+</MessageType>
+<MessageType id="msgAntwoord">    <description>Antwoord</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+</MessageType>
+<MessageType id="msgPlaatsingBestelling">    <description>Plaatsing bestelling</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+</MessageType>
+<MessageType id="msgBestellingNietMogelijk">    <description>Bestelling niet mogelijk</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+</MessageType>
+<MessageType id="msgBevestigingBestelling">    <description>Bevestiging bestelling</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+</MessageType>
+<MessageType id="msgAkkoord">    <description>Akkoord</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+</MessageType>
+<MessageType id="msgNietAkkoord">    <description>Niet akkoord</description>
+    <startDate>2008-12-04</startDate>
+    <endDate>2008-12-04</endDate>
+    <state>active</state>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <language></language>
+    <category></category>
+    <helpInfo></helpInfo>
+    <code></code>
+</MessageType>
+<MessageInTransactionType id="BerichtInTransactie1">    <requiredNotify>0</requiredNotify>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <received>0</received>
+    <send>0</send>
+    <state></state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+<message><MessageTypeRef idref="msgWilt_U_de_kaart_zien"></MessageTypeRef>
+</message>
+<transaction><TransactionTypeRef idref="T1"></TransactionTypeRef>
+</transaction>
+<transactionPhase><TransactionPhaseTypeRef idref="Verzocht"></TransactionPhaseTypeRef>
+</transactionPhase>
+<group><GroupTypeRef idref="Standaard_Groep"></GroupTypeRef>
+</group>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie2">    <requiredNotify>0</requiredNotify>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <received>0</received>
+    <send>0</send>
+    <state></state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+<message><MessageTypeRef idref="msgNee"></MessageTypeRef>
+</message>
+<previous><MessageInTransactionTypeRef idref="BerichtInTransactie1"></MessageInTransactionTypeRef>
+</previous>
+<transaction><TransactionTypeRef idref="T1"></TransactionTypeRef>
+</transaction>
+<transactionPhase><TransactionPhaseTypeRef idref="Aanvaard_Einde"></TransactionPhaseTypeRef>
+</transactionPhase>
+<group><GroupTypeRef idref="Standaard_Groep"></GroupTypeRef>
+</group>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie3">    <requiredNotify>0</requiredNotify>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <received>0</received>
+    <send>0</send>
+    <state></state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+<message><MessageTypeRef idref="msgJa"></MessageTypeRef>
+</message>
+<previous><MessageInTransactionTypeRef idref="BerichtInTransactie1"></MessageInTransactionTypeRef>
+</previous>
+<transaction><TransactionTypeRef idref="T1"></TransactionTypeRef>
+</transaction>
+<transactionPhase><TransactionPhaseTypeRef idref="Verzocht"></TransactionPhaseTypeRef>
+</transactionPhase>
+<group><GroupTypeRef idref="Standaard_Groep"></GroupTypeRef>
+</group>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie4">    <requiredNotify>0</requiredNotify>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <received>0</received>
+    <send>0</send>
+    <state></state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+<message><MessageTypeRef idref="msgAanbieden_kaart"></MessageTypeRef>
+</message>
+<previous><MessageInTransactionTypeRef idref="BerichtInTransactie3"></MessageInTransactionTypeRef>
+</previous>
+<transaction><TransactionTypeRef idref="T1"></TransactionTypeRef>
+</transaction>
+<transactionPhase><TransactionPhaseTypeRef idref="Verzocht"></TransactionPhaseTypeRef>
+</transactionPhase>
+<group><GroupTypeRef idref="Standaard_Groep"></GroupTypeRef>
+</group>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie5">    <requiredNotify>0</requiredNotify>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <received>0</received>
+    <send>0</send>
+    <state></state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+<message><MessageTypeRef idref="msgVraag"></MessageTypeRef>
+</message>
+<previous><MessageInTransactionTypeRef idref="BerichtInTransactie8"></MessageInTransactionTypeRef>
+<MessageInTransactionTypeRef idref="BerichtInTransactie4"></MessageInTransactionTypeRef>
+</previous>
+<transaction><TransactionTypeRef idref="T1"></TransactionTypeRef>
+</transaction>
+<transactionPhase><TransactionPhaseTypeRef idref="Wijziging_Hold"></TransactionPhaseTypeRef>
+</transactionPhase>
+<group><GroupTypeRef idref="Standaard_Groep"></GroupTypeRef>
+</group>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie6">    <requiredNotify>0</requiredNotify>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <received>0</received>
+    <send>0</send>
+    <state></state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+<message><MessageTypeRef idref="msgAntwoord"></MessageTypeRef>
+</message>
+<previous><MessageInTransactionTypeRef idref="BerichtInTransactie5"></MessageInTransactionTypeRef>
+</previous>
+<transaction><TransactionTypeRef idref="T1"></TransactionTypeRef>
+</transaction>
+<transactionPhase><TransactionPhaseTypeRef idref="Verzocht"></TransactionPhaseTypeRef>
+</transactionPhase>
+<group><GroupTypeRef idref="Standaard_Groep"></GroupTypeRef>
+</group>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie7">    <requiredNotify>0</requiredNotify>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <received>0</received>
+    <send>0</send>
+    <state></state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+<message><MessageTypeRef idref="msgPlaatsingBestelling"></MessageTypeRef>
+</message>
+<previous><MessageInTransactionTypeRef idref="BerichtInTransactie6"></MessageInTransactionTypeRef>
+</previous>
+<transaction><TransactionTypeRef idref="T1"></TransactionTypeRef>
+</transaction>
+<transactionPhase><TransactionPhaseTypeRef idref="Melding_Gereed"></TransactionPhaseTypeRef>
+</transactionPhase>
+<group><GroupTypeRef idref="Standaard_Groep"></GroupTypeRef>
+</group>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie8">    <requiredNotify>0</requiredNotify>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <received>0</received>
+    <send>0</send>
+    <state></state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+<message><MessageTypeRef idref="msgBestellingNietMogelijk"></MessageTypeRef>
+</message>
+<previous><MessageInTransactionTypeRef idref="BerichtInTransactie9"></MessageInTransactionTypeRef>
+<MessageInTransactionTypeRef idref="BerichtInTransactie7"></MessageInTransactionTypeRef>
+</previous>
+<transaction><TransactionTypeRef idref="T1"></TransactionTypeRef>
+</transaction>
+<transactionPhase><TransactionPhaseTypeRef idref="Verzocht"></TransactionPhaseTypeRef>
+</transactionPhase>
+<group><GroupTypeRef idref="Standaard_Groep"></GroupTypeRef>
+</group>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie9">    <requiredNotify>0</requiredNotify>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <received>0</received>
+    <send>0</send>
+    <state></state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+<message><MessageTypeRef idref="msgPlaatsingBestelling"></MessageTypeRef>
+</message>
+<previous><MessageInTransactionTypeRef idref="BerichtInTransactie4"></MessageInTransactionTypeRef>
+<MessageInTransactionTypeRef idref="BerichtInTransactie8"></MessageInTransactionTypeRef>
+</previous>
+<transaction><TransactionTypeRef idref="T1"></TransactionTypeRef>
+</transaction>
+<transactionPhase><TransactionPhaseTypeRef idref="Melding_Gereed"></TransactionPhaseTypeRef>
+</transactionPhase>
+<group><GroupTypeRef idref="Standaard_Groep"></GroupTypeRef>
+</group>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie10">    <requiredNotify>0</requiredNotify>
+    <dateLamu>2008-12-04</dateLamu>
+    <userLamu>PWI</userLamu>
+    <received>0</received>
+    <send>0</send>
+    <state></state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+<message><MessageTypeRef idref="msgBevestigingBestelling"></MessageTypeRef>
+</message>
+<previous><MessageInTransactionTypeRef idref="BerichtInTransactie9"></MessageInTransactionTypeRef>
+<MessageInTransactionTypeRef idref="BerichtInTransactie7"></MessageInTransactionTypeRef>
+</previous>
+<transaction><TransactionTypeRef idref="T1"></TransactionTypeRef>
+</transaction>
+<transactionPhase><TransactionPhaseTypeRef idref="Aanvaard_Einde"></TransactionPhaseTypeRef>
+</transactionPhase>
+<group><GroupTypeRef idref="Standaard_Groep"></GroupTypeRef>
+</group>
+</MessageInTransactionType>
+</visiXML_VISI_Systematics>

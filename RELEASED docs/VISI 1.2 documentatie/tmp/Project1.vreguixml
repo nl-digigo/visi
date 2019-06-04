@@ -1,0 +1,69 @@
+<visiXML_VISI >
+<ProjectType id="Project1"></ProjectType>
+<GUIRoleType id="GUI1">    <guiColor>-1</guiColor>
+    <guiVirtualHeight>1</guiVirtualHeight>
+    <guiVirtualWidth>1</guiVirtualWidth>
+    <guiVirtualX>0</guiVirtualX>
+    <guiVirtualY>0</guiVirtualY>
+<roleType><RoleTypeRef idref="Ober"></RoleTypeRef>
+</roleType>
+</GUIRoleType>
+<GUIRoleType id="GUI2">    <guiColor>-1</guiColor>
+    <guiVirtualHeight>1</guiVirtualHeight>
+    <guiVirtualWidth>1</guiVirtualWidth>
+    <guiVirtualX>0</guiVirtualX>
+    <guiVirtualY>1</guiVirtualY>
+<roleType><RoleTypeRef idref="Klant"></RoleTypeRef>
+</roleType>
+</GUIRoleType>
+<TransactionType id="T1">    <guiExecutorIndex>0</guiExecutorIndex>
+    <guiInitiatorIndex>0</guiInitiatorIndex>
+    <guiIsHorizontal>0</guiIsHorizontal>
+<guiInitiator><GUIRoleTypeRef idref="GUI1"></GUIRoleTypeRef>
+</guiInitiator>
+<guiExecutor><GUIRoleTypeRef idref="GUI2"></GUIRoleTypeRef>
+</guiExecutor>
+</TransactionType>
+<GroupType id="Standaard_Groep"></GroupType>
+<TransactionPhaseType id="Start"></TransactionPhaseType>
+<TransactionPhaseType id="Aanvaard_Einde"><parentTransactionPhase><TransactionPhaseTypeRef idref="Start"></TransactionPhaseTypeRef>
+</parentTransactionPhase>
+</TransactionPhaseType>
+<TransactionPhaseType id="Verzocht"><parentTransactionPhase><TransactionPhaseTypeRef idref="Aanvaard_Einde"></TransactionPhaseTypeRef>
+</parentTransactionPhase>
+</TransactionPhaseType>
+<TransactionPhaseType id="Wijziging_Hold"><parentTransactionPhase><TransactionPhaseTypeRef idref="Verzocht"></TransactionPhaseTypeRef>
+</parentTransactionPhase>
+</TransactionPhaseType>
+<TransactionPhaseType id="Melding_Gereed"><parentTransactionPhase><TransactionPhaseTypeRef idref="Wijziging_Hold"></TransactionPhaseTypeRef>
+</parentTransactionPhase>
+</TransactionPhaseType>
+<MessageInTransactionType id="BerichtInTransactie1"></MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie2"><guiPrevious><MessageInTransactionTypeRef idref="BerichtInTransactie1"></MessageInTransactionTypeRef>
+</guiPrevious>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie3"><guiPrevious><MessageInTransactionTypeRef idref="BerichtInTransactie2"></MessageInTransactionTypeRef>
+</guiPrevious>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie4"><guiPrevious><MessageInTransactionTypeRef idref="BerichtInTransactie3"></MessageInTransactionTypeRef>
+</guiPrevious>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie5"><guiPrevious><MessageInTransactionTypeRef idref="BerichtInTransactie4"></MessageInTransactionTypeRef>
+</guiPrevious>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie6"><guiPrevious><MessageInTransactionTypeRef idref="BerichtInTransactie5"></MessageInTransactionTypeRef>
+</guiPrevious>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie7"><guiPrevious><MessageInTransactionTypeRef idref="BerichtInTransactie6"></MessageInTransactionTypeRef>
+</guiPrevious>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie8"><guiPrevious><MessageInTransactionTypeRef idref="BerichtInTransactie7"></MessageInTransactionTypeRef>
+</guiPrevious>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie9"><guiPrevious><MessageInTransactionTypeRef idref="BerichtInTransactie8"></MessageInTransactionTypeRef>
+</guiPrevious>
+</MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie10"><guiPrevious><MessageInTransactionTypeRef idref="BerichtInTransactie9"></MessageInTransactionTypeRef>
+</guiPrevious>
+</MessageInTransactionType>
+</visiXML_VISI>

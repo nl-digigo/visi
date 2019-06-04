@@ -1,0 +1,106 @@
+'''Algemene eisen'''
+
+
+'''10.xsd validatie'''
+
+Uitgaande VISI berichten dienen in overeenstemming te zijn met de 10.xsd definitie van het vigerende raamwerk van het betreffende project.
+
+
+Test
+
+* Een verzonden bericht checken tegen de 10.xsd validatie in een XML editor.
+* De leverancier aantoonbaar laten maken dat uitgaande berichten met de 10.xsd worden vergeleken en niet worden verzonden indien deze niet met elkaar overeenkomen.
+
+Inkomende berichten dienen niet door het systeeem geaccepteerd te worden indien deze niet overeenkomen met de 10.xsd definitie van het vigerende raamwerk van het betreffende project.
+
+Test
+
+* De leverancier aantoonbaar laten maken dat binnenkomende berichten met de 10.xsd worden vergeleken en niet worden geaccepteerd indien deze niet met elkaar overeenkomen. Daarnaast dient het systeem bij een niet valide bericht de juiste errorcode in het reactie bericht van de soapserver te versturen.
+
+'''Soapserver'''
+
+De soapserver dient te functioneren volgens de vigerende versie van de SOAP richtlijn.
+
+
+Test
+
+* De leverancier aantoonbaar laten maken dat de reactieberichten op de juiste wijze worden afgehandeld.<br/> 
+
+
+'''Successor'''
+
+Als in het projectspecifieke bericht een successor wordt aangegeven voor een persoon dient alle communicatie te worden overgedragen naar de successor van de betreffende persoon. Daarnaast dient de opvolging ook te worden vastgelegd in de daarop volgende VISI berichten.
+
+
+Test
+
+* Een transactie opstarten op basis van een specifiek persoon in een rol. Vervolgens wordt een successor in het projectspecifieke bericht vastgelegd voor deze persoon. De communicatie dient nu afgehandeld te kunnen worden door de successor.
+* In de berichten die volgen dient de successor volgens de geldende richtlijn verwerkt te zijn.<br/> 
+
+
+'''Scenario's'''
+
+Van het VISI testraamwerk zijn een aantal scenario's uitgewerkt. Een aantal scenario's in toenemende complexiteit zullen worden beproefd.
+
+
+''Scenario 2a:''
+
+* [[Image:|thumb|<center>''Figuur 1: Scenario 2a''</center>]]Ober A vraagt aan Klant K of hij/zij de kaart wil zien. 
+
+* Klant K beantwoordt de vraag met Ja, en geeft aan welke kaart hij/zij wil zien.
+* Ober A biedt de menukaart aan die Klant K gevraagd heeft. Ober A kan het menukaarttype niet wijzigen. Klant K krijgt de gevraagde menukaart als bijlage van 20MB.
+* Klant K plaatst een bestelling bij Ober A bestaande uit een tabel met per rij de naam van een gerecht en eventueel een bijbehorende opmerking.
+* Ober A plaatst dezelfde bestelling bij Kok X. Ober A kan de bestelling van Klant K niet aanpassen, en ook niet aanvullen.
+* Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpassen, en ook niet aanvullen.
+* Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
+* Einde. 
+
+Test
+
+* Pogingen om wijzigingen aan te brengen in berichten, daar waar die volgens het raamwerk niet zijn toegestaan, moeten door de software worden geweigerd.
+* Checken of de bestelling correct wordt overgenomen van klant naar ober en van ober naar kok.
+
+''Scenario 4c:''
+
+* [[Image:|thumb|<center>''Figuur 2: Scenario 4c''</center>]]Ober A vraagt aan Klant K of hij/zij de kaart wil zien. 
+* Klant K beantwoordt de vraag met Ja, en geeft aan welke kaart hij/zij wil zien.
+* Ober A biedt de menukaart aan die Klant K gevraagd heeft. Ober A kan het menukaarttype niet wijzigen. Klant K krijgt de gevraagde menukaart.
+* Klant K stelt een vraag aan Ober A.
+* Ober A beantwoordt de vraag van Klant K. (In de beantwoording kan Ober A de vraag van Klant K niet aanpassen.)
+* Klant K stelt een tweede vraag aan Ober A. (In de vraagstelling kan Klant K de vraag niet invullen, omdat in het raamwerk de ElementCondition geen waarde voor condition heeft!!!)
+* Ober A beantwoordt de vraag van Klant K. (In de beantwoording kan Ober A de vraag van Klant K niet aanpassen.)
+* Klant K stelt een derde vraag aan Ober A. (In de vraagstelling kan Klant K de vraag niet invullen, omdat in het raamwerk de ElementCondition geen waarde voor condition heeft!!!)
+* Ober A beantwoordt de vraag van Klant K. (In de beantwoording kan Ober A de vraag van Klant K niet aanpassen.)
+* Klant K plaatst een compleet nieuwe bestelling bij Ober A bestaande uit een tabel met per rij de naam van een gerecht en eventueel een bijbehorende opmerking. (Klant K kan de gehele tabel invullen.)
+* Ober A plaatst dezelfde bestelling bij Kok X. Ober A kan de bestelling van Klant K niet aanpassen, en ook niet aanvullen.
+* Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpassen, en ook niet aanvullen.
+* Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
+* Einde. 
+
+Test
+
+* Correcte werking bij loopstructuren.
+
+''Scenario 5b:''
+
+* [[Image:|thumb|<center>''Figuur 3: Scenario 5a''</center>]]Ober A vraagt aan Klant K of hij/zij de kaart wil zien. 
+
+* Klant K beantwoordt de vraag met Ja, en geeft aan welke kaart hij/zij wil zien.
+* Ober A biedt de menukaart aan die Klant K gevraagd heeft. Ober A kan het menukaarttype niet wijzigen. Klant K krijgt de gevraagde menukaart.
+* Klant K stelt een vraag aan Ober A.
+* Ober A stelt een vraag aan Kok Y en Z. (In de vraagstelling kan Ober A de vraag niet aanpassen.)
+* Kok Y beantwoordt de vraag van Ober A. (In de beantwoording kan Kok Y de vraag van Ober A niet aanpassen.)
+* Ober A beantwoordt de vraag van Klant K. (In de beantwoording kan Ober A het antwoord van Kok Y niet aanpassen.)
+* Nadat Ober A naar Klant K heeft gecommuniceerd geeft Kok Z alsnog een antwoord aan Ober A. Ober A kan met de ontvangen melding van Kok Z helemaal niets, dus niet communiceren richting Kok Z of Klant K.
+* Klant K plaatst een compleet nieuwe bestelling bij Ober A bestaande uit een tabel met per rij de naam van een gerecht en eventueel een bijbehorende opmerking. (Klant K kan de gehele tabel invullen.)
+* Ober A plaatst dezelfde bestelling bij Kok X. Ober A kan de bestelling van Klant K niet aanpassen, en ook niet aanvullen.
+* Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpassen, en ook niet aanvullen.
+* Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
+* Einde. 
+
+Test
+
+* Correcte werking berichten-flow (open-secondary-transaction attribuutwaarden).
+* Leverancier toont aan dat het verloop van het berichtenverkeer is te traceren op basis van de afzonderlijke berichten (previous attribuutwaarden).
+
+

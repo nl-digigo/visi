@@ -1,0 +1,44 @@
+Heren,
+
+&nbsp;
+
+Zoals in het laatste TC beloofd nogmaals een korte samenvatting over de conclusies van MTOM. Hopelijk in begrijpelijke termen. Ik heb geprobeerd om het zo niet technisch mogelijk op te schrijven daarmee verlies je natuurlijk wel de technische details maar dat lijkt me voor dit doel geen probleem.
+
+&nbsp;
+
+'''MTOM/XOP'''
+
+&nbsp;
+
+'''Wens:''' VISI moet berichten van > 20 MB gaan ondersteunen.
+
+'''Probleem:''' Het http protocal ondersteunt tot ongeveer aan 20MB aan pakketjes voordat het onbetrouwbaar wordt. De huidige implementatie van een stukje binaire encrypte code in een VISI bericht lijkt hier niet op berekend te zijn. 
+
+&nbsp;
+
+'''Oplossing: '''Er zijn twee oplossingen onderzocht:
+
+1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MTOM/XOPMTOM/XOP is een optimalisatie van binaire code in xml. Waarbij MTOM gewoon de implementatie van XOP is voor SOAP. Het nadeel van het huidige base64 is dat de encrypte base64 code ongeveer 33% grotes is dan het bestand wat ge-encrypt wordt. MTOM/XOP gaat hier slimmer mee om door het bestand wat normaal ge-encode wordt gewoon bij te sluiten en een verwijzing te plaatsen in het xml bericht. Hierdoor is deze manier van zenden ongeveer 33% effectiever dan Base64. Dus zorgt MTOM/XOP ervoor dat er bijna geen extra overhead komt.Het is besproken en algemeen aangenomen dat MTOM/XOB een mooie technologie is om te omarmen binnen VISI maar het probleem niet oplost. Daarnaast zal de huidige werkwijze van het base64 encoden moeten wijzigen in verwijzing waardoor het bericht niet langer deel uitmaakt van het VISI bericht. Dit heeft gevolgen voor de SOAP richtlijn. 
+
+2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ChunckenChuncken is het opknippen van een bericht in kleine stukjes en aan de andere kant van de lijn weer aan elkaar plakken zodat het plafond van 20MB wordt vermeden. Dit lost het probleem op.
+
+&nbsp;
+
+&nbsp;
+
+'''Conclusie:'''
+
+Alleen 2 lost het probleem echt op. Aangezien een vooledige ondersteuning van 1 tevens een impact heeft op de SOAP richtlijn is chuncken(2) op korte termijn als oplossing gekozen. Daarbij is als opmerking geplaatst dat wanneer een leverancier ervoor kiest om tevens gebruik te maken van 2 dat &nbsp;de onderlinge leveranciers er voor zorg dragen dat het bericht ind e huidige voorgeschreven vorm weer in elkaar wordt gezet zodat deze aan de huidige eisen van VISI voldoet.
+
+&nbsp;
+
+&nbsp;
+
+Groet,
+
+&nbsp;
+
+Mischa
+
+
+

@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Peter Willems (TNO Bouw en Ondergrond) -->
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by H.A. Schaap (Gobar adviseurs) -->
+<visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20071218" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20071218
+C:\Documents%20and%20Settings\wspa\My%20Documents\My%20Projects\TNO\VISI\trunk\VISI%201.2%20documentatie\tmp\_3.xsd">
+	<ProjectType id="Project1">
+		<description/>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<complexElements>
+			<ComplexElementTypeRef idref="WillekeurigComplexElement"/>
+		</complexElements>
+	</ProjectType>
+	<ElementCondition id="ElementCondition1">
+		<description/>
+		<condition>FREE</condition>
+		<helpInfo/>
+		<messageInTransaction>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie9"/>
+		</messageInTransaction>
+	</ElementCondition>
+	<ElementCondition id="ElementCondition2">
+		<description/>
+		<condition/>
+		<helpInfo/>
+		<complexElement>
+			<ComplexElementTypeRef idref="CeVraag"/>
+		</complexElement>
+		<simpleElement>
+			<SimpleElementTypeRef idref="Vraag"/>
+		</simpleElement>
+		<messageInTransaction>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+		</messageInTransaction>
+	</ElementCondition>
+	<UserDefinedType id="STRING">
+		<description>STRING</description>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<baseType>STRING</baseType>
+		<xsdRestriction/>
+		<language/>
+		<helpInfo/>
+	</UserDefinedType>
+	<GroupType id="StandardGroupType">
+		<description>Standard group type</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+	</GroupType>
+	<TransactionPhaseType id="start">
+		<description>Start</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code>-</code>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="verzocht">
+		<description>Verzocht</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code>-</code>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="beloofdExecutie">
+		<description>Beloofd/Executie</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code>-</code>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="wijzigingHold">
+		<description>Wijziging/Hold</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code>-</code>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="meldingGereed">
+		<description>Melding Gereed</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code>-</code>
+	</TransactionPhaseType>
+	<TransactionPhaseType id="aanvaardEinde">
+		<description>Aanvaard/Einde</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code>-</code>
+	</TransactionPhaseType>
+	<OrganisationType id="StandardOrganisationType">
+		<description>Standard organisation type</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<complexElements>
+			<ComplexElementTypeRef idref="WillekeurigComplexElement2"/>
+		</complexElements>
+	</OrganisationType>
+	<PersonType id="StandardPersonType">
+		<description>Standaard persoons type</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code>.</code>
+	</PersonType>
+	<SimpleElementType id="NaamMenukaartItem">
+		<description>Naam item</description>
+		<interfaceType/>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<valueList/>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="Omschrijving">
+		<description>Omschrijving</description>
+		<interfaceType/>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<valueList/>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="Prijs">
+		<description>Prijs</description>
+		<interfaceType/>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<valueList/>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="NaamGerecht">
+		<description>Naam gerecht</description>
+		<interfaceType/>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<valueList/>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="Opmerking">
+		<description>Opmerking</description>
+		<interfaceType/>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<valueList/>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="Vraag">
+		<description>Vraag</description>
+		<interfaceType/>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<valueList/>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="Antwoord">
+		<description>Antwoord</description>
+		<interfaceType/>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<valueList/>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SOAPProtocol">
+		<description>SOAPProtocol</description>
+		<interfaceType/>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<valueList/>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SOAPCentralServer-URL">
+		<description>SOAPCentralServer-URL</description>
+		<interfaceType/>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<valueList/>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SOAPServer-URL">
+		<description>SOAPServer-URL</description>
+		<interfaceType/>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<valueList/>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<ComplexElementType id="CeInhoudMenuKaart">
+		<description>Elementen voor de menukaart</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<simpleElements>
+			<SimpleElementTypeRef idref="NaamMenukaartItem"/>
+			<SimpleElementTypeRef idref="Omschrijving"/>
+			<SimpleElementTypeRef idref="Prijs"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeMenuKaart">
+		<description>Menukaart</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+		</complexElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeInhoudBestelling">
+		<description>Elementen voor de bestelling</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<simpleElements>
+			<SimpleElementTypeRef idref="NaamGerecht"/>
+			<SimpleElementTypeRef idref="Opmerking"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeBestelling">
+		<description>Bestelling</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeInhoudBestelling"/>
+		</complexElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeVraag">
+		<description>Vraag</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<simpleElements>
+			<SimpleElementTypeRef idref="Vraag"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="CeAntwoord">
+		<description>Antwoord</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<simpleElements>
+			<SimpleElementTypeRef idref="Antwoord"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="WillekeurigComplexElement">
+		<description>Willekeurig Complex Element</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SOAPProtocol"/>
+			<SimpleElementTypeRef idref="SOAPCentralServer-URL"/>
+			<SimpleElementTypeRef idref="SOAPCentralServer-URL"/>
+		</simpleElements>
+	</ComplexElementType>
+	<ComplexElementType id="WillekeurigComplexElement2">
+		<description>Willekeurig Complex Element 2</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SOAPServer-URL"/>
+		</simpleElements>
+	</ComplexElementType>
+	<RoleType id="klant">
+		<description>Verantwoordelijk voor het op regelmatige tijden eten</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<responsibilityScope/>
+		<responsibilityTask/>
+		<responsibilitySupportTask/>
+		<responsibilityFeedback/>
+	</RoleType>
+	<RoleType id="ober">
+		<description>Verantwoordelijk voor het opnemen en uitzetten van bestellingen</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<responsibilityScope/>
+		<responsibilityTask/>
+		<responsibilitySupportTask/>
+		<responsibilityFeedback/>
+	</RoleType>
+	<RoleType id="kok">
+		<description>Verantwoordelijk voor het realiseren van de bestelling</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<responsibilityScope/>
+		<responsibilityTask/>
+		<responsibilitySupportTask/>
+		<responsibilityFeedback/>
+	</RoleType>
+	<TransactionType id="t1_OpnameBestelling">
+		<description>T1 Opname bestelling</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<result>Afgeronde bestelling</result>
+		<basePoint/>
+		<initiator>
+			<RoleTypeRef idref="ober"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="klant"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="t2_VraagOberAanKok">
+		<description>T2 Vraag ober aan kok</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<result>Antwoord of advies</result>
+		<basePoint/>
+		<initiator>
+			<RoleTypeRef idref="ober"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="kok"/>
+		</executor>
+	</TransactionType>
+	<TransactionType id="t3_OpdrachtKok">
+		<description>T3 Opdract aan Kok</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<result>Uit te serveren bestelling</result>
+		<basePoint/>
+		<initiator>
+			<RoleTypeRef idref="ober"/>
+		</initiator>
+		<executor>
+			<RoleTypeRef idref="kok"/>
+		</executor>
+	</TransactionType>
+	<MessageType id="msgWiltuDeKaartZien">
+		<description>Wilt u de kaart zien?</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+	</MessageType>
+	<MessageType id="msgNee">
+		<description>Nee</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+	</MessageType>
+	<MessageType id="msgJa">
+		<description>Ja</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+	</MessageType>
+	<MessageType id="msgAanbiedingMenuKaart">
+		<description>Aanbieding menukaart</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeMenuKaart"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="msgVraag">
+		<description>Vraag</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeVraag"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="msgAntwoord">
+		<description>Antwoord of advies</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeVraag"/>
+			<ComplexElementTypeRef idref="CeAntwoord"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="msgPlaatsingBestelling">
+		<description>Plaatsing bestelling</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeBestelling"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="msgBestellingNietMogelijk">
+		<description>Bestelling niet mogelijk</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeBestelling"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="msgBevestigingBestelling">
+		<description>Bevestiging bestelling</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeBestelling"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="msgAkkoord">
+		<description>Akkoord</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeBestelling"/>
+		</complexElements>
+	</MessageType>
+	<MessageType id="msgNietAkkoord">
+		<description>Niet akkoord</description>
+		<startDate>2008-05-04T00:00:00.0Z</startDate>
+		<endDate>2008-05-04T00:00:00.0Z</endDate>
+		<state>active</state>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<language/>
+		<category/>
+		<helpInfo/>
+		<code/>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeBestelling"/>
+		</complexElements>
+	</MessageType>
+	<MessageInTransactionType id="BerichtInTransactie1">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-12-04T00:00:00.0Z</dateLamu>
+		<userLamu>PWI</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgWiltuDeKaartZien"/>
+		</message>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="start"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie2">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgNee"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie1"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="aanvaardEinde"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie3">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgJa"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie1"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="verzocht"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie4">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgAanbiedingMenuKaart"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie3"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="verzocht"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie5">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgVraag"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie4"/>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie8"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="wijzigingHold"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie6">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-12-05T00:00:00.0Z</dateLamu>
+		<userLamu>PWI</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgAntwoord"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="verzocht"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie7">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-12-05T00:00:00.0Z</dateLamu>
+		<userLamu>PWI</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgPlaatsingBestelling"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie6"/>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie17"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="meldingGereed"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie8">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgBestellingNietMogelijk"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie15"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="verzocht"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie9">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgPlaatsingBestelling"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie8"/>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie4"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="meldingGereed"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie10">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgBevestigingBestelling"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="aanvaardEinde"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie11">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-12-05T00:00:00.0Z</dateLamu>
+		<userLamu>PWI</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgVraag"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t2_VraagOberAanKok"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="verzocht"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie12">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgAkkoord"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t2_VraagOberAanKok"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="aanvaardEinde"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie13">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgPlaatsingBestelling"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie9"/>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie7"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t3_OpdrachtKok"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="verzocht"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie14">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgAkkoord"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t3_OpdrachtKok"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="aanvaardEinde"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie15">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-05-04T00:00:00.0Z</dateLamu>
+		<userLamu>MMA</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgNietAkkoord"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t3_OpdrachtKok"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="aanvaardEinde"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie16">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-12-05T00:00:00.0Z</dateLamu>
+		<userLamu>PWI</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgVraag"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie6"/>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie17"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="wijzigingHold"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie17">
+		<requiredNotify>0</requiredNotify>
+		<dateLamu>2008-12-05T00:00:00.0Z</dateLamu>
+		<userLamu>PWI</userLamu>
+		<received>0</received>
+		<send>0</send>
+		<state/>
+		<initiatorToExecutor>true</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgAntwoord"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="verzocht"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
+</visiXML_VISI_Systematics>
