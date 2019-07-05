@@ -1,74 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20160331">
+<visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20160331" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20160331 C:\20160331.xsd">
 	<AppendixType id="AppRapport">
 		<description>Rapport</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-02-03T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeRapport"/>
 		</complexElements>
 	</AppendixType>
 	<AppendixType id="AppTekening">
 		<description>Tekening</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-02-03T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeTekening"/>
 		</complexElements>
 	</AppendixType>
 	<AppendixType id="AppVideo">
-		<description>Video</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-02-03T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>Video Ω</description>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeVideo"/>
 		</complexElements>
 	</AppendixType>
+	<ComplexElementType id="CeCommentaar">
+		<description>Commentaar</description>
+		<simpleElements>
+			<SimpleElementTypeRef idref="SeCommentaar"/>
+		</simpleElements>
+	</ComplexElementType>
 	<ComplexElementType id="CeAntwoord">
 		<description>Antwoord</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="Antwoord"/>
 		</simpleElements>
 	</ComplexElementType>
 	<ComplexElementType id="CeBaseTypeTest">
-		<description>Veldsoorten test</description>
-		<startDate>2013-10-25T00:00:00</startDate>
-		<endDate>2013-10-25T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
+		<description>Test van basetypes [rho ϱ]</description>
 		<simpleElements>
 			<SimpleElementTypeRef idref="SeBoolean"/>
 			<SimpleElementTypeRef idref="SeDate"/>
 			<SimpleElementTypeRef idref="SeDatetime"/>
 			<SimpleElementTypeRef idref="SeTime"/>
 			<SimpleElementTypeRef idref="SeDecimal"/>
+			<SimpleElementTypeRef idref="SePrijs"/>
 			<SimpleElementTypeRef idref="SeInteger"/>
 			<SimpleElementTypeRef idref="SeKeuzelijst"/>
 			<SimpleElementTypeRef idref="SeString"/>
+			<SimpleElementTypeRef idref="SeString_minlength_1"/>
+			<SimpleElementTypeRef idref="SeString_minlength_64"/>
 		</simpleElements>
 	</ComplexElementType>
 	<ComplexElementType id="CeBestelling">
 		<description>Bestelling</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2014-06-20T15:17:11</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<helpInfo>de gerechten en drankjes worden in aparte tabellen ingevoerd, met per regel de mogelijkheid een opmerking toe te voegen. Er is ook een totaalopmerking in te voeren, als er iets bijzonders over bijvoorbeeld de manier van opdienen ingevoerd moet worden.</helpInfo>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeInhoudBestelling"/>
@@ -79,36 +58,25 @@
 		</simpleElements>
 	</ComplexElementType>
 	<ComplexElementType id="CeDagMenu">
-		<description>Dagmenu</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2016-06-07T10:00:01</dateLaMu>
-		<userLaMu>Arne</userLaMu>
+		<description>§ Dagmenu (tabel met dagmenuitems)</description>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
 		</complexElements>
 	</ComplexElementType>
-
 	<ComplexElementType id="CeDrankenKaart">
-		<description>Drankenkaart</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2016-06-07T10:00:21</dateLaMu>
-		<userLaMu>Arne</userLaMu>
+		<description>§ Drankenkaart (tabel met dranken)</description>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
 		</complexElements>
 	</ComplexElementType>
-
+	<ComplexElementType id="CeMenuKaart">
+		<description>§ Menukaart (tabel met menuitems)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+		</complexElements>
+	</ComplexElementType>
 	<ComplexElementType id="CeInhoudBestelling">
 		<description>Inhoud van de bestelling</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2015-03-31T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="NaamGerecht"/>
 			<SimpleElementTypeRef idref="Opmerking"/>
@@ -117,11 +85,6 @@
 	</ComplexElementType>
 	<ComplexElementType id="CeInhoudDrankbestelling">
 		<description>Inhoud drankbestelling</description>
-		<startDate>2014-06-20T00:00:00</startDate>
-		<endDate>2014-06-20T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2015-03-31T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="SeSoortDrank"/>
 			<SimpleElementTypeRef idref="SeHoeveelheid"/>
@@ -132,94 +95,40 @@
 	</ComplexElementType>
 	<ComplexElementType id="CeInhoudMenuKaart">
 		<description>Inhoud van de menukaart</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2015-03-31T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="NaamMenukaartItem"/>
 			<SimpleElementTypeRef idref="Omschrijving"/>
-			<SimpleElementTypeRef idref="Prijs"/>
+			<SimpleElementTypeRef idref="SePrijs"/>
 		</simpleElements>
 		<maxOccurs>3</maxOccurs>
 	</ComplexElementType>
-	<ComplexElementType id="CeJaNee">
-		<description>Antwoord</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<simpleElements>
-			<SimpleElementTypeRef idref="Wachttijd"/>
-			<SimpleElementTypeRef idref="JaNee"/>
-			<SimpleElementTypeRef idref="Opmerking"/>
-		</simpleElements>
-	</ComplexElementType>
-	<ComplexElementType id="CeMenuKaart">
-		<description>Menukaart</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<complexElements>
-			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-		</complexElements>
-	</ComplexElementType>
 	<ComplexElementType id="CeMenuKaartType">
-		<description>MenukaartType</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>Menukaart</description>
 		<simpleElements>
 			<SimpleElementTypeRef idref="MenuKaartType"/>
 		</simpleElements>
 	</ComplexElementType>
 	<ComplexElementType id="CeOrganisatie">
 		<description>Organisatie specs</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2011-10-26T00:00:00</dateLaMu>
-		<userLaMu>PWi</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="SOAPServerURL"/>
 		</simpleElements>
 	</ComplexElementType>
 	<ComplexElementType id="CeRapport">
 		<description>Rapport</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-02-03T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="Auteur"/>
 			<SimpleElementTypeRef idref="Versie"/>
 		</simpleElements>
 	</ComplexElementType>
-	<ComplexElementType id="CeReactieTermijn">
+	<ComplexElementType id="CeReactietermijn">
 		<description>Reactietermijn</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-28T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<simpleElements>
-			<SimpleElementTypeRef idref="Wachttijd"/>
+			<SimpleElementTypeRef idref="GewensteReactietermijn"/>
 		</simpleElements>
 	</ComplexElementType>
 	<ComplexElementType id="CeSOAP">
 		<description>SOAP specificaties</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2011-10-26T00:00:00</dateLaMu>
-		<userLaMu>PWi</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="SOAPProtocol"/>
 			<SimpleElementTypeRef idref="SOAPServerURL"/>
@@ -228,33 +137,18 @@
 	</ComplexElementType>
 	<ComplexElementType id="CeTekening">
 		<description>Tekening</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-02-03T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="AantalLagen"/>
 		</simpleElements>
 	</ComplexElementType>
 	<ComplexElementType id="CeVideo">
 		<description>Video</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-02-03T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="VideoFormaat"/>
 		</simpleElements>
 	</ComplexElementType>
 	<ComplexElementType id="CeVraag">
 		<description>Vraag</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<simpleElements>
 			<SimpleElementTypeRef idref="Vraag"/>
 		</simpleElements>
@@ -279,29 +173,25 @@
 		</messageInTransaction>
 	</ElementCondition>
 	<ElementCondition id="ElementCondition3">
-		<description>Wachttijd mag nooit worden overschreven.</description>
+		<description>Gewenste reactietermijn mag nooit worden overschreven.</description>
 		<condition>FIXED</condition>
 		<simpleElement>
-			<SimpleElementTypeRef idref="Wachttijd"/>
+			<SimpleElementTypeRef idref="GewensteReactietermijn"/>
 		</simpleElement>
 	</ElementCondition>
-
 	<ElementCondition id="ElementCondition1vanScenario10">
 		<description>Free op Prijs SE in Child CE Inhoud van de menukaart</description>
 		<condition>FREE</condition>
-		<helpInfo/>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
 		</complexElements>
 		<simpleElement>
-			<SimpleElementTypeRef idref="Prijs"/>
+			<SimpleElementTypeRef idref="SePrijs"/>
 		</simpleElement>
 	</ElementCondition>
-
 	<ElementCondition id="ElementCondition2vanScenario10">
 		<description>Free op Omschrijving SE in Parent CE Menukaart</description>
 		<condition>FREE</condition>
-		<helpInfo/>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeMenuKaart"/>
 		</complexElements>
@@ -309,20 +199,16 @@
 			<SimpleElementTypeRef idref="Omschrijving"/>
 		</simpleElement>
 	</ElementCondition>
-
 	<ElementCondition id="ElementCondition3vanScenario10">
 		<description>Empty op Parent CE Dagmenu</description>
 		<condition>EMPTY</condition>
-		<helpInfo/>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeDagMenu"/>
 		</complexElements>
 	</ElementCondition>
-
 	<ElementCondition id="ElementCondition4vanScenario10">
 		<description>Free op MITT, Parent CE, Child CE, en SE</description>
 		<condition>FREE</condition>
-		<helpInfo/>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeDagMenu"/>
 			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
@@ -334,7 +220,6 @@
 			<MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
 		</messageInTransaction>
 	</ElementCondition>
-
 	<ElementCondition id="ElementCondition5vanScenario10">
 		<description>Free op Parent en Child CE</description>
 		<condition>FREE</condition>
@@ -343,24 +228,20 @@
 			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
 		</complexElements>
 	</ElementCondition>
-
 	<ElementCondition id="ElementCondition6vanScenario10">
 		<description>Fixed op parent en child CE en op SE prijs</description>
 		<condition>FIXED</condition>
-		<helpInfo/>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeDrankenKaart"/>
 			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
 		</complexElements>
 		<simpleElement>
-			<SimpleElementTypeRef idref="Prijs"/>
+			<SimpleElementTypeRef idref="SePrijs"/>
 		</simpleElement>
 	</ElementCondition>
-
 	<ElementCondition id="ElementCondition7vanScenario10">
 		<description>Foute element condition: Inhoud van de menukaart is child CE en menukaart is parent CE. Deze EC heeft inhoud als parant gedefinieerd en menukaart als child. Deze situatie bestaat niet in dit raamwerk.</description>
 		<condition>FREE</condition>
-		<helpInfo/>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
 			<ComplexElementTypeRef idref="CeMenuKaart"/>
@@ -371,19 +252,8 @@
 	</ElementCondition>
 	<GroupType id="StandardGroupType">
 		<description>Standard Group Type</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-28T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 	</GroupType>
 	<MessageInTransactionType id="BerichtInTransactie1">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-28T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>true</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
 		<firstMessage>true</firstMessage>
@@ -401,12 +271,6 @@
 		</group>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie10">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>true</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
 		<firstMessage>true</firstMessage>
@@ -427,12 +291,6 @@
 		</group>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie11">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>false</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
 		<message>
@@ -453,12 +311,6 @@
 		</group>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie12">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>true</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
 		<firstMessage>true</firstMessage>
@@ -482,12 +334,6 @@
 		</conditions>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie13">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>false</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
 		<message>
@@ -508,12 +354,6 @@
 		</group>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie14">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>false</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
 		<message>
@@ -534,12 +374,6 @@
 		</group>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie15">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-02-02T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>true</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
 		<firstMessage>true</firstMessage>
@@ -565,12 +399,6 @@
 		</conditions>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie16">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-02-02T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>false</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
 		<message>
@@ -590,10 +418,6 @@
 		</group>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie17">
-		<requiredNotify>0</requiredNotify>
-		<received>false</received>
-		<send>false</send>
-		<state>active</state>
 		<initiatorToExecutor>true</initiatorToExecutor>
 		<message>
 			<MessageTypeRef idref="msgAntwoordIsOvergenomen"/>
@@ -612,10 +436,6 @@
 		</conditions>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie18">
-		<requiredNotify>0</requiredNotify>
-		<received>false</received>
-		<send>false</send>
-		<state>active</state>
 		<initiatorToExecutor>true</initiatorToExecutor>
 		<message>
 			<MessageTypeRef idref="msgAntwoordWordtNietGebruikt"/>
@@ -634,10 +454,6 @@
 		</conditions>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie19">
-		<requiredNotify>0</requiredNotify>
-		<received>false</received>
-		<send>false</send>
-		<state>active</state>
 		<initiatorToExecutor>true</initiatorToExecutor>
 		<message>
 			<MessageTypeRef idref="msgBestellingIsAfgekeurdOpBasisVanAntwoord"/>
@@ -655,13 +471,7 @@
 			<MessageInTransactionTypeConditionRef idref="MC_AfkeuringIsVerstuurd"/>
 		</conditions>
 	</MessageInTransactionType>
-	<MessageInTransactionType id="BerichtInTransactie2">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
+	<MessageInTransactionType id="BerichtInTransactie2a">
 		<initiatorToExecutor>false</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
 		<message>
@@ -680,11 +490,26 @@
 			<GroupTypeRef idref="StandardGroupType"/>
 		</group>
 	</MessageInTransactionType>
+	<MessageInTransactionType id="BerichtInTransactie2b">
+		<initiatorToExecutor>false</initiatorToExecutor>
+		<openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+		<message>
+			<MessageTypeRef idref="msgNeeMetCommentaar"/>
+		</message>
+		<previous>
+			<MessageInTransactionTypeRef idref="BerichtInTransactie1"/>
+		</previous>
+		<transaction>
+			<TransactionTypeRef idref="t1_OpnameBestelling"/>
+		</transaction>
+		<transactionPhase>
+			<TransactionPhaseTypeRef idref="aanvaardEinde"/>
+		</transactionPhase>
+		<group>
+			<GroupTypeRef idref="StandardGroupType"/>
+		</group>
+	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie20">
-		<requiredNotify>0</requiredNotify>
-		<received>false</received>
-		<send>false</send>
-		<state>active</state>
 		<initiatorToExecutor>true</initiatorToExecutor>
 		<message>
 			<MessageTypeRef idref="msgBestellingIsGoedgekeurdOpBasisVanAntwoord"/>
@@ -703,12 +528,6 @@
 		</conditions>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie3">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>false</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
 		<firstMessage>false</firstMessage>
@@ -729,12 +548,6 @@
 		</group>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie4">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>true</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
 		<message>
@@ -754,12 +567,6 @@
 		</group>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie5">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>false</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
 		<message>
@@ -781,12 +588,6 @@
 		</group>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie6">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2011-10-26T00:00:00</dateLaMu>
-		<userLaMu>PWi</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>true</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
 		<message>
@@ -810,12 +611,6 @@
 		</appendixTypes>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie7">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>false</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
 		<message>
@@ -837,12 +632,6 @@
 		</group>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie8">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>true</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
 		<message>
@@ -862,12 +651,6 @@
 		</group>
 	</MessageInTransactionType>
 	<MessageInTransactionType id="BerichtInTransactie9">
-		<requiredNotify>0</requiredNotify>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
-		<received>true</received>
-		<send>true</send>
-		<state>active</state>
 		<initiatorToExecutor>true</initiatorToExecutor>
 		<openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
 		<message>
@@ -928,26 +711,16 @@
 	</MessageInTransactionTypeCondition>
 	<MessageType id="msgAanbiedingMenuKaart">
 		<description>Menukaart</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<appendixMandatory>true</appendixMandatory>
 		<complexElements>
+			<ComplexElementTypeRef idref="CeMenuKaartType"/>
 			<ComplexElementTypeRef idref="CeMenuKaart"/>
 			<ComplexElementTypeRef idref="CeDagMenu"/>
 			<ComplexElementTypeRef idref="CeDrankenKaart"/>
-			<ComplexElementTypeRef idref="CeMenuKaartType"/>
 		</complexElements>
 	</MessageType>
 	<MessageType id="msgAntwoord">
 		<description>Antwoord</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2011-10-26T00:00:00</dateLaMu>
-		<userLaMu>PWi</userLaMu>
 		<appendixMandatory>false</appendixMandatory>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeVraag"/>
@@ -960,11 +733,6 @@
 	</MessageType>
 	<MessageType id="msgAntwoordIsOvergenomen">
 		<description>Antwoord is overgenomen in antwoord aan ober</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2013-10-24T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<helpInfo>Dit bericht wordt alleen aangeboden als de kok een Antwoord naar de ober gestuurd heeft.</helpInfo>
 		<appendixMandatory>false</appendixMandatory>
 		<complexElements>
@@ -974,11 +742,6 @@
 	</MessageType>
 	<MessageType id="msgAntwoordWordtNietGebruikt">
 		<description>Antwoord wordt niet gebruikt</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2013-10-24T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<helpInfo>Dit bericht wordt aangeboden zolang de kok nog niet gereageerd heeft naar de ober. Hiermee sluit hij de transactie af en kan bijvoorbeeld een andere keukenhulp inschakelen.</helpInfo>
 		<appendixMandatory>false</appendixMandatory>
 		<complexElements>
@@ -988,11 +751,6 @@
 	</MessageType>
 	<MessageType id="msgBestellingAkkoord">
 		<description>Bestelling: akkoord</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2011-10-26T00:00:00</dateLaMu>
-		<userLaMu>PWi</userLaMu>
 		<appendixMandatory>false</appendixMandatory>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeBestelling"/>
@@ -1000,11 +758,6 @@
 	</MessageType>
 	<MessageType id="msgBestellingIsAfgekeurdOpBasisVanAntwoord">
 		<description>Bestelling is afgekeurd op basis van antwoord</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2013-10-24T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<helpInfo>Dit bericht wordt alleen aangeboden als de kok een Niet akkoord naar de ober gestuurd heeft.</helpInfo>
 		<appendixMandatory>false</appendixMandatory>
 		<complexElements>
@@ -1014,11 +767,6 @@
 	</MessageType>
 	<MessageType id="msgBestellingIsGoedgekeurdOpBasisVanAntwoord">
 		<description>Bestelling is goedgekeurd op basis van antwoord</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2013-10-24T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<helpInfo>Dit bericht wordt alleen aangeboden als de kok een Akkoord naar de ober gestuurd heeft.</helpInfo>
 		<appendixMandatory>false</appendixMandatory>
 		<complexElements>
@@ -1028,11 +776,6 @@
 	</MessageType>
 	<MessageType id="msgBestellingNietAkkoord">
 		<description>Bestelling: niet akkoord</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2011-10-26T00:00:00</dateLaMu>
-		<userLaMu>PWi</userLaMu>
 		<appendixMandatory>false</appendixMandatory>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeBestelling"/>
@@ -1040,42 +783,30 @@
 	</MessageType>
 	<MessageType id="msgJa">
 		<description>Antwoord: Ja</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-03-16T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeMenuKaartType"/>
 		</complexElements>
 	</MessageType>
 	<MessageType id="msgNee">
-		<description>Antwoord: Nee</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>Antwoord: Nee ™</description>
+	</MessageType>
+	<MessageType id="msgNeeMetCommentaar">
+		<description>Antwoord: Nee (met commentaar)</description>
+		<complexElements>
+			<ComplexElementTypeRef idref="CeBaseTypeTest"/>
+			<ComplexElementTypeRef idref="CeCommentaar"/>
+		</complexElements>
 	</MessageType>
 	<MessageType id="msgPlaatsingBestelling">
 		<description>Bestelling</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<appendixMandatory>false</appendixMandatory>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeBestelling"/>
+			<ComplexElementTypeRef idref="CeReactietermijn"/>
 		</complexElements>
 	</MessageType>
 	<MessageType id="msgVraag">
 		<description>Vraag</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<appendixMandatory>false</appendixMandatory>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeVraag"/>
@@ -1086,228 +817,126 @@
 	</MessageType>
 	<MessageType id="msgWiltuDeKaartZien">
 		<description>Wilt u de menukaart zien?</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-28T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<appendixMandatory>false</appendixMandatory>
 		<complexElements>
-			<ComplexElementTypeRef idref="CeReactieTermijn"/>
 			<ComplexElementTypeRef idref="CeBaseTypeTest"/>
+			<ComplexElementTypeRef idref="CeReactietermijn"/>
 		</complexElements>
 	</MessageType>
 	<OrganisationType id="StandardOrganisationType">
 		<description>Standard organisation type</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-28T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeOrganisatie"/>
 		</complexElements>
 	</OrganisationType>
 	<PersonType id="StandardPersonType">
-		<description>Standard person type</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-28T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>Standaard person type</description>
 	</PersonType>
 	<ProjectType id="ProjectType1">
 		<namespace>http://www.visi.nl/schemas/20160331/TestFramework</namespace>
-		<description>VISI Testscenario's Raamwerk</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2016-06-07T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
+		<description>VISI Testscenario's Raamwerk ©</description>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeSOAP"/>
 		</complexElements>
 	</ProjectType>
 	<RoleType id="keukenhulp">
-		<description>Keukenhulp</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-02-02T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>Keukenhûlp</description>
 	</RoleType>
 	<RoleType id="klant">
 		<description>Klant</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-28T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 	</RoleType>
 	<RoleType id="kok">
-		<description>Kok</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>Køk</description>
 	</RoleType>
 	<RoleType id="ober">
-		<description>Ober</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-28T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>Obèr</description>
 	</RoleType>
 	<SimpleElementType id="AantalLagen">
 		<description>Aantal lagen in de tekening</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-02-03T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="INTEGER"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="Antwoord">
 		<description>Antwoord</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="Auteur">
 		<description>Auteur</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-02-03T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="JaNee">
-		<description>Ja of Nee</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>true or false / Ja of Nee</description>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="BOOLEAN"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="MenuKaartType">
-		<description>Menukaarttype</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-02-02T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>Type ©</description>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="NaamGerecht">
 		<description>Naam van het gerecht</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="NaamMenukaartItem">
-		<description>Naam van menukaartitem</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>Naam</description>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="Omschrijving">
 		<description>Omschrijving</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="Opmerking">
-		<description>Opmerking</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>Opmerking ®</description>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
-	<SimpleElementType id="Prijs">
-		<description>Prijs</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+	<SimpleElementType id="SePrijs">
+		<description>Prijs (‎€)</description>
 		<userDefinedType>
-			<UserDefinedTypeRef idref="STRING"/>
+			<UserDefinedTypeRef idref="DECIMAL"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="SeBoolean">
 		<description>Boolean</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="BOOLEAN"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="SeDate">
 		<description>Date / Datum</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="DATE"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="SeDatetime">
-		<description>Datetime / Datum en tijd</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
-		<helpInfo/>
+		<description>Datetime / Datum &amp; tijd</description>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="DATETIME"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="SeDecimal">
 		<description>Decimal / Decimaal</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
-		<helpInfo/>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="DECIMAL"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="SeHoeveelheid">
 		<description>Hoeveelheid</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2014-06-20T15:13:39</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<helpInfo>De hoeveelheid drankjes die besteld zijn</helpInfo>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="INTEGER"/>
@@ -1315,182 +944,114 @@
 	</SimpleElementType>
 	<SimpleElementType id="SeInteger">
 		<description>Integer / Geheel getal</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="INTEGER"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="SeKeuzelijst">
-		<description>Keuzelijst</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
-		<helpInfo/>
+		<description>Enumeration / Keuzelijst</description>
 		<userDefinedType>
-			<UserDefinedTypeRef idref="Keuzelijst"/>
+			<UserDefinedTypeRef idref="ENUMERATION"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="SeSoortDrank">
-		<description>Soort drankje</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2014-06-20T15:12:24</dateLaMu>
-		<userLaMu>Arne</userLaMu>
+		<description>Naam van drank</description>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="SeString">
 		<description>String / Vrije tekst</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
-		<helpInfo/>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
+	<SimpleElementType id="SeString_minlength_1">
+		<description>String / Verplichte tekst</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING_MINLENGTH_1"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SeCommentaar">
+		<description>Commentaar</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING_MINLENGTH_1"/>
+		</userDefinedType>
+	</SimpleElementType>
+	<SimpleElementType id="SeString_minlength_64">
+		<description>String / Verplichte tekst (&gt;=64 characters)</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="STRING_MINLENGTH_64"/>
+		</userDefinedType>
+	</SimpleElementType>
 	<SimpleElementType id="SeTime">
 		<description>Time / Tijd</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
-		<helpInfo/>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="TIME"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="SOAPCentralServerURL">
 		<description>SOAP Central Server URL</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-03-16T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="SOAPProtocol">
 		<description>SOAP Protocol</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-03-16T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="SOAPServerURL">
 		<description>SOAP Server URL</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-03-16T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="Versie">
 		<description>Versienummer</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-02-03T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="INTEGER"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="VideoFormaat">
 		<description>Videoformaat</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-02-03T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<SimpleElementType id="Vraag">
 		<description>Vraag</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<userDefinedType>
 			<UserDefinedTypeRef idref="STRING"/>
 		</userDefinedType>
 	</SimpleElementType>
-	<SimpleElementType id="Wachttijd">
-		<description>Wachttijd (in seconden)</description>
-		<interfaceType/>
-		<state>active</state>
-		<dateLaMu>2009-02-02T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+	<SimpleElementType id="GewensteReactietermijn">
+		<description>Gewenste reactietermijn</description>
 		<userDefinedType>
-			<UserDefinedTypeRef idref="INTEGER"/>
+			<UserDefinedTypeRef idref="DATE"/>
 		</userDefinedType>
 	</SimpleElementType>
 	<TransactionPhaseType id="aanvaardEinde">
-		<description>Aanvaard/Einde</description>
-		<startDate>2008-05-04T00:00:00</startDate>
-		<endDate>2008-05-04T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2008-05-04T00:00:00</dateLaMu>
-		<userLaMu>MMA</userLaMu>
+		<description>Aanvaard / Einde</description>
 	</TransactionPhaseType>
 	<TransactionPhaseType id="beloofdExecutie">
-		<description>Beloofd/Executie</description>
-		<startDate>2008-05-04T00:00:00</startDate>
-		<endDate>2008-05-04T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2008-05-04T00:00:00</dateLaMu>
-		<userLaMu>MMA</userLaMu>
+		<description>Beloofd / Executie</description>
 	</TransactionPhaseType>
 	<TransactionPhaseType id="meldingGereed">
 		<description>Melding Gereed</description>
-		<startDate>2008-05-04T00:00:00</startDate>
-		<endDate>2008-05-04T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2008-05-04T00:00:00</dateLaMu>
-		<userLaMu>MMA</userLaMu>
 	</TransactionPhaseType>
 	<TransactionPhaseType id="start">
 		<description>Start</description>
-		<startDate>2008-05-04T00:00:00</startDate>
-		<endDate>2008-05-04T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2008-05-04T00:00:00</dateLaMu>
-		<userLaMu>MMA</userLaMu>
 	</TransactionPhaseType>
 	<TransactionPhaseType id="verzocht">
 		<description>Verzocht</description>
-		<startDate>2008-05-04T00:00:00</startDate>
-		<endDate>2008-05-04T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2008-05-04T00:00:00</dateLaMu>
-		<userLaMu>MMA</userLaMu>
 	</TransactionPhaseType>
 	<TransactionPhaseType id="wijzigingHold">
-		<description>Wijziging/Hold</description>
-		<startDate>2008-05-04T00:00:00</startDate>
-		<endDate>2008-05-04T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2008-05-04T00:00:00</dateLaMu>
-		<userLaMu>MMA</userLaMu>
+		<description>Wijziging / Hold</description>
 	</TransactionPhaseType>
 	<TransactionType id="t1_OpnameBestelling">
-		<description>T1 Opname van bestelling (ober aan klant)</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2011-10-26T00:00:00</dateLaMu>
-		<userLaMu>PWi</userLaMu>
+		<description>T1 Opnâme van bestelling (tussen ober aan klant)</description>
 		<initiator>
 			<RoleTypeRef idref="ober"/>
 		</initiator>
@@ -1499,12 +1060,7 @@
 		</executor>
 	</TransactionType>
 	<TransactionType id="t2_VraagOberAanKok">
-		<description>T2 Vraag (ober aan kok)</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-28T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>T2 Vraāg (tussen ober aan kok)</description>
 		<initiator>
 			<RoleTypeRef idref="ober"/>
 		</initiator>
@@ -1513,12 +1069,7 @@
 		</executor>
 	</TransactionType>
 	<TransactionType id="t3_OpdrachtKok">
-		<description>T3 Opdracht (ober aan kok)</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2009-01-31T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>T3 Opdrącht (tussen ober aan kok)</description>
 		<initiator>
 			<RoleTypeRef idref="ober"/>
 		</initiator>
@@ -1527,12 +1078,7 @@
 		</executor>
 	</TransactionType>
 	<TransactionType id="t4_VraagKokAanKeukenhulp">
-		<description>T4 Vraag (kok aan keukenhulp)</description>
-		<startDate>2009-01-01T00:00:00</startDate>
-		<endDate>2010-01-01T00:00:00</endDate>
-		<state>active</state>
-		<dateLaMu>2011-10-26T00:00:00</dateLaMu>
-		<userLaMu>PWi</userLaMu>
+		<description>T4 Vraåg (tussen kok aan keukenhulp)</description>
 		<initiator>
 			<RoleTypeRef idref="kok"/>
 		</initiator>
@@ -1545,59 +1091,45 @@
 	</TransactionType>
 	<UserDefinedType id="BOOLEAN">
 		<description>BOOLEAN</description>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<baseType>BOOLEAN</baseType>
 	</UserDefinedType>
 	<UserDefinedType id="DATE">
 		<description>DATE</description>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<baseType>DATE</baseType>
 	</UserDefinedType>
 	<UserDefinedType id="DATETIME">
 		<description>DATETIME</description>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<baseType>DATETIME</baseType>
 	</UserDefinedType>
 	<UserDefinedType id="DECIMAL">
 		<description>DECIMAL</description>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<baseType>DECIMAL</baseType>
 	</UserDefinedType>
 	<UserDefinedType id="INTEGER">
 		<description>INTEGER</description>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
 		<baseType>INTEGER</baseType>
 	</UserDefinedType>
-	<UserDefinedType id="Keuzelijst">
-		<description>Keuzelijst</description>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
+	<UserDefinedType id="ENUMERATION">
+		<description>ENUMERATION</description>
 		<baseType>STRING</baseType>
-		<xsdRestriction>&lt;xs:enumeration value="Keuze 1"/&gt;&lt;xs:enumeration value="Keuze 2"/&gt;&lt;xs:enumeration value="Keuze 3"/&gt;</xsdRestriction>
+		<xsdRestriction>&lt;xs:enumeration value="No accents here"/&gt;&lt;xs:enumeration value="This is an e acute: é"/&gt;&lt;xs:enumeration value="eaiou with circumflexes: êâîôû"/&gt;&lt;xs:enumeration value="eaiou with umlauts: ëäïöü"/&gt;&lt;xs:enumeration value="less than: &amp;lt;"/&gt;&lt;xs:enumeration value="greater than: &amp;gt;"/&gt;&lt;xs:enumeration value="ampersand: &amp;amp;"/&gt;&lt;xs:enumeration value="quote: &amp;quot;"/&gt;&lt;xs:enumeration value="apostrophe: &amp;apos;"/&gt;&lt;xs:enumeration value="dollar sign: $"/&gt;&lt;xs:enumeration value="yen sign: ¥"/&gt;&lt;xs:enumeration value="euro sign: €"/&gt;&lt;xs:enumeration value="micro sign: µ"/&gt;&lt;xs:enumeration value="question mark: ?"/&gt;&lt;xs:enumeration value="at: @"/&gt;&lt;xs:enumeration value="cedilla: ¸"/&gt;&lt;xs:enumeration value="c with cedilla: ç"/&gt;</xsdRestriction>
 	</UserDefinedType>
 	<UserDefinedType id="STRING">
-		<description>STRING</description>
-		<state>active</state>
-		<dateLaMu>2009-01-29T00:00:00</dateLaMu>
-		<userLaMu>PWI</userLaMu>
+		<description>STRING OPTIONAL</description>
 		<baseType>STRING</baseType>
+	</UserDefinedType>
+	<UserDefinedType id="STRING_MINLENGTH_1">
+		<description>STRING MINLENGTH 1</description>
+		<baseType>STRING</baseType>
+		<xsdRestriction>&lt;xs:minLength value="1"/&gt;</xsdRestriction>
+	</UserDefinedType>
+	<UserDefinedType id="STRING_MINLENGTH_64">
+		<description>STRING MINLENGTH 64</description>
+		<baseType>STRING</baseType>
+		<xsdRestriction>&lt;xs:minLength value="64"/&gt;</xsdRestriction>
 	</UserDefinedType>
 	<UserDefinedType id="TIME">
 		<description>TIME</description>
-		<state>active</state>
-		<dateLaMu>2013-10-25T00:00:00</dateLaMu>
-		<userLaMu>Arne</userLaMu>
 		<baseType>TIME</baseType>
 	</UserDefinedType>
 </visiXML_VISI_Systematics>
