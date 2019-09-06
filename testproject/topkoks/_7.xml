@@ -33,15 +33,16 @@
 	<ComplexElementType id="CeBaseTypeTest">
 		<description>Test van basetypes [rho ϱ]</description>
 		<simpleElements>
+			<SimpleElementTypeRef idref="SeAnyURI"/>
 			<SimpleElementTypeRef idref="SeBoolean"/>
 			<SimpleElementTypeRef idref="SeDate"/>
 			<SimpleElementTypeRef idref="SeDatetime"/>
-			<SimpleElementTypeRef idref="SeTime"/>
 			<SimpleElementTypeRef idref="SeDecimal"/>
 			<SimpleElementTypeRef idref="SePrijs"/>
 			<SimpleElementTypeRef idref="SeInteger"/>
-			<SimpleElementTypeRef idref="SeKeuzelijst"/>
 			<SimpleElementTypeRef idref="SeString"/>
+			<SimpleElementTypeRef idref="SeKeuzelijst"/>
+			<SimpleElementTypeRef idref="SeTime"/>
 			<SimpleElementTypeRef idref="SeString_minlength_1"/>
 			<SimpleElementTypeRef idref="SeString_minlength_64"/>
 		</simpleElements>
@@ -917,6 +918,12 @@
 			<UserDefinedTypeRef idref="BOOLEAN"/>
 		</userDefinedType>
 	</SimpleElementType>
+	<SimpleElementType id="SeAnyURI">
+		<description>anyURI</description>
+		<userDefinedType>
+			<UserDefinedTypeRef idref="ANYURI"/>
+		</userDefinedType>
+	</SimpleElementType>
 	<SimpleElementType id="SeDate">
 		<description>Date / Datum</description>
 		<userDefinedType>
@@ -1092,6 +1099,10 @@
 	<UserDefinedType id="BOOLEAN">
 		<description>BOOLEAN</description>
 		<baseType>BOOLEAN</baseType>
+	</UserDefinedType>
+	<UserDefinedType id="ANYURI">
+		<description>ANYURI</description>
+		<baseType>ANYURI</baseType>
 	</UserDefinedType>
 	<UserDefinedType id="DATE">
 		<description>DATE</description>
