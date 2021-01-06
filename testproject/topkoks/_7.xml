@@ -834,7 +834,7 @@
 		<description>Standaard person type</description>
 	</PersonType>
 	<ProjectType id="ProjectType1">
-		<namespace>http://www.visi.nl/schemas/20160331/TestFramework</namespace>
+		<namespace>http://www.visi.nl/schemas/20160331/TestFramework_v1</namespace>
 		<description>VISI Testscenario's Raamwerk ©</description>
 		<complexElements>
 			<ComplexElementTypeRef idref="CeSOAP"/>
