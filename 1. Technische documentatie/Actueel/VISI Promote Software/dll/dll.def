@@ -1,0 +1,15 @@
+; dll.def : Declares the module parameters for the DLL.
+
+LIBRARY      "dll"
+DESCRIPTION  'dll Windows Dynamic Link Library'
+
+EXPORTS
+	Convert__2into__3;
+	Convert__9into_10;
+	Get__3;
+	Get_10;
+	Promote__2__5__7into__9;
+	Set__2;
+	Set__5;
+	Set__7;
+	GetErrorCode;

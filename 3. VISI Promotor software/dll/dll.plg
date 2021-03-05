@@ -1,0 +1,120 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: dll - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x809 /fo"Release/dll.res" /d "NDEBUG" "H:\VISI__\trunk\VISI Promote Software\dll\dll.rc"" 
+Creating temporary file "C:\Users\Sony\AppData\Local\Temp\RSPB08A.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/dll.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"H:\VISI__\trunk\VISI Promote Software\dll\buildXSD.cpp"
+"H:\VISI__\trunk\VISI Promote Software\dll\dll.cpp"
+"H:\VISI__\trunk\VISI Promote Software\dll\promote.cpp"
+"H:\VISI__\trunk\VISI Promote Software\dll\readExternalSource.cpp"
+"H:\VISI__\trunk\VISI Promote Software\dll\readSchema.cpp"
+"H:\VISI__\trunk\VISI Promote Software\dll\readXML.cpp"
+]
+Creating command line "cl.exe @C:\Users\Sony\AppData\Local\Temp\RSPB08A.tmp" 
+Creating temporary file "C:\Users\Sony\AppData\Local\Temp\RSPB08B.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/dll.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"H:\VISI__\trunk\VISI Promote Software\dll\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Sony\AppData\Local\Temp\RSPB08B.tmp" 
+Creating temporary file "C:\Users\Sony\AppData\Local\Temp\RSPB08C.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"Release/dll.pdb" /machine:I386 /def:".\dll.def" /out:"Release/dll.dll" /implib:"Release/dll.lib" 
+".\Release\buildXSD.obj"
+".\Release\dll.obj"
+".\Release\promote.obj"
+".\Release\readExternalSource.obj"
+".\Release\readSchema.obj"
+".\Release\readXML.obj"
+".\Release\StdAfx.obj"
+".\Release\dll.res"
+]
+Creating command line "link.exe @C:\Users\Sony\AppData\Local\Temp\RSPB08C.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+buildXSD.cpp
+dll.cpp
+promote.cpp
+readExternalSource.cpp
+H:\VISI__\trunk\VISI Promote Software\dll\readExternalSource.cpp(68) : warning C4018: '>=' : signed/unsigned mismatch
+readSchema.cpp
+readXML.cpp
+H:\VISI__\trunk\VISI Promote Software\dll\readXML.cpp(134) : warning C4065: switch statement contains 'default' but no 'case' labels
+Generating Code...
+Linking...
+   Creating library Release/dll.lib and object Release/dll.exp
+LINK : warning LNK4089: all references to "SHELL32.dll" discarded by /OPT:REF
+
+
+
+<h3>Results</h3>
+dll.dll - 0 error(s), 3 warning(s)
+<h3>
+--------------------Configuration: dll - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x809 /fo"Debug/dll.res" /d "_DEBUG" "H:\VISI__\trunk\VISI Promote Software\dll\dll.rc"" 
+Creating temporary file "C:\Users\Sony\AppData\Local\Temp\RSPB483.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/dll.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"H:\VISI__\trunk\VISI Promote Software\dll\buildXSD.cpp"
+"H:\VISI__\trunk\VISI Promote Software\dll\dll.cpp"
+"H:\VISI__\trunk\VISI Promote Software\dll\promote.cpp"
+"H:\VISI__\trunk\VISI Promote Software\dll\readExternalSource.cpp"
+"H:\VISI__\trunk\VISI Promote Software\dll\readSchema.cpp"
+"H:\VISI__\trunk\VISI Promote Software\dll\readXML.cpp"
+]
+Creating command line "cl.exe @C:\Users\Sony\AppData\Local\Temp\RSPB483.tmp" 
+Creating temporary file "C:\Users\Sony\AppData\Local\Temp\RSPB484.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/dll.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"H:\VISI__\trunk\VISI Promote Software\dll\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Sony\AppData\Local\Temp\RSPB484.tmp" 
+Creating temporary file "C:\Users\Sony\AppData\Local\Temp\RSPB485.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/dll.pdb" /debug /machine:I386 /def:".\dll.def" /out:"Debug/dll.dll" /implib:"Debug/dll.lib" /pdbtype:sept 
+".\Debug\buildXSD.obj"
+".\Debug\dll.obj"
+".\Debug\promote.obj"
+".\Debug\readExternalSource.obj"
+".\Debug\readSchema.obj"
+".\Debug\readXML.obj"
+".\Debug\StdAfx.obj"
+".\Debug\dll.res"
+]
+Creating command line "link.exe @C:\Users\Sony\AppData\Local\Temp\RSPB485.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+buildXSD.cpp
+dll.cpp
+promote.cpp
+readExternalSource.cpp
+H:\VISI__\trunk\VISI Promote Software\dll\readExternalSource.cpp(68) : warning C4018: '>=' : signed/unsigned mismatch
+readSchema.cpp
+readXML.cpp
+H:\VISI__\trunk\VISI Promote Software\dll\readXML.cpp(134) : warning C4065: switch statement contains 'default' but no 'case' labels
+Generating Code...
+Linking...
+   Creating library Debug/dll.lib and object Debug/dll.exp
+
+
+
+<h3>Results</h3>
+dll.dll - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

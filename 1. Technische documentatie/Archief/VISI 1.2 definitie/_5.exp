@@ -1,0 +1,157 @@
+SCHEMA visiXML_MessageSchema;
+
+-- Peter Bonsma (TNO)
+-- Peter Willems (TNO)
+
+-- Complete model Part II, version 1.2.1, 24 October 2008
+
+ENTITY GroupTemplate;
+ name : STRING;
+ description : STRING;
+ creationDate : DATETIME;
+ startDate : DATETIME;
+ endDate : DATETIME;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
+ versionNo : STRING;
+
+ transaction : TransactionTemplate;
+END_ENTITY;
+
+ENTITY AppendixGroup;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
+
+ group : GroupTemplate;
+END_ENTITY;
+
+ENTITY AppendixTemplate;
+ name : STRING;
+ fileLocation : STRING;
+ fileType : STRING;
+ fileVersion : STRING;
+ documentIdentification : STRING;
+ documentVersion : STRING;
+ documentReference : STRING;
+ objectCode : OPTIONAL STRING;
+ startDate : DATETIME;
+ endDate : DATETIME;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+
+ message : MessageTemplate;
+ appendixGroup : AppendixGroup;
+ template : ComplexElementTemplate;
+END_ENTITY;
+
+ENTITY MessageTemplate;
+ identification : STRING;
+ dateSend : DATETIME;
+ dateRead : DATETIME;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
+ initiatingTransactionMessageID : OPTIONAL STRING;
+ initiatorToExecutor : BOOLEAN;
+
+ messageInTransaction : MessageInTransactionTemplate;
+ transaction : TransactionTemplate;
+ template : ComplexElementTemplate;
+END_ENTITY;
+
+ENTITY MessageInTransactionTemplate;
+ identification : STRING;
+ dateSend : DATETIME;
+ dateRead : DATETIME;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
+END_ENTITY;
+
+ENTITY TransactionTemplate;
+ name : STRING;
+ description : STRING;
+ startDate : DATETIME;
+ endDate : DATETIME;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
+ result : OPTIONAL STRING;
+
+ initiator : PersonInRole;
+ executor : PersonInRole;
+ project : ProjectTypeInstance;
+END_ENTITY;
+
+ENTITY TransactionPhaseTemplate;
+ name : STRING;
+ description : STRING;
+ dateReached : DATETIME;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
+
+ transaction : TransactionTemplate;
+END_ENTITY;
+
+ENTITY PersonTemplate;
+ userName : STRING;
+ name : STRING;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
+
+ template : ComplexElementTemplate;
+END_ENTITY;
+
+ENTITY OrganisationTemplate;
+ name : STRING;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
+
+ contactPerson : PersonTemplate;
+ template : ComplexElementTemplate;
+END_ENTITY;
+
+ENTITY PersonInRole;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
+
+ successor : OPTIONAL PersonInRole;
+ contactPerson : PersonTemplate;
+ organisation : OrganisationTemplate;
+ role : RoleTemplate;
+END_ENTITY;
+
+ENTITY RoleTemplate;
+ name : STRING;
+ description : STRING;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
+ category : OPTIONAL STRING;
+END_ENTITY;
+
+ENTITY ProjectTypeInstance;
+ name : STRING;
+ description : STRING;
+ startDate : DATETIME;
+ endDate : DATETIME;
+ state : STRING;
+ dateLamu : DATETIME;
+ userLamu : STRING;
+
+ template : ComplexElementTemplate;
+END_ENTITY;
+
+ENTITY ComplexElementTemplate;
+ template : SimpleElementVirtual;
+END_ENTITY;
+
+END_SCHEMA;

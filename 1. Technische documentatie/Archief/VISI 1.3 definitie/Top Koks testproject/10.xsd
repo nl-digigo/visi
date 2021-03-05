@@ -1,0 +1,1981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- created with VISI DLL, EXP2XSD part, created by Peter Bonsma -->
+<xsd:schema targetNamespace="http://www.visi.nl/TestFramework" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:topkoks="http://www.visi.nl/TestFramework" elementFormDefault="qualified">
+
+	<!-- root element declaration (for SCHEMA definitions) -->
+	<xsd:element name="visiXML_MessageSchema">
+		<xsd:complexType>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="topkoks:AppRapport" />
+				<xsd:element ref="topkoks:AppTekening" />
+				<xsd:element ref="topkoks:AppVideo" />
+				<xsd:element ref="topkoks:AppendixGroup" />
+				<xsd:element ref="topkoks:BerichtInTransactie1" />
+				<xsd:element ref="topkoks:BerichtInTransactie10" />
+				<xsd:element ref="topkoks:BerichtInTransactie11" />
+				<xsd:element ref="topkoks:BerichtInTransactie12" />
+				<xsd:element ref="topkoks:BerichtInTransactie13" />
+				<xsd:element ref="topkoks:BerichtInTransactie14" />
+				<xsd:element ref="topkoks:BerichtInTransactie15" />
+				<xsd:element ref="topkoks:BerichtInTransactie16" />
+				<xsd:element ref="topkoks:BerichtInTransactie2" />
+				<xsd:element ref="topkoks:BerichtInTransactie3" />
+				<xsd:element ref="topkoks:BerichtInTransactie4" />
+				<xsd:element ref="topkoks:BerichtInTransactie5" />
+				<xsd:element ref="topkoks:BerichtInTransactie6" />
+				<xsd:element ref="topkoks:BerichtInTransactie7" />
+				<xsd:element ref="topkoks:BerichtInTransactie8" />
+				<xsd:element ref="topkoks:BerichtInTransactie9" />
+				<xsd:element ref="topkoks:CeAntwoord" />
+				<xsd:element ref="topkoks:CeBestelling" />
+				<xsd:element ref="topkoks:CeInhoudBestelling" />
+				<xsd:element ref="topkoks:CeInhoudMenuKaart" />
+				<xsd:element ref="topkoks:CeJaNee" />
+				<xsd:element ref="topkoks:CeMenuKaart" />
+				<xsd:element ref="topkoks:CeMenuKaartType" />
+				<xsd:element ref="topkoks:CeOrganisatie" />
+				<xsd:element ref="topkoks:CeRapport" />
+				<xsd:element ref="topkoks:CeReactieTermijn" />
+				<xsd:element ref="topkoks:CeSOAP" />
+				<xsd:element ref="topkoks:CeTekening" />
+				<xsd:element ref="topkoks:CeVideo" />
+				<xsd:element ref="topkoks:CeVraag" />
+				<xsd:element ref="topkoks:PersonInRole" />
+				<xsd:element ref="topkoks:ProjectType1" />
+				<xsd:element ref="topkoks:StandardGroupType" />
+				<xsd:element ref="topkoks:StandardOrganisationType" />
+				<xsd:element ref="topkoks:StandardPersonType" />
+				<xsd:element ref="topkoks:aanvaardEinde" />
+				<xsd:element ref="topkoks:beloofdExecutie" />
+				<xsd:element ref="topkoks:keukenhulp" />
+				<xsd:element ref="topkoks:klant" />
+				<xsd:element ref="topkoks:kok" />
+				<xsd:element ref="topkoks:meldingGereed" />
+				<xsd:element ref="topkoks:msgAanbiedingMenuKaart" />
+				<xsd:element ref="topkoks:msgAntwoord" />
+				<xsd:element ref="topkoks:msgBestellingAkkoord" />
+				<xsd:element ref="topkoks:msgBestellingNietAkkoord" />
+				<xsd:element ref="topkoks:msgJa" />
+				<xsd:element ref="topkoks:msgNee" />
+				<xsd:element ref="topkoks:msgPlaatsingBestelling" />
+				<xsd:element ref="topkoks:msgVraag" />
+				<xsd:element ref="topkoks:msgWiltuDeKaartZien" />
+				<xsd:element ref="topkoks:ober" />
+				<xsd:element ref="topkoks:start" />
+				<xsd:element ref="topkoks:t1_OpnameBestelling" />
+				<xsd:element ref="topkoks:t2_VraagOberAanKok" />
+				<xsd:element ref="topkoks:t3_OpdrachtKok" />
+				<xsd:element ref="topkoks:t4_VraagKokAanKeukenhulp" />
+				<xsd:element ref="topkoks:verzocht" />
+				<xsd:element ref="topkoks:wijzigingHold" />
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- element declarations (for ENTITY definitions) -->
+	<xsd:element name="AppRapport" type="topkoks:AppRapportType" />
+	<xsd:element name="AppTekening" type="topkoks:AppTekeningType" />
+	<xsd:element name="AppVideo" type="topkoks:AppVideoType" />
+	<xsd:element name="AppendixGroup" type="topkoks:AppendixGroupType" />
+	<xsd:element name="BerichtInTransactie1" type="topkoks:BerichtInTransactie1Type" />
+	<xsd:element name="BerichtInTransactie10" type="topkoks:BerichtInTransactie10Type" />
+	<xsd:element name="BerichtInTransactie11" type="topkoks:BerichtInTransactie11Type" />
+	<xsd:element name="BerichtInTransactie12" type="topkoks:BerichtInTransactie12Type" />
+	<xsd:element name="BerichtInTransactie13" type="topkoks:BerichtInTransactie13Type" />
+	<xsd:element name="BerichtInTransactie14" type="topkoks:BerichtInTransactie14Type" />
+	<xsd:element name="BerichtInTransactie15" type="topkoks:BerichtInTransactie15Type" />
+	<xsd:element name="BerichtInTransactie16" type="topkoks:BerichtInTransactie16Type" />
+	<xsd:element name="BerichtInTransactie2" type="topkoks:BerichtInTransactie2Type" />
+	<xsd:element name="BerichtInTransactie3" type="topkoks:BerichtInTransactie3Type" />
+	<xsd:element name="BerichtInTransactie4" type="topkoks:BerichtInTransactie4Type" />
+	<xsd:element name="BerichtInTransactie5" type="topkoks:BerichtInTransactie5Type" />
+	<xsd:element name="BerichtInTransactie6" type="topkoks:BerichtInTransactie6Type" />
+	<xsd:element name="BerichtInTransactie7" type="topkoks:BerichtInTransactie7Type" />
+	<xsd:element name="BerichtInTransactie8" type="topkoks:BerichtInTransactie8Type" />
+	<xsd:element name="BerichtInTransactie9" type="topkoks:BerichtInTransactie9Type" />
+	<xsd:element name="CeAntwoord" type="topkoks:CeAntwoordType" />
+	<xsd:element name="CeBestelling" type="topkoks:CeBestellingType" />
+	<xsd:element name="CeInhoudBestelling" type="topkoks:CeInhoudBestellingType" />
+	<xsd:element name="CeInhoudMenuKaart" type="topkoks:CeInhoudMenuKaartType" />
+	<xsd:element name="CeJaNee" type="topkoks:CeJaNeeType" />
+	<xsd:element name="CeMenuKaart" type="topkoks:CeMenuKaartType" />
+	<xsd:element name="CeMenuKaartType" type="topkoks:CeMenuKaartTypeType" />
+	<xsd:element name="CeOrganisatie" type="topkoks:CeOrganisatieType" />
+	<xsd:element name="CeRapport" type="topkoks:CeRapportType" />
+	<xsd:element name="CeReactieTermijn" type="topkoks:CeReactieTermijnType" />
+	<xsd:element name="CeSOAP" type="topkoks:CeSOAPType" />
+	<xsd:element name="CeTekening" type="topkoks:CeTekeningType" />
+	<xsd:element name="CeVideo" type="topkoks:CeVideoType" />
+	<xsd:element name="CeVraag" type="topkoks:CeVraagType" />
+	<xsd:element name="PersonInRole" type="topkoks:PersonInRoleType" />
+	<xsd:element name="ProjectType1" type="topkoks:ProjectType1Type" />
+	<xsd:element name="StandardGroupType" type="topkoks:StandardGroupTypeType" />
+	<xsd:element name="StandardOrganisationType" type="topkoks:StandardOrganisationTypeType" />
+	<xsd:element name="StandardPersonType" type="topkoks:StandardPersonTypeType" />
+	<xsd:element name="aanvaardEinde" type="topkoks:aanvaardEindeType" />
+	<xsd:element name="beloofdExecutie" type="topkoks:beloofdExecutieType" />
+	<xsd:element name="keukenhulp" type="topkoks:keukenhulpType" />
+	<xsd:element name="klant" type="topkoks:klantType" />
+	<xsd:element name="kok" type="topkoks:kokType" />
+	<xsd:element name="meldingGereed" type="topkoks:meldingGereedType" />
+	<xsd:element name="msgAanbiedingMenuKaart" type="topkoks:msgAanbiedingMenuKaartType" />
+	<xsd:element name="msgAntwoord" type="topkoks:msgAntwoordType" />
+	<xsd:element name="msgBestellingAkkoord" type="topkoks:msgBestellingAkkoordType" />
+	<xsd:element name="msgBestellingNietAkkoord" type="topkoks:msgBestellingNietAkkoordType" />
+	<xsd:element name="msgJa" type="topkoks:msgJaType" />
+	<xsd:element name="msgNee" type="topkoks:msgNeeType" />
+	<xsd:element name="msgPlaatsingBestelling" type="topkoks:msgPlaatsingBestellingType" />
+	<xsd:element name="msgVraag" type="topkoks:msgVraagType" />
+	<xsd:element name="msgWiltuDeKaartZien" type="topkoks:msgWiltuDeKaartZienType" />
+	<xsd:element name="ober" type="topkoks:oberType" />
+	<xsd:element name="start" type="topkoks:startType" />
+	<xsd:element name="t1_OpnameBestelling" type="topkoks:t1_OpnameBestellingType" />
+	<xsd:element name="t2_VraagOberAanKok" type="topkoks:t2_VraagOberAanKokType" />
+	<xsd:element name="t3_OpdrachtKok" type="topkoks:t3_OpdrachtKokType" />
+	<xsd:element name="t4_VraagKokAanKeukenhulp" type="topkoks:t4_VraagKokAanKeukenhulpType" />
+	<xsd:element name="verzocht" type="topkoks:verzochtType" />
+	<xsd:element name="wijzigingHold" type="topkoks:wijzigingHoldType" />
+
+	<!-- element reference declarations (for ENTITY definitions) -->
+	<xsd:element name="AppRapportRef" type="topkoks:AppRapportTypeRef" />
+	<xsd:element name="AppTekeningRef" type="topkoks:AppTekeningTypeRef" />
+	<xsd:element name="AppVideoRef" type="topkoks:AppVideoTypeRef" />
+	<xsd:element name="AppendixGroupRef" type="topkoks:AppendixGroupTypeRef" />
+	<xsd:element name="BerichtInTransactie1Ref" type="topkoks:BerichtInTransactie1TypeRef" />
+	<xsd:element name="BerichtInTransactie10Ref" type="topkoks:BerichtInTransactie10TypeRef" />
+	<xsd:element name="BerichtInTransactie11Ref" type="topkoks:BerichtInTransactie11TypeRef" />
+	<xsd:element name="BerichtInTransactie12Ref" type="topkoks:BerichtInTransactie12TypeRef" />
+	<xsd:element name="BerichtInTransactie13Ref" type="topkoks:BerichtInTransactie13TypeRef" />
+	<xsd:element name="BerichtInTransactie14Ref" type="topkoks:BerichtInTransactie14TypeRef" />
+	<xsd:element name="BerichtInTransactie15Ref" type="topkoks:BerichtInTransactie15TypeRef" />
+	<xsd:element name="BerichtInTransactie16Ref" type="topkoks:BerichtInTransactie16TypeRef" />
+	<xsd:element name="BerichtInTransactie2Ref" type="topkoks:BerichtInTransactie2TypeRef" />
+	<xsd:element name="BerichtInTransactie3Ref" type="topkoks:BerichtInTransactie3TypeRef" />
+	<xsd:element name="BerichtInTransactie4Ref" type="topkoks:BerichtInTransactie4TypeRef" />
+	<xsd:element name="BerichtInTransactie5Ref" type="topkoks:BerichtInTransactie5TypeRef" />
+	<xsd:element name="BerichtInTransactie6Ref" type="topkoks:BerichtInTransactie6TypeRef" />
+	<xsd:element name="BerichtInTransactie7Ref" type="topkoks:BerichtInTransactie7TypeRef" />
+	<xsd:element name="BerichtInTransactie8Ref" type="topkoks:BerichtInTransactie8TypeRef" />
+	<xsd:element name="BerichtInTransactie9Ref" type="topkoks:BerichtInTransactie9TypeRef" />
+	<xsd:element name="CeAntwoordRef" type="topkoks:CeAntwoordTypeRef" />
+	<xsd:element name="CeBestellingRef" type="topkoks:CeBestellingTypeRef" />
+	<xsd:element name="CeInhoudBestellingRef" type="topkoks:CeInhoudBestellingTypeRef" />
+	<xsd:element name="CeInhoudMenuKaartRef" type="topkoks:CeInhoudMenuKaartTypeRef" />
+	<xsd:element name="CeJaNeeRef" type="topkoks:CeJaNeeTypeRef" />
+	<xsd:element name="CeMenuKaartRef" type="topkoks:CeMenuKaartTypeRef" />
+	<xsd:element name="CeMenuKaartTypeRef" type="topkoks:CeMenuKaartTypeTypeRef" />
+	<xsd:element name="CeOrganisatieRef" type="topkoks:CeOrganisatieTypeRef" />
+	<xsd:element name="CeRapportRef" type="topkoks:CeRapportTypeRef" />
+	<xsd:element name="CeReactieTermijnRef" type="topkoks:CeReactieTermijnTypeRef" />
+	<xsd:element name="CeSOAPRef" type="topkoks:CeSOAPTypeRef" />
+	<xsd:element name="CeTekeningRef" type="topkoks:CeTekeningTypeRef" />
+	<xsd:element name="CeVideoRef" type="topkoks:CeVideoTypeRef" />
+	<xsd:element name="CeVraagRef" type="topkoks:CeVraagTypeRef" />
+	<xsd:element name="PersonInRoleRef" type="topkoks:PersonInRoleTypeRef" />
+	<xsd:element name="ProjectType1Ref" type="topkoks:ProjectType1TypeRef" />
+	<xsd:element name="StandardGroupTypeRef" type="topkoks:StandardGroupTypeTypeRef" />
+	<xsd:element name="StandardOrganisationTypeRef" type="topkoks:StandardOrganisationTypeTypeRef" />
+	<xsd:element name="StandardPersonTypeRef" type="topkoks:StandardPersonTypeTypeRef" />
+	<xsd:element name="aanvaardEindeRef" type="topkoks:aanvaardEindeTypeRef" />
+	<xsd:element name="beloofdExecutieRef" type="topkoks:beloofdExecutieTypeRef" />
+	<xsd:element name="keukenhulpRef" type="topkoks:keukenhulpTypeRef" />
+	<xsd:element name="klantRef" type="topkoks:klantTypeRef" />
+	<xsd:element name="kokRef" type="topkoks:kokTypeRef" />
+	<xsd:element name="meldingGereedRef" type="topkoks:meldingGereedTypeRef" />
+	<xsd:element name="msgAanbiedingMenuKaartRef" type="topkoks:msgAanbiedingMenuKaartTypeRef" />
+	<xsd:element name="msgAntwoordRef" type="topkoks:msgAntwoordTypeRef" />
+	<xsd:element name="msgBestellingAkkoordRef" type="topkoks:msgBestellingAkkoordTypeRef" />
+	<xsd:element name="msgBestellingNietAkkoordRef" type="topkoks:msgBestellingNietAkkoordTypeRef" />
+	<xsd:element name="msgJaRef" type="topkoks:msgJaTypeRef" />
+	<xsd:element name="msgNeeRef" type="topkoks:msgNeeTypeRef" />
+	<xsd:element name="msgPlaatsingBestellingRef" type="topkoks:msgPlaatsingBestellingTypeRef" />
+	<xsd:element name="msgVraagRef" type="topkoks:msgVraagTypeRef" />
+	<xsd:element name="msgWiltuDeKaartZienRef" type="topkoks:msgWiltuDeKaartZienTypeRef" />
+	<xsd:element name="oberRef" type="topkoks:oberTypeRef" />
+	<xsd:element name="startRef" type="topkoks:startTypeRef" />
+	<xsd:element name="t1_OpnameBestellingRef" type="topkoks:t1_OpnameBestellingTypeRef" />
+	<xsd:element name="t2_VraagOberAanKokRef" type="topkoks:t2_VraagOberAanKokTypeRef" />
+	<xsd:element name="t3_OpdrachtKokRef" type="topkoks:t3_OpdrachtKokTypeRef" />
+	<xsd:element name="t4_VraagKokAanKeukenhulpRef" type="topkoks:t4_VraagKokAanKeukenhulpTypeRef" />
+	<xsd:element name="verzochtRef" type="topkoks:verzochtTypeRef" />
+	<xsd:element name="wijzigingHoldRef" type="topkoks:wijzigingHoldTypeRef" />
+
+	<!-- complex types for element declarations (for ENTITY definitions) -->
+	<xsd:complexType name="AppRapportType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="fileLocation" type="xsd:string" />
+					<xsd:element name="fileType" type="xsd:string" />
+					<xsd:element name="fileVersion" type="xsd:string" />
+					<xsd:element name="documentIdentification" type="xsd:string" minOccurs="0" />
+					<xsd:element name="documentVersion" type="xsd:string" minOccurs="0" />
+					<xsd:element name="documentReference" type="xsd:string" minOccurs="0" />
+					<xsd:element name="objectCode" type="xsd:string" minOccurs="0" />
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="language" type="xsd:string" minOccurs="0" />
+					<xsd:element name="message">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:MessageTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="appendixGroup" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:AppendixGroup" />
+								<xsd:element ref="topkoks:AppendixGroupRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceRapport" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeRapport" />
+								<xsd:element ref="topkoks:CeRapportRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AppTekeningType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="fileLocation" type="xsd:string" />
+					<xsd:element name="fileType" type="xsd:string" />
+					<xsd:element name="fileVersion" type="xsd:string" />
+					<xsd:element name="documentIdentification" type="xsd:string" minOccurs="0" />
+					<xsd:element name="documentVersion" type="xsd:string" minOccurs="0" />
+					<xsd:element name="documentReference" type="xsd:string" minOccurs="0" />
+					<xsd:element name="objectCode" type="xsd:string" minOccurs="0" />
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="language" type="xsd:string" minOccurs="0" />
+					<xsd:element name="message">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:MessageTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="appendixGroup" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:AppendixGroup" />
+								<xsd:element ref="topkoks:AppendixGroupRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceTekening" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeTekening" />
+								<xsd:element ref="topkoks:CeTekeningRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AppVideoType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="fileLocation" type="xsd:string" />
+					<xsd:element name="fileType" type="xsd:string" />
+					<xsd:element name="fileVersion" type="xsd:string" />
+					<xsd:element name="documentIdentification" type="xsd:string" minOccurs="0" />
+					<xsd:element name="documentVersion" type="xsd:string" minOccurs="0" />
+					<xsd:element name="documentReference" type="xsd:string" minOccurs="0" />
+					<xsd:element name="objectCode" type="xsd:string" minOccurs="0" />
+					<xsd:element name="startDate" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="endDate" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="language" type="xsd:string" minOccurs="0" />
+					<xsd:element name="message">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:MessageTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="appendixGroup" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:AppendixGroup" />
+								<xsd:element ref="topkoks:AppendixGroupRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceVideo" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeVideo" />
+								<xsd:element ref="topkoks:CeVideoRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AppendixGroupType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="group" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:StandardGroupType" />
+								<xsd:element ref="topkoks:StandardGroupTypeRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie1Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie10Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie11Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie12Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie13Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie14Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie15Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie16Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie2Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie3Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie4Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie5Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie6Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie7Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie8Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie9Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeAntwoordType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="antwoord" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeBestellingType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="ceInhoudBestelling" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeInhoudBestelling" />
+								<xsd:element ref="topkoks:CeInhoudBestellingRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeInhoudBestellingType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="naamGerecht" type="xsd:string" />
+					<xsd:element name="opmerking" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeInhoudMenuKaartType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="naamMenukaartItem" type="xsd:string" />
+					<xsd:element name="omschrijving" type="xsd:string" />
+					<xsd:element name="prijs" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeJaNeeType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="wachttijd" type="xsd:integer" />
+					<xsd:element name="jaNee" type="xsd:boolean" />
+					<xsd:element name="opmerking" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeMenuKaartType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="ceInhoudMenuKaart" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeInhoudMenuKaart" />
+								<xsd:element ref="topkoks:CeInhoudMenuKaartRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeMenuKaartTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="menuKaartType" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeOrganisatieType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="sOAPServerURL" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeRapportType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="auteur" type="xsd:string" />
+					<xsd:element name="versie" type="xsd:integer" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeReactieTermijnType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="wachttijd" type="xsd:integer" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeSOAPType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="sOAPProtocol" type="xsd:string" />
+					<xsd:element name="sOAPServerURL" type="xsd:string" />
+					<xsd:element name="sOAPCentralServerURL" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeTekeningType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="aantalLagen" type="xsd:integer" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeVideoType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="videoFormaat" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeVraagType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="vraag" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PersonInRoleType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="successor" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:PersonInRole" />
+								<xsd:element ref="topkoks:PersonInRoleRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="substituting" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:PersonInRole" />
+								<xsd:element ref="topkoks:PersonInRoleRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="contactPerson">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:StandardPersonType" />
+								<xsd:element ref="topkoks:StandardPersonTypeRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="organisation">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:StandardOrganisationType" />
+								<xsd:element ref="topkoks:StandardOrganisationTypeRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="role">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:RoleTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ProjectType1Type">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="startDate" type="xsd:dateTime" />
+					<xsd:element name="endDate" type="xsd:dateTime" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="ceSOAP" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeSOAP" />
+								<xsd:element ref="topkoks:CeSOAPRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StandardGroupTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="creationDate" type="xsd:dateTime" />
+					<xsd:element name="startDate" type="xsd:dateTime" />
+					<xsd:element name="endDate" type="xsd:dateTime" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="versionNo" type="xsd:string" />
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StandardOrganisationTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="abbreviation" type="xsd:string" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="contactPerson">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:StandardPersonType" />
+								<xsd:element ref="topkoks:StandardPersonTypeRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceOrganisatie" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeOrganisatie" />
+								<xsd:element ref="topkoks:CeOrganisatieRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StandardPersonTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="userName" type="xsd:string" />
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="aanvaardEindeType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="dateReached" type="xsd:dateTime" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="beloofdExecutieType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="dateReached" type="xsd:dateTime" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="keukenhulpType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="category" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="klantType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="category" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="kokType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="category" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="meldingGereedType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="dateReached" type="xsd:dateTime" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgAanbiedingMenuKaartType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:MessageInTransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceMenuKaart" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeMenuKaart" />
+								<xsd:element ref="topkoks:CeMenuKaartRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceMenuKaartType" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeMenuKaartType" />
+								<xsd:element ref="topkoks:CeMenuKaartTypeRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgAntwoordType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:MessageInTransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceVraag" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeVraag" />
+								<xsd:element ref="topkoks:CeVraagRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceAntwoord" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeAntwoord" />
+								<xsd:element ref="topkoks:CeAntwoordRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgBestellingAkkoordType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:MessageInTransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceBestelling" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeBestelling" />
+								<xsd:element ref="topkoks:CeBestellingRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgBestellingNietAkkoordType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:MessageInTransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceBestelling" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeBestelling" />
+								<xsd:element ref="topkoks:CeBestellingRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgJaType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:MessageInTransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceMenuKaartType" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeMenuKaartType" />
+								<xsd:element ref="topkoks:CeMenuKaartTypeRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgNeeType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:MessageInTransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgPlaatsingBestellingType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:MessageInTransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceBestelling" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeBestelling" />
+								<xsd:element ref="topkoks:CeBestellingRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgVraagType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:MessageInTransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceVraag" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeVraag" />
+								<xsd:element ref="topkoks:CeVraagRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgWiltuDeKaartZienType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="identification" type="xsd:string" />
+					<xsd:element name="dateSend" type="xsd:dateTime" />
+					<xsd:element name="dateRead" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatingTransactionMessageID" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiatorToExecutor" type="xsd:boolean" />
+					<xsd:element name="messageInTransaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:MessageInTransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ceReactieTermijn" minOccurs="0">
+						<xsd:complexType>
+							<xsd:choice maxOccurs="unbounded">
+								<xsd:element ref="topkoks:CeReactieTermijn" />
+								<xsd:element ref="topkoks:CeReactieTermijnRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="oberType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="category" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="startType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="dateReached" type="xsd:dateTime" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="t1_OpnameBestellingType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="number" type="xsd:integer" />
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="startDate" type="xsd:dateTime" />
+					<xsd:element name="endDate" type="xsd:dateTime" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="result" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiator">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:PersonInRole" />
+								<xsd:element ref="topkoks:PersonInRoleRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="executor">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:PersonInRole" />
+								<xsd:element ref="topkoks:PersonInRoleRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="project">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:ProjectType1" />
+								<xsd:element ref="topkoks:ProjectType1Ref" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="t2_VraagOberAanKokType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="number" type="xsd:integer" />
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="startDate" type="xsd:dateTime" />
+					<xsd:element name="endDate" type="xsd:dateTime" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="result" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiator">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:PersonInRole" />
+								<xsd:element ref="topkoks:PersonInRoleRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="executor">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:PersonInRole" />
+								<xsd:element ref="topkoks:PersonInRoleRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="project">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:ProjectType1" />
+								<xsd:element ref="topkoks:ProjectType1Ref" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="t3_OpdrachtKokType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="number" type="xsd:integer" />
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="startDate" type="xsd:dateTime" />
+					<xsd:element name="endDate" type="xsd:dateTime" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="result" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiator">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:PersonInRole" />
+								<xsd:element ref="topkoks:PersonInRoleRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="executor">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:PersonInRole" />
+								<xsd:element ref="topkoks:PersonInRoleRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="project">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:ProjectType1" />
+								<xsd:element ref="topkoks:ProjectType1Ref" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="t4_VraagKokAanKeukenhulpType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="number" type="xsd:integer" />
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="startDate" type="xsd:dateTime" />
+					<xsd:element name="endDate" type="xsd:dateTime" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="result" type="xsd:string" minOccurs="0" />
+					<xsd:element name="initiator">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:PersonInRole" />
+								<xsd:element ref="topkoks:PersonInRoleRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="executor">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:PersonInRole" />
+								<xsd:element ref="topkoks:PersonInRoleRef" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="project">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="topkoks:ProjectType1" />
+								<xsd:element ref="topkoks:ProjectType1Ref" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="verzochtType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="dateReached" type="xsd:dateTime" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="wijzigingHoldType">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="dateReached" type="xsd:dateTime" />
+					<xsd:element name="state" type="xsd:string" minOccurs="0" />
+					<xsd:element name="dateLaMu" type="xsd:dateTime" minOccurs="0" />
+					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0" />
+					<xsd:element name="transaction">
+						<xsd:complexType>
+							<xsd:choice minOccurs="0" maxOccurs="unbounded">
+								<xsd:group ref="topkoks:TransactionTypeInstanceSet" />
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- complex types for element reference declarations (for ENTITY definitions) -->
+	<xsd:complexType name="AppRapportTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AppTekeningTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AppVideoTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AppendixGroupTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie1TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie10TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie11TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie12TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie13TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie14TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie15TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie16TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie2TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie3TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie4TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie5TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie6TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie7TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie8TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BerichtInTransactie9TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeAntwoordTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeBestellingTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeInhoudBestellingTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeInhoudMenuKaartTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeJaNeeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeMenuKaartTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeMenuKaartTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeOrganisatieTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeRapportTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeReactieTermijnTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeSOAPTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeTekeningTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeVideoTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CeVraagTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PersonInRoleTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ProjectType1TypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StandardGroupTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StandardOrganisationTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StandardPersonTypeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="aanvaardEindeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="beloofdExecutieTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="keukenhulpTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="klantTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="kokTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="meldingGereedTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgAanbiedingMenuKaartTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgAntwoordTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgBestellingAkkoordTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgBestellingNietAkkoordTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgJaTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgNeeTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgPlaatsingBestellingTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgVraagTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="msgWiltuDeKaartZienTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="oberTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="startTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="t1_OpnameBestellingTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="t2_VraagOberAanKokTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="t3_OpdrachtKokTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="t4_VraagKokAanKeukenhulpTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="verzochtTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="wijzigingHoldTypeRef">
+		<xsd:complexContent>
+			<xsd:extension base="topkoks:elementTypeRef" />
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<!-- group declarations (for SELECT data type definitions) -->
+	<xsd:group name="MessageInTransactionTypeInstanceSet">
+		<xsd:choice>
+			<xsd:element ref="topkoks:BerichtInTransactie1" />
+			<xsd:element ref="topkoks:BerichtInTransactie1Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie10" />
+			<xsd:element ref="topkoks:BerichtInTransactie10Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie11" />
+			<xsd:element ref="topkoks:BerichtInTransactie11Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie12" />
+			<xsd:element ref="topkoks:BerichtInTransactie12Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie13" />
+			<xsd:element ref="topkoks:BerichtInTransactie13Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie14" />
+			<xsd:element ref="topkoks:BerichtInTransactie14Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie15" />
+			<xsd:element ref="topkoks:BerichtInTransactie15Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie16" />
+			<xsd:element ref="topkoks:BerichtInTransactie16Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie2" />
+			<xsd:element ref="topkoks:BerichtInTransactie2Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie3" />
+			<xsd:element ref="topkoks:BerichtInTransactie3Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie4" />
+			<xsd:element ref="topkoks:BerichtInTransactie4Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie5" />
+			<xsd:element ref="topkoks:BerichtInTransactie5Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie6" />
+			<xsd:element ref="topkoks:BerichtInTransactie6Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie7" />
+			<xsd:element ref="topkoks:BerichtInTransactie7Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie8" />
+			<xsd:element ref="topkoks:BerichtInTransactie8Ref" />
+			<xsd:element ref="topkoks:BerichtInTransactie9" />
+			<xsd:element ref="topkoks:BerichtInTransactie9Ref" />
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="MessageTypeInstanceSet">
+		<xsd:choice>
+			<xsd:element ref="topkoks:msgAanbiedingMenuKaart" />
+			<xsd:element ref="topkoks:msgAanbiedingMenuKaartRef" />
+			<xsd:element ref="topkoks:msgAntwoord" />
+			<xsd:element ref="topkoks:msgAntwoordRef" />
+			<xsd:element ref="topkoks:msgBestellingAkkoord" />
+			<xsd:element ref="topkoks:msgBestellingAkkoordRef" />
+			<xsd:element ref="topkoks:msgBestellingNietAkkoord" />
+			<xsd:element ref="topkoks:msgBestellingNietAkkoordRef" />
+			<xsd:element ref="topkoks:msgJa" />
+			<xsd:element ref="topkoks:msgJaRef" />
+			<xsd:element ref="topkoks:msgNee" />
+			<xsd:element ref="topkoks:msgNeeRef" />
+			<xsd:element ref="topkoks:msgPlaatsingBestelling" />
+			<xsd:element ref="topkoks:msgPlaatsingBestellingRef" />
+			<xsd:element ref="topkoks:msgVraag" />
+			<xsd:element ref="topkoks:msgVraagRef" />
+			<xsd:element ref="topkoks:msgWiltuDeKaartZien" />
+			<xsd:element ref="topkoks:msgWiltuDeKaartZienRef" />
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="RoleTypeInstanceSet">
+		<xsd:choice>
+			<xsd:element ref="topkoks:keukenhulp" />
+			<xsd:element ref="topkoks:keukenhulpRef" />
+			<xsd:element ref="topkoks:klant" />
+			<xsd:element ref="topkoks:klantRef" />
+			<xsd:element ref="topkoks:kok" />
+			<xsd:element ref="topkoks:kokRef" />
+			<xsd:element ref="topkoks:ober" />
+			<xsd:element ref="topkoks:oberRef" />
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="TransactionTypeInstanceSet">
+		<xsd:choice>
+			<xsd:element ref="topkoks:t1_OpnameBestelling" />
+			<xsd:element ref="topkoks:t1_OpnameBestellingRef" />
+			<xsd:element ref="topkoks:t2_VraagOberAanKok" />
+			<xsd:element ref="topkoks:t2_VraagOberAanKokRef" />
+			<xsd:element ref="topkoks:t3_OpdrachtKok" />
+			<xsd:element ref="topkoks:t3_OpdrachtKokRef" />
+			<xsd:element ref="topkoks:t4_VraagKokAanKeukenhulp" />
+			<xsd:element ref="topkoks:t4_VraagKokAanKeukenhulpRef" />
+		</xsd:choice>
+	</xsd:group>
+
+	<!-- enumeration type declarations (for ENUMERATION data type definitions) -->
+
+	<!-- simple type declarations (for TYPE defined data type definitions) -->
+
+	<!-- standard declarations, elementType, simpleType, logical (for each translation) -->
+	<xsd:complexType name="elementType">
+		<xsd:attribute name="id" type="xsd:ID" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="elementTypeRef">
+		<xsd:attribute name="idref" type="xsd:IDREF" use="required" />
+	</xsd:complexType>
+	<xsd:simpleType name="logical">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="true" />
+			<xsd:enumeration value="false" />
+			<xsd:enumeration value="unknown" />
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

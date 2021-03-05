@@ -1,0 +1,74 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Promote - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x809 /fo"Release/Promote.res" /d "NDEBUG" "E:\tst\VISI Promote Software\Promote\Promote.rc"" 
+Creating temporary file "C:\Users\Peter\AppData\Local\Temp\RSPFF60.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/Promote.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\tst\VISI Promote Software\Promote\Promote.cpp"
+"E:\tst\VISI Promote Software\Promote\PromoteDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\Peter\AppData\Local\Temp\RSPFF60.tmp" 
+Creating temporary file "C:\Users\Peter\AppData\Local\Temp\RSPFF61.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/Promote.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\tst\VISI Promote Software\Promote\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Peter\AppData\Local\Temp\RSPFF61.tmp" 
+Creating command line "link.exe dll.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Promote.pdb" /machine:I386 /out:"Release/Promote.exe"  ".\Release\Promote.obj" ".\Release\PromoteDlg.obj" ".\Release\StdAfx.obj" ".\Release\Promote.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Promote.cpp
+PromoteDlg.cpp
+Generating Code...
+Linking...
+LINK : warning LNK4089: all references to "SHELL32.dll" discarded by /OPT:REF
+
+
+
+<h3>Results</h3>
+Promote.exe - 0 error(s), 1 warning(s)
+<h3>
+--------------------Configuration: Promote - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x809 /fo"Debug/Promote.res" /d "_DEBUG" "E:\tst\VISI Promote Software\Promote\Promote.rc"" 
+Creating temporary file "C:\Users\Peter\AppData\Local\Temp\RSP24F.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/Promote.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\tst\VISI Promote Software\Promote\Promote.cpp"
+"E:\tst\VISI Promote Software\Promote\PromoteDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\Peter\AppData\Local\Temp\RSP24F.tmp" 
+Creating temporary file "C:\Users\Peter\AppData\Local\Temp\RSP250.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/Promote.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\tst\VISI Promote Software\Promote\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Peter\AppData\Local\Temp\RSP250.tmp" 
+Creating command line "link.exe dll.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Promote.pdb" /debug /machine:I386 /out:"Debug/Promote.exe" /pdbtype:sept  ".\Debug\Promote.obj" ".\Debug\PromoteDlg.obj" ".\Debug\StdAfx.obj" ".\Debug\Promote.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Promote.cpp
+PromoteDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Promote.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
