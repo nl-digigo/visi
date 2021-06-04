@@ -1,6 +1,6 @@
 ### Project omschrijving
 
-Beheeromgeving van de VISI open standaard.
+Beheer- en publicatieomgeving van de VISI open standaard.
 
 ### Wat is VISI?
 
