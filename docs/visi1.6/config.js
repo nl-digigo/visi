@@ -20,7 +20,7 @@ function changeSOTD()
   // else                                  //-- SOTD Aanpassen
   // {
 
-    tag.innerHTML = "<h2>Status van dit document</h2>";
+    tag.innerHTML = "<h2>Status of this document</h2>";
     tag.innerHTML += "<p>";
    
     switch(respecConfig.specStatus)
@@ -86,7 +86,7 @@ var respecConfig = {
     // format: "markdown",                
   
     // The specification's "short name", which is the name used in NL_Respec URLs
-    shortName: "COINS_2.0/coinsweb",
+    shortName: "visi1.6",
   
     // A YYYY-MM-DD date. The publication date of the present document. 
     // Als er geen publishDate is opgegeven, genereert ReSpec de dataum o.b.v. de laatste wijzigingen
@@ -132,7 +132,7 @@ var respecConfig = {
         },
       ],
     // The github option allows you associate your specification with a repository on GitHub.
-    github: "https://github.com/bimloket/COINS_2.0",
+    github: "https://github.com/bimloket/visi",
   
     // The URL of your test suite, gets included in the specification's headers.
     // testSuiteURI: "https://portaal.digikoppeling.nl/CV/home.html",
@@ -225,7 +225,7 @@ var respecConfig = {
     nl_logo: {
       //  src: "https://tools.geostandaarden.nl/respec/style/logos/OmgevingswetLogo.svg",
       src: "media/logo_BIM_Loket.jpg",
-      alt: "BIM Loket Coins2",
+      alt: "BIM Loket",
       id: "TopLogo",
       //height: 20,
       //width: 100,
