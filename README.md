@@ -2,6 +2,8 @@
 
 Beheer- en publicatieomgeving van de VISI open standaard.
 
+Zie voor technische documentatie: https://bimloket.github.io/visi/
+
 ### Wat is VISI?
 
 VISI is een Open Standaard om binnen projecten de samenwerking tussen alle deelnemende partijen expliciet te maken: de structuur, de taakverdeling en het primaire proces worden in een 'raamwerk' vastgelegd. 
