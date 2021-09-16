@@ -5,7 +5,7 @@
   <meta charset='utf-8'>
   <meta content="text/html; charset=utf-8" http-equiv="content-type">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Technical documentation VISI 1.6</title>
+  <title>Technische documentatie VISI 1.6</title>
   <script src="./config.js" class="remove"></script>
   <!--link rel="shortcut icon" type="image/x-icon"   href="https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/logius.ico" />-->
   <link rel="shortcut icon" type="image/png" href="./media/ont.png" />
@@ -19,7 +19,7 @@
 <body>
 
     <section id='abstract'>
-        <p>This document contains the technical documentation of VISI 1.6. This documentation is in development, for the actual version see https://github.com/bimloket/visi/tree/master/1_technische_documentatie/actueel
+        <p>Dit document bevat de technische documentatie van VISI 1.6, in ontwikkeling in SeSpec formaat. De actuele documentatie in pdf formaat staat [hier](https://github.com/bimloket/visi/tree/master/1_technische_documentatie/actueel)
     </section>
 
   <section id='sotd'>
@@ -52,17 +52,36 @@
 
 <section class="appendix informative" id="glossary">
     <h2>Glossary</h2>
+    <p><dfn data-lt="VISI|VISI-standaard|VISI-systematiek">VISI</dfn>: De open standaard die het geheel omvat van de VISI-systematiek en de gepubliceerde eisen en richtlijnen, zoals verzameld in de Leidraad VISI-systematiek. Oorspronkelijke afkorting van ‘Voorwaarden scheppen voor de Invoering van Standaardisatie ICT in de bouw’. een door de Nederlandse bouwsector geaccepteerd afsprakenstelsel voor de digitale uitwisseling van formele communicatie.</p>	
     <p><dfn data-lt="UML|Unified Modeling Language">UML</dfn>: Unified Modeling Language [[uml]]</p>
     <p><dfn data-lt="ICDD|Information Container for Document Delivery">ICDD</dfn>: Information Container for Document Delivery based on ISO 21597 </p>
 	<p><dfn data-lt="Raamwerk|VISI Raamwerk">Raamwerk</dfn>: Het geheel van beschrijvingen van rollen, transacties, berichten en gegevens, die de afspraken en/of communicatie omvatten die in een project gebruikt kunnen en mogen worden, vastgelegd overeenkomstig de technische documentatie van VISI </p>
+    <p><dfn data-lt="Generiek raamwerk">Generiek raamwerk</dfn>: Een generiek raamwerk wordt beheerd en gepubliceerd door BIM loket. Een generiek raamwerk is voor een bepaald toepassingsgebied gemaakt, maar kan worden toegesneden op een specifieke situatie.</p>
     <p><dfn data-lt="VISI-Rol|Rol">Rol</dfn>: Deelnemer in een transactie in de hoedanigheid van initiator of executor.</p>
-    <p><dfn data-lt="VISI-Transactie|Transactie">Transactie</dfn>: Bindende afspraak tussen twee rollen die overeenkomen wat er moet gebeuren. Elke transactie kent een initiator en een executor, en doorloopt verschillende transactietoestanden.</p>
-    <p><dfn data-lt="VISI-Interactiekaart|Interactiekaart">Interactiekaart</dfn>: De schematische weergave van een raamwerk, bedoeld om de relevante rollen en transacties voor een bestaand proces in kaart te brengen.</p>
+    <p><dfn data-lt="Projectspecifiek raamwerk">Projectspecifiek raamwerk</dfn>: Raamwerk dat is afgeleid van een generiek raamwerk, hetgeen betekent dat (1) het projectspecifieke raamwerk eerst een deelverzameling (subset) is van het generieke raamwerk; (2) het projectspecifieke raamwerk vervolgens, indien nodig, aanpassingen en toevoegingen kan krijgen om te voldoen aan de projectspecifieke wensen</p> 
+	<p><dfn data-lt="VISI-Transactie|Transactie">Transactie</dfn>: Bindende afspraak tussen twee rollen die overeenkomen wat er moet gebeuren. Elke transactie kent een initiator en een executor, en doorloopt verschillende transactietoestanden.</p>
     <p><dfn data-lt="VISI-Transactieschema|Transactieschema">Transactieschema</dfn>: Het overzicht met berichten dat in het kader van een specifieke transactie kan worden verstuurd. Het transactieschema bevat uiteraard de naam, de beschrijving en het gewenste resultaat van de transactie.</p>
     <p><dfn data-lt="VISI-Transactietoestand|Transactietoestand">Transactietoestand</dfn>: Fase waarin een transactie zich bevindt, vastgelegd in een transactieschema.</p>
     <p><dfn data-lt="VISI-Bericht|Bericht">Bericht</dfn>: Middel om informatie over te dragen / gegevens uit te wisselen. Een bericht is van een bepaald berichttype en is onlosmakelijk verbonden aan een transactie. Een bericht bevat de gegevensstructuur die in het VISI-raamwerk is voorgeschreven. Het bericht heeft een ‘header’ waarin de gegevens zijn opgenomen van de betrokken rollen, de transactie en het werk waarop de transactie betrekking heeft. In de body van het bericht bevindt zich de over te dragen informatie bestaande uit ingevulde gegevens­elementen, aangehangen documenten en referenties naar documenten.</p>
     <p><dfn data-lt="Simpel gegevenselement|Gegevenselement">Gegevenselement</dfn>: Type gegevenselement dat de basis vormt van het VISI-raamwerk met de eigenschappen van een bericht. Simpele gegevenselementen kunnen worden gecombineerd tot complexe gegevenselementen.</p>
-    <p><dfn data-lt="VISI-Bijlage|Bijlage">Bijlage</dfn>: Aan het <a>VISI-Bericht</a> toegevoegde documenten</a></p>	
+    <p><dfn data-lt="Complex gegevenselement">Complex gegevenselement</dfn>: Type van gegevenselement dat in het VISI-raamwerk wordt gebruikt om (simpele) gegevenselementen te groeperen. </p>
+    <p><dfn data-lt="VISI-Bijlage|Bijlage">Bijlage</dfn>: Aan het <a>VISI-Bericht</a> toegevoegde documenten.</p>	
+	<p><dfn data-lt="Berichtcategorie">Berichtcategorie</dfn>: Set berichten die op basis van overeenkomstige kenmerken in het kader van VISI kunnen worden ingedeeld in een bepaalde categorie, bijvoorbeeld contractueel basis, contractueel wijziging, operationeel, financieel, escalatie of kwaliteit. </p>
+    <p><dfn data-lt="Beveiligingscertificaat|Secure Sockets Layer">SSL</dfn>: Een beveiligingscertificaten is bedoeld om de uitgewisselde gegevens te authentiseren en het verzekeren van de privacy. Wanneer er wordt gecommuniceerd tussen server en gebruiker, zorgt dit ervoor dat de data niet kan worden afgeluisterd of vervalst. Het protocol wordt aangeduid met ‘SSL’ (‘Secure Sockets Layer’). Door middel van cryptografie en authenticatie levert dit protocol een beveiligde verbinding met het Internet. VISI vereist dat VISI communicatie tussen SOAP-servers altijd plaats vindt via https en SSL. Het gebruik van HTTPS (TLS 1.0 of hoger, met minimaal 128 bits encryptie) voor het versturen van VISI berichten en bijlagen is verplicht </p>
+    <p><dfn data-lt="DEMO methode|DEMO">DEMO methode</dfn>: Methode voor het modelleren van bedrijfsprocessen. DEMO staat voor ‘Dynamic Essential Modelling of Organisations’. De methode is ontwikkeld door prof.dr.ir. J.L.G. Dietz van de Technische Universiteit Delft. [zie “Introductie tot DEMO”, 1996, Dietz, J.L.G., Samson, Alphen aan den Rijn; ISBN 9789014053271</p>	
+    <p><dfn data-lt="Executor">Executor</dfn>: Rol die een transactie uitvoert</p>	
+    <p><dfn data-lt="Initiator">Initiator</dfn>: Rol die een transactie start</p>	
+    <p><dfn data-lt="VISI-interactiekaart|Interactiekaart">Interactiekaart</dfn>: De schematische weergave van een raamwerk, bedoeld om de relevante rollen en transacties voor een bestaand proces in kaart te brengen.</p>	
+    <p><dfn data-lt="Promotor">Promotor</dfn>: Een computerprogramma dat een VISI-raamwerk (overeenkomstig W3C-technologie) vertaalt in een schema van berichten die behoren tot dat raamwerk. De Promotor wordt beschikbaar gesteld door BIM loket</p>
+    <p><dfn data-lt="Rolbeschrijving">Rolbeschrijving</dfn>: Omschrijving van de aard en verantwoordelijkheid per rol, zoals is gedefinieerd in het VISIraamwerk.</p>
+    <p><dfn data-lt="Rolverdeling">Rolverdeling</dfn>: Toewijzing van (VISI-)rollen aan natuurlijke personen in een samenwerkingsverband van partijen</p>
+    <p><dfn data-lt="Samenwerkingsconcept">Samenwerkingsconcept</dfn>: Tussen (markt)partijen overeen te komen en op elkaar afgestemde samenstel van bouworganisatiemodel, contractvorm, aanbestedingsvorm en projectinformatievoorziening, met als doel een projectorganisatie en procesafhandeling waarbij risico’s en aansprakelijkheidsverdeling economisch en maatschappelijk verantwoord zijn verdeeld</p>	
+    <p><dfn data-lt="VISI-communicatie">VISI-communicatie</dfn>: Het op digitale wijze uitwisselen van berichten volgens de VISI-standaard</p>	
+    <p><dfn data-lt="VISI-keurmerk">VISI-keurmerk</dfn>: Het door BIM loket aan de VISI-compatibele software toegekende keurmerk, inclusief het daarbij behorende (unieke) registratienummer; het VISI-keurmerk borgt dat het desbetreffende softwareproduct met positief resultaat is getest op de eigenschap VISI-compatibiliteit.</p>	
+    <p><dfn data-lt="VISI-leverancier">VISI-leverancier</dfn>: Een leverancier van VISI-compatibele software</p>	
+    <p><dfn data-lt="W3C">W3C</dfn>: World Wide Web Consortium (W3C) dat standaardformaten voor data-uitwisseling levert (zoals XML, XSD en XSLT), waarvan VISI gebruik maakt</p>	
+    <p><dfn data-lt="XML|eXtensible Mark-up Language">xml</dfn>: De W3C standaard bestandsformaat voor data-uitwisseling. XMLbestanden zijn leesbare tekstbestanden met een extensie ‘.xml’. VISI-raamwerken en -berichten worden vastgelegd in XML. [[xml]]</p>	
+    <p><dfn data-lt="XSD|eXtensible Schema Definition language">XSD</dfn>: De W3C standaard schemaformaat voor data-uitwisseling. XSD-bestanden zijn leesbare tekstbestanden met een extensie ‘.xsd’. Met XSD worden toegestane bouwstenen van een XML-bestand gedefinieerd en kan ook worden vastgelegd welke waarden elementen mogen hebben. XML-bestanden die voldoen aan een bepaalde XSD zijn ‘valid’. De VISIsystematiek wordt door middel van een XSD-bestand vastgelegd</p>	
 </section>
 </body>
 </html>
