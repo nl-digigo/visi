@@ -22,3 +22,21 @@ Bla bla
 
 **Bouwproject**
 **Pizzeria**
+
+## Alle bouwstenen van een raamwerk
+
+### Transactie
+
+### Bericht en bijlage
+
+**Elementen in een bericht**
+**Bijlagen en META-gegevens**
+**Bijlagen (één of meerdere bijlagen)
+
+##Communiceren op basis van een raamwerk
+
+**Project specifiek bericht**
+**Koppeling van personen aan rollen**
+**Meerdere rollen voor dezelfde persoon**
+**Meerdere personen met dezelfde rol**
+
