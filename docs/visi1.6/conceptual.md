@@ -33,10 +33,13 @@ Bla bla
 **Bijlagen en META-gegevens**
 **Bijlagen (één of meerdere bijlagen)
 
-##Communiceren op basis van een raamwerk
+## Communiceren op basis van een raamwerk
 
 **Project specifiek bericht**
 **Koppeling van personen aan rollen**
 **Meerdere rollen voor dezelfde persoon**
 **Meerdere personen met dezelfde rol**
 
+## Verdieping van het raamwerk
+
+## Garanties voor de gebruiker
