@@ -14,6 +14,11 @@ Test 1 bla bla bla bla [issue 93](https://github.com/bimloket/visi/issues/93)
 
 **Flexibiliteit in het maken van samenwerkingsafspraken**
 
+## Het VISI-raamwerk en onderdelen
 
+Bla bla
 
+### Voorbeelden
 
+**Bouwproject**
+**Pizzeria**
