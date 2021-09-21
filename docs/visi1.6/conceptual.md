@@ -8,7 +8,19 @@ Voor een gebruiker van de bestaande VISI-applicaties in de markt voelt VISI als 
 
 ### Uitvoering
 
-**Berichten versturen en afspraken nakomen**
+***Berichten versturen en afspraken nakomen***  
+
+**VISI helpt je bij het nakomen van afspraken.** Je weet altijd welke acties jij, of de ander, nog moet uitvoeren. Tijdens de uitvoering kan je, als je de juiste rol hebt, een berichtenstroom opstarten om een specifieke transactie uit te voeren. Je kunt zien welke antwoorden  je kunt geven, en welke berichten je nog kunt verwachten.   
+
+**Je weet of je bericht aangekomen is.** Door de afspraken over het berichtenverkeer, weet een gebruiker zeker dat een bericht  is aangekomen.  
+
+**Overdracht van werk aan een nieuwe medewerker gaat naadloos.** Omdat gewerkt wordt met de combinatie van een natuurlijk persoon en een rol, kan tijdens een samenwerking voor een persoon een opvolger worden aangewezen. Vanaf dat moment neemt deze opvolger de berichtenstroom over. Van een VISI applicatie wordt verwacht dat de opvolger ook de berichten van de voorganger ter beschikking heeft.
+
+**De communicatie is terug te vinden voor alle betrokkenen, zonder wederzijdse afhankelijkheid.** Indien meerdere organisaties samenwerken, kunnen zij elk gebruik maken van hun eigen systemen (VISI gecertificeerde applicaties). Door de afspraken over het berichtenverkeer hebben twee personen in een verschillende organisatie beiden in hun eigen systeem de beschikking over het berichtenverkeer.   
+
+**Met VISI zijn wijzigingen in de samenwerkafspraken altijd traceerbaar.** Tijdens het project kunnen de afspraken over de workflow, berichtinhoud, rollen en verantwoordelijkheden gewijzigd worden.  
+
+
 
 ### Voorbereiding
 
@@ -17,13 +29,9 @@ Voor een gebruiker van de bestaande VISI-applicaties in de markt voelt VISI als 
   **Door van te voren afspraken te maken over taken en verantwoordelijkheden weet je van elkaar waar je aan toe bent.** Bij de voorbereiding van de samenwerking spreek je af wie welke rol heeft, en welke taken deze rol heeft.
   
   **Door van te voren afspraken te maken over de communicatie weet je van elkaar waar je aan toe bent.** Bij de voorbereiding van de samenwerking bepaal je welke rollen met elkaar communiceren over taken, en welke berichtenflow daar bij hoort. Door van te voren afspraken te maken over de informatie die je van elkaar verwacht weet je van elkaar waar je aan toe bent. Bij de voorbereiding van de samenwerking bepaal je voor elk bericht, welke inhoud dit heeft, inclusief bijlagen.
+  
   **Je bent vrij om je samenwerking vorm te geven zoals je wilt.** VISI is zeer flexibel: Je bent vrij om je samenwerking vorm te geven zoals je wilt,  VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van applicaties, dat zij voorbereid  zijn om deze flexibele samenwerkafspraken per project of organisatie te kunnen inlezen. 
-Uitvoering: berichten versturen en afspraken nakomen
-VISI helpt je bij het nakomen van afspraken. Je weet altijd welke acties jij, of de ander,  nog moet uitvoeren. Tijdens de uitvoering kan je, als je de juiste rol hebt, een berichtenstroom opstarten om een specifieke transactie uit te voeren.  Je kunt zien welke antwoorden  je kunt geven, en welke berichten je nog kunt verwachten. 
-Je weet of je bericht aangekomen is. Door de afspraken over het berichtenverkeer, weet een gebruiker zeker dat een bericht  is aangekomen.
-Overdracht van werk aan een nieuwe medewerker gaat naadloos. Omdat gewerkt wordt met de combinatie van een natuurlijk persoon en een rol, kan tijdens een samenwerking voor een persoon een opvolger worden aangewezen. Vanaf dat moment neemt deze opvolger de berichtenstroom over. Van een VISI applicatie wordt verwacht dat de opvolger ook de berichten van de voorganger ter beschikking heeft.
-De communicatie is terug te vinden voor alle betrokkenen, zonder wederzijdse afhankelijkheid. Indien meerdere organisaties samenwerken, kunnen zij elk gebruik maken van hun eigen systemen (VISI gecertificeerde applicaties). Door de afspraken over het berichtenverkeer hebben twee personen in een verschillende organisatie beiden in hun eigen systeem de beschikking over het berichtenverkeer. 
-Met VISI zijn wijzigingen in de samenwerkafspraken altijd traceerbaar. Tijdens het project kunnen de afspraken over de workflow, berichtinhoud, rollen en verantwoordelijkheden gewijzigd worden.  
+
 
 
 
