@@ -1,9 +1,12 @@
-# Summary
-High-level management summary
+# Waarom en voor wie deze documentatie?
+Uitleg over waarom en voor wie deze documentatie is bedoeld
 
 
 
-## NTB
+## Leeswijzer
+Uitleg over de verschillende niveau's van de documentatie
+
+
 
 
 
