@@ -1,13 +1,13 @@
-# Introduction
+# Introductie
+Nog invoegen
 
 
+## Waarom en voor wie deze documentatie?
+Uitleg over waarom en voor wie deze documentatie is bedoeld
 
-## NTB
 
-
-
-### sub-paragraaf
-
+## Leeswijzer
+Uitleg over de verschillende niveau's van de documentatie
 
 
 
