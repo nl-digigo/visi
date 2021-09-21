@@ -33,14 +33,17 @@ Voor een gebruiker van de bestaande VISI-applicaties in de markt voelt VISI als 
   **Je bent vrij om je samenwerking vorm te geven zoals je wilt.** VISI is zeer flexibel: Je bent vrij om je samenwerking vorm te geven zoals je wilt,  VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van applicaties, dat zij voorbereid  zijn om deze flexibele samenwerkafspraken per project of organisatie te kunnen inlezen. 
 
 
-
-
-
-**Flexibiliteit in het maken van samenwerkingsafspraken**
-
 ## Het VISI-raamwerk en onderdelen
 
-Bla bla
+***VISI-raamwerk***
+
+Binnen VISI zijn communicatieafspraken vastgelegd in een structuur die het VISI-raamwerk wordt genoemd. De begrippen die in dit VISI-raamwerk veel worden gebruikt worden uitgelegd. Veel gebruikte begrippen zijn:  
+
+- Rol 
+- Transactie 
+- Bericht 
+- Gegevenselement 
+- Bijlage
 
 ### Voorbeelden
 
@@ -50,6 +53,9 @@ Bla bla
 ## Alle bouwstenen van een raamwerk
 
 ### Transactie
+***Toelichting op het begrip Transactie***
+
+Binnen VISI staat de zogenoemde transactie centraal. Een transactie is in de praktijk een serie van berichten tussen twee rollen met als uitkomst een bepaald resultaat. Denk hierbij bijvoorbeeld aan een verzoek van een rol aan een ander rol om iets te beoordelen, waarna het resultaat een positief of negatief oordeel is. Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld waarna de transactie is afgerond.
 
 ### Bericht en bijlage
 
