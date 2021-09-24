@@ -59,16 +59,49 @@ Binnen VISI staat de zogenoemde transactie centraal. Een transactie is in de pra
 
 ### Bericht en bijlage
 
+Berichten worden gebruikt om transacties af te handelen. Berichten kennen een logische volgorde en bestaan uit gegevenselementen. De structuur van een bericht staat op hoofdlijnen vast. Een bericht bestaat uit een ‘header’ en een ‘body’. De header bestaat uit vaste systematiek elementen uit de standaard. Bijvoorbeeld de afzender, en het tijdstip van verzenden. De body is vergelijkbaar met een template van elementen die in het berichtenverkeer gebruikt  kan worden. Deze berichttemplates kunnen projectspecifiek worden ingericht en/of aangepast.  Aan een bericht kunnen bijlagen worden toegevoegd.
+
 **Elementen in een bericht**
+
+Een body van een bericht is te vergelijken met een formulier met velden. Zoals: tekstvelden, data, bedragen, Ja/Nee, keuzelijsten, etc.) en/of tabellen.
+Een startbericht en een eindbericht van een transactie gaan uit van dezelfde velden, eventueel onderweg aangevuld met meer velden. Hier vindt overerving plaats. Ingevulde gegevens worden in principe mee verstuurd in een volgend bericht, tenzij er een zogenoemde conditie is meegegeven in het raamwerk.
+
+
 **Bijlagen en META-gegevens**
-**Bijlagen (één of meerdere bijlagen)
+
+Aan VISI-berichten kunnen bijlagen worden gekoppeld. Dit komt sterk overeen met een ‘attachement’ van een e-mail. Een belangrijk verschil is echter dat een bijlage  van een VISI-bericht kan worden voorzien van META-gegevens. Deze elementen kunnen vooraf worden gedefinieerd. Denk hierbij bijvoorbeeld aan het versienummer, documentdatum, status, etc.. Hierbij kan bijvoorbeeld rekening worden gehouden met de META-gegevens die in een organisatiespecifieke documentmanagementsysteem noodzakelijk zijn.
+
+
+**Bijlagen (één of meerdere bijlagen)**
+nog uitschrijven
+
+
+
 
 ## Communiceren op basis van een raamwerk
 
-**Project specifiek bericht**
-**Koppeling van personen aan rollen**
+***Project specifiek bericht***
+
+Het projectspecifieke bericht plaatst het raamwerk in de context van een project. Hiermee wordt bedoeld dat in dit bestand wordt aangegeven welk specifiek project en/of contract het raamwerk representeert en welke personen in welke rol(len) kunnen deelnemen aan de communicatie in het kader van het specifieke project. Met dit bestand kan het gebruik van VISI dus worden opgestart en kunnen de gebruikers binnen de VISI communicatie worden beheerd. Daarnaast worden de volgende zaken geregeld met behulp van het projectspecifieke bericht:
+-	Gebruikte soap protocol en het adres van de betrokken soap servers
+-	Welke personen tot welke organisatie behoren
+-	Opvolging van personen binnen een project
+-	Welke personen uit naam van een andere persoon mogen communiceren
+
+***Koppeling van personen aan rollen***
+
+**Een rol door een persoon**
+
+In VISI zijn verantwoordelijkheden en taken niet toegekend aan partijen of personen, maar aan “rollen”. Dit is gedaan omdat in bijvoorbeeld bouwprojecten weliswaar steeds dezelfde “rollen” voorkomen maar partijen nogal eens van rol kunnen wisselen. Denk hierbij bijvoorbeeld aan een situatie waarin een Opdrachtgever een bepaalde rol wil laten invullen door een ingenieursbureau of een situatie waarin een pizzeria de bezorging niet door eigen bezorgers laat doen, maar door externe partij als Deliveroo of Uber eats. Een persoon kan met behulp van het projectspecifieke bericht aan een rol worden gekoppeld.
+
 **Meerdere rollen voor dezelfde persoon**
+
+Omdat er niet een één op één relatie bestaat tussen de functie van een persoon en een rol in de VISI-standaard kan het dat een persoon één of meer rollen vervuld en hierdoor ook aan één of meerder rollen kan worden gekoppeld. Dit houdt in de praktijk bijvoorbeeld in dat een persoon zowel de rol van ober kan vervullen in een pizzeria, maar in dezelfde pizzeria ook de rol van kok omdat in zijn functieomschrijving staat dat hij ook moet kunnen bijspringen in de keuken met alle verantwoordelijkheden en taken die daarbij horen. In de bouwsector zou dit bijvoorbeeld betekenen dat een persoon de rol van toezichthouder kan vervullen maar ook de rol van adviseur met betrekking tot een bepaalde discipline.
+
 **Meerdere personen met dezelfde rol**
+
+Daarnaast kan het in de praktijk zo zijn dat meerdere personen dezelfde taken en verantwoordelijkheden hebben. Denk hierbij bijvoorbeeld dat een restaurant meerdere personen hebben rondlopen die de rol van ober vervullen of in een bouwproject meerdere personen de rol van adviseur vervullen. In het projectspecifieke bericht kunnen daarom ook meerdere personen aan een rol worden gekoppeld.
+
 
 ## Verdieping van het raamwerk
 **Het raamwerk als bestand om in te lezen in de VISI compatible software**
