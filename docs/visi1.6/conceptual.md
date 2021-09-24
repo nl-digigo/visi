@@ -71,6 +71,36 @@ Binnen VISI staat de zogenoemde transactie centraal. Een transactie is in de pra
 **Meerdere personen met dezelfde rol**
 
 ## Verdieping van het raamwerk
+**Het raamwerk als bestand om in te lezen in de VISI compatible software**
+
+Het VISI-raamwerk wordt op basis van de systematiek regels vastgelegd in een bestand dat kan worden ingelezen in VISI-compatible software. Dit dient in combinatie te gebeuren met het eerder besproken projectspecifieke bericht en een zogenoemd berichtenschema waarmee een extra controle kan worden uitgevoerd of de berichten die verzonden en ontvangen worden conform de regels van de systematiek en het gedefinieerde raamwerk zijn.
+
+**Ondersteunen van een bedrijfsproces met gekoppelde transacties**
+
+Bij een bedrijfsproces zijn vaak meer dan twee rollen betrokken. Het is daarom lastig om met een enkele transactie tussen twee rollen een heel bedrijfsproces te ondersteunen. De standaard biedt daarom de mogelijkheid om transacties met elkaar te verbinden. Dit houdt concreet in dat een rol uit een specifieke transactie met een specifiek bericht een andere transactie met een andere rol kan initiëren. Zo kan een bedrijfsproces ondersteund worden met behulp van een set van gekoppelde transacties.
+
+```Denk hierbij bijvoorbeeld aan een klant van de pizzeria die met een ober een transactie aangaat om een heerlijke pizza te verkrijgen. De ober kan op basis van de transactie met de klant op zijn/haar beurt weer een transactie initiëren richting een kok om de pizza te maken.```
+  
+Een belangrijk basisprincipe is dat een transactie altijd iets oplevert. Als een rol vanuit de ene transactie één of meer transacties met een andere rol initieert dient er dus altijd iets terug te komen uit deze secundaire transacties. Een secundaire transactie dient altijd weer te eindigen in de transactie vanuit waar hij is geïnitieerd.
+
+**Condities binnen een transactie**
+
+Om bepaalde afhankelijkheden in een transactie af te kunnen dwingen kunnen bij het opstellen van een transactie op bepaalde momenten condities worden gesteld. Denk hierbij aan de volgende zaken:
+-	Volgordelijkheid van berichten afdwingen. Hiermee wordt bedoeld dat berichten pas kunnen worden verstuurd nadat andere berichten zijn ontvangen of dat berichten alleen verstuurd mogen worden wanneer andere berichten nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden. <verwijzing naar MessageInTransactionTypeCondition op het functionele niveau>
+-	Het is wel of niet toegestaan om meerdere secundaire transacties te initiëren <verwijzing naar secundary transactions allowed op het functionele niveau>
+-	Het is wel of niet toegestaan om bepaalde elementen in een bericht op een bepaald moment in de transactie te bewerken  of bepaalde elementen worden gewist <Verwijzing naar elementcondition op het functionele niveau>
+
+
+
+**Kan ik een raamwerk aanvullen of wijzigen tijdens een project**
+  
+Het is mogelijk om het raamwerk aan te passen tijdens het gebruiken van een VISI-raamwerk in een project of andere situatie. Hierbij dienen altijd wel een aantal zaken in het achterhoofd te worden gehouden, namelijk:
+-	Lopende transacties worden afgerond  in de versie van het raamwerk waarin ze zijn opgestart. Dit houdt in dat een wijziging van een raamwerk geen effect heeft op lopende VISI communicatie.
+-	Een nieuwe versie van het raamwerk dient bij alle projectpartners te worden ingelezen
+-	Er kunnen rollen worden toegevoegd aan het raamwerk
+Raamwerken worden in de praktijk aangepast als bijvoorbeeld bedrijfsprocessen of proceseisen veranderen of als bijvoorbeeld voorgedefinieerde elementen in berichten met domeinwaarden aangepast dienen te worden. Het raamwerk bevat ook keuzelijsten in de vorm van een drop-down menu. Deze lijsten mogen gedurende een project worden aangepast. Deze wijziging heeft geen invloed op reeds verstuurde berichten of reeds gestarte berichtenstromen. 
+
+
 
 ## Garanties voor de gebruiker
 
