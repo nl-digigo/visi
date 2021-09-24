@@ -73,3 +73,33 @@ Binnen VISI staat de zogenoemde transactie centraal. Een transactie is in de pra
 ## Verdieping van het raamwerk
 
 ## Garanties voor de gebruiker
+
+**VISI en ISO 29481-1 Building information models - Information delivery manual**
+
+VISI geeft een invulling aan, en uitbreiding op, de internationale norm ISO 29481-1 Building information models - Information delivery manual. 
+
+**Overdragen van projecten van het ene naar het andere systeem**
+
+Als een gebruiker van VISI tijdens een project wil overstappen naar een andere leverancier, wordt verwacht dat deze de reeds verstuurde berichten kan inlezen, om de gebruiker het project te laten vervolgen vanuit een andere applicatie.
+
+**Archivering**
+
+Na afsluiting van het project worden de afspraken en de berichten samen gearchiveerd. Van een VISI-applicatie wordt verwacht dat het een project kan inlezen zodat een gebruiker het berichtenverkeer weer kan lezen kan aanbieden als offline projectarchief waarbij de berichten en bijlagen in de context van de workflow bewaard blijven.
+
+**Stuurinformatie: Monitoring voortgang samenwerking**
+
+Voor het hele project kun je zien wat de voortgang is van de samenwerking omdat je kunt checken of berichten verstuurd zijn conform de afspraken. Het leveren van monitoringsgegevens of stuurinformatie over projecten heen is geen onderdeel van de standaard, maar wordt door gebruikers wel verwacht van de VISI applicaties.
+
+
+**Berichten zijn na verzending niet aanpasbaar**
+
+**Certificering VISI compatible software**
+
+
+Controlevragen: 
+- Moeten rapportages t.b.v. stuurinformatie ook worden ondersteund door software of is dit software afhankelijk?
+- Hoe weet je dat de inhoud van het bericht juist is?
+- Hoe weet je dat je bericht is aangekomen?
+- Hoe weet je dat de juiste persoon het bericht heeft ontvangen?
+- Hoe weet je dat een gemachtigd persoon het bericht heeft geschreven?
+
