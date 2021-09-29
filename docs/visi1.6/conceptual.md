@@ -56,6 +56,13 @@ Binnen VISI zijn communicatieafspraken vastgelegd in een structuur die het VISI-
 
 Binnen VISI staat de zogenoemde transactie centraal. Een transactie is in de praktijk een serie van berichten tussen twee rollen met als uitkomst een bepaald resultaat. Denk hierbij bijvoorbeeld aan een verzoek van een rol aan een ander rol om iets te beoordelen, waarna het resultaat een positief of negatief oordeel is. Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld waarna de transactie is afgerond.
 
+![alt text](image.jpg)
+
+![Transactie diagram 1](url="https://github.com/bimloket/visi/blob/master/docs/visi1.6/media/TransactieTypeDiagram1.png")
+
+![Transactie diagram 2]("https://github.com/bimloket/visi/blob/master/docs/visi1.6/media/TransactieTypeDiagram2.png")
+
+
 ### Bericht en bijlage
 
 Berichten worden gebruikt om transacties af te handelen. Berichten kennen een logische volgorde en bestaan uit gegevenselementen. De structuur van een bericht staat op hoofdlijnen vast. Een bericht bestaat uit een ‘header’ en een ‘body’. De header bestaat uit vaste systematiek elementen uit de standaard. Bijvoorbeeld de afzender, en het tijdstip van verzenden. De body is vergelijkbaar met een template van elementen die in het berichtenverkeer gebruikt  kan worden. Deze berichttemplates kunnen projectspecifiek worden ingericht en/of aangepast.  Aan een bericht kunnen bijlagen worden toegevoegd.
