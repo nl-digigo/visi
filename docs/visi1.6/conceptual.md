@@ -56,12 +56,18 @@ Binnen VISI zijn communicatieafspraken vastgelegd in een structuur die het VISI-
 
 Binnen VISI staat de zogenoemde transactie centraal. Een transactie is in de praktijk een serie van berichten tussen twee rollen met als uitkomst een bepaald resultaat. Denk hierbij bijvoorbeeld aan een verzoek van een rol aan een ander rol om iets te beoordelen, waarna het resultaat een positief of negatief oordeel is. Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld waarna de transactie is afgerond.
 
-
+<figure id="TransactieTypeDiagram1">
+<figcaption>
+  <span class="fig-title"></span>
 <img src="media/TransactieTypeDiagram1.png" width="87%" height="87%">
-
-
+</figcaption>
+</figure>
+<figure id="TransactieTypeDiagram2">
+<figcaption>
+  <span class="fig-title"></span>
 <img src="media/TransactieTypeDiagram2.png" width="87%" height="87%">
-
+</figcaption>
+</figure>
 
 ### Bericht en bijlage
 
@@ -79,9 +85,8 @@ Aan VISI-berichten kunnen bijlagen worden gekoppeld. Dit komt sterk overeen met 
 
 
 **Bijlagen (één of meerdere bijlagen)**
+
 nog uitschrijven
-
-
 
 
 ## Communiceren op basis van een raamwerk
