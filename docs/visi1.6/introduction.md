@@ -1,7 +1,7 @@
 # Introductie
-***Wat is VISI en wat is het het doel ervan***
+***Wat is VISI en wat is het doel ervan***
 
-VISI is een afsprakenstelsel dat tot doel heeft om samenwerken met behulp met ICT te ondersteunen.
+VISI is een afsprakenstelsel dat tot doel heeft om samenwerken met ICT te ondersteunen.
 
 De drijfveren van VISI:
 
@@ -11,7 +11,9 @@ De drijfveren van VISI:
 -	De communicatie vanaf start van het project snel in te kunnen richten;
 -	Ruis in de communicatie te voorkomen.
 
+**Voorbeeld UAV/UAV-GC**
 Dit doen we door van te voren na te denken over de communicatie die plaatsvindt tussen Opdrachtgever en Opdrachtnemer conform de contractvormen UAV en UAVgc met toevoeging van de contractstukken waarin afspraken zijn opgenomen over de communicatie. Dit wordt vertaald naar berichten in een vooraf afgesproken workflow met bijbehorende reactietermijnen. Hierdoor kunnen alle partijen zich tijdens het project concentreren op de inhoud en de uitvoering van het project.
+**Voorbeeld pizzeria**
 
 
 ## Waarom en voor wie deze documentatie?
@@ -19,7 +21,7 @@ Dit doen we door van te voren na te denken over de communicatie die plaatsvindt 
 
 **Waarom deze documentatie**
 
-De bouwsector is de eigenaar van de open standaard VISI. CROW is beheerder van de VISI-standaard. CROW wordt geadviseerd door de expertcommissie. In deze expertcommissie zitten onder meer de softwareleveranciers die VISI hebben geïmplementeerd. Zij hebben nauw contact met de gebruikers die op hun beurt vragen om nieuwe functionaliteiten.
+De bouwsector is de eigenaar van de open standaard VISI. BIM loket is beheerder van de VISI-standaard. BIM loket wordt geadviseerd door de expertcommissie. In deze expertcommissie zitten onder meer de softwareleveranciers die VISI hebben geïmplementeerd. Zij hebben nauw contact met de gebruikers die op hun beurt vragen om nieuwe functionaliteiten.
 De verschillende softwareontwikkelaars zijn elk verantwoordelijk (en eigenaar) van hun eigen implementatie van de VISI standaard binnen het door hunzelf ontwikkelde softwarepakket. Met een eenduidige en bondige waarheid op basis waarvan de implementatie moet worden uitgevoerd kan elke softwareleverancier de markt betreden. 
 
 **Voor wie is de documentatie bedoeld**
