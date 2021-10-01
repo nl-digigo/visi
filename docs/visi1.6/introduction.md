@@ -32,7 +32,7 @@ De functionele- en technische documentatie van de VISI-standaard is bedoeld voor
 
 
 ## Leeswijzer
-De documentatie is opgedeeld in drie lagen: conceptueel, functioneel en technisch. Deze lagen worden in de onderstaande paragrafen toegelicht.
+De documentatie is opgedeeld in drie delen: conceptueel, functioneel en technisch. Deze delen worden in de onderstaande paragrafen toegelicht.
 
 In de documentatie worden op elk niveau twee voorbeelden gebruikt: een bouwproject, met een samenwerking tussen een opdrachtgever en een opdrachtnemer; en een pizzeria, met een klant, een ober en een kok.
 
