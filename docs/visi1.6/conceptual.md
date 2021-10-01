@@ -31,20 +31,18 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
   
   **Door van te voren afspraken te maken over de communicatie weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking bepaalt men welke rollen met elkaar communiceren over taken, en welke berichtenflow daar bij hoort. Door van te voren afspraken te maken over de informatie die men van elkaar verwacht weet men van elkaar waar men aan toe is. Bij de voorbereiding van de samenwerking bepaal je voor elk bericht welke inhoud dit heeft, inclusief bijlagen.
   
-  **Men is vrij om de samenwerking vorm te geven zoals men wenst.** VISI is zeer flexibel: Men is vrij om de samenwerking vorm te geven zoals men wenst,  VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van softwarepakketten, dat zij voorbereid  zijn om deze flexibele afspraken per project of samenwerking te kunnen inlezen. 
+  **Men is vrij om de samenwerking vorm te geven zoals men wenst.** VISI is zeer flexibel: Men is vrij om de samenwerking vorm te geven zoals men wenst, VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van softwarepakketten, dat zij voorbereid  zijn om deze flexibele afspraken per project of samenwerking te kunnen inlezen. 
 
 
 ## Het VISI-raamwerk en onderdelen
 
-***VISI-raamwerk***
+**VISI-raamwerk**
 
 Binnen VISI zijn communicatieafspraken vastgelegd in een structuur die het VISI-raamwerk wordt genoemd. De begrippen die in dit VISI-raamwerk veel worden gebruikt worden uitgelegd. Veel gebruikte begrippen zijn:  
 
 - Rol 
 - Transactie 
 - Bericht 
-- Gegevenselement 
-- Bijlage
 
 ### Voorbeelden
 
@@ -55,10 +53,17 @@ Binnen VISI zijn communicatieafspraken vastgelegd in een structuur die het VISI-
 
 ### Transactie
 
-Binnen VISI staat de zogenoemde transactie centraal. Een transactie is in de praktijk een serie van berichten tussen twee rollen met als uitkomst een bepaald resultaat. Denk hierbij bijvoorbeeld aan een verzoek van een rol aan een ander rol om iets te beoordelen, waarna het resultaat een positief of negatief oordeel is. Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld waarna de transactie is afgerond.
+[issue 114](https://github.com/bimloket/visi/issues/114)
 
+Binnen VISI staat de zogenoemde transactie centraal: een bindende afspraak tussen twee rollen die overeenkomen wat er moet gebeuren. 
 
-<img src="media/TransactieTypeDiagram1.png" width="87%" height="94%">
+In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruikt bij het communiceren over de transactie. De volgorde van berichten verloopt altijd heen en weer tussen rollen: na een bericht van rol A volgt altijd een bericht van rol B waarna rol A weer aan de beurt is, tot het einde van de transactie. 
+
+**Voorbeeld in een bouwproject** 
+Denk hierbij bijvoorbeeld aan Vraag van rol A aan rol B om iets te beoordelen. Het raamwerk geeft de berichten die hierbij kunnen worden gebruikt als antwoord. In de afbeelding gaat het hierbij om bericht X of bericht Y.
+
+**Voorbeeld in een pizzera**
+Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden (Vraag) waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld (Antwoord X) of wordt gemeld dat de ingredienten niet in huis zijn (Antwoord Y) waarna de transactie is afgerond. 
 
 <img src="media/TransactieTypeDiagram2.png" width="87%" height="94%">
 
@@ -66,6 +71,8 @@ Binnen VISI staat de zogenoemde transactie centraal. Een transactie is in de pra
 ### Bericht en bijlage
 
 Berichten worden gebruikt om transacties af te handelen. Berichten kennen een logische volgorde en bestaan uit velden en tabellen die de gebruiker heeft samengesteld. De structuur van een bericht staat op hoofdlijnen vast. Een bericht bestaat uit een ‘header’ en een ‘body’. De header bestaat uit vaste informatie-onderdelen uit de standaard. Bijvoorbeeld de afzender, en het tijdstip van verzenden. De body is vergelijkbaar met een template van elementen die in het berichtenverkeer gebruikt kan worden. Deze berichttemplates kunnen projectspecifiek worden ingericht en/of aangepast.  Aan een bericht kunnen bijlagen worden toegevoegd. [Opmerking Elisabethg: dit is nog te technisch beschreven]
+
+<img src="media/TransactieTypeDiagram1.png" width="87%" height="94%">
 
 **Informatie in een bericht**
 
