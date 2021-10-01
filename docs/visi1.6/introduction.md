@@ -34,11 +34,15 @@ De functionele- en technische documentatie van de VISI-standaard is bedoeld voor
 ## Leeswijzer
 De documentatie is opgedeeld in drie lagen: conceptueel, functioneel en technisch. Deze lagen worden in de onderstaande paragrafen toegelicht.
 
-Aan de orde komt dat de afspraken voor communicatie tussen projectpartners vastgelegd worden in het VISI-**raamwerk**. Aangegeven wordt wat de onderdelen van het VISI-raamwerk zijn en ieder onderdeel van het raamwerk wordt toegelicht. Zo wordt beschreven dat in VISI verantwoordelijkheden niet toegekend worden aan partijen maar aan personen in ‘**rollen**’. Uitgelegd wordt dat rollen met elkaar zaken doen; daarvoor is het begrip **transactie** geïntroduceerd. Werkelijke informatieoverdracht vindt plaats door **berichten** met **bijlagen**.
-
 In de documentatie worden op elk niveau twee voorbeelden gebruikt: een bouwproject, met een samenwerking tussen een opdrachtgever en een opdrachtnemer; en een pizzeria, met een klant, een ober en een kok.
 
 
-> niveau 1 Conceptueel\
+### niveau 1 Conceptueel
+In het conceptuele deel worden de volgende zaken beschreven:
+- Hoe werkt VISI voor de gebruiker
+- Het VISI raamwerk en onderdelen; met een raamwerk wordt de samenwerking of het project voorbereid.
+- De bouwstenen van een raamwerk
+- Wat heb je nodig om te kunnen communiceren op basis van het raamwerk
+
 > niveau 2 Functioneel\
 > niveau 3 Technisch
