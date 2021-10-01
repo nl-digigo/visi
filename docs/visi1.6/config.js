@@ -20,7 +20,7 @@ function changeSOTD()
   // else                                  //-- SOTD Aanpassen
   // {
 
-    tag.innerHTML = "<h2>Status of this document</h2>";
+    tag.innerHTML = "<h2>Status van dit document</h2>";
     tag.innerHTML += "<p>";
    
     switch(respecConfig.specStatus)
