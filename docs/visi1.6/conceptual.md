@@ -2,7 +2,7 @@
 
 Test [issue 93](https://github.com/bimloket/visi/issues/93)
 
-## Werking voor een gebruiker?
+## Werking voor een gebruiker
 
 Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of takenmanager, waarin men precies kan zien welke berichten men nog moet beantwoorden, welke antwoorden te verwachten en welke deadlines er afgesproken zijn.
 
@@ -21,16 +21,15 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 **Met VISI zijn wijzigingen in de samenwerkafspraken altijd traceerbaar.** Tijdens het project kunnen de afspraken over de workflow, berichtinhoud, rollen en verantwoordelijkheden gewijzigd worden.  
 
 
-
 ### Voorbereiding
 
 ***Flexibiliteit van VISI in het maken van samenwerkafspraken***
   
-  **Door van te voren afspraken te maken over taken en verantwoordelijkheden weet je van elkaar waar je aan toe bent.** Bij de voorbereiding van de samenwerking spreek je af wie welke rol heeft, en welke taken deze rol heeft.
+  **Door van te voren afspraken te maken over taken en verantwoordelijkheden weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking spreekt men af wie welke rol heeft, en welke taken deze rol heeft.
   
-  **Door van te voren afspraken te maken over de communicatie weet je van elkaar waar je aan toe bent.** Bij de voorbereiding van de samenwerking bepaal je welke rollen met elkaar communiceren over taken, en welke berichtenflow daar bij hoort. Door van te voren afspraken te maken over de informatie die je van elkaar verwacht weet je van elkaar waar je aan toe bent. Bij de voorbereiding van de samenwerking bepaal je voor elk bericht, welke inhoud dit heeft, inclusief bijlagen.
+  **Door van te voren afspraken te maken over de communicatie weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking bepaal je welke rollen met elkaar communiceren over taken, en welke berichtenflow daar bij hoort. Door van te voren afspraken te maken over de informatie die je van elkaar verwacht weet je van elkaar waar je aan toe bent. Bij de voorbereiding van de samenwerking bepaal je voor elk bericht, welke inhoud dit heeft, inclusief bijlagen.
   
-  **Je bent vrij om je samenwerking vorm te geven zoals je wilt.** VISI is zeer flexibel: Je bent vrij om je samenwerking vorm te geven zoals je wilt,  VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van applicaties, dat zij voorbereid  zijn om deze flexibele samenwerkafspraken per project of organisatie te kunnen inlezen. 
+  **Men is vrij om de samenwerking vorm te geven zoals men wenst.** VISI is zeer flexibel: Je bent vrij om je samenwerking vorm te geven zoals je wilt,  VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van softwarepakketten, dat zij voorbereid  zijn om deze flexibele samenwerkafspraken per project of organisatie te kunnen inlezen. 
 
 
 ## Het VISI-raamwerk en onderdelen
@@ -64,17 +63,17 @@ Binnen VISI staat de zogenoemde transactie centraal. Een transactie is in de pra
 
 ### Bericht en bijlage
 
-Berichten worden gebruikt om transacties af te handelen. Berichten kennen een logische volgorde en bestaan uit gegevenselementen. De structuur van een bericht staat op hoofdlijnen vast. Een bericht bestaat uit een ‘header’ en een ‘body’. De header bestaat uit vaste systematiek elementen uit de standaard. Bijvoorbeeld de afzender, en het tijdstip van verzenden. De body is vergelijkbaar met een template van elementen die in het berichtenverkeer gebruikt  kan worden. Deze berichttemplates kunnen projectspecifiek worden ingericht en/of aangepast.  Aan een bericht kunnen bijlagen worden toegevoegd.
+Berichten worden gebruikt om transacties af te handelen. Berichten kennen een logische volgorde en bestaan uit velden en tabellen die de gebruiker heeft samengesteld. De structuur van een bericht staat op hoofdlijnen vast. Een bericht bestaat uit een ‘header’ en een ‘body’. De header bestaat uit vaste informatie-onderdelen uit de standaard. Bijvoorbeeld de afzender, en het tijdstip van verzenden. De body is vergelijkbaar met een template van elementen die in het berichtenverkeer gebruikt kan worden. Deze berichttemplates kunnen projectspecifiek worden ingericht en/of aangepast.  Aan een bericht kunnen bijlagen worden toegevoegd. [Opmerking Elisabethg: dit is nog te technisch beschreven]
 
-**Elementen in een bericht**
+**Informatie in een bericht**
 
-Een body van een bericht is te vergelijken met een formulier met velden. Zoals: tekstvelden, data, bedragen, Ja/Nee, keuzelijsten, etc.) en/of tabellen.
+Een body van een bericht is te vergelijken met een formulier met velden. Zoals: tekstvelden, data, bedragen, Ja/Nee, keuzelijsten, etcetera en/of tabellen.
 Een startbericht en een eindbericht van een transactie gaan uit van dezelfde velden, eventueel onderweg aangevuld met meer velden. Hier vindt overerving plaats. Ingevulde gegevens worden in principe mee verstuurd in een volgend bericht, tenzij er een zogenoemde conditie is meegegeven in het raamwerk.
 
 
 **Bijlagen en META-gegevens**
 
-Aan VISI-berichten kunnen bijlagen worden gekoppeld. Dit komt sterk overeen met een ‘attachement’ van een e-mail. Een belangrijk verschil is echter dat een bijlage  van een VISI-bericht kan worden voorzien van META-gegevens. Deze elementen kunnen vooraf worden gedefinieerd. Denk hierbij bijvoorbeeld aan het versienummer, documentdatum, status, etc.. Hierbij kan bijvoorbeeld rekening worden gehouden met de META-gegevens die in een organisatiespecifieke documentmanagementsysteem noodzakelijk zijn.
+Aan VISI-berichten kunnen bijlagen worden gekoppeld. Dit komt sterk overeen met een ‘attachement’ van een e-mail. Een belangrijk verschil is echter dat een bijlage  van een VISI-bericht kan worden voorzien van META-gegevens. Deze elementen kunnen vooraf worden gedefinieerd. Denk hierbij bijvoorbeeld aan het versienummer, documentdatum, status, etcetera. Hierbij kan bijvoorbeeld rekening worden gehouden met de META-gegevens die in een organisatiespecifieke documentmanagementsysteem noodzakelijk zijn.
 
 
 **Bijlagen (één of meerdere bijlagen)**
