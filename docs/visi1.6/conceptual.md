@@ -27,9 +27,9 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
   
   **Door van te voren afspraken te maken over taken en verantwoordelijkheden weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking spreekt men af wie welke rol heeft, en welke taken deze rol heeft.
   
-  **Door van te voren afspraken te maken over de communicatie weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking bepaal je welke rollen met elkaar communiceren over taken, en welke berichtenflow daar bij hoort. Door van te voren afspraken te maken over de informatie die je van elkaar verwacht weet je van elkaar waar je aan toe bent. Bij de voorbereiding van de samenwerking bepaal je voor elk bericht, welke inhoud dit heeft, inclusief bijlagen.
+  **Door van te voren afspraken te maken over de communicatie weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking bepaalt men welke rollen met elkaar communiceren over taken, en welke berichtenflow daar bij hoort. Door van te voren afspraken te maken over de informatie die men van elkaar verwacht weet men van elkaar waar men aan toe is. Bij de voorbereiding van de samenwerking bepaal je voor elk bericht welke inhoud dit heeft, inclusief bijlagen.
   
-  **Men is vrij om de samenwerking vorm te geven zoals men wenst.** VISI is zeer flexibel: Je bent vrij om je samenwerking vorm te geven zoals je wilt,  VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van softwarepakketten, dat zij voorbereid  zijn om deze flexibele samenwerkafspraken per project of organisatie te kunnen inlezen. 
+  **Men is vrij om de samenwerking vorm te geven zoals men wenst.** VISI is zeer flexibel: Men is vrij om de samenwerking vorm te geven zoals men wenst,  VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van softwarepakketten, dat zij voorbereid  zijn om deze flexibele afspraken per project of samenwerking te kunnen inlezen. 
 
 
 ## Het VISI-raamwerk en onderdelen
