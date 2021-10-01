@@ -6,6 +6,8 @@ Test [issue 93](https://github.com/bimloket/visi/issues/93)
 
 Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of takenmanager, waarin men precies kan zien welke berichten men nog moet beantwoorden, welke antwoorden te verwachten en welke deadlines er afgesproken zijn.
 
+![Visualisatie VISI voor de gebruiker](./media/plaatje.jpg "Visualisatie VISI voor de gebruiker")
+
 ### Uitvoering
 
 ***Berichten versturen en afspraken nakomen***  
