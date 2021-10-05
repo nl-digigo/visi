@@ -51,6 +51,11 @@ Binnen VISI zijn communicatieafspraken vastgelegd in een structuur die het VISI-
 
 ## Alle bouwstenen van een raamwerk
 
+### Rol
+
+
+tekst michon
+
 ### Transactie
 
 [issue 114](https://github.com/bimloket/visi/issues/114)
