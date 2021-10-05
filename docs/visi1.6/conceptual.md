@@ -44,10 +44,25 @@ Binnen VISI zijn communicatieafspraken vastgelegd in een structuur die het VISI-
 - Transactie 
 - Bericht 
 
+```
+In order to give guidance to a process and information transfer, the elements of interaction need to
+ be described in a coherent manner. This coherent description is called an interaction framework. An
+ interaction framework shall include
+ — definition of relevant roles,
+ — transactions,
+ — messages in transaction,
+ — the order of messages in transaction,
+ — data elements in messages.
+```
+
+
 ### Voorbeelden
 
+
 **Bouwproject**
+
 **Pizzeria**
+
 
 ## Alle bouwstenen van een raamwerk
 
