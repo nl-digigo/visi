@@ -89,7 +89,10 @@ Aan VISI-berichten kunnen één of meerdere bijlagen worden toegevoegd. Dit komt
 
 **Bijlagen (één of meerdere bijlagen)**
 
-wat moet er nog meer gezegd worden
+Doordat bijlagen zijn toegevoegd aan een bericht, is een bijlage achteraf altijd in context te plaatsen. Op welk moment is de bijlage verstuurd en met welke status? 
+- Goedgekeurd/afgekeurd
+- Concept/definitief
+- Datum/versie
 
 
 ## Communiceren op basis van een raamwerk
