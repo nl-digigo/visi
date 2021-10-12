@@ -34,10 +34,7 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
   **Men is vrij om de samenwerking vorm te geven zoals men wenst.** VISI is zeer flexibel: Men is vrij om de samenwerking vorm te geven zoals men wenst, VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van softwarepakketten, dat zij voorbereid  zijn om deze flexibele afspraken per project of samenwerking te kunnen inlezen. 
 
 
-## Het VISI-raamwerk en onderdelen
-
-**VISI brengt structuur aan**
-
+## VISI brengt structuur aan
 
 Om de uitwisseling van informatie gestructureerd te laten verlopen zijn binnen VISI digitale communicatieafspraken vastgelegd. Het is vergelijkbaar met bijvoorbeeld het versturen van e-mails of het aanbieden van documenten op een gedeelde Sharepoint omgeving. Het verschil is dat de inhoud van de berichten vooraf zijn gedefinieerd. Zo bevat een bericht invulbare velden zoals een formulier. Aan de berichten kan de verzender bijlagen toevoegen. Het is achteraf duidelijk op basis van welke versie een bepaald oordeel is gegeven.
 
@@ -46,7 +43,7 @@ Van te voren wordt ook nagedacht wie er met elkaar communiceren. Dit noemen wij 
 Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. Hiervoor gebruiken we de term 'transactie'. Dit leggen we allemaal vast in een structuur die het VISI-raamwerk wordt genoemd. Zo hoeft de gebruiker tijdens de uitvoeringsfase niet meer na te denken over de vorm van informatieuitwisseling, maar kunnen de projectdeelnemers zich focussen op de inhoud.
 
 
-### Voorbeelden van de omvang van een VISI-project
+### Voorbeelden als een project d.m.v. VISI zou worden ingericht
 
 
 **Bouwproject**
