@@ -21,8 +21,7 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 
 **De communicatie is terug te vinden voor alle betrokkenen, zonder wederzijdse afhankelijkheid.** Indien meerdere organisaties samenwerken, kunnen zij elk gebruik maken van hun eigen VISI software. Door de afspraken over het berichtenverkeer hebben twee personen in een verschillende organisatie beiden in hun eigen VISI software de beschikking over het berichtenverkeer.   
 
-**Met VISI zijn wijzigingen in de samenwerkafspraken altijd traceerbaar.** Tijdens het project kunnen de afspraken over de workflow, berichtinhoud, rollen en verantwoordelijkheden gewijzigd worden.  
-[issue 115](https://github.com/bimloket/visi/issues/115)
+**Met VISI zijn wijzigingen in de samenwerkafspraken altijd traceerbaar.** Tijdens het project kunnen de afspraken over de workflow, berichtinhoud, rollen en verantwoordelijkheden gewijzigd worden.  [issue 115](https://github.com/bimloket/visi/issues/115)
 
 ### Voorbereiding
 
@@ -79,8 +78,6 @@ Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een 
 
 
 ### Berichten
-
-~~Berichten worden gebruikt om transacties af te handelen. Berichten kennen een logische volgorde en bestaan uit velden en tabellen die de gebruiker heeft samengesteld. De structuur van een bericht staat op hoofdlijnen vast. Een bericht bestaat uit een ‘header’ en een ‘body’. De header bestaat uit vaste informatie-onderdelen uit de standaard. Bijvoorbeeld de afzender, en het tijdstip van verzenden. De body is vergelijkbaar met een template van elementen die in het berichtenverkeer gebruikt kan worden. Deze berichttemplates kunnen projectspecifiek worden ingericht en/of aangepast.  Aan een bericht kunnen bijlagen worden toegevoegd. [Opmerking Elisabethg: dit is nog te technisch beschreven]~~
 
 Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisselen. De berichtnaam staat gelijk aan een bepaalde status, afhankelijk van de positie binnen een proces (aanleveren document, of een afkeuring). Een bericht bestaat uit verschillende velden, afhankelijk van de informatie die nodig is. Sommige onderdelen van een bericht staan vast, zoals de afzender en het tijdstip van verzenden.
 
