@@ -2,6 +2,7 @@
 
 Test [issue 93](https://github.com/bimloket/visi/issues/93)
 
+
 ## Werking voor een gebruiker
 
 Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of takenmanager, waarin men precies kan zien welke berichten men nog moet beantwoorden, welke antwoorden te verwachten en welke deadlines er afgesproken zijn.
@@ -21,7 +22,7 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 **De communicatie is terug te vinden voor alle betrokkenen, zonder wederzijdse afhankelijkheid.** Indien meerdere organisaties samenwerken, kunnen zij elk gebruik maken van hun eigen VISI software. Door de afspraken over het berichtenverkeer hebben twee personen in een verschillende organisatie beiden in hun eigen VISI software de beschikking over het berichtenverkeer.   
 
 **Met VISI zijn wijzigingen in de samenwerkafspraken altijd traceerbaar.** Tijdens het project kunnen de afspraken over de workflow, berichtinhoud, rollen en verantwoordelijkheden gewijzigd worden.  
-
+[issue 115](https://github.com/bimloket/visi/issues/115)
 
 ### Voorbereiding
 
@@ -36,27 +37,17 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 
 ## Het VISI-raamwerk en onderdelen
 
-**VISI-raamwerk**
-
-Binnen VISI zijn communicatieafspraken vastgelegd in een structuur die het VISI-raamwerk wordt genoemd. De begrippen die in dit VISI-raamwerk veel worden gebruikt worden uitgelegd. Veel gebruikte begrippen zijn:  
-
-- Rol 
-- Transactie 
-- Bericht 
-
-```
-In order to give guidance to a process and information transfer, the elements of interaction need to
- be described in a coherent manner. This coherent description is called an interaction framework. An
- interaction framework shall include
- — definition of relevant roles,
- — transactions,
- — messages in transaction,
- — the order of messages in transaction,
- — data elements in messages.
-```
+**VISI brengt structuur aan**
 
 
-### Voorbeelden
+Om de uitwisseling van informatie gestructureerd te laten verlopen zijn binnen VISI digitale communicatieafspraken vastgelegd. Het is vergelijkbaar met bijvoorbeeld het versturen van e-mails of het aanbieden van documenten op een gedeelde Sharepoint omgeving. Het verschil is dat de inhoud van de berichten vooraf zijn gedefinieerd. Zo bevat een bericht invulbare velden zoals een formulier. Aan de berichten kan de verzender bijlagen toevoegen. Het is achteraf duidelijk op basis van welke versie een bepaald oordeel is gegeven.
+
+Van te voren wordt ook nagedacht wie er met elkaar communiceren. Dit noemen wij rollen. 
+
+Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. Hiervoor gebruiken we de term 'transactie'. Dit leggen we allemaal vast in een structuur die het VISI-raamwerk wordt genoemd. Zo hoeft de gebruiker tijdens de uitvoeringsfase niet meer na te denken over de vorm van informatieuitwisseling, maar kunnen de projectdeelnemers zich focussen op de inhoud.
+
+
+### Voorbeelden van de omvang van een VISI-project
 
 
 **Bouwproject**
@@ -64,7 +55,7 @@ In order to give guidance to a process and information transfer, the elements of
 **Pizzeria**
 
 
-## Alle bouwstenen van een raamwerk
+## Termen uit de VISI systematiek
 
 ### Rol
 
@@ -91,7 +82,7 @@ Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een 
 
 ~~Berichten worden gebruikt om transacties af te handelen. Berichten kennen een logische volgorde en bestaan uit velden en tabellen die de gebruiker heeft samengesteld. De structuur van een bericht staat op hoofdlijnen vast. Een bericht bestaat uit een ‘header’ en een ‘body’. De header bestaat uit vaste informatie-onderdelen uit de standaard. Bijvoorbeeld de afzender, en het tijdstip van verzenden. De body is vergelijkbaar met een template van elementen die in het berichtenverkeer gebruikt kan worden. Deze berichttemplates kunnen projectspecifiek worden ingericht en/of aangepast.  Aan een bericht kunnen bijlagen worden toegevoegd. [Opmerking Elisabethg: dit is nog te technisch beschreven]~~
 
-Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisselen. De berichtnaam staat gelijk aan een bepaalde status, afhankelijk van de positie binnen een proces (aanleveren document, of een afkeuring). Een bericht bestaat uit verschillende velden, afhankelijk van de informatie die nodig is. Sommige onderdelen van een bericht staan vast, zoals de afzender en het tijdstip van verzenden. Aan een bericht kunnen bijlagen worden toegevoegd.
+Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisselen. De berichtnaam staat gelijk aan een bepaalde status, afhankelijk van de positie binnen een proces (aanleveren document, of een afkeuring). Een bericht bestaat uit verschillende velden, afhankelijk van de informatie die nodig is. Sommige onderdelen van een bericht staan vast, zoals de afzender en het tijdstip van verzenden.
 
 <img src="media/TransactieTypeDiagram1.png" width="87%" height="94%">
 
