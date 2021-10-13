@@ -108,8 +108,10 @@ Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een 
 <img src="media/TransactieTypeDiagram2.png" width="87%" height="94%">
 
 
-## Communiceren op basis van een raamwerk
+## Communiceren op basis van een VISI raamwerk
 
+Het geheel van beschrijvingen van rollen, transacties, berichten en gegevens, die de afspraken en/of communicatie omvatten die in een project/samenwerkingsverband gebruikt kunnen en mogen worden, wordt een raamwerk genoemd. Om op basis van een VISI raamwerk te kunnen communiceren dienen een aantal zaken ingesteld te worden.  
+  
 ***Project specifiek bericht***
 
 Het projectspecifieke bericht plaatst het raamwerk in de context van een project. Hiermee wordt bedoeld dat in dit bestand wordt aangegeven welk specifiek project en/of contract het raamwerk representeert en welke personen in welke rol(len) kunnen deelnemen aan de communicatie in het kader van het specifieke project. Met dit bestand kan het gebruik van VISI dus worden opgestart en kunnen de gebruikers binnen de VISI communicatie worden beheerd. Daarnaast worden de volgende zaken geregeld met behulp van het projectspecifieke bericht:
