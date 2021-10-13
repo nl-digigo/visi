@@ -67,7 +67,7 @@ Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisse
 **Informatie in een bericht**
 
 De inhoud van een bericht is te vergelijken met een formulier met velden. Zoals: tekstvelden, data, bedragen, Ja/Nee, keuzelijsten, en/of tabellen.
-Een startbericht en een eindbericht van een transactie gaan uit van dezelfde velden, eventueel onderweg aangevuld met meer velden. Hier vindt overerving plaats. Ingevulde gegevens worden in principe mee verstuurd in een volgend bericht, tenzij er een zogenoemde conditie is meegegeven in het raamwerk.
+Hier vindt overerving plaats. Ingevulde gegevens worden in principe mee verstuurd in een volgend bericht, tenzij er een zogenoemde conditie is meegegeven in het raamwerk.
 
 
 **Bijlagen en META-gegevens**
@@ -81,6 +81,10 @@ Doordat bijlagen zijn toegevoegd aan een bericht, is een bijlage achteraf altijd
 - Goedgekeurd/afgekeurd/ter kennisgeving
 - Concept/definitief
 - Datum/versie
+
+**Volgordelijkheid van berichten**
+
+De berichten zijn niet alleen invulbaar, maar de opeenvolging van de berichten is ook van te voren vastgelegd. Na ontvangt van een bericht kan men in de regel één of meerdere antwoorden kiezen. Zo ligt van te voren vast hoe de communicatie er uit ziet en ook hoe het verloop is. Of met andere woorden de werkstroom ligt vast.
 
 ### Transactie
 
