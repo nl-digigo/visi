@@ -57,22 +57,6 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 Binnen (bouw)projecten en samenwerkingsvormen komen verschillende rollen voor. Het concept hoe partijen met elkaar omgaan en de overeenkomst die ze met elkaar hebben is van invloed op de verdeling van rollen over de partijen. Aan een rol liggen taken en verantwoordelijkheden ten grondslag. Denk hierbij aan een simpele overeenkomst met een Opdrachtnemer en Opdrachtgever met overeengekomen taken en verantwoordelijkheden. 
 
-### Transactie
-
-[issue 114](https://github.com/bimloket/visi/issues/114)
-
-Binnen VISI staat de zogenoemde transactie centraal: een bindende afspraak tussen twee rollen die overeenkomen wat er moet gebeuren. Een transactie is in de praktijk een serie van berichten tussen twee rollen met als uitkomst een bepaald resultaat. 
-
-In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruikt bij het communiceren over de transactie. De volgorde van berichten verloopt altijd heen en weer tussen rollen: na een bericht van rol A volgt altijd een bericht van rol B waarna rol A weer aan de beurt is, tot het einde van de transactie. 
-
-**Voorbeeld in een bouwproject** 
-Denk hierbij bijvoorbeeld aan Vraag van rol A aan rol B om iets te beoordelen. Het raamwerk geeft de berichten die hierbij kunnen worden gebruikt als antwoord. In de afbeelding gaat het hierbij om bericht X of bericht Y.
-
-**Voorbeeld in een pizzera**
-Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden (Vraag) waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld (Antwoord X) of wordt gemeld dat de ingredienten niet in huis zijn (Antwoord Y) waarna de transactie is afgerond. 
-
-<img src="media/TransactieTypeDiagram2.png" width="87%" height="94%">
-
 
 ### Berichten
 
@@ -97,6 +81,22 @@ Doordat bijlagen zijn toegevoegd aan een bericht, is een bijlage achteraf altijd
 - Goedgekeurd/afgekeurd/ter kennisgeving
 - Concept/definitief
 - Datum/versie
+
+### Transactie
+
+[issue 114](https://github.com/bimloket/visi/issues/114)
+
+Binnen VISI staat de zogenoemde transactie centraal: een bindende afspraak tussen twee rollen die overeenkomen wat er moet gebeuren. Een transactie is in de praktijk een serie van berichten tussen twee rollen met als uitkomst een bepaald resultaat. 
+
+In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruikt bij het communiceren over de transactie. De volgorde van berichten verloopt altijd heen en weer tussen rollen: na een bericht van rol A volgt altijd een bericht van rol B waarna rol A weer aan de beurt is, tot het einde van de transactie. 
+
+**Voorbeeld in een bouwproject** 
+Denk hierbij bijvoorbeeld aan Vraag van rol A aan rol B om iets te beoordelen. Het raamwerk geeft de berichten die hierbij kunnen worden gebruikt als antwoord. In de afbeelding gaat het hierbij om bericht X of bericht Y.
+
+**Voorbeeld in een pizzera**
+Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden (Vraag) waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld (Antwoord X) of wordt gemeld dat de ingredienten niet in huis zijn (Antwoord Y) waarna de transactie is afgerond. 
+
+<img src="media/TransactieTypeDiagram2.png" width="87%" height="94%">
 
 
 ## Communiceren op basis van een raamwerk
