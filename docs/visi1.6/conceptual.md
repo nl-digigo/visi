@@ -58,7 +58,7 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 Binnen (bouw)projecten en samenwerkingsvormen komen verschillende rollen voor. Het concept hoe partijen met elkaar omgaan en de overeenkomst die ze met elkaar hebben is van invloed op de verdeling van rollen over de partijen. Aan een rol liggen taken en verantwoordelijkheden ten grondslag. Denk hierbij aan een simpele overeenkomst met een Opdrachtnemer en Opdrachtgever met overeengekomen taken en verantwoordelijkheden. 
 
 
-### Berichten
+### Bericht
 
 Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisselen. De berichtnaam staat gelijk aan een bepaalde status, afhankelijk van de positie binnen een proces (aanleveren document, of een afkeuring). Een bericht bestaat uit verschillende velden, afhankelijk van de informatie die nodig is. Sommige onderdelen van een bericht staan vast, zoals de afzender en het tijdstip van verzenden.
 
