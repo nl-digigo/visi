@@ -62,7 +62,7 @@ Binnen (bouw)projecten en samenwerkingsvormen komen verschillende rollen voor. H
 
 Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisselen. De berichtnaam staat gelijk aan een bepaalde status, afhankelijk van de positie binnen een proces (aanleveren document, of een afkeuring). Een bericht bestaat uit verschillende velden, afhankelijk van de informatie die nodig is. Sommige onderdelen van een bericht staan vast, zoals de afzender en het tijdstip van verzenden.
 
-![Berichtenverkeer]<img src="media/TransactieTypeDiagram1.png" width="87%" height="94%">
+<img src="media/TransactieTypeDiagram1.png" width="87%" height="94%">
 
 
 
