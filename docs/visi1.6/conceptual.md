@@ -62,7 +62,7 @@ Binnen (bouw)projecten en samenwerkingsvormen komen verschillende rollen voor. H
 
 Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisselen. De berichtnaam staat gelijk aan een bepaalde status, afhankelijk van de positie binnen een proces (aanleveren document, of een afkeuring). Een bericht bestaat uit verschillende velden, afhankelijk van de informatie die nodig is. Sommige onderdelen van een bericht staan vast, zoals de afzender en het tijdstip van verzenden.
 
-<img src="media/TransactieTypeDiagram1.png" width="87%" height="94%">
+<img src="media/TransactieTypeDiagram1.png" width="87%" height="94%" "Berichtenverkeer">
 
 **Informatie in een bericht**
 
@@ -92,7 +92,7 @@ De berichten zijn niet alleen invulbaar, maar de opeenvolging van de berichten i
 
 De berichten zijn ook gegroepeerd per onderwerp en vormen zo steeds kleine procedures. Procedures, dus het onderwerp waarover men wil communiceren, zijn in het algemeen steeds los van elkaar te kiezen. In VISI noemen we zo’n procedure een transactie. Met het woord transactie wordt hier bedoeld ‘overeenkomst’ of ‘verrichting’. Een transactie kan een verzoek zijn om iets te doen of iets te leveren. Vaak op basis van vooraf gemaakte afspraken.
 
-<img src="media/transactie_rollen.JPG" width="50%" height="50%">
+<img src="media/transactie_rollen.JPG" width="50%" height="50%" "Transactie">
 
 Binnen VISI staat de zogenoemde transactie centraal: een bindende afspraak tussen twee rollen die overeenkomen wat er moet gebeuren. Een transactie is in de praktijk een serie van berichten tussen twee rollen met als uitkomst een bepaald resultaat. 
 
