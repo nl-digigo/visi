@@ -66,6 +66,11 @@ Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisse
 
 
 
+![Berichtenverkeer](media/TransactieTypeDiagram1.png)
+                                  |
+
+
+
 **Informatie in een bericht**
 
 De inhoud van een bericht is te vergelijken met een formulier met velden. Zoals: tekstvelden, data, bedragen, Ja/Nee, keuzelijsten, en/of tabellen.
