@@ -50,11 +50,11 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 **Pizzeria**
 
-![Interactie tussen Klant en Ober door middel van berichten](media/KlantOber 1.png)
+![Interactie tussen Klant en Ober door middel van berichten](/media/KlantOber 1.png)
 
 
 
-![Interactie tussen Ober en Kok door middel van berichten](media/OberKok 1.png)
+![Interactie tussen Ober en Kok door middel van berichten](/media/OberKok 1.png)
 
 
 
@@ -101,7 +101,7 @@ De berichten zijn niet alleen invulbaar, maar de opeenvolging van de berichten i
 
 De berichten zijn ook gegroepeerd per onderwerp en vormen zo steeds kleine procedures. Procedures, dus het onderwerp waarover men wil communiceren, zijn in het algemeen steeds los van elkaar te kiezen. In VISI noemen we zo’n procedure een transactie. Met het woord transactie wordt hier bedoeld ‘overeenkomst’ of ‘verrichting’. Een transactie kan een verzoek zijn om iets te doen of iets te leveren. Vaak op basis van vooraf gemaakte afspraken.
 
-![Transactie](media/transactie_rollen.JPG)
+![Transactie](/media/transactie_rollen.JPG)
 
 
 Binnen VISI staat de zogenoemde transactie centraal: een bindende afspraak tussen twee rollen die overeenkomen wat er moet gebeuren. Een transactie is in de praktijk een serie van berichten tussen twee rollen met als uitkomst een bepaald resultaat. 
