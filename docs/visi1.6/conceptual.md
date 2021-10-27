@@ -74,7 +74,7 @@ Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisse
 
 
 ![Berichtenverkeer](media/TransactieTypeDiagram1.png)
-                                  |
+
 
 **Informatie in een bericht**
 
