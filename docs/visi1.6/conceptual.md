@@ -48,13 +48,14 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 **Bouwproject**
 
+
 **Pizzeria**
 
 ``` De interactie start bij de Ober. De Klant heeft een beperkt aantal reactiemogelijkheden. Als de Klant geen menukaart wilt zien dan is de interactie klaar. Als de Klant wel een menukaart wilt zien dan gaat de transactie verder. ```
 
 ![Communcatie tussen Klant en Ober door middel van berichten](media/KlantOber%201.png)
 
-``` De Ober plaatst de bestelling bij Kok. Kok kan de bestelling accepteren en weigeren. Afhankelijk van de reactie van Kok wordt een reactie gegeven aan Klant. Bijvoorbeeld een vraag over bestelling.```
+``` De Ober plaatst de bestelling bij Kok. Kok kan de bestelling accepteren en weigeren. Afhankelijk van de reactie van Kok wordt een reactie gegeven aan Klant. Bijvoorbeeld een vraag over bestelling. Het wordt dusdanig gestructureerd dat de Klant niet met de Kok kan communiceren.```
 
 ![Interactie tussen Ober en Kok door middel van berichten](media/OberKok%201.png)
 
