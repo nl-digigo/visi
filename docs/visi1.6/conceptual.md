@@ -50,6 +50,13 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 **Pizzeria**
 
+![Interactie tussen Klant en Ober door middel van berichten](media/KlantOber 1.png)
+
+
+
+![Interactie tussen Ober en Kok door middel van berichten](media/OberKok 1.png)
+
+
 
 ## Termen uit de VISI systematiek
 
@@ -62,14 +69,9 @@ Binnen (bouw)projecten en samenwerkingsvormen komen verschillende rollen voor. H
 
 Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisselen. De berichtnaam staat gelijk aan een bepaalde status, afhankelijk van de positie binnen een proces (aanleveren document, of een afkeuring). Een bericht bestaat uit verschillende velden, afhankelijk van de informatie die nodig is. Sommige onderdelen van een bericht staan vast, zoals de afzender en het tijdstip van verzenden.
 
-<img src="media/TransactieTypeDiagram1.png" width="87%" height="94%">
-
-
 
 ![Berichtenverkeer](media/TransactieTypeDiagram1.png)
                                   |
-
-
 
 **Informatie in een bericht**
 
@@ -99,7 +101,8 @@ De berichten zijn niet alleen invulbaar, maar de opeenvolging van de berichten i
 
 De berichten zijn ook gegroepeerd per onderwerp en vormen zo steeds kleine procedures. Procedures, dus het onderwerp waarover men wil communiceren, zijn in het algemeen steeds los van elkaar te kiezen. In VISI noemen we zo’n procedure een transactie. Met het woord transactie wordt hier bedoeld ‘overeenkomst’ of ‘verrichting’. Een transactie kan een verzoek zijn om iets te doen of iets te leveren. Vaak op basis van vooraf gemaakte afspraken.
 
-<img src="media/transactie_rollen.JPG" width="50%" height="50%">
+![Transactie](media/transactie_rollen.JPG)
+
 
 Binnen VISI staat de zogenoemde transactie centraal: een bindende afspraak tussen twee rollen die overeenkomen wat er moet gebeuren. Een transactie is in de praktijk een serie van berichten tussen twee rollen met als uitkomst een bepaald resultaat. 
 
@@ -111,7 +114,7 @@ Denk hierbij bijvoorbeeld aan Vraag van rol A aan rol B om iets te beoordelen. H
 **Voorbeeld in een pizzera**
 Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden (Vraag) waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld (Antwoord X) of wordt gemeld dat de ingredienten niet in huis zijn (Antwoord Y) waarna de transactie is afgerond. 
 
-<img src="media/TransactieTypeDiagram2.png" width="86%" height="9%">
+![Transactie](media/TransactieTypeDiagram2.png)
 
 
 ## Communiceren op basis van een VISI raamwerk
