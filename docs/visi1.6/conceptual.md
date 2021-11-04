@@ -142,7 +142,7 @@ Het VISI-raamwerk wordt op basis van de systematiek regels vastgelegd in een bes
 
 **Ondersteunen van een bedrijfsproces met gekoppelde transacties**
 
-Bij een bedrijfsproces of bepaalde procedure zijn vaak meer dan twee rollen betrokken. Het is daarom lastig om met een enkele transactie tussen twee rollen een heel bedrijfsproces te ondersteunen. De standaard biedt daarom de mogelijkheid om transacties met elkaar te verbinden. Dit houdt concreet in dat een rol uit een specifieke transactie met een specifiek bericht een andere transactie met een andere rol kan initiëren. Zo kan een bedrijfsproces ondersteund worden met behulp van een set van gekoppelde transacties.
+Bij een bedrijfsproces of bepaalde procedure zijn vaak meer dan twee rollen betrokken. Het is echter niet mogelijk om met een enkele transactie tussen twee rollen een heel bedrijfsproces te ondersteunen. De standaard biedt daarom de mogelijkheid om transacties met elkaar te verbinden. Zo kan een bedrijfsproces ondersteund worden met behulp van een set van gekoppelde transacties.
 
 ```Denk hierbij bijvoorbeeld aan een klant van de pizzeria die met een ober een transactie aangaat om een heerlijke pizza te verkrijgen. De ober kan op basis van de transactie met de klant op zijn/haar beurt weer een transactie initiëren richting een kok om de pizza te maken.```
   
@@ -159,10 +159,10 @@ Om bepaalde afhankelijkheden in een transactie af te kunnen dwingen kunnen bij h
 
 **Kan ik een raamwerk aanvullen of wijzigen tijdens een project**
   
-Het is mogelijk om het raamwerk aan te passen tijdens het gebruiken van een VISI-raamwerk in een project of andere situatie. Hierbij dienen altijd wel een aantal zaken in het achterhoofd te worden gehouden, namelijk:
+Tijdens het gebruik van een VISI-raamwerk in een project of een ander samenwerkingsverband is het mogelijk het VISI-raamwerk aan te passen. Hierbij dienen altijd wel een aantal zaken in het achterhoofd te worden gehouden, namelijk:
 -	Lopende transacties worden afgerond  in de versie van het raamwerk waarin ze zijn opgestart. Dit houdt in dat een wijziging van een raamwerk geen effect heeft op lopende VISI communicatie.
 -	Een nieuwe versie van het raamwerk dient bij alle projectpartners te worden ingelezen
--	Er kunnen rollen worden toegevoegd aan het raamwerk
+-	Er kunnen rollen en transacties worden toegevoegd aan het raamwerk
 Raamwerken worden in de praktijk aangepast als bijvoorbeeld bedrijfsprocessen of proceseisen veranderen of als bijvoorbeeld voorgedefinieerde elementen in berichten met domeinwaarden aangepast dienen te worden. Het raamwerk bevat ook keuzelijsten in de vorm van een drop-down menu. Deze lijsten mogen gedurende een project worden aangepast. Deze wijziging heeft geen invloed op reeds verstuurde berichten of reeds gestarte berichtenstromen. 
 
 
