@@ -40,7 +40,7 @@ Om de uitwisseling van informatie gestructureerd te laten verlopen zijn binnen V
 
 Van te voren wordt ook nagedacht wie er met elkaar communiceren. Dit noemen wij rollen. 
 
-Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. Hiervoor gebruiken we de term 'transactie'. Dit leggen we allemaal vast in een structuur die het VISI-raamwerk wordt genoemd. Zo hoeft de gebruiker tijdens de uitvoeringsfase niet meer na te denken over de vorm van informatieuitwisseling, maar kunnen de projectdeelnemers zich focussen op de inhoud.
+Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. Hiervoor gebruiken we de term 'transactie'. Dit leggen we allemaal vast in een structuur die het VISI-raamwerk wordt genoemd. Zo hoeft de gebruiker tijdens de uitvoeringsfase niet meer na te denken welke stappen en mogelijkheden er zijn binnen bepaalde procesafspraken, maar kunnen de projectdeelnemers zich focussen op de inhoud van de communicatie.
 
 
 ### Voorbeelden als een project d.m.v. VISI zou worden ingericht
@@ -53,7 +53,7 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 ``` De interactie start bij de Ober. De Klant heeft een beperkt aantal reactiemogelijkheden. Als de Klant geen menukaart wilt zien dan is de interactie klaar. Als de Klant wel een menukaart wilt zien dan gaat de transactie verder. De scope van deze transactie is het plaatsen van een bestelling. Een andere transactie zou bijvoorbeeld zijn dat de Klant vraagt om de rekening aan de Ober waarna de Ober de rekening brengt. ```
 
-![Communcatie tussen Klant en Ober door middel van berichten](media/KlantOber%201.png)
+![Communicatie tussen Klant en Ober door middel van berichten](media/KlantOber%201.png)
 
 ``` De Ober plaatst de bestelling bij Kok. Kok kan de bestelling accepteren óf weigeren. Afhankelijk van de reactie van Kok wordt een reactie gegeven aan Klant. Bijvoorbeeld een vraag over bestelling. Het wordt dusdanig gestructureerd dat de Klant niet met de Kok kan communiceren.```
 
