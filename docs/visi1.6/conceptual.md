@@ -27,16 +27,16 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 
 ***Flexibiliteit van VISI in het maken van samenwerkafspraken***
   
-  **Door van te voren afspraken te maken over taken en verantwoordelijkheden weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking spreekt men af wie welke rol heeft, en welke taken deze rol heeft.
+  **Door van te voren afspraken te maken over taken en verantwoordelijkheden weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking spreekt wordt afgesproken wie welke rol heeft, en welke taken deze rol heeft.
   
-  **Door van te voren afspraken te maken over de communicatie weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking bepaalt men welke rollen met elkaar communiceren over taken, en welke berichtenflow daar bij hoort. Door van te voren afspraken te maken over de informatie die men van elkaar verwacht weet men van elkaar waar men aan toe is. Bij de voorbereiding van de samenwerking bepaal je voor elk bericht welke inhoud dit heeft, inclusief bijlagen.
+  **Door van te voren afspraken te maken over de communicatie weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking wordt bepaald welke rollen met elkaar communiceren over taken, en welke berichtenflow hier bij hoort. Door van te voren afspraken te maken over de informatie die van elkaar verwacht wordt, weten betrokkenen van elkaar verwacht mag worden. Bij de voorbereiding van de samenwerking bepaal je voor elk bericht welke inhoud dit heeft, inclusief bijlagen.
   
-  **Men is vrij om de samenwerking vorm te geven zoals men wenst.** VISI is zeer flexibel: Men is vrij om de samenwerking vorm te geven zoals men wenst, VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van softwarepakketten, dat zij voorbereid  zijn om deze flexibele afspraken per project of samenwerking te kunnen inlezen. 
+  **Partijen hebben de vrijheid om de samenwerking vorm te geven zoals is gewenst.** VISI is zeer flexibel: Partijen zijn vrij om de samenwerking vorm te geven zoals de betrokkenen wensen, VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van softwarepakketten, dat zij voorbereid  zijn om deze flexibele afspraken per project of samenwerking te kunnen inlezen  en activeren, waardoor de communicatie op basis van VISI kan worden gestart. 
 
 
 ## VISI brengt structuur aan
 
-Om de uitwisseling van informatie gestructureerd te laten verlopen zijn binnen VISI digitale communicatieafspraken vastgelegd. Het gebruiksgemak is vergelijkbaar met bijvoorbeeld het versturen van e-mails of het aanbieden van documenten op een gedeelde Sharepoint omgeving. Het verschil is dat de inhoud van de berichten vooraf zijn gedefinieerd. Zo bevat een bericht invulbare velden zoals een formulier. Aan de berichten kan de verzender bijlagen toevoegen. Het is na afloop van een project nog steeds duidelijk op basis van welke versie een bepaald oordeel is gegeven.
+Om de uitwisseling van informatie gestructureerd te laten verlopen zijn binnen VISI digitale communicatieafspraken vastgelegd. Het gebruiksgemak is vergelijkbaar met bijvoorbeeld het versturen van e-mails of het aanbieden van documenten op een gedeelde Sharepoint omgeving. Het verschil is dat de inhoud van de berichten vooraf zijn gedefinieerd. Zo bevat een bericht invulbare velden zoals een formulier. Aan de berichten kan de verzender bijlagen toevoegen. Het is na afloop van een project nog steeds duidelijk op basis van welke versie een bepaald oordeel op basis van een bericht is gegeven.
 
 Van te voren wordt ook nagedacht wie er met elkaar communiceren. Dit noemen wij rollen. 
 
