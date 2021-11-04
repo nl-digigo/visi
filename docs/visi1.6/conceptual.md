@@ -65,8 +65,7 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 ### Rol
 
-Binnen (bouw)projecten en samenwerkingsvormen komen verschillende rollen voor. Het concept hoe partijen met elkaar omgaan en de overeenkomst die ze met elkaar hebben is van invloed op de verdeling van rollen over de partijen. Aan een rol liggen taken en verantwoordelijkheden ten grondslag. Denk hierbij aan een simpele overeenkomst met een Opdrachtnemer en Opdrachtgever met overeengekomen taken en verantwoordelijkheden. 
-
+Binnen (bouw)projecten en samenwerkingsvormen komen verschillende verantwoordelijkheden en hierbij behorende taken voor. Denk hierbij aan een simpele overeenkomst met een Opdrachtnemer en Opdrachtgever met overeengekomen taken en verantwoordelijkheden. Deze verantwoordelijkheden met bijbehorende taken worden gebundeld in logische rollen. Het concept hoe partijen met elkaar omgaan en de overeenkomst die ze met elkaar hebben is van invloed op de verdeling van rollen over de partijen.
 
 ### Bericht
 
@@ -79,7 +78,7 @@ Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisse
 **Informatie in een bericht**
 
 De inhoud van een bericht is te vergelijken met een formulier met velden. Zoals: tekstvelden, data, bedragen, Ja/Nee, keuzelijsten, en/of tabellen.
-Hier vindt overerving plaats. Ingevulde gegevens worden in principe mee verstuurd in een volgend bericht, tenzij er een zogenoemde conditie is meegegeven in het raamwerk.
+Hier vindt overerving plaats. Ingevulde gegevens uit een voorgaand bericht worden in principe mee verstuurd in een volgend bericht, tenzij er een zogenoemde conditie is meegegeven in het raamwerk.
 
 
 **Bijlagen en META-gegevens**
@@ -114,8 +113,8 @@ In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruik
 **Voorbeeld in een bouwproject** 
 Denk hierbij bijvoorbeeld aan Vraag van rol A aan rol B om iets te beoordelen. Het raamwerk geeft de berichten die hierbij kunnen worden gebruikt als antwoord. In de afbeelding gaat het hierbij om bericht X of bericht Y.
 
-**Voorbeeld in een pizzera**
-Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden (Vraag) waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld (Antwoord X) of wordt gemeld dat de ingredienten niet in huis zijn (Antwoord Y) waarna de transactie is afgerond. 
+**Voorbeeld in een pizzeria**
+Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden (Vraag) waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld (Antwoord X) of wordt gemeld dat de ingrediënten niet in huis zijn (Antwoord Y) waarna de transactie is afgerond. 
 
 ![Transactie](media/TransactieTypeDiagram2.png)
 
