@@ -159,11 +159,12 @@ Om bepaalde afhankelijkheden in een transactie af te kunnen dwingen kunnen bij h
 
 **Kan ik een raamwerk aanvullen of wijzigen tijdens een project**
   
-Tijdens het gebruik van een VISI-raamwerk in een project of een ander samenwerkingsverband is het mogelijk het VISI-raamwerk aan te passen. Hierbij dienen altijd wel een aantal zaken in het achterhoofd te worden gehouden, namelijk:
--	Lopende transacties worden afgerond  in de versie van het raamwerk waarin ze zijn opgestart. Dit houdt in dat een wijziging van een raamwerk geen effect heeft op lopende VISI communicatie.
--	Een nieuwe versie van het raamwerk dient bij alle projectpartners te worden ingelezen
--	Er kunnen rollen en transacties worden toegevoegd aan het raamwerk
-Raamwerken worden in de praktijk aangepast als bijvoorbeeld bedrijfsprocessen of proceseisen veranderen of als bijvoorbeeld voorgedefinieerde elementen in berichten met domeinwaarden aangepast dienen te worden. Het raamwerk bevat ook keuzelijsten in de vorm van een drop-down menu. Deze lijsten mogen gedurende een project worden aangepast. Deze wijziging heeft geen invloed op reeds verstuurde berichten of reeds gestarte berichtenstromen. 
+Tijdens het gebruik van een VISI-raamwerk in een project of een ander samenwerkingsverband is het mogelijk het VISI-raamwerk aan te passen. Bijvoorbeeld als bedrijfsprocessen of proceseisen veranderen of als voorgedefinieerde elementen, zoals keuzelijsten in berichten aangepast dienen te worden. 
+  
+ Hierbij dienen altijd wel een aantal zaken in het achterhoofd te worden gehouden, namelijk:
+-	Lopende transacties worden afgerond  in de versie van het raamwerk waarin ze zijn opgestart. Dit houdt in dat een wijziging van een raamwerk geen effect heeft op lopende VISI communicatie;
+-	Een nieuwe versie van het raamwerk dient bij alle projectpartners te worden ingelezen.
+
 
 
 
