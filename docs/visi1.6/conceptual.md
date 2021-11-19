@@ -66,6 +66,7 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 ### Rol
 
 Binnen (bouw)projecten en samenwerkingsvormen komen verschillende verantwoordelijkheden en hierbij behorende taken voor. Denk hierbij aan een simpele overeenkomst met een Opdrachtnemer en Opdrachtgever met overeengekomen taken en verantwoordelijkheden. Deze verantwoordelijkheden met bijbehorende taken worden gebundeld in logische rollen. Het concept hoe partijen met elkaar omgaan en de overeenkomst die ze met elkaar hebben is van invloed op de verdeling van rollen over de partijen.
+[issue19](https://github.com/bimloket/visi/issues/119)
 
 ### Bericht
 
