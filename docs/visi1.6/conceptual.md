@@ -137,7 +137,14 @@ Het projectspecifieke bericht plaatst het raamwerk in de context van een project
 
 In VISI zijn verantwoordelijkheden en taken niet toegekend aan partijen of personen, maar aan “rollen”. Dit is gedaan omdat in bijvoorbeeld bouwprojecten weliswaar steeds dezelfde “rollen” voorkomen maar partijen nogal eens van rol kunnen wisselen. Denk hierbij bijvoorbeeld aan een situatie waarin een Opdrachtgever bepaalde verantwoordelijkheden en taken wil laten invullen door een ingenieursbureau of een situatie waarin een pizzeria de bezorging niet door eigen bezorgers laat doen, maar een contract afsluit met een externe partij als Deliveroo of Uber eats. Een persoon kan met behulp van het projectspecifieke bericht aan een organisatie en een rol worden gekoppeld. Maar aan een rol kunnen ook meerdere personen worden gekoppeld en een persoon kan meerdere rollen vervullen. Zie het voorbeeld hieronder voor extra toelichting.
 
-```Zo kan de rol "ober" vervuld worden door meerdere mensen. Een persoon kan ook ober en afwasser zijn.```  actie: Jos Hamilton
+```Zo kan de rol "ober" vervuld worden door meerdere mensen. Een persoon kan ook ober en afwasser zijn.```
+
+|            | Persoon1 | Persoon2 | Persoon3 | Persoon4 | Persoon5 | Persoon6 |
+| ---------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| Klant      | X        | X        |          |          |          |          |
+| Ober       |          |          | X        | X        |          |          |
+| Kok        |          |          |          |          | X        |          |
+| Keukenhulp |          |          |          | X        | X        | X        |
 
 
 ## Verdieping van het raamwerk
