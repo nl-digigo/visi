@@ -112,11 +112,23 @@ Binnen VISI staat de zogenoemde transactie centraal: een bindende afspraak tusse
 In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruikt bij het communiceren over de transactie. De volgorde van berichten verloopt altijd heen en weer tussen rollen: na een bericht van rol A volgt altijd een bericht van rol B waarna rol A weer aan de beurt is, tot het einde van de transactie. 
 
 
+```Denk hierbij bijvoorbeeld aan Vraag van rol A aan rol B om iets te beoordelen. Het raamwerk geeft de berichten die hierbij kunnen worden gebruikt als antwoord. In de afbeelding gaat het hierbij om bericht X of bericht Y.```
+
 ![Transactie met meerdere reactiemogelijkheden](media/MiTT2.png)
 
 
 **Voorbeeld in een bouwproject** 
-Denk hierbij bijvoorbeeld aan Vraag van rol A aan rol B om iets te beoordelen. Het raamwerk geeft de berichten die hierbij kunnen worden gebruikt als antwoord. In de afbeelding gaat het hierbij om bericht X of bericht Y.
+
+```De Projectleverende dient een beoordelingsdocument zoals is afgesproken in het contract. De Opdrachtgever kan het beoordelingsdocument afwijzen waarna een nieuw document wordt ingediend. Als de Opdrachtgever het beoordelingsdocument goedkeurt dan is de transactie afgehandeld.```
+
+
+![Transactie Aanleveren beoordelingsdocument](media/Beoordelingsdocument1.png)
+
+```De Projectleverende dient een beoordelingsdocument zoals is afgesproken in het contract. De Opdrachtgever kan het beoordelingsdocument afwijzen waarna een nieuw document wordt ingediend. Als de Opdrachtgever het beoordelingsdocument goedkeurt dan is de transactie afgehandeld.```
+
+
+![Transactie Verzoek beoordelen beoordelingsdocument (intern)](media/Beoordelingsdocument_intern1.png)
+
 
 **Voorbeeld in een pizzeria**
 Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden (Vraag) waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld (Antwoord X) of wordt gemeld dat de ingrediënten niet in huis zijn (Antwoord Y) waarna de transactie is afgerond. 
@@ -156,7 +168,7 @@ Het VISI-raamwerk wordt op basis van de systematiek regels vastgelegd in een bes
 
 Bij een bedrijfsproces of bepaalde procedure zijn vaak meer dan twee rollen betrokken. Het is echter niet mogelijk om met een enkele transactie tussen twee rollen een heel bedrijfsproces te ondersteunen. De standaard biedt daarom de mogelijkheid om transacties met elkaar te verbinden. Zo kan een bedrijfsproces ondersteund worden met behulp van een set van gekoppelde transacties.
 
-```Denk hierbij bijvoorbeeld aan een klant van de pizzeria die met een ober een transactie aangaat om een heerlijke pizza te verkrijgen. De ober kan op basis van de transactie met de klant op zijn/haar beurt weer een transactie initiëren richting een kok om de pizza te maken.```
+```Denk hierbij bijvoorbeeld aan een klant van de pizzeria die met een ober een transactie aangaat om een heerlijke pizza te verkrijgen. De ober kan op basis van de transactie met de klant op zijn/haar beurt weer een transactie initiëren richting een kok om de pizza te maken. In dit voorbeeld heeft de klant niet het mandaat om de keuken binnen te lopen om zelf aan een kok te vragen om de pizza te maken. De ober kan ook geen transactie starten met de kok om een pizza te maken als er geen verzoek van klant aan ten grondslag ligt.```
   
 Een belangrijk basisprincipe is dat een transactie altijd iets oplevert. Als een rol vanuit de ene transactie één of meer transacties met een andere rol initieert dient er dus altijd iets terug te komen uit deze secundaire transacties. Een secundaire transactie dient altijd weer te eindigen in de transactie vanuit waar hij is geïnitieerd.
 
