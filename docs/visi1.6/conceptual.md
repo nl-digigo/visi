@@ -73,7 +73,7 @@ Binnen (bouw)projecten en samenwerkingsvormen komen verschillende verantwoordeli
 Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisselen. De berichtnaam staat gelijk aan een bepaalde status, afhankelijk van de positie binnen een proces (aanleveren document, of een afkeuring). Een bericht bestaat uit verschillende velden, afhankelijk van de informatie die nodig is. Sommige onderdelen van een bericht staan vast, zoals de afzender en het tijdstip van verzenden.
 
 
-![Berichtenverkeer](media/TransactieTypeDiagram1.png)
+![Berichtenverkeer](media/MiTT1.png)
 
 
 **Informatie in een bericht**
@@ -104,12 +104,16 @@ De berichten zijn niet alleen invulbaar, maar de opeenvolging van de berichten i
 
 De berichten zijn ook gegroepeerd per onderwerp en vormen zo steeds kleine procedures. Procedures, dus het onderwerp waarover men wil communiceren, zijn in het algemeen steeds los van elkaar te kiezen. In VISI noemen we zo’n procedure een transactie. Met het woord transactie wordt hier bedoeld ‘overeenkomst’ of ‘verrichting’. Een transactie kan een verzoek zijn om iets te doen of iets te leveren. Vaak op basis van vooraf gemaakte afspraken.
 
-![Transactie](media/transactie_rollen.JPG)
+![Transactie](media/InitiatorExecutor.png)
 
 
 Binnen VISI staat de zogenoemde transactie centraal: een bindende afspraak tussen twee rollen die overeenkomen wat er moet gebeuren. Een transactie is in de praktijk een serie van berichten tussen twee rollen met als uitkomst een bepaald resultaat. 
 
 In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruikt bij het communiceren over de transactie. De volgorde van berichten verloopt altijd heen en weer tussen rollen: na een bericht van rol A volgt altijd een bericht van rol B waarna rol A weer aan de beurt is, tot het einde van de transactie. 
+
+
+![Transactie met meerdere reactiemogelijkheden](media/MiTT2.png)
+
 
 **Voorbeeld in een bouwproject** 
 Denk hierbij bijvoorbeeld aan Vraag van rol A aan rol B om iets te beoordelen. Het raamwerk geeft de berichten die hierbij kunnen worden gebruikt als antwoord. In de afbeelding gaat het hierbij om bericht X of bericht Y.
@@ -117,7 +121,7 @@ Denk hierbij bijvoorbeeld aan Vraag van rol A aan rol B om iets te beoordelen. H
 **Voorbeeld in een pizzeria**
 Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden (Vraag) waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld (Antwoord X) of wordt gemeld dat de ingrediënten niet in huis zijn (Antwoord Y) waarna de transactie is afgerond. 
 
-![Transactie](media/TransactieTypeDiagram2.png)
+
 
 
 ## Communiceren op basis van een VISI raamwerk
