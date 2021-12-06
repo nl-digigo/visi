@@ -48,7 +48,7 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 **Bouwproject**
 
-``` De interactie start bij de Opdrachtnemer (projectleverende). De Opdrachtgever kan het voorstel afkeuren of goedkeuren met verzoek om een offerte. Als de Opdrachtnemer een afkeuring ontvangt dan wordt het proces om een contractwijziging vast te leggen beëindigd. Als het voorstel wel wordt goedgekeurd dan levert de Opdrachtnemer een offerte met consequenties van de contractwijziging. Hierka kan de Opdrachtgever opnieuw een afkeuring of acceptatie versturen waarna de contractwijziging wordt stopgezet cq. geaccpeteerd.```
+``` De interactie start bij de Opdrachtnemer (projectleverende). De Opdrachtgever kan het voorstel afkeuren of goedkeuren met verzoek om een offerte. Als de Opdrachtnemer een afkeuring ontvangt dan wordt het proces om een contractwijziging vast te leggen beëindigd. Als het voorstel wel wordt goedgekeurd dan levert de Opdrachtnemer een offerte met consequenties van de contractwijziging. Hierka kan de Opdrachtgever opnieuw een afkeuring of acceptatie versturen waarna de contractwijziging wordt stopgezet cq. geaccepteerd.```
 
 ![Communicatie tussen Opdrahchtnemer en Opdrachtgever door middel van berichten](media/Contractwijziging1.png)
 
@@ -69,6 +69,8 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 ### Rol
 
 Binnen (bouw)projecten en samenwerkingsvormen komen verschillende verantwoordelijkheden en hierbij behorende taken voor. Denk hierbij aan een simpele overeenkomst met een Opdrachtnemer en Opdrachtgever met overeengekomen taken en verantwoordelijkheden. Deze verantwoordelijkheden met bijbehorende taken worden gebundeld in logische rollen. Het concept hoe partijen met elkaar omgaan en de overeenkomst die ze met elkaar hebben is van invloed op de verdeling van rollen over de partijen.
+
+Een rol is fundamenteel anders dan een functie. Een essentieel verschil is dat rollen een afspiegeling zijn van het werk dat georganiseerd wordt, terwijl functies een afspiegeling zijn van mensen die georganiseerd worden (in een organisatie). Een VISI-project heeft geen functie Afdelingshoofd, maar wel de rollen Beoordelende, Adviserende.
 [issue119](https://github.com/bimloket/visi/issues/119)
 
 ### Bericht
