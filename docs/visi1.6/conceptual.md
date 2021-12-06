@@ -166,6 +166,25 @@ In VISI zijn verantwoordelijkheden en taken niet toegekend aan partijen of perso
 | Keukenhulp |          |          |          | X        | X        | X        |
 
 
+
+```In een bouwproject zou de verdeling er als volgt uit kunnen zien.```
+
+
+| Opdrachtgevende | Adviserende | Toetsende/Accepterende | Projectleverende | Organisatie | Naam              | Functie           |
+| --------------- | ----------- | ---------------------- | ---------------- | ----------- | ----------------- | ----------------- |
+| X               |             |                        |                  | OG          | Martijn Gerards   | Opdrachtgever     |
+| X               |             |                        |                  | OG          | Marjon van Hagen  | Projectmanager    |
+|                 | X           |                        |                  | OG          | Wim Schilperoort  | Controler         |
+|                 | X           |                        |                  | OG          | Hans Lijmbach     | Contractmanager   |
+|                 | X           |                        |                  | OG          | Iris Adegeest     | Adviseur          |
+|                 |             | X                      |                  | OG          | Mario van Bemmel  | Toetser           |
+|                 |             | X                      |                  | OG          | Peter Bloemers    | Toetser           |
+|                 | X           | X                      |                  | OG          | Raj Dhaker        | Kostendeskundige  |
+|                 |             | X                      |                  | OG          | Jose de Kwade     | Adviseur techniek |
+|                 |             |                        | X                | ON          | Arjen van der Hof | Projectleider     |
+|                 |             |                        | X                | ON          | Klaas Slot        | Uitvoerder        |
+|                 |             |                        | X                | ON          | Jan van Geest     | Werkvoorbereider  |
+
 ## Verdieping van het raamwerk
 **Het raamwerk als bestand om in te lezen in de VISI compatible software**
 
