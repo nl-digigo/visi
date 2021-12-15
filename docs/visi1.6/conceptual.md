@@ -1,6 +1,5 @@
 # Conceptueel
 
-Test [issue 93](https://github.com/bimloket/visi/issues/93)
 
 
 ## Werking voor een gebruiker
