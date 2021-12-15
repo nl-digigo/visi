@@ -53,7 +53,7 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 **Pizzeria**
 
-``` De interactie start bij de Ober. De Klant heeft een beperkt aantal reactiemogelijkheden. Als de Klant geen menukaart wilt zien dan is de interactie klaar. Als de Klant wel een menukaart wil zien dan gaat de transactie verder. De scope van deze transactie is het plaatsen van een bestelling. Een andere transactie zou bijvoorbeeld zijn dat de Klant vraagt om de rekening aan de Ober waarna de Ober de rekening brengt. ```
+``` De interactie start in dit voorbeeld bij de Ober. De Klant heeft een beperkt aantal reactiemogelijkheden. Als de Klant geen menukaart wilt zien dan is de interactie klaar. Als de Klant wel een menukaart wil zien dan gaat de transactie verder. De scope van deze transactie is het plaatsen van een bestelling. Een andere transactie zou bijvoorbeeld zijn dat de Klant vraagt om de rekening aan de Ober waarna de Ober de rekening brengt. ```
 
 ![Communicatie tussen Klant en Ober door middel van berichten](media/KlantOber%201.png)
 
