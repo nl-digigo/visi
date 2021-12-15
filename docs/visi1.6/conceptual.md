@@ -123,7 +123,7 @@ In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruik
 
 **Voorbeeld in een bouwproject** 
 
-```De Projectleverende dient een beoordelingsdocument zoals is afgesproken in het contract. De Opdrachtgever kan het beoordelingsdocument afwijzen waarna een nieuw document wordt ingediend. Als de Opdrachtgever het beoordelingsdocument goedkeurt dan is de transactie afgehandeld.```
+```De Projectleverende dient een beoordelingsdocument, zoals is afgesproken in het contract, in. De Opdrachtgever kan het beoordelingsdocument afwijzen waarna een nieuw document wordt ingediend. Als de Opdrachtgever het beoordelingsdocument goedkeurt dan is de transactie afgehandeld.```
 
 
 ![Transactie Aanleveren beoordelingsdocument](media/Beoordelingsdocument1.png)
