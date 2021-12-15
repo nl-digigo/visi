@@ -128,7 +128,7 @@ In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruik
 
 ![Transactie Aanleveren beoordelingsdocument](media/Beoordelingsdocument1.png)
 
-```De Projectleverende dient een beoordelingsdocument zoals is afgesproken in het contract. De Opdrachtgever wilt aan één of meerdere Adviseurs vragen om het beoordelingsdocument te beoordelen. Dit noemen we een aangesloten transactie of subtransactie. Deze transactie vindt ook weer plaats tussen twee rollen (niet meer, niet minder). ```
+```De Projectleverende dient een beoordelingsdocument zoals is afgesproken in het contract. De Opdrachtgever wil aan één of meerdere Adviseurs vragen om het beoordelingsdocument te beoordelen. Dit noemen we een aangesloten transactie of subtransactie. Deze transactie vindt ook weer plaats tussen twee rollen (niet meer, niet minder). ```
 
 
 ![Transactie Verzoek beoordelen beoordelingsdocument (intern)](media/Beoordelingsdocument_intern1.png)
