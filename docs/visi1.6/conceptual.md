@@ -37,7 +37,7 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 
 Om de uitwisseling van informatie gestructureerd te laten verlopen zijn binnen VISI digitale communicatieafspraken vastgelegd. Het gebruiksgemak is vergelijkbaar met bijvoorbeeld het versturen van e-mails of het aanbieden van documenten op een gedeelde Sharepoint omgeving. Het verschil is dat de inhoud van de berichten vooraf zijn gedefinieerd. Zo bevat een bericht invulbare velden zoals een formulier. Aan de berichten kan de verzender bijlagen toevoegen. Het is na afloop van een project nog steeds duidelijk op basis van welke versie van een bijlage/bestand een bepaald oordeel op basis van een bericht is gegeven.
 
-Van te voren wordt ook nagedacht wie er met elkaar communiceren. Dit noemen wij rollen. 
+Van te voren wordt ook nagedacht wie vanuit welke verantwoordelijkheid met elkaar communiceert. Dit wordt uitgedrukt in zogenaamde rollen. 
 
 Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. Hiervoor gebruiken we de term 'transactie'. Dit leggen we allemaal vast in een structuur die het VISI-raamwerk wordt genoemd. Zo hoeft de gebruiker tijdens de uitvoeringsfase niet meer na te denken welke stappen en mogelijkheden er zijn binnen bepaalde procesafspraken, maar kunnen de projectdeelnemers zich focussen op de inhoud van de communicatie.
 
