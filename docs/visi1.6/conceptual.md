@@ -26,9 +26,9 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 
 ***Flexibiliteit van VISI in het maken van samenwerkafspraken***
   
-  **Door van te voren afspraken te maken over taken en verantwoordelijkheden weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking spreekt wordt afgesproken wie welke rol heeft, en welke taken deze rol heeft.
+  **Door van te voren afspraken te maken over taken en verantwoordelijkheden weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking wordt afgesproken wie welke rol heeft, en welke taken deze rol heeft.
   
-  **Door van te voren afspraken te maken over de communicatie weet iedereen van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking wordt bepaald welke rollen met elkaar communiceren over taken, en welke berichtenflow hier bij hoort. Door van te voren afspraken te maken over de informatie die van elkaar verwacht wordt, weten betrokkenen van elkaar verwacht mag worden. Bij de voorbereiding van de samenwerking bepaal je voor elk bericht welke inhoud dit heeft, inclusief bijlagen.
+  **Door van te voren afspraken te maken over de communicatie weet iedereen van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking wordt bepaald welke rollen met elkaar communiceren over taken, en welke berichtenflow hier bij hoort. Door van te voren afspraken te maken over de informatie die van elkaar verwacht wordt, weten betrokkenen van elkaar wat verwacht mag worden. Bij de voorbereiding van de samenwerking wordt bij elk bericht bepaald welke inhoud het bericht heeft, inclusief bijlagen.
   
   **Partijen hebben de vrijheid om de samenwerking vorm te geven zoals is gewenst.** VISI is zeer flexibel: Partijen zijn vrij om de samenwerking vorm te geven zoals de betrokkenen wensen, VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van softwarepakketten, dat zij voorbereid  zijn om deze flexibele afspraken per project of samenwerking te kunnen inlezen  en activeren, waardoor de communicatie op basis van VISI kan worden gestart. 
 
