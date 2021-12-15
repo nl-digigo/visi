@@ -57,7 +57,7 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 ![Communicatie tussen Klant en Ober door middel van berichten](media/KlantOber%201.png)
 
-``` De Ober plaatst de bestelling bij Kok. Kok kan de bestelling accepteren óf weigeren. Afhankelijk van de reactie van Kok wordt een reactie gegeven aan Klant. Bijvoorbeeld een vraag over bestelling. Het wordt dusdanig gestructureerd dat de Klant niet met de Kok kan communiceren.```
+``` De Ober plaatst de bestelling bij de Kok. De Kok kan de bestelling accepteren óf weigeren. Afhankelijk van de reactie van de Kok wordt een reactie gegeven aan de Klant. Bijvoorbeeld een vraag over bestelling. Het wordt dusdanig gestructureerd dat de Klant niet met de Kok kan communiceren.```
 
 ![Interactie tussen Ober en Kok door middel van berichten](media/OberKok%201.png)
 
