@@ -4,7 +4,7 @@
 
 ## Werking voor een gebruiker
 
-Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of takenmanager, waarin men precies kan zien welke berichten men nog moet beantwoorden, welke antwoorden te verwachten en welke deadlines er afgesproken zijn.
+Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of takenmanager, waarin men precies kan zien welke berichten men nog moet beantwoorden, welke antwoorden kunnen worden verwachten en welke deadlines er afgesproken zijn.
 
 ![Visualisatie VISI voor de gebruiker](./media/plaatje.jpg "Visualisatie VISI voor de gebruiker")
 
