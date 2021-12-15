@@ -39,10 +39,12 @@ In de documentatie worden op elk niveau twee voorbeelden gebruikt: een bouwproje
 
 ### niveau 1 Conceptueel
 In het conceptuele deel worden de volgende zaken beschreven:
-- Hoe werkt VISI voor de gebruiker
-- Het VISI raamwerk en onderdelen; met een raamwerk wordt de samenwerking of het project voorbereid.
-- De bouwstenen van een raamwerk
-- Wat heb je nodig om te kunnen communiceren op basis van het raamwerk
+- Hoe werkt VISI voor de gebruiker (zowel in de uitvoering als voorbereiding);
+- structuur aanbrengen met behulp van VISI;
+- belangrijkste VISI termen;
+- communicatie op basis van een VISI raamwerk;
+- verdieping van het VISI raamwerk;
+- garanties voor de gebruiker.
 
 > niveau 2 Functioneel\
 > niveau 3 Technisch
