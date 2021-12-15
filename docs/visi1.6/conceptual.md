@@ -202,7 +202,7 @@ Een belangrijk basisprincipe is dat een transactie altijd iets oplevert. Als een
 Om bepaalde afhankelijkheden in een transactie af te kunnen dwingen kunnen bij het opstellen van een transactie op bepaalde momenten condities worden gesteld. Denk hierbij aan de volgende zaken:
 -	Volgordelijkheid van berichten afdwingen. Hiermee wordt bedoeld dat berichten pas kunnen worden verstuurd nadat andere berichten zijn ontvangen of dat berichten alleen verstuurd mogen worden wanneer andere berichten nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden. <verwijzing naar MessageInTransactionTypeCondition op het functionele niveau>
 -	Het is wel of niet toegestaan om meerdere secundaire transacties te initiëren <verwijzing naar secundary transactions allowed op het functionele niveau>
--	Het is wel of niet toegestaan om bepaalde elementen in een bericht op een bepaald moment in de transactie te bewerken  of bepaalde elementen worden gewist <Verwijzing naar elementcondition op het functionele niveau>
+-	Het is wel of niet toegestaan om bepaalde velden in een bericht op een bepaald moment in de transactie te bewerken of bepaalde velden worden gewist <Verwijzing naar elementcondition op het functionele niveau>
 
 
 
