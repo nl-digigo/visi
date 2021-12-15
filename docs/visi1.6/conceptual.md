@@ -206,7 +206,7 @@ Om bepaalde afhankelijkheden in een transactie af te kunnen dwingen kunnen bij h
 
 
 
-**Kan ik een raamwerk aanvullen of wijzigen tijdens een project**
+**Kan een raamwerk worden aangevuld of gewijzigd worden tijdens een project?**
   
 Tijdens het gebruik van een VISI-raamwerk in een project of een ander samenwerkingsverband is het mogelijk het VISI-raamwerk aan te passen. Bijvoorbeeld als bedrijfsprocessen of proceseisen veranderen of als voorgedefinieerde elementen, zoals keuzelijsten in berichten aangepast dienen te worden. 
   
