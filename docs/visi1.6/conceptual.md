@@ -12,7 +12,7 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 
 ***Berichten versturen en afspraken nakomen***  
 
-**VISI helpt bij het nakomen van afspraken.** Men weet altijd welke acties men, of de ander, nog moet uitvoeren. Tijdens de uitvoering kan men, als men de juiste rol heeft, een berichtenstroom opstarten om een specifieke transactie uit te voeren. Men kan zien welke antwoorden men kan geven, en welke berichten men nog kan verwachten.   
+**VISI helpt bij het nakomen van afspraken.** Een gebruiker weet altijd welke acties hij/zij, of de ander, nog moet uitvoeren. Tijdens de uitvoering kan de gebruiker, indien de gebruiker de juiste rol heeft, een berichtenstroom opstarten om een specifieke transactie uit te voeren. De gebruikers kan zien welke antwoorden gegeven kunnen worden, en welke berichten nog kunnen worden verwachten.   
 
 **Men weet of een bericht aangekomen is.** Door de afspraken over het berichtenverkeer, weet een gebruiker zeker dat een bericht is aangekomen.  
 
