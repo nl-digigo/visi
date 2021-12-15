@@ -14,7 +14,7 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 
 **VISI helpt bij het nakomen van afspraken.** Een gebruiker weet altijd welke acties hij/zij, of de ander, nog moet uitvoeren. Tijdens de uitvoering kan de gebruiker, indien de gebruiker de juiste rol heeft, een berichtenstroom opstarten om een specifieke transactie uit te voeren. De gebruikers kan zien welke antwoorden gegeven kunnen worden, en welke berichten nog kunnen worden verwachten.   
 
-**Men weet of een bericht aangekomen is.** Door de afspraken over het berichtenverkeer, weet een gebruiker zeker dat een bericht is aangekomen.  
+**Het is duidelijk of een bericht aangekomen is.** Door de afspraken over het berichtenverkeer, weet een gebruiker zeker dat een bericht is aangekomen.  
 
 **Overdracht van werk aan een nieuwe medewerker gaat naadloos.** Omdat een medewerker een rol heeft, kan tijdens een samenwerking een opvolger worden aangewezen. Vanaf dat moment neemt deze opvolger de berichtenstroom over. Van een VISI applicatie wordt verwacht dat de opvolger ook de berichten van de voorganger ter beschikking heeft.
 
