@@ -45,21 +45,25 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 ### Voorbeelden als een project d.m.v. VISI zou worden ingericht
 
 
-**Bouwproject**
+<aside class="example" title="Bouwproject">
+<p> De interactie start in dit voorbeeld bij de Opdrachtnemer (projectleverende). De Opdrachtgever kan het voorstel afkeuren of goedkeuren met verzoek om een offerte. Als de Opdrachtnemer een afkeuring ontvangt dan wordt het proces om een contractwijziging vast te leggen beëindigd. Als het voorstel wel wordt goedgekeurd dan levert de Opdrachtnemer een offerte met consequenties van de contractwijziging. Hierka kan de Opdrachtgever opnieuw een afkeuring of acceptatie versturen waarna de contractwijziging wordt stopgezet cq. geaccepteerd.</p>
 
-``` De interactie start in dit voorbeeld bij de Opdrachtnemer (projectleverende). De Opdrachtgever kan het voorstel afkeuren of goedkeuren met verzoek om een offerte. Als de Opdrachtnemer een afkeuring ontvangt dan wordt het proces om een contractwijziging vast te leggen beëindigd. Als het voorstel wel wordt goedgekeurd dan levert de Opdrachtnemer een offerte met consequenties van de contractwijziging. Hierka kan de Opdrachtgever opnieuw een afkeuring of acceptatie versturen waarna de contractwijziging wordt stopgezet cq. geaccepteerd.```
+![Communicatie tussen Opdrahchtnemer en Opdrachtgever door middel van berichten](media/Contractwijziging1.png) 
+</aside>
 
-![Communicatie tussen Opdrahchtnemer en Opdrachtgever door middel van berichten](media/Contractwijziging1.png)
 
-**Pizzeria**
 
-``` De interactie start in dit voorbeeld bij de Ober. De Klant heeft een beperkt aantal reactiemogelijkheden. Als de Klant geen menukaart wenst te zien dan stopt de interactie. Als de Klant wel een menukaart wil zien dan gaat de transactie verder. De scope van deze transactie is het plaatsen van een bestelling. Een andere transactie zou bijvoorbeeld zijn dat de Klant vraagt om de rekening aan de Ober waarna de Ober de rekening brengt. ```
+<aside class="example" title="Pizzeria"> 
+<p> De interactie start in dit voorbeeld bij de Ober. De Klant heeft een beperkt aantal reactiemogelijkheden. Als de Klant geen menukaart wenst te zien dan stopt de interactie. Als de Klant wel een menukaart wil zien dan gaat de transactie verder. De scope van deze transactie is het plaatsen van een bestelling. Een andere transactie zou bijvoorbeeld zijn dat de Klant vraagt om de rekening aan de Ober waarna de Ober de rekening brengt. </p>
 
 ![Communicatie tussen Klant en Ober door middel van berichten](media/KlantOber%201.png)
+</aside>
 
-``` De Ober plaatst de bestelling bij de Kok. De Kok kan de bestelling accepteren óf weigeren. Afhankelijk van de reactie van de Kok wordt een reactie gegeven aan de Klant. Bijvoorbeeld een vraag over bestelling. Het wordt dusdanig gestructureerd dat de Klant niet direct met de Kok kan communiceren.```
+<aside class="example" title="Pizzeria"> 
+<p> De Ober plaatst de bestelling bij de Kok. De Kok kan de bestelling accepteren óf weigeren. Afhankelijk van de reactie van de Kok wordt een reactie gegeven aan de Klant. Bijvoorbeeld een vraag over bestelling. Het wordt dusdanig gestructureerd dat de Klant niet direct met de Kok kan communiceren. </p>
 
 ![Interactie tussen Ober en Kok door middel van berichten](media/OberKok%201.png)
+</aside>
 
 
 
@@ -116,30 +120,28 @@ Binnen VISI staat de zogenoemde transactie centraal: een bindende afspraak tusse
 In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruikt bij het communiceren over de transactie. De volgorde van berichten verloopt altijd heen en weer tussen rollen: na een bericht van rol A volgt altijd een bericht van rol B waarna rol A weer aan de beurt is, tot het einde van de transactie. 
 
 
-```Denk hierbij bijvoorbeeld aan Vraag van rol A aan rol B om iets te beoordelen. Het raamwerk geeft de berichten die hierbij kunnen worden gebruikt als antwoord. In de afbeelding gaat het hierbij om bericht X of bericht Y.```
+<aside class="example" title="Bouwproject">
+<p> Denk hierbij bijvoorbeeld aan Vraag van rol A aan rol B om iets te beoordelen. Het raamwerk geeft de berichten die hierbij kunnen worden gebruikt als antwoord. In de afbeelding gaat het hierbij om bericht X of bericht Y.  </p>
 
 ![Transactie met meerdere reactiemogelijkheden](media/MiTT2.png)
+</aside>
 
 
-**Voorbeeld in een bouwproject** 
-
-```De Projectleverende dient een beoordelingsdocument, zoals is afgesproken in het contract, in. De Opdrachtgever kan het beoordelingsdocument afwijzen waarna een nieuw document wordt ingediend. Als de Opdrachtgever het beoordelingsdocument goedkeurt dan is de transactie afgehandeld.```
-
+<aside class="example" title="Bouwproject">
+<p> De Projectleverende dient een beoordelingsdocument, zoals is afgesproken in het contract, in. De Opdrachtgever kan het beoordelingsdocument afwijzen waarna een nieuw document wordt ingediend. Als de Opdrachtgever het beoordelingsdocument goedkeurt dan is de transactie afgehandeld.  </p>
 
 ![Transactie Aanleveren beoordelingsdocument](media/Beoordelingsdocument1.png)
+</aside>
 
-```De Projectleverende dient een beoordelingsdocument zoals is afgesproken in het contract. De Opdrachtgever wil aan één of meerdere Adviseurs vragen om het beoordelingsdocument te beoordelen. Dit noemen we een aangesloten transactie of subtransactie. Deze transactie vindt ook weer plaats tussen twee rollen (niet meer, niet minder). ```
-
+<aside class="example" title="Bouwproject">
+<p> De Projectleverende dient een beoordelingsdocument zoals is afgesproken in het contract. De Opdrachtgever wil aan één of meerdere Adviseurs vragen om het beoordelingsdocument te beoordelen. Dit noemen we een aangesloten transactie of subtransactie. Deze transactie vindt ook weer plaats tussen twee rollen (niet meer, niet minder).  </p>
 
 ![Transactie Verzoek beoordelen beoordelingsdocument (intern)](media/Beoordelingsdocument_intern1.png)
+</aside>
 
 
-
-
-**Voorbeeld in een pizzeria**
-Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden (Vraag) waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld (Antwoord X) of wordt gemeld dat de ingrediënten niet in huis zijn (Antwoord Y) waarna de transactie is afgerond. 
-
-
+<aside class="example" title="Pizzeria">
+<p> Een ander voorbeeld is bijvoorbeeld het verzoek van een ober aan een kok om een bepaalde pizza te bereiden (Vraag) waarna de kok aan de gang gaat en de betreffende pizza aan de ober als gereed wordt gemeld (Antwoord X) of wordt gemeld dat de ingrediënten niet in huis zijn (Antwoord Y) waarna de transactie is afgerond. </p> </aside>
 
 
 ## Communiceren op basis van een VISI raamwerk
