@@ -162,14 +162,59 @@ In VISI zijn verantwoordelijkheden en taken niet toegekend aan partijen of perso
 
 <aside class="example" title="Pizzeria">
 <p> Zo kan de rol "ober" vervuld worden door meerdere mensen. Een persoon kan ook ober en afwasser zijn.</p>
+  <table>
+<thead>
+  <tr>
+    <th></th>
+    <th>Persoon1</th>
+    <th>Persoon2</th>
+    <th>Persoon3</th>
+    <th>Persoon4</th>
+    <th>Persoon5</th>
+    <th>persoon6</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Klant</td>
+    <td>x</td>
+    <td>x</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ober</td>
+    <td></td>
+    <td></td>
+    <td>x</td>
+    <td>x</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Kok</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>x</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Keukenhulp</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+  </tr>
+</tbody>
+</table>
 </aside>
 
-|            | Persoon1 | Persoon2 | Persoon3 | Persoon4 | Persoon5 | Persoon6 |
-| ---------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| Klant      | X        | X        |          |          |          |          |
-| Ober       |          |          | X        | X        |          |          |
-| Kok        |          |          |          |          | X        |          |
-| Keukenhulp |          |          |          | X        | X        | X        |
 
 <aside class="example" title="Bouwproject">
 <p> In een bouwproject zou de verdeling er als volgt uit kunnen zien.</p></aside>
