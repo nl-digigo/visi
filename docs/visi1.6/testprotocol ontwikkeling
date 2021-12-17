@@ -1,66 +1,6 @@
 # Testprotocol
 
-<p> De figuren van onderstaande scenario's zijn opgesteld in Microsoft Visio 2003. Het bronbestand is [invullen link naar visiotestbestand] </p>
 
-
-## VISI-raamwerk
-
-Het raamwerk bevat vier transactietypen:
-* t1_OpnameBestelling;
-* t2_VraagOberAanKok;
-* t3_OpdrachtKok;
-* t4_VraagKokAanKeukenhulp.
-
-
-En vier rollen: Klant, Ober, Kok en Keukenhulp.
-
-![Afbeelding](media/)
-
-## Scenario 1
-
-*Doel*
-
-Testen op de functionaliteit voor:
-1. het starten van een transactie
-2. het beantwoorden van een bericht
-3. het gebruik van verschillende soorten gegevensvelden
-
-![Afbeelding](media/)
-
-Beschrijving:
-<ul>
-<li>Ober A vraagt aan Klant K of hij/zij de kaart wil zien. </li><li>Bij het invullen van de vraag of de klant de kaart wil zien, worden alle verschillende Base Type velden aangeboden.
-</li><li>Test of de volgende velden als volgt werken:
-<ul>
-<li>Boolean
-<ul>
-<li>Hier moet een vinkjes veldje&nbsp; of 0 - 1 of true-false of waar-onwaar staan (verplicht)
-</li></ul>
-</li><li>Date / Datum
-<ul>
-<li>Een datum moet ingevoerd worden (verplicht) </li></ul>
-</li><li>Datetime / Datum en tijd
-<ul>
-<li>Datum en tijd moeten ingevuld worden (verplicht) </li></ul>
-</li><li>Time / Tijd
-<ul>
-<li>Een tijdstip moet ingevoerd worden (verplicht) </li></ul>
-</li><li>Decimal / Decimaal
-<ul>
-<li>Een getal, al dan niet met decimale waarden moet ingevoerd worden (verplicht)
-</li></ul>
-</li><li>Integer / Geheel getal
-<ul>
-<li>Een geheel getal moet ingevoerd worden (verplicht) </li></ul>
-</li><li>Keuzelijst
-<ul>
-<li>Een van de waarden &quot;Keuze 1&quot;, &quot;Keuze 2&quot; of &quot;Keuze 3&quot; moet ingevoerd worden (verplicht)
-</li></ul>
-</li><li>String / Vrije tekst
-<ul>
-<li>Willekeurige tekens kunnen ingevoerd worden (niet verplicht) </li></ul>
-</li></ul>
-</li><li>Klant K beantwoordt de vraag met Nee.&nbsp; </li></ul>
 
 ## Scenario 2a
 
