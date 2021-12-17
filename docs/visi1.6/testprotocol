@@ -339,13 +339,16 @@ Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpasse
 Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
 <br>
 Einde.</p>
-<h2>Scenario 5c</h2>
-<p><strong>Doel:</strong></p>
+
+## Scenario 5c
+
+*Doel*
 <p>Testen op de functionaliteit voor ElementConditions &amp; openSecondaryTransactionsAllowed.</p>
-<p><strong>Figuur:</strong></p>
-<p><strong><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731894" alt=""><br>
-</strong></p>
-<p><strong>Beschrijving:</strong><br>
+
+![Afbeelding](media/)
+
+*Beschrijving*
+
 Ober A vraagt aan Klant K of hij/zij de kaart wil zien. Klant K beantwoordt de vraag met Ja, en geeft aan welke kaart hij/zij wil zien.
 <br>
 Ober A biedt de menukaart aan die Klant K gevraagd heeft. Ober A kan het menukaarttype
@@ -379,12 +382,17 @@ Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpasse
 Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
 <br>
 Einde.</p>
-<h2>Scenario 5d</h2>
-<p><strong>Doel:</strong></p>
+
+
+## Scenario 5d
+
+*Doel*
 <p>Testen op de functionaliteit voor ElementConditions &amp; openSecondaryTransactionsAllowed.</p>
-<p><strong>Figuur:</strong></p>
-<p><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=visi&DownloadId=731896" alt=""></p>
-<p><strong>Beschrijving:</strong><br>
+
+![Afbeelding](media/)
+
+*Beschrijving*
+
 Ober A vraagt aan Klant K of hij/zij de kaart wil zien. Klant K beantwoordt de vraag met Ja, en geeft aan welke kaart hij/zij wil zien.
 <br>
 Ober A biedt de menukaart aan die Klant K gevraagd heeft. Ober A kan het menukaarttype
@@ -449,7 +457,10 @@ Keukenhulp P zoekt het recept op en geeft antwoord aan Kok X <br>
 Kok X heeft nu het recept en kan akkoord geven aan Ober A <br>
 Ober A bevestigt de bestelling aan Klant K</p>
 <p>Einde</p>
-<h2>Scenario 7a</h2>
+
+
+## Scenario 7a
+
 <p><strong>Doel:</strong></p>
 <p>Met dit scenario wordt de juiste werking van de &ldquo;volgordelijkheid van berichten&rdquo; (sendBefore en sendAfter)&nbsp; functionaliteit getest.</p>
 <ul>
@@ -513,7 +524,8 @@ Het bericht met de bijlage wordt correct verzonden, de bijlage is op de andere s
 <p>Sample Data:<br>
 Ter plekke kan een zip bestand worden aangemaakt.</p>
 <p>&nbsp;</p>
-<h2>Scenario 9</h2>
+
+## Scenario 9
 <p><strong>Doel:</strong></p>
 <p>Testen op de functionaliteit voor het verplicht bijvoegen van een bijlage voor een berichttype (appendixMandatory).</p>
 <p><strong>Figuur:</strong></p>
@@ -570,4 +582,3 @@ Ober A biedt de menukaart aan die Klant K gevraagd heeft, ZONDER bijlage.</p>
 </li></ul>
 </li></ul>
 <p>Einde.</p>
-</div><div class="ClearBoth"></div>
