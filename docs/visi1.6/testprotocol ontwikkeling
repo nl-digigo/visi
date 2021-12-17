@@ -1,6 +1,40 @@
 # Testprotocol
 
+## Scenario 1
 
+<ul>
+<li>Ober A vraagt aan Klant K of hij/zij de kaart wil zien. </li><li>Bij het invullen van de vraag of de klant de kaart wil zien, worden alle verschillende Base Type velden aangeboden.
+</li><li>Test of de volgende velden als volgt werken:
+<ul>
+<li>Boolean
+<ul>
+<li>Hier moet een vinkjes veldje&nbsp; of 0 - 1 of true-false of waar-onwaar staan (verplicht)
+</li></ul>
+</li><li>Date / Datum
+<ul>
+<li>Een datum moet ingevoerd worden (verplicht) </li></ul>
+</li><li>Datetime / Datum en tijd
+<ul>
+<li>Datum en tijd moeten ingevuld worden (verplicht) </li></ul>
+</li><li>Time / Tijd
+<ul>
+<li>Een tijdstip moet ingevoerd worden (verplicht) </li></ul>
+</li><li>Decimal / Decimaal
+<ul>
+<li>Een getal, al dan niet met decimale waarden moet ingevoerd worden (verplicht)
+</li></ul>
+</li><li>Integer / Geheel getal
+<ul>
+<li>Een geheel getal moet ingevoerd worden (verplicht) </li></ul>
+</li><li>Keuzelijst
+<ul>
+<li>Een van de waarden moet ingevoerd worden (verplicht)
+</li></ul>
+</li><li>String / Vrije tekst
+<ul>
+<li>Willekeurige tekens kunnen ingevoerd worden (niet verplicht) </li></ul>
+</li></ul>
+</li><li>Klant K beantwoordt de vraag met Nee.</li></ul>
 
 ## Scenario 2a
 
