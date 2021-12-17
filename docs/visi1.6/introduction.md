@@ -10,9 +10,11 @@ De drijfveren van VISI:
 
 Met hulp van VISI krijgen organisaties beter grip op, en worden volwassener in, sturing en structurering van projecten en samenwerkingen.
 
-**Voorbeeld UAV/UAV-GC**
-Dit doen we door van te voren na te denken over de communicatie die plaatsvindt tussen Opdrachtgever en Opdrachtnemer conform de contractvormen UAV en UAVgc met toevoeging van de contractstukken waarin afspraken zijn opgenomen over de communicatie. Dit wordt vertaald naar berichten in een vooraf afgesproken workflow met bijbehorende reactietermijnen. Hierdoor kunnen alle partijen zich tijdens het project concentreren op de inhoud en de uitvoering van het project.
-**Voorbeeld pizzeria**
+<aside class="example" title="Bouwproject">
+<p>Dit doen we door van te voren na te denken over de communicatie die plaatsvindt tussen Opdrachtgever en Opdrachtnemer conform de contractvormen UAV en UAVgc met toevoeging van de contractstukken waarin afspraken zijn opgenomen over de communicatie. Dit wordt vertaald naar berichten in een vooraf afgesproken workflow met bijbehorende reactietermijnen. Hierdoor kunnen alle partijen zich tijdens het project concentreren op de inhoud en de uitvoering van het project.</p</aside>
+  
+<aside class="example" title="Pizzeria">
+  <p>Voorbeeld pizzeria</p></aside
 
 
 ## Waarom en voor wie deze documentatie?
@@ -46,5 +48,5 @@ In het conceptuele deel worden de volgende zaken beschreven:
 - verdieping van het VISI raamwerk;
 - garanties voor de gebruiker.
 
-> niveau 2 Functioneel\
+> niveau 2 Functioneel
 > niveau 3 Technisch
