@@ -11,10 +11,12 @@ De drijfveren van VISI:
 Met hulp van VISI krijgen organisaties beter grip op, en worden volwassener in, sturing en structurering van projecten en samenwerkingen.
 
 <aside class="example" title="Bouwproject">
-<p>Dit doen we door van te voren na te denken over de communicatie die plaatsvindt tussen Opdrachtgever en Opdrachtnemer conform de contractvormen UAV en UAVgc met toevoeging van de contractstukken waarin afspraken zijn opgenomen over de communicatie. Dit wordt vertaald naar berichten in een vooraf afgesproken workflow met bijbehorende reactietermijnen. Hierdoor kunnen alle partijen zich tijdens het project concentreren op de inhoud en de uitvoering van het project.</p</aside>
+<p> Dit doen we door van te voren na te denken over de communicatie die plaatsvindt tussen Opdrachtgever en Opdrachtnemer conform de contractvormen UAV en UAVgc met toevoeging van de contractstukken waarin afspraken zijn opgenomen over de communicatie. Dit wordt vertaald naar berichten in een vooraf afgesproken workflow met bijbehorende reactietermijnen. Hierdoor kunnen alle partijen zich tijdens het project concentreren op de inhoud en de uitvoering van het project. </p>
+</aside>
   
 <aside class="example" title="Pizzeria">
-  <p>Voorbeeld pizzeria</p></aside
+<p> Voorbeeld pizzeria </p>
+</aside
 
 
 ## Waarom en voor wie deze documentatie?
