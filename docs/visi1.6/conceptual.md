@@ -6,7 +6,7 @@
 
 Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of takenmanager, waarin precies zichtbaar is welke berichten nog moeten worden beantwoord, welke antwoorden kunnen worden verwacht en welke deadlines er afgesproken zijn.
 
-![Visualisatie VISI voor de gebruiker](./media/plaatje.jpg "Visualisatie VISI voor de gebruiker")
+![Visualisatie VISI voor de gebruiker](media/plaatje.jpg "Visualisatie VISI voor de gebruiker")
 
 ### Uitvoering
 
@@ -20,7 +20,9 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 
 **De communicatie is terug te vinden voor alle betrokkenen, zonder wederzijdse afhankelijkheid.** Indien meerdere organisaties samenwerken, kunnen zij elk gebruik maken van hun eigen VISI software. Door de afspraken over het berichtenverkeer hebben twee personen in een verschillende organisatie beiden in hun eigen VISI software de beschikking over het berichtenverkeer binnen de eigen organisatie en het berichtenverkeer op het raakvlak van de andere organisatie.   
 
-**Met VISI zijn wijzigingen in de samenwerkafspraken altijd traceerbaar.** Tijdens het project kunnen de afspraken over de workflow, berichtinhoud, rollen en verantwoordelijkheden gewijzigd worden.  [issue 115](https://github.com/bimloket/visi/issues/115)
+**Met VISI zijn wijzigingen in de samenwerkafspraken altijd traceerbaar.** Tijdens het project kunnen de afspraken over de workflow, berichtinhoud, rollen en verantwoordelijkheden gewijzigd worden.  
+
+<div class="issue" data-number="115"></div>
 
 ### Voorbereiding
 
@@ -74,7 +76,8 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 Binnen (bouw)projecten en samenwerkingsvormen komen verschillende verantwoordelijkheden en hierbij behorende taken voor. Denk hierbij aan een simpele overeenkomst met een Opdrachtnemer en Opdrachtgever met overeengekomen taken en verantwoordelijkheden. Deze verantwoordelijkheden met bijbehorende taken worden gebundeld in logische rollen. Het concept hoe partijen met elkaar omgaan en de overeenkomst die ze met elkaar hebben is van invloed op de verdeling van rollen over de partijen.
 
 Een rol is fundamenteel anders dan een functie. Een essentieel verschil is dat rollen een afspiegeling zijn van het werk dat georganiseerd wordt, terwijl functies een afspiegeling zijn van mensen die georganiseerd worden (in een organisatie). Een VISI-project heeft geen functie Afdelingshoofd, maar wel de rollen Beoordelende, Adviserende.
-[issue119](https://github.com/bimloket/visi/issues/119)
+
+<div class="issue" data-number="119"></div>
 
 ### Bericht
 
@@ -108,7 +111,7 @@ De berichten zijn niet alleen invulbaar, maar de opeenvolging van de berichten i
 
 ### Transactie
 
-[issue 114](https://github.com/bimloket/visi/issues/114)
+<div class="issue" data-number="114"></div>
 
 De berichten zijn ook gegroepeerd per onderwerp en vormen zo steeds kleine procedures. Procedures, dus het onderwerp waarover men wil communiceren, zijn in het algemeen steeds los van elkaar te kiezen. In VISI noemen we zo’n procedure een transactie. Met het woord transactie wordt hier bedoeld ‘overeenkomst’ of ‘verrichting’. Een transactie kan een verzoek zijn om iets te doen of iets te leveren. Vaak op basis van vooraf gemaakte afspraken.
 
@@ -149,7 +152,7 @@ In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruik
 Het geheel van beschrijvingen van rollen, transacties, berichten en gegevens, die de afspraken en/of communicatie omvatten die in een project/samenwerkingsverband gebruikt kunnen en mogen worden, wordt een raamwerk genoemd. Om op basis van een VISI raamwerk te kunnen communiceren dienen een aantal zaken ingesteld te worden.  
   
 ***Project specifiek bericht***
-[issue 116](https://github.com/bimloket/visi/issues/116)
+<div class="issue" data-number="116"></div>
 
 Het projectspecifieke bericht plaatst het raamwerk in de context van een project. Hiermee wordt bedoeld dat in dit bestand wordt aangegeven welk specifiek project en/of contract het raamwerk representeert. Hierin wordt ook vastgesteld welke personen vanuit welke organisatie in welke rol(len) deelnemen aan het project. 
 
@@ -157,7 +160,9 @@ Het projectspecifieke bericht plaatst het raamwerk in de context van een project
 
 In VISI zijn verantwoordelijkheden en taken niet toegekend aan partijen of personen, maar aan “rollen”. Dit is gedaan omdat in bijvoorbeeld bouwprojecten weliswaar steeds dezelfde “rollen” voorkomen maar partijen nogal eens van rol kunnen wisselen. Denk hierbij bijvoorbeeld aan een situatie waarin een Opdrachtgever bepaalde verantwoordelijkheden en taken wil laten invullen door een ingenieursbureau of een situatie waarin een pizzeria de bezorging niet door eigen bezorgers laat doen, maar een contract afsluit met een externe partij als Deliveroo of Uber eats. Een persoon kan met behulp van het projectspecifieke bericht aan een organisatie en een rol worden gekoppeld. Maar aan een rol kunnen ook meerdere personen worden gekoppeld en een persoon kan meerdere rollen vervullen. Zie het voorbeeld hieronder voor extra toelichting.
 
-```Zo kan de rol "ober" vervuld worden door meerdere mensen. Een persoon kan ook ober en afwasser zijn.```
+<aside class="example" title="Pizzeria">
+<p> Zo kan de rol "ober" vervuld worden door meerdere mensen. Een persoon kan ook ober en afwasser zijn.</p>
+</aside>
 
 |            | Persoon1 | Persoon2 | Persoon3 | Persoon4 | Persoon5 | Persoon6 |
 | ---------- | -------- | -------- | -------- | -------- | -------- | -------- |
@@ -166,9 +171,8 @@ In VISI zijn verantwoordelijkheden en taken niet toegekend aan partijen of perso
 | Kok        |          |          |          |          | X        |          |
 | Keukenhulp |          |          |          | X        | X        | X        |
 
-
-
-```In een bouwproject zou de verdeling er als volgt uit kunnen zien.```
+<aside class="example" title="Bouwproject">
+<p> In een bouwproject zou de verdeling er als volgt uit kunnen zien.</p></aside>
 
 
 | Opdrachtgevende | Adviserende | Toetsende/Accepterende | Projectleverende | Organisatie | Naam              | Functie           |
@@ -186,7 +190,9 @@ In VISI zijn verantwoordelijkheden en taken niet toegekend aan partijen of perso
 |                 |             |                        | X                | ON          | Klaas Slot        | Uitvoerder        |
 |                 |             |                        | X                | ON          | Jan van Geest     | Werkvoorbereider  |
 
+
 ## Verdieping van het raamwerk
+
 **Het raamwerk als bestand om in te lezen in de VISI compatible software**
 
 Het VISI-raamwerk wordt op basis van de systematiek regels vastgelegd in een bestand dat kan worden ingelezen in VISI-compatible software. Dit dient in combinatie te gebeuren met het eerder besproken projectspecifieke bericht en een zogenoemd berichtenschema waarmee een extra controle kan worden uitgevoerd of de berichten die verzonden en ontvangen worden conform de regels van de systematiek en het gedefinieerde raamwerk zijn.
@@ -195,7 +201,8 @@ Het VISI-raamwerk wordt op basis van de systematiek regels vastgelegd in een bes
 
 Bij een bedrijfsproces of bepaalde procedure zijn vaak meer dan twee rollen betrokken. Het is echter niet mogelijk om met een enkele transactie tussen twee rollen een heel bedrijfsproces te ondersteunen. De standaard biedt daarom de mogelijkheid om transacties met elkaar te verbinden. Zo kan een bedrijfsproces ondersteund worden met behulp van een set van gekoppelde transacties.
 
-```Denk hierbij bijvoorbeeld aan een klant van de pizzeria die met een ober een transactie aangaat om een heerlijke pizza te verkrijgen. De ober kan op basis van de transactie met de klant op zijn/haar beurt weer een transactie initiëren richting een kok om de pizza te maken. In dit voorbeeld heeft de klant niet het mandaat om de keuken binnen te lopen om zelf aan een kok te vragen om de pizza te maken. De ober kan ook geen transactie starten met de kok om een pizza te maken als er geen verzoek van klant aan ten grondslag ligt.```
+<aside class="example" title="Pizzeria">
+<p> Denk hierbij bijvoorbeeld aan een klant van de pizzeria die met een ober een transactie aangaat om een heerlijke pizza te verkrijgen. De ober kan op basis van de transactie met de klant op zijn/haar beurt weer een transactie initiëren richting een kok om de pizza te maken. In dit voorbeeld heeft de klant niet het mandaat om de keuken binnen te lopen om zelf aan een kok te vragen om de pizza te maken. De ober kan ook geen transactie starten met de kok om een pizza te maken als er geen verzoek van klant aan ten grondslag ligt.</p></aside>
   
 Een belangrijk basisprincipe is dat een transactie altijd iets oplevert. Als een rol vanuit de ene transactie één of meer transacties met een andere rol initieert dient er dus altijd iets terug te komen uit deze secundaire transacties. Een secundaire transactie dient altijd weer te eindigen in de transactie vanuit waar hij is geïnitieerd.
 
@@ -205,7 +212,6 @@ Om bepaalde afhankelijkheden in een transactie af te kunnen dwingen kunnen bij h
 -	Volgordelijkheid van berichten afdwingen. Hiermee wordt bedoeld dat berichten pas kunnen worden verstuurd nadat andere berichten zijn ontvangen of dat berichten alleen verstuurd mogen worden wanneer andere berichten nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden. <verwijzing naar MessageInTransactionTypeCondition op het functionele niveau>
 -	Het is wel of niet toegestaan om meerdere secundaire transacties te initiëren <verwijzing naar secundary transactions allowed op het functionele niveau>
 -	Het is wel of niet toegestaan om bepaalde velden in een bericht op een bepaald moment in de transactie te bewerken of bepaalde velden worden gewist <Verwijzing naar elementcondition op het functionele niveau>
-
 
 
 **Kan een raamwerk worden aangevuld of gewijzigd worden tijdens een project?**
