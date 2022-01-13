@@ -3,7 +3,7 @@
 De figuren van onderstaande scenario's zijn opgesteld in Microsoft Visio 2003. Het bronbestand is [Scenario's](media/scenarios.vsd).
 
 
-## VISI-raamwerk
+## Testraamwerk Pizzeria
 
 Het raamwerk bevat vier transactietypen:
 * t1_OpnameBestelling;
@@ -46,4 +46,30 @@ Test of de volgende velden als volgt werken:
 | Keuzelijst | Een van de waarden "Keuze 1", "Keuze 2" of "Keuze 3" moet ingevoerd worden (verplicht) | 
 | String / Vrije tekst | Willekeurige tekens kunnen ingevoerd worden (niet verplicht): Klant K beantwoordt de vraag met Nee.  | 
 
+## Scenario 2a
+
+*Doel*
+voor a) het starten van een (sub)transactie en b) het terugkeren naar een (hoofd)transactie.
+
+![Afbeelding](media/Testscenario's_Scenario_2a_-_serie.gif)
+
+*Beschrijving*
+Ober A vraagt aan Klant K of hij/zij de kaart wil zien. Klant K beantwoordt de vraag met Ja, en geeft aan welke kaart hij/zij wil zien.
+
+Ober A biedt de menukaart aan die Klant K gevraagd heeft. Ober A kan het menukaarttype **niet** wijzigen. Klant K krijgt de gevraagde menukaart. 
+Klant K plaatst een bestelling bij Ober A bestaande uit een tabel met per rij de naam van een gerecht en eventueel een bijbehorende opmerking.
+
+
+Ober A plaatst dezelfde bestelling bij Kok X en bij Kok Y. Ober A kan de bestelling van Klant K niet aanpassen, en ook niet aanvullen.
+
+
+Kok Y geeft Ober A een akkoord. Kok Y kan de bestelling van Ober A niet aanpassen, en ook niet aanvullen.
+
+
+Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok Y niet aanpassen, en ook niet aanvullen.
+
+
+Nadat Ober A naar Klant K heeft communiceerd geeft Kok X alsnog een akkoord aan Ober A. Ober A kan met de ontvangen melding van Kok X
+**helemaal niets**, dus niet communiceren richting Kok x of Klant K. 
+Einde
 
