@@ -71,7 +71,7 @@ Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok Y niet aanpasse
 
 Nadat Ober A naar Klant K heeft communiceerd geeft Kok X alsnog een akkoord aan Ober A. Ober A kan met de ontvangen melding van Kok X
 **helemaal niets**, dus niet communiceren richting Kok x of Klant K. 
-Einde
+
 
 ## Scenario 2c
 
@@ -86,18 +86,144 @@ Einde
 *Beschrijving*
 
 Ober A vraagt aan Klant K of hij/zij de kaart wil zien. Klant K beantwoordt de vraag met Ja, en geeft aan welke kaart hij/zij wil zien.
-<br>
-Ober A biedt de menukaart aan die Klant K gevraagd heeft. Ober A kan het menukaarttype
-*niet* wijzigen. Klant K krijgt de gevraagde menukaart. <br>
-Klant K plaatst een bestelling bij Ober A bestaande uit een tabel met per rij de naam van een gerecht en eventueel een bijbehorende opmerking.
-<br>
-Ober A plaatst dezelfde bestelling bij Kok X en bij Kok Y. Ober A kan de bestelling van Klant K niet aanpassen, en ook niet aanvullen.
-<br>
-Kok Y geeft Ober A een akkoord. Kok Y kan de bestelling van Ober A niet aanpassen, en ook niet aanvullen.
-<br>
-Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok Y niet aanpassen, en ook niet aanvullen.
-<br>
-Nadat Ober A naar Klant K heeft gecommuniceerd geeft Kok X alsnog een niet akkoord aan Ober A. Ober A kan met de ontvangen melding van Kok X
-*helemaal niets*, dus niet communiceren richting Kok X of Klant K. <br>
-Einde.</p>
 
+
+Ober A biedt de menukaart aan die Klant K gevraagd heeft. Ober A kan het menukaarttype
+*niet* wijzigen. Klant K krijgt de gevraagde menukaart. 
+
+
+Klant K plaatst een bestelling bij Ober A bestaande uit een tabel met per rij de naam van een gerecht en eventueel een bijbehorende opmerking.
+
+
+Ober A plaatst dezelfde bestelling bij Kok X en bij Kok Y. Ober A kan de bestelling van Klant K niet aanpassen, en ook niet aanvullen.
+
+
+Kok Y geeft Ober A een akkoord. Kok Y kan de bestelling van Ober A niet aanpassen, en ook niet aanvullen.
+
+
+Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok Y niet aanpassen, en ook niet aanvullen.
+
+
+Nadat Ober A naar Klant K heeft gecommuniceerd geeft Kok X alsnog een niet akkoord aan Ober A. Ober A kan met de ontvangen melding van Kok X
+*helemaal niets*, dus niet communiceren richting Kok X of Klant K. 
+
+
+## Scenario 3a
+
+*Doel*
+<p>Testen op de functionaliteit voor het starten van een bepaald type (sub)transactie, terugkeren naar de (hoofd)transactie, en weer starten van hetzelfde type (sub)transactie.</p>
+
+![Afbeelding](media/Testscenario's_Scenario_3a_-_serie.gif)
+
+*Beschrijving*
+Ober A vraagt aan Klant K of hij/zij de kaart wil zien. Klant K beantwoordt de vraag met Ja, en geeft aan welke kaart hij/zij wil zien.
+
+
+Ober A biedt de menukaart aan die Klant K gevraagd heeft. Ober A kan het menukaarttype
+<em>niet</em> wijzigen. Klant K krijgt de gevraagde menukaart.
+
+
+Klant K plaatst een bestelling bij Ober A bestaande uit een tabel met per rij de naam van een gerecht en eventueel een bijbehorende opmerking.
+
+
+Ober A plaatst dezelfde bestelling bij Kok X. Ober A kan de bestelling van Klant K niet aanpassen, en ook niet aanvullen.
+
+
+Kok X geeft Ober A een niet akkoord. Kok X kan de bestelling van Ober A niet aanpassen, en ook niet aanvullen.
+
+
+Ober A geeft Klant K een niet akkoord. Ober A kan het niet akkoord van Kok X niet aanpassen, en ook niet aanvullen.
+
+
+Klant K plaatst een compleet nieuwe bestelling bij Ober A bestaande uit een tabel met per rij de naam van een gerecht en eventueel een bijbehorende opmerking. (Klant K kan de gehele tabel invullen.)
+
+
+Ober A plaatst dezelfde bestelling bij Kok Y. Ober A kan de bestelling van Klant K niet aanpassen, en ook niet aanvullen.
+
+
+Kok Y geeft Ober A een akkoord. Kok Y kan de bestelling van Ober A niet aanpassen, en ook niet aanvullen.
+
+
+Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok Y niet aanpassen, en ook niet aanvullen.
+
+
+## Scenario 3b
+
+*Doel:*
+<p>Testen op de functionaliteit voor het starten van een bepaald type (sub)transactie, terugkeren naar de (hoofd)transactie, meerdere berichten in de hoofdtransactie, en weer starten van hetzelfde type (sub)transactie.</p>
+
+![Afbeelding](media/Testscenario's_Scenario_3b_-_serie.gif)
+
+*Beschrijving*
+
+Ober A vraagt aan Klant K of hij/zij de kaart wil zien. Klant K beantwoordt de vraag met Ja, en geeft aan welke kaart hij/zij wil zien.
+
+
+Ober A biedt de menukaart aan die Klant K gevraagd heeft. Ober A kan het menukaarttype
+*niet* wijzigen. Klant K krijgt de gevraagde menukaart. 
+
+
+Klant K plaatst een bestelling bij Ober A bestaande uit een tabel met per rij de naam van een gerecht en eventueel een bijbehorende opmerking.
+
+
+Ober A plaatst dezelfde bestelling bij Kok X. Ober A kan de bestelling van Klant K niet aanpassen, en ook niet aanvullen.
+
+
+Kok X geeft Ober A een niet akkoord. Kok X kan de bestelling van Ober A niet aanpassen, en ook niet aanvullen.
+
+
+Ober A geeft Klant K een niet akkoord. Ober A kan het niet akkoord van Kok X niet aanpassen, en ook niet aanvullen.
+
+
+Klant K stelt Ober A een vraag. 
+
+
+Ober A beantwoordt de vraag van Klant K. (In de beantwoording kan Ober A de vraag van Klant K
+*niet* aanpassen.) 
+
+
+Klant K plaatst een compleet nieuwe bestelling bij Ober A bestaande uit een tabel met per rij de naam van een gerecht en eventueel een bijbehorende opmerking. (Klant K kan de gehele tabel invullen.)
+
+
+Ober A plaatst dezelfde bestelling bij Kok Y. Ober A kan de bestelling van Klant K niet aanpassen, en ook niet aanvullen.
+
+
+Kok Y geeft Ober A een akkoord. Kok Y kan de bestelling van Ober A niet aanpassen, en ook niet aanvullen.
+
+
+Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok Y niet aanpassen, en ook niet aanvullen.
+
+## Scenario 4a
+
+*Doel*
+
+<p>Testen op de functionaliteit voor ElementConditions.</p>
+
+![Afbeelding](media/Testscenario's_Scenario_4a_-_no_loop.gif)
+
+*Beschrijving*
+
+Ober A vraagt aan Klant K of hij/zij de kaart wil zien. Klant K beantwoordt de vraag met Ja, en geeft aan welke kaart hij/zij wil zien.
+
+
+Ober A biedt de menukaart aan die Klant K gevraagd heeft. Ober A kan het menukaarttype
+<em>niet</em> wijzigen. Klant K krijgt de gevraagde menukaart. 
+
+
+Klant K stelt een vraag aan Ober A. 
+
+
+Ober A beantwoordt de vraag van Klant K. (In de beantwoording kan Ober A de vraag van Klant K
+*niet* aanpassen.) 
+
+
+Klant K plaatst een compleet nieuwe bestelling bij Ober A bestaande uit een tabel met per rij de naam van een gerecht en eventueel een bijbehorende opmerking. (Klant K kan de gehele tabel invullen.)
+
+
+Ober A plaatst dezelfde bestelling bij Kok X. Ober A kan de bestelling van Klant K niet aanpassen, en ook niet aanvullen.
+
+
+Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpassen, en ook niet aanvullen.
+
+
+Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
