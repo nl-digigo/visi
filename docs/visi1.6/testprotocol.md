@@ -652,21 +652,6 @@ Met dit scenario wordt de juiste werking van de volgordelijkheid van berichten e
 </li></ul>
 </li></ul>
 
-## Scenario HTTPS test
-
-<p>Het projectspecifiek bericht wordt voorzien van een SOAP Server met http.</p>
-<p>Verwacht resultaat:<br>
-Het projectspecifiek bericht wordt niet ingelezen/geweigerd.</p>
-<p>Sample Data:<br>
-Het projectspecifiek bericht "projectspecifiekberichttotenmetbericht_6.xml".</p>
-<p>&nbsp;</p>
-<h2>Scenario Grote bijlagen</h2>
-<p>Bij een bericht wordt een zip bestand van 10gb gevoegd. Dit bericht wordt via soap naar een andere server verzonden.</p>
-<p>Verwacht resulataat: <br>
-Het bericht met de bijlage wordt correct verzonden, de bijlage is op de andere server uit te pakken en de uit de zip gehaalde bestanden zijn leesbaar.</p>
-<p>Sample Data:<br>
-Ter plekke kan een zip bestand worden aangemaakt.</p>
-<p>&nbsp;</p>
 
 ## Scenario 9
 *Doel:* 
@@ -728,3 +713,121 @@ Ober A biedt de menukaart aan die Klant K gevraagd heeft, ZONDER bijlage.</p>
 </li></ul>
 </li></ul>
 </li></ul>
+
+## Scenario 11
+Doel:
+
+Testen op niet-ascii tekens in a) omschrijving van elementen (SimpleElementType, ComplexElementType, MessageType, TransactionType) en b) enumeratie (UserDefiniedTYpe).
+
+Beschrijving:
+
+Ober A start een nieuwe transactie en verstuurd een bericht naar Klant K. In het bericht vult Ober A voor element "Enumeration / Keuzelijst" de waarde "eaiou with circumflexes: êâîôû" in.
+
+Resultaat:
+
+Aan Ober A worden in het bericht elementen getoond met > en & en ‎€ in de omschrijving. Het element Enumeration / Keuzelijst toont een lijst met onder andere êâîôûëäïöü<"µ@ç€.
+
+Klant K ontvangt een bericht met voor element "Enumeration / Keuzelijst" de waarde "eaiou with circumflexes: êâîôû"
+
+
+## Scenario Inlezen van gearchiveerd VISI project
+Doel:
+
+Testen op het inlezen van een bestand dat voldoet aan de richtlijn voor het archiveren van VISI projecten
+
+Beschrijving:
+
+Het bestand wordt zonder handmatige voorbewerking ingelezen in de applicatie. Het staat vrij hoe dit ingelezen wordt en door wie.
+
+Met een nabewerking worden openstaande transacties worden geadresseerd aan
+
+Wat te doen met soap servers? Deze moeten eigenlijk aangepast worden om de communicatie verder te kunnen laten lopen.
+
+Resultaat:
+
+Het systeem heeft alle informatie uit het bestand ingelezen, te weten: a) transacties, berichten, bijlagen, b) raamwerken, c) projectspecifieke berichten.
+
+Het systeem kan openstaande transacties verder.
+
+Test Data:
+
+Bestanden zijn op te vragen bij Elisabeth Kloren.
+
+## Scenario Archiveren van VISI project
+Doel:
+
+Testen op het aanmaken van een bestand dat voldoet aan de richtlijn voor het archiveren van VISI projecten
+
+Beschrijving:
+
+Een project wordt gearchiveerd (vanuit de applicatie). Het staat vrij hoe dit "archief" aangemaakt wordt en door wie.
+
+Het project moet over de volgende eigenschappen beschikken:
+
+Transactie met een onderwerp langer van 256 karakters.
+
+Transactie met in het onderwerp niet alfa-numerieke karakters.
+
+Bijlage met een naam langer van 256 karakters.
+
+Resultaat:
+
+Het systeem heeft informatie uit het project uitgeschreven, te weten: alle a) transacties, berichten, bijlagen, b) raamwerken, c) projectspecifieke berichten. De structurering van de data is conform de richtlijn.
+
+Speciale aandacht verdienen niet-ascii tekens in het onderwerp van een transactie, die niet toegestaan zijn in namen van een Microsoft Windows directory (bijvoorbeeld /\: ). Deze karakters moeten in de directory benamingen terugkomen als spaties.
+
+## Scenario HTTPS test
+
+<p>Het projectspecifiek bericht wordt voorzien van een SOAP Server met http.</p>
+<p>Verwacht resultaat:<br>
+Het projectspecifiek bericht wordt niet ingelezen/geweigerd.</p>
+<p>Sample Data:<br>
+Het projectspecifiek bericht "projectspecifiekberichttotenmetbericht_6.xml".</p>
+<p>&nbsp;</p>
+<h2>Scenario Grote bijlagen</h2>
+<p>Bij een bericht wordt een zip bestand van 10gb gevoegd. Dit bericht wordt via soap naar een andere server verzonden.</p>
+<p>Verwacht resulataat: <br>
+Het bericht met de bijlage wordt correct verzonden, de bijlage is op de andere server uit te pakken en de uit de zip gehaalde bestanden zijn leesbaar.</p>
+<p>Sample Data:<br>
+Ter plekke kan een zip bestand worden aangemaakt.</p>
+<p>&nbsp;</p>
+
+## Scenario HTTPS
+Doel:
+
+Testen op het afdwingen van beveiligde communicatie
+
+Beschrijving:
+
+1. Van een bestaand project wordt het projectspecifiek bericht aangepast. Het adres van de soap server wordt gewijzigd van https:// in http://.
+
+2. Het aangepaste projectspecifiek bericht wordt ingelezen in de applicatie.
+
+Verwachte resultaat:
+
+De applicatie weigert het projectspecifieke bericht, en de xml-bestand wordt niet ingelezen / geactiveerd.
+
+Test Data:
+
+Het projectspecifiek bericht "projectspecifiekberichttotenmetbericht_6.xml".
+
+Scenario Bijlagen >2GB
+Doel:
+
+Testen op het verzenden en ontvangen van bijlagen groter dan 2GB en kleiner dan 10GB
+
+Beschrijving:
+
+1. Bij een nieuw bericht wordt een zip-bestand van 9,9 GB gevoegd. In het zip-bestand zit minimaal een pdf.
+
+2. Het bericht wordt verstuurd en gaat via het soap protocol naar een externe server.
+
+3. Het bericht wordt ontvangen op de externe server. En het bericht bevat het zip-bestand als de bijlage.
+
+Verwachte resultaat:
+
+De bijlage is een zip-bestand en op de externe server uit te pakken. De bestandsgrootte op verzendende en ontvangende server zijn gelijk (in bytes). Het uit de zip gehaalde pdf-bestand heeft op beide servers dezelfde grootte (in bytes). Tevens is het pdf-bestand te openen op de ontvangende server met een applicatie, en is de inhoud overeenkomstig met het pdf-bestand op de verzendende server.
+
+Test Data:
+
+Voorafgaand aan het uitvoeren van het testscenario kan een zip-bestand worden samengesteld met minimaal 1 pdf-bestand.
