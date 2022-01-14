@@ -731,6 +731,8 @@ Klant K ontvangt een bericht met voor element "Enumeration / Keuzelijst" de waar
 
 
 ## Scenario Inlezen van gearchiveerd VISI project
+
+
 Doel:
 
 Testen op het inlezen van een bestand dat voldoet aan de richtlijn voor het archiveren van VISI projecten
@@ -753,7 +755,25 @@ Test Data:
 
 Bestanden zijn op te vragen bij Elisabeth Kloren.
 
+
+## Archiveren en weer activeren van projecten
+
+
+__Scenario 1__
+- Archiveer een VISI-Project;
+- Importeer het gearchiveerde VISI-Project in een andere VISI-omgeving;
+- Vergelijk het originele project met het opnieuw opgebouwde project. 
+
+__Testresultaat:__
+- De inhoud van beide projecten, inclusief raamwerken, project specifieke berichten, transacties, berichten, bijlagen etc moet exact gelijk zijn. 
+- Eventueel na aanpassing van het soap adres moet communicatie met het project mogelijk zijn
+
+
+
+
 ## Scenario Archiveren van VISI project
+
+
 Doel:
 
 Testen op het aanmaken van een bestand dat voldoet aan de richtlijn voor het archiveren van VISI projecten
