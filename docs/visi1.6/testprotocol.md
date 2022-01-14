@@ -16,7 +16,7 @@ En vier rollen: Klant, Ober, Kok en Keukenhulp.
 
 ![Testscenario Raamwerk met keukenhulp](media/Testscenario's_Raamwerkmetkeukenhulp.jpg "Testscenario Raamwerk met keukenhulp")
 
-## Scenario 1
+### Scenario 1
 
 *Doel*
 
@@ -46,7 +46,7 @@ Test of de volgende velden als volgt werken:
 | Keuzelijst | Een van de waarden "Keuze 1", "Keuze 2" of "Keuze 3" moet ingevoerd worden (verplicht) | 
 | String / Vrije tekst | Willekeurige tekens kunnen ingevoerd worden (niet verplicht): Klant K beantwoordt de vraag met Nee.  | 
 
-## Scenario 2a
+### Scenario 2a
 
 *Doel*
 voor a) het starten van een (sub)transactie en b) het terugkeren naar een (hoofd)transactie.
@@ -73,7 +73,7 @@ Nadat Ober A naar Klant K heeft communiceerd geeft Kok X alsnog een akkoord aan 
 **helemaal niets**, dus niet communiceren richting Kok x of Klant K. 
 
 
-## Scenario 2c
+### Scenario 2c
 
 <div class="issue" data-number="134"></div>
 
@@ -108,7 +108,7 @@ Nadat Ober A naar Klant K heeft gecommuniceerd geeft Kok X alsnog een niet akkoo
 *helemaal niets*, dus niet communiceren richting Kok X of Klant K. 
 
 
-## Scenario 3a
+### Scenario 3a
 
 *Doel*
 <p>Testen op de functionaliteit voor het starten van een bepaald type (sub)transactie, terugkeren naar de (hoofd)transactie, en weer starten van hetzelfde type (sub)transactie.</p>
@@ -147,7 +147,7 @@ Kok Y geeft Ober A een akkoord. Kok Y kan de bestelling van Ober A niet aanpasse
 Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok Y niet aanpassen, en ook niet aanvullen.
 
 
-## Scenario 3b
+### Scenario 3b
 
 *Doel:*
 <p>Testen op de functionaliteit voor het starten van een bepaald type (sub)transactie, terugkeren naar de (hoofd)transactie, meerdere berichten in de hoofdtransactie, en weer starten van hetzelfde type (sub)transactie.</p>
@@ -193,7 +193,7 @@ Kok Y geeft Ober A een akkoord. Kok Y kan de bestelling van Ober A niet aanpasse
 
 Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok Y niet aanpassen, en ook niet aanvullen.
 
-## Scenario 4a
+### Scenario 4a
 
 *Doel*
 
@@ -228,7 +228,7 @@ Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpasse
 
 Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
 
-## Scenario 4b
+### Scenario 4b
 
 **Doel:**
 <p>Testen op de functionaliteit voor ElementConditions.</p>
@@ -270,7 +270,7 @@ Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpasse
   
 Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
 
-## Scenario 4c
+### Scenario 4c
 
 *Doel*
 <p>Testen op de functionaliteit voor ElementConditions.</p>
@@ -321,7 +321,7 @@ Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpasse
 
 Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
 
-## Scenario 5a
+### Scenario 5a
 
 *Doel*
 <p>Testen op de functionaliteit voor ElementConditions en openSecondaryTransactionsAllowed.</p>
@@ -365,7 +365,7 @@ Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpasse
 Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
 
 
-## Scenario 5b
+### Scenario 5b
 
 *Doel*
 <p>Testen op de functionaliteit voor ElementConditions en openSecondaryTransactionsAllowed.</p>
@@ -412,7 +412,7 @@ Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpasse
 Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
 
 
-## Scenario 5c
+### Scenario 5c
 
 *Doel*
 <p>Testen op de functionaliteit voor ElementConditions en openSecondaryTransactionsAllowed.</p>
@@ -478,7 +478,7 @@ Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpasse
 Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
 
 
-## Scenario 5d
+### Scenario 5d
 
 *Doel*
 
@@ -545,7 +545,7 @@ Kok X geeft Ober A een akkoord. Kok X kan de bestelling van Ober A niet aanpasse
 Ober A geeft Klant K een akkoord. Ober A kan het akkoord van Kok X niet aanpassen, en ook niet aanvullen.
 
 
-## Scenario 6a
+### Scenario 6a
 
 *Doel*
 
@@ -602,7 +602,7 @@ Ober A bevestigt de bestelling aan Klant K
 <div class="issue" data-number="135"></div>
 
 
-## Scenario 7a
+### Scenario 7a
 
 *Doel*
 Met dit scenario wordt de juiste werking van de volgordelijkheid van berichten en (sendBefore en sendAfter); functionaliteit getest.
@@ -629,7 +629,7 @@ Met dit scenario wordt de juiste werking van de volgordelijkheid van berichten e
 </li></ul>
 
 
-## Scenario 8
+### Scenario 8
 
 *Doel*
 <p>Met dit scenario wordt de juiste werking van het Definiëren van het aantal rijen in een tabel functionaliteit getest. (minOccurs/maxOccurs op child CE)</p>
@@ -653,7 +653,7 @@ Met dit scenario wordt de juiste werking van de volgordelijkheid van berichten e
 </li></ul>
 
 
-## Scenario 9
+### Scenario 9
 *Doel:* 
 
 <p>Testen op de functionaliteit voor het verplicht bijvoegen van een bijlage voor een berichttype (appendixMandatory).</p>
@@ -671,7 +671,7 @@ Ober A biedt de menukaart aan die Klant K gevraagd heeft, ZONDER bijlage.</p>
 <p>Klant K ontvangt menukaart met bijlage.</p>
 
 
-## Scenario 10
+### Scenario 10
 *Doel:*
 <p>Testen op de Element conditions in tabellen (Ce normaal / CE parent / CE Child); Sys 1.6 en hoger</p>
 
@@ -714,7 +714,7 @@ Ober A biedt de menukaart aan die Klant K gevraagd heeft, ZONDER bijlage.</p>
 </li></ul>
 </li></ul>
 
-## Scenario 11
+### Scenario 11
 Doel:
 
 Testen op niet-ascii tekens in a) omschrijving van elementen (SimpleElementType, ComplexElementType, MessageType, TransactionType) en b) enumeratie (UserDefiniedTYpe).
@@ -811,7 +811,7 @@ Test Data:
 
 Het projectspecifiek bericht "projectspecifiekberichttotenmetbericht_6.xml".
 
-Scenario Bijlagen >2GB
+## Scenario Bijlagen >2GB
 Doel:
 
 Testen op het verzenden en ontvangen van bijlagen groter dan 2GB en kleiner dan 10GB
@@ -831,3 +831,87 @@ De bijlage is een zip-bestand en op de externe server uit te pakken. De bestands
 Test Data:
 
 Voorafgaand aan het uitvoeren van het testscenario kan een zip-bestand worden samengesteld met minimaal 1 pdf-bestand.
+
+## Testscenario's metaraamwerk
+
+### Scenario A.1 (meta-raamwerk)
+Doel:
+
+Testen op de functionaliteit voor het initiëren van een project met het meta-raamwerk.
+
+Prerequisite:
+
+VISI Project met meta-raamwerk & meta-projectspecifiek bericht
+raamwerk
+projectspecifiek bericht
+
+![Afbeelding](media/Testscenario's_scenario-a1.png)
+
+
+
+Beschrijving:
+
+Project-initiator biedt aan Project-executor een voorstel voor een nieuw VISI project aan met als bijlagen een nieuw raamwerk en projectspecifiek bericht. Project-executor beantwoordt het voorstel met acceptatie van het nieuwe VISI project. Project-initiator bevestigt de projectinitiatie aan Project-executor. Project-executor meldt terug aan Project-initiator dat het project ingericht is.
+
+Einde
+
+Expected result:
+
+...
+
+ 
+
+## Scenario A.2 (meta-raamwerk)
+Doel:
+
+Testen op de functionaliteit voor het beëindigen van een project met het meta-raamwerk.
+
+Prerequisite:
+
+VISI Project met meta-raamwerk & meta-projectspecifiek bericht
+
+VISI Project met raamwerk & projectspecifiek bericht
+
+![Afbeelding](media/Testscenario's_scenario-a2.png)
+
+
+
+Beschrijving:
+
+Project-initiator biedt aan Project-executor een voorstel voor een nieuw VISI project aan met als bijlagen een nieuw raamwerk en projectspecifiek bericht. Project-executor beantwoordt het voorstel met acceptatie van het nieuwe VISI project. Project-initiator bevestigt de projectinitiatie aan Project-executor. Project-executor meldt terug aan Project-initiator dat het project ingericht is.
+
+Einde
+
+Expected result:
+
+...
+
+ 
+
+## Scenario B (meta-raamwerk)
+Doel:
+
+Testen op de functionaliteit voor het actualiseren van een bestaand project met het meta-raamwerk.
+
+Prerequisite:
+
+VISI Project met meta-raamwerk & meta-projectspecifiek bericht
+
+VISI Project met raamwerk & projectspecifiek bericht
+
+gewijzigd raamwerk
+
+gewijzigd projectspecifieke bericht
+
+![Afbeelding](media/Testscenario's_scenario-b.png)
+
+
+
+Beschrijving:
+Wijzigingsinitiator biedt aan VISI Communicatiemanager een voorstel voor het wijzigen van een bestaand VISI project aan met als bijlagen een gewijzigd raamwerk en een gewijzigd projectspecifiek bericht. VISI Communicatiemanager beantwoordt het voorstel met akkoord. Wijzigingsinitiator bevestigt de voorgestelde wijziging met een voorstel van een ingangsdatum en -tijdstip aan VISI Communicator. VISI Communicator beantwoordt het voorstel met akkoord. Wijzigingsinitiator bevestigt de ingangsdatum en -tijdstip.
+
+Einde
+
+Expected result:
+
+...
