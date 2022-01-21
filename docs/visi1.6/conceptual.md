@@ -24,6 +24,7 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 
 <div class="issue" data-number="115"></div>
 
+
 ### Voorbereiding
 
 ***Flexibiliteit van VISI in het maken van samenwerkafspraken***
@@ -140,8 +141,8 @@ In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruik
 
 <aside class="example" title="Bouwproject">
 <p> De Projectleverende dient een beoordelingsdocument zoals is afgesproken in het contract. De Opdrachtgever wil aan één of meerdere Adviseurs vragen om het beoordelingsdocument te beoordelen. Dit noemen we een aangesloten transactie of subtransactie. Deze transactie vindt ook weer plaats tussen twee rollen (niet meer, niet minder).  </p>
-
-![Transactie Verzoek beoordelen beoordelingsdocument (intern)](media/Beoordelingsdocument_intern1.png)
+<img src=”media/Beoordelingsdocument_intern1.png”>
+  <p>Transactie Verzoek beoordelen beoordelingsdocument (intern)</p>
 </aside>
 
 
