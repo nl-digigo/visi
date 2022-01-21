@@ -1,6 +1,6 @@
-
 # SOAP
 
+## Inleiding
 Dit document bevat de richtlijn voor implementatie van VISI communicatie op basis van het SOAP protocol. Het doel van de richtlijn is om handreikingen te geven voor de implementatie van VISI communicatie waardoor gewaarborgd wordt dat het betreffende informatiesysteem in technische zin VISI-berichten met bijlagen kan uitwisselen met een ander informatiesysteem dat volgens de richtlijn is ingericht.
 
 Wijzigingen ten opzichte van eerdere versie
@@ -19,7 +19,7 @@ Overige beveiligingsmaatregelen kunnen desgewenst op infrastructuur niveau worde
 Verder kunnen SOAP Servers de techniek "whitelist" gebruiken, waardoor alleen geautori-seerde SOAP server berichten naar een SOAP Server kunnen sturen .
 
  
-Doel
+## Doel
 Het doel van dit document is om een protocol vast te stellen waarmee we communicatie van VISI berichten tussen alle VISI ondersteunende software partijen kunnen beschrijven. Dit dient op een zodanige manier beschreven te zijn dat het protocol voor alle partijen implementeerbaar is, geen ongewone eisen aan implementatie en/of hardware worden vereist en het strikt genoeg is om communicatie mogelijk te maken.
 
 De onderliggende eisen van dit protocol:
