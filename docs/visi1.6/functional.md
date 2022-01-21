@@ -173,6 +173,102 @@ Als een gemachtigde iets verstuurt moet in VISI software zichtbaar zijn wie iets
 
 Een persoon kan gemachtigd zijn om namens meerdere geautoriseerde personen (in rol van organisatie) te handelen. Meerdere personen kunnen gemachtigd zijn om namens één geautoriseerde persoon (in rol van organisatie) te handelen.
 
+#### Project Setup
+Project, personen, organisaties rollen en vervangingen dienen bij alle projectdeelnemers bekend en gelijk te zijn. Daarom wordt deze setup van een project vastgelegd in een uitwisselbaarformaat: project specifiek bestand. Dit bestand wordt verspreid onder de deelnemende organisaties. Dit is meestal per organisatie vanwege het eerdergenoemde digitale adres van een organisatie. Dit digitale adres weet hierdoor van het bestaan van een project. In het gebruikte voorbeeld "Realisatie West- / Oostlijn" met unieke identificatie _badc9dab-807e-4319-bd56-60c57605e109 is bekend bij alle organisaties van het project.
+De projectcommunicatie via het versturen en beantwoorden van berichten kan starten, zie <div class="issue" data-number="138"></div> 
+
+
+### Raamwerk
+
+*RAAMWERK / PROJECTCOMMUNICATIESJABLOON*
+
+
+#### TransactieType
+
+*TransactionType*
+Communicatie vindt in VISI altijd plaats op basis van transacties. Een transactie type is in het raamwerk een afsprakenstelsel van elkaar mogelijk opvolgende berichten tussen twee rollen.
+Een transactie in een project verloopt dus volgens de regels van het transactie type in het raamwerk.
+Daarbij wordt er gesproken over de initiator-rol en executor-rol. De houder van de initiator  rol mag de transactie starten en deze alleen sturen naar houders van de executor rol. Daarna is het steeds de ontvanger van het laatste bericht die moet reageren met een van de ingestelde bericht opties totdat er geen antwoord mogelijkheden meer ingesteld staan, dan is de transactie afgerond/gereed.
+
+<aside class='def'>
+<p>In te stellen globale eigenschappen:<br>
+id<br>
+description<br>
+startDate<br>
+endDate<br>
+state<br>
+dateLaMu<br>
+userLaMu<br>
+language<br>
+category<br>
+helpinfo<br>
+Specifiek voor transactie types is er hier de optie om de gebruikers uitleg te geven over het transactie type. Hier kan bijvoorbeeld vermeld worden welke rollen waarom hier met elkaar communiceren en wat het doel van de totale transactie is.<br>
+code
+ </p>
+</aside>
+
+<aside class='def'>
+<p>In te stellen specifieke eigenschappen:<br>
+Namespace<br>
+Hier moet per versie van een raamwerk een unieke namespace in het raamwerk staan. Dit zodat visi software kan identificeren met welk raamwerk een visi transactie afgehandeld moet worden.<br>
+<br>
+Verwijzingen vanuit project types:<br>
+Complex element<br>
+Voor zover bekend is er in VISI software geen toepassing van metadata velden op het project type en wordt deze dus niet gekoppeld.<br>
+Verwijzingen naar project types:<br>
+Geen</p>
+</aside>
+
+<aside class="example" title="Project in transactie">
+<p><b>ProjectType <b><br>
+id: 		RaamwerkUAVGCGemLutjebroek<br>
+namespace:	http://www.visi.nl/schemas/20160331/ RaamwerkUAVGCGemLutjebroek_v2<br>
+description:	 Standaard raamwerk UAV GC Gemeente Lutjebroek
+</p></aside>
+
+
+#### TransactieFaseType
+
+*TransactionPhaseType*
+De DEMO methodologie kent de transactiefases requested, promised, declared, accepted, declined, rejected, revoked, allowed en refused. Het is mogelijk om deze transactie fases te koppelen aan bericht in transactie types, zodat VISI software deze zou kunnen gebruiken voor aanvullende ondersteuning of informering . 
+  
+Buiten scope: Bij het gebruik van de DEMO oplegger van de systematiek worden in ieder geval de transactie fase Promised en  de volgende revoked-types actief gebruikt voor specifiek software gedrag:  Revoke Acceptance Allow, Revoke Promise Allow, Revoke Request Allow en Revoke Statement Allow
+
+  <aside class='def'>
+<p>In te stellen globale eigenschappen:<br>
+id<br>
+description<br>
+startDate<br>
+endDate<br>
+state<br>
+dateLaMu<br>
+userLaMu<br>
+language<br>
+category<br>
+helpinfo<br>
+Voor transactie fases is nog geen toepassing bekend voor de helpinfo. 
+code
+  </p></aside>
+
+  <aside class='def'>
+<p>In te stellen specifieke eigenschappen:<br>
+Verwijzingen vanuit transactie fases:<br>
+Geen<br>
+  <br>
+Verwijzingen naar transactie fases:<br>
+Bericht in transactie<br>
+Op deze manier kan een bericht in transactie aan een bepaalde transactiefase gekoppeld worden.
+  </p></aside>
+  
+  
+#### GroepTypes
+  
+*GroupType*
+<div class="issue" data-number="139"></div>   
+  
+  
+
+
 
   
 
