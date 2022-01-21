@@ -79,6 +79,7 @@ Een rol is fundamenteel anders dan een functie. Een essentieel verschil is dat r
 
 <div class="issue" data-number="119"></div>
 
+
 ### Bericht
 
 Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisselen. De berichtnaam staat gelijk aan een bepaalde status, afhankelijk van de positie binnen een proces (aanleveren document, of een afkeuring). Een bericht bestaat uit verschillende velden, afhankelijk van de informatie die nodig is. Sommige onderdelen van een bericht staan vast, zoals de afzender en het tijdstip van verzenden.
@@ -108,6 +109,7 @@ Doordat bijlagen zijn toegevoegd aan een bericht, is een bijlage achteraf altijd
 **Volgordelijkheid van berichten**
 
 De berichten zijn niet alleen invulbaar, maar de opeenvolging van de berichten is ook van te voren vastgelegd. Na ontvangt van een bericht kan men in de regel één of meerdere antwoorden kiezen. Zo ligt van te voren vast hoe de communicatie er uit ziet en ook hoe het verloop is. Of met andere woorden de werkstroom ligt vast.
+
 
 ### Transactie
 
