@@ -23,24 +23,12 @@ Alles wordt opgehangen aan een project. De definitie van een project is in dit g
 Van een project worden beperkte, verplichte eigenschappen vastgelegd. Ieder project heeft een unieke identificatie waarmee naar een project gerefereerd kan worden, zonder dat misverstanden kunnen ontstaan welk project bedoeld wordt. Daarnaast heeft een project een naam en een omschrijving. Deze naam en omschrijving behoeven niet uniek te zijn, en is een aanvulling op de unieke identificatie bedoeld voor toelichting en zorgt voor eenvoudigere herkenning voor het project (door mensen). Aanvullend wordt van het project het moment van start en einde vastgelegd.
 
 <aside class="example" title="Project vastleggen in PSB">
-<table>
-  <tr>
-    <th>Unieke identificatie: </th>
-    <th>_badc9dab-807e-4319-bd56-60c57605e109</th>
-  </tr>
-  <tr>
-    <td>Naam:</td>
-    <td>Omschrijving:</td>
-    <td>Startdatum:</td>
-    <td>Einddatum:</td>    
-  </tr>
-  <tr>
-    <td>Realisatie West- / Oostlijn</td>
-    <td>Realisatie van metrolijn 47 inclusief 7 nieuwe stations met 9,7 kilometer spoor, waarvan 7,1 kilometer ondergronds</td>
-    <td>23-12-2020 14:59</td>
-    <td>20-05-2022 07:08</td>
-  </tr>
-</table>	
+<p><b>Project</b><br>
+Unieke identificatie: _badc9dab-807e-4319-bd56-60c57605e109<br>
+Naam: 			Realisatie West- / Oostlijn<br>
+Omschrijving:		Realisatie van metrolijn 47 inclusief 7 nieuwe stations met 9,7			kilometer spoor, waarvan 7,1 kilometer ondergronds<br>
+Startdatum:		23-12-2020 14:59<br>
+Einddatum: 		20-05-2022 07:08</p>
 </aside>
 
 #### Persoon
@@ -52,22 +40,27 @@ De activiteit van een project wordt uitgevoerd door personen. De mensen, die aan
 
 <aside class="example" title="Personen vastleggen in PSB">
 <p>
-<b>Persoon</b>
-Unieke identificatie: _0c585186-fa97-4de7-8fe0-5c4bee3afead
-Naam: 			Urbain Servranckx
+<b>Persoon</b><br>
+Unieke identificatie: _0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
+Naam: 			Urbain Servranckx<br>
 Gebruikersnaam:	uservranckx
 </p>
 <p>
-<b>Persoon</b>
-Unieke identificatie: _974e4822-4944-45ad-ab2f-161370662e30
-Naam: 			Georges Remi
+<b>Persoon</b><br>
+Unieke identificatie: _974e4822-4944-45ad-ab2f-161370662e30<br>
+Naam: 			Georges Remi<br>
 Gebruikersnaam:	gremi
 </p>
 <p>
 <b>Persoon</b>
-Unieke identificatie: _d4e02752-2ac6-4700-ae67-d33f428f78fb
-Naam: 			Luc Dupanloup
+Unieke identificatie: _d4e02752-2ac6-4700-ae67-d33f428f78fb<br>
+Naam: 			Luc Dupanloup<br>
 Gebruikersnaam:	lupanloup
 </p>
 </aside>
+
+<p class="note" title="Identificatie is niet globaal">
+Indien een persoon aan twee projecten werkt, kan de unieke identificatie van deze persoon per project verschillend zijn. Er is geen sprake van een globale unieke identificatie, maar een unieke identificatie binnen een project. </p>
+
+#### Organisatie
 
