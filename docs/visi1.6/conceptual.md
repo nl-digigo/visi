@@ -50,11 +50,8 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 <aside class="example" title="Bouwproject">
 <p> De interactie start in dit voorbeeld bij de Opdrachtnemer (projectleverende). De Opdrachtgever kan het voorstel afkeuren of goedkeuren met verzoek om een offerte. Als de Opdrachtnemer een afkeuring ontvangt dan wordt het proces om een contractwijziging vast te leggen beëindigd. Als het voorstel wel wordt goedgekeurd dan levert de Opdrachtnemer een offerte met consequenties van de contractwijziging. Hierka kan de Opdrachtgever opnieuw een afkeuring of acceptatie versturen waarna de contractwijziging wordt stopgezet cq. geaccepteerd.</p>
-
 ![Communicatie tussen Opdrahchtnemer en Opdrachtgever door middel van berichten](media/Contractwijziging1.png) 
 </aside>
-
-
 
 <aside class="example" title="Pizzeria"> 
 <p> De interactie start in dit voorbeeld bij de Ober. De Klant heeft een beperkt aantal reactiemogelijkheden. Als de Klant geen menukaart wenst te zien dan stopt de interactie. Als de Klant wel een menukaart wil zien dan gaat de transactie verder. De scope van deze transactie is het plaatsen van een bestelling. Een andere transactie zou bijvoorbeeld zijn dat de Klant vraagt om de rekening aan de Ober waarna de Ober de rekening brengt. </p>
@@ -69,8 +66,8 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 </aside>
 
 
-
 ## Termen uit de VISI systematiek
+
 
 ### Rol
 
@@ -103,9 +100,9 @@ Aan VISI-berichten kunnen één of meerdere bijlagen worden toegevoegd. Dit komt
 **Bijlagen (één of meerdere bijlagen)**
 
 Doordat bijlagen zijn toegevoegd aan een bericht, is een bijlage achteraf altijd in context te plaatsen. Op welk moment is de bijlage verstuurd en met welke status? 
-- Goedgekeurd/afgekeurd/ter kennisgeving
-- Concept/definitief
-- Datum/versie
+* Goedgekeurd/afgekeurd/ter kennisgeving
+* Concept/definitief
+* Datum/versie
 
 **Volgordelijkheid van berichten**
 
