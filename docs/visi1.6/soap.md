@@ -356,7 +356,7 @@ note: de id van elke attachment is gelijk aan de id die in het VISI bericht
 
 bij een enkelvoudige fout:
 
-	<pre>
+<pre>
 <SOAP-ENV:Envelope ...>
 	<SOAP-ENV:Header>
 		<SOAPServerURL ...>
@@ -376,7 +376,7 @@ bij een enkelvoudige fout:
 	<ERRORS>
 	</SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
-		</pre>
+</pre>
 
 Bij meerdere fouten (bijvoorbeeld bij validatie van de xsd):
 
