@@ -24,6 +24,7 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 
 <div class="issue" data-number="115"></div>
 
+
 ### Voorbereiding
 
 ***Flexibiliteit van VISI in het maken van samenwerkafspraken***
@@ -49,11 +50,9 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 <aside class="example" title="Bouwproject">
 <p> De interactie start in dit voorbeeld bij de Opdrachtnemer (projectleverende). De Opdrachtgever kan het voorstel afkeuren of goedkeuren met verzoek om een offerte. Als de Opdrachtnemer een afkeuring ontvangt dan wordt het proces om een contractwijziging vast te leggen beëindigd. Als het voorstel wel wordt goedgekeurd dan levert de Opdrachtnemer een offerte met consequenties van de contractwijziging. Hierka kan de Opdrachtgever opnieuw een afkeuring of acceptatie versturen waarna de contractwijziging wordt stopgezet cq. geaccepteerd.</p>
-
+  
 ![Communicatie tussen Opdrahchtnemer en Opdrachtgever door middel van berichten](media/Contractwijziging1.png) 
 </aside>
-
-
 
 <aside class="example" title="Pizzeria"> 
 <p> De interactie start in dit voorbeeld bij de Ober. De Klant heeft een beperkt aantal reactiemogelijkheden. Als de Klant geen menukaart wenst te zien dan stopt de interactie. Als de Klant wel een menukaart wil zien dan gaat de transactie verder. De scope van deze transactie is het plaatsen van een bestelling. Een andere transactie zou bijvoorbeeld zijn dat de Klant vraagt om de rekening aan de Ober waarna de Ober de rekening brengt. </p>
@@ -68,8 +67,8 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 </aside>
 
 
-
 ## Termen uit de VISI systematiek
+
 
 ### Rol
 
@@ -78,6 +77,7 @@ Binnen (bouw)projecten en samenwerkingsvormen komen verschillende verantwoordeli
 Een rol is fundamenteel anders dan een functie. Een essentieel verschil is dat rollen een afspiegeling zijn van het werk dat georganiseerd wordt, terwijl functies een afspiegeling zijn van mensen die georganiseerd worden (in een organisatie). Een VISI-project heeft geen functie Afdelingshoofd, maar wel de rollen Beoordelende, Adviserende.
 
 <div class="issue" data-number="119"></div>
+
 
 ### Bericht
 
@@ -101,13 +101,14 @@ Aan VISI-berichten kunnen één of meerdere bijlagen worden toegevoegd. Dit komt
 **Bijlagen (één of meerdere bijlagen)**
 
 Doordat bijlagen zijn toegevoegd aan een bericht, is een bijlage achteraf altijd in context te plaatsen. Op welk moment is de bijlage verstuurd en met welke status? 
-- Goedgekeurd/afgekeurd/ter kennisgeving
-- Concept/definitief
-- Datum/versie
+* Goedgekeurd/afgekeurd/ter kennisgeving
+* Concept/definitief
+* Datum/versie
 
 **Volgordelijkheid van berichten**
 
 De berichten zijn niet alleen invulbaar, maar de opeenvolging van de berichten is ook van te voren vastgelegd. Na ontvangt van een bericht kan men in de regel één of meerdere antwoorden kiezen. Zo ligt van te voren vast hoe de communicatie er uit ziet en ook hoe het verloop is. Of met andere woorden de werkstroom ligt vast.
+
 
 ### Transactie
 
@@ -138,8 +139,8 @@ In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruik
 
 <aside class="example" title="Bouwproject">
 <p> De Projectleverende dient een beoordelingsdocument zoals is afgesproken in het contract. De Opdrachtgever wil aan één of meerdere Adviseurs vragen om het beoordelingsdocument te beoordelen. Dit noemen we een aangesloten transactie of subtransactie. Deze transactie vindt ook weer plaats tussen twee rollen (niet meer, niet minder).  </p>
-
-![Transactie Verzoek beoordelen beoordelingsdocument (intern)](media/Beoordelingsdocument_intern1.png)
+  
+![Transactie Verzoek beoordelen beoordelingsdocument](media/Beoordelingsdocument_intern1.png)
 </aside>
 
 
@@ -254,9 +255,9 @@ Een belangrijk basisprincipe is dat een transactie altijd iets oplevert. Als een
 **Condities binnen een transactie**
 
 Om bepaalde afhankelijkheden in een transactie af te kunnen dwingen kunnen bij het opstellen van een transactie op bepaalde momenten condities worden gesteld. Denk hierbij aan de volgende zaken:
--	Volgordelijkheid van berichten afdwingen. Hiermee wordt bedoeld dat berichten pas kunnen worden verstuurd nadat andere berichten zijn ontvangen of dat berichten alleen verstuurd mogen worden wanneer andere berichten nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden. <verwijzing naar MessageInTransactionTypeCondition op het functionele niveau>
--	Het is wel of niet toegestaan om meerdere secundaire transacties te initiëren <verwijzing naar secundary transactions allowed op het functionele niveau>
--	Het is wel of niet toegestaan om bepaalde velden in een bericht op een bepaald moment in de transactie te bewerken of bepaalde velden worden gewist <Verwijzing naar elementcondition op het functionele niveau>
+*	Volgordelijkheid van berichten afdwingen. Hiermee wordt bedoeld dat berichten pas kunnen worden verstuurd nadat andere berichten zijn ontvangen of dat berichten alleen verstuurd mogen worden wanneer andere berichten nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden. <div class="issue" data-number="140"> verwijzing naar MessageInTransactionTypeCondition op het functionele niveau
+*	Het is wel of niet toegestaan om meerdere secundaire transacties te initiëren <verwijzing naar secundary transactions allowed op het functionele niveau>
+*	Het is wel of niet toegestaan om bepaalde velden in een bericht op een bepaald moment in de transactie te bewerken of bepaalde velden worden gewist <div class="issue" data-number="140"> Verwijzing naar elementcondition op het functionele niveau
 
 
 **Kan een raamwerk worden aangevuld of gewijzigd worden tijdens een project?**
@@ -264,8 +265,8 @@ Om bepaalde afhankelijkheden in een transactie af te kunnen dwingen kunnen bij h
 Tijdens het gebruik van een VISI-raamwerk in een project of een ander samenwerkingsverband is het mogelijk het VISI-raamwerk aan te passen. Bijvoorbeeld als bedrijfsprocessen of proceseisen veranderen of als voorgedefinieerde elementen, zoals keuzelijsten in berichten aangepast dienen te worden. 
   
  Hierbij dienen altijd wel een aantal zaken in het achterhoofd te worden gehouden, namelijk:
--	Lopende transacties worden afgerond  in de versie van het raamwerk waarin ze zijn opgestart. Dit houdt in dat een wijziging van een raamwerk geen effect heeft op lopende VISI communicatie;
--	Een nieuwe versie van het raamwerk dient bij alle projectpartners te worden ingelezen.
+*	Lopende transacties worden afgerond  in de versie van het raamwerk waarin ze zijn opgestart. Dit houdt in dat een wijziging van een raamwerk geen effect heeft op lopende VISI communicatie;
+*	Een nieuwe versie van het raamwerk dient bij alle projectpartners te worden ingelezen.
 
 
 
@@ -295,9 +296,9 @@ Voor het hele project kun je zien wat de voortgang is van de samenwerking omdat 
 
 
 Controlevragen: 
-- Moeten rapportages t.b.v. stuurinformatie ook worden ondersteund door software of is dit software afhankelijk?
-- Hoe weet je dat de inhoud van het bericht juist is?
-- Hoe weet je dat je bericht is aangekomen?
-- Hoe weet je dat de juiste persoon het bericht heeft ontvangen?
-- Hoe weet je dat een gemachtigd persoon het bericht heeft geschreven?
+* Moeten rapportages t.b.v. stuurinformatie ook worden ondersteund door software of is dit software afhankelijk?
+* Hoe weet je dat de inhoud van het bericht juist is?
+* Hoe weet je dat je bericht is aangekomen?
+* Hoe weet je dat de juiste persoon het bericht heeft ontvangen?
+* Hoe weet je dat een gemachtigd persoon het bericht heeft geschreven?
 

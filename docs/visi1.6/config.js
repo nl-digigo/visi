@@ -147,7 +147,7 @@ var respecConfig = {
     a11y: false,
   
     // A number indicating the maximum depth of the table of contents. Defaults to 0 which includes all levels.
-    maxTocLevel: 3,
+    maxTocLevel: 4,
   
     // Shows links to alternate formats (such as PDF, ePub) in the document header.
     // alternateFormats: [{
