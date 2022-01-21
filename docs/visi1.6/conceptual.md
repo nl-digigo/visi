@@ -217,7 +217,7 @@ In VISI zijn verantwoordelijkheden en taken niet toegekend aan partijen of perso
 
 
 <aside class="example" title="Bouwproject">
-<p> In een bouwproject zou de verdeling er als volgt uit kunnen zien.</p></aside>
+<p> In een bouwproject zou de verdeling er als volgt uit kunnen zien.</p>
 
 
 | Opdrachtgevende | Adviserende | Toetsende/Accepterende | Projectleverende | Organisatie | Naam              | Functie           |
@@ -234,7 +234,7 @@ In VISI zijn verantwoordelijkheden en taken niet toegekend aan partijen of perso
 |                 |             |                        | X                | ON          | Arjen van der Hof | Projectleider     |
 |                 |             |                        | X                | ON          | Klaas Slot        | Uitvoerder        |
 |                 |             |                        | X                | ON          | Jan van Geest     | Werkvoorbereider  |
-
+</aside>
 
 ## Verdieping van het raamwerk
 
