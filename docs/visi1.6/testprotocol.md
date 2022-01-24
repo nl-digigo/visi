@@ -725,7 +725,7 @@ Ober A start een nieuwe transactie en verstuurd een bericht naar Klant K. In het
 
 Resultaat:
 
-Aan Ober A worden in het bericht elementen getoond met > en & en ‎€ in de omschrijving. Het element Enumeration / Keuzelijst toont een lijst met onder andere êâîôûëäïöü<"µ@ç€.
+Aan Ober A worden in het bericht elementen getoond met > en & en € in de omschrijving. Het element Enumeration / Keuzelijst toont een lijst met onder andere êâîôûëäïöü<"µ@ç€.
 
 Klant K ontvangt een bericht met voor element "Enumeration / Keuzelijst" de waarde "eaiou with circumflexes: êâîôû"
 
@@ -759,14 +759,14 @@ Bestanden zijn op te vragen bij Elisabeth Kloren.
 ## Archiveren en weer activeren van projecten
 
 
-__Scenario 1__
-- Archiveer een VISI-Project;
-- Importeer het gearchiveerde VISI-Project in een andere VISI-omgeving;
-- Vergelijk het originele project met het opnieuw opgebouwde project. 
+Scenario 1
+* Archiveer een VISI-Project;
+* Importeer het gearchiveerde VISI-Project in een andere VISI-omgeving;
+* Vergelijk het originele project met het opnieuw opgebouwde project. 
 
-__Testresultaat:__
-- De inhoud van beide projecten, inclusief raamwerken, project specifieke berichten, transacties, berichten, bijlagen etc moet exact gelijk zijn. 
-- Eventueel na aanpassing van het soap adres moet communicatie met het project mogelijk zijn
+Testresultaat:
+* De inhoud van beide projecten, inclusief raamwerken, project specifieke berichten, transacties, berichten, bijlagen etc moet exact gelijk zijn. 
+* Eventueel na aanpassing van het soap adres moet communicatie met het project mogelijk zijn
 
 
 
@@ -803,14 +803,14 @@ Speciale aandacht verdienen niet-ascii tekens in het onderwerp van een transacti
 Het projectspecifiek bericht wordt niet ingelezen/geweigerd.</p>
 <p>Sample Data:<br>
 Het projectspecifiek bericht "projectspecifiekberichttotenmetbericht_6.xml".</p>
-<p>&nbsp;</p>
-<h2>Scenario Grote bijlagen</h2>
+
+## Scenario Grote bijlagen
 <p>Bij een bericht wordt een zip bestand van 10gb gevoegd. Dit bericht wordt via soap naar een andere server verzonden.</p>
 <p>Verwacht resulataat: <br>
 Het bericht met de bijlage wordt correct verzonden, de bijlage is op de andere server uit te pakken en de uit de zip gehaalde bestanden zijn leesbaar.</p>
 <p>Sample Data:<br>
 Ter plekke kan een zip bestand worden aangemaakt.</p>
-<p>&nbsp;</p>
+
 
 ## Scenario HTTPS
 Doel:

@@ -1,5 +1,5 @@
-
 # SOAP
+
 
 Dit document bevat de richtlijn voor implementatie van VISI communicatie op basis van het SOAP protocol. Het doel van de richtlijn is om handreikingen te geven voor de implementatie van VISI communicatie waardoor gewaarborgd wordt dat het betreffende informatiesysteem in technische zin VISI-berichten met bijlagen kan uitwisselen met een ander informatiesysteem dat volgens de richtlijn is ingericht.
 
@@ -23,10 +23,10 @@ Doel
 Het doel van dit document is om een protocol vast te stellen waarmee we communicatie van VISI berichten tussen alle VISI ondersteunende software partijen kunnen beschrijven. Dit dient op een zodanige manier beschreven te zijn dat het protocol voor alle partijen implementeerbaar is, geen ongewone eisen aan implementatie en/of hardware worden vereist en het strikt genoeg is om communicatie mogelijk te maken.
 
 De onderliggende eisen van dit protocol:
--	strikt en eenduidig genoeg om communicatie tussen alle softwarepartijen, welke implemen¬taties van dit protocol uitvoeren, mogelijk te maken.
--	duidelijk en eenvoudig genoeg voor implementatie.
--	geen eisen aan VISI compatibiliteit voor de nieuwe/extra software/servers.
--	mogelijkheid een kopie van alle bilaterale communicatie op 1 of meerdere servers te plaatsen.
+* strikt en eenduidig genoeg om communicatie tussen alle softwarepartijen, welke implemen¬taties van dit protocol uitvoeren, mogelijk te maken.
+* duidelijk en eenvoudig genoeg voor implementatie.
+* geen eisen aan VISI compatibiliteit voor de nieuwe/extra software/servers.
+* mogelijkheid een kopie van alle bilaterale communicatie op 1 of meerdere servers te plaatsen.
 
 Het doel van de SOAP Central Server is het opslaan van alle berichten (m.u.v. berichten binnen 1 organisatie) die binnen een project plaatsvinden. Wat er vervolgens met deze berichten gedaan wordt, welke partijen toegang tot welke berichten hebben en hoe de beveiliging en opslag van deze berichten is geregeld valt buiten dit protocol. 
 
@@ -41,7 +41,7 @@ Voor implementatie wordt het MTOM (SOAP Message Transmission Optimization Mechan
 
 Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit bericht bevat onder project¬informatie een simpel element ‘SOAPProtocol’. De huidige mogelijkheid is alleen ‘MTOM’, dit ziet er dus bijv. uit als onderdeel van het raamwerk:
 
-<code>
+<pre>
 
 	<ProjectType id="Project_xyz">
 		…
@@ -65,11 +65,11 @@ Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit berich
 	<SimpleElementType id="SOAPProtocol">
 		…
 	</SimpleElementType>
-</code>	
+</pre>	
 
 En voor het projectspecifieke bericht:
 
-<code>
+<pre>
 
 	<Project_xyz id="Project-000">
 		…
@@ -85,7 +85,7 @@ En voor het projectspecifieke bericht:
 		…
 	</AnderWillekeurigComplexElement>
 
-</code>	
+</pre>	
 
 
 ## Architectuur
@@ -147,7 +147,7 @@ Binnen deze notitie zullen we het volgende gebruik voorstellen (let wel: dit val
 Op raamwerkniveau: 
 -	Elk raamwerk zal het volgende stukje XML bevatten om de SOAPServerURL aan een organisatie toe te kunnen wijzen:
 
-<code>
+<pre>
 	<OrganisationType id="Organisatie">
 		…
 		<description>Standaard organisatie</description>
@@ -169,12 +169,11 @@ Op raamwerkniveau:
 	</ComplexElementType>
 	<SimpleElementType id="SOAPServerURL">
 		…
-	</SimpleElementType>
-	
-</code?
+	</SimpleElementType>	
+</pre>
 * Elk raamwerk zal het volgende stukje XML bevatten om de SOAPCentralServerURL aan een project toe te kunnen wijzen:
 	
-<code>	
+<pre>	
 
 	<ProjectType id="Project_xyz">
 		<description>Standaard project</description>
@@ -197,7 +196,7 @@ Op raamwerkniveau:
 	<SimpleElementType id="SOAPCentralServerURL">
 		…
 	</SimpleElementType>
-</code>		
+</pre>		
 
 
 Alternatieven:
@@ -210,7 +209,7 @@ Op berichtniveau: we gaan er vanuit dat er bij een project een projectspecifiek 
 
 * In dit projectspecifieke bericht is voor elke organisatie gedefinieerd wat zijn SOAPServerURL is:
 
-<code>	
+<pre>	
 
 	<Organisatie id="Kraaijeveld">
 		<name>Kraaijeveld's Aannemingsbedrijf BV</name>
@@ -227,11 +226,11 @@ Op berichtniveau: we gaan er vanuit dat er bij een project een projectspecifiek 
 		…
 	</WillekeurigComplexElement>
 	
-</code>	
+</pre>	
 
 * Bij de projectdefinitie in het projectspecifieke bericht zal de SOAPCentralServerURL te vinden zijn:
 
-<code>	
+<pre>	
 
 	<Project_xyz id="Project-000">
 		<name>VISI-Showcase</name>
@@ -247,7 +246,7 @@ Op berichtniveau: we gaan er vanuit dat er bij een project een projectspecifiek 
 		<SOAPCentralServerURL>http://192.168.0.1/visi.wsdl</SOAPCentralServerURL>
 		…
 	</AnderWillekeurigComplexElement>
-</code>	
+</pre>	
 
 
 ### Gevolgen
@@ -269,7 +268,7 @@ Deze beschrijving is geschikt voor alle type berichten binnen transacties, zowel
 Bij de voorbeelden:
 * URL SOAP server versturende partij: 	http://192.168.0.102
 * URL SOAP server ontvangende partij:	http://192.168.0.138
-* URL SOAP central server:			<empty>
+* URL SOAP central server:			
  
 ![Afbeelding](media/fig-2.png)
 
@@ -284,7 +283,7 @@ De volgorde van berichtuitwisseling:
 4. Het opgestelde VISI bericht + URL adres van versturende SOAP server + URL adres van ontvangende SOAP server + URL adres van SOAP central server (deze is in dit scenario leeg) worden naar de bijbehorende server gecommuniceerd (wijze van communicatie wordt aan de softwarepartijen zelf overgelaten).
  
 5. De SOAP server van de versturende partij bouwt een SOAP bericht als volgt op:
-<code>
+<pre>
 <SOAP-ENV:Envelope ...>
 	<SOAP-ENV:Header>
 		<SOAPServerURL ...>
@@ -315,7 +314,7 @@ De volgorde van berichtuitwisseling:
 		</parseMessage>
 	</SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
-	</code> 
+	</pre> 
 
 <p class="note" title="ID van attachement">
 note: de id van elke attachment is gelijk aan de id die in het VISI bericht 
@@ -332,7 +331,7 @@ note: de id van elke attachment is gelijk aan de id die in het VISI bericht
 
 9. De SOAP server van de ontvangende partij bouwt bij succes een SOAP reactiebericht op als volgt:
 
-	<code>
+	<pre>
 <SOAP-ENV:Envelope ...>
 	<SOAP-ENV:Header>
 		<SOAPServerURL ...>
@@ -352,11 +351,11 @@ note: de id van elke attachment is gelijk aan de id die in het VISI bericht
 	<ERRORS>
 	</SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
-</code>
+</pre>
 
 bij een enkelvoudige fout:
 
-	<code>
+<pre>
 <SOAP-ENV:Envelope ...>
 	<SOAP-ENV:Header>
 		<SOAPServerURL ...>
@@ -376,11 +375,11 @@ bij een enkelvoudige fout:
 	<ERRORS>
 	</SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
-		</code>
+</pre>
 
 Bij meerdere fouten (bijvoorbeeld bij validatie van de xsd):
 
-<code>
+<pre>
 <SOAP-ENV:Envelope ...>
 	<SOAP-ENV:Header>
 		<SOAPServerURL ...>
@@ -401,7 +400,7 @@ Bij meerdere fouten (bijvoorbeeld bij validatie van de xsd):
 	<ERRORS>
 	</SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
-</code>
+</pre>
 		
 In geval van geen fout is de code 0, bij een onbekende fout  is de code 1, deze foutmeldingen zullen moeten worden opgelost door de programmeurs. Alle foutmeldingen met een hogere code betreffen fouten die door de software begrepen kunnen worden.
 
@@ -443,10 +442,10 @@ De exacte inhoud van een projectspecifiek bericht is elders beschreven. Hier is 
 Er kunnen verschillende redenen zijn om een projectspecifiek bericht te updaten, dit kan zijn omdat personen, organisaties en/of rollen zijn aangepast, meer informatie bekend is omtrent personen, organisatie, rollen of het project dan wel omdat het raamwerk is aangepast.
 
 In principe is de informatie van een projectspecifiek bericht vluchtig, het kan gezien worden als een ‘vergaarbak’ van belangrijke projectspecifieke informatie welke altijd up-to-date beschikbaar is voor de verschillende informatie systemen die een rol spelen in dit project. De informatie is in tegenstelling tot raamwerken dan ook dynamisch waarbij hier de locatie (URI) statisch is, i.e. elk informatiesysteem weet waar hij de laatste meest up-to-date informatie van het project kan vinden (deze URI wordt gebruikt om een project mee op te starten, zie ook 3.3.). Om de verschillende versies van het projectspecifieke bericht te kunnen achterhalen schrijft VISI voor als volgt een update uit te voeren:
--	Maak een kopie van het bestaande projectspecifieke bericht, dit bericht krijgt dezelfde naam met een volgnummer direct achter de naam.
--	Verzorg de update van het projectspecifieke bericht.
--	Distribueer het projectspecifieke bericht over de VISI projectpartners en stel de ingangsdatum plus tijd vast.
--	Op de afgesproken datum en tijd wordt het nieuwe projectspecifieke bericht geactiveerd.
+* Maak een kopie van het bestaande projectspecifieke bericht, dit bericht krijgt dezelfde naam met een volgnummer direct achter de naam.
+* Verzorg de update van het projectspecifieke bericht.
+* Distribueer het projectspecifieke bericht over de VISI projectpartners en stel de ingangsdatum plus tijd vast.
+* Op de afgesproken datum en tijd wordt het nieuwe projectspecifieke bericht geactiveerd.
 
 
  
@@ -458,15 +457,16 @@ De attachments en elementen in de header file worden zoals in 3. beschreven verw
 
 Het gekozen protocol MTOM heeft in de Microsoft Web Services Enhancements (WSE) 3.0 een integratie van MTOM en security voor de implementeur. Mijn voorstel zou zijn deze door Microsoft gekozen bij MTOM passende security aan te houden en op basis van ervaringen van eerste implementaties uitspraken voor deze VISI notitie vast te stellen.
 
-NB:
--	alleen geldig indien deze encryptie ondersteund wordt door alle systemen.
+<p class="note" title="Encryptie ondersteuning">
+Alleen geldig indien deze encryptie ondersteund wordt door alle systemen.
+</p>
 
 
 ## SOAP function calls
 
 De gekozen oplossing vereist slechts twee function calls.
 
-functioncall parseMessage
+Functioncall parseMessage
 	(1 inputvariabele van het type string, bevat een XML file, zie ook 3.4)
 functioncall parseMessageConfirmation
 	(2 inputvariabelen van het type string, t.w. 

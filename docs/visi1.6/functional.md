@@ -28,7 +28,7 @@ Van een project worden beperkte, verplichte eigenschappen vastgelegd. Ieder proj
 <p><b>Project</b><br>
 Unieke identificatie: _badc9dab-807e-4319-bd56-60c57605e109<br>
 Naam: 			Realisatie West- / Oostlijn<br>
-Omschrijving:		Realisatie van metrolijn 47 inclusief 7 nieuwe stations met 9,7			kilometer spoor, waarvan 7,1 kilometer ondergronds<br>
+Omschrijving:		Realisatie van metrolijn 47 inclusief 7 nieuwe stations met 9,7	kilometer spoor, waarvan 7,1 kilometer ondergronds<br>
 Startdatum:		23-12-2020 14:59<br>
 Einddatum: 		20-05-2022 07:08</p>
 </aside>
@@ -74,13 +74,13 @@ Personen voeren een activiteit in een project uit namens een organisatie. In een
 Uit de afkorting is de organisatorische bron van communicatie ter herleiden, zie … (Verwijzing naar uitleg over eigenschap van TransactionTemplate). Voor een organisatie wordt een contactpersoon gedefinieerd middels een verwijzing naar de unieke identificatie van een persoon. Deze verwijzing heeft geen functionele betekenis, en betreft enkel een administratief doel.
 
 <aside class="example" title="Organisatie vastleggen in PSB">
-  <p><b>Organisatie</b><br>
+<p><b>Organisatie</b><br>
 Unieke identificatie: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
 Naam: 			Gemeente Rommelgem<br>
 Afkorting:		GRG<br>
 Contactpersoon:	_0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
-  </p>
-  </aside>
+</p>
+</aside>
 
 Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres, maar een digitaal adres. Dit digitale adres heeft een technisch doel, zie … SOAP server
 <div class="issue" data-number="136"></div> 
@@ -91,11 +91,11 @@ Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres,
 De differentiatie in autorisatie, taken en verantwoordelijkheden in een project worden expliciet gemaakt middels het definiëren van verschillende rollen. Een rol staat voor samenhangende autorisatie, taken en verantwoordelijkheden voor het uitvoeren van activiteiten, die een persoon meestal tijdelijk op zich neemt, en die (afwisselend) door verschillende personen kunnen worden vervuld. Van een rol worden zeer beperkte eigenschappen vastgelegd. Ook iedere rol heeft een unieke identificatie, aangevuld met een naam en omschrijving. Deze naam en omschrijving behoeven niet uniek te zijn, en zijn een aanvulling op de unieke identificatie bedoeld voor toelichting en zorgt voor eenvoudigere herkenning van de rol (door mensen).
 
 <aside class="example" title="Rol vastleggen in PSB">
-  <p><b>Rol</b><br>
+<p><b>Rol</b><br>
 Unieke identificatie: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3 <br>
 Naam: 			Beoordelende rol<br>
 Omschrijving:	Deze rol geeft een onafhankelijke beoordeling op basis van competenties en deskundigheid binnen het kader van project. Bij de beoordeling doorloopt de rol een aantal vaste stappen. Rol inventariseert gegevens, weegt, motiveert en beoordeelt deze informatie en velt vervolgens het oordeel.<br>
-  </p></aside>
+</p></aside>
 
 <p class="note" title="Rol versus functie">
 Een rol is fundamenteel anders dan een functie. Een essentieel verschil is dat rollen een afspiegeling zijn van het werk dat georganiseerd wordt, terwijl functies een afspiegeling zijn van mensen die georganiseerd worden (in een organisatie). Een project heeft geen functie Afdelingshoofd, maar wel de rollen Beoordelende, Adviserende.</p>
@@ -108,12 +108,12 @@ Een rol is fundamenteel anders dan een functie. Een essentieel verschil is dat r
 Personen handelen in een project altijd vanuit een rol namens een organisatie. Een persoon is niet rechtstreeks gekoppeld aan de organisatie. De persoon heeft een relatie met een rol en een organisatie in het project. Deze relatie is te zien als een unieke sleutel die persoon, rol en organisatie verbindt. Deze sleutel noemen we "Persoon in Rol van Organisatie". Van deze sleutel worden zeer beperkte, verplichte eigenschappen vastgelegd. Voor de sleutel wordt persoon, rol en organisatie gedefinieerd middels een verwijzing naar de unieke identificatie van een persoon, een rol en een organisatie.
  
 <aside class="example" title="Persoon in Rol van Organisatie in PSB">
-  <p><b>Persoon in Rol van Organisatie</b><br>
+<p><b>Persoon in Rol van Organisatie</b><br>
 Unieke identificatie: _e0ad4954-7986-417c-96d6-813efa36e86b<br>
 Contactpersoon: 	_0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
 Rol:			_1252a67a-5f69-4a9c-b4ca-506a4459c7c3<br>
 Organisatie:		_87e9144d-04d6-4a5f-bdcb-b50e96c2b498
-  </p></aside>
+</p></aside>
   
 Een persoon kan meerdere rollen hebben, en een rol kan door meerdere personen vervuld worden.
 
@@ -130,7 +130,7 @@ Permanente vervanging wordt ook wel opvolging genoemd. De opvolger is een geauto
 
 Permanente vervanging is altijd op rolniveau. Bij de genoemde sleutel van Persoon in Rol van Organisatie wordt deze permanente vervanger vastgelegd middels een verwijzing naar de unieke identificatie van een persoon, een rol en een organisatie.  De relatie is van geautoriseerde naar de opvolger. Hierbij dienen de rollen exact overeen te komen.
 
-<aside class="example" title="Permanetne vervanging cg opvolging">
+<aside class="example" title="Permanente vervanging cg opvolging">
 <p><b>Persoon in Rol van Organisatie</b><br>
 Unieke identificatie: _e0ad4954-7986-417c-96d6-813efa36e86b<br>
 Contactpersoon: 	_0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
