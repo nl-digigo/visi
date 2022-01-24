@@ -1,12 +1,12 @@
 # SOAP
 
-
+## Inleiding
 Dit document bevat de richtlijn voor implementatie van VISI communicatie op basis van het SOAP protocol. Het doel van de richtlijn is om handreikingen te geven voor de implementatie van VISI communicatie waardoor gewaarborgd wordt dat het betreffende informatiesysteem in technische zin VISI-berichten met bijlagen kan uitwisselen met een ander informatiesysteem dat volgens de richtlijn is ingericht.
 
 Wijzigingen ten opzichte van eerdere versie
 De voorliggende richtlijn is een licht aangepaste versie (1.2) van de eerste versie (1.0). Wijzigingen ten opzichte van versie 1.1 zijn geel gemarkeerd.
 
-De maximale grootte van een VISI-bericht (inclusief attachments) is 120 MB. Deze oplossing is gebaseerd op de MTOM-SOAP   implementatie van XOP (XML-binary Optimized Packaging) Zie ook: http://www.w3.org/TR/soap12-mtom/. Dit wordt voor verdere optimalisatie gecombineerd met ‘chunking’, een methode om bestanden in kleine stukken te versturen en vervolgens weer samen te voegen.
+De maximale grootte van een VISI-bericht (inclusief attachments) is 120 MB. Deze oplossing is gebaseerd op de MTOM-SOAP   implementatie van XOP (XML-binary Optimized Packaging) [Zie ook hier](http://www.w3.org/TR/soap12-mtom/). Dit wordt voor verdere optimalisatie gecombineerd met "chunking", een methode om bestanden in kleine stukken te versturen en vervolgens weer samen te voegen.
 
 De VISI Standaard dient af te dwingen dat de communicatie tussen SOAP Servers plaatsvindt via https en SSL, waardoor de inhoud van ontvangen berichten niet onderschept kan worden.
 
@@ -19,11 +19,11 @@ Overige beveiligingsmaatregelen kunnen desgewenst op infrastructuur niveau worde
 Verder kunnen SOAP Servers de techniek "whitelist" gebruiken, waardoor alleen geautori-seerde SOAP server berichten naar een SOAP Server kunnen sturen .
 
  
-Doel
+## Doel
 Het doel van dit document is om een protocol vast te stellen waarmee we communicatie van VISI berichten tussen alle VISI ondersteunende software partijen kunnen beschrijven. Dit dient op een zodanige manier beschreven te zijn dat het protocol voor alle partijen implementeerbaar is, geen ongewone eisen aan implementatie en/of hardware worden vereist en het strikt genoeg is om communicatie mogelijk te maken.
 
 De onderliggende eisen van dit protocol:
-* strikt en eenduidig genoeg om communicatie tussen alle softwarepartijen, welke implemen¬taties van dit protocol uitvoeren, mogelijk te maken.
+* strikt en eenduidig genoeg om communicatie tussen alle softwarepartijen, welke implementaties van dit protocol uitvoeren, mogelijk te maken.
 * duidelijk en eenvoudig genoeg voor implementatie.
 * geen eisen aan VISI compatibiliteit voor de nieuwe/extra software/servers.
 * mogelijkheid een kopie van alle bilaterale communicatie op 1 of meerdere servers te plaatsen.
@@ -36,34 +36,33 @@ Het doel van de SOAP Central Server is het opslaan van alle berichten (m.u.v. be
 
 De volgende protocollen worden gebruikt:
 
-Voor implementatie wordt het MTOM (SOAP Message Transmission Optimization Mechanism) protocol vereist. De laatste versie van MTOM op het moment van uitbrengen van deze notitie is:
-	http://www.w3.org/TR/soap12-mtom/
+Voor implementatie wordt het MTOM (SOAP Message Transmission Optimization Mechanism) protocol vereist. De laatste versie van MTOM op het moment van uitbrengen van deze notitie is [deze](http://www.w3.org/TR/soap12-mtom/)
 
-Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit bericht bevat onder project¬informatie een simpel element ‘SOAPProtocol’. De huidige mogelijkheid is alleen ‘MTOM’, dit ziet er dus bijv. uit als onderdeel van het raamwerk:
+Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit bericht bevat onder projectinformatie een simpel element "SOAPProtocol". De huidige mogelijkheid is alleen "MTOM", dit ziet er dus bijv. uit als onderdeel van het raamwerk:
 
 <pre>
 
 	<ProjectType id="Project_xyz">
-		…
+		
 		<description>Standaard project</description>
-		…
+		
 		<complexElements>
-			…
+		
 			<ComplexElementTypeRef idref="AnderWillekeurigComplexElement"/>
-			…
+			
 		</complexElements>
 	</ProjectType>
 	<ComplexElementType id="AnderWillekeurigComplexElement">
 		<description>Een ander willekeurig complex element</description>
-		…
+	
 		<simpleElements>
-			…
+			
 			<SimpleElementTypeRef idref="SOAPProtocol"/>
-			…
+			
 		</simpleElements>
 	</ComplexElementType>
 	<SimpleElementType id="SOAPProtocol">
-		…
+		
 	</SimpleElementType>
 </pre>	
 
@@ -72,17 +71,17 @@ En voor het projectspecifieke bericht:
 <pre>
 
 	<Project_xyz id="Project-000">
-		…
+		
 		<anderWillekeurigComplexElement>
-			…
+			
 			<AnderWillekeurigComplexElementRef idref="ProjectGegevens"/>
-			…
+			
 		</anderWillekeurigComplexElement>
 	</Project_xyz>
 	<AnderWillekeurigComplexElement id="ProjectGegevens">
-		…
+		
 		<SOAPProtocol>MTOM</SOAPProtocol>
-		…
+		
 	</AnderWillekeurigComplexElement>
 
 </pre>	
@@ -90,11 +89,11 @@ En voor het projectspecifieke bericht:
 
 ## Architectuur
 
-De architectuur is simpel gehouden door slechts één scenario te ondersteunen. Voorheen waren er meerdere architecturen waarbij de communicatie optioneel ook via een centrale server of gecombi¬neerde server liep. Het scenario bevat onderlinge communicatie tussen SOAP servers met een kopie van deze berichten naar één of meerdere centrale servers indien aanwezig.
+De architectuur is simpel gehouden door slechts een scenario te ondersteunen. Voorheen waren er meerdere architecturen waarbij de communicatie optioneel ook via een centrale server of gecombineerde server liep. Het scenario bevat onderlinge communicatie tussen SOAP servers met een kopie van deze berichten naar een of meerdere centrale servers indien aanwezig.
 
 Het doel en de achtergrond van deze architectuur:
-* de architectuur moet onderlinge communicatie tussen servers in een project kunnen onder¬steunen zonder tussenkomst van andere servers,
-* de architectuur moet opslag van alle berichten op één of meerdere servers binnen een VISI project kunnen ondersteunen,
+* de architectuur moet onderlinge communicatie tussen servers in een project kunnen ondersteunen zonder tussenkomst van andere servers,
+* de architectuur moet opslag van alle berichten op een of meerdere servers binnen een VISI project kunnen ondersteunen,
 * de gebruikte SOAP servers hoeven geen kennis van VISI te hebben,
 * communicatie moet beveiligd uitgevoerd kunnen worden,
 * berichten moeten eenduidig gecommuniceerd en opgeslagen kunnen worden,
@@ -121,14 +120,14 @@ In dit geschetste scenario zijn de volgende objecten te vinden:
 
 De berichtuitwisseling (header etc., server address)  is opgezet op basis van drie randvoorwaarden:
 * De SOAP Servers en de SOAP Central Server(s) zijn niet in staat VISI berichten te parsen (inhoudelijk te begrijpen).
-* Het informatie systeem (IS) en de SOAP Server hebben geen (statische) kennis van het wel of niet aanwezig zijn van SOAP Central Servers, aanwezigheid van één of meerdere SOAP Central Servers moet dus ondersteund kunnen worden zonder iets aan het informatiesysteem of de SOAP server te wijzigen.
+* Het informatie systeem (IS) en de SOAP Server hebben geen (statische) kennis van het wel of niet aanwezig zijn van SOAP Central Servers, aanwezigheid van een of meerdere SOAP Central Servers moet dus ondersteund kunnen worden zonder iets aan het informatiesysteem of de SOAP server te wijzigen.
 * Alle informatie over de aanwezige configuratie, URL adressen van personen in een bepaalde rol e.d. zijn gevat in VISI berichten volgens het raamwerk voor het uit te voeren project (natuurlijk mag deze randvoorwaarde de software niet van een specifiek VISI raamwerk afhankelijk maken).
 
 Om aan bovenstaande randvoorwaarden te kunnen voldoen zullen we een nieuw concept binnen VISI lanceren.
 
 
 Ter info gebruikt nieuw VISI concept:
-* Enkele SimpleElementType objecten welk gedefinieerd kunnen worden in het raamwerk zul¬len op basis van hun naamgeving (attribuut: id) over alle raamwerken heen een specifiek gedrag/invulling toegekend krijgen.
+* Enkele SimpleElementType objecten welk gedefinieerd kunnen worden in het raamwerk zullen op basis van hun naamgeving (attribuut: id) over alle raamwerken heen een specifiek gedrag/invulling toegekend krijgen.
 
 
 We zullen aan de volgende SimpleElementTypes raamwerk-overschrijdend gedrag/invulling toekennen:
@@ -145,56 +144,58 @@ SOAPProtocol	Bevat het gebruikte SOAP protocol</p>
 Binnen deze notitie zullen we het volgende gebruik voorstellen (let wel: dit valt buiten het nieuwe VISI concept):
 
 Op raamwerkniveau: 
--	Elk raamwerk zal het volgende stukje XML bevatten om de SOAPServerURL aan een organisatie toe te kunnen wijzen:
+* Elk raamwerk zal het volgende stukje XML bevatten om de SOAPServerURL aan een organisatie toe te kunnen wijzen:
 
 <pre>
 	<OrganisationType id="Organisatie">
-		…
+	
 		<description>Standaard organisatie</description>
-		…
+		
 		<complexElements>
-			…
+			
 			<ComplexElementTypeRef idref="WillekeurigComplexElement"/>
-			…
+			
 		</complexElements>
 	</OrganisationType>
 	<ComplexElementType id="WillekeurigComplexElement">
 		<description>Een willekeurig complex element</description>
-		…
+		
 		<simpleElements>
-			…
+			
 			<SimpleElementTypeRef idref="SOAPServerURL"/>
-					…
+					
 		</simpleElements>
 	</ComplexElementType>
 	<SimpleElementType id="SOAPServerURL">
-		…
-	</SimpleElementType>	
+		
+	</SimpleElementType>
+	
 </pre>
+
 * Elk raamwerk zal het volgende stukje XML bevatten om de SOAPCentralServerURL aan een project toe te kunnen wijzen:
 	
 <pre>	
 
 	<ProjectType id="Project_xyz">
 		<description>Standaard project</description>
-		…
+		
 		<complexElements>
-			…
+			
 			<ComplexElementTypeRef idref="AnderWillekeurigComplexElement"/>
-			…
+			
 		</complexElements>
 	</ProjectType>
 	<ComplexElementType id="AnderWillekeurigComplexElement">
 		<description>Een ander willekeurig complex element</description>
-		…
+		
 		<simpleElements>
-			…
+			
 			<SimpleElementTypeRef idref="SOAPCentralServerURL"/>
-			…
+			
 		</simpleElements>
 	</ComplexElementType>
 	<SimpleElementType id="SOAPCentralServerURL">
-		…
+		
 	</SimpleElementType>
 </pre>		
 
@@ -212,18 +213,18 @@ Op berichtniveau: we gaan er vanuit dat er bij een project een projectspecifiek 
 <pre>	
 
 	<Organisatie id="Kraaijeveld">
-		<name>Kraaijeveld's Aannemingsbedrijf BV</name>
-		…
+		<name>Kraaijeveld"s Aannemingsbedrijf BV</name>
+		
 		<willekeurigComplexElement>
-			…
+			
 			<WillekeurigComplexElementRef idref="KraaijeveldGegevens"/>
-			…
+			
 		</willekeurigComplexElement>
 	</Organisatie>
 	<WillekeurigComplexElement id="KraaijeveldGegevens">
-		…
+		
 		<SOAPServerURL>http://192.168.0.102/visi.wsdl-</SOAPServerURL>
-		…
+		
 	</WillekeurigComplexElement>
 	
 </pre>	
@@ -234,17 +235,17 @@ Op berichtniveau: we gaan er vanuit dat er bij een project een projectspecifiek 
 
 	<Project_xyz id="Project-000">
 		<name>VISI-Showcase</name>
-		…
+		
 		<anderWillekeurigComplexElement>
-			…
+			
 			<AnderWillekeurigComplexElementRef idref="ProjectGegevens"/>
-			…
+			
 		</anderWillekeurigComplexElement>
 	</Project_xyz>
 	<AnderWillekeurigComplexElement id="ProjectGegevens">
-		…
+		
 		<SOAPCentralServerURL>http://192.168.0.1/visi.wsdl</SOAPCentralServerURL>
-		…
+		
 	</AnderWillekeurigComplexElement>
 </pre>	
 
@@ -256,7 +257,7 @@ De gevolgen van deze aanpak is dat het informatie systeem (IS) in staat is bij e
  
 ### Berichtuitwisseling initialisatie
 
-Om een project te beginnen zullen alle partijen moeten weten met wie ze communiceren, welk raam¬werk gebruikt wordt en alle andere projectspecifieke informatie beschikbaar moeten hebben. Om deze informatie altijd up-to-date te houden en te voorkomen dat ongeautoriseerde partijen deze informatie kunnen aanpassen is een projectspecifiek bericht gedefinieerd. Dit projectspecifieke bericht bevindt zich op een door de projectleider aangegeven locatie (bestaande infrastructuren verzorgen vervolgens beveiliging en beschikbaarheid). Meer informatie over het projectspecifieke bericht is te vinden in hoofdstuk 5 en 9.
+Om een project te beginnen zullen alle partijen moeten weten met wie ze communiceren, welk raamwerk gebruikt wordt en alle andere projectspecifieke informatie beschikbaar moeten hebben. Om deze informatie altijd up-to-date te houden en te voorkomen dat ongeautoriseerde partijen deze informatie kunnen aanpassen is een projectspecifiek bericht gedefinieerd. Dit projectspecifieke bericht bevindt zich op een door de projectleider aangegeven locatie (bestaande infrastructuren verzorgen vervolgens beveiliging en beschikbaarheid). Meer informatie over het projectspecifieke bericht is te vinden in hoofdstuk 5 en 9.
 
 De initialisatie van elk informatiesysteem begint met het invoeren van het adres van het projectspecifieke bericht (dus bij ieder afzonderlijk informatiesysteem). Dit projectspecifieke bericht bevat de link naar het meest recente raamwerk (zoals ieder bericht naar een raamwerk verwijst) en bevat alle relevante projectinformatie waaronder de rollen, personen en organisaties die participeren (incl. URL adressen).
 
@@ -314,11 +315,11 @@ De volgorde van berichtuitwisseling:
 		</parseMessage>
 	</SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
-	</pre> 
+</pre> 
 
 <p class="note" title="ID van attachement">
 note: de id van elke attachment is gelijk aan de id die in het VISI bericht 
-	wordt gebruikt om de metadata van een attachment te beschrijven. (<code><Data id=”abc”></code>)
+	wordt gebruikt om de metadata van een attachment te beschrijven. (<pre><Data id=”abc”></pre>)
 	</p>
 
 6. De SOAP server van de versturende partij verstuurt dit bericht naar de SOAP Central Server of indien dit niet mogelijk is (bij dit scenario niet mogelijk) naar de SOAP server van de ontvangende partij.
@@ -451,15 +452,14 @@ In principe is de informatie van een projectspecifiek bericht vluchtig, het kan 
  
 ## Attachments, Ref’s en Id’s
 
-De attachments en elementen in de header file worden zoals in 3. beschreven verwerkt. Gebruik van het MTOM concept verzorgt de afhandeling van attachments en het VISI bericht zelf. Tevens zal bij encryptie van de body van een SOAP bericht automatisch deze encryptie op de attachments aanwezig zijn. Voor de laatste info over MTOM zie ook: http://www.w3.org/TR/soap12-mtom/ 
+De attachments en elementen in de header file worden zoals in 3. beschreven verwerkt. Gebruik van het MTOM concept verzorgt de afhandeling van attachments en het VISI bericht zelf. Tevens zal bij encryptie van de body van een SOAP bericht automatisch deze encryptie op de attachments aanwezig zijn. Voor de laatste info over MTOM [zie hier](http://www.w3.org/TR/soap12-mtom/)
  
 ## Encryptie
 
 Het gekozen protocol MTOM heeft in de Microsoft Web Services Enhancements (WSE) 3.0 een integratie van MTOM en security voor de implementeur. Mijn voorstel zou zijn deze door Microsoft gekozen bij MTOM passende security aan te houden en op basis van ervaringen van eerste implementaties uitspraken voor deze VISI notitie vast te stellen.
 
-<p class="note" title="Encryptie ondersteuning">
-Alleen geldig indien deze encryptie ondersteund wordt door alle systemen.
-</p>
+<p class="note" title="Geldigheid">
+Alleen geldig indien deze encryptie ondersteund wordt door alle systemen.</p>
 
 
 ## SOAP function calls
