@@ -6,7 +6,7 @@ Dit document bevat de richtlijn voor implementatie van VISI communicatie op basi
 Wijzigingen ten opzichte van eerdere versie
 De voorliggende richtlijn is een licht aangepaste versie (1.2) van de eerste versie (1.0). Wijzigingen ten opzichte van versie 1.1 zijn geel gemarkeerd.
 
-De maximale grootte van een VISI-bericht (inclusief attachments) is 120 MB. Deze oplossing is gebaseerd op de MTOM-SOAP   implementatie van XOP (XML-binary Optimized Packaging) [Zie ook hier](http://www.w3.org/TR/soap12-mtom/). Dit wordt voor verdere optimalisatie gecombineerd met ‘chunking’, een methode om bestanden in kleine stukken te versturen en vervolgens weer samen te voegen.
+De maximale grootte van een VISI-bericht (inclusief attachments) is 120 MB. Deze oplossing is gebaseerd op de MTOM-SOAP   implementatie van XOP (XML-binary Optimized Packaging) [Zie ook hier](http://www.w3.org/TR/soap12-mtom/). Dit wordt voor verdere optimalisatie gecombineerd met "chunking", een methode om bestanden in kleine stukken te versturen en vervolgens weer samen te voegen.
 
 De VISI Standaard dient af te dwingen dat de communicatie tussen SOAP Servers plaatsvindt via https en SSL, waardoor de inhoud van ontvangen berichten niet onderschept kan worden.
 
@@ -23,7 +23,7 @@ Verder kunnen SOAP Servers de techniek "whitelist" gebruiken, waardoor alleen ge
 Het doel van dit document is om een protocol vast te stellen waarmee we communicatie van VISI berichten tussen alle VISI ondersteunende software partijen kunnen beschrijven. Dit dient op een zodanige manier beschreven te zijn dat het protocol voor alle partijen implementeerbaar is, geen ongewone eisen aan implementatie en/of hardware worden vereist en het strikt genoeg is om communicatie mogelijk te maken.
 
 De onderliggende eisen van dit protocol:
-* strikt en eenduidig genoeg om communicatie tussen alle softwarepartijen, welke implemen¬taties van dit protocol uitvoeren, mogelijk te maken.
+* strikt en eenduidig genoeg om communicatie tussen alle softwarepartijen, welke implementaties van dit protocol uitvoeren, mogelijk te maken.
 * duidelijk en eenvoudig genoeg voor implementatie.
 * geen eisen aan VISI compatibiliteit voor de nieuwe/extra software/servers.
 * mogelijkheid een kopie van alle bilaterale communicatie op 1 of meerdere servers te plaatsen.
@@ -38,7 +38,7 @@ De volgende protocollen worden gebruikt:
 
 Voor implementatie wordt het MTOM (SOAP Message Transmission Optimization Mechanism) protocol vereist. De laatste versie van MTOM op het moment van uitbrengen van deze notitie is [deze](http://www.w3.org/TR/soap12-mtom/)
 
-Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit bericht bevat onder project¬informatie een simpel element ‘SOAPProtocol’. De huidige mogelijkheid is alleen ‘MTOM’, dit ziet er dus bijv. uit als onderdeel van het raamwerk:
+Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit bericht bevat onder project¬informatie een simpel element ‘SOAPProtocol’. De huidige mogelijkheid is alleen "MTOM", dit ziet er dus bijv. uit als onderdeel van het raamwerk:
 
 <pre>
 
@@ -213,7 +213,7 @@ Op berichtniveau: we gaan er vanuit dat er bij een project een projectspecifiek 
 <pre>	
 
 	<Organisatie id="Kraaijeveld">
-		<name>Kraaijeveld's Aannemingsbedrijf BV</name>
+		<name>Kraaijeveld"s Aannemingsbedrijf BV</name>
 		…
 		<willekeurigComplexElement>
 			…
