@@ -38,31 +38,31 @@ De volgende protocollen worden gebruikt:
 
 Voor implementatie wordt het MTOM (SOAP Message Transmission Optimization Mechanism) protocol vereist. De laatste versie van MTOM op het moment van uitbrengen van deze notitie is [deze](http://www.w3.org/TR/soap12-mtom/)
 
-Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit bericht bevat onder project¬informatie een simpel element ‘SOAPProtocol’. De huidige mogelijkheid is alleen "MTOM", dit ziet er dus bijv. uit als onderdeel van het raamwerk:
+Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit bericht bevat onder projectinformatie een simpel element "SOAPProtocol". De huidige mogelijkheid is alleen "MTOM", dit ziet er dus bijv. uit als onderdeel van het raamwerk:
 
 <pre>
 
 	<ProjectType id="Project_xyz">
-		…
+		
 		<description>Standaard project</description>
-		…
+		
 		<complexElements>
-			…
+		
 			<ComplexElementTypeRef idref="AnderWillekeurigComplexElement"/>
-			…
+			
 		</complexElements>
 	</ProjectType>
 	<ComplexElementType id="AnderWillekeurigComplexElement">
 		<description>Een ander willekeurig complex element</description>
-		…
+	
 		<simpleElements>
-			…
+			
 			<SimpleElementTypeRef idref="SOAPProtocol"/>
-			…
+			
 		</simpleElements>
 	</ComplexElementType>
 	<SimpleElementType id="SOAPProtocol">
-		…
+		
 	</SimpleElementType>
 </pre>	
 
@@ -71,17 +71,17 @@ En voor het projectspecifieke bericht:
 <pre>
 
 	<Project_xyz id="Project-000">
-		…
+		
 		<anderWillekeurigComplexElement>
-			…
+			
 			<AnderWillekeurigComplexElementRef idref="ProjectGegevens"/>
-			…
+			
 		</anderWillekeurigComplexElement>
 	</Project_xyz>
 	<AnderWillekeurigComplexElement id="ProjectGegevens">
-		…
+		
 		<SOAPProtocol>MTOM</SOAPProtocol>
-		…
+		
 	</AnderWillekeurigComplexElement>
 
 </pre>	
@@ -89,11 +89,11 @@ En voor het projectspecifieke bericht:
 
 ## Architectuur
 
-De architectuur is simpel gehouden door slechts één scenario te ondersteunen. Voorheen waren er meerdere architecturen waarbij de communicatie optioneel ook via een centrale server of gecombi¬neerde server liep. Het scenario bevat onderlinge communicatie tussen SOAP servers met een kopie van deze berichten naar één of meerdere centrale servers indien aanwezig.
+De architectuur is simpel gehouden door slechts een scenario te ondersteunen. Voorheen waren er meerdere architecturen waarbij de communicatie optioneel ook via een centrale server of gecombineerde server liep. Het scenario bevat onderlinge communicatie tussen SOAP servers met een kopie van deze berichten naar een of meerdere centrale servers indien aanwezig.
 
 Het doel en de achtergrond van deze architectuur:
-* de architectuur moet onderlinge communicatie tussen servers in een project kunnen onder¬steunen zonder tussenkomst van andere servers,
-* de architectuur moet opslag van alle berichten op één of meerdere servers binnen een VISI project kunnen ondersteunen,
+* de architectuur moet onderlinge communicatie tussen servers in een project kunnen ondersteunen zonder tussenkomst van andere servers,
+* de architectuur moet opslag van alle berichten op een of meerdere servers binnen een VISI project kunnen ondersteunen,
 * de gebruikte SOAP servers hoeven geen kennis van VISI te hebben,
 * communicatie moet beveiligd uitgevoerd kunnen worden,
 * berichten moeten eenduidig gecommuniceerd en opgeslagen kunnen worden,
@@ -120,14 +120,14 @@ In dit geschetste scenario zijn de volgende objecten te vinden:
 
 De berichtuitwisseling (header etc., server address)  is opgezet op basis van drie randvoorwaarden:
 * De SOAP Servers en de SOAP Central Server(s) zijn niet in staat VISI berichten te parsen (inhoudelijk te begrijpen).
-* Het informatie systeem (IS) en de SOAP Server hebben geen (statische) kennis van het wel of niet aanwezig zijn van SOAP Central Servers, aanwezigheid van één of meerdere SOAP Central Servers moet dus ondersteund kunnen worden zonder iets aan het informatiesysteem of de SOAP server te wijzigen.
+* Het informatie systeem (IS) en de SOAP Server hebben geen (statische) kennis van het wel of niet aanwezig zijn van SOAP Central Servers, aanwezigheid van een of meerdere SOAP Central Servers moet dus ondersteund kunnen worden zonder iets aan het informatiesysteem of de SOAP server te wijzigen.
 * Alle informatie over de aanwezige configuratie, URL adressen van personen in een bepaalde rol e.d. zijn gevat in VISI berichten volgens het raamwerk voor het uit te voeren project (natuurlijk mag deze randvoorwaarde de software niet van een specifiek VISI raamwerk afhankelijk maken).
 
 Om aan bovenstaande randvoorwaarden te kunnen voldoen zullen we een nieuw concept binnen VISI lanceren.
 
 
 Ter info gebruikt nieuw VISI concept:
-* Enkele SimpleElementType objecten welk gedefinieerd kunnen worden in het raamwerk zul¬len op basis van hun naamgeving (attribuut: id) over alle raamwerken heen een specifiek gedrag/invulling toegekend krijgen.
+* Enkele SimpleElementType objecten welk gedefinieerd kunnen worden in het raamwerk zullen op basis van hun naamgeving (attribuut: id) over alle raamwerken heen een specifiek gedrag/invulling toegekend krijgen.
 
 
 We zullen aan de volgende SimpleElementTypes raamwerk-overschrijdend gedrag/invulling toekennen:
@@ -148,26 +148,26 @@ Op raamwerkniveau:
 
 <pre>
 	<OrganisationType id="Organisatie">
-		…
+	
 		<description>Standaard organisatie</description>
-		…
+		
 		<complexElements>
-			…
+			
 			<ComplexElementTypeRef idref="WillekeurigComplexElement"/>
-			…
+			
 		</complexElements>
 	</OrganisationType>
 	<ComplexElementType id="WillekeurigComplexElement">
 		<description>Een willekeurig complex element</description>
-		…
+		
 		<simpleElements>
-			…
+			
 			<SimpleElementTypeRef idref="SOAPServerURL"/>
-					…
+					
 		</simpleElements>
 	</ComplexElementType>
 	<SimpleElementType id="SOAPServerURL">
-		…
+		
 	</SimpleElementType>
 	
 </pre>
@@ -178,24 +178,24 @@ Op raamwerkniveau:
 
 	<ProjectType id="Project_xyz">
 		<description>Standaard project</description>
-		…
+		
 		<complexElements>
-			…
+			
 			<ComplexElementTypeRef idref="AnderWillekeurigComplexElement"/>
-			…
+			
 		</complexElements>
 	</ProjectType>
 	<ComplexElementType id="AnderWillekeurigComplexElement">
 		<description>Een ander willekeurig complex element</description>
-		…
+		
 		<simpleElements>
-			…
+			
 			<SimpleElementTypeRef idref="SOAPCentralServerURL"/>
-			…
+			
 		</simpleElements>
 	</ComplexElementType>
 	<SimpleElementType id="SOAPCentralServerURL">
-		…
+		
 	</SimpleElementType>
 </pre>		
 
@@ -214,17 +214,17 @@ Op berichtniveau: we gaan er vanuit dat er bij een project een projectspecifiek 
 
 	<Organisatie id="Kraaijeveld">
 		<name>Kraaijeveld"s Aannemingsbedrijf BV</name>
-		…
+		
 		<willekeurigComplexElement>
-			…
+			
 			<WillekeurigComplexElementRef idref="KraaijeveldGegevens"/>
-			…
+			
 		</willekeurigComplexElement>
 	</Organisatie>
 	<WillekeurigComplexElement id="KraaijeveldGegevens">
-		…
+		
 		<SOAPServerURL>http://192.168.0.102/visi.wsdl-</SOAPServerURL>
-		…
+		
 	</WillekeurigComplexElement>
 	
 </pre>	
@@ -235,17 +235,17 @@ Op berichtniveau: we gaan er vanuit dat er bij een project een projectspecifiek 
 
 	<Project_xyz id="Project-000">
 		<name>VISI-Showcase</name>
-		…
+		
 		<anderWillekeurigComplexElement>
-			…
+			
 			<AnderWillekeurigComplexElementRef idref="ProjectGegevens"/>
-			…
+			
 		</anderWillekeurigComplexElement>
 	</Project_xyz>
 	<AnderWillekeurigComplexElement id="ProjectGegevens">
-		…
+		
 		<SOAPCentralServerURL>http://192.168.0.1/visi.wsdl</SOAPCentralServerURL>
-		…
+		
 	</AnderWillekeurigComplexElement>
 </pre>	
 
@@ -257,7 +257,7 @@ De gevolgen van deze aanpak is dat het informatie systeem (IS) in staat is bij e
  
 ### Berichtuitwisseling initialisatie
 
-Om een project te beginnen zullen alle partijen moeten weten met wie ze communiceren, welk raam¬werk gebruikt wordt en alle andere projectspecifieke informatie beschikbaar moeten hebben. Om deze informatie altijd up-to-date te houden en te voorkomen dat ongeautoriseerde partijen deze informatie kunnen aanpassen is een projectspecifiek bericht gedefinieerd. Dit projectspecifieke bericht bevindt zich op een door de projectleider aangegeven locatie (bestaande infrastructuren verzorgen vervolgens beveiliging en beschikbaarheid). Meer informatie over het projectspecifieke bericht is te vinden in hoofdstuk 5 en 9.
+Om een project te beginnen zullen alle partijen moeten weten met wie ze communiceren, welk raamwerk gebruikt wordt en alle andere projectspecifieke informatie beschikbaar moeten hebben. Om deze informatie altijd up-to-date te houden en te voorkomen dat ongeautoriseerde partijen deze informatie kunnen aanpassen is een projectspecifiek bericht gedefinieerd. Dit projectspecifieke bericht bevindt zich op een door de projectleider aangegeven locatie (bestaande infrastructuren verzorgen vervolgens beveiliging en beschikbaarheid). Meer informatie over het projectspecifieke bericht is te vinden in hoofdstuk 5 en 9.
 
 De initialisatie van elk informatiesysteem begint met het invoeren van het adres van het projectspecifieke bericht (dus bij ieder afzonderlijk informatiesysteem). Dit projectspecifieke bericht bevat de link naar het meest recente raamwerk (zoals ieder bericht naar een raamwerk verwijst) en bevat alle relevante projectinformatie waaronder de rollen, personen en organisaties die participeren (incl. URL adressen).
 
