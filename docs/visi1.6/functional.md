@@ -13,9 +13,11 @@ De hoofdstukopbouw is afgestemd om het kennisniveau van de lezer, en verloopt va
 
 
 ## Projectinrichting
+
 Voorbereiding van het project met een PSB en een raamwerk.
 
 ### PSB
+
 Persoonsgebonden bericht
 
 #### Project
@@ -174,6 +176,7 @@ Als een gemachtigde iets verstuurt moet in VISI software zichtbaar zijn wie iets
 Een persoon kan gemachtigd zijn om namens meerdere geautoriseerde personen (in rol van organisatie) te handelen. Meerdere personen kunnen gemachtigd zijn om namens één geautoriseerde persoon (in rol van organisatie) te handelen.
 
 #### Project Setup
+
 Project, personen, organisaties rollen en vervangingen dienen bij alle projectdeelnemers bekend en gelijk te zijn. Daarom wordt deze setup van een project vastgelegd in een uitwisselbaarformaat: project specifiek bestand. Dit bestand wordt verspreid onder de deelnemende organisaties. Dit is meestal per organisatie vanwege het eerdergenoemde digitale adres van een organisatie. Dit digitale adres weet hierdoor van het bestaan van een project. In het gebruikte voorbeeld "Realisatie West- / Oostlijn" met unieke identificatie _badc9dab-807e-4319-bd56-60c57605e109 is bekend bij alle organisaties van het project.
 De projectcommunicatie via het versturen en beantwoorden van berichten kan starten, zie <div class="issue" data-number="138"></div> 
 
@@ -294,52 +297,64 @@ Voor groep types is nog geen toepassing bekend voor de helpinfo.
 Bericht in transactie
 </p></aside>
   
+
 ### Globale eigenschappen
 
 Alle elementen…..
+
 
 #### <dfn>`Id`
   
 Ieder element in een raamwerk heeft een Id. Hiermee worden de relaties technisch binnen en buiten het raamwerk gelegd. Een hoofdvereiste is dat een Id uniek is binnen het raamwerk. Een voorbeeld van relaties binnen het raamwerk is bijvoorbeeld het koppelen van een veld (SimpleElement) aan een berichthoofdstuk (ComplexElement). Een voorbeeld van een koppeling buiten een raamwerk is de Rol die aangemaakt wordt in een Projectspcifiek bericht obv de rol in het raamwerk of een veldnaam in een VISI bericht enz.
 Een id kan een niet leesbare waarde zijn zoals TR_532856857120. Op dit moment maken bijna alle raamwerkschrijvers daar iets begrijpbaars van, zoals TR_Acceptatiedocument, zodat bijvoorbeeld de originele XML VISI berichten ook zonder visi software te lezen en begrijpen zijn.
 
+
 #### <dfn>`Description`1
   
 Dit is de leesbare naam van een element. Deze waarde wordt meestal getoond aan de gebruikers. 
   
+
 #### <dfn>`startDate`
   
 Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. De verschillende VISI software pakketten hebben tot op heden nooit iets met deze “startDate” gedaan. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker. 
 Bij het opstellen van de standaard was dit de verder nog onuitgewerkte gedachte: “Startdatum en tijd van geldigheid van deze objectinstantie.” 
  
+
 #### <dfn>`endDate`
   
 Zie startDate
+
 
 #### <dfn>`state`
   
 Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Mogelijke waarden voor dit veld zijn: “passive” en “active”. Op dit moment zijn er toepassingen van software leveranciers die de implementatie in de documentatie (nog) niet gehaald hebben. Voorbeelden zijn het wel of niet tonen/aanbieden van elementen of transacties en in het project specifiek bericht een rol van een persoon (gedeeltelijk)uitschakelen als er geen opvolger is.
 
+
 #### <dfn>`dateLaMu`
   
 Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Raamwerkschrijvers gebruiken dit om in de XML file aan te geven wanneer er als laatste een wijziging aan een element is gemaakt.(date Last Mutation) Tot nu toe zijn er geen verwachtingen of bekende toepassingen in VISI software. Wel in raamwerk opstel software om dit veld  automatisch bij te werken. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
+
 
 #### <dfn>`userLaMu`
   
 Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Raamwerkschrijvers gebruiken dit om in de XML file aan te geven wie er als laatste een wijziging aan een element heeft uitgevoerd.(user Last Mutation) Tot nu toe zijn er geen verwachtingen of bekende toepassingen in VISI software. Wel in raamwerk opstel software om dit veld  automatisch bij te werken. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
 
+
 #### <dfn>`language`
   
 Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Het idee was om hier de taal van het element mee vast te leggen, maar tot op heden hebben software leveranciers hier niets mee gedaan en is er geen beschrijving wat voor soort functionaliteit van software verwacht zou worden. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
+
 
 #### <dfn>`category`
   
 Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Het idee was om hier bepaalde onderdelen mee te kunnen categoriseren, maar tot op heden hebben software leveranciers hier niets mee gedaan en is er geen beschrijving wat voor soort functionaliteit van software verwacht zou worden. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
   
+
 #### <dfn>`helpInfo`
   
 Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Dit wordt veelvuldig gebruikt om gebruikers aanvullende uitleg te geven over raamwerk elementen. Bij bepaalde elementen is functionaliteit in VISI software verplicht gesteld. Zie de verschillende elementen voor voorbeelden.
   
+
 #### <dfn>`code`
   
 Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Voorbeelden in oude documentatie geven bijvoorbeeld aan dat een raamwerk element de code “EAN 33156” kan krijgen, maar er wordt ook gesproken over transactie coderingen zoals T1.1 / T2 enz. 
@@ -357,9 +372,11 @@ Gebruik Raamwerk en PSB in project
 
 
 ### Berichtencommunicatie
+
 De projectcommunicatie via het versturen en beantwoorden van berichten kan starten. Alle deelnemende organisaties weten van het project. Wordt een bericht verstuurd door persoon Urbain Servranckx (in Beoordelende rol van organisatie Gemeente Rommelgem) naar Georges Remi (in Adviserende rol van organisatie De Blauwe Lotus), dan zorgt de digitale adressering en verspreide project specifieke bestand dat het bericht ook bezorgd wordt bij Georges Remi.
 
 #### Volgorde
+
 Berichten zijn niet onafhankelijk van elkaar, maar hebben een samenhang. Berichten hebben een volgorde die gezien kan worden als een ketting van berichten. De ketting heeft een begin en een eind. Er is een startbericht en een eindbericht. De volgorde is bijvoorbeeld:
 
 
@@ -434,9 +451,11 @@ Project:		_badc9dab-807e-4319-bd56-60c57605e109;<br>
 
 De voorschriften en regels, waaraan aan de berichtencommunicatie moet voldoen, is vastgelegd in een projectcommunicatiesjabloon. Dit sjabloon bevat de definitie van type rollen, type berichten en type transacties. Ook de inhoud van een type bericht is in dit sjabloon gedefinieerd. Dit sjabloon heet een raamwerk. De term sjabloon geeft al aan dat het een blauwdruk is waaraan de transacties en berichten moeten voldoen.
 
+
 ## Bijlagen
 
 Ieder bericht kan 0, 1 of meerdere bijlagen bevatten. Bijlage betekent hier een binair bestand, zoals een foto of document. De verschijningsvorm is bijvoorbeeld een jpg-, pdf of zip-bestand. Doel van een bijlage is de informatie in het bericht te onderbouwen en / of verduidelijken.
+
 
 ### Verplichte Eigenschappen
 
@@ -458,10 +477,14 @@ Inhoud:	_04cdb00c-fd4d-4e58-b0ad-0cc19a3b07c9, _a1cd32d-ae5ed41-e0bc-1ee28b1c08d
 
 Een bijlage heeft een verwijzing naar het bericht waarvan het een onderbouwing en / of verduidelijking is.
 
+
 ### Optionele eigenschappen
+
 Naast de verplichte eigenschappen heeft een bijlage vele optionele standaard eigenschappen, die duiden op een document als bijlage, zoals: documentidentificatie, documentversie, documentreferentie.
 
+
 ### Aanvullende eigenschappen
+
 Uit de typering in het projectcommunicatiesjabloon (c.q. raamwerk) volgt of de bijlage aanvullende eigenschappen heeft. Deze aanvullende eigenschappen zijn niet verplicht. De structuur van de aanvullende eigenschappen is gelijk aan de structuur van een bericht. Waar een bericht verwijst naar 1 of meerdere complexe elementen, zo verwijst een bijlage naar 0 of meerdere complex elementen. Een complex element bestaat uit simpele elementen. En een simpel element heeft een waarde.
 
 <aside class="example" title="Voorbeeld bijlage met optionele eigenschappen">
@@ -596,6 +619,7 @@ Het validatieproces is asynchroon. Dit betekent dat na ontvangst van bijlagen en
 
 ### Berichtvelden gedrag
 
+tekst
 
 ### Wijzigingen in een raamwerk
 
@@ -607,15 +631,18 @@ Iedere wijziging moet bij alle betrokken organisaties doorgevoerd worden. Dit be
 <p>Bijvoorbeeld: Vergelijk de eerste wijziging met een personeelswisseling in een project. Deze wijziging wordt vooraf tussen projectleiders afgestemd. En vergelijk de tweede wijziging met een procesmatige wijziging van bijvoorbeeld het goedkeuringsproces van documenten.  Een dergelijke wijziging wordt vooraf tussen contractmanagers afgestemd met misschien ondersteuning van de juridische afdeling.<p>
 </aside>
 
+
 #### Machtiging / tijdelijke vervanging
 
 *Substituting*
 De wijziging met de kleinste impact is het wijzigen van de machtigingen. Zoals in paragraaf 1.6.2 beschreven is erin voorzien om één of meerdere gemachtigden aan te wijzen voor een persoon in rol (van organisatie). Voert een gemachtigde een handeling uit, dan is dit altijd uit naam van de geautoriseerde persoon. Een machtiging kan verwijderd worden, want de geautoriseerde persoon kan de handeling altijd afmaken. Wordt een machtiging toegevoegd, dan kan de gemachtigde direct handelen op bestaande transacties van de geautoriseerde persoon, en nieuwe transacties starten (namens de geautoriseerde persoon). Een geautoriseerd persoon mag nooit verwijderd worden (zie paragraaf ....).
 
+
 #### Nieuwe personen
 
 Nieuwe personen kunnen aan een project toegevoegd worden. Tevens kunnen deze personen een rol toegewezen krijgen. Dit kan een rol zijn die al vervuld wordt. Bijvoorbeeld de adviserende rol wordt door meerdere personen in een project ingevuld.
 Houd er rekening mee dat nieuwe personen niet a) aan bestaande transactie en berichten kunnen deelnemen, of b) bestaande communicatie kunnen overnemen. Indien dit gewenst is, gebruik dan de opties voor machtiging / tijdelijke of permanente vervanging.
+
 
 #### Permanente vervanging
 
@@ -628,6 +655,7 @@ Voor de traceerbaarheid en transparantie kunnen a) er nooit geautoriseerde perso
 Als je nu kijkt naar rol A, dan is er een onafgebroken keten vanaf de eerste verantwoordelijke tot de huidige verantwoordelijke. Piet behandelt vanaf dat moment dus de transacties van Pir 1(zichzelf), Pir3 (Truus), Pir5(Hans) en Pir 6, (de actuele Pir van zichzelf)<br>
 PLAATJE???</p>
 </aside>
+
 
 #### Personen verwijderen
 
@@ -675,19 +703,14 @@ De verwijzing naar het bijbehorende raamwerk is eveneens aanwezig in ieder beric
 
 #### Gedrag software rondom gekoppelkde berichtenflow
 
+tekst
+
 
 #### Gedrag rondom wel en niet aanbieden berichten obv raamwerk/rol
 
+tekst
 
 
-
-
-
-
-  
-
-
-  
 
 
 
