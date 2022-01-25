@@ -143,13 +143,13 @@ Unieke identificatie: <font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6e
 Contactpersoon: 	_974e4822-4944-45ad-ab2f-161370662e30<br>
 Rol:			<font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
 Organisatie:		_2ba76318-83ab-4a6e-9257-ea91045717d2
-  </p></aside>
+</p></aside>
   
 Heeft een persoon (in een rol van een organisatie) een opvolger, dan betekent dit dat de persoon niet langer geautoriseerd is om te handelen vanuit deze rol. Alleen de opvolger is geautoriseerd.
 Een persoon (in een rol van een organisatie)  kan maar één opvolger hebben.
 
 
- #### Tijdelijke vervanging 
+#### Tijdelijke vervanging 
  
 Een tijdelijke vervanging kan ook gelezen worden als een (tijdelijke) machtiging. De tijdelijke vervanging is een autorisatie voor een derde persoon, zodat deze persoon mag handelen uit naam van de geautoriseerde persoon. Dit kan een tijdelijk karakter hebben, of een machtiging zijn gedurende de looptijd van het project.
 
@@ -163,7 +163,7 @@ Contactpersoon: 	_d4e02752-2ac6-4700-ae67-d33f428f78fb<br>
 Rol:			<font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
 Organisatie:		_87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
 Vervangt:	<font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font><br>
-  </p></aside>
+</p></aside>
 
 Voert een gemachtigd persoon (in een rol van een organisatie) een handeling uit, dan is dit altijd uit naam van de geautoriseerde persoon. Bij de handeling wordt geautoriseerde vastgelegd en gemachtigde. De geautoriseerde of gemachtigde kan antwoorden op transacties van de rol van de geautoriseerde, ongeacht wie de transactie gestart heeft. Indien een machtiging ongedaan gemaakt wordt, kan alleen de geautoriseerde de handeling afmaken. Een machtiging mag namelijk wel ongedaan gemaakt worden, omdat machtigingen een tijdelijk karakter kunnen hebben.
 
@@ -204,7 +204,7 @@ category<br>
 helpinfo<br>
 Specifiek voor transactie types is er hier de optie om de gebruikers uitleg te geven over het transactie type. Hier kan bijvoorbeeld vermeld worden welke rollen waarom hier met elkaar communiceren en wat het doel van de totale transactie is.<br>
 code
- </p>
+</p>
 </aside>
 
 <aside class='def'>
@@ -248,17 +248,17 @@ category<br>
 helpinfo<br>
 Voor transactie fases is nog geen toepassing bekend voor de helpinfo. 
 code
-  </p></aside>
+</p></aside>
 
-  <aside class='def'>
+<aside class='def'>
 <p>In te stellen specifieke eigenschappen:<br>
 Verwijzingen vanuit transactie fases:<br>
 Geen<br>
-  <br>
+<br>
 Verwijzingen naar transactie fases:<br>
 Bericht in transactie<br>
 Op deze manier kan een bericht in transactie aan een bepaalde transactiefase gekoppeld worden.
-  </p></aside>
+</p></aside>
   
   
 #### GroepTypes
@@ -279,20 +279,20 @@ language<br>
 category<br>
 helpinfo<br>
 Voor groep types is nog geen toepassing bekend voor de helpinfo.
-  </p></aside>
+</p></aside>
 
- <aside class='def'>
+<aside class='def'>
 <p>In te stellen specifieke eigenschappen:
- </p> </aside>
+</p> </aside>
 
-  <aside class='def'> 
+<aside class='def'> 
 <p>Verwijzingen vanuit GroepTypes:
-    </p></aside>
+</p></aside>
 
-   <aside class='def'> 
+<aside class='def'> 
 <p>Verwijzingen naar GroepTypes:<br>
-  Bericht in transactie
-    </p></aside>
+Bericht in transactie
+</p></aside>
   
 #### Globale eigenschappen
 
