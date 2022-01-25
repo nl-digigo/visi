@@ -434,6 +434,210 @@ Project:		_badc9dab-807e-4319-bd56-60c57605e109;<br>
 
 De voorschriften en regels, waaraan aan de berichtencommunicatie moet voldoen, is vastgelegd in een projectcommunicatiesjabloon. Dit sjabloon bevat de definitie van type rollen, type berichten en type transacties. Ook de inhoud van een type bericht is in dit sjabloon gedefinieerd. Dit sjabloon heet een raamwerk. De term sjabloon geeft al aan dat het een blauwdruk is waaraan de transacties en berichten moeten voldoen.
 
+## Bijlagen
+
+Ieder bericht kan 0, 1 of meerdere bijlagen bevatten. Bijlage betekent hier een binair bestand, zoals een foto of document. De verschijningsvorm is bijvoorbeeld een jpg-, pdf of zip-bestand. Doel van een bijlage is de informatie in het bericht te onderbouwen en / of verduidelijken.
+
+### Verplichte Eigenschappen
+
+Ieder binair bestand mits kleiner dan 10GB kan meegestuurd worden met een bericht. Voor de som van alle bijlagen van één bericht geldt een aanvullende eis, namelijk dat de gezamenlijke grootte van de bijlagen kleiner is dan 10GB. Aan het fysieke bestand worden geen nadere eisen gesteld. Wel worden eisen gesteld aan de eigenschappen / metadata van de bijlage conform het raamwerk (zie paragraaf 2.10 over AppendixType).
+Naast de typering heeft een bijlage een vaste set verplichte standaard eigenschappen van het bestand, zoals naam, locatie, type, versie en datum. De naam van de eigenschap geeft aan welke informatie van het bestand vastgelegd dient te worden.
+
+<aside class="example" title="Voorbeeld bericht">
+<p><b>Bijlage</b><br>
+Type: 			Opdrachtbon<br>
+Unieke identificatie: _a0186218-82d9-4b0f-a616-8aa1f162128a<br>
+Naam:			Bon_9601.pdf<br>
+Bestandslocatie:	???<br>
+Bestandstype:		application/pdf<br>
+Bestandsversie:	DF43111<br>
+Datum:			2021-10-23T08:31:58<br>
+Bericht:		_9a163e84-a83e-47ea-b5f3-220c403da98b<br>
+Inhoud:	_04cdb00c-fd4d-4e58-b0ad-0cc19a3b07c9, _a1cd32d-ae5ed41-e0bc-1ee28b1c08d1<br>
+</p></aside>
+
+Een bijlage heeft een verwijzing naar het bericht waarvan het een onderbouwing en / of verduidelijking is.
+
+### Optionele eigenschappen
+Naast de verplichte eigenschappen heeft een bijlage vele optionele standaard eigenschappen, die duiden op een document als bijlage, zoals: documentidentificatie, documentversie, documentreferentie.
+
+### Aanvullende eigenschappen
+Uit de typering in het projectcommunicatiesjabloon (c.q. raamwerk) volgt of de bijlage aanvullende eigenschappen heeft. Deze aanvullende eigenschappen zijn niet verplicht. De structuur van de aanvullende eigenschappen is gelijk aan de structuur van een bericht. Waar een bericht verwijst naar 1 of meerdere complexe elementen, zo verwijst een bijlage naar 0 of meerdere complex elementen. Een complex element bestaat uit simpele elementen. En een simpel element heeft een waarde.
+
+<aside class="example" title="Voorbeeld bijlage met optionele eigenschappen">
+<p><b>Bijlage</b><br>
+Type: 			Bon_van_de_opdracht<br>
+Unieke identificatie: _a0186218-82d9-4b0f-a616-8aa1f162128a<br>
+Naam:			purchase-order-9601.pdf <br>
+<br>
+Inhoud:	_04cdb00c-fd4d-4e58-b0ad-0cc19a3b07c9, _a1cd32d-ae5ed41-e0bc-1ee28b1c08d1<br>
+Complex Element<br>
+Type: 			Gegevens_van_de_opdracht<br>
+Unieke identificatie: _04cdb00c-fd4d-4e58-b0ad-0cc19a3b07c9<br>
+<br>
+Elementen:		<br>
+<br>
+Simpel Element<br>
+Type: 			nummer_van_de_opdracht<br>
+Waarde: 		ROM / 2022-666<br>
+<br>
+Simpel Element<br>
+Type: 			naam_opdrachtgever<br>
+Waarde: 		Gemeente Rommelgem<br>
+<br>
+Complex Element<br>
+Type: 			Betalingsgegevens<br>
+Unieke identificatie: _a1cd32d-ae5ed41-e0bc-1ee28b1c08d1<br>
+Elementen:		<br>
+<br>
+Simpel Element<br>
+Type: 			iBAN<br>
+Waarde: 		RABO28932392<br>
+<br>
+Simpel Element<br>
+Type: 			naam_van_de_rekeninghouder<br>
+Waarde: 		Afdeling Inkoop, Gemeente Rommelgem<br>
+<br>
+Simpel Element<br>
+Type: 			bTW_Nummer<br>
+Waarde: 		2933092392809B01<br>
+</p></aside>
+
+In het projectcommunicatiesjabloon (c.q. raamwerk) staan de beschikbare typen bijlagen gedefinieerd, en welke aanvullende eigenschappen een bepaald type kan hebben. De structuur is gelijk aan de structuur van type bericht. Een type bijlage heeft verwijzingen naar 0 of meerdere type complexe elementen. Een type complex element bestaat uit naar 1 of meerdere type simpele elementen. En een type simpel element heeft één verwijzing naar een waarde. N.B. Er is geen tabeldefinitie (dus geen complex in complex element, zie paragraaf ???) per bijlage mogelijk.
+
+<aside class="example" title="Voorbeeld bijlage met optionele eigenschappen">
+<p><b>Bijlage</b><br>
+Unieke identificatie: Bon_van_de_opdracht<br>
+Omschrijving:		Opdrachtbon ten behoeve van opdrachtverstrekking<br>
+Complex Elementen:	Opdrachtgegevens, Betalingsgegevens<br>
+<br>
+Complex Element
+Unieke identificatie: Gegevens_van_de_opdracht
+Omschrijving:		Gegevens van de opdracht
+Simpel Elementen:	Opdrachtnummer, Naam_opdrachtgever
+<br>
+Complex Element
+Unieke identificatie: Betalingsgegevens
+Omschrijving:		Gegevens voor betaling
+Simpel Elementen:	Naam_van_de_rekeninghouder, BTW_Nummer
+<br>
+Simpel Element<br>
+Unieke identificatie: opdrachtnummer<br>
+Omschrijving:		Het unieke identificatie van de opdracht<br>
+Type:			Tekst<br>
+<br>
+Simpel Element<br>
+Unieke identificatie: naam_opdrachtgever<br>
+Omschrijving:		Naam van de organisatie, die opdracht verstrekt<br>
+Type:			Tekst<br>
+<br>
+Simpel Element<br>
+Unieke identificatie: iBAN<br>
+Omschrijving:		IBAN nummer<br>
+Type:			Tekst_verplicht<br>
+<br>
+Simpel Element<br>
+Unieke identificatie: naam_van_de_rekeninghouder<br>
+Omschrijving:		Naam van de rekeninghouder<br>
+Type:			Tekst_verplicht<br>
+<br>
+Simpel Element<br>
+Unieke identificatie: bTW_Nummer<br>
+Omschrijving:		BTW Nummer van de organisatie, die opdracht verstrekt<br>
+Type:			Nummer<br>
+<br>
+Waarde<br>
+Unieke identificatie: Tekst<br>
+Basis XML Type:	STRING<br>
+Waarde<br>
+Unieke identificatie: Tekst_verplicht<br>
+Basis XML Type:	STRING<br>
+XSD Restrictie:	minlength=1<br>
+Waarde<br>
+Unieke identificatie: Nummer<br>
+Basis XML Type:	INTEGER<br>
+</p></aside>
+
+
+### Is een bijlage verplicht?
+
+Voor een bepaald type bericht kan afgedwongen worden dat minimaal 1 bijlage bijgevoegd dient te worden. Ook welk type bijlage dit dient te zijn, kan afgedwongen worden. Deze voorwaarden zijn opgenomen in het projectcommunicatiesjabloon (c.q. raamwerk) (zie paragraaf 2.1, 2.2, 2.7). Op een type bericht staat een vlaggetje (Ja / Nee) of een bijlage verplicht is (zie paragraaf 2.2).
+
+<aside class="example" title="Voorbeeld bericht met verplichte bijlage">
+<p><b>Bericht</b><br>
+Unieke identificatie: Voorstel_tot_Wijziging<br>
+Omschrijving:		Voorstel tot een wijziging<br>
+Bijlage verplicht:	Ja<br>
+Bijlage typen:		Foto, Offerte, Berekening<br>
+Complex Elementen:	Voorstel, Wijziging, Planning, Opmerkingen<br>
+</p></aside>
+
+Het maximumaantal bijlagen is niet voor te schrijven. Het minimumaantal is 0 of 1 (Bijlage verplicht: Ja / Nee).
+
+
+### Transport van een bijlage
+
+Het transportprotocol voor berichten en bijlagen is SOAP. De bijlagen (binaire bestanden) worden eerst getransporteerd van verzendende naar ontvangende software. Vanwege de potentiële omvang van een bijlage (maximaal 10GB) wordt iedere bijlagen in blokjes (chunks) verstuurd. De ontvangende software bouwt met de ontvangen blokjes de originele bijlage op. Er is een controlemechanisme (checksum) om te controleren of alle blokjes ontvangen zijn en of alle blokjes correct zijn.
+
+
+Na verzending van alle bijlagen verstuurt de verzendende software het bericht (de metadata). De ontvangende software relateert metadata aan eerder ontvangen binaire bestanden, zodat exact dezelfde informatie beschikbaar is aan verzendende en ontvangende kant. Het transport is succesvol.
+
+
+### Validatie
+
+De software dient bijlagen en bericht te valideren voor verzending.
+
+De software dient ontvangen bijlagen en bericht te valideren. Het resultaat van de validatie wordt teruggestuurd naar de verzendende software. Validatie vindt plaats tegen 1) W3C Standaarden waarop VISI gebaseerd is (XML, XSD, SOAP), 2) VISI Standaard, 3) VISI Raamwerk (cq. Projectsjabloon) en 4) VISI Project Specifiek Bestand.
+
+Het ontvangen bericht bevat de identificatie van het project en van de geadresseerde persoon in rol (van organisatie). Met deze gegevens kan het project en project specifieke bestand getraceerd worden, en de inhoud van het bericht gevalideerd worden tegen de inhoud van het project specifieke bestand. Het ontvangen bericht heeft een verwijzing naar het raamwerk (c.q. projectsjabloon). Voor de verwijzing wordt de gangbare functionaliteit van xml gebruikt: namespace. Met deze verwijzing kan het raamwerk getraceerd worden, en de inhoud van het bericht gevalideerd worden tegen de definities in het raamwerk. Voor validatie tegen het raamwerk kan de xsd-versie van het raamwerk gebruikt worden.
+
+Het validatieproces is asynchroon. Dit betekent dat na ontvangst van bijlagen en bericht in de ontvangende software niet direct de validatie hoeft plaats te vinden. Het resultaat van de validatie wordt teruggestuurd naar de verzendende software met een verwijzing waarbij het validatieresultaat behoort. Het validatieresultaat heeft twee opties: geen error (0), wel error (1). Optioneel kan bij de errorcode van de validatie (0 of 1) aanvullende tekst meegestuurd worden ter verduidelijking van de error. Bijvoorbeeld: dat een bijlage ontbreekt, of het bericht niet conform het projectsjabloon (c.q. raamwerk) is, of het project onbekend is.
+
+
+### Berichtvelden gedrag
+
+
+### Wijzigingen in een raamwerk
+
+Gedurende de looptijd van een project kunnen twee soorten wijzigen doorgevoerd worden. De eerste wijziging betreft wijzigingen aan het project, zoals gewijzigde projectnaam, gewijzigde rolverdeling. Bijvoorbeeld een extra projectmedewerker of een nieuwe projectmedewerker als permanente vervanger van een huidige medewerker. De tweede wijzing betreft wijzigingen aan het projectcommunicatiesjabloon, zoals een gewijzigd transactietype, gewijzigd berichttype.
+
+Iedere wijziging moet bij alle betrokken organisaties doorgevoerd worden. Dit betekent dat de gewijzigde bestanden (project specifiek bestand en / of raamwerk) verstrekt moeten worden aan alle - bij het project betrokken - organisaties. Omdat wijzigingen van invloed kunnen zijn op de inhoud van een project, dient de wijziging vooraf inhoudelijk afgestemd te worden tussen projectmedewerkers. 
+
+<aside class="example" title="Voorbeeld wijzigig in het raamwerk">
+<p>Bijvoorbeeld: Vergelijk de eerste wijziging met een personeelswisseling in een project. Deze wijziging wordt vooraf tussen projectleiders afgestemd. En vergelijk de tweede wijziging met een procesmatige wijziging van bijvoorbeeld het goedkeuringsproces van documenten.  Een dergelijke wijziging wordt vooraf tussen contractmanagers afgestemd met misschien ondersteuning van de juridische afdeling.<p>
+</aside>
+
+#### Machtiging / tijdelijke vervanging
+
+*Substituting*
+De wijziging met de kleinste impact is het wijzigen van de machtigingen. Zoals in paragraaf 1.6.2 beschreven is erin voorzien om één of meerdere gemachtigden aan te wijzen voor een persoon in rol (van organisatie). Voert een gemachtigde een handeling uit, dan is dit altijd uit naam van de geautoriseerde persoon. Een machtiging kan verwijderd worden, want de geautoriseerde persoon kan de handeling altijd afmaken. Wordt een machtiging toegevoegd, dan kan de gemachtigde direct handelen op bestaande transacties van de geautoriseerde persoon, en nieuwe transacties starten (namens de geautoriseerde persoon). Een geautoriseerd persoon mag nooit verwijderd worden (zie paragraaf ....).
+
+#### Nieuwe personen
+
+Nieuwe personen kunnen aan een project toegevoegd worden. Tevens kunnen deze personen een rol toegewezen krijgen. Dit kan een rol zijn die al vervuld wordt. Bijvoorbeeld de adviserende rol wordt door meerdere personen in een project ingevuld.
+Houd er rekening mee dat nieuwe personen niet a) aan bestaande transactie en berichten kunnen deelnemen, of b) bestaande communicatie kunnen overnemen. Indien dit gewenst is, gebruik dan de opties voor machtiging / tijdelijke of permanente vervanging.
+
+#### Permanente vervanging
+
+Mits goed uitgevoerd heeft het wijzigen van de permanente vervanging een relatief kleine impact. Zoals in paragraaf 1.6.1 beschreven is erin voorzien om één permanente vervanger aan te wijzen voor een persoon in rol (van organisatie). 
+Voor de traceerbaarheid en transparantie kunnen a) er nooit geautoriseerde personen verwijderd worden, en b) opvolgingen van geautoriseerde personen nooit aangepast worden. Hierdoor ontstaat altijd een onafgebroken keten van opvolgers van persoon in rol (van organisatie) Met andere woorden geen cirkelverwijzing of vertakkingen. Vandaar dat de opvolging expliciet gemaakt wordt met het aanwijzen van een permanente opvolger.
+
+<aside class="example" title="Voorbeeld permanente vervanging">
+<p>Piet heeft Rol A en Rol B (pir 1 en pir2). Truus vervangt rol A (pir3 successor van pir 1) en kees vervangt rol B (pir4 successor van pir 2)  Op een bepaald moment neemt hans de verantwoordelijkheid voor rol  A van Truus over (pir5 successor van pir 3) Weer later komt piet op het project terug en neemt beide rollen weer op zich (pir 6 successor van pir 5 en pir 7 successor van pir 4)<br>
+<br>
+Als je nu kijkt naar rol A, dan is er een onafgebroken keten vanaf de eerste verantwoordelijke tot de huidige verantwoordelijke. Piet behandelt vanaf dat moment dus de transacties van Pir 1(zichzelf), Pir3 (Truus), Pir5(Hans) en Pir 6, (de actuele Pir van zichzelf)<br>
+PLAATJE???</p>
+</aside>
+
+#### Personen verwijderen
+
+Met uitzondering van een machtiging kan een persoon niet verwijderd worden uit een project. Behalve indien een persoon in rol (van organisatie) geen transacties aan zijn rol (of aan de eventueel opgevolgde rollen) gekoppeld heeft. In dat geval is verwijderen mogelijk.
+
+De enige optie om een persoon te deactiveren voor een project is het aanwijzen van een permanente vervanger voor deze persoon. Hiervoor is de eigenschap opvolger van een persoon in rol (van organisatie). Moet een persoon met een adviserende rol verwijderd worden uit een project, dan krijgt deze persoon in rol (van organisatie) een opvolger (met dezelfde adviserende rol). Dit kan ook een bestaande persoon zijn (met dezelfde adviserende rol).
+
+
+
+
 
 
 
