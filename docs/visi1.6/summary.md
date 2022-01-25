@@ -1,9 +1,4 @@
-# Summary
-High-level management summary
+# Samenvatting
 
-
-
-## NTB
-
-
-
+VISI is dé open standaard voor het organiseren van digitale communicatie over je samenwerking.  Van te voren maakt men afspraken wanneer men welk bericht met elkaar communiceert, tijdens het samenwerken wisselt men de afgesproken berichten uit. Indien meerdere organisaties samenwerken, kunnen zij elk gebruik maken van hun eigen VISI gecertificeerde software. Het berichtenverkeer tussen softwarepakketten is gegarandeerd. Zo kan elke partij, in zijn eigen software, de onderlinge communicatie volledig inzien. Kenmerkend van VISI is de flexibiliteit: zowel de workflow, als de berichtinhoud, kan per organisatie, project of samenwerking specifiek worden ingericht. 
+Bij een geschil is meteen duidelijk hoe de samenwerking is verlopen. VISI zorgt voor een audit trail, doordat afspraken digitaal vastliggen in berichten. 

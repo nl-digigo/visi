@@ -20,7 +20,7 @@ function changeSOTD()
   // else                                  //-- SOTD Aanpassen
   // {
 
-    tag.innerHTML = "<h2>Status of this document</h2>";
+    tag.innerHTML = "<h2>Status van dit document</h2>";
     tag.innerHTML += "<p>";
    
     switch(respecConfig.specStatus)
@@ -147,7 +147,7 @@ var respecConfig = {
     a11y: false,
   
     // A number indicating the maximum depth of the table of contents. Defaults to 0 which includes all levels.
-    maxTocLevel: 3,
+    maxTocLevel: 4,
   
     // Shows links to alternate formats (such as PDF, ePub) in the document header.
     // alternateFormats: [{
