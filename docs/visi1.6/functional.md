@@ -353,13 +353,13 @@ In de praktijk zien we trouwens dat als een raamwerk schrijver een transactie co
 
 ## Projectuitvoering
 
-### Gebruik Raamwerk en PSB in project
+Gebruik Raamwerk en PSB in project
 
 
-#### Berichtencommunicatie
+### Berichtencommunicatie
 De projectcommunicatie via het versturen en beantwoorden van berichten kan starten. Alle deelnemende organisaties weten van het project. Wordt een bericht verstuurd door persoon Urbain Servranckx (in Beoordelende rol van organisatie Gemeente Rommelgem) naar Georges Remi (in Adviserende rol van organisatie De Blauwe Lotus), dan zorgt de digitale adressering en verspreide project specifieke bestand dat het bericht ook bezorgd wordt bij Georges Remi.
 
-##### Volgorde
+#### Volgorde
 Berichten zijn niet onafhankelijk van elkaar, maar hebben een samenhang. Berichten hebben een volgorde die gezien kan worden als een ketting van berichten. De ketting heeft een begin en een eind. Er is een startbericht en een eindbericht. De volgorde is bijvoorbeeld:
 
 
@@ -376,19 +376,19 @@ start	-> afkeuring	-> einde
 -> goedkeuring	->
 
 
-##### Berichttype
+#### Berichttype
 
 Niet ieder bericht is hetzelfde. Er wordt onderscheid gemaakt in type berichten. In bovenstaand voorbeeld is afkeuring een ander berichttype dan goedkeuring. Dit is niet alleen een andere naam voor een bericht, de inhoud van het bericht is verschillend tussen een afkeuring en een goedkeuring. Bijvoorbeeld een afkeuring zal een motivatie bevatten. In een goedkeuring zal motivatie niet nodig zijn en derhalve ontbreken.
 
 De inhoud van een bericht is gekoppeld aan het type. Deze inhoud is niet willekeurig en behoeft uitleg, maar dit vergt te veel details om hier te behandelen. Voor een nadere uitleg over de inhoud van berichten wordt verwezen naar paragraaf XXX.
 
 
-##### Bericht van persoon naar persoon
+#### Bericht van persoon naar persoon
 
 De ketting / graaf van berichten gaat altijd tussen twee personen. Het is niet toegestaan om een bericht naar een willekeurige personen te versturen, of naar een organisatie te versturen. Deze personen zijn vastgelegd in de project setup (paragraaf 1.7). Er is een voorwaarde voor het versturen van een startbericht van persoon Urbain Servranckx naar persoon Georges Remi. Deze voorwaarde is dat de personen een bepaalde rol moeten invullen voor hun organisatie. Feitelijk wordt een bericht dus verstuurd van "Persoon in Rol van Organisatie" naar "Persoon in Rol van Organisatie". Dus persoon Urbain Servranckx (in Beoordelende rol van organisatie Gemeente Rommelgem) stuurt een startbericht naar persoon Georges Remi (in Adviserende rol van organisatie De Blauwe Lotus).
 
 
-##### Versturen van een bericht
+#### Versturen van een bericht
 
 Voordat een persoon een bericht kan versturen moet aan bepaalde regels voldaan worden. Een startbericht mag alleen verstuurd worden door personen die een bepaalde rol toegewezen gekregen hebben in het project specifieke bestand. Voor de ontvangende persoon geldt ook een regel. Allereerst kan er maar één ontvangende persoon zijn. Deze persoon dient ook een bepaalde rol toegewezen gekregen te hebben in het project specifieke bestand. In het voorbeeld zijn dit de initiërende rol Beoordelende en ontvangende rol Adviserende. Persoon Urbain Servranckx stuurt het startbericht van type "Opdracht" naar persoon Georges Remi.
 
