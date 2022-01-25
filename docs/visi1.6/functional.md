@@ -174,7 +174,6 @@ Als een gemachtigde iets verstuurt moet in VISI software zichtbaar zijn wie iets
 Een persoon kan gemachtigd zijn om namens meerdere geautoriseerde personen (in rol van organisatie) te handelen. Meerdere personen kunnen gemachtigd zijn om namens één geautoriseerde persoon (in rol van organisatie) te handelen.
 
 #### Project Setup
-
 Project, personen, organisaties rollen en vervangingen dienen bij alle projectdeelnemers bekend en gelijk te zijn. Daarom wordt deze setup van een project vastgelegd in een uitwisselbaarformaat: project specifiek bestand. Dit bestand wordt verspreid onder de deelnemende organisaties. Dit is meestal per organisatie vanwege het eerdergenoemde digitale adres van een organisatie. Dit digitale adres weet hierdoor van het bestaan van een project. In het gebruikte voorbeeld "Realisatie West- / Oostlijn" met unieke identificatie _badc9dab-807e-4319-bd56-60c57605e109 is bekend bij alle organisaties van het project.
 De projectcommunicatie via het versturen en beantwoorden van berichten kan starten, zie <div class="issue" data-number="138"></div> 
 
@@ -284,7 +283,7 @@ Voor groep types is nog geen toepassing bekend voor de helpinfo.
 
 <aside class='def'>
 <p>In te stellen specifieke eigenschappen:
-</p></aside>
+</p> </aside>
 
 <aside class='def'> 
 <p>Verwijzingen vanuit GroepTypes:
