@@ -635,7 +635,48 @@ Met uitzondering van een machtiging kan een persoon niet verwijderd worden uit e
 
 De enige optie om een persoon te deactiveren voor een project is het aanwijzen van een permanente vervanger voor deze persoon. Hiervoor is de eigenschap opvolger van een persoon in rol (van organisatie). Moet een persoon met een adviserende rol verwijderd worden uit een project, dan krijgt deze persoon in rol (van organisatie) een opvolger (met dezelfde adviserende rol). Dit kan ook een bestaande persoon zijn (met dezelfde adviserende rol).
 
+<aside class="example" title="Personen verwijderen">
+<p><b>Persoon in Rol van Organisatie</b><br>
+Unieke identificatie: _b16d7aeb-6a5e-4326-9283-aef843684f5c<br>
+Contactpersoon: 	_d4e02752-2ac6-4700-ae67-d33f428f78fb<br>
+Rol:			<font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
+Organisatie:		_87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
+Opvolger:		<font color = "B71C1C">_666f01b3-6714-44cc-8865-0a9ae1f938ce</font><br>
+</p>
+<p><b>Persoon in Rol van Organisatie</b><br>
+Unieke identificatie: <font color = "B71C1C">_666f01b3-6714-44cc-8865-0a9ae1f938ce</font><br>
+Contactpersoon: 	_c6e4430e-65aa-4e55-a8db-1beb6d3f4250<br>
+Rol:			<font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
+Organisatie:		_87e9144d-04d6-4a5f-bdcb-b50e96c2b498
+</p>
+<p><b>Rol v</b><br>
+Unieke identificatie: <font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
+Naam: 			Adviserende rol<br>
+Omschrijving:	Deze rol geeft een onafhankelijk advies op basis van competenties en deskundigheid binnen het kader van project. Bij het advies doorloopt de rol een aantal vaste stappen. Rol inventariseert gegevens, weegt, motiveert en beoordeelt deze informatie en geeft vervolgens het advies.<br>
+</p></aside>
 
+
+### Raamwerk wijzigen
+
+Dit is de wijziging met de grootste impact. Naast het wijzigen van het projectcommunicatiesjabloon (c.q. raamwerk) moet ook de project setup in het project specifieke bestand geactualiseerd worden conform het raamwerk. Het project specifieke bestand heeft namelijk een verwijzing naar het raamwerk. Indien het raamwerk wijzigt, dient deze verwijzing ook te wijzigen. Dus minimale actualisatie is het aanpassen van de verwijzing naar het raamwerk. Voor deze verwijzing wordt de gangbare functionaliteit van xml gebruikt: namespace. Een gewijzigd projectcommunicatiesjabloon dient een nieuwe unieke namespace te bevatten.
+
+<aside class="example" title="Raamwerk aanpassen">
+<p><b>Project</b><br>
+Unieke identificatie: UAV<br>
+Omschrijving:		Uniforme Administratieve Voorwaarden<br>
+Namespace:		http://www.visi.nl/schemas/20160331/uav_20-10-2020_1723
+</p></aside>
+
+Indien een gewijzigd projectcommunicatiesjabloon (c.q. raamwerk) zonder gewijzigd project specifieke bestand wordt aangeleverd, dan is het "vorige" project specifieke bestand ook van toepassing op het gewijzigd projectcommunicatiesjabloon (c.q. raamwerk).
+
+
+De verwijzing naar het bijbehorende raamwerk is eveneens aanwezig in ieder bericht. Hierdoor is voor ieder bericht te achterhalen conform welk raamwerk het bericht opgesteld is, en is na te gaan of het bericht valide is conform dit raamwerk. En welke opvolgende berichten als vervolgstap mogelijk zijn.
+
+
+#### Gedrag software rondom gekoppelkde berichtenflow
+
+
+#### Gedrag rondom wel en niet aanbieden berichten obv raamwerk/rol
 
 
 
