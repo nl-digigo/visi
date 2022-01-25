@@ -13,10 +13,10 @@ De hoofdstukopbouw is afgestemd om het kennisniveau van de lezer, en verloopt va
 
 
 ## Projectinrichting
-
+Voorbereiding van het project met een PSB en een raamwerk.
 
 ### PSB
-
+Persoonsgebonden bericht
 
 #### Project
 
