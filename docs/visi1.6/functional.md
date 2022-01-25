@@ -375,11 +375,66 @@ Een bericht kan meerdere voorgaande berichten hebben. Immers een bericht goedkeu
 start	-> afkeuring	-> einde
 -> goedkeuring	->
 
+
 ##### Berichttype
 
 Niet ieder bericht is hetzelfde. Er wordt onderscheid gemaakt in type berichten. In bovenstaand voorbeeld is afkeuring een ander berichttype dan goedkeuring. Dit is niet alleen een andere naam voor een bericht, de inhoud van het bericht is verschillend tussen een afkeuring en een goedkeuring. Bijvoorbeeld een afkeuring zal een motivatie bevatten. In een goedkeuring zal motivatie niet nodig zijn en derhalve ontbreken.
 
 De inhoud van een bericht is gekoppeld aan het type. Deze inhoud is niet willekeurig en behoeft uitleg, maar dit vergt te veel details om hier te behandelen. Voor een nadere uitleg over de inhoud van berichten wordt verwezen naar paragraaf XXX.
+
+
+##### Bericht van persoon naar persoon
+
+De ketting / graaf van berichten gaat altijd tussen twee personen. Het is niet toegestaan om een bericht naar een willekeurige personen te versturen, of naar een organisatie te versturen. Deze personen zijn vastgelegd in de project setup (paragraaf 1.7). Er is een voorwaarde voor het versturen van een startbericht van persoon Urbain Servranckx naar persoon Georges Remi. Deze voorwaarde is dat de personen een bepaalde rol moeten invullen voor hun organisatie. Feitelijk wordt een bericht dus verstuurd van "Persoon in Rol van Organisatie" naar "Persoon in Rol van Organisatie". Dus persoon Urbain Servranckx (in Beoordelende rol van organisatie Gemeente Rommelgem) stuurt een startbericht naar persoon Georges Remi (in Adviserende rol van organisatie De Blauwe Lotus).
+
+
+##### Versturen van een bericht
+
+Voordat een persoon een bericht kan versturen moet aan bepaalde regels voldaan worden. Een startbericht mag alleen verstuurd worden door personen die een bepaalde rol toegewezen gekregen hebben in het project specifieke bestand. Voor de ontvangende persoon geldt ook een regel. Allereerst kan er maar één ontvangende persoon zijn. Deze persoon dient ook een bepaalde rol toegewezen gekregen te hebben in het project specifieke bestand. In het voorbeeld zijn dit de initiërende rol Beoordelende en ontvangende rol Adviserende. Persoon Urbain Servranckx stuurt het startbericht van type "Opdracht" naar persoon Georges Remi.
+
+<aside class="example" title="Voorbeeld bericht">
+<p><b>Bericht</b><br>
+Type: 			Opdracht<br>
+Unieke identificatie: _9a163e84-a83e-47ea-b5f3-220c403da98b<br>
+Verzenddatum:		2021-12-23T14:38:56<br>
+Richting (Van–Naar):	TRUE<br>
+Transactie:		_f8275cfe-3d8d-4bda-a05b-164a5087a1af<br>
+Inhoud:			_170ef962-685f-4fc8-8728-df1bfe2317ba<br>
+</p></aside>
+
+De ontvangende persoon kan alleen een reactiebericht sturen naar de initiërende persoon. Dus Georges Remi stuurt een afkeuring (of goedkeuring) naar Urbain Servranckx.
+<aside class="example" title="Voorbeeld bericht">
+<p><b>Bericht</b><br>
+Type: 			Afkeuring<br>
+Unieke identificatie: _2bbecc10-948e-4b1a-b6ce-3a133576297c<br>
+Verzenddatum:		2021-12-27T10:13:42<br>
+Richting (Van–Naar):	FALSE<br>
+Transactie:		_f8275cfe-3d8d-4bda-a05b-164a5087a1af<br>
+Inhoud:			_657ad592-5d76-4248-b959-68af07465cd6<br>
+</p></aside>
+
+Hierna stuurt Urbain weer een reactiebericht naar Georges. Dit gaat heen en weer net zolang tot het eindbericht verstuurd is.
+N.B. Van een bericht kan geen kopie gestuurd worden (als cc).
+Bij het versturen van een eerste bericht dient ook de volgorde van de reactieberichten vastgelegd te zijn, zodat de berichten een vast patroon volgen. Bijvoorbeeld het patroon: start -> verzoek -> levering -> afkeuring -> hernieuwde levering -> goedkeuring -> einde
+Hiermee wordt afgedwongen dat na een afkeuring een hernieuwde levering komt.
+Een voorbeeld van een ander patroon: start -> ter informatie -> ontvangstbevestiging -> einde
+Versimpeld zou je kunnen zeggen dat dit patroon (c.q. de volgorde van berichttype) bepaald wordt door het type van de transactie, die gestart wordt. Ieder bericht heeft een verwijzing naar de transactie. Deze transactie is - net als een bericht - van een bepaald type.
+
+
+<aside class="example" title="Voorbeeld bericht">
+<p><b>Transactie</b><br>
+Type: 			Opdrachtverstrekking<br>
+Unieke identificatie: _f8275cfe-3d8d-4bda-a05b-164a5087a1af<br>
+Nummer:			GRG000282<br>
+Omschrijving:		Opdracht voor project Realisatie West- / Oostlijn<br>
+Van:			_e0ad4954-7986-417c-96d6-813efa36e86b<br>
+Naar:			_752b1dfd-dd91-4404-9708-39b91047ca66<br>
+Project:		_badc9dab-807e-4319-bd56-60c57605e109;<br>
+</p></aside>
+
+De voorschriften en regels, waaraan aan de berichtencommunicatie moet voldoen, is vastgelegd in een projectcommunicatiesjabloon. Dit sjabloon bevat de definitie van type rollen, type berichten en type transacties. Ook de inhoud van een type bericht is in dit sjabloon gedefinieerd. Dit sjabloon heet een raamwerk. De term sjabloon geeft al aan dat het een blauwdruk is waaraan de transacties en berichten moeten voldoen.
+
+
 
 
 
