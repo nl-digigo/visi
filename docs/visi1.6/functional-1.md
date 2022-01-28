@@ -8,7 +8,6 @@ De functionele documentatie is bedoeld voor een software productmanager of een s
 
 ## Leeswijzer
 
-<div class="issue" data-number="141"></div>
 
 De functionele uitleg is opgebouwd in hoofdstukken, en leest het beste hoofdstuk voor hoofdstuk. Met een hoofdstuk wordt een functioneel abstractieniveau inclusief bouwstenen uitgelegd. Aan het einde van een hoofdstuk wordt getoetst of de inhoud in voldoende mate begrepen wordt, en lezer verder kan naar het volgende hoofdstuk. In het volgende hoofdstuk wordt de functionele beschrijving aangevuld of verdiept qua bouwstenen. Hoofdstukken overslaan leidt tot het missen van bouwstenen en logische denkvolgorde.
 De hoofdstukopbouw is afgestemd om het kennisniveau van de lezer, en verloopt van newbie tot expert. 
@@ -24,6 +23,8 @@ Paragraaf 5.4 legt uit hoe om te gaan met het wijzigen van de project specifieke
 Wat er aan het einde van een project met de communicatie en informatie gebeurt staat in hoofdstuk 5. 
 
 Het project specifiek maken van de communicatiepatronen heeft nog een verdiepingsslag, welke in hoofdstuk 6 beschreven staat. Als toegift staan in laatste hoofdstuk de overige (optionele) bouwstenen toegelicht.
+
+<div class="issue" data-number="141"></div> 
 
 
 ## Projectinrichting
