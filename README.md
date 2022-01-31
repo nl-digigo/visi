@@ -12,6 +12,10 @@ VISI vormt de basis voor (formele) communicatie en informatieoverdracht in organ
 
 VISI definieert het proces in termen van raamwerk, rollen, transacties en berichten. Een raakmwerk omvat alle gewenste rollen en transacties in een (bouw)proces. Een transactie weerspiegelt de communicatie-afspraken tussen twee rollen. De informatie-uitwisseling vindt plaats door het versturen van berichten (inclusief documenten) in de volgorde die in de transactie is vastgelegd. De rolverdeling legt de taken en verantwoordelijkheden vast.
 
-**Meer informatie**
+**Informatie voor gebruikers en beheerders van VISI**
 
 [http://www.bimloket.nl/visi](http://www.bimloket.nl/visi)
+
+**Technische documentatie voor softwareleveranciers**
+
+[bimloket.github.io/visi/](bimloket.github.io/visi/)
