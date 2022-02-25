@@ -37,7 +37,7 @@ Alles wordt opgehangen aan een project. De definitie van een project is in dit g
 
 Van een project worden beperkte, verplichte eigenschappen vastgelegd. Ieder project heeft een unieke identificatie waarmee naar het project gerefereerd kan worden, zonder dat misverstanden kunnen ontstaan welk project bedoeld wordt. Daarnaast heeft een project een naam en een omschrijving. Deze naam en omschrijving behoeven niet uniek te zijn, en is een aanvulling op de unieke identificatie, en is bedoeld voor toelichting en zorgt voor eenvoudigere herkenning voor het project (door mensen). Aanvullend wordt van het project het moment van start en einde vastgelegd met start- en einddatum.
 
-<aside class="example" title="Project vastleggen in project specifiek bestand (psb)">
+<aside class="example" title="Gegevens van een project (in een project specifiek bestand)">
 <p><b>Project</b><br>
 Unieke identificatie:    _badc9dab-807e-4319-bd56-60c57605e109<br>
 Naam:                    Realisatie West- / Oostlijn<br>
@@ -53,7 +53,7 @@ De activiteit van een project wordt uitgevoerd door personen. De mensen, die aan
 
 <div class="issue" data-number="136"></div> 
 
-<aside class="example" title="Personen vastleggen in project specifiek bestand (psb)">
+<aside class="example" title="Gegevens van personen (in een project specifiek bestand)">
 <p>
 <b>Persoon</b><br>
 Unieke identificatie:   _0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
@@ -84,17 +84,17 @@ Personen voeren een activiteit in een project uit namens een organisatie. In een
 
 Uit de afkorting is de organisatorische bron van communicatie ter herleiden, zie … (Verwijzing naar uitleg over eigenschap van TransactionTemplate). Voor een organisatie wordt een contactpersoon gedefinieerd middels een verwijzing naar de unieke identificatie van een persoon. Deze verwijzing heeft geen functionele betekenis, en betreft enkel een administratief doel.
 
-<aside class="example" title="Organisatie vastleggen in PSB">
+<aside class="example" title="Gegevens van een organisatie (in een project specifiek bestand">
 <p><b>Organisatie</b><br>
 Unieke identificatie:  _87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
 Naam:                  Gemeente Rommelgem<br>
 Afkorting:             GRG<br>
-Contactpersoon:        _0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
+Contactpersoon:        <u>_0c585186-fa97-4de7-8fe0-5c4bee3afead</u><br>
 </p>
 </aside>
 
 <p class="note" title="Organisatie heeft een adres">
-Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres, maar een digitaal adres. Dit digitale adres heeft een technisch doel, zie … SOAP server</p>
+Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres, maar een digitaal adres. Dit digitale adres heeft een technisch doel, zie paragraaf … over SOAP protocol.</p>
 <div class="issue" data-number="136"></div> 
 
 
@@ -102,7 +102,7 @@ Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres,
 
 De differentiatie in autorisatie, taken en verantwoordelijkheden in een project worden expliciet gemaakt middels het definiëren van verschillende rollen. Een rol staat voor samenhangende autorisatie, taken en verantwoordelijkheden voor het uitvoeren van activiteiten, die een persoon meestal tijdelijk op zich neemt, en die (afwisselend) door verschillende personen kunnen worden vervuld. Van een rol worden zeer beperkte eigenschappen vastgelegd. Ook iedere rol heeft een unieke identificatie, aangevuld met een naam en omschrijving. Deze naam en omschrijving behoeven niet uniek te zijn, en zijn een aanvulling op de unieke identificatie bedoeld voor toelichting en zorgt voor eenvoudigere herkenning van de rol (door mensen).
 
-<aside class="example" title="Rol vastleggen in PSB">
+<aside class="example" title="Gegevens van een rol (in een project specifiek bestand)">
 <p><b>Rol</b><br>
 Unieke identificatie:  _1252a67a-5f69-4a9c-b4ca-506a4459c7c3 <br>
 Naam:                  Beoordelende rol<br>
@@ -113,29 +113,28 @@ Omschrijving:          Deze rol geeft een onafhankelijke beoordeling op basis va
 Een rol is fundamenteel anders dan een functie. Een essentieel verschil is dat rollen een afspiegeling zijn van het werk dat georganiseerd wordt, terwijl functies een afspiegeling zijn van mensen die georganiseerd worden (in een organisatie). Een project heeft geen functie Afdelingshoofd, maar wel de rollen Beoordelende, Adviserende.</p>
 
 
-### Relaties
-
-*Relatie tussen Persoon, Rol en Organisatie*
+### Relatie tussen Persoon, Rol en Organisatie
 
 Personen handelen in een project altijd vanuit een rol namens een organisatie. Een persoon is niet rechtstreeks gekoppeld aan de organisatie. De persoon heeft een relatie met een rol en een organisatie in het project. Deze relatie is te zien als een unieke sleutel die persoon, rol en organisatie verbindt. Deze sleutel noemen we "Persoon in Rol van Organisatie". Van deze sleutel worden zeer beperkte, verplichte eigenschappen vastgelegd. Voor de sleutel wordt persoon, rol en organisatie gedefinieerd middels een verwijzing naar de unieke identificatie van een persoon, een rol en een organisatie.
  
-<aside class="example" title="Persoon in Rol van Organisatie in PSB">
-<p><b>Persoon in Rol van Organisatie</b><br>
-Unieke identificatie: _e0ad4954-7986-417c-96d6-813efa36e86b<br>
-Contactpersoon: 	_0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
-Rol:			_1252a67a-5f69-4a9c-b4ca-506a4459c7c3<br>
-Organisatie:		_87e9144d-04d6-4a5f-bdcb-b50e96c2b498
+<aside class="example" title="Gegevens van een persoon in een rol van een organisatie (in een project specifiek bestand)">
+<p><b>Persoon in Rol van Organisatie</b><br/>
+Unieke identificatie:  _e0ad4954-7986-417c-96d6-813efa36e86b<br/>
+Contactpersoon:        <u>_0c585186-fa97-4de7-8fe0-5c4bee3afead</u><br/>
+Rol:                   <u>_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</u><br/>
+Organisatie:           <u>_87e9144d-04d6-4a5f-bdcb-b50e96c2b498</u>
 </p></aside>
-  
-Een persoon kan meerdere rollen hebben, en een rol kan door meerdere personen vervuld worden.
+
+<p class="note" title="Relatie persoon en rol">
+Een persoon kan meerdere rollen hebben. Een rol kan door meerdere personen vervuld worden.</p>
 
 
-### Personele wisseling
+### Personele wisselingen
 
 In bijna ieder project treden wijzigingen met betrekking tot de personele invulling. Dit kan zijn in de vorm van tijdelijke vervanging in verband met afwezigheid of vakanties. Of een permanente vervanging indien de projectmedewerkers bij een andere organisatie gaat werken of met pensioen gaat. 
 
 
-### Permanente vervanging
+#### Permanente vervanging
 
 Permanente vervanging wordt ook wel opvolging genoemd. De opvolger is een geautoriseerd persoon, die de rol, taken en verantwoordelijkheid overneemt van de (initieel) geautoriseerde persoon. Voor de traceerbaarheid en transparantie kunnen er nooit geautoriseerde personen verwijderd worden. Vandaar dat de opvolging expliciet gemaakt wordt.
 
@@ -143,64 +142,59 @@ Permanente vervanging wordt ook wel opvolging genoemd. De opvolger is een geauto
 Permanente vervanging is altijd op rolniveau. Bij de genoemde sleutel van Persoon in Rol van Organisatie wordt deze permanente vervanger vastgelegd middels een verwijzing naar de unieke identificatie van een persoon, een rol en een organisatie.  De relatie is van geautoriseerde naar de opvolger. Hierbij dienen de rollen exact overeen te komen.
 
 <aside class="example" title="Permanente vervanging cg opvolging">
-<p><b>Persoon in Rol van Organisatie</b><br>
-Unieke identificatie: _e0ad4954-7986-417c-96d6-813efa36e86b<br>
-Contactpersoon: 	_0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
-Rol:			<font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
-Organisatie:		_87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
-Opvolger:		<font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font><br>
-<br>
+<p><b>Persoon in Rol van Organisatie</b><br/>
+Unieke identificatie:   _e0ad4954-7986-417c-96d6-813efa36e86b<br/>
+Contactpersoon:         _0c585186-fa97-4de7-8fe0-5c4bee3afead<br/>
+Rol:                    <font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br/>
+Organisatie:            _87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
+Opvolger:               <font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font><br/>
+<br/>
 <b>Persoon in Rol van Organisatie</b><br>
-Unieke identificatie: <font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font><br>
-Contactpersoon: 	_974e4822-4944-45ad-ab2f-161370662e30<br>
-Rol:			<font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
-Organisatie:		_2ba76318-83ab-4a6e-9257-ea91045717d2
+Unieke identificatie:   <font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font><br/>
+Contactpersoon:         _974e4822-4944-45ad-ab2f-161370662e30<br/>
+Rol:                    <font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br/>
+Organisatie:            _2ba76318-83ab-4a6e-9257-ea91045717d2
 </p></aside>
   
 Heeft een persoon (in een rol van een organisatie) een opvolger, dan betekent dit dat de persoon niet langer geautoriseerd is om te handelen vanuit deze rol. Alleen de opvolger is geautoriseerd.
-Een persoon (in een rol van een organisatie)  kan maar één opvolger hebben.
+Een persoon (in een rol van een organisatie) kan maximaal één (1) opvolger hebben.
 
 
-### Tijdelijke vervanging 
+#### Tijdelijke vervanging 
  
 Een tijdelijke vervanging kan ook gelezen worden als een (tijdelijke) machtiging. De tijdelijke vervanging is een autorisatie voor een derde persoon, zodat deze persoon mag handelen uit naam van de geautoriseerde persoon. Dit kan een tijdelijk karakter hebben, of een machtiging zijn gedurende de looptijd van het project.
 
 
-De tijdelijke vervanging is altijd op rolniveau. Bij de genoemde sleutel van Persoon in Rol van Organisatie wordt deze tijdelijke machtiging vastgelegd middels een verwijzing naar de unieke identificatie van de geautoriseerde persoon, rol en organisatie. De relatie is van gemachtigde naar de geautoriseerde. Ook hierbij dienen de rollen overeen te komen.
+De tijdelijke vervanging is altijd op rolniveau. Bij de genoemde sleutel van Persoon in Rol van Organisatie wordt deze tijdelijke machtiging vastgelegd middels een verwijzing naar de unieke identificatie van de geautoriseerde persoon, rol en organisatie. De relatie is van gemachtigde naar de geautoriseerde. Hierbij dienen de rollen exact overeen te komen.
 
 <aside class="example" title="Tijdelijke vervanging">
 <p><b>Persoon in Rol van Organisatie</b><br>
-Unieke identificatie: _752b1dfd-dd91-4404-9708-39b91047ca66<br>
-Contactpersoon: 	_d4e02752-2ac6-4700-ae67-d33f428f78fb<br>
-Rol:			<font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
-Organisatie:		_87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
-Vervangt:	<font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font><br>
+Unieke identificatie:  _752b1dfd-dd91-4404-9708-39b91047ca66<br>
+Contactpersoon:        _d4e02752-2ac6-4700-ae67-d33f428f78fb<br>
+Rol:                   <font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
+Organisatie:           _87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
+Vervangt:              <font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font><br>
 </p></aside>
 
-Voert een gemachtigd persoon (in een rol van een organisatie) een handeling uit, dan is dit altijd uit naam van de geautoriseerde persoon. Bij de handeling wordt geautoriseerde vastgelegd en gemachtigde. De geautoriseerde of gemachtigde kan antwoorden op transacties van de rol van de geautoriseerde, ongeacht wie de transactie gestart heeft. Indien een machtiging ongedaan gemaakt wordt, kan alleen de geautoriseerde de handeling afmaken. Een machtiging mag namelijk wel ongedaan gemaakt worden, omdat machtigingen een tijdelijk karakter kunnen hebben.
+Voert een gemachtigd persoon (in een rol van een organisatie) een handeling uit, dan is dit altijd uit naam van de geautoriseerde persoon. Bij een handeling wordt de geautoriseerde vastgelegd en de gemachtigde. De geautoriseerde / gemachtigde kan antwoorden op transacties van de rol van de geautoriseerde, ongeacht wie de transactie gestart heeft. Indien een machtiging ongedaan gemaakt wordt, kan alleen de geautoriseerde de handeling afmaken. Een machtiging mag namelijk wel ongedaan gemaakt worden, omdat machtigingen een tijdelijk karakter kunnen hebben.
 
 
-Als een gemachtigde iets verstuurt moet in VISI software zichtbaar zijn wie iets verstuurd heeft namens wie.
+Als een gemachtigde iets verstuurt moet traceerbaar zijn dat de gemachtigde  iets verstuurd heeft, en namens wie dit verstuurd is.
 
 
 Een persoon kan gemachtigd zijn om namens meerdere geautoriseerde personen (in rol van organisatie) te handelen. Meerdere personen kunnen gemachtigd zijn om namens één geautoriseerde persoon (in rol van organisatie) te handelen.
 
-### Project Setup
+### Project Setup in project specifiek bestand
 
-Project, personen, organisaties rollen en vervangingen dienen bij alle projectdeelnemers bekend en gelijk te zijn. Daarom wordt deze setup van een project vastgelegd in een uitwisselbaarformaat: project specifiek bestand. Dit bestand wordt verspreid onder de deelnemende organisaties. Dit is meestal per organisatie vanwege het eerdergenoemde digitale adres van een organisatie. Dit digitale adres weet hierdoor van het bestaan van een project. In het gebruikte voorbeeld "Realisatie West- / Oostlijn" met unieke identificatie _badc9dab-807e-4319-bd56-60c57605e109 is bekend bij alle organisaties van het project.
-De projectcommunicatie via het versturen en beantwoorden van berichten kan starten, zie <div class="issue" data-number="138"></div> 
-
-
-## Projectinrichting:Raamwerk
-
-*RAAMWERK / PROJECTCOMMUNICATIESJABLOON*
+Project, personen, organisaties, rollen en vervangingen dienen bij alle projectdeelnemers bekend en gelijk te zijn. Daarom wordt deze setup van een project vastgelegd in een uitwisselbaarformaat: project specifiek bestand. Dit bestand wordt verspreid onder de deelnemende organisaties. Dit is meestal per organisatie vanwege het eerdergenoemde digitale adres van een organisatie. Dit digitale adres weet hierdoor van het bestaan van een project. In het gebruikte voorbeeld "Realisatie West- / Oostlijn" met unieke identificatie _badc9dab-807e-4319-bd56-60c57605e109_ is bekend bij alle organisaties van het project.
+De projectcommunicatie via het versturen en beantwoorden van berichten kan starten, zie paragraaf <div class="issue" data-number="138"></div> 
 
 
-### TransactieType
+## Communicatiesjabloon van een project (raamwerk)
 
-*TransactionType*
+### Informatie-overdracht conform type transactie
 
-Communicatie vindt in VISI altijd plaats op basis van transacties. Een transactie type is in het raamwerk een afsprakenstelsel van elkaar mogelijk opvolgende berichten tussen twee rollen.
+Communicatie vindt in een project altijd plaats op basis van een type transactie. Een type transactie is een afsprakenstelsel van elkaar mogelijk opvolgende berichten tussen twee rollen.
 Een transactie in een project verloopt dus volgens de regels van het transactie type in het raamwerk.
 Daarbij wordt er gesproken over de initiator-rol en executor-rol. De houder van de initiator  rol mag de transactie starten en deze alleen sturen naar houders van de executor rol. Daarna is het steeds de ontvanger van het laatste bericht die moet reageren met een van de ingestelde bericht opties totdat er geen antwoord mogelijkheden meer ingesteld staan, dan is de transactie afgerond/gereed.
 
