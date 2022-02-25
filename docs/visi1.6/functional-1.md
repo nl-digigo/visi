@@ -1,4 +1,4 @@
-# Functioneel (1)
+# Functioneel (deel 1)
 
 
 ## Inleiding
@@ -7,7 +7,6 @@ De functionele documentatie is bedoeld voor een software productmanager of een s
 
 
 ## Leeswijzer
-
 
 De functionele uitleg is opgebouwd in hoofdstukken, en leest het beste hoofdstuk voor hoofdstuk. Met een hoofdstuk wordt een functioneel abstractieniveau inclusief bouwstenen uitgelegd. Aan het einde van een hoofdstuk wordt getoetst of de inhoud in voldoende mate begrepen wordt, en lezer verder kan naar het volgende hoofdstuk. In het volgende hoofdstuk wordt de functionele beschrijving aangevuld of verdiept qua bouwstenen. Hoofdstukken overslaan leidt tot het missen van bouwstenen en logische denkvolgorde.
 De hoofdstukopbouw is afgestemd om het kennisniveau van de lezer, en verloopt van newbie tot expert. 
@@ -27,77 +26,75 @@ Het project specifiek maken van de communicatiepatronen heeft nog een verdieping
 <div class="issue" data-number="141"></div> 
 
 
-## Projectinrichting: PSB
+## Projectinrichting (project specifiek bestand)
 
-Voorbereiding van het project met een persoonsgebonden bericht (PSB) en een raamwerk.
-
+Voordat communicate conform de open standaard VISI kan plaatsvinden, moet een project ingericht worden met een project specifiek bericht (psb) en een raamwerk.
 
 
 ### Project
 
 Alles wordt opgehangen aan een project. De definitie van een project is in dit geval een, in de tijd en middelen begrensde, activiteit om iets te creëren. Wat er gecreëerd wordt is een service / product / resultaat. Een project wordt in samenwerking tussen verschillende mensen en organisaties uitgevoerd. De middelen kunnen zowel menselijke inspanningen als materialen zijn. Het onderscheidt zich door zijn eenmalige karakter van een programma of proces. Een project vereist een specifieke managementomgeving om activiteiten te coördineren en te sturen op kwaliteit, tijd en geld. Voor de coördinatie is communicatie nodig.
 
-Van een project worden beperkte, verplichte eigenschappen vastgelegd. Ieder project heeft een unieke identificatie waarmee naar een project gerefereerd kan worden, zonder dat misverstanden kunnen ontstaan welk project bedoeld wordt. Daarnaast heeft een project een naam en een omschrijving. Deze naam en omschrijving behoeven niet uniek te zijn, en is een aanvulling op de unieke identificatie bedoeld voor toelichting en zorgt voor eenvoudigere herkenning voor het project (door mensen). Aanvullend wordt van het project het moment van start en einde vastgelegd.
+Van een project worden beperkte, verplichte eigenschappen vastgelegd. Ieder project heeft een unieke identificatie waarmee naar het project gerefereerd kan worden, zonder dat misverstanden kunnen ontstaan welk project bedoeld wordt. Daarnaast heeft een project een naam en een omschrijving. Deze naam en omschrijving behoeven niet uniek te zijn, en is een aanvulling op de unieke identificatie, en is bedoeld voor toelichting en zorgt voor eenvoudigere herkenning voor het project (door mensen). Aanvullend wordt van het project het moment van start en einde vastgelegd met start- en einddatum.
 
-<aside class="example" title="Project vastleggen in PSB">
+<aside class="example" title="Project vastleggen in project specifiek bestand (psb)">
 <p><b>Project</b><br>
-Unieke identificatie: _badc9dab-807e-4319-bd56-60c57605e109<br>
-Naam: 			Realisatie West- / Oostlijn<br>
-Omschrijving:		Realisatie van metrolijn 47 inclusief 7 nieuwe stations met 9,7	kilometer spoor, waarvan 7,1 kilometer ondergronds<br>
-Startdatum:		23-12-2020 14:59<br>
-Einddatum: 		20-05-2022 07:08</p>
+Unieke identificatie:    _badc9dab-807e-4319-bd56-60c57605e109<br>
+Naam:                    Realisatie West- / Oostlijn<br>
+Omschrijving:            Realisatie van metrolijn 47 inclusief 7 nieuwe stations met 9,7	kilometer spoor, waarvan 7,1 kilometer ondergronds<br>
+Startdatum:              23-12-2020 14:59<br>
+Einddatum:               20-05-2022 07:08</p>
 </aside>
 
 
 ### Persoon
 
-De activiteit van een project wordt uitgevoerd door personen. De mensen, die aan een project werken, worden personen genoemd. Ieder persoon in een project heeft een unieke identificatie waarmee naar de persoon in het project gerefereerd kan worden, zonder dat misverstanden kunnen ontstaan welke persoon bedoeld wordt. Naast de identificatie heeft een persoon een naam en een gebruikersnaam. De naam is een aanvulling op de unieke identificatie bedoeld voor eenvoudigere herkenning (door mensen). De gebruikersnaam kan een technische invulling hebben, zie 
+De activiteit van een project wordt uitgevoerd door personen. De mensen, die aan een project werken, worden personen genoemd. Ieder persoon in een project heeft een unieke identificatie waarmee naar de persoon in het project gerefereerd kan worden, zonder dat misverstanden kunnen ontstaan welke persoon bedoeld wordt. Naast de identificatie heeft een persoon een naam en een gebruikersnaam. De naam is een aanvulling op de unieke identificatie, en is bedoeld voor eenvoudigere herkenning (door mensen). De gebruikersnaam is niet verplicht en kan een zelfgekozen (technische) invulling krijgen. Gebruikersnaam kan - bijvoorbeeld - gebruikt worden voor het linken naar een gebruiker in een (bestaand) software systeem.
 
 <div class="issue" data-number="136"></div> 
 
-(Gebruikersnaam kan gebruikt worden voor het linken naar een gebruiker in (bestaande) software systemen.)
-
-<aside class="example" title="Personen vastleggen in PSB">
+<aside class="example" title="Personen vastleggen in project specifiek bestand (psb)">
 <p>
 <b>Persoon</b><br>
-Unieke identificatie: _0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
-Naam: 			Urbain Servranckx<br>
-Gebruikersnaam:	uservranckx
+Unieke identificatie:   _0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
+Naam:                   Urbain Servranckx<br>
+Gebruikersnaam:         uservranckx
 </p>
 <p>
 <b>Persoon</b><br>
-Unieke identificatie: _974e4822-4944-45ad-ab2f-161370662e30<br>
-Naam: 			Georges Remi<br>
-Gebruikersnaam:	gremi
+Unieke identificatie:   _974e4822-4944-45ad-ab2f-161370662e30<br>
+Naam:                   Georges Remi<br>
+Gebruikersnaam:         gremi
 </p>
 <p>
 <b>Persoon</b>
-Unieke identificatie: _d4e02752-2ac6-4700-ae67-d33f428f78fb<br>
-Naam: 			Luc Dupanloup<br>
-Gebruikersnaam:	lupanloup
+Unieke identificatie:   _d4e02752-2ac6-4700-ae67-d33f428f78fb<br>
+Naam:                   Luc Dupanloup<br>
+Gebruikersnaam:         ldupanloup
 </p>
 </aside>
 
 <p class="note" title="Identificatie is niet globaal">
-Indien een persoon aan twee projecten werkt, kan de unieke identificatie van deze persoon per project verschillend zijn. Er is geen sprake van een globale unieke identificatie, maar een unieke identificatie binnen een project. </p>
+N.B. Indien een persoon aan twee projecten werkt, kan de unieke identificatie van deze persoon per project verschillend zijn. Er is geen sprake van een globale unieke identificatie, maar een unieke identificatie binnen een project.</p>
 
 
 ### Organisatie
 
-Personen voeren een activiteit in een project uit namens een organisatie. In een zakelijke context werken de mensen aan een project voor een organisatie, daarom is vastlegging van organisaties belangrijk. Ook iedere organisatie in een project heeft een unieke identificatie. Naast de identificatie heeft een organisatie een naam en een afkorting. De naam is een aanvulling op de unieke identificatie bedoeld voor eenvoudigere herkenning (door mensen). De afkorting heeft een functioneel en technisch doel. Deze eigenschap is een drie letterige afkorting van de organisatie, die binnen het project uniek is. 
-<div class="issue" data-number="137"></div> 
+Personen voeren een activiteit in een project uit namens een organisatie. In een zakelijke context werken de mensen aan een project voor een organisatie, daarom is vastlegging van organisaties belangrijk. Ook iedere organisatie in een project heeft een unieke identificatie. Naast de identificatie heeft een organisatie een naam en een afkorting. De naam is een aanvulling op de unieke identificatie, en is bedoeld voor eenvoudigere herkenning (door mensen). De afkorting heeft een functioneel en technisch doel. Deze eigenschap is een drie letterige afkorting van de organisatie, die binnen het project uniek is. 
+
 Uit de afkorting is de organisatorische bron van communicatie ter herleiden, zie … (Verwijzing naar uitleg over eigenschap van TransactionTemplate). Voor een organisatie wordt een contactpersoon gedefinieerd middels een verwijzing naar de unieke identificatie van een persoon. Deze verwijzing heeft geen functionele betekenis, en betreft enkel een administratief doel.
 
 <aside class="example" title="Organisatie vastleggen in PSB">
 <p><b>Organisatie</b><br>
-Unieke identificatie: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
-Naam: 			Gemeente Rommelgem<br>
-Afkorting:		GRG<br>
-Contactpersoon:	_0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
+Unieke identificatie:  _87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
+Naam:                  Gemeente Rommelgem<br>
+Afkorting:             GRG<br>
+Contactpersoon:        _0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
 </p>
 </aside>
 
-Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres, maar een digitaal adres. Dit digitale adres heeft een technisch doel, zie … SOAP server
+<p class="note" title="Organisatie heeft een adres">
+Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres, maar een digitaal adres. Dit digitale adres heeft een technisch doel, zie … SOAP server</p>
 <div class="issue" data-number="136"></div> 
 
 
@@ -107,9 +104,9 @@ De differentiatie in autorisatie, taken en verantwoordelijkheden in een project 
 
 <aside class="example" title="Rol vastleggen in PSB">
 <p><b>Rol</b><br>
-Unieke identificatie: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3 <br>
-Naam: 			Beoordelende rol<br>
-Omschrijving:	Deze rol geeft een onafhankelijke beoordeling op basis van competenties en deskundigheid binnen het kader van project. Bij de beoordeling doorloopt de rol een aantal vaste stappen. Rol inventariseert gegevens, weegt, motiveert en beoordeelt deze informatie en velt vervolgens het oordeel.<br>
+Unieke identificatie:  _1252a67a-5f69-4a9c-b4ca-506a4459c7c3 <br>
+Naam:                  Beoordelende rol<br>
+Omschrijving:          Deze rol geeft een onafhankelijke beoordeling op basis van competenties en deskundigheid binnen het kader van project. Bij de beoordeling doorloopt de rol een aantal vaste stappen. Rol inventariseert gegevens, weegt, motiveert en beoordeelt deze informatie en velt vervolgens het oordeel.<br>
 </p></aside>
 
 <p class="note" title="Rol versus functie">
