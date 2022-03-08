@@ -144,16 +144,16 @@ Permanente vervanging is altijd op rolniveau. Bij de genoemde sleutel van Persoo
 <aside class="example" title="Permanente vervanging cg opvolging">
 <p><b>Persoon in Rol van Organisatie</b><br/>
 Unieke identificatie:   _e0ad4954-7986-417c-96d6-813efa36e86b<br/>
-Contactpersoon:         _0c585186-fa97-4de7-8fe0-5c4bee3afead<br/>
-Rol:                    <font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br/>
-Organisatie:            _87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
-Opvolger:               <font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font><br/>
+Contactpersoon:         <u>_0c585186-fa97-4de7-8fe0-5c4bee3afead</u><br/>
+Rol:                    <u><font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font></u><br/>
+Organisatie:            <u>_87e9144d-04d6-4a5f-bdcb-b50e96c2b498</u><br/>
+Opvolger:               <u><font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font></u><br/>
 <br/>
 <b>Persoon in Rol van Organisatie</b><br>
-Unieke identificatie:   <font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font><br/>
-Contactpersoon:         _974e4822-4944-45ad-ab2f-161370662e30<br/>
-Rol:                    <font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br/>
-Organisatie:            _2ba76318-83ab-4a6e-9257-ea91045717d2
+Unieke identificatie:   <u><font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font><br/>
+Contactpersoon:         <u>_974e4822-4944-45ad-ab2f-161370662e30</u><br/>
+Rol:                    <u><font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font></u><br/>
+Organisatie:            <u>_2ba76318-83ab-4a6e-9257-ea91045717d2</u>
 </p></aside>
   
 Heeft een persoon (in een rol van een organisatie) een opvolger, dan betekent dit dat de persoon niet langer geautoriseerd is om te handelen vanuit deze rol. Alleen de opvolger is geautoriseerd.
@@ -170,10 +170,10 @@ De tijdelijke vervanging is altijd op rolniveau. Bij de genoemde sleutel van Per
 <aside class="example" title="Tijdelijke vervanging">
 <p><b>Persoon in Rol van Organisatie</b><br>
 Unieke identificatie:  _752b1dfd-dd91-4404-9708-39b91047ca66<br>
-Contactpersoon:        _d4e02752-2ac6-4700-ae67-d33f428f78fb<br>
-Rol:                   <font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
-Organisatie:           _87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
-Vervangt:              <font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font><br>
+Contactpersoon:        <u>_d4e02752-2ac6-4700-ae67-d33f428f78fb</u><br>
+Rol:                   <u><font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font></u><br>
+Organisatie:           <u>_87e9144d-04d6-4a5f-bdcb-b50e96c2b498</u><br>
+Vervangt:              <u><font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font></u><br>
 </p></aside>
 
 Voert een gemachtigd persoon (in een rol van een organisatie) een handeling uit, dan is dit altijd uit naam van de geautoriseerde persoon. Bij een handeling wordt de geautoriseerde vastgelegd en de gemachtigde. De geautoriseerde / gemachtigde kan antwoorden op transacties van de rol van de geautoriseerde, ongeacht wie de transactie gestart heeft. Indien een machtiging ongedaan gemaakt wordt, kan alleen de geautoriseerde de handeling afmaken. Een machtiging mag namelijk wel ongedaan gemaakt worden, omdat machtigingen een tijdelijk karakter kunnen hebben.
@@ -186,33 +186,20 @@ Een persoon kan gemachtigd zijn om namens meerdere geautoriseerde personen (in r
 
 ### Project Setup in project specifiek bestand
 
-Project, personen, organisaties, rollen en vervangingen dienen bij alle projectdeelnemers bekend en gelijk te zijn. Daarom wordt deze setup van een project vastgelegd in een uitwisselbaarformaat: project specifiek bestand. Dit bestand wordt verspreid onder de deelnemende organisaties. Dit is meestal per organisatie vanwege het eerdergenoemde digitale adres van een organisatie. Dit digitale adres weet hierdoor van het bestaan van een project. In het gebruikte voorbeeld "Realisatie West- / Oostlijn" met unieke identificatie _badc9dab-807e-4319-bd56-60c57605e109_ is bekend bij alle organisaties van het project.
-De projectcommunicatie via het versturen en beantwoorden van berichten kan starten, zie paragraaf <div class="issue" data-number="138"></div> 
+Project, personen, organisaties, rollen en vervangingen dienen bij alle projectdeelnemers bekend en gelijk te zijn. Daarom wordt deze setup van een project vastgelegd in een uitwisselbaarformaat: project specifiek bestand. Dit bestand wordt verspreid onder de deelnemende organisaties. Dit is meestal per organisatie vanwege het eerdergenoemde digitale adres van een organisatie. Dit digitale adres weet hierdoor van het bestaan van een project. In het gebruikte voorbeeld "Realisatie West- / Oostlijn" met unieke identificatie _ _badc9dab-807e-4319-bd56-60c57605e109_ is bekend bij alle organisaties van het project.
+De projectcommunicatie middels het versturen en beantwoorden van berichten kan starten, zie paragraaf https://bimloket.github.io/visi/visi1.6/#versturen-van-een-bericht<div class="issue" data-number="138"></div> 
 
 
 ## Communicatiesjabloon van een project (raamwerk)
 
 ### Informatie-overdracht conform type transactie
 
-Communicatie vindt in een project altijd plaats op basis van een type transactie. Een type transactie is een afsprakenstelsel van elkaar mogelijk opvolgende berichten tussen twee rollen.
-Een transactie in een project verloopt dus volgens de regels van het transactie type in het raamwerk.
-Daarbij wordt er gesproken over de initiator-rol en executor-rol. De houder van de initiator  rol mag de transactie starten en deze alleen sturen naar houders van de executor rol. Daarna is het steeds de ontvanger van het laatste bericht die moet reageren met een van de ingestelde bericht opties totdat er geen antwoord mogelijkheden meer ingesteld staan, dan is de transactie afgerond/gereed.
+Communicatie vindt in een project altijd plaats op basis van een type transactie. Een type transactie is een afsprakenstelsel van elkaar mogelijk opvolgende berichten tussen twee rollen. Een transactie in een project verloopt dus volgens de regels van het transactie type in het raamwerk. Daarbij wordt er gesproken over de initierende rol (initiator) en de uitvoerende rol (executor). Een persoon met de initierende rol mag een transactie starten en het eerste bericht van deze transactie sturen naar een (1) persoon met de uitvoerende rol. Daarna is het steeds de ontvanger (executor of initiator) van het laatste bericht die moet reageren met een bericht. Net zo lang totdat er geen antwoord mogelijkheden meer zijn. Dan is de transactie afgerond. Welke mogelijke start- en antwoordberichten er zijn staat gedefinieerd als volgorde van type berichten van een transactie (zie paragraaf https://bimloket.github.io/visi/visi1.6/#berichtencommunicatie)
 
 
 <aside class='def'>
-<p>In te stellen globale eigenschappen:<br>
-id<br>
-description<br>
-startDate<br>
-endDate<br>
-state<br>
-dateLaMu<br>
-userLaMu<br>
-language<br>
-category<br>
-helpinfo<br>
-Specifiek voor transactie types is er hier de optie om de gebruikers uitleg te geven over het transactie type. Hier kan bijvoorbeeld vermeld worden welke rollen waarom hier met elkaar communiceren en wat het doel van de totale transactie is.<br>
-code
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo, code
+Specifiek voor transactie types is helpInfo beschikbaar om de gebruikers uitleg te geven over het transactie type. Hier kan bijvoorbeeld vermeld worden welke rollen waarom hier met elkaar communiceren en wat het doel van de totale transactie is.<br>
 </p>
 </aside>
 
