@@ -37,7 +37,7 @@ Van een project worden beperkte, verplichte eigenschappen vastgelegd. Ieder proj
 <p><b>Project</b><br>
 Unieke identificatie:    _badc9dab-807e-4319-bd56-60c57605e109<br>
 Naam:                    Realisatie West- / Oostlijn<br>
-Omschrijving:            Realisatie van metrolijn 47 inclusief 7 nieuwe stations met 9,7	kilometer spoor, waarvan 7,1 kilometer ondergronds<br>
+Omschrijving:            Realisatie van metrolijn 47 inclusief 7 nieuwe stations met 9,7 kilometer spoor, waarvan 7,1 kilometer ondergronds<br>
 Startdatum:              23-12-2020 14:59<br>
 Einddatum:               20-05-2022 07:08</p>
 </aside>
@@ -90,7 +90,7 @@ Contactpersoon:        <u>_0c585186-fa97-4de7-8fe0-5c4bee3afead</u><br>
 </aside>
 
 <p class="note" title="Organisatie heeft een adres">
-Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres, maar een digitaal adres. Dit digitale adres heeft een technisch doel, zie paragraaf … over SOAP protocol.</p>
+Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres, maar een digitaal adres. Dit digitale adres heeft een technisch doel, zie paragraaf https://bimloket.github.io/visi/visi1.6/#soap over SOAP protocol.</p>
 <div class="issue" data-number="136"></div> 
 
 
@@ -188,58 +188,51 @@ De projectcommunicatie middels het versturen en beantwoorden van berichten kan s
 
 ## Raamwerk / Communicatiesjabloon van een project
 
+Het raamwerk is het communicatiesjabloon van een project. Alle communicatie moet verlopen conform dit sjabloon. In het sjabloon staat gedefinieerd welke informatie overgedragen kan worden tussen personen. Het sjabloon dient tevens ter validatie van de communicatie.
+
 ### Informatie-overdracht conform type transactie (TransactionType)
 
-Communicatie vindt in een project altijd plaats op basis van een type transactie. Een type transactie is een afsprakenstelsel van elkaar mogelijk opvolgende berichten tussen twee rollen. Een transactie in een project verloopt dus volgens de regels van het transactie type in het raamwerk. Daarbij wordt er gesproken over de initierende rol (initiator) en de uitvoerende rol (executor). Een persoon met de initierende rol mag een transactie starten en het eerste bericht van deze transactie sturen naar een (1) persoon met de uitvoerende rol. Daarna is het steeds de ontvanger (executor of initiator) van het laatste bericht die moet reageren met een bericht. Net zo lang totdat er geen antwoord mogelijkheden meer zijn. Dan is de transactie afgerond. Welke mogelijke start- en antwoordberichten er zijn staat gedefinieerd als volgorde van type berichten van een transactie (zie paragraaf https://bimloket.github.io/visi/visi1.6/#berichtencommunicatie)
+Communicatie vindt in een project altijd plaats op basis van een type transactie. Een type transactie is een afsprakenstelsel van elkaar mogelijk opvolgende berichten tussen twee rollen. Een transactie in een project verloopt dus volgens de regels van het type transactie uit het raamwerk. Daarbij wordt er gesproken over de initierende rol (initiator) en de uitvoerende rol (executor). Een persoon met de initierende rol mag een transactie starten en het eerste bericht van deze transactie sturen naar een (1) persoon met de uitvoerende rol. Daarna is het steeds de ontvanger (executor of initiator) van het laatste bericht die moet reageren met een bericht. Net zo lang totdat er geen antwoordmogelijkheden meer zijn. Dan is de transactie afgerond. Welke mogelijke start- en antwoordberichten er zijn, staat gedefinieerd als volgorde van type berichten van een transactie (zie paragraaf https://bimloket.github.io/visi/visi1.6/#berichtencommunicatie).
 
+Van een type transactie wordt een aantal eigenschappen vastgelegd. Niet alle eigenschappen zijn even belangrijk, daarom volgt een opdeling of eigenschappen verplicht of optioneel zijn. Een optionele eigenschap kan belangrijk zijn, ondanks dat de eigenschap niet verplicht is. Een voorbeeld hiervan is de eigenschap helptekst (helpInfo). helpInfo is beschikbaar om de nadere, uitgebreide uitleg te geven over het doel en gebruik van het type transactie. Ook kan er beschreven worden waarom bepaalde rollen met elkaar communiceren.
 
-<aside class='def'>
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo, code
-Specifiek voor transactie types is helpInfo beschikbaar om de gebruikers uitleg te geven over het transactie type. Hier kan bijvoorbeeld vermeld worden welke rollen waarom hier met elkaar communiceren en wat het doel van de totale transactie is.<br>
+<p>Verplichte eigenschappen zijn: <i>id, description, initiator, executor</i></p> 
+<p>Optionele eigenschappen zijn: <i>startDate, endDate, code, result, state, dateLaMu, userLaMu, language, subtransactions, appendixTypes</i></p>
+
+<i>initierende rol (initiator)</i><br/>
+Dit is een verwijzing naar een type rol. Deze eigenschap legt vast welke type rol een persoon moet hebben om een transactie van dit type te starten.
+
+<i>uitvoerende rol (executor)</i><br/>
+Dit is ook een verwijzing naar een type rol. Deze eigenschap legt echter vast welke type rol een persoon moet hebben om een eerste bericht in dit type transactie te mogen ontvangen.
+
+<aside class="example" title="Type transactie">
+<p><b>Type transactie</b><br/>
+id: 			TT_Contractwijziging_door_opdrachtgever<br/>
+omschrijving:		Contractwijziging (door de opdrachtgever)<br/>
+helptekst:		Met dit transactie type kan opdrachtgever een contractwijziging aan de opdrachtnemer melden, met als tussendoelen het verkrijgen van een technisch voorstel van opdrachtnemer, een technisch akkoord van opdrachtgever, een offerte van opdrachtnemer, een acceptatie van die offerte door opdrachtgever en uiteindelijk de acceptatie van een of meerdere gereedmeldingen van het uitgevoerde werk middels de levering van prestatieverklaringen.<br/>
+initierende rol:	<u>Opdrachtgevende_contractueel</u><br/>
+uitvoerende rol:	<u>Opdrachtnemende_contractueel</u><br/>
 </p>
-</aside>
 
-JEROENJEROEN
-Specifiek voor transactie types is er hier de optie om de gebruikers uitleg te geven over het transactie type. Hier kan bijvoorbeeld vermeld worden welke rollen waarom hier met elkaar communiceren en wat het doel van de totale transactie is.
-code
-In te stellen specifieke eigenschappen:
-result
-Dit attribuut is optioneel in te stellen, alleen op Transactietype. Voorbeelden in oude documentatie geven bijvoorbeeld aan dat het resultaat van een transactietype hierin beschreven kan worden. In de praktijk beschrijven raamwerkbouwers dit in de helpinfo van een transactietype.
+<i>typen bijlage (appendixTypes)</i><br/>
+Met deze optionele eigenschap kan een beperking worden opgelegd aan welke typen bijlage bijgevoegd mogen worden aan de type berichten van dit type transactie. Deze eigenschap  is een verwijzing naar een of meerder typen bijlage. Indien deze eigenschap ontbreekt voor een type transactie, mag ieder type bijlage bijgevoegd worden.
+
+P.S. Legacy
+<i>resultaat (result)</i><br/>
+Deze eigenschap is optioneel in te stellen, en geldt alleen voor type transactie. Voorbeelden in oude documentatie geven bijvoorbeeld aan dat het resultaat van een transactietype hierin beschreven kan worden. In de praktijk beschrijven raamwerkbouwers dit in de helpinfo van een transactietype.
 De verschillende VISI software pakketten hebben tot op heden nooit iets met dit “result” gedaan en is er geen beschrijving wat voor soort functionaliteit van software verwacht zou worden.  Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker. 
 
-Verwijzingen vanuit het transactie type:
-Initiator roltype
-Hiermee wordt vastgesteld welke rol een persoon moet hebben om een transactie van dit type te starten 
-Executor roltype
-Hiermee wordt vastgesteld welke rol een persoon moet hebben om een eerste bericht in dit transactie van dit type te mogen ontvangen. Een initiator kan dus kiezen uit de mogelijke executors om een transactie mee uit te voeren (to execute). 
-Bijlage types
-Omdat het binnen een raamwerk mogelijk is om verschillende metadata-formulieren te specificeren voor een bij te voegen bijlage, kan ook per transactie type ingesteld worden welk(e) metadata formulier(en) gekozen kan/kunnen worden voor een bijlage bij een transactie. Als er geen bijlage types gekoppeld zijn, kan ieder bijlage type uit het raamwerk gekozen worden door de gebruiker.
-subTransactions
+<i>typen subtransacties (subTransactions)</i><br/>
 Subtransactions lijkt een vervallen eigenschap te zijn, afkomstig uit de systematiekversies voor versie 1.2, waar er nog niet met “previous” subtransacties gedefinieerd kunnen worden door naar Bericht in transactietypes in andere transacties te verwijzen. In alle documentatie vanaf versie 1.2 wordt dus over en subtransactie gesproken als een transactie gestart is obv een previous bericht in een andere transactie. In oude documentatie wordt gesproken over “Transacties die binnen deze transactie vallen”.  Tegenwoordig wordt deze verwijzing nooit ingevuld in een transactietype. 
-Verwijzingen naar het transactie type:
-Bericht in transactie 
-Zie de beschrijving van dit element verderop in dit document
-Berichtkeuzebeperkingen 
-Zie de beschrijving van dit element verderop in dit document
-Transactietype
-id: 		TR_ContractwijzigingOG 
-description:	Contractwijziging door opdrachtgever
-helpinfo:	Met dit transactie type kan opdrachtgever een contractwijziging aan de opdrachtnemer melden, met als tussendoelen het verkrijgen van een technisch voorstel van opdrachtnemer, een technisch akkoord van opdrachtgever, een offerte van opdrachtnemer, een acceptatie van die offerte door opdrachtgever en uiteindelijk de acceptatie van een of meerdere gereedmeldingen van het uitgevoerde werk middels de levering van prestatieverklaringen.
-initiator rol: Opdrachtgevende_contractueel
-executor rol:	Opdrachtnemende_contractueel
+
+Vanuit een (1) type wordt verwezen naar type transactie. Dit is het type bericht in transactie (MessageInTransactionType). Alhoewel type berichten tot een type transactie behoren is er geen verwijzing van type bericht naar type transactie. Zoals de naam al doet vermoeden, is de verwijzing vanuit type bericht in transactie (MessageInTransactionType) naar type bericht en naar type transactie. Dit betekent dat type berichten te (her)gebruiken zijn in verschillende type transacties.      
+
 ### Type bericht (MessageType)
-In een berichttype wordt bepaald welke inhoud een gebruiker in moet vullen en berichttypes worden aan elkaar gekoppeld om een stroomschema binnen een transactie te creëren. De naam van een berichttype is de eerste aanduiding die een gebruiker kiest om een bepaald pad in een stroomschema te doorlopen. Daarmee geeft deze naam ook veel informatie over de status van een transactie op het moment van verzenden van een bericht.
-In te stellen globale eigenschappen:
-id
-description
-startDate
-endDate
-state
-dateLaMu
-userLaMu
-language
-category
-helpinfo
+
+In een berichttype wordt bepaald welke inhoud een gebruiker moet invullen en berichttypes worden aan elkaar gekoppeld om een stroomschema binnen een transactie te creëren. De naam van een berichttype is de eerste aanduiding die een gebruiker kiest om een bepaald pad in een stroomschema te doorlopen. Daarmee geeft deze naam ook veel informatie over de status van een transactie op het moment van verzenden van een bericht.
+
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+
 Specifiek voor bericht types is er hier de optie om de gebruikers uitleg te geven over het specifieke bericht type. Hier kan bijvoorbeeld vermeld worden in welke gevallen voor het specifieke berichttype gekozen moet worden zodat de gebruiker kan begrijpen welke consequenties dit berichttype heeft op de status van de transactie en het te verwachte verder verloop van mogelijke opvolgende berichten. 
 code
 In te stellen specifieke eigenschappen:
@@ -255,30 +248,20 @@ Omdat het binnen een raamwerk mogelijk is om verschillende metadata-formulieren 
 Berichtveld beperkingen
 Bericht in transactie
 
-Berichttype
-id: 		MS_AcceptatieVoorstelWijziging
-description:	Acceptatie Technisch voorstel (contractwijziging)
-helpinfo:	Met dit bericht accepteert u het technisch voorstel, waarna de opdrachtnemer kan reageren met een offerte voor deze contractwijziging.
-Complex elements: 
--	CeContractwijzigingBasis
--	CeContractwijzigingVoorstel
--	CeContractwijzigingOpmerkingen
-
+<aside class="example" title="Type bericht">
+<p><b>Type bericht</b><br/>
+id: 		MT_AcceptatieVoorstelWijziging<br/>
+description:	Acceptatie van het technisch voorstel (voor contractwijziging)<br/>
+helpinfo:	Met dit bericht accepteert de opdrachtgever het technisch voorstel, waarna de opdrachtnemer verder kan met een fnancieel voorstel / offerte voor de contractwijziging.<br/>
+elementen: 	<u>CE_ContractwijzigingBasis</u>, <u>CE_ContractwijzigingVoorstel</u>, <u>CE_ContractwijzigingOpmerkingen</u><br/>
+</p>
+	
 ### Berichthoofdstukken (ComplexElementType)
 De berichthoofdstukken worden gebruikt om invoer velden in berichten eenvoudig te kunnen beheren in een raamwerk en om logische onderverdelingen in berichten te kunnen aanbrengen. Doordat in berichten alleen de verschillende hoofdstukken benoemd zijn, kan eenvoudig een bepaald veld toegevoegd worden aan-, of verwijderd worden uit- een hele groep berichten die dat hoofdstuk bevatten.
 De volgorde waarmee de berichtvelden in het hoofdstuk staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de hoofdstukken en daarmee ook in de berichten.
  
-In te stellen globale eigenschappen:
-id
-description
-startDate
-endDate
-state
-dateLaMu
-userLaMu
-language
-category
-helpinfo
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+
 Specifiek voor bericht hoofdstukken is er in de beschikbare software vaak nog geen ondersteuning. Toch neigt de markt ernaar dit wel te gaan eisen. Dit zodat bijvoorbeeld duidelijk uitgelegd kan worden welk doel dit deel van het bericht dient en welke weg deze informatie bijvoorbeeld vervolgt of waar deze informatie bijvoorbeeld niet heen gaat. (denk aan informatie die binnen een bepaald domein moet blijven)
 In te stellen specifieke eigenschappen:
 MinOccurs
@@ -326,15 +309,9 @@ Simple elements:
 
 Berichtveld beperkingen
 ### Element van een type bericht (SimpleElementType)
-In te stellen globale eigenschappen:
-id
-description
-state
-dateLaMu
-userLaMu
-language
-category
-helpinfo
+
+<p>In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+
 Specifiek voor berichtvelden wordt de helptekst veelvuldig gebruikt om de opsteller van een bericht uit te leggen wat er exact verwacht wordt bij het invullen van dat veld. Dit zowel op abstract niveau, zoals: “Vul hier de lengte van het element in, zonder rekening te houden met uitstekende delen zoals wapening en dergelijke” Maar ook specifiek in de vorm van een uitleg welke getal notatie op gecontroleerd wordt: “Noteer de lengte met een komma en twee decimalen”.
 Ook bij het lezen van een bericht helpt de helptekst om de inhoud van een veld beter te kunnen duiden.
 NB: Gereserveerd veld-ID: het veld met ID “SOAPServerURL” is exclusief gereserveerd voor het berichthoofdstuk dat aan het organisatie type gekoppeld is. Dit zodat hiermee voor VISI software altijd het SOAP-adres van een organisatie gevonden kan worden.
@@ -361,15 +338,10 @@ User defined type: UDT_Datumveld
 ### Datatype van een element (UserDefinedType)
 Hiermee wordt het gedrag van het invoerveld bepaald en hoe het gevalideerd moet worden.
 Zo kan een veld een datum/tijdstip/valuta/verplichte tekst/optionele tekst/een exact aantal karakters enzovoorts als vereiste mee krijgen. VISI software biedt doorgaans invoerfunctionaliteit op maat voor de meest voorkomende invoer soorten, zoals een datum keuze venster bij een datum veld en een keuzelijst functie als er een keuze uit lijst met waardes vereist wordt.
-In te stellen globale eigenschappen:
-id
-description
-state
-dateLaMu
-userLaMu
-language
-category
-helpinfo
+
+
+<p>In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+
 Voor veldeigenschappen is nog geen toepassing bekend voor de helpinfo. Het is denkbaar dat deze naast de helpinfo weergegeven zou kunnen worden, om de invul instructie hier te beheren in plaats van in de helpinfo van meerdere veld types die deze eigenschap hebben.
 
 In te stellen specifieke eigenschappen:
@@ -464,13 +436,9 @@ messageInTransaction: mitt_265
 ### Bericht in transactie (MessageInTransactionType)
 De vormgeving van de opvolging van berichten zodat een stroomschema gevolgd kan worden wordt geregeld in het bericht in transacties type (vanaf hier aangeduid als “MITT”). 
 De MITT’s koppelen berichttypes aan elkaar binnen- en tussen transacties.
-Als een bericht type op meerdere plekken in een transactie voorkomt, bijvoorbeeld 1 keer als start bericht en 1 keer als reactie, dan bestaan er 2 MITT’s. Beiden verwijzen naar de transactie en het bericht type, alleen verschilt de koppeling tussen de MITT’s. 
-In te stellen globale eigenschappen:
-id
-state
-dateLaMu
-userLaMu
+Als een bericht type op meerdere plekken in een transactie voorkomt, bijvoorbeeld 1 keer als start bericht en 1 keer als reactie, dan bestaan er 2 MITT’s. Beiden verwijzen naar de transactie en het bericht type, alleen verschilt de koppeling tussen de MITT’s.
 
+<p>In te stellen globale eigenschappen: id, state, dateLaMu, userLaMu</p>
 
 In te stellen specifieke eigenschappen: 
 requiredNotify
@@ -537,47 +505,47 @@ In paragraaf 2.7 staat beschreven dat een type transactie uit type berichten bes
 Hoe een koppeling aangebracht wordt tussen twee transacties wordt uitgelegd aan de hand van een wijzigingsprocedure tussen drie rollen. Dit zijn de rollen: opstellende rol, accorderende rol en adviserende rol. Er is een transactie tussen de opstellende rol en accorderende rol. Deze transactie heeft als doel om tot een geaccordeerde wijziging te komen. Er is een transactie tussen de accorderende rol en adviserende rol. Deze transactie heeft als doel on tot een advies te komen over de opgestelde wijziging. De accorderende rol heeft baat bij een koppeling tussen deze twee transacties, waardoor één procedure voor het opstellen, adviseren en accorderen van een wijziging ontstaat tussen drie rollen: opstellende, adviserende en accorderende rol.
 De transactie Accorderen_Wijziging tussen opstellende rol en accorderende rol bestaat uit drie berichten: Voorstel_tot_Wijziging, Akkoord_Wijziging, Niet_Akkoord_Wijziging. Het bericht Voorstel_tot_Wijziging is het eerste bericht van de transactie. Het bericht in transactie van Voorstel_tot_Wijziging heeft GEEN vorig bericht in transactie. De berichten in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging hebben wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Voorstel_tot_Wijziging.
 Bericht in Transactie
-Unieke identificatie: _666f01b3-6714-44cc-8865-0a9ae1f938ce
+Unieke identificatie: _ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Vorig:		 	
 Bericht:		Voorstel_tot_Wijziging
 Transactie:		Accorderen_Wijziging
 Bericht in Transactie
-Unieke identificatie: _6bdae158-a6dc-491b-a9ea-692fd419a828
-Vorig:		 	_666f01b3-6714-44cc-8865-0a9ae1f938ce
+Unieke identificatie: _ 6bdae158-a6dc-491b-a9ea-692fd419a828
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Bericht:		Akkoord_Wijziging
 Transactie:		Accorderen_Wijziging
 Bericht in Transactie
-Unieke identificatie: _4e5569b7-0c6a-4976-811d-9d9189b8b1df
-Vorig:		 	_666f01b3-6714-44cc-8865-0a9ae1f938ce
+Unieke identificatie: _ 4e5569b7-0c6a-4976-811d-9d9189b8b1df
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Bericht:		Niet_Akkkord_Wijziging
 Transactie:		Accorderen_Wijziging
 De transactie Adviseren_Wijziging tussen accorderende rol en adviserende rol en bestaat uit twee berichten: Verzoek_Advies_Wijziging en Advies_Wijziging. Het bericht Verzoek_Advies_Wijziging is het eerste bericht van de transactie. Het bericht in transactie van Verzoek_Advies_Wijziging heeft GEEN vorig bericht in transactie. Het bericht in transactie van Advies_Wijziging heeft wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Verzoek_Advies_Wijziging.
 Bericht in Transactie
-Unieke identificatie: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
+Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
 Vorig:		 	
 Bericht:		Verzoek_Advies_Wijziging
 Transactie:		Adviseren_Wijziging
 Bericht in Transactie
-Unieke identificatie: _f75a35c7-30f3-4b3b-8776-120cd7811fd4
-Vorig:		 	_a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
+Unieke identificatie: _ f75a35c7-30f3-4b3b-8776-120cd7811fd4
+Vorig:		 	_ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
 Bericht:		Advies_Wijziging
 Transactie:		Adviseren_Wijziging
 Hoe wordt de adviestransactie gekoppeld aan de accorderingstransactie? Met de verwijzing naar het vorige bericht in transactie. Echter omdat de eigenschap van het eerste bericht van de transactie Adviseren_Wijziging - een lege verwijzing naar het vorige bericht in transactie - dient het eerste bericht een vlag (Waar / Onwaar) te krijgen dat dit het eerste bericht is van de transactie.
 Bericht in Transactie
-Unieke identificatie: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-Vorig:		 	_666f01b3-6714-44cc-8865-0a9ae1f938ce
+Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Eerste bericht:	Waar
 Bericht:		Verzoek_Advies_Wijziging
 Transactie:		Adviseren_Wijziging
 Na het ontvangen van Voorstel_tot_Wijziging kan de accorderende rol kiezen voor drie reactieberichten: Akkoord_Wijziging, Niet_Akkkoord en Verzoek_Advies_Wijziging. Echter na ontvangst van het bericht Advies_Wijziging is er geen reactiebericht. De koppeling terug van adviestransactie naar accorderende transactie is nog niet aangebracht. Dit wordt ook gemodelleerd met de verwijzing naar het vorige bericht in transactie. In dit geval het bericht in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging.
 Bericht in Transactie
-Unieke identificatie: _6bdae158-a6dc-491b-a9ea-692fd419a828
-Vorig:		 	_666f01b3-6714-44cc-8865-0a9ae1f938ce, _f75a35c7-30f3-4b3b-8776-120cd7811fd4
+Unieke identificatie: _ 6bdae158-a6dc-491b-a9ea-692fd419a828
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce, _ f75a35c7-30f3-4b3b-8776-120cd7811fd4
 Bericht:		Akkoord_Wijziging
 Transactie:		Accorderen_Wijziging
 Bericht in Transactie
-Unieke identificatie: _4e5569b7-0c6a-4976-811d-9d9189b8b1df
-Vorig:		 	_666f01b3-6714-44cc-8865-0a9ae1f938ce, _f75a35c7-30f3-4b3b-8776-120cd7811fd4
+Unieke identificatie: _ 4e5569b7-0c6a-4976-811d-9d9189b8b1df
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce, _ f75a35c7-30f3-4b3b-8776-120cd7811fd4
 Bericht:		Niet_Akkkord_Wijziging
 Transactie:		Accorderen_Wijziging
 Voor het correct definiëren van één procedure (opgebouwd uit hoofd- en subtransacties) gelden twee aanvullende functionele basisregels, die niet technisch af te dwingen zijn.
@@ -595,8 +563,8 @@ initiator rol: Opdrachtgevende_contractueel
 executor rol:	Adviserende_contractueel
 Voor een type bericht in een type transactie (bericht in transactie) staat een richting gedefinieerd. De richting is van initiator naar executor of van executor naar initiator. Deze richting gaat dan respectievelijk van initiërende rol naar uitvoerende rol (van een type transactie).
 Bericht in Transactie
-Unieke identificatie: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-Vorig:		 	_666f01b3-6714-44cc-8865-0a9ae1f938ce
+Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Eerste bericht:	Waar
 Richting:		Van initiator naar executor
 Bericht:		Verzoek_Advies_Wijziging
@@ -605,13 +573,13 @@ IS DIT WEL EEN REGEL??? Initiator to Exector is optional in raamwerk
 Regel 2: de richting van de berichten dient over een te komen overeenkomen.
 Met richting wordt bedoeld de waarde of een bericht van initiator naar executor van een transactie, of van executor naar initiator.
 Bericht in Transactie
-Unieke identificatie: _666f01b3-6714-44cc-8865-0a9ae1f938ce
+Unieke identificatie: _ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Vorig:		 	
 Bericht:		Voorstel_tot_Wijziging
 Transactie:		Accorderen_Wijziging
 Bericht in Transactie
-Unieke identificatie: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-Vorig:		 	_666f01b3-6714-44cc-8865-0a9ae1f938ce
+Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Eerste bericht:	Waar
 Bericht:		Verzoek_Advies_Wijziging
 Transactie:		Adviseren_Wijziging
@@ -635,12 +603,9 @@ er is dus een afhankelijkheid tussen twee (of meer) nog niet aanwezige berichten
 3. Een bericht dat maar één keer verzonden mag worden is reeds verzonden, er is dus een
 restrictie op het aantal keren dat een bericht verzonden mag worden.
 
-In te stellen globale eigenschappen:
-id
-state
-dateLaMu
-userLaMu
-helpinfo
+
+<p>In te stellen globale eigenschappen: id, state, dateLaMu, userLaMu, helpinfo</p>
+
 Voor bericht in transactie beperkingen is nog geen toepassing bekend voor de helpinfo.
 In te stellen specifieke eigenschappen:
 Geen
@@ -667,17 +632,9 @@ sendAfter: mit_VTWoordeelpositief_1
 
 ### Type rol (RoleType)
 Door het toekennen van rollen aan personen in projecten en het koppelen van rollen aan transacties, regelen we wie bepaalde transacties mag starten en initieel ontvangen.
-In te stellen globale eigenschappen:
-id
-description
-startDate
-endDate
-state
-dateLaMu
-userLaMu
-language
-category
-helpinfo
+
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+
 Voor rollen is nog geen toepassing bekend voor de helpinfo. Soms is er wel een uitleg over een rol te vinden in een raamwerk, maar weergave hiervan in VISI software bestaat nog niet.
 code
 			
@@ -711,18 +668,9 @@ description: Adviseur intern
 ### Type bijlage (AppendixType)
 In ieder VISI bericht kunnen bestanden bijgevoegd worden. Een bestand moet wel altijd aan een bijlage type gekoppeld worden. Een raamwerk moet daarom altijd minimaal één bijlage type hebben. Als een raamwerk meerdere bijlage types heeft en er geen specifiek bijlage type op een bericht ingesteld staat, kan er gekozen worden aan welk bijlage type een bijlage in een bericht gekoppeld wordt. 
 Een bijlage type is meestal gekoppeld aan een berichthoofdstuk, zodat er bij het invoeren van een bijlage metadata velden beschikbaar zijn, om bijbehorende gegevens bij de bijlage in te vullen.
-In te stellen globale eigenschappen:
-id
-description
-Met deze naamgeving kiezen gebruikers welk bijlage type ze de bijlage aan koppelen. 
-startDate
-endDate
-state
-dateLaMu
-userLaMu
-language
-category
-helpinfo
+
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+
 Voor bijlage types is nog geen toepassing bekend voor de helpinfo.
 code
 In te stellen specifieke eigenschappen:
@@ -747,17 +695,10 @@ ComplexElementType: CE_BijlagenBijWijzigingGereed
 
 ### Type organisatie (OrganisationType)
 In ieder raamwerk is een organisatie type nodig. Deze wordt gebruikt bij het aanmaken van organisaties in het project specifieke bericht. Normaal gesproken bevat een raamwerk maar 1 organisatie type. Raamwerken met meer dan 1 variant zijn nog niet toegepast. 
-In te stellen globale eigenschappen:		
-id
-description
-startDate
-endDate
-state
-dateLaMu
-userLaMu
-language
-category
-helpinfo
+
+
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+
 Voor organisatie types is nog geen toepassing bekend voor de helpinfo.
 code
 
@@ -777,17 +718,10 @@ ComplexElementType: CeOrganisatieSOAPServer
 ### Type persoon (PersonType)
 In ieder raamwerk is een persoon type nodig. Deze wordt gebruikt bij het aanmaken van personen in het project specifieke bericht. Normaal gesproken bevat een raamwerk maar 1 persoon type. Raamwerken met meer dan 1 variant zijn nog niet toegepast.
 De basis velden van een persoon in een project specifiek bericht, zoals Naam, gebruikersnaam en Id afkorting enz. staan niet in het raamwerk. Zie#verwijzing naar psb werking#…….
-In te stellen globale eigenschappen:					
-id
-description
-startDate
-endDate
-state
-dateLaMu
-userLaMu
-language
-category
-helpinfo
+
+
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+
 Voor persoon types is nog geen toepassing bekend voor de helpinfo.
 code
 			
@@ -807,21 +741,12 @@ ComplexElementType: CE_Persoonspecifieke_informatie
 ### Type project (ProjectType)
 In ieder raamwerk is een project type nodig. Deze wordt gebruikt voor het vastleggen van bijvoorbeeld de projectnaam en de raamwerk namespace in het project specifieke bericht. Raamwerken met meer dan 1 variant zijn niet toegestaan.
 De basis velden van een projecttype in een project specifiek bericht, zoals de projectnaam, project Id enz. staan niet in het raamwerk. 
-In te stellen globale eigenschappen:
-id
-description
-startDate
-endDate
-state
-dateLaMu
-userLaMu
-language
-category
-helpinfo
+
+
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+
 Bij project type wordt de help info soms door raamwerkbouwers gebruikt voor aantekeningen of uitleg over het raamwerk. Er is geen toepassing verder in VISI software van bekend.
 code
-
-JEROENJEROEN
 
 <aside class='def'>
 <p>In te stellen specifieke eigenschappen:<br>
@@ -836,9 +761,9 @@ Geen</p>
 </aside>
 
 <aside class="example" title="Project in transactie">
-<p><b>ProjectType <b><br>
-id: 		RaamwerkUAVGCGemLutjebroek<br>
-namespace:	http://www.visi.nl/schemas/20160331/RaamwerkUAVGCGemLutjebroek_v2<br>
+<p><b>ProjectType<b><br/>
+id: 		RaamwerkUAVGCGemLutjebroek<br/>
+namespace:	http://www.visi.nl/schemas/20160331/RaamwerkUAVGCGemLutjebroek_v2<br/>
 description:	 Standaard raamwerk UAV GC Gemeente Lutjebroek
 </p></aside>
 
@@ -877,24 +802,15 @@ Op deze manier kan een bericht in transactie aan een bepaalde transactiefase gek
 </p></aside>
   
   
-### GroepTypes
-  
-*GroupType*
+### Type groep (GroupType)
+<aside class='def'>
+<p>De definitie van de groep voor het opslaan van bijlagen verzonden met een bericht binnen een transactie. Op dit moment wordt in de praktijk geen functionaliteit door leveranciers toegekend aan dit element. Een GroupType maakt echter wel onderdeel uit van de structuur van een raamwerk.
+</p></aside>
+
 <div class="issue" data-number="139"></div>   
  
 <aside class='def'>
-<p>In te stellen globale eigenschappen:<br>
-id<br>
-description<br>
-startDate<br>
-endDate<br>
-state<br>
-dateLaMu<br>
-userLaMu<br>
-language<br>
-category<br>
-helpinfo<br>
-Voor groep types is nog geen toepassing bekend voor de helpinfo.
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo (Voor groep types is nog geen toepassing bekend voor de helpinfo.
 </p></aside>
 
 <aside class='def'>
