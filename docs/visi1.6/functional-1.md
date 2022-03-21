@@ -205,7 +205,7 @@ Dit is een verwijzing naar een type rol. Deze eigenschap legt vast welke type ro
 <i>uitvoerende rol (executor)</i><br/>
 Dit is ook een verwijzing naar een type rol. Deze eigenschap legt echter vast welke type rol een persoon moet hebben om een eerste bericht in dit type transactie te mogen ontvangen.
 
-<aside class="example" title="Type transactie">
+<aside class="example" title="Definitie van een type transactie">
 <p><b>Type transactie</b><br/>
 id: 			TT_Contractwijziging_door_opdrachtgever<br/>
 omschrijving:		Contractwijziging (door de opdrachtgever)<br/>
@@ -218,7 +218,7 @@ uitvoerende rol:	<u>Opdrachtnemende_contractueel</u><br/>
 <i>typen bijlage (appendixTypes)</i><br/>
 Met deze optionele eigenschap kan een beperking worden opgelegd aan welke typen bijlage bijgevoegd mogen worden aan de type berichten van dit type transactie. Deze eigenschap  is een verwijzing naar een of meerder typen bijlage. Indien deze eigenschap ontbreekt voor een type transactie, mag ieder type bijlage bijgevoegd worden.
 
-P.S. Legacy
+P.S. Legacy<br/>
 <i>resultaat (result)</i><br/>
 Deze eigenschap is optioneel in te stellen, en geldt alleen voor type transactie. Voorbeelden in oude documentatie geven bijvoorbeeld aan dat het resultaat van een transactietype hierin beschreven kan worden. In de praktijk beschrijven raamwerkbouwers dit in de helpinfo van een transactietype.
 De verschillende VISI software pakketten hebben tot op heden nooit iets met dit “result” gedaan en is er geen beschrijving wat voor soort functionaliteit van software verwacht zou worden.  Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker. 
@@ -232,25 +232,27 @@ Vanuit een (1) type wordt verwezen naar type transactie. Dit is het type bericht
 
 In een berichttype wordt bepaald welke inhoud een gebruiker moet invullen en berichttypes worden aan elkaar gekoppeld om een stroomschema binnen een transactie te creëren. De naam van een berichttype is de eerste aanduiding die een gebruiker kiest om een bepaald pad in een stroomschema te doorlopen. Daarmee geeft deze naam ook veel informatie over de status van een transactie op het moment van verzenden van een bericht.
 
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo, code</p>
 
-Specifiek voor bericht types is er hier de optie om de gebruikers uitleg te geven over het specifieke bericht type. Hier kan bijvoorbeeld vermeld worden in welke gevallen voor het specifieke berichttype gekozen moet worden zodat de gebruiker kan begrijpen welke consequenties dit berichttype heeft op de status van de transactie en het te verwachte verder verloop van mogelijke opvolgende berichten. 
-code
+<p>Met helpInfo is er de mogelijkheid om uitleg te geven over het type bericht. Er kan bijvoorbeeld vermeld worden in welke gevallen voor het type gekozen moet worden, en  welke consequenties dit type bericht heeft op de status van de transactie en de opvolgende typen berichten.
+</p>
+
 In te stellen specifieke eigenschappen:
-_appendixMandatory_
-Op een berichttype kan ingesteld worden dat het verplicht is om minimaal één bijlage toe te voegen. Dit is een later toegevoegde gebruikerswens, omdat men het bijvoorbeeld vervelend vond als een bericht met de naam “Document ter acceptatie” per abuis zonder bijlage verzonden kon worden.
+_appendixMandatory_<br/>
+Met deze eigenschap kan ingesteld worden dat het verplicht is om minimaal één bijlage toe te voegen aan een bericht van dit type. Hiermee kan voorkomen worden dat een type bericht met de omschrijving "Document ter acceptatie" zonder bijlage verzonden wordt.
 
 Verwijzingen vanuit het bericht type:
-_Berichthoofdstukken_
-Hiermee wordt de inhoud van een bericht vastgelegd, want in die berichthoofdstukken zitten de informatievelden. De volgorde waarmee de hoofdstukken in het berichttype staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de berichten.
+_berichthoofdstukken (complexElements)_<br/>
+Hiermee wordt de inhoud van een type bericht vastgelegd, want in die berichthoofdstukken zitten de informatievelden. De volgorde waarmee de hoofdstukken in het berichttype staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de berichten.
 Technisch is met de huidige controlemechanismes helaas mogelijk om een bericht te versturen waarin een of meerdere berichthoofdstukken ontbreken, maar dit is niet de bedoeling. Er lopen onderzoeken naar een betere beveiliging hiervoor.
-Bijlage types
+
+_type bijlage_<br/>
 Omdat het binnen een raamwerk mogelijk is om verschillende metadata-formulieren te specificeren voor een bij te voegen bijlage, kan ook per bericht type ingesteld worden welk(e) metadata formulier(en) gekozen kan/kunnen worden voor een bijlage bij een bericht. Als er geen bijlage types gekoppeld zijn, kan ieder bijlage type uit het raamwerk gekozen worden door de gebruiker.
  Verwijzingen naar het bericht type:
 Berichtveld beperkingen
 Bericht in transactie
 
-<aside class="example" title="Type bericht">
+<aside class="example" title="Definitie van een type bericht">
 <p><b>Type bericht</b><br/>
 id: 		MT_AcceptatieVoorstelWijziging<br/>
 description:	Acceptatie van het technisch voorstel (voor contractwijziging)<br/>
@@ -266,11 +268,12 @@ De volgorde waarmee de berichtvelden in het hoofdstuk staan, bepaalt in welke vo
 <p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
 
 Specifiek voor bericht hoofdstukken is er in de beschikbare software vaak nog geen ondersteuning. Toch neigt de markt ernaar dit wel te gaan eisen. Dit zodat bijvoorbeeld duidelijk uitgelegd kan worden welk doel dit deel van het bericht dient en welke weg deze informatie bijvoorbeeld vervolgt of waar deze informatie bijvoorbeeld niet heen gaat. (denk aan informatie die binnen een bepaald domein moet blijven)
+
 In te stellen specifieke eigenschappen:
-_MinOccurs_
+_minOccurs_<br/>
 Hieronder wordt uitgelegd dat er een hoofdstuk in een hoofdstuk kan worden ingevoegd om een tabel te creëren. Door deze setting bijvoorbeeld met 1 of 3 in te vullen op het ingevoegde hoofdstuk(de tabel), moet een gebruiker minimaal 1 of 3 regels in deze tabel aanmaken.
 
-_maxOccurs_
+_maxOccurs_<br/>
 Zoals bij MinOccurs, is het op dezelfde manier ook mogelijk om aan te geven dat een tabel niet meer dan x regels mag bevatten. Door Min en Max op hetzelfde aantal te zetten, is ook een exact aantal aan te maken regels instelbaar.
 
 Verwijzingen vanuit het Hoofdstuk type:
@@ -760,7 +763,7 @@ Geen</p>
 </aside>
 
 <aside class="example" title="Project in transactie">
-<p><b>ProjectType<b><br/>
+<p><b>ProjectType</b><br/>
 id: 		RaamwerkUAVGCGemLutjebroek<br/>
 namespace:	http://www.visi.nl/schemas/20160331/RaamwerkUAVGCGemLutjebroek_v2<br/>
 description:	 Standaard raamwerk UAV GC Gemeente Lutjebroek
