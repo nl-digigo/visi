@@ -346,7 +346,6 @@ User defined type: UDT_Datumveld
 Hiermee wordt het gedrag van het invoerveld bepaald en hoe het gevalideerd moet worden.
 Zo kan een veld een datum/tijdstip/valuta/verplichte tekst/optionele tekst/een exact aantal karakters enzovoorts als vereiste mee krijgen. VISI software biedt doorgaans invoerfunctionaliteit op maat voor de meest voorkomende invoer soorten, zoals een datum keuze venster bij een datum veld en een keuzelijst functie als er een keuze uit lijst met waardes vereist wordt.
 
-
 <p>In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo</p>
 
 Voor veldeigenschappen is nog geen toepassing bekend voor de helpinfo. Het is denkbaar dat deze naast de helpinfo weergegeven zou kunnen worden, om de invul instructie hier te beheren in plaats van in de helpinfo van meerdere veld types die deze eigenschap hebben.
@@ -389,25 +388,22 @@ Verwijzingen naar het Veld eigenschap type:
 Berichtvelden
 Op deze manier krijgt een veld de eigenschappen gekoppeld
 User defined type
-id: 		UDT_Datumveld
-description:	 Datumveld
-Basetype : DATE
+id:		UDT_Datumveld
+description:	Datumveld
+basetype:	DATE
 
-id: 		UDT_VerplichteTekst
-description:	 Verplichte tekst veld
-Basetype : STRING
-XsdRestriction: xs:minLength value="1"
-
+id:		UDT_VerplichteTekst
+description:	Verplichte tekst veld
+basetype:	STRING
+xsdRestriction:	xs:minLength value="1"
 
 ### Berichtveld beperkingen (ElementCondition)
 Hiermee wordt geregeld wanneer een gebruiker een veld wel of niet mag aanpassen, of dat het veld door de software leeg gemaakt moet worden voor een volgend bericht.
-In te stellen globale eigenschappen:
-id
-description
-helpinfo
-Voor berichtveld beperking is geen toepassing bekend voor de helpinfo.
+
+<p>In te stellen globale eigenschappen: id, description, helpinfo</p>
+
 In te stellen specifieke eigenschappen:
-Condition
+condition
 Hiermee wordt het gedrag van een veld bepaald. Er is keuze uit de volgende conditions:
 -	FREE
 Het veld mag aangepast worden
@@ -778,20 +774,8 @@ De DEMO methodologie kent de transactiefases requested, promised, declared, acce
 Buiten scope: Bij het gebruik van de DEMO oplegger van de systematiek worden in ieder geval de transactie fase Promised en  de volgende revoked-types actief gebruikt voor specifiek software gedrag:  Revoke Acceptance Allow, Revoke Promise Allow, Revoke Request Allow en Revoke Statement Allow
 
 <aside class='def'>
-<p>In te stellen globale eigenschappen:<br>
-id<br>
-description<br>
-startDate<br>
-endDate<br>
-state<br>
-dateLaMu<br>
-userLaMu<br>
-language<br>
-category<br>
-helpinfo<br>
-Voor transactie fases is nog geen toepassing bekend voor de helpinfo.<br>
-code
-</p></aside>
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo, code</p>
+</aside>
 
 <aside class='def'>
 <p>In te stellen specifieke eigenschappen:<br>
@@ -803,7 +787,6 @@ Bericht in transactie<br>
 Op deze manier kan een bericht in transactie aan een bepaalde transactiefase gekoppeld worden.
 </p></aside>
   
-  
 ### Type groep (GroupType)
 <aside class='def'>
 <p>De definitie van de groep voor het opslaan van bijlagen verzonden met een bericht binnen een transactie. Op dit moment wordt in de praktijk geen functionaliteit door leveranciers toegekend aan dit element. Een GroupType maakt echter wel onderdeel uit van de structuur van een raamwerk.
@@ -812,8 +795,8 @@ Op deze manier kan een bericht in transactie aan een bepaalde transactiefase gek
 <div class="issue" data-number="139"></div>   
  
 <aside class='def'>
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo (Voor groep types is nog geen toepassing bekend voor de helpinfo.
-</p></aside>
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+</aside>
 
 <aside class='def'>
 <p>In te stellen specifieke eigenschappen:
@@ -826,72 +809,58 @@ Op deze manier kan een bericht in transactie aan een bepaalde transactiefase gek
 <aside class='def'> 
 <p>Verwijzingen naar GroepTypes:<br>
 Bericht in transactie
-</p></aside>
-  
+</p></aside>  
 
 ### Globale eigenschappen
 
 Alle elementen…..
 
-
-#### <dfn>`Id`
+#### <dfn>`id`
   
 Ieder element in een raamwerk heeft een Id. Hiermee worden de relaties technisch binnen en buiten het raamwerk gelegd. Een hoofdvereiste is dat een Id uniek is binnen het raamwerk. Een voorbeeld van relaties binnen het raamwerk is bijvoorbeeld het koppelen van een veld (SimpleElement) aan een berichthoofdstuk (ComplexElement). Een voorbeeld van een koppeling buiten een raamwerk is de Rol die aangemaakt wordt in een Projectspcifiek bericht obv de rol in het raamwerk of een veldnaam in een VISI bericht enz.
 Een id kan een niet leesbare waarde zijn zoals TR_532856857120. Op dit moment maken bijna alle raamwerkschrijvers daar iets begrijpbaars van, zoals TR_Acceptatiedocument, zodat bijvoorbeeld de originele XML VISI berichten ook zonder visi software te lezen en begrijpen zijn.
 
-
-#### <dfn>`Description`
+#### <dfn>`description`
   
 Dit is de leesbare naam van een element. Deze waarde wordt meestal getoond aan de gebruikers. 
-  
 
 #### <dfn>`startDate`
-  
-Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. De verschillende VISI software pakketten hebben tot op heden nooit iets met deze “startDate” gedaan. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker. 
+
+Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. De verschillende VISI software pakketten hebben tot op heden nooit iets met deze “startDate” gedaan. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker. 
 Bij het opstellen van de standaard was dit de verder nog onuitgewerkte gedachte: “Startdatum en tijd van geldigheid van deze objectinstantie.” 
- 
 
 #### <dfn>`endDate`
   
 Zie startDate
 
-
 #### <dfn>`state`
   
-Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Mogelijke waarden voor dit veld zijn: “passive” en “active”. Op dit moment zijn er toepassingen van software leveranciers die de implementatie in de documentatie (nog) niet gehaald hebben. Voorbeelden zijn het wel of niet tonen/aanbieden van elementen of transacties en in het project specifiek bericht een rol van een persoon (gedeeltelijk)uitschakelen als er geen opvolger is.
-
+Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. Mogelijke waarden voor dit veld zijn: “passive” en “active”. Op dit moment zijn er toepassingen van software leveranciers die de implementatie in de documentatie (nog) niet gehaald hebben. Voorbeelden zijn het wel of niet tonen/aanbieden van elementen of transacties en in het project specifiek bericht een rol van een persoon (gedeeltelijk)uitschakelen als er geen opvolger is.
 
 #### <dfn>`dateLaMu`
-  
-Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Raamwerkschrijvers gebruiken dit om in de XML file aan te geven wanneer er als laatste een wijziging aan een element is gemaakt.(date Last Mutation) Tot nu toe zijn er geen verwachtingen of bekende toepassingen in VISI software. Wel in raamwerk opstel software om dit veld  automatisch bij te werken. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
 
+Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. Raamwerkschrijvers gebruiken dit om in de XML file aan te geven wanneer er als laatste een wijziging aan een element is gemaakt.(date Last Mutation) Tot nu toe zijn er geen verwachtingen of bekende toepassingen in VISI software. Wel in raamwerk opstel software om dit veld  automatisch bij te werken. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
 
 #### <dfn>`userLaMu`
   
-Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Raamwerkschrijvers gebruiken dit om in de XML file aan te geven wie er als laatste een wijziging aan een element heeft uitgevoerd.(user Last Mutation) Tot nu toe zijn er geen verwachtingen of bekende toepassingen in VISI software. Wel in raamwerk opstel software om dit veld  automatisch bij te werken. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
-
+Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. Raamwerkschrijvers gebruiken dit om in de XML file aan te geven wie er als laatste een wijziging aan een element heeft uitgevoerd.(user Last Mutation) Tot nu toe zijn er geen verwachtingen of bekende toepassingen in VISI software. Wel in raamwerk opstel software om dit veld  automatisch bij te werken. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
 
 #### <dfn>`language`
   
-Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Het idee was om hier de taal van het element mee vast te leggen, maar tot op heden hebben software leveranciers hier niets mee gedaan en is er geen beschrijving wat voor soort functionaliteit van software verwacht zou worden. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
-
+Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. Het idee was om hier de taal van het element mee vast te leggen, maar tot op heden hebben software leveranciers hier niets mee gedaan en is er geen beschrijving wat voor soort functionaliteit van software verwacht zou worden. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
 
 #### <dfn>`category`
   
-Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Het idee was om hier bepaalde onderdelen mee te kunnen categoriseren, maar tot op heden hebben software leveranciers hier niets mee gedaan en is er geen beschrijving wat voor soort functionaliteit van software verwacht zou worden. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
-  
+Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. Het idee was om hier bepaalde onderdelen mee te kunnen categoriseren, maar tot op heden hebben software leveranciers hier niets mee gedaan en is er geen beschrijving wat voor soort functionaliteit van software verwacht zou worden. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
 
 #### <dfn>`helpInfo`
   
-Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Dit wordt veelvuldig gebruikt om gebruikers aanvullende uitleg te geven over raamwerk elementen. Bij bepaalde elementen is functionaliteit in VISI software verplicht gesteld. Zie de verschillende elementen voor voorbeelden.
-  
+Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. Dit wordt veelvuldig gebruikt om gebruikers aanvullende uitleg te geven over raamwerk elementen. Bij bepaalde elementen is functionaliteit in VISI software verplicht gesteld. Zie de verschillende elementen voor voorbeelden.
 
 #### <dfn>`code`
   
-Dit attribuut is optioneel in te stellen  op veel elementen in een raamwerk. Voorbeelden in oude documentatie geven bijvoorbeeld aan dat een raamwerk element de code “EAN 33156” kan krijgen, maar er wordt ook gesproken over transactie coderingen zoals T1.1 / T2 enz. 
-
+Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. Voorbeelden in oude documentatie geven bijvoorbeeld aan dat een raamwerk element de code “EAN 33156” kan krijgen, maar er wordt ook gesproken over transactie coderingen zoals T1.1 / T2 enz. 
 
 De verschillende VISI software pakketten hebben tot op heden nooit iets met deze “code” gedaan en is er geen beschrijving wat voor soort functionaliteit van software verwacht zou worden.  Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker. 
 
-
-In de praktijk zien we trouwens dat als een raamwerk schrijver een transactie code “T3” bij een transactie wil benoemen, dat deze code dan vooraan in de naam van de transactie (description)  bijgevoegd wordt, waardoor de description dan bijvoorbeeld wordt: “T3: Contractwijziging”
+In de praktijk zien we trouwens dat als een raamwerk schrijver een transactie code "T3" bij een transactie wil benoemen, dat deze code dan vooraan in de naam van de transactie (description)  bijgevoegd wordt, waardoor de description dan bijvoorbeeld wordt: "T3: Contractwijziging".
