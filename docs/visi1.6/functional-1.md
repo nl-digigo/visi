@@ -436,7 +436,7 @@ ComplexElement: CE_Tabel_Werkpakketten
 simpleElement: SE_WPkostenpercentage
 messageInTransaction: mitt_265
 
-### Bericht in transactie (MessageInTransactionType)
+### Volgorde van type berichten (MessageInTransactionType)
 De vormgeving van de opvolging van berichten zodat een stroomschema gevolgd kan worden wordt geregeld in het bericht in transacties type (vanaf hier aangeduid als “MITT”). 
 De MITT’s koppelen berichttypes aan elkaar binnen- en tussen transacties.
 Als een bericht type op meerdere plekken in een transactie voorkomt, bijvoorbeeld 1 keer als start bericht en 1 keer als reactie, dan bestaan er 2 MITT’s. Beiden verwijzen naar de transactie en het bericht type, alleen verschilt de koppeling tussen de MITT’s.
@@ -445,18 +445,24 @@ Als een bericht type op meerdere plekken in een transactie voorkomt, bijvoorbeel
 
 In te stellen specifieke eigenschappen: 
 requiredNotify
+
 Op het moment wordt aan het element requiredNotify geen betekenis toegekend.
+
 received
 Boolean waarde die aangeeft of het vorige bericht ontvangen zou moeten zijn. In de praktijk wordt dit element niet gebruikt.
-Send
+
+send
 Boolean waarde die aangeeft of het huigie bericht inmiddels verstuurd zou moeten zijn. In de
 praktijk wordt dit element niet gebruikt.
+
 initiatorToExecutor
 Boolean waarde die aangeeft welke richting het bericht in de transactie heeft. Bij true gaat het bericht vanaf de persoon die de transactie gestart heeft naar degene die ontvanger was van het eerste bericht van de transactie.
 OPTIONAL??? Zie exp_2
+
 openSecondaryTransactionsAllowed
 Optional Boolean waarde die de mogelijkheid aangeeft of secundaire transacties nog niet afgerond hoeven te zijn voordat met de primaire transactie kan worden verder gegaan. De interpretatie voor "TRUE" is dat niet alle instanties van secundaire transacties hoeven te zijn afgerond voordat met de primaire transactie kan worden verder gegaan. Als de waarde "FALSE" is dienen alle instanties van secundaire transacties te worden afgerond voordat de primaire transactie hervat kan worden. Indien openSecondaryTransactionsAllowed niet is gedefinieerd wordt dit geïnterpreteerd als "TRUE".
 TODO: terugkeerantwoorden schijnen wel door te mogen.. Opzoeken!!!!!!!! ARNE met Jos!!!
+
 firstMessage
 Optional Boolean waarde die bedoeld is om onbetwistbaar vast te kunnen stellen dat een bericht alleen gebruikt kan worden als eerste bericht van een subtransactie. Gebruik van een MITT met deze instelling resulteert dus altijd in een nieuwe subtransactie.
 
@@ -470,54 +476,76 @@ Op deze manier ligt vast hoe de stroom van berichten verloopt. Doordat MITT’s 
 -	Een start van een nieuwe transactie op basis van de MITT in deze transactie. Dit noemen we ook wel een “Subtransactie” starten. Deze MITT moet altijd de eigenschap “firstmessage” hebben, anders kan er geen nieuwe transactie gestart worden en doet de previous koppeling waarschijnlijk niets.
 -	Een terugkering vanuit de subtransactie naar de bovenliggende transactie. 
 Deze optie is alleen toegestaan vanuit een bericht in een subtransactie terug naar de transactie waaruit de subtransactie is opgestart. Dit bericht in de bovenliggende transactie mag niet de eigenschap “firstmessage” hebben, want dan wordt er een subtransactie onder de subtransactie aangemaakt.
+
 Transactie
 Een MITT is altijd aan een transactie gekoppeld. Minimaal plaatst een MITT dus een berichttype in een transactie.
+
 Transactiefase
 Deze eigenschap is bedoeld om de transactie fases van het DEMO universele transactie patroon mee aan te geven. Hier wordt nog weinig gebruik van gemaakt. De eerste DEMO oplegger op de VISI systematiek gebruikt deze eigenschap wel als essentieel onderdeel.
+
 Groeptypes
 Er kan een groep ingevuld worden, maar hier wordt tot op dit moment niets mee gedaan.
+
 Bijlage types
 Dit is de meest specifieke manier om te benoemen welke metadata set (berichthoofdstuk) aan berichtvelden ingevuld moet worden voor een bijlage die bij een bericht wordt toegevoegd. 
+
 Bericht in transactie beperkingen
 Voorwaardelijkheid wanneer je dit bericht mag kiezen.
 
 Verwijzingen naar het Bericht in transactie type:
 Berichtveld beperkingen (elementcondition)
+
 Bericht in transactie beperkingen
 Voorwaardelijkheid wanneer je een ander bericht mag kiezen op basis van de aanwezigheid van dit bericht.
 Voorgaand(previous) bericht in transactie
+
 Als dit bericht een voorgaand bericht is voor het bericht waarop het ingesteld staat
-MessageInTransactionType
-id: 		mit40170_T7
-initiatorToExecutor:	 true
-firstMessage: false
-MessageType: MS_AcceptatieVoorstelWijziging
-Previous MessageInTransactionType: mitt563
-TransactionType: TR_ContractwijzigingOG
+
+<aside class="example" title="Definitie van de volgorde van type berichten">
+<p><b>MessageInTransactionType</b><br/>
+id:			mit40170_T7
+initiatorToExecutor:	true
+firstMessage:		false
+messageType:		MS_AcceptatieVoorstelWijziging
+previous:		mitt563
+transactionType:	TR_ContractwijzigingOG
 MessageInTransactionTypeCondition: mtc1
+</p>
+</aside>
+
 
 
 #### Transacties koppelen tot één procedure (m.a.w. hoofd- & sub-transacties)
 WAARSCHIJNLIJK DUBBEL??? ONTDUBBELEN
 In paragraaf 2.7 staat beschreven dat een type transactie uit type berichten bestaat, en dat de volgorde van de berichten in een transactie gedefinieerd wordt met een object bericht in transactie. Ieder bericht in transactie heeft een verwijzing naar het vorige bericht in transactie. Deze verwijzing is echter niet beperkt door de transactie. Met andere woorden het vorige bericht in transactie hoeft niet een bericht uit dezelfde transactie te zijn, het kan ook een bericht uit een andere transactie zijn. Hierdoor worden transactie feitelijk aan elkaar gekoppeld. Wel gelden er specifieke regels hoe deze koppeling van transactie gemodelleerd dient te worden in het raamwerk.
+
 Hoe een koppeling aangebracht wordt tussen twee transacties wordt uitgelegd aan de hand van een wijzigingsprocedure tussen drie rollen. Dit zijn de rollen: opstellende rol, accorderende rol en adviserende rol. Er is een transactie tussen de opstellende rol en accorderende rol. Deze transactie heeft als doel om tot een geaccordeerde wijziging te komen. Er is een transactie tussen de accorderende rol en adviserende rol. Deze transactie heeft als doel on tot een advies te komen over de opgestelde wijziging. De accorderende rol heeft baat bij een koppeling tussen deze twee transacties, waardoor één procedure voor het opstellen, adviseren en accorderen van een wijziging ontstaat tussen drie rollen: opstellende, adviserende en accorderende rol.
+
 De transactie Accorderen_Wijziging tussen opstellende rol en accorderende rol bestaat uit drie berichten: Voorstel_tot_Wijziging, Akkoord_Wijziging, Niet_Akkoord_Wijziging. Het bericht Voorstel_tot_Wijziging is het eerste bericht van de transactie. Het bericht in transactie van Voorstel_tot_Wijziging heeft GEEN vorig bericht in transactie. De berichten in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging hebben wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Voorstel_tot_Wijziging.
-Bericht in Transactie
+
+<aside class="example" title="Definitie van de volgorde van type berichten">
+<p><b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Vorig:		 	
 Bericht:		Voorstel_tot_Wijziging
 Transactie:		Accorderen_Wijziging
-Bericht in Transactie
+
+<p><b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ 6bdae158-a6dc-491b-a9ea-692fd419a828
 Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Bericht:		Akkoord_Wijziging
 Transactie:		Accorderen_Wijziging
-Bericht in Transactie
+
+<p><b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ 4e5569b7-0c6a-4976-811d-9d9189b8b1df
 Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Bericht:		Niet_Akkkord_Wijziging
 Transactie:		Accorderen_Wijziging
+</p>
+</aside>
+
 De transactie Adviseren_Wijziging tussen accorderende rol en adviserende rol en bestaat uit twee berichten: Verzoek_Advies_Wijziging en Advies_Wijziging. Het bericht Verzoek_Advies_Wijziging is het eerste bericht van de transactie. Het bericht in transactie van Verzoek_Advies_Wijziging heeft GEEN vorig bericht in transactie. Het bericht in transactie van Advies_Wijziging heeft wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Verzoek_Advies_Wijziging.
+
 Bericht in Transactie
 Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
 Vorig:		 	
@@ -816,8 +844,8 @@ Bericht in transactie
 Alle elementen…..
 
 #### <dfn>`id`
-  
-Ieder element in een raamwerk heeft een Id. Hiermee worden de relaties technisch binnen en buiten het raamwerk gelegd. Een hoofdvereiste is dat een Id uniek is binnen het raamwerk. Een voorbeeld van relaties binnen het raamwerk is bijvoorbeeld het koppelen van een veld (SimpleElement) aan een berichthoofdstuk (ComplexElement). Een voorbeeld van een koppeling buiten een raamwerk is de Rol die aangemaakt wordt in een Projectspcifiek bericht obv de rol in het raamwerk of een veldnaam in een VISI bericht enz.
+
+Ieder element in een raamwerk heeft een unieke identificatie (id). Hiermee worden de relaties technisch binnen en buiten het raamwerk gelegd. Een hoofdvereiste is dat een Id uniek is binnen het raamwerk. Een voorbeeld van relaties binnen het raamwerk is bijvoorbeeld het koppelen van een veld (SimpleElement) aan een berichthoofdstuk (ComplexElement). Een voorbeeld van een koppeling buiten een raamwerk is de Rol die aangemaakt wordt in een Projectspcifiek bericht obv de rol in het raamwerk of een veldnaam in een VISI bericht enz.
 Een id kan een niet leesbare waarde zijn zoals TR_532856857120. Op dit moment maken bijna alle raamwerkschrijvers daar iets begrijpbaars van, zoals TR_Acceptatiedocument, zodat bijvoorbeeld de originele XML VISI berichten ook zonder visi software te lezen en begrijpen zijn.
 
 #### <dfn>`description`
