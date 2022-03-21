@@ -213,6 +213,7 @@ helptekst:		Met dit transactie type kan opdrachtgever een contractwijziging aan 
 initierende rol:	<u>Opdrachtgevende_contractueel</u><br/>
 uitvoerende rol:	<u>Opdrachtnemende_contractueel</u><br/>
 </p>
+</aside>
 
 <i>typen bijlage (appendixTypes)</i><br/>
 Met deze optionele eigenschap kan een beperking worden opgelegd aan welke typen bijlage bijgevoegd mogen worden aan de type berichten van dit type transactie. Deze eigenschap  is een verwijzing naar een of meerder typen bijlage. Indien deze eigenschap ontbreekt voor een type transactie, mag ieder type bijlage bijgevoegd worden.
@@ -236,10 +237,11 @@ In een berichttype wordt bepaald welke inhoud een gebruiker moet invullen en ber
 Specifiek voor bericht types is er hier de optie om de gebruikers uitleg te geven over het specifieke bericht type. Hier kan bijvoorbeeld vermeld worden in welke gevallen voor het specifieke berichttype gekozen moet worden zodat de gebruiker kan begrijpen welke consequenties dit berichttype heeft op de status van de transactie en het te verwachte verder verloop van mogelijke opvolgende berichten. 
 code
 In te stellen specifieke eigenschappen:
-appendixMandatory
+_appendixMandatory_
 Op een berichttype kan ingesteld worden dat het verplicht is om minimaal één bijlage toe te voegen. Dit is een later toegevoegde gebruikerswens, omdat men het bijvoorbeeld vervelend vond als een bericht met de naam “Document ter acceptatie” per abuis zonder bijlage verzonden kon worden.
+
 Verwijzingen vanuit het bericht type:
-Berichthoofdstukken
+_Berichthoofdstukken_
 Hiermee wordt de inhoud van een bericht vastgelegd, want in die berichthoofdstukken zitten de informatievelden. De volgorde waarmee de hoofdstukken in het berichttype staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de berichten.
 Technisch is met de huidige controlemechanismes helaas mogelijk om een bericht te versturen waarin een of meerdere berichthoofdstukken ontbreken, maar dit is niet de bedoeling. Er lopen onderzoeken naar een betere beveiliging hiervoor.
 Bijlage types
@@ -255,6 +257,7 @@ description:	Acceptatie van het technisch voorstel (voor contractwijziging)<br/>
 helpinfo:	Met dit bericht accepteert de opdrachtgever het technisch voorstel, waarna de opdrachtnemer verder kan met een fnancieel voorstel / offerte voor de contractwijziging.<br/>
 elementen: 	<u>CE_ContractwijzigingBasis</u>, <u>CE_ContractwijzigingVoorstel</u>, <u>CE_ContractwijzigingOpmerkingen</u><br/>
 </p>
+</aside>
 	
 ### Berichthoofdstukken (ComplexElementType)
 De berichthoofdstukken worden gebruikt om invoer velden in berichten eenvoudig te kunnen beheren in een raamwerk en om logische onderverdelingen in berichten te kunnen aanbrengen. Doordat in berichten alleen de verschillende hoofdstukken benoemd zijn, kan eenvoudig een bepaald veld toegevoegd worden aan-, of verwijderd worden uit- een hele groep berichten die dat hoofdstuk bevatten.
@@ -264,11 +267,12 @@ De volgorde waarmee de berichtvelden in het hoofdstuk staan, bepaalt in welke vo
 
 Specifiek voor bericht hoofdstukken is er in de beschikbare software vaak nog geen ondersteuning. Toch neigt de markt ernaar dit wel te gaan eisen. Dit zodat bijvoorbeeld duidelijk uitgelegd kan worden welk doel dit deel van het bericht dient en welke weg deze informatie bijvoorbeeld vervolgt of waar deze informatie bijvoorbeeld niet heen gaat. (denk aan informatie die binnen een bepaald domein moet blijven)
 In te stellen specifieke eigenschappen:
-MinOccurs
+_MinOccurs_
 Hieronder wordt uitgelegd dat er een hoofdstuk in een hoofdstuk kan worden ingevoegd om een tabel te creëren. Door deze setting bijvoorbeeld met 1 of 3 in te vullen op het ingevoegde hoofdstuk(de tabel), moet een gebruiker minimaal 1 of 3 regels in deze tabel aanmaken.
 
-maxOccurs
-Zoals bij MinOccurs, is het op dezelfde manier ook mogelijk om aan te geven dat een tabel niet meer dan x regels mag bevatten. Door Min en Max op hetzelfde aantal te zetten, is ook een exact aantal aan te maken regels instelbaar
+_maxOccurs_
+Zoals bij MinOccurs, is het op dezelfde manier ook mogelijk om aan te geven dat een tabel niet meer dan x regels mag bevatten. Door Min en Max op hetzelfde aantal te zetten, is ook een exact aantal aan te maken regels instelbaar.
+
 Verwijzingen vanuit het Hoofdstuk type:
 Berichthoofdstukken (Tabelvorming)
 Het is toegestaan om in een hoofdstuk naast berichtvelden, ook een ander hoofdstuk te benoemen. De afgesproken werking hiervan is dat het hoofdstuk in het “bovenliggende” hoofdstuk weergegeven wordt als tabel. De bericht velden in het ingevoegde hoofdstuk worden dan als kolommen aangeboden.
@@ -452,12 +456,7 @@ initiatorToExecutor
 Boolean waarde die aangeeft welke richting het bericht in de transactie heeft. Bij true gaat het bericht vanaf de persoon die de transactie gestart heeft naar degene die ontvanger was van het eerste bericht van de transactie.
 OPTIONAL??? Zie exp_2
 openSecondaryTransactionsAllowed
-Optional Boolean waarde die de mogelijkheid aangeeft of secundaire transacties nog niet afgerond
-hoeven te zijn voordat met de primaire transactie kan worden verder gegaan. De interpretatie voor
-"TRUE" is dat niet alle instanties van secundaire transacties hoeven te zijn afgerond voordat met de
-primaire transactie kan worden verder gegaan. Als de waarde "FALSE" is dienen alle instanties van
-secundaire transacties te worden afgerond voordat de primaire transactie hervat kan worden. Indien
-openSecondaryTransactionsAllowed niet is gedefinieerd wordt dit geïnterpreteerd als "TRUE".
+Optional Boolean waarde die de mogelijkheid aangeeft of secundaire transacties nog niet afgerond hoeven te zijn voordat met de primaire transactie kan worden verder gegaan. De interpretatie voor "TRUE" is dat niet alle instanties van secundaire transacties hoeven te zijn afgerond voordat met de primaire transactie kan worden verder gegaan. Als de waarde "FALSE" is dienen alle instanties van secundaire transacties te worden afgerond voordat de primaire transactie hervat kan worden. Indien openSecondaryTransactionsAllowed niet is gedefinieerd wordt dit geïnterpreteerd als "TRUE".
 TODO: terugkeerantwoorden schijnen wel door te mogen.. Opzoeken!!!!!!!! ARNE met Jos!!!
 firstMessage
 Optional Boolean waarde die bedoeld is om onbetwistbaar vast te kunnen stellen dat een bericht alleen gebruikt kan worden als eerste bericht van een subtransactie. Gebruik van een MITT met deze instelling resulteert dus altijd in een nieuwe subtransactie.
