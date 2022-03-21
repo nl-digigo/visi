@@ -21,11 +21,9 @@ Het project specifiek maken van de communicatiepatronen heeft nog een verdieping
 
 <div class="issue" data-number="141"></div> 
 
-
 ## Project specifiek bestand
 
 Voordat communicate conform de open standaard VISI kan plaatsvinden, moet een project ingericht worden met een project specifiek bestand (psb) en een raamwerk.
-
 
 ### Project
 
@@ -41,7 +39,6 @@ Omschrijving:            Realisatie van metrolijn 47 inclusief 7 nieuwe stations
 Startdatum:              23-12-2020 14:59<br>
 Einddatum:               20-05-2022 07:08</p>
 </aside>
-
 
 ### Persoon
 
@@ -73,7 +70,6 @@ Gebruikersnaam:         ldupanloup
 <p class="note" title="Identificatie is niet globaal">
 N.B. Indien een persoon aan twee projecten werkt, kan de unieke identificatie van deze persoon per project verschillend zijn. Er is geen sprake van een globale unieke identificatie, maar een unieke identificatie binnen een project.</p>
 
-
 ### Organisatie
 
 Personen voeren een activiteit in een project uit namens een organisatie. In een zakelijke context werken de mensen aan een project voor een organisatie, daarom is vastlegging van organisaties belangrijk. Ook iedere organisatie in een project heeft een unieke identificatie. Naast de identificatie heeft een organisatie een naam en een afkorting. De naam is een aanvulling op de unieke identificatie, en is bedoeld voor eenvoudigere herkenning (door mensen). De afkorting heeft een functioneel en technisch doel. Deze eigenschap is een drie letterige afkorting van de organisatie, die binnen het project uniek is. 
@@ -91,12 +87,11 @@ Contactpersoon:        <u>_0c585186-fa97-4de7-8fe0-5c4bee3afead</u><br>
 
 <p class="note" title="Organisatie heeft een adres">
 Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres, maar een digitaal adres. Dit digitale adres heeft een technisch doel, zie paragraaf https://bimloket.github.io/visi/visi1.6/#soap over SOAP protocol.</p>
-<div class="issue" data-number="136"></div> 
-
+<div class="issue" data-number="136"></div>
 
 ### Rol
 
-De differentiatie in autorisatie, taken en verantwoordelijkheden in een project worden expliciet gemaakt middels het definiëren van verschillende rollen. Een rol staat voor samenhangende autorisatie, taken en verantwoordelijkheden voor het uitvoeren van activiteiten, die een persoon meestal tijdelijk op zich neemt, en die (afwisselend) door verschillende personen kunnen worden vervuld. Van een rol worden zeer beperkte eigenschappen vastgelegd. Ook iedere rol heeft een unieke identificatie, aangevuld met een naam en omschrijving. Deze naam en omschrijving behoeven niet uniek te zijn, en zijn een aanvulling op de unieke identificatie bedoeld voor toelichting en zorgt voor eenvoudigere herkenning van de rol (door mensen).
+De differentiatie in autorisatie, taken en verantwoordelijkheden in een project worden expliciet gemaakt middels het definiëren van verschillende rollen. Een rol staat voor samenhangende autorisatie, taken en verantwoordelijkheden voor het uitvoeren van activiteiten, die een persoon meestal tijdelijk op zich neemt, en die (afwisselend) door verschillende personen kunnen worden vervuld. Van een rol wordt een zeer beperkte aantal eigenschappen vastgelegd. Iedere rol heeft een unieke identificatie, aangevuld met een naam en omschrijving. Deze naam en omschrijving behoeven niet uniek te zijn, en zijn een aanvulling op de unieke identificatie bedoeld voor toelichting en betekenis geven aan de rol. De naam en omschrijving zorgen voor eenvoudigere herkenning van de rol (door mensen).
 
 <aside class="example" title="Gegevens van een rol (in een project specifiek bestand)">
 <p><b>Rol</b><br>
@@ -106,8 +101,13 @@ Omschrijving:          Deze rol geeft een onafhankelijke beoordeling op basis va
 </p></aside>
 
 <p class="note" title="Rol versus functie">
-Een rol is fundamenteel anders dan een functie. Een essentieel verschil is dat rollen een afspiegeling zijn van het werk dat georganiseerd wordt, terwijl functies een afspiegeling zijn van mensen die georganiseerd worden (in een organisatie). Een project heeft geen functie Afdelingshoofd, maar wel de rollen Beoordelende, Adviserende.</p>
+Een rol is fundamenteel anders dan een functie. Verantwoordelijkheden en taken zijn **niet** toegekend aan functionarissen van een organisatie, maar aan rollen. Een essentieel verschil is dat rollen een afspiegeling zijn van _het werk_ dat georganiseerd wordt, terwijl functies een afspiegeling zijn van _mensen_ die georganiseerd worden (in een organisatie). Een project heeft geen functie "Afdelingshoofd", maar wel de rollen "Beoordelende", "Adviserende".
 
+Er ligt lang niet altijd een één-op-één relatie tussen organisaties en rollen. Er zijn projecten waarin één partij meerdere rollen invult en er zijn ook projecten waarin verschillende organsiaties dezelfde rol hebben. Te denken valt aan een gemeente die zowel de initiatiefnemende rol als opdrachtgevende rol heeft. Of
+een ingenieursbureau, die de adviserende rol vervult. Met in hetzelfde project een accountantskantoor, die ook de adviserende rol invult, maar dan op een ander  vakgebied.
+
+Op basis van de rolverdeling tussen organisaties kunnen taken en verantwoordelijkheden worden verdeeld aan personen.
+</p>
 
 ### Relatie tussen Persoon, Rol en Organisatie
 
@@ -124,16 +124,13 @@ Organisatie:           <u>_87e9144d-04d6-4a5f-bdcb-b50e96c2b498</u>
 <p class="note" title="Relatie persoon en rol">
 Een persoon kan meerdere rollen hebben. Een rol kan door meerdere personen vervuld worden.</p>
 
-
 ### Personele wisselingen
 
 In bijna ieder project treden wijzigingen met betrekking tot de personele invulling. Dit kan zijn in de vorm van tijdelijke vervanging in verband met afwezigheid of vakanties. Of een permanente vervanging indien de projectmedewerkers bij een andere organisatie gaat werken of met pensioen gaat. 
 
-
 #### Permanente vervanging
 
 Permanente vervanging wordt ook wel opvolging genoemd. De opvolger is een geautoriseerd persoon, die de rol, taken en verantwoordelijkheid overneemt van de (initieel) geautoriseerde persoon. Voor de traceerbaarheid en transparantie kunnen er nooit geautoriseerde personen verwijderd worden. Vandaar dat de opvolging expliciet gemaakt wordt.
-
 
 Permanente vervanging is altijd op rolniveau. Bij de genoemde sleutel van Persoon in Rol van Organisatie wordt deze permanente vervanger vastgelegd middels een verwijzing naar de unieke identificatie van een persoon, een rol en een organisatie.  De relatie is van geautoriseerde naar de opvolger. Hierbij dienen de rollen exact overeen te komen.
 
@@ -155,7 +152,6 @@ Organisatie:            <u>_2ba76318-83ab-4a6e-9257-ea91045717d2</u>
 Heeft een persoon (in een rol van een organisatie) een opvolger, dan betekent dit dat de persoon niet langer geautoriseerd is om te handelen vanuit deze rol. Alleen de opvolger is geautoriseerd.
 Een persoon (in een rol van een organisatie) kan maximaal één (1) opvolger hebben.
 
-
 #### Tijdelijke vervanging 
  
 Een tijdelijke vervanging kan ook gelezen worden als een (tijdelijke) machtiging. De tijdelijke vervanging is een autorisatie voor een derde persoon, zodat deze persoon mag handelen uit naam van de geautoriseerde persoon. Dit kan een tijdelijk karakter hebben, of een machtiging zijn gedurende de looptijd van het project.
@@ -174,9 +170,7 @@ Vervangt:              <u><font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7d
 
 Voert een gemachtigd persoon (in een rol van een organisatie) een handeling uit, dan is dit altijd uit naam van de geautoriseerde persoon. Bij een handeling wordt de geautoriseerde vastgelegd en de gemachtigde. De geautoriseerde / gemachtigde kan antwoorden op transacties van de rol van de geautoriseerde, ongeacht wie de transactie gestart heeft. Indien een machtiging ongedaan gemaakt wordt, kan alleen de geautoriseerde de handeling afmaken. Een machtiging mag namelijk wel ongedaan gemaakt worden, omdat machtigingen een tijdelijk karakter kunnen hebben.
 
-
 Als een gemachtigde iets verstuurt moet traceerbaar zijn dat de gemachtigde  iets verstuurd heeft, en namens wie dit verstuurd is.
-
 
 Een persoon kan gemachtigd zijn om namens meerdere geautoriseerde personen (in rol van organisatie) te handelen. Meerdere personen kunnen gemachtigd zijn om namens één geautoriseerde persoon (in rol van organisatie) te handelen.
 
@@ -188,7 +182,37 @@ De projectcommunicatie middels het versturen en beantwoorden van berichten kan s
 
 ## Raamwerk / Communicatiesjabloon van een project
 
-Het raamwerk is het communicatiesjabloon van een project. Alle communicatie moet verlopen conform dit sjabloon. In het sjabloon staat gedefinieerd welke informatie overgedragen kan worden tussen personen. Het sjabloon dient tevens ter validatie van de communicatie.
+Het raamwerk is het communicatiesjabloon van een project. Alle communicatie moet verlopen conform dit sjabloon. In het sjabloon staat gedefinieerd welke type informatie overgedragen kan worden tussen personen. In het sjabloon is vastgelegd welke type informatie overgedragen kan worden (wat), tussen welke type rollen (wie), en wanneer (hoe). 
+
+Het sjabloon dient tevens ter validatie van de communicatie. Zoals de naam aangeeft is het een sjabloon waaraan de communicatie moet voldoen. Op basis van dit sjabloon kan geverifieerd worden of de verstrekte informatie voldoet aan de afspraken. 
+
+### Type rol (RoleType)
+Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
+
+<p>Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description)</i></p> 
+
+<aside class="example" title="Gegevens van een type rol (in een raamwerk)">
+<p><b>Rol</b><br>
+unieke identificatie:	RT_Beoordelende_rol<br>
+omschrijving:		Beoordelende rol
+</p></aside>
+
+<p>Optionele eigenschappen zijn: <i>startDate, endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, responsibilityScope, responsibilityTask, responsibilitySupportTask, responsibilityFeedback</i></p>
+
+Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
+
+_responsibilityScope_
+Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd
+			
+_responsibilityTask_
+Taken die voortkomen uit de verantwoordelijkheden van de betreffende rol		
+
+_responsibilitySupportTask_
+Taken die worden uitgevoerd om andere rollen te ondersteunen. Denk hierbij bijvoorbeeld aan gedelegeerde verantwoordelijkheden				
+
+_responsibilityFeedback_
+Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen
+
 
 ### Informatie-overdracht conform type transactie (TransactionType)
 
@@ -196,18 +220,17 @@ Communicatie vindt in een project altijd plaats op basis van een type transactie
 
 Van een type transactie wordt een aantal eigenschappen vastgelegd. Niet alle eigenschappen zijn even belangrijk, daarom volgt een opdeling of eigenschappen verplicht of optioneel zijn. Een optionele eigenschap kan belangrijk zijn, ondanks dat de eigenschap niet verplicht is. Een voorbeeld hiervan is de eigenschap helptekst (helpInfo). helpInfo is beschikbaar om de nadere, uitgebreide uitleg te geven over het doel en gebruik van het type transactie. Ook kan er beschreven worden waarom bepaalde rollen met elkaar communiceren.
 
-<p>Verplichte eigenschappen zijn: <i>id, description, initiator, executor</i></p> 
-<p>Optionele eigenschappen zijn: <i>startDate, endDate, code, result, state, dateLaMu, userLaMu, language, subtransactions, appendixTypes</i></p>
+<p>Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description), initierende rol (initiator), uitvoerende rol (executor)</i></p> 
 
 <i>initierende rol (initiator)</i><br/>
-Dit is een verwijzing naar een type rol. Deze eigenschap legt vast welke type rol een persoon moet hebben om een transactie van dit type te starten.
+Dit is een verwijzing naar een type rol. Deze eigenschap legt vast welke type rol een persoon moet hebben om een transactie van dit type te starten. Met starten wordt in dit kader hetzelfde bedoelt als initieren. 
 
 <i>uitvoerende rol (executor)</i><br/>
-Dit is ook een verwijzing naar een type rol. Deze eigenschap legt echter vast welke type rol een persoon moet hebben om een eerste bericht in dit type transactie te mogen ontvangen.
+Dit is ook een verwijzing naar een type rol. Deze eigenschap legt echter vast welke type rol een persoon moet hebben om een eerste bericht in dit type transactie te mogen ontvangen. Feitelijk is dit de type rol die het resultaat van de transactie gaat realiseren / uitvoeren. 
 
-<aside class="example" title="Definitie van een type transactie">
+<aside class="example" title="Gegevens van een type transactie (in een raamwerk)">
 <p><b>Type transactie</b><br/>
-id: 			TT_Contractwijziging_door_opdrachtgever<br/>
+unieke identificatie:	TT_Contractwijziging_door_opdrachtgever<br/>
 omschrijving:		Contractwijziging (door de opdrachtgever)<br/>
 helptekst:		Met dit transactie type kan opdrachtgever een contractwijziging aan de opdrachtnemer melden, met als tussendoelen het verkrijgen van een technisch voorstel van opdrachtnemer, een technisch akkoord van opdrachtgever, een offerte van opdrachtnemer, een acceptatie van die offerte door opdrachtgever en uiteindelijk de acceptatie van een of meerdere gereedmeldingen van het uitgevoerde werk middels de levering van prestatieverklaringen.<br/>
 initierende rol:	<u>Opdrachtgevende_contractueel</u><br/>
@@ -215,107 +238,50 @@ uitvoerende rol:	<u>Opdrachtnemende_contractueel</u><br/>
 </p>
 </aside>
 
+<p>Optionele eigenschappen zijn: <i>startDate, endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, result, subTransactions, appendixTypes</i></p>
+
+Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
+
 <i>typen bijlage (appendixTypes)</i><br/>
 Met deze optionele eigenschap kan een beperking worden opgelegd aan welke typen bijlage bijgevoegd mogen worden aan de type berichten van dit type transactie. Deze eigenschap  is een verwijzing naar een of meerder typen bijlage. Indien deze eigenschap ontbreekt voor een type transactie, mag ieder type bijlage bijgevoegd worden.
 
 P.S. Legacy<br/>
 <i>resultaat (result)</i><br/>
-Deze eigenschap is optioneel in te stellen, en geldt alleen voor type transactie. Voorbeelden in oude documentatie geven bijvoorbeeld aan dat het resultaat van een transactietype hierin beschreven kan worden. In de praktijk beschrijven raamwerkbouwers dit in de helpinfo van een transactietype.
-De verschillende VISI software pakketten hebben tot op heden nooit iets met dit “result” gedaan en is er geen beschrijving wat voor soort functionaliteit van software verwacht zou worden.  Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker. 
+Deze eigenschap is optioneel, en geldt alleen voor type transactie. Voorbeelden in eerdere documentatie geven aan dat het resultaat van een type transactie hierin beschreven kan worden.
 
 <i>typen subtransacties (subTransactions)</i><br/>
-Subtransactions lijkt een vervallen eigenschap te zijn, afkomstig uit de systematiekversies voor versie 1.2, waar er nog niet met “previous” subtransacties gedefinieerd kunnen worden door naar Bericht in transactietypes in andere transacties te verwijzen. In alle documentatie vanaf versie 1.2 wordt dus over en subtransactie gesproken als een transactie gestart is obv een previous bericht in een andere transactie. In oude documentatie wordt gesproken over “Transacties die binnen deze transactie vallen”.  Tegenwoordig wordt deze verwijzing nooit ingevuld in een transactietype. 
-
-Vanuit een (1) type wordt verwezen naar type transactie. Dit is het type bericht in transactie (MessageInTransactionType). Alhoewel type berichten tot een type transactie behoren is er geen verwijzing van type bericht naar type transactie. Zoals de naam al doet vermoeden, is de verwijzing vanuit type bericht in transactie (MessageInTransactionType) naar type bericht en naar type transactie. Dit betekent dat type berichten te (her)gebruiken zijn in verschillende type transacties.      
+De eigenschap subTransactions is redundant. Met deze eigenschap wordt - voor een type transactie - gedefinieerd welke type transacties "binnen deze transactie vallen". De samenhang tussen type transacties wordt echter al gedefinieerd met opgave van de voorgaande type berichten (in de transactie), zie paragraaf https://bimloket.github.io/visi/visi1.6/#transacties-koppelen-tot-een-procedure-m-a-w-hoofd-sub-transacties
 
 ### Type bericht (MessageType)
 
-In een berichttype wordt bepaald welke inhoud een gebruiker moet invullen en berichttypes worden aan elkaar gekoppeld om een stroomschema binnen een transactie te creëren. De naam van een berichttype is de eerste aanduiding die een gebruiker kiest om een bepaald pad in een stroomschema te doorlopen. Daarmee geeft deze naam ook veel informatie over de status van een transactie op het moment van verzenden van een bericht.
+Met type bericht wordt gedefinieerd welke informatie uitgewisseld kan worden. Het type wordt vastgelegd met een unieke identificatie (id) en een tekstuele omschrijving (description). P.S. Deze omschrijving geeft impliciet de status van een type transactie aan.
 
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo, code</p>
+<p>Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description), elementen (complexElements)</i></p> 
 
-<p>Met helpInfo is er de mogelijkheid om uitleg te geven over het type bericht. Er kan bijvoorbeeld vermeld worden in welke gevallen voor het type gekozen moet worden, en  welke consequenties dit type bericht heeft op de status van de transactie en de opvolgende typen berichten.
-</p>
-
-In te stellen specifieke eigenschappen:
-_appendixMandatory_<br/>
-Met deze eigenschap kan ingesteld worden dat het verplicht is om minimaal één bijlage toe te voegen aan een bericht van dit type. Hiermee kan voorkomen worden dat een type bericht met de omschrijving "Document ter acceptatie" zonder bijlage verzonden wordt.
-
-Verwijzingen vanuit het bericht type:
-_berichthoofdstukken (complexElements)_<br/>
+_elementen (complexElements)_<br/>
 Hiermee wordt de inhoud van een type bericht vastgelegd, want in die berichthoofdstukken zitten de informatievelden. De volgorde waarmee de hoofdstukken in het berichttype staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de berichten.
 Technisch is met de huidige controlemechanismes helaas mogelijk om een bericht te versturen waarin een of meerdere berichthoofdstukken ontbreken, maar dit is niet de bedoeling. Er lopen onderzoeken naar een betere beveiliging hiervoor.
 
-_type bijlage_<br/>
-Omdat het binnen een raamwerk mogelijk is om verschillende metadata-formulieren te specificeren voor een bij te voegen bijlage, kan ook per bericht type ingesteld worden welk(e) metadata formulier(en) gekozen kan/kunnen worden voor een bijlage bij een bericht. Als er geen bijlage types gekoppeld zijn, kan ieder bijlage type uit het raamwerk gekozen worden door de gebruiker.
- Verwijzingen naar het bericht type:
-Berichtveld beperkingen
-Bericht in transactie
+<p>Optionele eigenschappen zijn: <i>startDate, endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, appendixMandatory, appendixTypes</i></p>
 
-<aside class="example" title="Definitie van een type bericht">
+Nadere uitleg van de globale eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
+
+_appendixMandatory_<br/>
+Met deze eigenschap kan ingesteld worden dat het verplicht is om minimaal één bijlage toe te voegen aan een bericht van dit type. Hiermee kan voorkomen worden dat een type bericht met de omschrijving "Document ter acceptatie" zonder bijlage verzonden wordt.
+
+_type bijlagen (appendixType)_<br/>
+Omdat het binnen een raamwerk mogelijk is om verschillende metadata-formulieren te specificeren voor een bij te voegen bijlage, kan ook per bericht type ingesteld worden welk(e) metadata formulier(en) gekozen kan/kunnen worden voor een bijlage bij een bericht. Als er geen bijlage types gekoppeld zijn, kan ieder bijlage type uit het raamwerk gekozen worden door de gebruiker.
+
+<aside class="example" title="Gegevens van een type bericht (in een raamwerk)">
 <p><b>Type bericht</b><br/>
-id: 		MT_AcceptatieVoorstelWijziging<br/>
-description:	Acceptatie van het technisch voorstel (voor contractwijziging)<br/>
-helpinfo:	Met dit bericht accepteert de opdrachtgever het technisch voorstel, waarna de opdrachtnemer verder kan met een fnancieel voorstel / offerte voor de contractwijziging.<br/>
-elementen: 	<u>CE_ContractwijzigingBasis</u>, <u>CE_ContractwijzigingVoorstel</u>, <u>CE_ContractwijzigingOpmerkingen</u><br/>
+unieke identificatie:	MT_Acceptatie_technisch_voorstel_contractwijziging<br/>
+omschrijving:		Acceptatie van het technisch voorstel (voor contractwijziging)<br/>
+helptekst:		Met dit bericht accepteert de opdrachtgever het technisch voorstel, waarna de opdrachtnemer verder kan met een fnancieel voorstel / offerte voor de contractwijziging.<br/>
+elementen:		<u>CE_Contractwijziging_Basis</u>, <u>CE_Contractwijziging_Voorstel</u>, <u>CE_Contractwijziging_Opmerkingen</u><br/>
 </p>
 </aside>
-	
-### Berichthoofdstukken (ComplexElementType)
-De berichthoofdstukken worden gebruikt om invoer velden in berichten eenvoudig te kunnen beheren in een raamwerk en om logische onderverdelingen in berichten te kunnen aanbrengen. Doordat in berichten alleen de verschillende hoofdstukken benoemd zijn, kan eenvoudig een bepaald veld toegevoegd worden aan-, of verwijderd worden uit- een hele groep berichten die dat hoofdstuk bevatten.
-De volgorde waarmee de berichtvelden in het hoofdstuk staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de hoofdstukken en daarmee ook in de berichten.
- 
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
 
-Specifiek voor bericht hoofdstukken is er in de beschikbare software vaak nog geen ondersteuning. Toch neigt de markt ernaar dit wel te gaan eisen. Dit zodat bijvoorbeeld duidelijk uitgelegd kan worden welk doel dit deel van het bericht dient en welke weg deze informatie bijvoorbeeld vervolgt of waar deze informatie bijvoorbeeld niet heen gaat. (denk aan informatie die binnen een bepaald domein moet blijven)
-
-In te stellen specifieke eigenschappen:
-_minOccurs_<br/>
-Hieronder wordt uitgelegd dat er een hoofdstuk in een hoofdstuk kan worden ingevoegd om een tabel te creëren. Door deze setting bijvoorbeeld met 1 of 3 in te vullen op het ingevoegde hoofdstuk(de tabel), moet een gebruiker minimaal 1 of 3 regels in deze tabel aanmaken.
-
-_maxOccurs_<br/>
-Zoals bij MinOccurs, is het op dezelfde manier ook mogelijk om aan te geven dat een tabel niet meer dan x regels mag bevatten. Door Min en Max op hetzelfde aantal te zetten, is ook een exact aantal aan te maken regels instelbaar.
-
-Verwijzingen vanuit het Hoofdstuk type:
-Berichthoofdstukken (Tabelvorming)
-Het is toegestaan om in een hoofdstuk naast berichtvelden, ook een ander hoofdstuk te benoemen. De afgesproken werking hiervan is dat het hoofdstuk in het “bovenliggende” hoofdstuk weergegeven wordt als tabel. De bericht velden in het ingevoegde hoofdstuk worden dan als kolommen aangeboden.
-Op deze manier kan een hoofdstuk bestaan uit een of meerdere tabellen, eventueel ook aangevuld met normale berichtvelden. 
-NB1: Op dit moment is technisch nog niet aan te geven op welke locatie de tabellen in een hoofdstuk getoond moeten worden. Hierdoor komen ze op dit moment soms boven en soms onder de normale velden en is het niet mogelijk om een hoofdstuk te maken waarin velden en tabellen elkaar afwisselen. In issue 37 wordt aan dit probleem gewerkt.
-NB2: Technisch is het mogelijk om een hoofdstuk in een hoofdstuk in een hoofdstuk enz. te maken, wat bijvoorbeeld een 3d-tabel op zou kunnen leveren. Over dergelijke toepassingen zijn nog geen afspraken in de systematiek en het wordt ook nog nergens toegepast. Dit wordt wel als ruimte voor nog niet bekende evt toekomstige toepassingen beschouwd.
-Berichtvelden
-Door berichtvelden in een bepaalde volgorde in een hoofdstuk te plaatsen, ontstaat de structuur van dat hoofdstuk, zoals het in alle berichten waarin  dit hoofdstuk staat wordt weergegeven. 
-Verwijzingen naar het Hoofdstuk type:
-Berichthoofdstukken (Tabelvorming)
-Zie hierboven.
-ProjectType
-Voor zover bekend is het technisch mogelijk en hoofdstuk aan een projecttype te koppelen, maar is er nog geen toepassing voor bekend.
-PersonType
-Hiermee kan er in het projectspecifieke bericht aanvullende informatie bij personen ingevuld worden, zoals bijvoorbeeld een telefoonnummer of andere voor het project relevante persoonsinformatie.
-OrganisationType
-Hiermee kan er in het projectspecifieke bericht aanvullende informatie bij organisaties ingevuld worden, zoals bijvoorbeeld een adres of andere voor het project relevante informatie.
-AppendixType
-Op deze manier kan er per bijlage type een andere set aan berichtvelden met metadata over de bijlage ingevoerd worden.
-Bericht type
-Voor de opbouw van berichten
-Complex element type
-id: 		CeContractwijzigingVoorstel
-description:	Technisch voorstel
-Simple elements: 
--	SE_Wijzigingsnummer
--	SE_BeschrijvingTechnisch
--	SE_DatumUitvoering
--	SE_KostenramingEUR
--	CE_Tabel_Werkpakketten
-Complex element type in Complex element type (tabel)
-id: 		CE_Tabel_Werkpakketten
-description:	Werkpakketten
-Simple elements: 
--	SE_Werkpakket
--	SE_WPkostenpercentage
-
-
-Berichtveld beperkingen
-### Element van een type bericht (SimpleElementType)
+#### Elementen van een type bericht (SimpleElementType)
 
 <p>In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo</p>
 
@@ -323,7 +289,6 @@ Specifiek voor berichtvelden wordt de helptekst veelvuldig gebruikt om de opstel
 Ook bij het lezen van een bericht helpt de helptekst om de inhoud van een veld beter te kunnen duiden.
 NB: Gereserveerd veld-ID: het veld met ID “SOAPServerURL” is exclusief gereserveerd voor het berichthoofdstuk dat aan het organisatie type gekoppeld is. Dit zodat hiermee voor VISI software altijd het SOAP-adres van een organisatie gevonden kan worden.
 
-					
 In te stellen specifieke eigenschappen:
 interfaceType
 Dit veld is bij de allereerste opzet van de systematiek bedacht, maar heeft nooit een echte toepassing of duidelijke uitleg gekend. In de vorige documentatie stond het volgende:
@@ -342,7 +307,7 @@ description:	 Gepland moment start uitvoering
 helpinfo:	Kies hier de beoogde startdatum waarop de hier benoemde werkzaakheden beginnen.
 User defined type: UDT_Datumveld
 
-### Datatype van een element (UserDefinedType)
+#### Datatype van een element (UserDefinedType)
 Hiermee wordt het gedrag van het invoerveld bepaald en hoe het gevalideerd moet worden.
 Zo kan een veld een datum/tijdstip/valuta/verplichte tekst/optionele tekst/een exact aantal karakters enzovoorts als vereiste mee krijgen. VISI software biedt doorgaans invoerfunctionaliteit op maat voor de meest voorkomende invoer soorten, zoals een datum keuze venster bij een datum veld en een keuzelijst functie als er een keuze uit lijst met waardes vereist wordt.
 
@@ -397,46 +362,66 @@ description:	Verplichte tekst veld
 basetype:	STRING
 xsdRestriction:	xs:minLength value="1"
 
-### Berichtveld beperkingen (ElementCondition)
-Hiermee wordt geregeld wanneer een gebruiker een veld wel of niet mag aanpassen, of dat het veld door de software leeg gemaakt moet worden voor een volgend bericht.
+#### Tabel als element van een type bericht
+Een speciaal element is een tabel.
 
-<p>In te stellen globale eigenschappen: id, description, helpinfo</p>
+#### Groepering van elementen (ComplexElementType)
+De berichthoofdstukken worden gebruikt om invoer velden in berichten eenvoudig te kunnen beheren in een raamwerk en om logische onderverdelingen in berichten te kunnen aanbrengen. Doordat in berichten alleen de verschillende hoofdstukken benoemd zijn, kan eenvoudig een bepaald veld toegevoegd worden aan-, of verwijderd worden uit- een hele groep berichten die dat hoofdstuk bevatten.
+De volgorde waarmee de berichtvelden in het hoofdstuk staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de hoofdstukken en daarmee ook in de berichten.
+ 
+<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+
+Specifiek voor bericht hoofdstukken is er in de beschikbare software vaak nog geen ondersteuning. Toch neigt de markt ernaar dit wel te gaan eisen. Dit zodat bijvoorbeeld duidelijk uitgelegd kan worden welk doel dit deel van het bericht dient en welke weg deze informatie bijvoorbeeld vervolgt of waar deze informatie bijvoorbeeld niet heen gaat. (denk aan informatie die binnen een bepaald domein moet blijven)
 
 In te stellen specifieke eigenschappen:
-condition
-Hiermee wordt het gedrag van een veld bepaald. Er is keuze uit de volgende conditions:
--	FREE
-Het veld mag aangepast worden
--	FIXED
-Het veld mag niet aangepast worden
--	EMPTY
-Het veld wordt door de software leeggemaakt voor de gebruiker
-Verwijzingen vanuit de Berichtveld beperkingen:
-Door een of meerdere van onderstaande elementen te benoemen, wordt de situatie waar de conditie op van toepassing is gedefinieerd. 
-complexElements
-simpleElement
-messageInTransaction
+_minOccurs_<br/>
+Hieronder wordt uitgelegd dat er een hoofdstuk in een hoofdstuk kan worden ingevoegd om een tabel te creëren. Door deze setting bijvoorbeeld met 1 of 3 in te vullen op het ingevoegde hoofdstuk(de tabel), moet een gebruiker minimaal 1 of 3 regels in deze tabel aanmaken.
 
-De basis regels zijn:
--	Een veld dat voor de eerste keer aangeboden wordt, dus nog niet bestaat in het voorgaande bericht, is altijd invulbaar en wordt nooit geblokkeerd door deze instelling.
--	Standaard wordt een veld dat in het voorgaande bericht al bestaat geblokkeerd in de opvolgende berichten. Ook als het veld toevallig “leeg” was in het voorgaande bericht. Dus alleen doordat het veld de eigenschap “FREE” mee krijgt, kan een veld aangepast worden.
--	OVERNEMEN VAN WAARDEN???
--	Berichtveld beperkingen kunnen ingesteld worden op Berichthoofdstukken, Berichtvelden en Berichten in transacties of een combinatie daarvan. Onderstaande tabel geeft aan welke beperking gebruikt moet worden als er meerdere beperkingen op een veld in een bericht staan:
-Het hoogste getal in de eerste kolom “wint”. Dus als er een conditie op een CE en SE ingesteld is (5) dan geldt deze conditie tov een instelling alleen op een SE  (1).
- 
+_maxOccurs_<br/>
+Zoals bij MinOccurs, is het op dezelfde manier ook mogelijk om aan te geven dat een tabel niet meer dan x regels mag bevatten. Door Min en Max op hetzelfde aantal te zetten, is ook een exact aantal aan te maken regels instelbaar.
 
-Verwijzingen naar de Berichtveld beperkingen:
-Geen
-ElementCondition
-id: 		EC_116
-description:	 New element condition
-condition:	 FREE
-ComplexElement: CeContractwijzigingVoorstel
-ComplexElement: CE_Tabel_Werkpakketten
-simpleElement: SE_WPkostenpercentage
-messageInTransaction: mitt_265
+Verwijzingen vanuit het Hoofdstuk type:
+Berichthoofdstukken (Tabelvorming)
+Het is toegestaan om in een hoofdstuk naast berichtvelden, ook een ander hoofdstuk te benoemen. De afgesproken werking hiervan is dat het hoofdstuk in het “bovenliggende” hoofdstuk weergegeven wordt als tabel. De bericht velden in het ingevoegde hoofdstuk worden dan als kolommen aangeboden.
+Op deze manier kan een hoofdstuk bestaan uit een of meerdere tabellen, eventueel ook aangevuld met normale berichtvelden. 
+NB1: Op dit moment is technisch nog niet aan te geven op welke locatie de tabellen in een hoofdstuk getoond moeten worden. Hierdoor komen ze op dit moment soms boven en soms onder de normale velden en is het niet mogelijk om een hoofdstuk te maken waarin velden en tabellen elkaar afwisselen. In issue 37 wordt aan dit probleem gewerkt.
+NB2: Technisch is het mogelijk om een hoofdstuk in een hoofdstuk in een hoofdstuk enz. te maken, wat bijvoorbeeld een 3d-tabel op zou kunnen leveren. Over dergelijke toepassingen zijn nog geen afspraken in de systematiek en het wordt ook nog nergens toegepast. Dit wordt wel als ruimte voor nog niet bekende evt toekomstige toepassingen beschouwd.
+Berichtvelden
+Door berichtvelden in een bepaalde volgorde in een hoofdstuk te plaatsen, ontstaat de structuur van dat hoofdstuk, zoals het in alle berichten waarin  dit hoofdstuk staat wordt weergegeven. 
+Verwijzingen naar het Hoofdstuk type:
+Berichthoofdstukken (Tabelvorming)
+Zie hierboven.
+ProjectType
+Voor zover bekend is het technisch mogelijk en hoofdstuk aan een projecttype te koppelen, maar is er nog geen toepassing voor bekend.
+PersonType
+Hiermee kan er in het projectspecifieke bericht aanvullende informatie bij personen ingevuld worden, zoals bijvoorbeeld een telefoonnummer of andere voor het project relevante persoonsinformatie.
+OrganisationType
+Hiermee kan er in het projectspecifieke bericht aanvullende informatie bij organisaties ingevuld worden, zoals bijvoorbeeld een adres of andere voor het project relevante informatie.
+AppendixType
+Op deze manier kan er per bijlage type een andere set aan berichtvelden met metadata over de bijlage ingevoerd worden.
+Bericht type
+Voor de opbouw van berichten
+Complex element type
+id: 		CeContractwijzigingVoorstel
+description:	Technisch voorstel
+Simple elements: 
+-	SE_Wijzigingsnummer
+-	SE_BeschrijvingTechnisch
+-	SE_DatumUitvoering
+-	SE_KostenramingEUR
+-	CE_Tabel_Werkpakketten
+Complex element type in Complex element type (tabel)
+id: 		CE_Tabel_Werkpakketten
+description:	Werkpakketten
+Simple elements: 
+-	SE_Werkpakket
+-	SE_WPkostenpercentage
+
+
+Berichtveld beperkingen
 
 ### Volgorde van type berichten (MessageInTransactionType)
+### In één type transactie
 De vormgeving van de opvolging van berichten zodat een stroomschema gevolgd kan worden wordt geregeld in het bericht in transacties type (vanaf hier aangeduid als “MITT”). 
 De MITT’s koppelen berichttypes aan elkaar binnen- en tussen transacties.
 Als een bericht type op meerdere plekken in een transactie voorkomt, bijvoorbeeld 1 keer als start bericht en 1 keer als reactie, dan bestaan er 2 MITT’s. Beiden verwijzen naar de transactie en het bericht type, alleen verschilt de koppeling tussen de MITT’s.
@@ -513,9 +498,46 @@ MessageInTransactionTypeCondition: mtc1
 </p>
 </aside>
 
+#### Voorwaarden voor elementen van type berichten (ElementCondition)
+Hiermee wordt geregeld wanneer een gebruiker een veld wel of niet mag aanpassen, of dat het veld door de software leeg gemaakt moet worden voor een volgend bericht.
 
+<p>In te stellen globale eigenschappen: id, description, helpinfo</p>
 
-#### Transacties koppelen tot één procedure (m.a.w. hoofd- & sub-transacties)
+In te stellen specifieke eigenschappen:
+condition
+Hiermee wordt het gedrag van een veld bepaald. Er is keuze uit de volgende conditions:
+-	FREE
+Het veld mag aangepast worden
+-	FIXED
+Het veld mag niet aangepast worden
+-	EMPTY
+Het veld wordt door de software leeggemaakt voor de gebruiker
+Verwijzingen vanuit de Berichtveld beperkingen:
+Door een of meerdere van onderstaande elementen te benoemen, wordt de situatie waar de conditie op van toepassing is gedefinieerd. 
+complexElements
+simpleElement
+messageInTransaction
+
+De basis regels zijn:
+-	Een veld dat voor de eerste keer aangeboden wordt, dus nog niet bestaat in het voorgaande bericht, is altijd invulbaar en wordt nooit geblokkeerd door deze instelling.
+-	Standaard wordt een veld dat in het voorgaande bericht al bestaat geblokkeerd in de opvolgende berichten. Ook als het veld toevallig “leeg” was in het voorgaande bericht. Dus alleen doordat het veld de eigenschap “FREE” mee krijgt, kan een veld aangepast worden.
+-	OVERNEMEN VAN WAARDEN???
+-	Berichtveld beperkingen kunnen ingesteld worden op Berichthoofdstukken, Berichtvelden en Berichten in transacties of een combinatie daarvan. Onderstaande tabel geeft aan welke beperking gebruikt moet worden als er meerdere beperkingen op een veld in een bericht staan:
+Het hoogste getal in de eerste kolom “wint”. Dus als er een conditie op een CE en SE ingesteld is (5) dan geldt deze conditie tov een instelling alleen op een SE  (1).
+ 
+
+Verwijzingen naar de Berichtveld beperkingen:
+Geen
+ElementCondition
+id: 		EC_116
+description:	 New element condition
+condition:	 FREE
+ComplexElement: CeContractwijzigingVoorstel
+ComplexElement: CE_Tabel_Werkpakketten
+simpleElement: SE_WPkostenpercentage
+messageInTransaction: mitt_265
+
+#### In meerdere gekoppelde type transacties (m.a.w. hoofd- & sub-transacties)
 WAARSCHIJNLIJK DUBBEL??? ONTDUBBELEN
 In paragraaf 2.7 staat beschreven dat een type transactie uit type berichten bestaat, en dat de volgorde van de berichten in een transactie gedefinieerd wordt met een object bericht in transactie. Ieder bericht in transactie heeft een verwijzing naar het vorige bericht in transactie. Deze verwijzing is echter niet beperkt door de transactie. Met andere woorden het vorige bericht in transactie hoeft niet een bericht uit dezelfde transactie te zijn, het kan ook een bericht uit een andere transactie zijn. Hierdoor worden transactie feitelijk aan elkaar gekoppeld. Wel gelden er specifieke regels hoe deze koppeling van transactie gemodelleerd dient te worden in het raamwerk.
 
@@ -612,7 +634,9 @@ Transactie:		Adviseren_Wijziging
 Indien een instantie van bericht in transactie verstuurd wordt, moet openSecondaryTransactionsAllowed meegestuurd worden.
 Er is een bericht nodig die niet voorkomt als vorig, zodat duidelijk is dat een transactie afgerond is. laatste bericht om transactie af te sluiten
 
-### Bericht in transactie beperkingen (MessageInTransactionTypeCondition)
+Vanuit een (1) type wordt verwezen naar type transactie. Dit is het type bericht in transactie (MessageInTransactionType). Alhoewel type berichten tot een type transactie behoren is er geen verwijzing van type bericht naar type transactie. Zoals de naam al doet vermoeden, is de verwijzing vanuit type bericht in transactie (MessageInTransactionType) naar type bericht en naar type transactie. Dit betekent dat type berichten te (her)gebruiken zijn in verschillende type transacties.      
+
+#### Voorwaarden voor opvolgende type berichten (MessageInTransactionTypeCondition)
 Soms is het nodig om te zorgen dat je berichten pas kunt versturen nadat andere
 berichten zijn ontvangen, dat berichten alleen verstuurd mogen worden wanneer andere berichten
 nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden.
@@ -655,41 +679,6 @@ In het bericht in transactie type wordt ingesteld dat deze beperkt wordt, door t
 MessageInTransactionTypeCondition
 id: 		mtc1
 sendAfter: mit_VTWoordeelpositief_1
-
-### Type rol (RoleType)
-Door het toekennen van rollen aan personen in projecten en het koppelen van rollen aan transacties, regelen we wie bepaalde transacties mag starten en initieel ontvangen.
-
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
-
-Voor rollen is nog geen toepassing bekend voor de helpinfo. Soms is er wel een uitleg over een rol te vinden in een raamwerk, maar weergave hiervan in VISI software bestaat nog niet.
-code
-			
-In te stellen specifieke eigenschappen: 
-Voor alle vier de onderstaande eigenschappen geldt dat de verschillende VISI software pakketten tot op heden nooit iets hiermee gedaan hebben. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker. 
-responsibilityScope	
-Bij het opstellen van de standaard was het doel voor dit veld het uitleggen/uitschrijven van: 
-Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd
-			
-responsibilityTask
-Bij het opstellen van de standaard was het doel voor dit veld het uitleggen/uitschrijven van:
-Taken die voortkomen uit de verantwoordelijkheden van de betreffende rol		
-responsibilitySupportTask
-Bij het opstellen van de standaard was het doel voor dit veld het uitleggen/uitschrijven van:
-Taken die worden uitgevoerd om andere rollen te ondersteunen. Denk hierbij bijvoorbeeld aan gedelegeerde verantwoordelijkheden				
-responsibilityFeedback	
-Bij het opstellen van de standaard was het doel voor dit veld het uitleggen/uitschrijven van:
-Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen
-Verwijzingen vanuit rollen: 
-Geen
-Verwijzingen naar rollen:
-Transactie: initiator
-Hiermee krijgt de houder van de rol het recht die transactie te starten.
-Transactie: executor
-Hiermee krijgt de houder van de rol het recht die transactie te ontvangen en op reageren.
-RoleType
-id: 		AdviseurIntern
-description: Adviseur intern
-
 
 ### Type bijlage (AppendixType)
 In ieder VISI bericht kunnen bestanden bijgevoegd worden. Een bestand moet wel altijd aan een bijlage type gekoppeld worden. Een raamwerk moet daarom altijd minimaal één bijlage type hebben. Als een raamwerk meerdere bijlage types heeft en er geen specifiek bijlage type op een bericht ingesteld staat, kan er gekozen worden aan welk bijlage type een bijlage in een bericht gekoppeld wordt. 
