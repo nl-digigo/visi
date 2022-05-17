@@ -197,7 +197,7 @@ unieke identificatie:	RT_Beoordelende_rol<br>
 omschrijving:		Beoordelende rol
 </p></aside>
 
-<p>Optionele eigenschappen zijn: <i>[startDate](/#startdate), endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, responsibilityScope, responsibilityTask, responsibilitySupportTask, responsibilityFeedback</i></p>
+<p>Optionele eigenschappen zijn: <i>[startDate](https://bimloket.github.io/visi/visi1.6/#startdate), endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, responsibilityScope, responsibilityTask, responsibilitySupportTask, responsibilityFeedback</i></p>
 
 Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
 
