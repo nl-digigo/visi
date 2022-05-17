@@ -456,7 +456,7 @@ Berichten
 Hiermee wordt de berichtnaam en inhoud van het element in de berichtenstroom bepaald.
 Voorgaand(previous) bericht
 Op deze manier ligt vast hoe de stroom van berichten verloopt. Doordat MITT’s  de voorgaande MITT’s hier hebben staan, weet je vanuit welk bericht dit bericht gekozen kan worden als volgend bericht. Er zijn grofweg 4 soorten previous-koppelingen die er qua definitie precies hetzelfde uitzien(deze MITT is een previous op deze MITT), maar in werking anders zijn:
--	Start van een nieuwe hoofdtransactie. De waarde van previous is dan leeg.
+-	Start van een nieuwe hoofdtransactie. De waarde van previous is dan leeg. Deze MITT mag de eigenschap “firstmessage” hebben, alleen aangezien dit bericht per definitie een eerste bericht is, is dit niet nodig.
 -	Een antwoord binnen dezelfde transactie (De previous MiTT is ook aan dezelfde transactie gekoppeld)
 -	Een start van een nieuwe transactie op basis van de MITT in deze transactie. Dit noemen we ook wel een “Subtransactie” starten. Deze MITT moet altijd de eigenschap “firstmessage” hebben, anders kan er geen nieuwe transactie gestart worden en doet de previous koppeling waarschijnlijk niets.
 -	Een terugkering vanuit de subtransactie naar de bovenliggende transactie. 
