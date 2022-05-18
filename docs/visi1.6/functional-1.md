@@ -256,7 +256,10 @@ omschrijving:		Beoordelende rol
 </aside>
   <pre>
 Optionele eigenschappen zijn: <i>
-[startDate](#startdate)
+<code>[^startDate code^](#startdate)</code>
+[`startDate backticks`](#startdate)
+[^startDate dakje^](#startdate)
+[startDate normaal](#startdate)
 endDate
 state
 dateLaMu
