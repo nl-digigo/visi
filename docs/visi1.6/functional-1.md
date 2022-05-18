@@ -10,22 +10,38 @@ unieke identificatie:	RT_Beoordelende_rol<br>
 omschrijving:		Beoordelende rol
 </aside>
 
-<aside class="appendix" title="appendixGegevens van een type rol (in een raamwerk)">
-<b>Rol</b><br>
-unieke identificatie:	RT_Beoordelende_rol<br>
-omschrijving:		Beoordelende rol
+<aside class="example" title="Fat arrows (<code>=></code>)">
+  <p>Here we see how to use a fat arrow in ES.</p>
+  <pre>
+  const sum = [...items]
+    .map(item => item * 2)
+    .reduce((sum, next) => sum + (next || 0) );
+  </pre>
 </aside>
 
-<aside class="ednote" title="ednoteGegevens van een type rol (in een raamwerk)">
-<b>Rol</b><br>
-unieke identificatie:	RT_Beoordelende_rol<br>
-omschrijving:		Beoordelende rol
-</aside>
+<section class="appendix">
+  <h2>Acknowledgements</h2>
+  <p>This spec would not be possible without...</p>
+</section>
 
-<aside class="exclude" title="excludeGegevens van een type rol (in een raamwerk)">
-<b>Rol</b><br>
-unieke identificatie:	RT_Beoordelende_rol<br>
-omschrijving:		Beoordelende rol
+
+
+<p class="ednote" title="This section will be reformatted">
+  We are aware that the formatting of this section isn't great. We will fix it
+  in the next revision!
+</p>
+
+<p>
+ <abbr class="exclude" title="Ay-Bee-See">ABC</abbr>,
+ but this won't be wrapped ABC.
+</p>
+
+<aside class="example" title="A hypothetical API">
+  <pre class="idl exclude">
+    interface ItsTwentyTwenty {
+      undefined cantSeeNobody();
+    };
+  </pre>
 </aside>
 
 De functionele uitleg is opgebouwd in hoofdstukken, en leest het beste hoofdstuk voor hoofdstuk. Met een hoofdstuk wordt een functioneel abstractieniveau inclusief bouwstenen uitgelegd. Aan het einde van een hoofdstuk wordt getoetst of de inhoud in voldoende mate begrepen wordt, en lezer verder kan naar het volgende hoofdstuk. In het volgende hoofdstuk wordt de functionele beschrijving aangevuld of verdiept qua bouwstenen. Hoofdstukken overslaan leidt tot het missen van bouwstenen en logische denkvolgorde.
