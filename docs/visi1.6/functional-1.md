@@ -35,15 +35,31 @@ omschrijving:		Beoordelende rol
  but this won't be wrapped ABC.
 </p>
 
-<aside class="example" title="A hypothetical API">
+<div class="advisement" title="A hypothetical API">
   <pre class="idl exclude">
     interface ItsTwentyTwenty {
       undefined cantSeeNobody();
     };
   </pre>
+</div>
+
+<aside class="annoying-warning" title="asi ano">
+  <pre class="idl exclude">
+    interface ItsTwentyTwenty {
+      undefined cantSeeNobody();
+	  dit is aside annoying
+    };
+  </pre>
 </aside>
 
-
+<div class="annoying-warning" title="div annoying">
+  <pre class="idl exclude">
+    interface ItsTwentyTwenty {
+      undefined cantSeeNobody();
+	  dit is div annoying
+    };
+  </pre>
+</div>
 
 De functionele uitleg is opgebouwd in hoofdstukken, en leest het beste hoofdstuk voor hoofdstuk. Met een hoofdstuk wordt een functioneel abstractieniveau inclusief bouwstenen uitgelegd. Aan het einde van een hoofdstuk wordt getoetst of de inhoud in voldoende mate begrepen wordt, en lezer verder kan naar het volgende hoofdstuk. In het volgende hoofdstuk wordt de functionele beschrijving aangevuld of verdiept qua bouwstenen. Hoofdstukken overslaan leidt tot het missen van bouwstenen en logische denkvolgorde.
 De hoofdstukopbouw is afgestemd om het kennisniveau van de lezer, en verloopt van newbie tot expert. 
