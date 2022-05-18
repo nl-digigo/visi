@@ -252,6 +252,7 @@ Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (descr
 <b>Rol</b><br>
 unieke identificatie:	RT_Beoordelende_rol<br>
 omschrijving:		Beoordelende rol
+[startDate](#startdate)
 </aside>
   <pre>
 Optionele eigenschappen zijn: <i>
