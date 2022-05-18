@@ -243,7 +243,127 @@ Het raamwerk is het communicatiesjabloon van een project. Alle communicatie moet
 
 Het sjabloon dient tevens ter validatie van de communicatie. Zoals de naam aangeeft is het een sjabloon waaraan de communicatie moet voldoen. Op basis van dit sjabloon kan geverifieerd worden of de verstrekte informatie voldoet aan de afspraken. 
 
-### Type rol (RoleType)
+### Type rol 1 (RoleType)
+Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
+
+<aside class="def" title="Verplichte eigenschappen">
+Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description)</i>
+</aside>
+
+<aside class="example" title="Gegevens van een type rol (in een raamwerk)">
+<b>Rol</b><br>
+unieke identificatie:	RT_Beoordelende_rol<br>
+omschrijving:		Beoordelende rol
+[startDate](#startdate)
+</aside>
+
+<aside class="def" title="Optionele globale eigenschappen">
+Optionele eigenschappen zijn: 
+
+<dl> 
+<!-- definition: list -->
+<dt>[=startDate=]
+<!-- definition: term -->
+<dd>Datum waarop het start.
+<!-- definition: definition -->
+<dt>[=endDate=]
+<!-- verwijst naar een term die met <dfn> is gedefinieerd. -->
+<dt>[=state=]
+<dt>[=dateLaMu=]
+<dt>[=userLaMu=]
+<dt>[=language=]
+<dt>[=category=]
+<dt>[=helpInfo=]
+<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
+<dt>[=code=]
+<dt>[=responsibilityScope=]
+<dt>[=responsibilityTask=]
+<dt>[=responsibilitySupportTask=]
+<dt>[=responsibilityFeedback=]
+</dl>
+<!-- -->
+
+</aside>
+
+<aside class="def" title="Optionele specifieke eigenschappen">
+Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
+
+<dfn>_responsibilityScope_</dfn>
+Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd
+			
+_responsibilityTask_
+Taken die voortkomen uit de verantwoordelijkheden van de betreffende rol		
+
+_responsibilitySupportTask_
+Taken die worden uitgevoerd om andere rollen te ondersteunen. Denk hierbij bijvoorbeeld aan gedelegeerde verantwoordelijkheden				
+
+_responsibilityFeedback_
+Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen
+</aside>
+
+<!-- test opmaak 1 -->	
+	
+### Type rol 2 (RoleType)
+Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
+
+Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description)</i> 
+
+<aside class="example" title="Gegevens van een type rol (in een raamwerk)">
+<b>Rol</b><br>
+unieke identificatie:	RT_Beoordelende_rol<br>
+omschrijving:		Beoordelende rol
+[startDate](#startdate)
+</aside>
+
+<aside class="def" title="Optionele eigenschappen">
+Optionele eigenschappen zijn: 
+
+<dl> 
+<!-- definition: list -->
+<dt>[=startDate=]
+<!-- definition: term -->
+<dd>Datum waarop het start.
+<!-- definition: definition -->
+<dt>[=endDate=]
+<!-- verwijst naar een term die met <dfn> is gedefinieerd. -->
+<dt>[=state=]
+<dt>[=dateLaMu=]
+<dt>[=userLaMu=]
+<dt>[=language=]
+<dt>[=category=]
+<dt>[=helpInfo=]
+<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
+<dt>[=code=]
+<dt>[=responsibilityScope=]
+<dt>[=responsibilityTask=]
+<dt>[=responsibilitySupportTask=]
+<dt>[=responsibilityFeedback=]
+</dl>
+	
+Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
+
+<dfn>_responsibilityScope_</dfn>
+Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd
+			
+_responsibilityTask_
+Taken die voortkomen uit de verantwoordelijkheden van de betreffende rol		
+
+_responsibilitySupportTask_
+Taken die worden uitgevoerd om andere rollen te ondersteunen. Denk hierbij bijvoorbeeld aan gedelegeerde verantwoordelijkheden				
+
+_responsibilityFeedback_
+Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen	
+
+<!-- -->
+
+</aside>
+
+
+
+
+<!-- test opmaak 2 -->		
+	
+### Type rol 3 (RoleType)
 Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
 
 Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description)</i> 
@@ -296,9 +416,16 @@ _responsibilitySupportTask_
 Taken die worden uitgevoerd om andere rollen te ondersteunen. Denk hierbij bijvoorbeeld aan gedelegeerde verantwoordelijkheden				
 
 _responsibilityFeedback_
-Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen
-
-
+Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen	
+	
+	
+	
+<!-- test opmaak 3 -->	
+		
+	
+	
+	
+	
 ### Informatie-overdracht conform type transactie (TransactionType)
 
 Communicatie vindt in een project altijd plaats op basis van een type transactie. Een type transactie is een afsprakenstelsel van elkaar mogelijk opvolgende berichten tussen twee rollen. Een transactie in een project verloopt dus volgens de regels van het type transactie uit het raamwerk. Daarbij wordt er gesproken over de initierende rol (initiator) en de uitvoerende rol (executor). Een persoon met de initierende rol mag een transactie starten en het eerste bericht van deze transactie sturen naar een (1) persoon met de uitvoerende rol. Daarna is het steeds de ontvanger (executor of initiator) van het laatste bericht die moet reageren met een bericht. Net zo lang totdat er geen antwoordmogelijkheden meer zijn. Dan is de transactie afgerond. Welke mogelijke start- en antwoordberichten er zijn, staat gedefinieerd als volgorde van type berichten van een transactie (zie paragraaf https://bimloket.github.io/visi/visi1.6/#berichtencommunicatie).
