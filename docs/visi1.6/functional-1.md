@@ -257,9 +257,9 @@ omschrijving:		Beoordelende rol
   <pre>
 Optionele eigenschappen zijn: <i>
 <code>[^startDate code^](#startdate)</code>
-[`startDate backticks`](#startdate)
-[^startDate dakje^](#startdate)
-[startDate normaal](#startdate)
+
+[^startDate code^](#startdate)
+
 endDate
 state
 dateLaMu
