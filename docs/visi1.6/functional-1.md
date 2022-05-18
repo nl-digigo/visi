@@ -258,7 +258,7 @@ omschrijving:		Beoordelende rol
 Optionele eigenschappen zijn: <i>
 <code>[^startDate code^](#startdate)</code>
 
-[^startDate code^](#startdate)
+[startDate code](#startdate)
 
 endDate
 state
