@@ -253,8 +253,27 @@ Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (descr
 unieke identificatie:	RT_Beoordelende_rol<br>
 omschrijving:		Beoordelende rol
 </aside>
+  <pre>
+Optionele eigenschappen zijn: <i>
+[startDate](#startdate)
+endDate
+state
+dateLaMu
+userLaMu
+language
+category
+helpInfo
+Voor helpinfo roltypes is nog geen (software)toepassing bekend.
+code
+responsibilityScope
+responsibilityTask
+responsibilitySupportTask
+responsibilityFeedback</i>
 
-Optionele eigenschappen zijn: <i>[startDate](#startdate), endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, responsibilityScope, responsibilityTask, responsibilitySupportTask, responsibilityFeedback</i>
+ 
+  </pre>
+
+
 
 Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
 
