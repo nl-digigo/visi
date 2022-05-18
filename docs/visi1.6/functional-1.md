@@ -258,10 +258,14 @@ omschrijving:		Beoordelende rol
 <aside class="def" title="Optionele eigenschappen">
 Optionele eigenschappen zijn: 
 
-<dl>
+<dl> 
+<!-- definition: list -->
 <dt>[=startDate=]
+<!-- definition: term -->
 <dd>Datum waarop het start.
+<!-- definition: definition -->
 <dt>[=endDate=]
+<!-- verwijst naar een term die met <dfn> is gedefinieerd. -->
 <dt>[=state=]
 <dt>[=dateLaMu=]
 <dt>[=userLaMu=]
