@@ -32,12 +32,12 @@ Alles wordt opgehangen aan een project. De definitie van een project is in dit g
 Van een project worden beperkte, verplichte eigenschappen vastgelegd. Ieder project heeft een unieke identificatie waarmee naar het project gerefereerd kan worden, zonder dat misverstanden kunnen ontstaan welk project bedoeld wordt. Daarnaast heeft een project een naam en een omschrijving. Deze naam en omschrijving behoeven niet uniek te zijn, en is een aanvulling op de unieke identificatie, en is bedoeld voor toelichting en zorgt voor eenvoudigere herkenning voor het project (door mensen). Aanvullend wordt van het project het moment van start en einde vastgelegd met start- en einddatum.
 
 <aside class="example" title="Gegevens van een project (in een project specifiek bestand)">
-<p><b>Project</b><br>
+<b>Project</b><br>
 Unieke identificatie:    _badc9dab-807e-4319-bd56-60c57605e109<br>
 Naam:                    Realisatie West- / Oostlijn<br>
 Omschrijving:            Realisatie van metrolijn 47 inclusief 7 nieuwe stations met 9,7 kilometer spoor, waarvan 7,1 kilometer ondergronds<br>
 Startdatum:              23-12-2020 14:59<br>
-Einddatum:               20-05-2022 07:08</p>
+Einddatum:               20-05-2022 07:08
 </aside>
 
 ### Persoon
@@ -47,28 +47,28 @@ De activiteit van een project wordt uitgevoerd door personen. De mensen, die aan
 <div class="issue" data-number="136"></div> 
 
 <aside class="example" title="Gegevens van personen (in een project specifiek bestand)">
-<p>
+
 <b>Persoon</b><br>
 Unieke identificatie:   _0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
 Naam:                   Urbain Servranckx<br>
 Gebruikersnaam:         uservranckx
-</p>
-<p>
+
+
 <b>Persoon</b><br>
 Unieke identificatie:   _974e4822-4944-45ad-ab2f-161370662e30<br>
 Naam:                   Georges Remi<br>
 Gebruikersnaam:         gremi
-</p>
-<p>
+
+
 <b>Persoon</b>
 Unieke identificatie:   _d4e02752-2ac6-4700-ae67-d33f428f78fb<br>
 Naam:                   Luc Dupanloup<br>
 Gebruikersnaam:         ldupanloup
-</p>
+
 </aside>
 
 <p class="note" title="Identificatie is niet globaal">
-N.B. Indien een persoon aan twee projecten werkt, kan de unieke identificatie van deze persoon per project verschillend zijn. Er is geen sprake van een globale unieke identificatie, maar een unieke identificatie binnen een project.</p>
+N.B. Indien een persoon aan twee projecten werkt, kan de unieke identificatie van deze persoon per project verschillend zijn. Er is geen sprake van een globale unieke identificatie, maar een unieke identificatie binnen een project.
 
 ### Organisatie
 
@@ -77,16 +77,16 @@ Personen voeren een activiteit in een project uit namens een organisatie. In een
 Uit de afkorting is de organisatorische bron van communicatie ter herleiden, zie … (Verwijzing naar uitleg over eigenschap van TransactionTemplate). Voor een organisatie wordt een contactpersoon gedefinieerd middels een verwijzing naar de unieke identificatie van een persoon. Deze verwijzing heeft geen functionele betekenis, en betreft enkel een administratief doel.
 
 <aside class="example" title="Gegevens van een organisatie (in een project specifiek bestand">
-<p><b>Organisatie</b><br>
+<b>Organisatie</b><br>
 Unieke identificatie:  _87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
 Naam:                  Gemeente Rommelgem<br>
 Afkorting:             GRG<br>
 Contactpersoon:        <u>_0c585186-fa97-4de7-8fe0-5c4bee3afead</u><br>
-</p>
+
 </aside>
 
 <p class="note" title="Organisatie heeft een adres">
-Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres, maar een digitaal adres. Dit digitale adres heeft een technisch doel, zie paragraaf https://bimloket.github.io/visi/visi1.6/#soap over SOAP protocol.</p>
+Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres, maar een digitaal adres. Dit digitale adres heeft een technisch doel, zie paragraaf https://bimloket.github.io/visi/visi1.6/#soap over SOAP protocol.
 <div class="issue" data-number="136"></div>
 
 ### Rol
@@ -94,11 +94,11 @@ Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres,
 De differentiatie in autorisatie, taken en verantwoordelijkheden in een project worden expliciet gemaakt middels het definiëren van verschillende rollen. Een rol staat voor samenhangende autorisatie, taken en verantwoordelijkheden voor het uitvoeren van activiteiten, die een persoon meestal tijdelijk op zich neemt, en die (afwisselend) door verschillende personen kunnen worden vervuld. Van een rol wordt een zeer beperkte aantal eigenschappen vastgelegd. Iedere rol heeft een unieke identificatie, aangevuld met een naam en omschrijving. Deze naam en omschrijving behoeven niet uniek te zijn, en zijn een aanvulling op de unieke identificatie bedoeld voor toelichting en betekenis geven aan de rol. De naam en omschrijving zorgen voor eenvoudigere herkenning van de rol (door mensen).
 
 <aside class="example" title="Gegevens van een rol (in een project specifiek bestand)">
-<p><b>Rol</b><br>
+<b>Rol</b><br>
 Unieke identificatie:  _1252a67a-5f69-4a9c-b4ca-506a4459c7c3 <br>
 Naam:                  Beoordelende rol<br>
 Omschrijving:          Deze rol geeft een onafhankelijke beoordeling op basis van competenties en deskundigheid binnen het kader van project. Bij de beoordeling doorloopt de rol een aantal vaste stappen. Rol inventariseert gegevens, weegt, motiveert en beoordeelt deze informatie en velt vervolgens het oordeel.<br>
-</p></aside>
+</aside>
 
 <p class="note" title="Rol versus functie">
 Een rol is fundamenteel anders dan een functie. Verantwoordelijkheden en taken zijn **niet** toegekend aan functionarissen van een organisatie, maar aan rollen. Een essentieel verschil is dat rollen een afspiegeling zijn van _het werk_ dat georganiseerd wordt, terwijl functies een afspiegeling zijn van _mensen_ die georganiseerd worden (in een organisatie). Een project heeft geen functie "Afdelingshoofd", maar wel de rollen "Beoordelende", "Adviserende".
@@ -107,22 +107,22 @@ Er ligt lang niet altijd een één-op-één relatie tussen organisaties en rolle
 een ingenieursbureau, die de adviserende rol vervult. Met in hetzelfde project een accountantskantoor, die ook de adviserende rol invult, maar dan op een ander  vakgebied.
 
 Op basis van de rolverdeling tussen organisaties kunnen taken en verantwoordelijkheden worden verdeeld aan personen.
-</p>
+
 
 ### Relatie tussen Persoon, Rol en Organisatie
 
 Personen handelen in een project altijd vanuit een rol namens een organisatie. Een persoon is niet rechtstreeks gekoppeld aan de organisatie. De persoon heeft een relatie met een rol en een organisatie in het project. Deze relatie is te zien als een unieke sleutel die persoon, rol en organisatie verbindt. Deze sleutel noemen we "Persoon in Rol van Organisatie". Van deze sleutel worden zeer beperkte, verplichte eigenschappen vastgelegd. Voor de sleutel wordt persoon, rol en organisatie gedefinieerd middels een verwijzing naar de unieke identificatie van een persoon, een rol en een organisatie.
  
 <aside class="example" title="Gegevens van een persoon in een rol van een organisatie (in een project specifiek bestand)">
-<p><b>Persoon in Rol van Organisatie</b><br/>
+<b>Persoon in Rol van Organisatie</b><br/>
 Unieke identificatie:  _e0ad4954-7986-417c-96d6-813efa36e86b<br/>
 Contactpersoon:        <u>_0c585186-fa97-4de7-8fe0-5c4bee3afead</u><br/>
 Rol:                   <u>_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</u><br/>
 Organisatie:           <u>_87e9144d-04d6-4a5f-bdcb-b50e96c2b498</u>
-</p></aside>
+</aside>
 
 <p class="note" title="Relatie persoon en rol">
-Een persoon kan meerdere rollen hebben. Een rol kan door meerdere personen vervuld worden.</p>
+Een persoon kan meerdere rollen hebben. Een rol kan door meerdere personen vervuld worden.
 
 ### Personele wisselingen
 
@@ -135,7 +135,7 @@ Permanente vervanging wordt ook wel opvolging genoemd. De opvolger is een geauto
 Permanente vervanging is altijd op rolniveau. Bij de genoemde sleutel van Persoon in Rol van Organisatie wordt deze permanente vervanger vastgelegd middels een verwijzing naar de unieke identificatie van een persoon, een rol en een organisatie.  De relatie is van geautoriseerde naar de opvolger. Hierbij dienen de rollen exact overeen te komen.
 
 <aside class="example" title="Permanente vervanging cg opvolging">
-<p><b>Persoon in Rol van Organisatie</b><br/>
+<b>Persoon in Rol van Organisatie</b><br/>
 Unieke identificatie:   _e0ad4954-7986-417c-96d6-813efa36e86b<br/>
 Contactpersoon:         <u>_0c585186-fa97-4de7-8fe0-5c4bee3afead</u><br/>
 Rol:                    <u><font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font></u><br/>
@@ -147,7 +147,7 @@ Unieke identificatie:   <font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea
 Contactpersoon:         <u>_974e4822-4944-45ad-ab2f-161370662e30</u><br/>
 Rol:                    <u><font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font></u><br/>
 Organisatie:            <u>_2ba76318-83ab-4a6e-9257-ea91045717d2</u>
-</p></aside>
+</aside>
   
 Heeft een persoon (in een rol van een organisatie) een opvolger, dan betekent dit dat de persoon niet langer geautoriseerd is om te handelen vanuit deze rol. Alleen de opvolger is geautoriseerd.
 Een persoon (in een rol van een organisatie) kan maximaal één (1) opvolger hebben.
@@ -160,13 +160,13 @@ Een tijdelijke vervanging kan ook gelezen worden als een (tijdelijke) machtiging
 De tijdelijke vervanging is altijd op rolniveau. Bij de genoemde sleutel van Persoon in Rol van Organisatie wordt deze tijdelijke machtiging vastgelegd middels een verwijzing naar de unieke identificatie van de geautoriseerde persoon, rol en organisatie. De relatie is van gemachtigde naar de geautoriseerde. Hierbij dienen de rollen exact overeen te komen.
 
 <aside class="example" title="Tijdelijke vervanging">
-<p><b>Persoon in Rol van Organisatie</b><br>
+<b>Persoon in Rol van Organisatie</b><br>
 Unieke identificatie:  _752b1dfd-dd91-4404-9708-39b91047ca66<br>
 Contactpersoon:        <u>_d4e02752-2ac6-4700-ae67-d33f428f78fb</u><br>
 Rol:                   <u><font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font></u><br>
 Organisatie:           <u>_87e9144d-04d6-4a5f-bdcb-b50e96c2b498</u><br>
 Vervangt:              <u><font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font></u><br>
-</p></aside>
+</aside>
 
 Voert een gemachtigd persoon (in een rol van een organisatie) een handeling uit, dan is dit altijd uit naam van de geautoriseerde persoon. Bij een handeling wordt de geautoriseerde vastgelegd en de gemachtigde. De geautoriseerde / gemachtigde kan antwoorden op transacties van de rol van de geautoriseerde, ongeacht wie de transactie gestart heeft. Indien een machtiging ongedaan gemaakt wordt, kan alleen de geautoriseerde de handeling afmaken. Een machtiging mag namelijk wel ongedaan gemaakt worden, omdat machtigingen een tijdelijk karakter kunnen hebben.
 
@@ -189,15 +189,15 @@ Het sjabloon dient tevens ter validatie van de communicatie. Zoals de naam aange
 ### Type rol (RoleType)
 Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
 
-<p>Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description)</i></p> 
+Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description)</i> 
 
 <aside class="example" title="Gegevens van een type rol (in een raamwerk)">
-<p><b>Rol</b><br>
+<b>Rol</b><br>
 unieke identificatie:	RT_Beoordelende_rol<br>
 omschrijving:		Beoordelende rol
-</p></aside>
+</aside>
 
-Optionele eigenschappen zijn: <i>[startDate](https://bimloket.github.io/visi/visi1.6/#startdate), endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, responsibilityScope, responsibilityTask, responsibilitySupportTask, responsibilityFeedback</i>
+Optionele eigenschappen zijn: <i>[startDate](#startdate), endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, responsibilityScope, responsibilityTask, responsibilitySupportTask, responsibilityFeedback</i>
 
 Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
 
@@ -220,7 +220,7 @@ Communicatie vindt in een project altijd plaats op basis van een type transactie
 
 Van een type transactie wordt een aantal eigenschappen vastgelegd. Niet alle eigenschappen zijn even belangrijk, daarom volgt een opdeling of eigenschappen verplicht of optioneel zijn. Een optionele eigenschap kan belangrijk zijn, ondanks dat de eigenschap niet verplicht is. Een voorbeeld hiervan is de eigenschap helptekst (helpInfo). helpInfo is beschikbaar om de nadere, uitgebreide uitleg te geven over het doel en gebruik van het type transactie. Ook kan er beschreven worden waarom bepaalde rollen met elkaar communiceren.
 
-<p>Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description), initierende rol (initiator), uitvoerende rol (executor)</i></p> 
+Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description), initierende rol (initiator), uitvoerende rol (executor)</i> 
 
 <i>initierende rol (initiator)</i><br/>
 Dit is een verwijzing naar een type rol. Deze eigenschap legt vast welke type rol een persoon moet hebben om een transactie van dit type te starten. Met starten wordt in dit kader hetzelfde bedoelt als initieren. 
@@ -229,16 +229,16 @@ Dit is een verwijzing naar een type rol. Deze eigenschap legt vast welke type ro
 Dit is ook een verwijzing naar een type rol. Deze eigenschap legt echter vast welke type rol een persoon moet hebben om een eerste bericht in dit type transactie te mogen ontvangen. Feitelijk is dit de type rol die het resultaat van de transactie gaat realiseren / uitvoeren. 
 
 <aside class="example" title="Gegevens van een type transactie (in een raamwerk)">
-<p><b>Type transactie</b><br/>
+<b>Type transactie</b><br/>
 unieke identificatie:	TT_Contractwijziging_door_opdrachtgever<br/>
 omschrijving:		Contractwijziging (door de opdrachtgever)<br/>
 helptekst:		Met dit transactie type kan opdrachtgever een contractwijziging aan de opdrachtnemer melden, met als tussendoelen het verkrijgen van een technisch voorstel van opdrachtnemer, een technisch akkoord van opdrachtgever, een offerte van opdrachtnemer, een acceptatie van die offerte door opdrachtgever en uiteindelijk de acceptatie van een of meerdere gereedmeldingen van het uitgevoerde werk middels de levering van prestatieverklaringen.<br/>
 initierende rol:	<u>Opdrachtgevende_contractueel</u><br/>
 uitvoerende rol:	<u>Opdrachtnemende_contractueel</u><br/>
-</p>
+
 </aside>
 
-<p>Optionele eigenschappen zijn: <i>startDate, endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, result, subTransactions, appendixTypes</i></p>
+Optionele eigenschappen zijn: <i>startDate, endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, result, subTransactions, appendixTypes</i>
 
 Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
 
@@ -256,13 +256,13 @@ De eigenschap subTransactions is redundant. Met deze eigenschap wordt - voor een
 
 Met type bericht wordt gedefinieerd welke informatie uitgewisseld kan worden. Het type wordt vastgelegd met een unieke identificatie (id) en een tekstuele omschrijving (description). P.S. Deze omschrijving geeft impliciet de status van een type transactie aan.
 
-<p>Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description), elementen (complexElements)</i></p> 
+Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description), elementen (complexElements)</i> 
 
 _elementen (complexElements)_<br/>
 Hiermee wordt de inhoud van een type bericht vastgelegd, want in die berichthoofdstukken zitten de informatievelden. De volgorde waarmee de hoofdstukken in het berichttype staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de berichten.
 Technisch is met de huidige controlemechanismes helaas mogelijk om een bericht te versturen waarin een of meerdere berichthoofdstukken ontbreken, maar dit is niet de bedoeling. Er lopen onderzoeken naar een betere beveiliging hiervoor.
 
-<p>Optionele eigenschappen zijn: <i>startDate, endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, appendixMandatory, appendixTypes</i></p>
+Optionele eigenschappen zijn: <i>startDate, endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, appendixMandatory, appendixTypes</i>
 
 Nadere uitleg van de globale eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
 
@@ -273,17 +273,17 @@ _type bijlagen (appendixType)_<br/>
 Omdat het binnen een raamwerk mogelijk is om verschillende metadata-formulieren te specificeren voor een bij te voegen bijlage, kan ook per bericht type ingesteld worden welk(e) metadata formulier(en) gekozen kan/kunnen worden voor een bijlage bij een bericht. Als er geen bijlage types gekoppeld zijn, kan ieder bijlage type uit het raamwerk gekozen worden door de gebruiker.
 
 <aside class="example" title="Gegevens van een type bericht (in een raamwerk)">
-<p><b>Type bericht</b><br/>
+<b>Type bericht</b><br/>
 unieke identificatie:	MT_Acceptatie_technisch_voorstel_contractwijziging<br/>
 omschrijving:		Acceptatie van het technisch voorstel (voor contractwijziging)<br/>
 helptekst:		Met dit bericht accepteert de opdrachtgever het technisch voorstel, waarna de opdrachtnemer verder kan met een fnancieel voorstel / offerte voor de contractwijziging.<br/>
 elementen:		<u>CE_Contractwijziging_Basis</u>, <u>CE_Contractwijziging_Voorstel</u>, <u>CE_Contractwijziging_Opmerkingen</u><br/>
-</p>
+
 </aside>
 
 #### Elementen van een type bericht (SimpleElementType)
 
-<p>In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo
 
 Specifiek voor berichtvelden wordt de helptekst veelvuldig gebruikt om de opsteller van een bericht uit te leggen wat er exact verwacht wordt bij het invullen van dat veld. Dit zowel op abstract niveau, zoals: “Vul hier de lengte van het element in, zonder rekening te houden met uitstekende delen zoals wapening en dergelijke” Maar ook specifiek in de vorm van een uitleg welke getal notatie op gecontroleerd wordt: “Noteer de lengte met een komma en twee decimalen”.
 Ook bij het lezen van een bericht helpt de helptekst om de inhoud van een veld beter te kunnen duiden.
@@ -311,7 +311,7 @@ User defined type: UDT_Datumveld
 Hiermee wordt het gedrag van het invoerveld bepaald en hoe het gevalideerd moet worden.
 Zo kan een veld een datum/tijdstip/valuta/verplichte tekst/optionele tekst/een exact aantal karakters enzovoorts als vereiste mee krijgen. VISI software biedt doorgaans invoerfunctionaliteit op maat voor de meest voorkomende invoer soorten, zoals een datum keuze venster bij een datum veld en een keuzelijst functie als er een keuze uit lijst met waardes vereist wordt.
 
-<p>In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo
 
 Voor veldeigenschappen is nog geen toepassing bekend voor de helpinfo. Het is denkbaar dat deze naast de helpinfo weergegeven zou kunnen worden, om de invul instructie hier te beheren in plaats van in de helpinfo van meerdere veld types die deze eigenschap hebben.
 
@@ -369,7 +369,7 @@ Een speciaal element is een tabel.
 De berichthoofdstukken worden gebruikt om invoer velden in berichten eenvoudig te kunnen beheren in een raamwerk en om logische onderverdelingen in berichten te kunnen aanbrengen. Doordat in berichten alleen de verschillende hoofdstukken benoemd zijn, kan eenvoudig een bepaald veld toegevoegd worden aan-, of verwijderd worden uit- een hele groep berichten die dat hoofdstuk bevatten.
 De volgorde waarmee de berichtvelden in het hoofdstuk staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de hoofdstukken en daarmee ook in de berichten.
  
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo
 
 Specifiek voor bericht hoofdstukken is er in de beschikbare software vaak nog geen ondersteuning. Toch neigt de markt ernaar dit wel te gaan eisen. Dit zodat bijvoorbeeld duidelijk uitgelegd kan worden welk doel dit deel van het bericht dient en welke weg deze informatie bijvoorbeeld vervolgt of waar deze informatie bijvoorbeeld niet heen gaat. (denk aan informatie die binnen een bepaald domein moet blijven)
 
@@ -426,7 +426,7 @@ De vormgeving van de opvolging van berichten zodat een stroomschema gevolgd kan 
 De MITT’s koppelen berichttypes aan elkaar binnen- en tussen transacties.
 Als een bericht type op meerdere plekken in een transactie voorkomt, bijvoorbeeld 1 keer als start bericht en 1 keer als reactie, dan bestaan er 2 MITT’s. Beiden verwijzen naar de transactie en het bericht type, alleen verschilt de koppeling tussen de MITT’s.
 
-<p>In te stellen globale eigenschappen: id, state, dateLaMu, userLaMu</p>
+In te stellen globale eigenschappen: id, state, dateLaMu, userLaMu
 
 In te stellen specifieke eigenschappen: 
 requiredNotify
@@ -487,7 +487,7 @@ Voorgaand(previous) bericht in transactie
 Als dit bericht een voorgaand bericht is voor het bericht waarop het ingesteld staat
 
 <aside class="example" title="Definitie van de volgorde van type berichten">
-<p><b>MessageInTransactionType</b><br/>
+<b>MessageInTransactionType</b><br/>
 id:			mit40170_T7
 initiatorToExecutor:	true
 firstMessage:		false
@@ -495,13 +495,13 @@ messageType:		MS_AcceptatieVoorstelWijziging
 previous:		mitt563
 transactionType:	TR_ContractwijzigingOG
 MessageInTransactionTypeCondition: mtc1
-</p>
+
 </aside>
 
 #### Voorwaarden voor elementen van type berichten (ElementCondition)
 Hiermee wordt geregeld wanneer een gebruiker een veld wel of niet mag aanpassen, of dat het veld door de software leeg gemaakt moet worden voor een volgend bericht.
 
-<p>In te stellen globale eigenschappen: id, description, helpinfo</p>
+In te stellen globale eigenschappen: id, description, helpinfo
 
 In te stellen specifieke eigenschappen:
 condition
@@ -546,24 +546,24 @@ Hoe een koppeling aangebracht wordt tussen twee transacties wordt uitgelegd aan 
 De transactie Accorderen_Wijziging tussen opstellende rol en accorderende rol bestaat uit drie berichten: Voorstel_tot_Wijziging, Akkoord_Wijziging, Niet_Akkoord_Wijziging. Het bericht Voorstel_tot_Wijziging is het eerste bericht van de transactie. Het bericht in transactie van Voorstel_tot_Wijziging heeft GEEN vorig bericht in transactie. De berichten in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging hebben wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Voorstel_tot_Wijziging.
 
 <aside class="example" title="Definitie van de volgorde van type berichten">
-<p><b>Bericht in Transactie</b><br/>
+<b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Vorig:		 	
 Bericht:		Voorstel_tot_Wijziging
 Transactie:		Accorderen_Wijziging
 
-<p><b>Bericht in Transactie</b><br/>
+<b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ 6bdae158-a6dc-491b-a9ea-692fd419a828
 Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Bericht:		Akkoord_Wijziging
 Transactie:		Accorderen_Wijziging
 
-<p><b>Bericht in Transactie</b><br/>
+<b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ 4e5569b7-0c6a-4976-811d-9d9189b8b1df
 Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Bericht:		Niet_Akkkord_Wijziging
 Transactie:		Accorderen_Wijziging
-</p>
+
 </aside>
 
 De transactie Adviseren_Wijziging tussen accorderende rol en adviserende rol en bestaat uit twee berichten: Verzoek_Advies_Wijziging en Advies_Wijziging. Het bericht Verzoek_Advies_Wijziging is het eerste bericht van de transactie. Het bericht in transactie van Verzoek_Advies_Wijziging heeft GEEN vorig bericht in transactie. Het bericht in transactie van Advies_Wijziging heeft wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Verzoek_Advies_Wijziging.
@@ -654,7 +654,7 @@ er is dus een afhankelijkheid tussen twee (of meer) nog niet aanwezige berichten
 restrictie op het aantal keren dat een bericht verzonden mag worden.
 
 
-<p>In te stellen globale eigenschappen: id, state, dateLaMu, userLaMu, helpinfo</p>
+In te stellen globale eigenschappen: id, state, dateLaMu, userLaMu, helpinfo
 
 Voor bericht in transactie beperkingen is nog geen toepassing bekend voor de helpinfo.
 In te stellen specifieke eigenschappen:
@@ -684,7 +684,7 @@ sendAfter: mit_VTWoordeelpositief_1
 In ieder VISI bericht kunnen bestanden bijgevoegd worden. Een bestand moet wel altijd aan een bijlage type gekoppeld worden. Een raamwerk moet daarom altijd minimaal één bijlage type hebben. Als een raamwerk meerdere bijlage types heeft en er geen specifiek bijlage type op een bericht ingesteld staat, kan er gekozen worden aan welk bijlage type een bijlage in een bericht gekoppeld wordt. 
 Een bijlage type is meestal gekoppeld aan een berichthoofdstuk, zodat er bij het invoeren van een bijlage metadata velden beschikbaar zijn, om bijbehorende gegevens bij de bijlage in te vullen.
 
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo
 
 Voor bijlage types is nog geen toepassing bekend voor de helpinfo.
 code
@@ -712,7 +712,7 @@ ComplexElementType: CE_BijlagenBijWijzigingGereed
 In ieder raamwerk is een organisatie type nodig. Deze wordt gebruikt bij het aanmaken van organisaties in het project specifieke bericht. Normaal gesproken bevat een raamwerk maar 1 organisatie type. Raamwerken met meer dan 1 variant zijn nog niet toegepast. 
 
 
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo
 
 Voor organisatie types is nog geen toepassing bekend voor de helpinfo.
 code
@@ -735,7 +735,7 @@ In ieder raamwerk is een persoon type nodig. Deze wordt gebruikt bij het aanmake
 De basis velden van een persoon in een project specifiek bericht, zoals Naam, gebruikersnaam en Id afkorting enz. staan niet in het raamwerk. Zie#verwijzing naar psb werking#…….
 
 
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo
 
 Voor persoon types is nog geen toepassing bekend voor de helpinfo.
 code
@@ -758,13 +758,13 @@ In ieder raamwerk is een project type nodig. Deze wordt gebruikt voor het vastle
 De basis velden van een projecttype in een project specifiek bericht, zoals de projectnaam, project Id enz. staan niet in het raamwerk. 
 
 
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo
 
 Bij project type wordt de help info soms door raamwerkbouwers gebruikt voor aantekeningen of uitleg over het raamwerk. Er is geen toepassing verder in VISI software van bekend.
 code
 
 <aside class='def'>
-<p>In te stellen specifieke eigenschappen:<br>
+In te stellen specifieke eigenschappen:<br>
 Namespace<br>
 Hier moet per versie van een raamwerk een unieke namespace in het raamwerk staan. Dit zodat visi software kan identificeren met welk raamwerk een visi transactie afgehandeld moet worden.<br>
 <br>
@@ -772,15 +772,15 @@ Verwijzingen vanuit project types:<br>
 Complex element<br>
 Voor zover bekend is er in VISI software geen toepassing van metadata velden op het project type en wordt deze dus niet gekoppeld.<br>
 Verwijzingen naar project types:<br>
-Geen</p>
+Geen
 </aside>
 
 <aside class="example" title="Project in transactie">
-<p><b>ProjectType</b><br/>
+<b>ProjectType</b><br/>
 id: 		RaamwerkUAVGCGemLutjebroek<br/>
 namespace:	http://www.visi.nl/schemas/20160331/RaamwerkUAVGCGemLutjebroek_v2<br/>
 description:	 Standaard raamwerk UAV GC Gemeente Lutjebroek
-</p></aside>
+</aside>
 
 ### TransactieFaseType
 
@@ -791,42 +791,42 @@ De DEMO methodologie kent de transactiefases requested, promised, declared, acce
 Buiten scope: Bij het gebruik van de DEMO oplegger van de systematiek worden in ieder geval de transactie fase Promised en  de volgende revoked-types actief gebruikt voor specifiek software gedrag:  Revoke Acceptance Allow, Revoke Promise Allow, Revoke Request Allow en Revoke Statement Allow
 
 <aside class='def'>
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo, code</p>
+In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo, code
 </aside>
 
 <aside class='def'>
-<p>In te stellen specifieke eigenschappen:<br>
+In te stellen specifieke eigenschappen:<br>
 Verwijzingen vanuit transactie fases:<br>
 Geen<br>
 <br>
 Verwijzingen naar transactie fases:<br>
 Bericht in transactie<br>
 Op deze manier kan een bericht in transactie aan een bepaalde transactiefase gekoppeld worden.
-</p></aside>
+</aside>
   
 ### Type groep (GroupType)
 <aside class='def'>
-<p>De definitie van de groep voor het opslaan van bijlagen verzonden met een bericht binnen een transactie. Op dit moment wordt in de praktijk geen functionaliteit door leveranciers toegekend aan dit element. Een GroupType maakt echter wel onderdeel uit van de structuur van een raamwerk.
-</p></aside>
+De definitie van de groep voor het opslaan van bijlagen verzonden met een bericht binnen een transactie. Op dit moment wordt in de praktijk geen functionaliteit door leveranciers toegekend aan dit element. Een GroupType maakt echter wel onderdeel uit van de structuur van een raamwerk.
+</aside>
 
 <div class="issue" data-number="139"></div>   
  
 <aside class='def'>
-<p>In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo</p>
+In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo
 </aside>
 
 <aside class='def'>
-<p>In te stellen specifieke eigenschappen:
-</p> </aside>
+In te stellen specifieke eigenschappen:
+ </aside>
 
 <aside class='def'> 
-<p>Verwijzingen vanuit GroepTypes:
-</p></aside>
+Verwijzingen vanuit GroepTypes:
+</aside>
 
 <aside class='def'> 
-<p>Verwijzingen naar GroepTypes:<br>
+Verwijzingen naar GroepTypes:<br>
 Bericht in transactie
-</p></aside>  
+</aside>  
 
 ### Globale eigenschappen
 
