@@ -254,34 +254,35 @@ unieke identificatie:	RT_Beoordelende_rol<br>
 omschrijving:		Beoordelende rol
 [startDate](#startdate)
 </aside>
-  <pre>
-Optionele eigenschappen zijn: <i>
-<code>[^startDate code^](#startdate)</code>
 
-[startDate code](#startdate)
+<aside class="def" title="Optionele eigenschappen">
+Optionele eigenschappen zijn: 
 
-endDate
-state
-dateLaMu
-userLaMu
-language
-category
-helpInfo
-Voor helpinfo roltypes is nog geen (software)toepassing bekend.
-code
-responsibilityScope
-responsibilityTask
-responsibilitySupportTask
-responsibilityFeedback</i>
+<dl>
+<dt>[=startDate=]
+<dd>Datum waarop het start.
+<dt>[=endDate=]
+<dt>[=state=]
+<dt>[=dateLaMu=]
+<dt>[=userLaMu=]
+<dt>[=language=]
+<dt>[=category=]
+<dt>[=helpInfo=]
+<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
+<dt>[=code=]
+<dt>[=responsibilityScope=]
+<dt>[=responsibilityTask=]
+<dt>[=responsibilitySupportTask=]
+<dt>[=responsibilityFeedback=]
+</dl>
+<!-- -->
 
- 
-  </pre>
-
+</aside>
 
 
 Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
 
-_responsibilityScope_
+<dfn>_responsibilityScope_</dfn>
 Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd
 			
 _responsibilityTask_
