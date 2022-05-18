@@ -4,6 +4,30 @@ De functionele documentatie is bedoeld voor een software productmanager of een s
 
 ## Leeswijzer
 
+<aside class="example" exampletitle="Gegevens van een type rol (in een raamwerk)">
+<b>Rol</b><br>
+unieke identificatie:	RT_Beoordelende_rol<br>
+omschrijving:		Beoordelende rol
+</aside>
+
+<aside class="appendix" title="appendixGegevens van een type rol (in een raamwerk)">
+<b>Rol</b><br>
+unieke identificatie:	RT_Beoordelende_rol<br>
+omschrijving:		Beoordelende rol
+</aside>
+
+<aside class="ednote" title="ednoteGegevens van een type rol (in een raamwerk)">
+<b>Rol</b><br>
+unieke identificatie:	RT_Beoordelende_rol<br>
+omschrijving:		Beoordelende rol
+</aside>
+
+<aside class="exclude" title="excludeGegevens van een type rol (in een raamwerk)">
+<b>Rol</b><br>
+unieke identificatie:	RT_Beoordelende_rol<br>
+omschrijving:		Beoordelende rol
+</aside>
+
 De functionele uitleg is opgebouwd in hoofdstukken, en leest het beste hoofdstuk voor hoofdstuk. Met een hoofdstuk wordt een functioneel abstractieniveau inclusief bouwstenen uitgelegd. Aan het einde van een hoofdstuk wordt getoetst of de inhoud in voldoende mate begrepen wordt, en lezer verder kan naar het volgende hoofdstuk. In het volgende hoofdstuk wordt de functionele beschrijving aangevuld of verdiept qua bouwstenen. Hoofdstukken overslaan leidt tot het missen van bouwstenen en logische denkvolgorde.
 De hoofdstukopbouw is afgestemd om het kennisniveau van de lezer, en verloopt van newbie tot expert. 
 
