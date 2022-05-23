@@ -225,7 +225,7 @@ Het raamwerk is het communicatiesjabloon van een project. Alle communicatie moet
 
 Het sjabloon dient tevens ter validatie van de communicatie. Zoals de naam aangeeft is het een sjabloon waaraan de communicatie moet voldoen. Op basis van dit sjabloon kan geverifieerd worden of de verstrekte informatie voldoet aan de afspraken. 
 
-### Type rol 1 (RoleType)
+### Type rol (RoleType)
 Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
 
 <aside class="def" title="Eigenschappen van het element">
@@ -262,21 +262,18 @@ unieke identificatie:	RT_Beoordelende_rol<br>
 omschrijving:		Beoordelende rol
 [startDate](#startdate)
 </aside>	
-	
 <aside class="def" title="Beschrijving van de specifieke eigenschappen">
+	
+	
 #### <dfn>`responsibilityScope`</dfn>
-Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd
-			
+Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd	
 #### <dfn>`responsibilityTask`</dfn>
 Taken die voortkomen uit de verantwoordelijkheden van de betreffende rol		
-
 #### <dfn>`responsibilitySupportTask`</dfn>
 Taken die worden uitgevoerd om andere rollen te ondersteunen. Denk hierbij bijvoorbeeld aan gedelegeerde verantwoordelijkheden				
-
 #### <dfn>`responsibilityFeedback`</dfn>
 Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen
 </aside>
-
 	
 ### Informatie-overdracht conform type transactie (TransactionType)
 
