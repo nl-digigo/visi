@@ -228,21 +228,12 @@ Het sjabloon dient tevens ter validatie van de communicatie. Zoals de naam aange
 ### Type rol 1 (RoleType)
 Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
 
-<aside class="def" title="Verplichte eigenschappen">
-<dl> 
-<dt>[=id=]*
-<dd> Unieke identificatie 1
-<dt>[=description=]*
-<dd> Omschrijving 1
-</dl>
-</aside>
-
 <aside class="def" title="Eigenschappen van het element">
 	<dl> 
-		<dt>[=id=]
-		<dd> Unieke identificatie 2
-		<dt>[=description=]
-		<dd> Omschrijving 2
+		<dt>[=id=]*
+		<dd> Unieke identificatie
+		<dt>[=description=]*
+		<dd> Omschrijving
 		<!-- definition: list -->
 		<dt>[=startDate=]
 		<!-- definition: term -->
@@ -265,7 +256,6 @@ Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarisse
 	</dl>
 </aside>
 
-
 <aside class="example" title="Gegevens van een type rol (in een raamwerk)">
 <b>Rol</b><br>
 unieke identificatie:	RT_Beoordelende_rol<br>
@@ -274,16 +264,16 @@ omschrijving:		Beoordelende rol
 </aside>	
 	
 <aside class="def" title="Beschrijving van de specifieke eigenschappen">
-<dfn>responsibilityScope</dfn>
+#### <dfn>`responsibilityScope`</dfn>
 Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd
 			
-<dfn>responsibilityTask</dfn>
+#### <dfn>`responsibilityTask`</dfn>
 Taken die voortkomen uit de verantwoordelijkheden van de betreffende rol		
 
-<dfn>responsibilitySupportTask</dfn>
+#### <dfn>`responsibilitySupportTask`</dfn>
 Taken die worden uitgevoerd om andere rollen te ondersteunen. Denk hierbij bijvoorbeeld aan gedelegeerde verantwoordelijkheden				
 
-<dfn>responsibilityFeedback</dfn>
+#### <dfn>`responsibilityFeedback`</dfn>
 Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen
 </aside>
 
