@@ -4,45 +4,6 @@ De functionele documentatie is bedoeld voor een software productmanager of een s
 
 ## Leeswijzer
 
-<aside class="example" exampletitle="Gegevens van een type rol (in een raamwerk)">
-<b>Rol</b><br>
-unieke identificatie:	RT_Beoordelende_rol<br>
-omschrijving:		Beoordelende rol
-</aside>
-
-
-  <pre>
-  const sum = [...items]
-    .map(item => item * 2)
-    .reduce((sum, next) => sum + (next || 0) );
-  </pre>
-
-
-<section class="appendix">
-  <h2>Acknowledgements</h2>
-  <p>This spec would not be possible without...</p>
-</section>
-
-
-<p class="ednote" title="This section will be reformatted">
-  We are aware that the formatting of this section isn't great. We will fix it
-  in the next revision!
-</p>
-
-<p>
- <abbr class="exclude" title="Ay-Bee-See">ABC</abbr>,
- but this won't be wrapped ABC.
-</p>
-
-<div class="advisement" title="A hypothetical API">
-  <pre class="idl exclude">
-    interface ItsTwentyTwenty {
-      undefined cantSeeNobody();
-    };
-  </pre>
-</div>
-
-
 De functionele uitleg is opgebouwd in hoofdstukken, en leest het beste hoofdstuk voor hoofdstuk. Met een hoofdstuk wordt een functioneel abstractieniveau inclusief bouwstenen uitgelegd. Aan het einde van een hoofdstuk wordt getoetst of de inhoud in voldoende mate begrepen wordt, en lezer verder kan naar het volgende hoofdstuk. In het volgende hoofdstuk wordt de functionele beschrijving aangevuld of verdiept qua bouwstenen. Hoofdstukken overslaan leidt tot het missen van bouwstenen en logische denkvolgorde.
 De hoofdstukopbouw is afgestemd om het kennisniveau van de lezer, en verloopt van newbie tot expert. 
 
@@ -231,23 +192,22 @@ Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarisse
 <aside class="def" title="Eigenschappen van het element">
 	<dl> 
 		<dt>[=id=]*
-		<dd> Unieke identificatie
+			<dd> Unieke identificatie
 		<dt>[=description=]*
-		<dd> Omschrijving
-		<!-- definition: list -->
+			<dd> Omschrijving
+			<!-- definition: list -->
 		<dt>[=startDate=]
-		<!-- definition: term -->
-		<dd>Datum waarop het start.
-		<!-- definition: definition -->
+			<!-- definition: term -->
+			<!-- dd definition: definition -->
 		<dt>[=endDate=]
-		<!-- verwijst naar een term die met <dfn> is gedefinieerd. -->
+			<!-- verwijst naar een term die met <dfn> is gedefinieerd. -->
 		<dt>[=state=]
 		<dt>[=dateLaMu=]
 		<dt>[=userLaMu=]
 		<dt>[=language=]
 		<dt>[=category=]
 		<dt>[=helpInfo=]
-		<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
+			<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
 		<dt>[=code=]
 		<dt>[=responsibilityScope=]
 		<dt>[=responsibilityTask=]
