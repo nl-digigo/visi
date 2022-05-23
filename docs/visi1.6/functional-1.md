@@ -229,184 +229,64 @@ Het sjabloon dient tevens ter validatie van de communicatie. Zoals de naam aange
 Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
 
 <aside class="def" title="Verplichte eigenschappen">
-Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description)</i>
+<dl> 
+<dt>[=id=]*
+<dd> Unieke identificatie 1
+<dt>[=description=]*
+<dd> Omschrijving 1
+</dl>
 </aside>
+
+<aside class="def" title="Eigenschappen van het element">
+	<dl> 
+		<dt>[=id=]
+		<dd> Unieke identificatie 2
+		<dt>[=description=]
+		<dd> Omschrijving 2
+		<!-- definition: list -->
+		<dt>[=startDate=]
+		<!-- definition: term -->
+		<dd>Datum waarop het start.
+		<!-- definition: definition -->
+		<dt>[=endDate=]
+		<!-- verwijst naar een term die met <dfn> is gedefinieerd. -->
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=language=]
+		<dt>[=category=]
+		<dt>[=helpInfo=]
+		<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
+		<dt>[=code=]
+		<dt>[=responsibilityScope=]
+		<dt>[=responsibilityTask=]
+		<dt>[=responsibilitySupportTask=]
+		<dt>[=responsibilityFeedback=]
+	</dl>
+</aside>
+
 
 <aside class="example" title="Gegevens van een type rol (in een raamwerk)">
 <b>Rol</b><br>
 unieke identificatie:	RT_Beoordelende_rol<br>
 omschrijving:		Beoordelende rol
 [startDate](#startdate)
-</aside>
-
-<aside class="def" title="Optionele globale eigenschappen">
-Optionele eigenschappen zijn: 
-
-<dl> 
-<!-- definition: list -->
-<dt>[=startDate=]
-<!-- definition: term -->
-<dd>Datum waarop het start.
-<!-- definition: definition -->
-<dt>[=endDate=]
-<!-- verwijst naar een term die met <dfn> is gedefinieerd. -->
-<dt>[=state=]
-<dt>[=dateLaMu=]
-<dt>[=userLaMu=]
-<dt>[=language=]
-<dt>[=category=]
-<dt>[=helpInfo=]
-<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
-<dt>[=code=]
-<dt>[=responsibilityScope=]
-<dt>[=responsibilityTask=]
-<dt>[=responsibilitySupportTask=]
-<dt>[=responsibilityFeedback=]
-</dl>
-<!-- -->
-
-</aside>
-
-<aside class="def" title="Optionele specifieke eigenschappen">
-Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
-
-<dfn>_responsibilityScope_</dfn>
+</aside>	
+	
+<aside class="def" title="Beschrijving van de specifieke eigenschappen">
+<dfn>responsibilityScope</dfn>
 Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd
 			
-_responsibilityTask_
+<dfn>responsibilityTask</dfn>
 Taken die voortkomen uit de verantwoordelijkheden van de betreffende rol		
 
-_responsibilitySupportTask_
+<dfn>responsibilitySupportTask</dfn>
 Taken die worden uitgevoerd om andere rollen te ondersteunen. Denk hierbij bijvoorbeeld aan gedelegeerde verantwoordelijkheden				
 
-_responsibilityFeedback_
+<dfn>responsibilityFeedback</dfn>
 Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen
 </aside>
 
-<!-- test opmaak 1 -->	
-	
-### Type rol 2 (RoleType)
-Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
-
-Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description)</i> 
-
-<aside class="example" title="Gegevens van een type rol (in een raamwerk)">
-<b>Rol</b><br>
-unieke identificatie:	RT_Beoordelende_rol<br>
-omschrijving:		Beoordelende rol
-[startDate](#startdate)
-</aside>
-
-<aside class="def" title="Optionele eigenschappen">
-Optionele eigenschappen zijn: 
-
-<dl> 
-<!-- definition: list -->
-<dt>[=startDate=]
-<!-- definition: term -->
-<dd>Datum waarop het start.
-<!-- definition: definition -->
-<dt>[=endDate=]
-<!-- verwijst naar een term die met <dfn> is gedefinieerd. -->
-<dt>[=state=]
-<dt>[=dateLaMu=]
-<dt>[=userLaMu=]
-<dt>[=language=]
-<dt>[=category=]
-<dt>[=helpInfo=]
-<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
-<dt>[=code=]
-<dt>[=responsibilityScope=]
-<dt>[=responsibilityTask=]
-<dt>[=responsibilitySupportTask=]
-<dt>[=responsibilityFeedback=]
-</dl>
-	
-Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
-
-<dfn>_responsibilityScope_</dfn>
-Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd
-			
-_responsibilityTask_
-Taken die voortkomen uit de verantwoordelijkheden van de betreffende rol		
-
-_responsibilitySupportTask_
-Taken die worden uitgevoerd om andere rollen te ondersteunen. Denk hierbij bijvoorbeeld aan gedelegeerde verantwoordelijkheden				
-
-_responsibilityFeedback_
-Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen	
-
-<!-- -->
-
-</aside>
-
-
-
-
-<!-- test opmaak 2 -->		
-	
-### Type rol 3 (RoleType)
-Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
-
-Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description)</i> 
-
-<aside class="example" title="Gegevens van een type rol (in een raamwerk)">
-<b>Rol</b><br>
-unieke identificatie:	RT_Beoordelende_rol<br>
-omschrijving:		Beoordelende rol
-[startDate](#startdate)
-</aside>
-
-<aside class="def" title="Optionele eigenschappen">
-Optionele eigenschappen zijn: 
-
-<dl> 
-<!-- definition: list -->
-<dt>[=startDate=]
-<!-- definition: term -->
-<dd>Datum waarop het start.
-<!-- definition: definition -->
-<dt>[=endDate=]
-<!-- verwijst naar een term die met <dfn> is gedefinieerd. -->
-<dt>[=state=]
-<dt>[=dateLaMu=]
-<dt>[=userLaMu=]
-<dt>[=language=]
-<dt>[=category=]
-<dt>[=helpInfo=]
-<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
-<dt>[=code=]
-<dt>[=responsibilityScope=]
-<dt>[=responsibilityTask=]
-<dt>[=responsibilitySupportTask=]
-<dt>[=responsibilityFeedback=]
-</dl>
-<!-- -->
-
-</aside>
-
-
-Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
-
-<dfn>_responsibilityScope_</dfn>
-Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd
-			
-_responsibilityTask_
-Taken die voortkomen uit de verantwoordelijkheden van de betreffende rol		
-
-_responsibilitySupportTask_
-Taken die worden uitgevoerd om andere rollen te ondersteunen. Denk hierbij bijvoorbeeld aan gedelegeerde verantwoordelijkheden				
-
-_responsibilityFeedback_
-Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen	
-	
-	
-	
-<!-- test opmaak 3 -->	
-		
-	
-	
-	
 	
 ### Informatie-overdracht conform type transactie (TransactionType)
 
