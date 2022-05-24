@@ -50,7 +50,8 @@ In het conceptuele deel worden de volgende zaken beschreven:
 - verdieping van het VISI raamwerk;
 - garanties voor de gebruiker.
 
-> niveau 2 Functioneel
+> blocknote p
+> niveau 2 Functioneel 
 > niveau 3 Technisch
 
 
@@ -68,6 +69,5 @@ Blok voor eigenschappen van elementen - blauw
 </aside>
 
 <p class="note" title="Blok voor notities">
-  
 Blok voor aanvullende notities - groen
-</p>
+
