@@ -222,7 +222,7 @@ unieke identificatie:	RT_Beoordelende_rol<br>
 omschrijving:		Beoordelende rol
 [startDate](#startdate)
 </aside>	
-<aside class="def" title="Beschrijving van de specifieke eigenschappen">
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">
 	
 	
 #### <dfn>`responsibilityScope`</dfn>
@@ -233,7 +233,7 @@ Taken die voortkomen uit de verantwoordelijkheden van de betreffende rol
 Taken die worden uitgevoerd om andere rollen te ondersteunen. Denk hierbij bijvoorbeeld aan gedelegeerde verantwoordelijkheden				
 #### <dfn>`responsibilityFeedback`</dfn>
 Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen
-</aside>
+</dl>
 	
 ### Informatie-overdracht conform type transactie (TransactionType)
 
