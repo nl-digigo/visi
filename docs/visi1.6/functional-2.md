@@ -347,13 +347,13 @@ tekst
 
 # METARAAMWERK
 
-## Doelstelling van het METARAAMWERK
+### Doelstelling van het METARAAMWERK
 Sinds systematiek versie 1.4 beschikt de VISI systematiek over een zogenaamd META-raamwerk om de VISI configuratiebestanden uit te wisselen. 
 De doelstelling is om dit META-raamwerk in te richten en te bepalen in hoeverre het ge-bruik van het META-raamwerk bruikbaar is voor Rijkswaterstaat en of dit kan bijdragen om misverstanden bij het initiëren en updaten van VISI-raamwerken te voorkomen.
 De test opstelling heeft tot doel om te bekijken of de inzet van het META-raamwerk zowel organisatorisch als inhoudelijk haalbaar is voor Rijkswaterstaat en of dit tot meerwaarde leidt. Voor het inrichten van het META-raamwerk zal afstemming plaatsvinden met leden van de VISI-organisatie. Daarnaast zullen in overleg met Opdrachtgever eventuele resultaten gedeeld worden met verschillende gremia van de VISI-organisatie.
 
  
-## Wat houdt het VISI META-raamwerk in
+### Wat houdt het VISI META-raamwerk in
 Het VISI META-raamwerk is standaard onderdeel van de systematiek en is bedoeld voor het uitwisselen van een nieuw contractspecifiek raamwerk en het uitwisselen van een gewijzigd raamwerk of projectspecifiek bericht tussen projectpartners. Het META-raamwerk zelf is project overstijgend. Het META-raamwerk dient immers beschikbaar te zijn voordat een VISI omgeving voor een specificiek project wordt ingericht. Om projectpartners te laten communiceren via het META-raamwerk dienen beide projectpartners over VISI compatible software te beschikken waarin een META-project met daarin het universele META-raamwerk en een valide META-projectspecifieke bericht is ingeladen. In dit bericht staan de serveradressen van de projectpartners en de organisatie en persoonsgegevens. Elke organisa-tie heeft het eigen META-projectspecifieke bericht in eigen beheer en vult dit aan de met de gegevens van projectpartners.
 
 ** De beschikbare rollen en bijbehorende verantwoordelijkheden
