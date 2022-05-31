@@ -442,7 +442,6 @@ Simple elements:
 Berichtveld beperkingen
 
 ### Volgorde van type berichten (MessageInTransactionType)
-### In één type transactie
 De vormgeving van de opvolging van berichten zodat een stroomschema gevolgd kan worden wordt geregeld in het bericht in transacties type (vanaf hier aangeduid als “MITT”). 
 De MITT’s koppelen berichttypes aan elkaar binnen- en tussen transacties.
 Als een bericht type op meerdere plekken in een transactie voorkomt, bijvoorbeeld 1 keer als start bericht en 1 keer als reactie, dan bestaan er 2 MITT’s. Beiden verwijzen naar de transactie en het bericht type, alleen verschilt de koppeling tussen de MITT’s.
@@ -519,7 +518,7 @@ MessageInTransactionTypeCondition: mtc1
 
 </aside>
 
-#### Voorwaarden voor elementen van type berichten (ElementCondition)
+### Voorwaarden voor elementen van type berichten (ElementCondition)
 Hiermee wordt geregeld wanneer een gebruiker een veld wel of niet mag aanpassen, of dat het veld door de software leeg gemaakt moet worden voor een volgend bericht.
 
 In te stellen globale eigenschappen: id, description, helpinfo
