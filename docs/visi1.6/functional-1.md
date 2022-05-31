@@ -302,7 +302,7 @@ elementen:		<u>CE_Contractwijziging_Basis</u>, <u>CE_Contractwijziging_Voorstel<
 
 </aside>
 
-#### Elementen van een type bericht (SimpleElementType)
+### Elementen van een type bericht (SimpleElementType)
 
 In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo
 
@@ -328,7 +328,7 @@ description:	 Gepland moment start uitvoering
 helpinfo:	Kies hier de beoogde startdatum waarop de hier benoemde werkzaakheden beginnen.
 User defined type: UDT_Datumveld
 
-#### Datatype van een element (UserDefinedType)
+### Datatype van een element (UserDefinedType)
 Hiermee wordt het gedrag van het invoerveld bepaald en hoe het gevalideerd moet worden.
 Zo kan een veld een datum/tijdstip/valuta/verplichte tekst/optionele tekst/een exact aantal karakters enzovoorts als vereiste mee krijgen. VISI software biedt doorgaans invoerfunctionaliteit op maat voor de meest voorkomende invoer soorten, zoals een datum keuze venster bij een datum veld en een keuzelijst functie als er een keuze uit lijst met waardes vereist wordt.
 
@@ -383,10 +383,10 @@ description:	Verplichte tekst veld
 basetype:	STRING
 xsdRestriction:	xs:minLength value="1"
 
-#### Tabel als element van een type bericht
+### Tabel als element van een type bericht
 Een speciaal element is een tabel.
 
-#### Groepering van elementen (ComplexElementType)
+### Groepering van elementen (ComplexElementType)
 De berichthoofdstukken worden gebruikt om invoer velden in berichten eenvoudig te kunnen beheren in een raamwerk en om logische onderverdelingen in berichten te kunnen aanbrengen. Doordat in berichten alleen de verschillende hoofdstukken benoemd zijn, kan eenvoudig een bepaald veld toegevoegd worden aan-, of verwijderd worden uit- een hele groep berichten die dat hoofdstuk bevatten.
 De volgorde waarmee de berichtvelden in het hoofdstuk staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de hoofdstukken en daarmee ook in de berichten.
  
@@ -518,47 +518,8 @@ MessageInTransactionTypeCondition: mtc1
 
 </aside>
 
-### Voorwaarden voor elementen van type berichten (ElementCondition)
-Hiermee wordt geregeld wanneer een gebruiker een veld wel of niet mag aanpassen, of dat het veld door de software leeg gemaakt moet worden voor een volgend bericht.
-
-In te stellen globale eigenschappen: id, description, helpinfo
-
-In te stellen specifieke eigenschappen:
-condition
-Hiermee wordt het gedrag van een veld bepaald. Er is keuze uit de volgende conditions:
--	FREE
-Het veld mag aangepast worden
--	FIXED
-Het veld mag niet aangepast worden
--	EMPTY
-Het veld wordt door de software leeggemaakt voor de gebruiker
-Verwijzingen vanuit de Berichtveld beperkingen:
-Door een of meerdere van onderstaande elementen te benoemen, wordt de situatie waar de conditie op van toepassing is gedefinieerd. 
-complexElements
-simpleElement
-messageInTransaction
-
-De basis regels zijn:
--	Een veld dat voor de eerste keer aangeboden wordt, dus nog niet bestaat in het voorgaande bericht, is altijd invulbaar en wordt nooit geblokkeerd door deze instelling.
--	Standaard wordt een veld dat in het voorgaande bericht al bestaat geblokkeerd in de opvolgende berichten. Ook als het veld toevallig “leeg” was in het voorgaande bericht. Dus alleen doordat het veld de eigenschap “FREE” mee krijgt, kan een veld aangepast worden.
--	OVERNEMEN VAN WAARDEN???
--	Berichtveld beperkingen kunnen ingesteld worden op Berichthoofdstukken, Berichtvelden en Berichten in transacties of een combinatie daarvan. Onderstaande tabel geeft aan welke beperking gebruikt moet worden als er meerdere beperkingen op een veld in een bericht staan:
-Het hoogste getal in de eerste kolom “wint”. Dus als er een conditie op een CE en SE ingesteld is (5) dan geldt deze conditie tov een instelling alleen op een SE  (1).
- 
-
-Verwijzingen naar de Berichtveld beperkingen:
-Geen
-ElementCondition
-id: 		EC_116
-description:	 New element condition
-condition:	 FREE
-ComplexElement: CeContractwijzigingVoorstel
-ComplexElement: CE_Tabel_Werkpakketten
-simpleElement: SE_WPkostenpercentage
-messageInTransaction: mitt_265
-
-#### In meerdere gekoppelde type transacties (m.a.w. hoofd- & sub-transacties)
-WAARSCHIJNLIJK DUBBEL??? ONTDUBBELEN
+#### ONTDUBBELEN In meerdere gekoppelde type transacties (m.a.w. hoofd- & sub-transacties)
+WAARSCHIJNLIJK DUBBEL??? 
 In paragraaf 2.7 staat beschreven dat een type transactie uit type berichten bestaat, en dat de volgorde van de berichten in een transactie gedefinieerd wordt met een object bericht in transactie. Ieder bericht in transactie heeft een verwijzing naar het vorige bericht in transactie. Deze verwijzing is echter niet beperkt door de transactie. Met andere woorden het vorige bericht in transactie hoeft niet een bericht uit dezelfde transactie te zijn, het kan ook een bericht uit een andere transactie zijn. Hierdoor worden transactie feitelijk aan elkaar gekoppeld. Wel gelden er specifieke regels hoe deze koppeling van transactie gemodelleerd dient te worden in het raamwerk.
 
 Hoe een koppeling aangebracht wordt tussen twee transacties wordt uitgelegd aan de hand van een wijzigingsprocedure tussen drie rollen. Dit zijn de rollen: opstellende rol, accorderende rol en adviserende rol. Er is een transactie tussen de opstellende rol en accorderende rol. Deze transactie heeft als doel om tot een geaccordeerde wijziging te komen. Er is een transactie tussen de accorderende rol en adviserende rol. Deze transactie heeft als doel on tot een advies te komen over de opgestelde wijziging. De accorderende rol heeft baat bij een koppeling tussen deze twee transacties, waardoor één procedure voor het opstellen, adviseren en accorderen van een wijziging ontstaat tussen drie rollen: opstellende, adviserende en accorderende rol.
@@ -656,7 +617,50 @@ Er is een bericht nodig die niet voorkomt als vorig, zodat duidelijk is dat een 
 
 Vanuit een (1) type wordt verwezen naar type transactie. Dit is het type bericht in transactie (MessageInTransactionType). Alhoewel type berichten tot een type transactie behoren is er geen verwijzing van type bericht naar type transactie. Zoals de naam al doet vermoeden, is de verwijzing vanuit type bericht in transactie (MessageInTransactionType) naar type bericht en naar type transactie. Dit betekent dat type berichten te (her)gebruiken zijn in verschillende type transacties.      
 
-#### Voorwaarden voor opvolgende type berichten (MessageInTransactionTypeCondition)
+
+
+
+### Voorwaarden voor elementen van type berichten (ElementCondition)
+Hiermee wordt geregeld wanneer een gebruiker een veld wel of niet mag aanpassen, of dat het veld door de software leeg gemaakt moet worden voor een volgend bericht.
+
+In te stellen globale eigenschappen: id, description, helpinfo
+
+In te stellen specifieke eigenschappen:
+condition
+Hiermee wordt het gedrag van een veld bepaald. Er is keuze uit de volgende conditions:
+-	FREE
+Het veld mag aangepast worden
+-	FIXED
+Het veld mag niet aangepast worden
+-	EMPTY
+Het veld wordt door de software leeggemaakt voor de gebruiker
+Verwijzingen vanuit de Berichtveld beperkingen:
+Door een of meerdere van onderstaande elementen te benoemen, wordt de situatie waar de conditie op van toepassing is gedefinieerd. 
+complexElements
+simpleElement
+messageInTransaction
+
+De basis regels zijn:
+-	Een veld dat voor de eerste keer aangeboden wordt, dus nog niet bestaat in het voorgaande bericht, is altijd invulbaar en wordt nooit geblokkeerd door deze instelling.
+-	Standaard wordt een veld dat in het voorgaande bericht al bestaat geblokkeerd in de opvolgende berichten. Ook als het veld toevallig “leeg” was in het voorgaande bericht. Dus alleen doordat het veld de eigenschap “FREE” mee krijgt, kan een veld aangepast worden.
+-	OVERNEMEN VAN WAARDEN???
+-	Berichtveld beperkingen kunnen ingesteld worden op Berichthoofdstukken, Berichtvelden en Berichten in transacties of een combinatie daarvan. Onderstaande tabel geeft aan welke beperking gebruikt moet worden als er meerdere beperkingen op een veld in een bericht staan:
+Het hoogste getal in de eerste kolom “wint”. Dus als er een conditie op een CE en SE ingesteld is (5) dan geldt deze conditie tov een instelling alleen op een SE  (1).
+ 
+
+Verwijzingen naar de Berichtveld beperkingen:
+Geen
+ElementCondition
+id: 		EC_116
+description:	 New element condition
+condition:	 FREE
+ComplexElement: CeContractwijzigingVoorstel
+ComplexElement: CE_Tabel_Werkpakketten
+simpleElement: SE_WPkostenpercentage
+messageInTransaction: mitt_265
+
+
+### Voorwaarden voor opvolgende type berichten (MessageInTransactionTypeCondition)
 Soms is het nodig om te zorgen dat je berichten pas kunt versturen nadat andere
 berichten zijn ontvangen, dat berichten alleen verstuurd mogen worden wanneer andere berichten
 nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden.
