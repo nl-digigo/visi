@@ -380,6 +380,8 @@ Motivering: hiermee kunnen 1440 berichten binnen een transactie binnen een dag w
 
 ## Technische oplossing
 
+<<Nog even afstemmen of we dit in het technische gedeelte stoppen of in het functionele aangezien het hier vooral om een structuur gaat>>
+
 
 # METARAAMWERK
 
