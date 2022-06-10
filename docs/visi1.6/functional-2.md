@@ -378,6 +378,7 @@ Motivering: hiermee kunnen 1440 berichten binnen een transactie binnen een dag w
 **4) Het importeren van gearchiveerde projecten mogelijk moet zijn:**
 - Na de import moet het VISI project weer geheel volgens de VISI-Systematiek functioneren
 
+## Technische oplossing
 
 
 # METARAAMWERK
