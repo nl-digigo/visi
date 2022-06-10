@@ -363,7 +363,7 @@ Het META-raamwerk bevat twee transacties met als doel:
 
 Hieronder is de communicatie per transactie weergegeven in een transactiediagram.
 
-
+![Project initiatie](media/projectinitiatie_meta_raamwerk.jpg)</aside>
 
 
 
