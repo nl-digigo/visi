@@ -370,6 +370,7 @@ Hieronder is de communicatie per transactie weergegeven in een transactiediagram
 
 ![Project wijziging](media/nieuwofgewijzigdraamwerk_metaraamwerk.jpg)</aside>
 
-
+## Toepassing META-raamwerk
+Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)automatisch een nieuw- of gewijzigd raamwerk en/of projectspecifiekbericht in gebruik te nemen. Daarnaast komt het META-raamwerk de interoperabiliteit ten goede omdat meer zekerheid bestaat of de juiste versie van een raamwerk eb/of projectspecifiekbericht in gebruik is. 
 
 
