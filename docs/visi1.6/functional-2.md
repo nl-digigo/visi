@@ -350,12 +350,12 @@ tekst
 ### Wat houdt het VISI META-raamwerk in
 Het VISI META-raamwerk is standaard onderdeel van de systematiek en is bedoeld voor het uitwisselen van een nieuw contractspecifiek raamwerk en het uitwisselen van een gewijzigd raamwerk of projectspecifiek bericht tussen projectpartners. Het META-raamwerk zelf is project overstijgend. Het META-raamwerk dient immers beschikbaar te zijn voordat een VISI omgeving voor een specificiek project wordt ingericht. Om projectpartners te laten communiceren via het META-raamwerk dienen beide projectpartners over VISI compatible software te beschikken waarin een META-project met daarin het universele META-raamwerk en een valide META-projectspecifieke bericht is ingeladen. In dit bericht staan de serveradressen van de projectpartners en de organisatie en persoonsgegevens. Elke organisa-tie heeft het eigen META-projectspecifieke bericht in eigen beheer en vult dit aan de met de gegevens van projectpartners.
 
-** De beschikbare rollen en bijbehorende verantwoordelijkheden **
+#### De beschikbare rollen en bijbehorende verantwoordelijkheden
 Het VISI META-raamwerk bevat vier rollen. Voor het initiëren en beëindigen van een pro-ject zijn de rollen project initiator en project executor beschikbaar. In de regel is de project initiator de Opdrachtgevende partij en de project executor de Opdrachtnemende partij. 
 
 Voor het wijzigen van een raamwerk of een projectspecifiekbericht zijn de rollen VISI-communicatiemanager en Wijzigingsinitiator opgenomen. De VISI-communicatiemanager heeft de verantwoordelijkheid een aanpassing autoriseren. De Wijzigingsinitiator is verant-woordelijk voor de initiatie van een aanpassing. Beide rollen kunnen door alle betrokken partijen worden ingevuld. Zo kan elke betrokken partij een wijziging initiëren dan wel ac-cepteren. 
 
-** De beschikbare transacties
+**De beschikbare transacties**
 Het META-raamwerk bevat twee transacties met als doel:
 1.	Verspreiden van een initieel raamwerk en projectspecifiek bericht (VISI project initia-tie).
 2.	Verspreiden van een gewijzigd raamwerk en/of projectspecifiek bericht (Nieuw of ge-wijzigd raamwerk of projectspecifiekbericht transactie)
