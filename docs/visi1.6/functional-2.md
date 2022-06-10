@@ -343,7 +343,9 @@ tekst
 
 # PROJECTARCHIEF
 
-tekst
+Het uitwisseling- en archiveringsformaat voor (afgeronde) VISI projecten wordt in deze documentatie een 
+"VISI archief" genoemd. In de volgende paragrafen wordt beschreven aan welke eisen het archief moet voldoen en wordt een (mogelijke) technische oplossing uitgewerkt.
+
 
 # METARAAMWERK
 
