@@ -346,10 +346,42 @@ tekst
 Het uitwisseling- en archiveringsformaat voor (afgeronde) VISI projecten wordt in deze documentatie een 
 "VISI archief" genoemd. In de volgende paragrafen wordt beschreven aan welke eisen het archief moet voldoen en wordt een (mogelijke) technische oplossing uitgewerkt.
 
+## De eisen die gesteld zijn aan het VISI archief
+
+**1) De informatie die in het archief aanwezig moet zijn, omvat alle gegevens van maximaal en 
+minimaal 1 project, te weten:**
+- Alle raamwerken van het project.
+- Alle projectspecifieke berichten van het project.
+- Alle verstuurde en ontvangen VISI berichten in het formaat xml.
+- Alle verstuurde en ontvangen bijlagen in het originele formaat.
+
+**2) Informatie uit het archief moet inzichtelijk zijn, zonder exotische/VISI (viewer) software:**
+- Bijlagen worden gearchiveerd in het originele formaat waarin ze door de eindgebruiker/organisatie verzonden zijn. Dus een PDF-bestand is terug te vinden als een 
+PDF-bestand. Archivering van bijlagen wordt dus niet gedaan in BASE64, MTOM of andere soortgelijke formaten.
+- Het archief dient een structuur te hebben, zodat op een logische wijze door de communicatie genavigeerd kan worden.
+
+**3) Het archief moet importeerbaar zijn:**
+- De informatie die in het VISI archief aanwezig is, moet volledig genoeg zijn om de totale communicatie te reproduceren/in te lezen in een VISI oplossing naar keuze.
+- De koppeling tussen een bericht en een bijlage moet terugvindbaar zijn.
+
+N.B. In een voorgaand document werd terecht het volgende beschreven:
+“De correcte heropbouw van berichten, raamwerk(en) en project specifieke bericht(en) kan alleen met 
+projecten die onder de 1.2 systematiek draaien omdat daar alle berichten met een DateTime value 
+werken. In de 1.1 systematiek werd alleen met een Date value gewerkt waardoor het lastig zal zijn om 
+berichten per dag in de juiste volgorde terug te zetten.”
+Daarom als toevoeging de eis:
+
+- Indien de VISI software beschikt over het tijdstip waarop een VISI bericht is verstuurd, dan 
+wordt deze informatie ook gearchiveerd. Indien deze informatie niet aanwezig is, dan wordt voor het eerste bericht binnen een transactie op die dag tijdstip ‘00:01’ gebruikt, en voor elk opvolgend bericht elk ‘een minuut later’.
+Motivering: hiermee kunnen 1440 berichten binnen een transactie binnen een dag worden genummerd.
+
+**4) Het importeren van gearchiveerde projecten mogelijk moet zijn:**
+- Na de import moet het VISI project weer geheel volgens de VISI-Systematiek functioneren
+
+
 
 # METARAAMWERK
 
-## Wat houdt het VISI META-raamwerk in
 Het VISI META-raamwerk is standaard onderdeel van de systematiek en is bedoeld voor het uitwisselen van een nieuw contractspecifiek raamwerk en het uitwisselen van een gewijzigd raamwerk of projectspecifiek bericht tussen projectpartners. Het META-raamwerk zelf is project overstijgend. Het META-raamwerk dient immers beschikbaar te zijn voordat een VISI omgeving voor een specificiek project wordt ingericht. Om projectpartners te laten communiceren via het META-raamwerk dienen beide projectpartners over VISI compatible software te beschikken waarin een META-project met daarin het universele META-raamwerk en een valide META-projectspecifieke bericht is ingeladen. In dit bericht staan de serveradressen van de projectpartners en de organisatie en persoonsgegevens. Elke organisatie heeft het eigen META-projectspecifieke bericht in eigen beheer en vult dit aan de met de gegevens van projectpartners.
 
 ## De beschikbare rollen en bijbehorende verantwoordelijkheden
