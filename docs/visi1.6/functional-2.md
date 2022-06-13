@@ -411,3 +411,5 @@ Hieronder is de communicatie per transactie weergegeven in een transactiediagram
 Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)automatisch een nieuw- of gewijzigd raamwerk en/of projectspecifiekbericht in gebruik te nemen. Daarnaast komt het META-raamwerk de interoperabiliteit ten goede omdat meer zekerheid bestaat of de juiste versie van een raamwerk eb/of projectspecifiekbericht in gebruik is. 
 
 
+## Interactief informatiemodel
+<iframe src="https://bruinse.com/visi/" style="height:200px;width:300px;" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen"></iframe>
