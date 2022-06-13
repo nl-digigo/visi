@@ -414,10 +414,10 @@ Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)autom
 ## Interactief informatiemodel
 <p>1 Interactief informatiemodel van _2.exp Raamwerken</p>
 
-<iframe "src="https://bruinse.com/visi/show.html" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 1">
+<iframe src="https://bruinse.com/visi/show.html" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 1">
 </iframe>
 
 <p>2 Interactief informatiemodel van _2.exp Raamwerken</p>
 
-<iframe "src="bruinse.com/visi/show.html" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 2">
+<iframe src="bruinse.com/visi/show.html" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 2">
 </iframe>
