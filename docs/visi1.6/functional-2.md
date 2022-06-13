@@ -412,14 +412,11 @@ Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)autom
 
 
 ## Interactief informatiemodel
-<p>3 Interactief informatiemodel van _2.exp Raamwerken</p>
-<iframe class="overlarge" "src="[https://bruinse.com/visi/](https://bruinse.com/visi/show.html)" style="height:200px;width:300px;" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 1"></iframe>
+<p>1 Interactief informatiemodel van _2.exp Raamwerken</p>
+
+<iframe class="overlarge" "src="https://bruinse.com/visi/show.html" style="height:600px;width:750px;" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 1"> tekst binnen tags 1 </iframe>
 
 <p>2 Interactief informatiemodel van _2.exp Raamwerken</p>
-<iframe class="overlarge" "src="https://bruinse.com/visi/show.html" style="height:200px;width:300px;" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 2"></iframe>
 
-<p>3 Interactief informatiemodel van _2.exp Raamwerken</p>
-<iframe class="overlarge" "src="https://bruinse.com/visi/show.htm" style="height:200px;width:300px;" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 3"></iframe>
+<iframe class="overlarge" "src="//d3js.org/d3.v3.min.js" style="height:600px;width:750px;" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 2"> tekst binnen tags 2</iframe>
 
-<p>4 Interactief informatiemodel van _2.exp Raamwerken</p>
-<iframe class="example overlarge" "src="https://bruinse.com/visi/show.htm" style="height:200px;width:300px;" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 4"></iframe>
