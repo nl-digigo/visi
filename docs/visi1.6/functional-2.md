@@ -382,13 +382,13 @@ Motivering: hiermee kunnen 1440 berichten binnen een transactie binnen een dag w
 
 In de onderstaande tabel wordt een voorbeeld gegeven van de toepassing in de praktijk en geeft inzicht in de structuur van een VISI projectarchief. In het voorbeeld wordt een VISI project gearchiveerd in een filesysteem structuur.
 
-![Structuur Archief](media/structuur.jpg)</aside>
+![Structuur Archief](media/structuur.JPG)</aside>
 
 VISI-berichten worden gestructureerd op datum. Eventueel kan het complete archief in ZIP formaat worden opgeslagen.
 
 Visueel voorbeeld:
 
-![Bestandsstructuur](media/bestandsstructuur.jpg)</aside>
+![Bestandsstructuur](media/bestandsstructuur.JPG)</aside>
 
 
 # METARAAMWERK
