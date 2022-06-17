@@ -344,7 +344,7 @@ tekst
 # PROJECTARCHIEF
 
 Het uitwisseling- en archiveringsformaat voor (afgeronde) VISI projecten wordt in deze documentatie een 
-"VISI archief" genoemd. In de volgende paragrafen wordt beschreven aan welke eisen het archief moet voldoen en wordt een (mogelijke) technische oplossing uitgewerkt.
+"VISI archief" genoemd. In de volgende paragrafen wordt beschreven aan welke eisen het archief moet voldoen en wordt het gebruik toegelicht.
 
 ## De eisen die gesteld zijn aan het VISI archief
 
@@ -378,9 +378,12 @@ Motivering: hiermee kunnen 1440 berichten binnen een transactie binnen een dag w
 **4) Het importeren van gearchiveerde projecten mogelijk moet zijn:**
 - Na de import moet het VISI project weer geheel volgens de VISI-Systematiek functioneren
 
-## Technische oplossing
+## Toepassing projectarchief
 
-<<Nog even afstemmen of we dit in het technische gedeelte stoppen of in het functionele aangezien het hier vooral om een structuur gaat>>
+In de volgende tabel (zie pag. 2) wordt een voorbeeld gegeven van de toepassing in de praktijk, om een idee te krijgen over de mogelijkheden van een VISI archief. In het voorbeeld wordt een VISI project gearchiveerd in een filesysteem structuur.
+
+
+
 
 
 # METARAAMWERK
