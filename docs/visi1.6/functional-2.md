@@ -420,7 +420,7 @@ Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)autom
 
 
 ## Interactief informatiemodel
-<p>1 Interactief informatiemodel van _2.exp Raamwerken</p>
+<p>1 Interactief informatiemodel van _2.exp Raamwerken:</p>
 
 <iframe src="media/show_2.html" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 1" name="iframe_a" width="1200" height="900">
 <iframe src="media/start_2.html" title="InfoFrame2" name="iframe_b2" width="1200" height="900">
