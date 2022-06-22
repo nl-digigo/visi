@@ -420,11 +420,14 @@ Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)autom
 
 
 ## Interactief informatiemodel
-<p>1 Interactief informatiemodel van _2.exp Raamwerken:</p>
-
-<iframe src="media/show_2.html" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 1" name="iframe_a" width="1200" height="900">
-<iframe src="media/start_2.html" title="InfoFrame2" name="iframe_b2" width="1200" height="900">
-
+	<head> 
+		<link href="styles.css" rel="stylesheet" type="text/css" />
+	</head> 
+	<body> 
+		<h2>VISI Raamwerken - relaties met info.</h2>
+		<iframe src="show_2.html" name="ShowFrame" id="ShowFrame" width="20" height="900"></iframe>
+		<iframe src="start_2.html" name="InfoFrame" id="InfoFrame" width="10" height="900"></iframe>
+	</body> 
 
 </iframe>
 
