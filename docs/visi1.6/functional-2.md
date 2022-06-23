@@ -420,6 +420,7 @@ Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)autom
 
 
 ## Interactief informatiemodel
+<html>
 	<head> 
 		<link href="styles.css" rel="stylesheet" type="text/css" />
 	</head> 
@@ -428,8 +429,8 @@ Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)autom
 		<iframe src="show_2.html" name="ShowFrame" id="ShowFrame" width="20" height="900"></iframe>
 		<iframe src="start_2.html" name="InfoFrame" id="InfoFrame" width="10" height="900"></iframe>
 	</body> 
+</html>
 
-</iframe>
 
 <!-- <p><a href="https://bimloket.github.io/visi/visi1.6/#interactief-informatiemodel">Open interactief informatiemodel in frame</a></p> -->
 <p><a href="media/index_2.html" target="iframe_a">Ga terug naar interactief informatiemodel</a></p>
