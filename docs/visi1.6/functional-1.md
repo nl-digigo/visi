@@ -211,8 +211,8 @@ Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarisse
 		<dt>[=code=]
 		<dt>[=responsibilityScope=]
 		<dt>=responsibilityTask=
-		<dt>[=responsibilitySupportTask=]
-		<dt>[=responsibilityFeedback=]
+		<dt>responsibilitySupportTask
+		<dt>[responsibilityFeedback]
 	</dl>
 </aside>
 
