@@ -210,7 +210,7 @@ Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarisse
 			<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
 		<dt>[=code=]
 		<dt>[=responsibilityScope=]
-		<dt>[=responsibilityTask=]
+		<dt>=responsibilityTask=
 		<dt>[=responsibilitySupportTask=]
 		<dt>[=responsibilityFeedback=]
 	</dl>
