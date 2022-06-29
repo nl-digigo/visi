@@ -210,10 +210,10 @@ Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarisse
 			<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
 		<dt>[=code=]
 		<dt>[=responsibilityScope=]
-		Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd
-		<dt>=responsibilityTask=
-		<dt>responsibilitySupportTask
-		<dt>[responsibilityFeedback]
+			<dd>Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd
+		<dt>[=responsibilityTask=]
+		<dt>[=responsibilitySupportTask=]
+		<dt>[=responsibilityFeedback=]
 	</dl>
 </aside>
 
@@ -226,7 +226,8 @@ omschrijving:		Beoordelende rol
 <dl class="def" title="Beschrijving van de specifieke eigenschappen">
 	
 	
-	
+#### <dfn>`responsibilityScope`</dfn>
+Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd	
 #### <dfn>`responsibilityTask`</dfn>
 Taken die voortkomen uit de verantwoordelijkheden van de betreffende rol		
 #### <dfn>`responsibilitySupportTask`</dfn>
