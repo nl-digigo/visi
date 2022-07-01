@@ -229,32 +229,166 @@ Complex Elementen:	Voorstel, Wijziging, Planning, Opmerkingen<br>
 Het maximumaantal bijlagen is niet voor te schrijven. Het minimumaantal is 0 of 1 (Bijlage verplicht: Ja / Nee).
 
 
-# METARAAMWERK
+### Transport van een bijlage
 
-Het VISI META-raamwerk is standaard onderdeel van de systematiek en is bedoeld voor het uitwisselen van een nieuw contractspecifiek raamwerk en het uitwisselen van een gewijzigd raamwerk of projectspecifiek bericht tussen projectpartners. Het META-raamwerk zelf is project overstijgend. Het META-raamwerk dient immers beschikbaar te zijn voordat een VISI omgeving voor een specificiek project wordt ingericht. Om projectpartners te laten communiceren via het META-raamwerk dienen beide projectpartners over VISI compatible software te beschikken waarin een META-project met daarin het universele META-raamwerk en een valide META-projectspecifieke bericht is ingeladen. In dit bericht staan de serveradressen van de projectpartners en de organisatie en persoonsgegevens. Elke organisatie heeft het eigen META-projectspecifieke bericht in eigen beheer en vult dit aan de met de gegevens van projectpartners.
+Het transportprotocol voor berichten en bijlagen is SOAP. De bijlagen (binaire bestanden) worden eerst getransporteerd van verzendende naar ontvangende software. Vanwege de potentiële omvang van een bijlage (maximaal 10GB) wordt iedere bijlagen in blokjes (chunks) verstuurd. De ontvangende software bouwt met de ontvangen blokjes de originele bijlage op. Er is een controlemechanisme (checksum) om te controleren of alle blokjes ontvangen zijn en of alle blokjes correct zijn.
 
-## De beschikbare rollen en bijbehorende verantwoordelijkheden
-Het VISI META-raamwerk bevat vier rollen. Voor het initiëren en beëindigen van een project zijn de rollen project initiator en project executor beschikbaar. In de regel is de project initiator de Opdrachtgevende partij en de project executor de Opdrachtnemende partij. 
 
-Voor het wijzigen van een raamwerk of een projectspecifiekbericht zijn de rollen VISI-communicatiemanager en Wijzigingsinitiator opgenomen. De VISI-communicatiemanager heeft de verantwoordelijkheid een aanpassing autoriseren. De Wijzigingsinitiator is verant-woordelijk voor de initiatie van een aanpassing. Beide rollen kunnen door alle betrokken partijen worden ingevuld. Zo kan elke betrokken partij een wijziging initiëren dan wel ac-cepteren. 
+Na verzending van alle bijlagen verstuurt de verzendende software het bericht (de metadata). De ontvangende software relateert metadata aan eerder ontvangen binaire bestanden, zodat exact dezelfde informatie beschikbaar is aan verzendende en ontvangende kant. Het transport is succesvol.
 
-## De beschikbare transacties binnen het META-raamwerk
-Het META-raamwerk bevat twee transacties met als doel:
 
-1.	Verspreiden van een initieel raamwerk en projectspecifiek bericht (VISI project initia-tie).
-2.	Verspreiden van een gewijzigd raamwerk en/of projectspecifiek bericht (Nieuw of ge-wijzigd raamwerk of projectspecifiekbericht transactie)
+### Validatie
 
-Hieronder is de communicatie per transactie weergegeven in een transactiediagram.
+De software dient bijlagen en bericht te valideren voor verzending.
 
-**VISI project initiatie**
-![Project initiatie](media/projectinitiatie_meta_raamwerk.jpg)</aside>
+De software dient ontvangen bijlagen en bericht te valideren. Het resultaat van de validatie wordt teruggestuurd naar de verzendende software. Validatie vindt plaats tegen 1) W3C Standaarden waarop VISI gebaseerd is (XML, XSD, SOAP), 2) VISI Standaard, 3) VISI Raamwerk (cq. Projectsjabloon) en 4) VISI Project Specifiek Bestand.
 
-**Verspreiden van een gewijzigd raamwerk en/of projectspecifiek bericht**
+Het ontvangen bericht bevat de identificatie van het project en van de geadresseerde persoon in rol (van organisatie). Met deze gegevens kan het project en project specifieke bestand getraceerd worden, en de inhoud van het bericht gevalideerd worden tegen de inhoud van het project specifieke bestand. Het ontvangen bericht heeft een verwijzing naar het raamwerk (c.q. projectsjabloon). Voor de verwijzing wordt de gangbare functionaliteit van xml gebruikt: namespace. Met deze verwijzing kan het raamwerk getraceerd worden, en de inhoud van het bericht gevalideerd worden tegen de definities in het raamwerk. Voor validatie tegen het raamwerk kan de xsd-versie van het raamwerk gebruikt worden.
 
-![Project wijziging](media/nieuwofgewijzigdraamwerk_metaraamwerk.jpg)</aside>
+Het validatieproces is asynchroon. Dit betekent dat na ontvangst van bijlagen en bericht in de ontvangende software niet direct de validatie hoeft plaats te vinden. Het resultaat van de validatie wordt teruggestuurd naar de verzendende software met een verwijzing waarbij het validatieresultaat behoort. Het validatieresultaat heeft twee opties: geen error (0), wel error (1). Optioneel kan bij de errorcode van de validatie (0 of 1) aanvullende tekst meegestuurd worden ter verduidelijking van de error. Bijvoorbeeld: dat een bijlage ontbreekt, of het bericht niet conform het projectsjabloon (c.q. raamwerk) is, of het project onbekend is.
 
-## Toepassing META-raamwerk
-Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)automatisch een nieuw- of gewijzigd raamwerk en/of projectspecifiekbericht in gebruik te nemen. Daarnaast komt het META-raamwerk de interoperabiliteit ten goede omdat meer zekerheid bestaat of de juiste versie van een raamwerk eb/of projectspecifiekbericht in gebruik is. 
+
+### Berichtvelden gedrag
+
+tekst
+
+### Wijzigingen in een raamwerk
+
+Gedurende de looptijd van een project kunnen twee soorten wijzigen doorgevoerd worden. De eerste wijziging betreft wijzigingen aan het project, zoals gewijzigde projectnaam, gewijzigde rolverdeling. Bijvoorbeeld een extra projectmedewerker of een nieuwe projectmedewerker als permanente vervanger van een huidige medewerker. De tweede wijzing betreft wijzigingen aan het projectcommunicatiesjabloon, zoals een gewijzigd transactietype, gewijzigd berichttype.
+
+Iedere wijziging moet bij alle betrokken organisaties doorgevoerd worden. Dit betekent dat de gewijzigde bestanden (project specifiek bestand en / of raamwerk) verstrekt moeten worden aan alle - bij het project betrokken - organisaties. Omdat wijzigingen van invloed kunnen zijn op de inhoud van een project, dient de wijziging vooraf inhoudelijk afgestemd te worden tussen projectmedewerkers. 
+
+<aside class="example" title="Voorbeeld wijzigig in het raamwerk">
+<p>Bijvoorbeeld: Vergelijk de eerste wijziging met een personeelswisseling in een project. Deze wijziging wordt vooraf tussen projectleiders afgestemd. En vergelijk de tweede wijziging met een procesmatige wijziging van bijvoorbeeld het goedkeuringsproces van documenten.  Een dergelijke wijziging wordt vooraf tussen contractmanagers afgestemd met misschien ondersteuning van de juridische afdeling.<p>
+</aside>
+
+
+#### Machtiging / tijdelijke vervanging
+
+*Substituting*
+De wijziging met de kleinste impact is het wijzigen van de machtigingen. Zoals in paragraaf 1.6.2 beschreven is erin voorzien om één of meerdere gemachtigden aan te wijzen voor een persoon in rol (van organisatie). Voert een gemachtigde een handeling uit, dan is dit altijd uit naam van de geautoriseerde persoon. Een machtiging kan verwijderd worden, want de geautoriseerde persoon kan de handeling altijd afmaken. Wordt een machtiging toegevoegd, dan kan de gemachtigde direct handelen op bestaande transacties van de geautoriseerde persoon, en nieuwe transacties starten (namens de geautoriseerde persoon). Een geautoriseerd persoon mag nooit verwijderd worden (zie paragraaf ....).
+
+
+#### Nieuwe personen
+
+Nieuwe personen kunnen aan een project toegevoegd worden. Tevens kunnen deze personen een rol toegewezen krijgen. Dit kan een rol zijn die al vervuld wordt. Bijvoorbeeld de adviserende rol wordt door meerdere personen in een project ingevuld.
+Houd er rekening mee dat nieuwe personen niet a) aan bestaande transactie en berichten kunnen deelnemen, of b) bestaande communicatie kunnen overnemen. Indien dit gewenst is, gebruik dan de opties voor machtiging / tijdelijke of permanente vervanging.
+
+
+#### Permanente vervanging
+
+Mits goed uitgevoerd heeft het wijzigen van de permanente vervanging een relatief kleine impact. Zoals in paragraaf 1.6.1 beschreven is erin voorzien om één permanente vervanger aan te wijzen voor een persoon in rol (van organisatie). 
+Voor de traceerbaarheid en transparantie kunnen a) er nooit geautoriseerde personen verwijderd worden, en b) opvolgingen van geautoriseerde personen nooit aangepast worden. Hierdoor ontstaat altijd een onafgebroken keten van opvolgers van persoon in rol (van organisatie) Met andere woorden geen cirkelverwijzing of vertakkingen. Vandaar dat de opvolging expliciet gemaakt wordt met het aanwijzen van een permanente opvolger.
+
+<aside class="example" title="Voorbeeld permanente vervanging">
+<p>Piet heeft Rol A en Rol B (pir 1 en pir2). Truus vervangt rol A (pir3 successor van pir 1) en kees vervangt rol B (pir4 successor van pir 2)  Op een bepaald moment neemt hans de verantwoordelijkheid voor rol  A van Truus over (pir5 successor van pir 3) Weer later komt piet op het project terug en neemt beide rollen weer op zich (pir 6 successor van pir 5 en pir 7 successor van pir 4)<br>
+<br>
+Als je nu kijkt naar rol A, dan is er een onafgebroken keten vanaf de eerste verantwoordelijke tot de huidige verantwoordelijke. Piet behandelt vanaf dat moment dus de transacties van Pir 1(zichzelf), Pir3 (Truus), Pir5(Hans) en Pir 6, (de actuele Pir van zichzelf)<br>
+PLAATJE???</p>
+</aside>
+
+
+#### Personen verwijderen
+
+Met uitzondering van een machtiging kan een persoon niet verwijderd worden uit een project. Behalve indien een persoon in rol (van organisatie) geen transacties aan zijn rol (of aan de eventueel opgevolgde rollen) gekoppeld heeft. In dat geval is verwijderen mogelijk.
+
+De enige optie om een persoon te deactiveren voor een project is het aanwijzen van een permanente vervanger voor deze persoon. Hiervoor is de eigenschap opvolger van een persoon in rol (van organisatie). Moet een persoon met een adviserende rol verwijderd worden uit een project, dan krijgt deze persoon in rol (van organisatie) een opvolger (met dezelfde adviserende rol). Dit kan ook een bestaande persoon zijn (met dezelfde adviserende rol).
+
+<aside class="example" title="Personen verwijderen">
+<p><b>Persoon in Rol van Organisatie</b><br>
+Unieke identificatie: _b16d7aeb-6a5e-4326-9283-aef843684f5c<br>
+Contactpersoon: 	_d4e02752-2ac6-4700-ae67-d33f428f78fb<br>
+Rol:			<font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
+Organisatie:		_87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
+Opvolger:		<font color = "B71C1C">_666f01b3-6714-44cc-8865-0a9ae1f938ce</font><br>
+</p>
+<p><b>Persoon in Rol van Organisatie</b><br>
+Unieke identificatie: <font color = "B71C1C">_666f01b3-6714-44cc-8865-0a9ae1f938ce</font><br>
+Contactpersoon: 	_c6e4430e-65aa-4e55-a8db-1beb6d3f4250<br>
+Rol:			<font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
+Organisatie:		_87e9144d-04d6-4a5f-bdcb-b50e96c2b498
+</p>
+<p><b>Rol v</b><br>
+Unieke identificatie: <font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font><br>
+Naam: 			Adviserende rol<br>
+Omschrijving:	Deze rol geeft een onafhankelijk advies op basis van competenties en deskundigheid binnen het kader van project. Bij het advies doorloopt de rol een aantal vaste stappen. Rol inventariseert gegevens, weegt, motiveert en beoordeelt deze informatie en geeft vervolgens het advies.<br>
+</p></aside>
+
+
+## Raamwerk wijzigen
+
+Dit is de wijziging met de grootste impact. Naast het wijzigen van het projectcommunicatiesjabloon (c.q. raamwerk) moet ook de project setup in het project specifieke bestand geactualiseerd worden conform het raamwerk. Het project specifieke bestand heeft namelijk een verwijzing naar het raamwerk. Indien het raamwerk wijzigt, dient deze verwijzing ook te wijzigen. Dus minimale actualisatie is het aanpassen van de verwijzing naar het raamwerk. Voor deze verwijzing wordt de gangbare functionaliteit van xml gebruikt: namespace. Een gewijzigd projectcommunicatiesjabloon dient een nieuwe unieke namespace te bevatten.
+
+<aside class="example" title="Raamwerk aanpassen">
+<p><b>Project</b><br>
+Unieke identificatie: UAV<br>
+Omschrijving:		Uniforme Administratieve Voorwaarden<br>
+Namespace:		http://www.visi.nl/schemas/20160331/uav_20-10-2020_1723
+</p></aside>
+
+Indien een gewijzigd projectcommunicatiesjabloon (c.q. raamwerk) zonder gewijzigd project specifieke bestand wordt aangeleverd, dan is het "vorige" project specifieke bestand ook van toepassing op het gewijzigd projectcommunicatiesjabloon (c.q. raamwerk).
+
+
+De verwijzing naar het bijbehorende raamwerk is eveneens aanwezig in ieder bericht. Hierdoor is voor ieder bericht te achterhalen conform welk raamwerk het bericht opgesteld is, en is na te gaan of het bericht valide is conform dit raamwerk. En welke opvolgende berichten als vervolgstap mogelijk zijn.
+
+
+#### Gedrag software rondom gekoppelde berichtenflow
+
+tekst
+
+
+#### Gedrag rondom wel en niet aanbieden berichten obv raamwerk/rol
+
+tekst
+
+# PROJECTARCHIEF
+
+Het uitwisseling- en archiveringsformaat voor (afgeronde) VISI projecten wordt in deze documentatie een 
+"VISI archief" genoemd. In de volgende paragrafen wordt beschreven aan welke eisen het archief moet voldoen en wordt het gebruik toegelicht.
+
+## De eisen die gesteld zijn aan het VISI archief
+
+**1) De informatie die in het archief aanwezig moet zijn, omvat alle gegevens van maximaal en 
+minimaal 1 project, te weten:**
+- Alle raamwerken van het project.
+- Alle projectspecifieke berichten van het project.
+- Alle verstuurde en ontvangen VISI berichten in het formaat xml.
+- Alle verstuurde en ontvangen bijlagen in het originele formaat.
+
+**2) Informatie uit het archief moet inzichtelijk zijn, zonder exotische/VISI (viewer) software:**
+- Bijlagen worden gearchiveerd in het originele formaat waarin ze door de eindgebruiker/organisatie verzonden zijn. Dus een PDF-bestand is terug te vinden als een 
+PDF-bestand. Archivering van bijlagen wordt dus niet gedaan in BASE64, MTOM of andere soortgelijke formaten.
+- Het archief dient een structuur te hebben, zodat op een logische wijze door de communicatie genavigeerd kan worden.
+
+**3) Het archief moet importeerbaar zijn:**
+- De informatie die in het VISI archief aanwezig is, moet volledig genoeg zijn om de totale communicatie te reproduceren/in te lezen in een VISI oplossing naar keuze.
+- De koppeling tussen een bericht en een bijlage moet terugvindbaar zijn.
+
+N.B. In een voorgaand document werd terecht het volgende beschreven:
+“De correcte heropbouw van berichten, raamwerk(en) en project specifieke bericht(en) kan alleen met 
+projecten die onder de 1.2 systematiek draaien omdat daar alle berichten met een DateTime value 
+werken. In de 1.1 systematiek werd alleen met een Date value gewerkt waardoor het lastig zal zijn om 
+berichten per dag in de juiste volgorde terug te zetten.”
+Daarom als toevoeging de eis:
+
+- Indien de VISI software beschikt over het tijdstip waarop een VISI bericht is verstuurd, dan 
+wordt deze informatie ook gearchiveerd. Indien deze informatie niet aanwezig is, dan wordt voor het eerste bericht binnen een transactie op die dag tijdstip ‘00:01’ gebruikt, en voor elk opvolgend bericht elk ‘een minuut later’.
+Motivering: hiermee kunnen 1440 berichten binnen een transactie binnen een dag worden genummerd.
+
+**4) Het importeren van gearchiveerde projecten mogelijk moet zijn:**
+- Na de import moet het VISI project weer geheel volgens de VISI-Systematiek functioneren
+
+## Toepassing projectarchief
+
+In de onderstaande tabel wordt een voorbeeld gegeven van de toepassing in de praktijk en geeft inzicht in de structuur van een VISI projectarchief. In het voorbeeld wordt een VISI project gearchiveerd in een filesysteem structuur.
+
+![Structuur Archief](media/structuur.JPG)</aside>
+
+VISI-berichten worden gestructureerd op datum. Eventueel kan het complete archief in ZIP formaat worden opgeslagen.
+
+Visueel voorbeeld:
+
+![Bestandsstructuur](media/bestandsstructuur.JPG)</aside>
 
 
 ## Interactief informatiemodel
