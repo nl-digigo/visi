@@ -417,13 +417,4 @@ Hieronder is de communicatie per transactie weergegeven in een transactiediagram
 
 ## Toepassing META-raamwerk
 Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)automatisch een nieuw- of gewijzigd raamwerk en/of projectspecifiekbericht in gebruik te nemen. Daarnaast komt het META-raamwerk de interoperabiliteit ten goede omdat meer zekerheid bestaat of de juiste versie van een raamwerk eb/of projectspecifiekbericht in gebruik is. 
-
-
-## Interactief informatiemodel
-<p>1 Interactief informatiemodel van _2.exp Raamwerken</p>
-
-<iframe src="media/index_2.html" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen 1" name="iframe_a" width="1200" height="900">
-</iframe>
-
-<!-- <p><a href="https://bimloket.github.io/visi/visi1.6/#interactief-informatiemodel">Open interactief informatiemodel in frame</a></p> -->
-<p><a href="media/index_2.html" target="iframe_a">Ga terug naar interactief informatiemodel</a></p>
+boe
