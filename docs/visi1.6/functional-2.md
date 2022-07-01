@@ -400,6 +400,13 @@ Het VISI META-raamwerk bevat vier rollen. Voor het initiëren en beëindigen van
 
 Voor het wijzigen van een raamwerk of een projectspecifiekbericht zijn de rollen VISI-communicatiemanager en Wijzigingsinitiator opgenomen. De VISI-communicatiemanager heeft de verantwoordelijkheid een aanpassing autoriseren. De Wijzigingsinitiator is verant-woordelijk voor de initiatie van een aanpassing. Beide rollen kunnen door alle betrokken partijen worden ingevuld. Zo kan elke betrokken partij een wijziging initiëren dan wel ac-cepteren. 
 
+## De beschikbare transacties binnen het META-raamwerk
+Het META-raamwerk bevat twee transacties met als doel:
+
+- Verspreiden van een initieel raamwerk en projectspecifiek bericht (VISI project initia-tie).
+- Verspreiden van een gewijzigd raamwerk en/of projectspecifiek bericht (Nieuw of ge-wijzigd raamwerk of projectspecifiekbericht transactie)
+
+Hieronder is de communicatie per transactie weergegeven in een transactiediagram.
 
 **VISI project initiatie**
 ![Project initiatie](media/projectinitiatie_meta_raamwerk.jpg)</aside>
