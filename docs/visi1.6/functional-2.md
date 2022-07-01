@@ -420,9 +420,14 @@ Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)autom
 
 
 ## Interactief informatiemodel
-# <p>1 Interactief informatiemodel van _2.exp Raamwerken</p>
 
-# <iframe src="media/index_2.html" title="Interactief informatiemodel van raamwerkelementen en bijbehorende attributen" name="iframe_a" width="1200" height="900"></iframe>
+		<link href="styles.css" rel="stylesheet" type="text/css" />
 
-# <!-- <p><a href="https://bimloket.github.io/visi/visi1.6/#interactief-informatiemodel">Open interactief informatiemodel in frame</a></p> -->
-# <p><a href="media/index_2.html" target="iframe_a">Ga terug naar interactief informatiemodel</a></p>
+		<h2>VISI Raamwerken - relaties met info.</h2>
+		<iframe src="show_2.html" name="ShowFrame" id="ShowFrame" width="20" height="900"></iframe>
+		<iframe src="start_2.html" name="InfoFrame" id="InfoFrame" width="10" height="900"></iframe>
+
+
+
+<!-- <p><a href="https://bimloket.github.io/visi/visi1.6/#interactief-informatiemodel">Open interactief informatiemodel in frame</a></p> -->
+<p><a href="media/index_2.html" target="iframe_a">Ga terug naar interactief informatiemodel</a></p>
