@@ -399,75 +399,141 @@ User defined type: UDT_Datumveld<br/>
 Hiermee wordt het gedrag van het invoerveld bepaald en hoe het gevalideerd moet worden.<br/>
 Zo kan een veld een datum/tijdstip/valuta/verplichte tekst/optionele tekst/een exact aantal karakters enzovoorts als vereiste mee krijgen. VISI software biedt doorgaans invoerfunctionaliteit op maat voor de meest voorkomende invoer soorten, zoals een datum keuze venster bij een datum veld en een keuzelijst functie als er een keuze uit lijst met waardes vereist wordt.
 
-In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo
+<div class="def" title="Eigenschappen van het element UserDefinedType">
+	<dl> 
+		<dt>[=id=]*
+			<dd> Unieke identificatie
+		<dt>[=description=]*
+			<dd> Omschrijving
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=language=]
+		<dt>[=category=]
+		<dt>[=helpInfo=]
+			<dd> Voor veldeigenschappen is nog geen toepassing bekend voor de helpinfo. Het is denkbaar dat deze naast de helpinfo weergegeven zou kunnen worden, om de invul instructie hier te beheren in plaats van in de helpinfo van meerdere veld types die deze eigenschap hebben.
+		<dt>[=code=]
+		<dt>[=baseType=]
+		<dt>[=XsdRestriction=]
+	</dl>
+</div>
 
-Voor veldeigenschappen is nog geen toepassing bekend voor de helpinfo. Het is denkbaar dat deze naast de helpinfo weergegeven zou kunnen worden, om de invul instructie hier te beheren in plaats van in de helpinfo van meerdere veld types die deze eigenschap hebben.
-
-In te stellen specifieke eigenschappen:<br/>
-baseType
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">
+	
+#### <dfn>`baseType`</dfn>
 Per Veld eigenschap moet uit een aantal basis XML veldsoorten gekozen worden om het basis gedrag van een veld vast te stellen. De keuze is beperkt tot de volgende basis XML veldsoorten:
 <ul>
 	<li>BOOLEAN</li>
-<li>DATE</li> 
-<li>DATETIME</li>
-<li>TIME</li>
-<li>DECIMAL</li>
-<li>INTEGER</li>
-<li>STRING</li>
-<li>XsdRestriction</li>
+	<li>DATE</li> 
+	<li>DATETIME</li>
+	<li>TIME</li>
+	<li>DECIMAL</li>
+	<li>INTEGER</li>
+	<li>STRING</li>
+</ul>
+	
+#### <dfn>`XsdRestriction`</dfn>
 Hiermee kan zeer exact gedrag aan een veld van een bepaald basetype gedefinieerd worden. Voor het basetype STRING kan een reguliere expressie gedefinieerd worden.
-Enkele voorbeelden die nu veel gebruikt worden voor basetype STRING zijn:<br/>
--	1 keuze mogelijkheid, dus veld heeft altijd deze waarde:<br/>
-<xs:enumeration value="Automatisch gevuld"/><br/>
--	Keuzelijst met meerdere waardes<br/>
-<xs:enumeration value="k1"/><br/>
-<xs:enumeration value="k2"/><br/>
-<xs:enumeration value="k3"/><br/>
--	Optionele keuzelijst:<br/>
-<xs:enumeration value=""/><br/>
-<xs:enumeration value="Keuze 1"/><br/>
-<xs:enumeration value="Keuze 2"/><br/>
--	Verplichte tekst van minimaal 1 karakter<br/>
-<xs:minLength value="1"/><br/>
--	Optionele tekst<br/>
-geen xsd restrictie<br/>
--	Bijvoorbeeld een jaarnummer<br/>
-<xs:pattern value="(20\d\d)"/><br/>
-Een voorbeeld dat veel gebruikt wordt voor basetype DECIMAL zijn:<br/>
--	Bedrag met twee decimalen<br/>
-<xs:fractionDigits value="2"/><br/>
-Verwijzingen vanuit het Veld eigenschap type:<br/>
-Geen<br/>
+	
+Enkele voorbeelden die nu veel gebruikt worden voor basetype STRING zijn:
+<ul>
+	<li>1 keuze mogelijkheid, dus veld heeft altijd deze waarde:</li>
+	<xs:enumeration value="Automatisch gevuld"/><br/>
+	<li>Keuzelijst met meerdere waardes</li>
+		<ul>
+			<li><xs:enumeration value="k1"/></li>
+			<li><xs:enumeration value="k2"/></li>
+			<li><xs:enumeration value="k3"/></li>
+		</ul>
+	<li>Optionele keuzelijst:</li>
+		<ul>
+			<li><xs:enumeration value=""/></li>
+			<li><xs:enumeration value="Keuze 1"/></li>
+			<li><xs:enumeration value="Keuze 2"/></li>
+		</ul>
+	<li>Verplichte tekst van minimaal 1 karakter</li>
+		<xs:minLength value="1"/><br/>
+	<li>Optionele tekst</li>
+		<ul>
+			<li>geen xsd restrictie</li>
+		</ul>
+	<li>Bijvoorbeeld een jaarnummer</li>
+		<ul>
+			<li><xs:pattern value="(20\d\d)"/></li>
+		</ul>
+</ul>	
+Een voorbeeld dat veel gebruikt wordt voor basetype DECIMAL zijn:
+<ul>
+	<li>Bedrag met twee decimalen</li>
+		<ul>
+			<li><xs:fractionDigits value="2"/></li>
+		</ul>
+</ul>
+
+Verwijzingen vanuit het Veld eigenschap type:
+		Geen<br/>
 Verwijzingen naar het Veld eigenschap type:<br/>
-Berichtvelden<br/>
+		Berichtvelden<br/>		
+
+</dl>
+
+<div class="example" title="Gegevens van veldeigenschappen (in een raamwerk)">
 Op deze manier krijgt een veld de eigenschappen gekoppeld<br/>
-User defined type<br/>
+<b>User defined type</b><br/>
 id:		UDT_Datumveld<br/>
 description:	Datumveld<br/>
 basetype:	DATE<br/>
-<br/>
+
 id:		UDT_VerplichteTekst<br/>
 description:	Verplichte tekst veld<br/>
 basetype:	STRING<br/>
 xsdRestriction:	xs:minLength value="1"<br/>
-</ul>
+</div>
+	
 ### Tabel als element van een type bericht
+	
 Een speciaal element is een tabel.
 
 ### Groepering van elementen (ComplexElementType)
+
 De berichthoofdstukken worden gebruikt om invoer velden in berichten eenvoudig te kunnen beheren in een raamwerk en om logische onderverdelingen in berichten te kunnen aanbrengen. Doordat in berichten alleen de verschillende hoofdstukken benoemd zijn, kan eenvoudig een bepaald veld toegevoegd worden aan-, of verwijderd worden uit- een hele groep berichten die dat hoofdstuk bevatten.
 De volgorde waarmee de berichtvelden in het hoofdstuk staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de hoofdstukken en daarmee ook in de berichten.
- 
-In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo
+	
+<div class="def" title="Eigenschappen van het element ComplexElementType">
+	<dl> 
+		<dt>[=id=]*
+			<dd> Unieke identificatie
+		<dt>[=description=]*
+			<dd> Omschrijving
+		<dt>[=startDate=]
+		<dt>[=endDate=]
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=language=]
+		<dt>[=category=]
+		<dt>[=helpInfo=]
+			<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
+		<dt>[=minOccurs=]
+			<dd>
+		<dt>[=maxOccurs=]
+			<dd>
+	</dl>
+</div>
+
 
 Specifiek voor bericht hoofdstukken is er in de beschikbare software vaak nog geen ondersteuning. Toch neigt de markt ernaar dit wel te gaan eisen. Dit zodat bijvoorbeeld duidelijk uitgelegd kan worden welk doel dit deel van het bericht dient en welke weg deze informatie bijvoorbeeld vervolgt of waar deze informatie bijvoorbeeld niet heen gaat. (denk aan informatie die binnen een bepaald domein moet blijven)
 
-In te stellen specifieke eigenschappen:
-_minOccurs_<br/>
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">
+	
+#### <dfn>`minOccurs`</dfn>
 Hieronder wordt uitgelegd dat er een hoofdstuk in een hoofdstuk kan worden ingevoegd om een tabel te creëren. Door deze setting bijvoorbeeld met 1 of 3 in te vullen op het ingevoegde hoofdstuk(de tabel), moet een gebruiker minimaal 1 of 3 regels in deze tabel aanmaken.
+	
+#### <dfn>`maxOccurs`</dfn>
+Zoals bij MinOccurs, is het op dezelfde manier ook mogelijk om aan te geven dat een tabel niet meer dan x regels mag bevatten. Door Min en Max op hetzelfde aantal te zetten, is ook een exact aantal aan te maken regels instelbaar.		
 
-_maxOccurs_<br/>
-Zoals bij MinOccurs, is het op dezelfde manier ook mogelijk om aan te geven dat een tabel niet meer dan x regels mag bevatten. Door Min en Max op hetzelfde aantal te zetten, is ook een exact aantal aan te maken regels instelbaar.
+</dl>
+	
 
 Verwijzingen vanuit het Hoofdstuk type:<br/>
 Berichthoofdstukken (Tabelvorming)<br/>
@@ -525,29 +591,52 @@ De vormgeving van de opvolging van berichten zodat een stroomschema gevolgd kan 
 De MITT’s koppelen berichttypes aan elkaar binnen- en tussen transacties.
 Als een bericht type op meerdere plekken in een transactie voorkomt, bijvoorbeeld 1 keer als start bericht en 1 keer als reactie, dan bestaan er 2 MITT’s. Beiden verwijzen naar de transactie en het bericht type, alleen verschilt de koppeling tussen de MITT’s.
 
-In te stellen globale eigenschappen: id, state, dateLaMu, userLaMu
+<div class="def" title="Eigenschappen van het element MessageInTransactionType">
+	<dl> 
+		<dt>[=id=]*
+			<dd> Unieke identificatie
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=requiredNotify=]
+			<dd>
+		<dt>[=received=]
+			<dd>
+		<dt>[=send=]
+			<dd>
+		<dt>[=initiatorToExecutor=]
+			<dd>
+		<dt>[=openSecondaryTransactionsAllowed=]
+			<dd>		
+		<dt>[=firstMessage=]
+			<dd>
+	</dl>
+</div>
 
-In te stellen specifieke eigenschappen: 
-requiredNotify<br/>
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">
+	
+#### <dfn>`requiredNotify`</dfn>
 Op het moment wordt aan het element requiredNotify geen betekenis toegekend.
-
-received<br/>
+	
+#### <dfn>`received`</dfn>
 Boolean waarde die aangeeft of het vorige bericht ontvangen zou moeten zijn. In de praktijk wordt dit element niet gebruikt.
-
-send<br/>
-Boolean waarde die aangeeft of het huigie bericht inmiddels verstuurd zou moeten zijn. In de
-praktijk wordt dit element niet gebruikt.
-
-initiatorToExecutor<br/>
-Boolean waarde die aangeeft welke richting het bericht in de transactie heeft. Bij true gaat het bericht vanaf de persoon die de transactie gestart heeft naar degene die ontvanger was van het eerste bericht van de transactie.
+	
+#### <dfn>`send`</dfn>
+Boolean waarde die aangeeft of het huidige bericht inmiddels verstuurd zou moeten zijn. In de praktijk wordt dit element niet gebruikt.
+	
+#### <dfn>`initiatorToExecutor`</dfn>
+Boolean waarde die aangeeft welke richting het bericht in de transactie heeft. Bij True gaat het bericht vanaf de persoon die de transactie gestart heeft naar degene die ontvanger was van het eerste bericht van de transactie.
 OPTIONAL??? Zie exp_2
-
-openSecondaryTransactionsAllowed<br/>
+	
+#### <dfn>`openSecondaryTransactionsAllowed`</dfn>
 Optional Boolean waarde die de mogelijkheid aangeeft of secundaire transacties nog niet afgerond hoeven te zijn voordat met de primaire transactie kan worden verder gegaan. De interpretatie voor "TRUE" is dat niet alle instanties van secundaire transacties hoeven te zijn afgerond voordat met de primaire transactie kan worden verder gegaan. Als de waarde "FALSE" is dienen alle instanties van secundaire transacties te worden afgerond voordat de primaire transactie hervat kan worden. Indien openSecondaryTransactionsAllowed niet is gedefinieerd wordt dit geïnterpreteerd als "TRUE".
-TODO: terugkeerantwoorden schijnen wel door te mogen.. Opzoeken!!!!!!!! ARNE met Jos!!!
-
-firstMessage<br/>
+<b>TODO: terugkeerantwoorden schijnen wel door te mogen..Opzoeken ARNE met Jos!!</b>
+	
+#### <dfn>`firstMessage`</dfn>
 Optional Boolean waarde die bedoeld is om onbetwistbaar vast te kunnen stellen dat een bericht alleen gebruikt kan worden als eerste bericht van een subtransactie. Gebruik van een MITT met deze instelling resulteert dus altijd in een nieuwe subtransactie.
+
+</dl>
+
 
 Verwijzingen vanuit het Bericht in transactie type:<br/>
 Berichten<br/>
@@ -601,8 +690,17 @@ WAARSCHIJNLIJK DUBBEL???
 In paragraaf 2.7 staat beschreven dat een type transactie uit type berichten bestaat, en dat de volgorde van de berichten in een transactie gedefinieerd wordt met een object bericht in transactie. Ieder bericht in transactie heeft een verwijzing naar het vorige bericht in transactie. Deze verwijzing is echter niet beperkt door de transactie. Met andere woorden het vorige bericht in transactie hoeft niet een bericht uit dezelfde transactie te zijn, het kan ook een bericht uit een andere transactie zijn. Hierdoor worden transactie feitelijk aan elkaar gekoppeld. Wel gelden er specifieke regels hoe deze koppeling van transactie gemodelleerd dient te worden in het raamwerk.
 
 Hoe een koppeling aangebracht wordt tussen twee transacties wordt uitgelegd aan de hand van een wijzigingsprocedure tussen drie rollen. Dit zijn de rollen: opstellende rol, accorderende rol en adviserende rol. Er is een transactie tussen de opstellende rol en accorderende rol. Deze transactie heeft als doel om tot een geaccordeerde wijziging te komen. Er is een transactie tussen de accorderende rol en adviserende rol. Deze transactie heeft als doel on tot een advies te komen over de opgestelde wijziging. De accorderende rol heeft baat bij een koppeling tussen deze twee transacties, waardoor één procedure voor het opstellen, adviseren en accorderen van een wijziging ontstaat tussen drie rollen: opstellende, adviserende en accorderende rol.
+	
 
-De transactie Accorderen_Wijziging tussen opstellende rol en accorderende rol bestaat uit drie berichten: Voorstel_tot_Wijziging, Akkoord_Wijziging, Niet_Akkoord_Wijziging. Het bericht Voorstel_tot_Wijziging is het eerste bericht van de transactie. Het bericht in transactie van Voorstel_tot_Wijziging heeft GEEN vorig bericht in transactie. De berichten in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging hebben wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Voorstel_tot_Wijziging.
+De transactie Accorderen_Wijziging tussen opstellende rol en accorderende rol bestaat uit drie berichten:<br/>
+	<ul>
+		<li>Voorstel_tot_Wijziging</li>
+		<li>Akkoord_Wijziging</li>
+		<li>Niet_Akkoord_Wijziging</li>
+	</ul>
+Het bericht Voorstel_tot_Wijziging is het eerste bericht van de transactie.<br/>
+Het bericht in transactie van Voorstel_tot_Wijziging heeft GEEN vorig bericht in transactie.<br/> 
+De berichten in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging hebben wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Voorstel_tot_Wijziging.
 
 <div class="example" title="Definitie van de volgorde van type berichten">
 <b>Bericht in Transactie</b><br/>
@@ -625,93 +723,164 @@ Transactie:		Accorderen_Wijziging
 
 </div>
 
-De transactie Adviseren_Wijziging tussen accorderende rol en adviserende rol en bestaat uit twee berichten: Verzoek_Advies_Wijziging en Advies_Wijziging. Het bericht Verzoek_Advies_Wijziging is het eerste bericht van de transactie. Het bericht in transactie van Verzoek_Advies_Wijziging heeft GEEN vorig bericht in transactie. Het bericht in transactie van Advies_Wijziging heeft wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Verzoek_Advies_Wijziging.
+De transactie Adviseren_Wijziging tussen accorderende rol en adviserende rol en bestaat uit twee berichten:<br/>
+	<ul>
+		<li> Verzoek_Advies_Wijziging</li>
+		<li>Advies_Wijziging</li>
+	</ul>
+Het bericht Verzoek_Advies_Wijziging is het eerste bericht van de transactie.
+Het bericht in transactie van Verzoek_Advies_Wijziging heeft GEEN vorig bericht in transactie. 
+Het bericht in transactie van Advies_Wijziging heeft wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Verzoek_Advies_Wijziging.
 
-Bericht in Transactie<br/>
+<div class="example" title="Definitie van de volgorde van type berichten">
+	
+<b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228<br/>
 Vorig:<br/>	 	
 Bericht:		Verzoek_Advies_Wijziging<br/>
 Transactie:		Adviseren_Wijziging<br/>
-Bericht in Transactie<br/>
+	
+<b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ f75a35c7-30f3-4b3b-8776-120cd7811fd4<br/>
 Vorig:		 	_ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228<br/>
 Bericht:		Advies_Wijziging<br/>
 Transactie:		Adviseren_Wijziging<br/>
+
+</div>
+
+
 Hoe wordt de adviestransactie gekoppeld aan de accorderingstransactie? Met de verwijzing naar het vorige bericht in transactie. Echter omdat de eigenschap van het eerste bericht van de transactie Adviseren_Wijziging - een lege verwijzing naar het vorige bericht in transactie - dient het eerste bericht een vlag (Waar / Onwaar) te krijgen dat dit het eerste bericht is van de transactie.<br/>
-Bericht in Transactie<br/>
+	
+<div class="example" title="Definitie van de volgorde van type berichten">
+	
+<b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228<br/>
 Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce<br/>
 Eerste bericht:	Waar<br/>
 Bericht:		Verzoek_Advies_Wijziging<br/>
 Transactie:		Adviseren_Wijziging<br/>
-Na het ontvangen van Voorstel_tot_Wijziging kan de accorderende rol kiezen voor drie reactieberichten: Akkoord_Wijziging, Niet_Akkkoord en Verzoek_Advies_Wijziging. Echter na ontvangst van het bericht Advies_Wijziging is er geen reactiebericht. De koppeling terug van adviestransactie naar accorderende transactie is nog niet aangebracht. Dit wordt ook gemodelleerd met de verwijzing naar het vorige bericht in transactie. In dit geval het bericht in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging.<br/>
-Bericht in Transactie<br/>
+</div>
+
+Na het ontvangen van Voorstel_tot_Wijziging kan de accorderende rol kiezen voor drie reactieberichten: 
+	<ul>
+		<li>Akkoord_Wijziging</li>
+		<li>Niet_Akkkoord</li>
+		<li>Verzoek_Advies_Wijziging</li>
+	</ul>
+Echter na ontvangst van het bericht Advies_Wijziging is er geen reactiebericht. De koppeling terug van adviestransactie naar accorderende transactie is nog niet aangebracht. Dit wordt ook gemodelleerd met de verwijzing naar het vorige bericht in transactie. In dit geval het bericht in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging.<br/>
+	
+<div class="example" title="Definitie van de volgorde van type berichten">
+	
+<b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ 6bdae158-a6dc-491b-a9ea-692fd419a828<br/>
 Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce, _ f75a35c7-30f3-4b3b-8776-120cd7811fd4<br/>
 Bericht:		Akkoord_Wijziging<br/>
 Transactie:		Accorderen_Wijziging<br/>
-Bericht in Transactie<br/>
+<b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ 4e5569b7-0c6a-4976-811d-9d9189b8b1df<br/>
 Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce, _ f75a35c7-30f3-4b3b-8776-120cd7811fd4<br/>
 Bericht:		Niet_Akkkord_Wijziging<br/>
 Transactie:		Accorderen_Wijziging<br/>
+
+</div>
+	
 Voor het correct definiëren van één procedure (opgebouwd uit hoofd- en subtransacties) gelden twee aanvullende functionele basisregels, die niet technisch af te dwingen zijn.
+	
 IS DIT WEL EEN REGEL??? Rollen kunnen anders zijn tussen hoofd en sub transacties
+	
 Regel 1: de rollen in hoofd- en subtransactie dienen op elkaar aansluiten. Hiermee wordt bedoeld dat de ontvangende rol in de hoofdtransactie gelijk moet zijn aan de verzendende rol in de subtransactie. De definitie van verzendende en ontvangende rol is niet op berichtniveau. De rollen staan gedefinieerd als initiator en executor op type (hoofd en sub)transactie. 
-Transactietype<br/>
+
+<div class="example" title="Definitie van de volgorde van type berichten">
+<b>Transactietype</b><br/>
 id: 		Accorderen_Wijziging<br/>
 description:	Accorderen wijziging<br/>
 initiator rol: Opdrachtnemende_contractueel<br/>
 executor rol:	Opdrachtgevende_contractueel<br/>
-Transactietype<br/>
+<b>Transactietype</b><br/>
 id: 		Adviseren_Wijziging<br/> 
 description:	Adviseren wijziging<br/>
 initiator rol: Opdrachtgevende_contractueel<br/>
 executor rol:	Adviserende_contractueel<br/>
-Voor een type bericht in een type transactie (bericht in transactie) staat een richting gedefinieerd. De richting is van initiator naar executor of van executor naar initiator. Deze richting gaat dan respectievelijk van initiërende rol naar uitvoerende rol (van een type transactie).<br/>
-Bericht in Transactie<br/>
+</div>
+	
+Voor een type bericht in een type transactie (bericht in transactie) staat een richting gedefinieerd. De richting is van initiator naar executor of van executor naar initiator. Deze richting gaat dan respectievelijk van initiërende rol naar uitvoerende rol (van een type transactie).
+
+<div class="example" title="Definitie van de volgorde van type berichten">
+	
+<b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228<br/>
 Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce<br/>
 Eerste bericht:	Waar<br/>
 Richting:		Van initiator naar executor<br/>
 Bericht:		Verzoek_Advies_Wijziging<br/>
 Transactie:		Adviseren_Wijziging<br/>
+</div>
+	
 IS DIT WEL EEN REGEL??? Initiator to Exector is optional in raamwerk<br/>
 Regel 2: de richting van de berichten dient over een te komen overeenkomen.<br/>
-Met richting wordt bedoeld de waarde of een bericht van initiator naar executor van een transactie, of van executor naar initiator.<br/>
-Bericht in Transactie<br/>
+Met richting wordt bedoeld de waarde of een bericht van initiator naar executor van een transactie, of van executor naar initiator.
+
+<div class="example" title="Definitie van de volgorde van type berichten">
+
+<b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ 666f01b3-6714-44cc-8865-0a9ae1f938ce<br/>
 Vorig:<br/>		 	
 Bericht:		Voorstel_tot_Wijziging<br/>
 Transactie:		Accorderen_Wijziging<br/>
-Bericht in Transactie<br/>
+	
+<b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228<br/>
 Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce<br/>
 Eerste bericht:	Waar<br/>
 Bericht:		Verzoek_Advies_Wijziging<br/>
 Transactie:		Adviseren_Wijziging<br/>
+
+</div>
+	
 Indien een instantie van bericht in transactie verstuurd wordt, moet openSecondaryTransactionsAllowed meegestuurd worden.
 Er is een bericht nodig die niet voorkomt als vorig, zodat duidelijk is dat een transactie afgerond is. laatste bericht om transactie af te sluiten
 
 Vanuit een (1) type wordt verwezen naar type transactie. Dit is het type bericht in transactie (MessageInTransactionType). Alhoewel type berichten tot een type transactie behoren is er geen verwijzing van type bericht naar type transactie. Zoals de naam al doet vermoeden, is de verwijzing vanuit type bericht in transactie (MessageInTransactionType) naar type bericht en naar type transactie. Dit betekent dat type berichten te (her)gebruiken zijn in verschillende type transacties.      
 
 
-
-
 ### Voorwaarden voor elementen van type berichten (ElementCondition)
 Hiermee wordt geregeld wanneer een gebruiker een veld wel of niet mag aanpassen, of dat het veld door de software leeg gemaakt moet worden voor een volgend bericht.
 
-In te stellen globale eigenschappen: id, description, helpinfo
+<div class="def" title="Eigenschappen van het element">
+	<dl> 
+		<dt>[=id=]*
+			<dd> Unieke identificatie
+		<dt>[=description=]*
+			<dd> Omschrijving
+		<dt>[=helpInfo=]
+			<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
+		<dt>[=condition=]
+	</dl>
+</div>
 
-In te stellen specifieke eigenschappen:<br/>
-condition<br/>
-Hiermee wordt het gedrag van een veld bepaald. Er is keuze uit de volgende conditions:<br/>
--	FREE<br/>
-Het veld mag aangepast worden<br/>
--	FIXED<br/>
-Het veld mag niet aangepast worden<br/>
--	EMPTY<br/>
-Het veld wordt door de software leeggemaakt voor de gebruiker<br/>
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
+	
+#### <dfn>`condition`</dfn>
+Hiermee wordt het gedrag van een veld bepaald.
+
+</dl>
+	
+ Er is keuze uit de volgende conditions:
+	<ul>
+		<li>FREE</li>
+			<ul>
+				<li>Het veld mag aangepast worden</li>
+			</ul>
+		<li>FIXED</li>
+			<ul>
+				<li>Het veld mag niet aangepast worden</li>
+			</ul>
+		<li>FREE</li>
+			<ul>
+				<li>Het veld wordt door de software leeggemaakt voor de gebruiker</li>
+			</ul>
+	</ul>
+
 Verwijzingen vanuit de Berichtveld beperkingen:<br/>
 Door een of meerdere van onderstaande elementen te benoemen, wordt de situatie waar de conditie op van toepassing is gedefinieerd.<br/>
 complexElements<br/>
