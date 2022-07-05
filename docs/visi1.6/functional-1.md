@@ -438,41 +438,41 @@ Hiermee kan zeer exact gedrag aan een veld van een bepaald basetype gedefinieerd
 Enkele voorbeelden die nu veel gebruikt worden voor basetype STRING zijn:
 <ul>
 	<li>1 keuze mogelijkheid, dus veld heeft altijd deze waarde:</li>
-	<xs:enumeration value="Automatisch gevuld"/><br/>
+	`<xs:enumeration value="Automatisch gevuld"/>`<br/>
 	<li>Keuzelijst met meerdere waardes</li>
 		<ul>
-			<li><xs:enumeration value="k1"/></li>
-			<li><xs:enumeration value="k2"/></li>
-			<li><xs:enumeration value="k3"/></li>
+			<li>`<xs:enumeration value="k1"/>`</li>
+			<li>`<xs:enumeration value="k2"/>`</li>
+			<li>`<xs:enumeration value="k3"/>`</li>
 		</ul>
 	<li>Optionele keuzelijst:</li>
 		<ul>
-			<li><xs:enumeration value=""/></li>
-			<li><xs:enumeration value="Keuze 1"/></li>
-			<li><xs:enumeration value="Keuze 2"/></li>
+			<li>`<xs:enumeration value=""/>`</li>
+			<li>`<xs:enumeration value="Keuze 1"/>`</li>
+			<li>`<xs:enumeration value="Keuze 2"/>`</li>
 		</ul>
 	<li>Verplichte tekst van minimaal 1 karakter</li>
-		<xs:minLength value="1"/><br/>
+		`<xs:minLength value="1"/>`<br/>
 	<li>Optionele tekst</li>
 		<ul>
 			<li>geen xsd restrictie</li>
 		</ul>
 	<li>Bijvoorbeeld een jaarnummer</li>
 		<ul>
-			<li><xs:pattern value="(20\d\d)"/></li>
+			<li>`<xs:pattern value="(20\d\d)"/>`</li>
 		</ul>
 </ul>	
 Een voorbeeld dat veel gebruikt wordt voor basetype DECIMAL zijn:
 <ul>
 	<li>Bedrag met twee decimalen</li>
 		<ul>
-			<li><xs:fractionDigits value="2"/></li>
+			<li>`<xs:fractionDigits value="2"/>`</li>
 		</ul>
 </ul>
 
 Verwijzingen vanuit het Veld eigenschap type:
 		Geen<br/>
-Verwijzingen naar het Veld eigenschap type:<br/>
+Verwijzingen naar het Veld eigenschap type:
 		Berichtvelden<br/>		
 
 </dl>
