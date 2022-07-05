@@ -464,58 +464,57 @@ Als een bericht type op meerdere plekken in een transactie voorkomt, bijvoorbeel
 In te stellen globale eigenschappen: id, state, dateLaMu, userLaMu
 
 In te stellen specifieke eigenschappen: 
-requiredNotify
-
+requiredNotify<br/>
 Op het moment wordt aan het element requiredNotify geen betekenis toegekend.
 
-received
+received<br/>
 Boolean waarde die aangeeft of het vorige bericht ontvangen zou moeten zijn. In de praktijk wordt dit element niet gebruikt.
 
-send
+send<br/>
 Boolean waarde die aangeeft of het huigie bericht inmiddels verstuurd zou moeten zijn. In de
 praktijk wordt dit element niet gebruikt.
 
-initiatorToExecutor
+initiatorToExecutor<br/>
 Boolean waarde die aangeeft welke richting het bericht in de transactie heeft. Bij true gaat het bericht vanaf de persoon die de transactie gestart heeft naar degene die ontvanger was van het eerste bericht van de transactie.
 OPTIONAL??? Zie exp_2
 
-openSecondaryTransactionsAllowed
+openSecondaryTransactionsAllowed<br/>
 Optional Boolean waarde die de mogelijkheid aangeeft of secundaire transacties nog niet afgerond hoeven te zijn voordat met de primaire transactie kan worden verder gegaan. De interpretatie voor "TRUE" is dat niet alle instanties van secundaire transacties hoeven te zijn afgerond voordat met de primaire transactie kan worden verder gegaan. Als de waarde "FALSE" is dienen alle instanties van secundaire transacties te worden afgerond voordat de primaire transactie hervat kan worden. Indien openSecondaryTransactionsAllowed niet is gedefinieerd wordt dit geïnterpreteerd als "TRUE".
 TODO: terugkeerantwoorden schijnen wel door te mogen.. Opzoeken!!!!!!!! ARNE met Jos!!!
 
-firstMessage
+firstMessage<br/>
 Optional Boolean waarde die bedoeld is om onbetwistbaar vast te kunnen stellen dat een bericht alleen gebruikt kan worden als eerste bericht van een subtransactie. Gebruik van een MITT met deze instelling resulteert dus altijd in een nieuwe subtransactie.
 
-Verwijzingen vanuit het Bericht in transactie type:</ br>
-Berichten</ br>
-Hiermee wordt de berichtnaam en inhoud van het element in de berichtenstroom bepaald.</ br>
-Voorgaand(previous) bericht</ br>
-Op deze manier ligt vast hoe de stroom van berichten verloopt. Doordat MITT’s  de voorgaande MITT’s hier hebben staan, weet je vanuit welk bericht dit bericht gekozen kan worden als volgend bericht. Er zijn grofweg 4 soorten previous-koppelingen die er qua definitie precies hetzelfde uitzien(deze MITT is een previous op deze MITT), maar in werking anders zijn:</ br>
--	Start van een nieuwe hoofdtransactie. De waarde van previous is dan leeg. Deze MITT mag de eigenschap “firstmessage” hebben, alleen aangezien dit bericht per definitie een eerste bericht is, is dit niet nodig.</ br>
--	Een antwoord binnen dezelfde transactie (De previous MiTT is ook aan dezelfde transactie gekoppeld)</ br>
--	Een start van een nieuwe transactie op basis van de MITT in deze transactie. Dit noemen we ook wel een “Subtransactie” starten. Deze MITT moet altijd de eigenschap “firstmessage” hebben, anders kan er geen nieuwe transactie gestart worden en doet de previous koppeling waarschijnlijk niets.</ br>
--	Een terugkering vanuit de subtransactie naar de bovenliggende transactie.</ br>
+Verwijzingen vanuit het Bericht in transactie type:<br/>
+Berichten<br/>
+Hiermee wordt de berichtnaam en inhoud van het element in de berichtenstroom bepaald.<br/>
+Voorgaand(previous) bericht<br/>
+Op deze manier ligt vast hoe de stroom van berichten verloopt. Doordat MITT’s  de voorgaande MITT’s hier hebben staan, weet je vanuit welk bericht dit bericht gekozen kan worden als volgend bericht. Er zijn grofweg 4 soorten previous-koppelingen die er qua definitie precies hetzelfde uitzien(deze MITT is een previous op deze MITT), maar in werking anders zijn:<br/>
+-	Start van een nieuwe hoofdtransactie. De waarde van previous is dan leeg. Deze MITT mag de eigenschap “firstmessage” hebben, alleen aangezien dit bericht per definitie een eerste bericht is, is dit niet nodig.<br/>
+-	Een antwoord binnen dezelfde transactie (De previous MiTT is ook aan dezelfde transactie gekoppeld)<br/>
+-	Een start van een nieuwe transactie op basis van de MITT in deze transactie. Dit noemen we ook wel een “Subtransactie” starten. Deze MITT moet altijd de eigenschap “firstmessage” hebben, anders kan er geen nieuwe transactie gestart worden en doet de previous koppeling waarschijnlijk niets.<br/>
+-	Een terugkering vanuit de subtransactie naar de bovenliggende transactie.<br/>
 Deze optie is alleen toegestaan vanuit een bericht in een subtransactie terug naar de transactie waaruit de subtransactie is opgestart. Dit bericht in de bovenliggende transactie mag niet de eigenschap “firstmessage” hebben, want dan wordt er een subtransactie onder de subtransactie aangemaakt.
 
-Transactie</ br>
+Transactie<br/>
 Een MITT is altijd aan een transactie gekoppeld. Minimaal plaatst een MITT dus een berichttype in een transactie.
 
-Transactiefase</ br>
+Transactiefase<br/>
 Deze eigenschap is bedoeld om de transactie fases van het DEMO universele transactie patroon mee aan te geven. Hier wordt nog weinig gebruik van gemaakt. De eerste DEMO oplegger op de VISI systematiek gebruikt deze eigenschap wel als essentieel onderdeel.
 
-Groeptypes</ br>
+Groeptypes<br/>
 Er kan een groep ingevuld worden, maar hier wordt tot op dit moment niets mee gedaan.
 
-Bijlage types</ br>
+Bijlage types<br/>
 Dit is de meest specifieke manier om te benoemen welke metadata set (berichthoofdstuk) aan berichtvelden ingevuld moet worden voor een bijlage die bij een bericht wordt toegevoegd. 
 
-Bericht in transactie beperkingen</ br>
+Bericht in transactie beperkingen<br/>
 Voorwaardelijkheid wanneer je dit bericht mag kiezen.
 
-Verwijzingen naar het Bericht in transactie type:</ br>
+Verwijzingen naar het Bericht in transactie type:<br/>
 Berichtveld beperkingen (elementcondition)
 
-Bericht in transactie beperkingen</ br>
+Bericht in transactie beperkingen<br/>
 Voorwaardelijkheid wanneer je een ander bericht mag kiezen op basis van de aanwezigheid van dit bericht.
 Voorgaand(previous) bericht in transactie
 
@@ -523,13 +522,13 @@ Als dit bericht een voorgaand bericht is voor het bericht waarop het ingesteld s
 
 <div class="example" title="Definitie van de volgorde van type berichten">
 <b>MessageInTransactionType</b><br/>
-id:			mit40170_T7</ br>
-initiatorToExecutor:	true</ br>
-firstMessage:		false</ br>
-messageType:		MS_AcceptatieVoorstelWijziging</ br>
-previous:		mitt563</ br>
-transactionType:	TR_ContractwijzigingOG</ br>
-MessageInTransactionTypeCondition: mtc1</ br>
+id:			mit40170_T7<br/>
+initiatorToExecutor:	true<br/>
+firstMessage:		false<br/>
+messageType:		MS_AcceptatieVoorstelWijziging<br/>
+previous:		mitt563<br/>
+transactionType:	TR_ContractwijzigingOG<br/>
+MessageInTransactionTypeCondition: mtc1<br/>
 
 </div>
 
@@ -564,69 +563,69 @@ Transactie:		Accorderen_Wijziging
 
 De transactie Adviseren_Wijziging tussen accorderende rol en adviserende rol en bestaat uit twee berichten: Verzoek_Advies_Wijziging en Advies_Wijziging. Het bericht Verzoek_Advies_Wijziging is het eerste bericht van de transactie. Het bericht in transactie van Verzoek_Advies_Wijziging heeft GEEN vorig bericht in transactie. Het bericht in transactie van Advies_Wijziging heeft wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Verzoek_Advies_Wijziging.
 
-Bericht in Transactie</ br>
-Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228</ br>
-Vorig:</ br>		 	
-Bericht:		Verzoek_Advies_Wijziging</ br>
-Transactie:		Adviseren_Wijziging</ br>
-Bericht in Transactie</ br>
-Unieke identificatie: _ f75a35c7-30f3-4b3b-8776-120cd7811fd4</ br>
-Vorig:		 	_ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228</ br>
-Bericht:		Advies_Wijziging</ br>
-Transactie:		Adviseren_Wijziging</ br>
-Hoe wordt de adviestransactie gekoppeld aan de accorderingstransactie? Met de verwijzing naar het vorige bericht in transactie. Echter omdat de eigenschap van het eerste bericht van de transactie Adviseren_Wijziging - een lege verwijzing naar het vorige bericht in transactie - dient het eerste bericht een vlag (Waar / Onwaar) te krijgen dat dit het eerste bericht is van de transactie.</ br>
-Bericht in Transactie</ br>
-Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228</ br>
-Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce</ br>
-Eerste bericht:	Waar</ br>
-Bericht:		Verzoek_Advies_Wijziging</ br>
-Transactie:		Adviseren_Wijziging</ br>
-Na het ontvangen van Voorstel_tot_Wijziging kan de accorderende rol kiezen voor drie reactieberichten: Akkoord_Wijziging, Niet_Akkkoord en Verzoek_Advies_Wijziging. Echter na ontvangst van het bericht Advies_Wijziging is er geen reactiebericht. De koppeling terug van adviestransactie naar accorderende transactie is nog niet aangebracht. Dit wordt ook gemodelleerd met de verwijzing naar het vorige bericht in transactie. In dit geval het bericht in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging.</ br>
-Bericht in Transactie</ br>
-Unieke identificatie: _ 6bdae158-a6dc-491b-a9ea-692fd419a828</ br>
-Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce, _ f75a35c7-30f3-4b3b-8776-120cd7811fd4</ br>
-Bericht:		Akkoord_Wijziging</ br>
-Transactie:		Accorderen_Wijziging</ br>
-Bericht in Transactie</ br>
-Unieke identificatie: _ 4e5569b7-0c6a-4976-811d-9d9189b8b1df</ br>
-Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce, _ f75a35c7-30f3-4b3b-8776-120cd7811fd4</ br>
-Bericht:		Niet_Akkkord_Wijziging</ br>
-Transactie:		Accorderen_Wijziging</ br>
+Bericht in Transactie<br/>
+Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228<br/>
+Vorig:<br/>	 	
+Bericht:		Verzoek_Advies_Wijziging<br/>
+Transactie:		Adviseren_Wijziging<br/>
+Bericht in Transactie<br/>
+Unieke identificatie: _ f75a35c7-30f3-4b3b-8776-120cd7811fd4<br/>
+Vorig:		 	_ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228<br/>
+Bericht:		Advies_Wijziging<br/>
+Transactie:		Adviseren_Wijziging<br/>
+Hoe wordt de adviestransactie gekoppeld aan de accorderingstransactie? Met de verwijzing naar het vorige bericht in transactie. Echter omdat de eigenschap van het eerste bericht van de transactie Adviseren_Wijziging - een lege verwijzing naar het vorige bericht in transactie - dient het eerste bericht een vlag (Waar / Onwaar) te krijgen dat dit het eerste bericht is van de transactie.<br/>
+Bericht in Transactie<br/>
+Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228<br/>
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce<br/>
+Eerste bericht:	Waar<br/>
+Bericht:		Verzoek_Advies_Wijziging<br/>
+Transactie:		Adviseren_Wijziging<br/>
+Na het ontvangen van Voorstel_tot_Wijziging kan de accorderende rol kiezen voor drie reactieberichten: Akkoord_Wijziging, Niet_Akkkoord en Verzoek_Advies_Wijziging. Echter na ontvangst van het bericht Advies_Wijziging is er geen reactiebericht. De koppeling terug van adviestransactie naar accorderende transactie is nog niet aangebracht. Dit wordt ook gemodelleerd met de verwijzing naar het vorige bericht in transactie. In dit geval het bericht in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging.<br/>
+Bericht in Transactie<br/>
+Unieke identificatie: _ 6bdae158-a6dc-491b-a9ea-692fd419a828<br/>
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce, _ f75a35c7-30f3-4b3b-8776-120cd7811fd4<br/>
+Bericht:		Akkoord_Wijziging<br/>
+Transactie:		Accorderen_Wijziging<br/>
+Bericht in Transactie<br/>
+Unieke identificatie: _ 4e5569b7-0c6a-4976-811d-9d9189b8b1df<br/>
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce, _ f75a35c7-30f3-4b3b-8776-120cd7811fd4<br/>
+Bericht:		Niet_Akkkord_Wijziging<br/>
+Transactie:		Accorderen_Wijziging<br/>
 Voor het correct definiëren van één procedure (opgebouwd uit hoofd- en subtransacties) gelden twee aanvullende functionele basisregels, die niet technisch af te dwingen zijn.
 IS DIT WEL EEN REGEL??? Rollen kunnen anders zijn tussen hoofd en sub transacties
 Regel 1: de rollen in hoofd- en subtransactie dienen op elkaar aansluiten. Hiermee wordt bedoeld dat de ontvangende rol in de hoofdtransactie gelijk moet zijn aan de verzendende rol in de subtransactie. De definitie van verzendende en ontvangende rol is niet op berichtniveau. De rollen staan gedefinieerd als initiator en executor op type (hoofd en sub)transactie. 
-Transactietype
-id: 		Accorderen_Wijziging 
-description:	Accorderen wijziging
-initiator rol: Opdrachtnemende_contractueel
-executor rol:	Opdrachtgevende_contractueel
-Transactietype
-id: 		Adviseren_Wijziging 
-description:	Adviseren wijziging
-initiator rol: Opdrachtgevende_contractueel
-executor rol:	Adviserende_contractueel
-Voor een type bericht in een type transactie (bericht in transactie) staat een richting gedefinieerd. De richting is van initiator naar executor of van executor naar initiator. Deze richting gaat dan respectievelijk van initiërende rol naar uitvoerende rol (van een type transactie).
-Bericht in Transactie
-Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
-Eerste bericht:	Waar
-Richting:		Van initiator naar executor
-Bericht:		Verzoek_Advies_Wijziging
-Transactie:		Adviseren_Wijziging
-IS DIT WEL EEN REGEL??? Initiator to Exector is optional in raamwerk
-Regel 2: de richting van de berichten dient over een te komen overeenkomen.
-Met richting wordt bedoeld de waarde of een bericht van initiator naar executor van een transactie, of van executor naar initiator.
-Bericht in Transactie
-Unieke identificatie: _ 666f01b3-6714-44cc-8865-0a9ae1f938ce
-Vorig:		 	
-Bericht:		Voorstel_tot_Wijziging
-Transactie:		Accorderen_Wijziging
-Bericht in Transactie
-Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
-Eerste bericht:	Waar
-Bericht:		Verzoek_Advies_Wijziging
-Transactie:		Adviseren_Wijziging
+Transactietype<br/>
+id: 		Accorderen_Wijziging<br/>
+description:	Accorderen wijziging<br/>
+initiator rol: Opdrachtnemende_contractueel<br/>
+executor rol:	Opdrachtgevende_contractueel<br/>
+Transactietype<br/>
+id: 		Adviseren_Wijziging<br/> 
+description:	Adviseren wijziging<br/>
+initiator rol: Opdrachtgevende_contractueel<br/>
+executor rol:	Adviserende_contractueel<br/>
+Voor een type bericht in een type transactie (bericht in transactie) staat een richting gedefinieerd. De richting is van initiator naar executor of van executor naar initiator. Deze richting gaat dan respectievelijk van initiërende rol naar uitvoerende rol (van een type transactie).<br/>
+Bericht in Transactie<br/>
+Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228<br/>
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce<br/>
+Eerste bericht:	Waar<br/>
+Richting:		Van initiator naar executor<br/>
+Bericht:		Verzoek_Advies_Wijziging<br/>
+Transactie:		Adviseren_Wijziging<br/>
+IS DIT WEL EEN REGEL??? Initiator to Exector is optional in raamwerk<br/>
+Regel 2: de richting van de berichten dient over een te komen overeenkomen.<br/>
+Met richting wordt bedoeld de waarde of een bericht van initiator naar executor van een transactie, of van executor naar initiator.<br/>
+Bericht in Transactie<br/>
+Unieke identificatie: _ 666f01b3-6714-44cc-8865-0a9ae1f938ce<br/>
+Vorig:<br/>		 	
+Bericht:		Voorstel_tot_Wijziging<br/>
+Transactie:		Accorderen_Wijziging<br/>
+Bericht in Transactie<br/>
+Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228<br/>
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce<br/>
+Eerste bericht:	Waar<br/>
+Bericht:		Verzoek_Advies_Wijziging<br/>
+Transactie:		Adviseren_Wijziging<br/>
 Indien een instantie van bericht in transactie verstuurd wordt, moet openSecondaryTransactionsAllowed meegestuurd worden.
 Er is een bericht nodig die niet voorkomt als vorig, zodat duidelijk is dat een transactie afgerond is. laatste bericht om transactie af te sluiten
 
@@ -640,20 +639,20 @@ Hiermee wordt geregeld wanneer een gebruiker een veld wel of niet mag aanpassen,
 
 In te stellen globale eigenschappen: id, description, helpinfo
 
-In te stellen specifieke eigenschappen:</ br>
-condition</ br>
-Hiermee wordt het gedrag van een veld bepaald. Er is keuze uit de volgende conditions:</ br>
--	FREE</ br>
-Het veld mag aangepast worden</ br>
--	FIXED</ br>
-Het veld mag niet aangepast worden</ br>
--	EMPTY</ br>
-Het veld wordt door de software leeggemaakt voor de gebruiker</ br>
-Verwijzingen vanuit de Berichtveld beperkingen:</ br>
-Door een of meerdere van onderstaande elementen te benoemen, wordt de situatie waar de conditie op van toepassing is gedefinieerd.</ br>
-complexElements</ br>
-simpleElement</ br>
-messageInTransaction</ br>
+In te stellen specifieke eigenschappen:<br/>
+condition<br/>
+Hiermee wordt het gedrag van een veld bepaald. Er is keuze uit de volgende conditions:<br/>
+-	FREE<br/>
+Het veld mag aangepast worden<br/>
+-	FIXED<br/>
+Het veld mag niet aangepast worden<br/>
+-	EMPTY<br/>
+Het veld wordt door de software leeggemaakt voor de gebruiker<br/>
+Verwijzingen vanuit de Berichtveld beperkingen:<br/>
+Door een of meerdere van onderstaande elementen te benoemen, wordt de situatie waar de conditie op van toepassing is gedefinieerd.<br/>
+complexElements<br/>
+simpleElement<br/>
+messageInTransaction<br/>
 
 De basis regels zijn:
 -	Een veld dat voor de eerste keer aangeboden wordt, dus nog niet bestaat in het voorgaande bericht, is altijd invulbaar en wordt nooit geblokkeerd door deze instelling.
@@ -663,16 +662,16 @@ De basis regels zijn:
 Het hoogste getal in de eerste kolom “wint”. Dus als er een conditie op een CE en SE ingesteld is (5) dan geldt deze conditie tov een instelling alleen op een SE  (1).
  
 
-Verwijzingen naar de Berichtveld beperkingen:</ br>
-Geen</ br>
-ElementCondition</ br>
-id: 		EC_116</ br>
-description:	 New element condition</ br>
-condition:	 FREE</ br>
-ComplexElement: CeContractwijzigingVoorstel</ br>
-ComplexElement: CE_Tabel_Werkpakketten</ br>
-simpleElement: SE_WPkostenpercentage</ br>
-messageInTransaction: mitt_265</ br>
+Verwijzingen naar de Berichtveld beperkingen:<br/>
+Geen<br/>
+ElementCondition<br/>
+id: 		EC_116<br/>
+description:	 New element condition<br/>
+condition:	 FREE<br/>
+ComplexElement: CeContractwijzigingVoorstel<br/>
+ComplexElement: CE_Tabel_Werkpakketten<br/>
+simpleElement: SE_WPkostenpercentage<br/>
+messageInTransaction: mitt_265<br/>
 
 
 ### Voorwaarden voor opvolgende type berichten (MessageInTransactionTypeCondition)
@@ -695,29 +694,29 @@ restrictie op het aantal keren dat een bericht verzonden mag worden.
 
 In te stellen globale eigenschappen: id, state, dateLaMu, userLaMu, helpinfo
 
-Voor bericht in transactie beperkingen is nog geen toepassing bekend voor de helpinfo.
-In te stellen specifieke eigenschappen:
-Geen
-Verwijzingen vanuit bericht in transactie beperkingen:
+Voor bericht in transactie beperkingen is nog geen toepassing bekend voor de helpinfo.<br/>
+In te stellen specifieke eigenschappen:<br/>
+Geen<br/>
+Verwijzingen vanuit bericht in transactie beperkingen:<br/>
 Bij meerdere van onderstaande verwijzingen in een conditie, is er een OF - situatie. Dus als één van de benoemde berichten gevonden wordt, wordt voldaan aan de conditie en mag het bericht gekozen worden.
 Door aan een bericht meerdere condities te koppelen met bijvoorbeeld maar 1 berichttype in onderstaande opties, onstaat een EN - situatie. Alle benoemde condities moet aan voldaan zijn voordat je dit bericht mag gebruiken.
 
-sendAfter bericht in transactie</ br>
-Zie situatie 1 hierboven</ br>
-sendBefore bericht in transactie</ br>
-Zie situatie 2 en 3 hierboven</ br>
-Voor situatie 3:</ br>
+sendAfter bericht in transactie<br/>
+Zie situatie 1 hierboven<br/>
+sendBefore bericht in transactie<br/>
+Zie situatie 2 en 3 hierboven<br/>
+Voor situatie 3:<br/>
 Het effect om een bericht slechts één keer te mogen versturen wordt bereikt door de MiTT van het betreffende bericht in de sendBefore lijst van diezelfde MITT te plaatsen. In dit specifieke geval mag een bericht dus niet naar meerdere executors worden verzonden.
 Toegestane verwijzingen bij "sendAfter" en "sendBefore "zijn "Bericht in transactie types" die ontvangen kunnen worden in de actuele transactie of van de aangesloten transacties, waarbij de  persoon die het actuele bericht behandelt initiator of executor is. Met aangesloten transacties worden de transactie waaruit een transactie geïnitieerd is en de directe subtransacties bedoeld. Met  directe subtransacties worden transacties bedoeld die vanuit de actuele transactie geïnitieerd zijn, dus niet subtransacties van subtransacties. 
 Deze beperking bestaat omdat een VISI Raamwerk plus PSB zich altijd op dezelfde manier moet gedragen, onafhankelijk of alle actoren op dezelfde VISI server werken, of dat iedere actor op een andere VISI server werkt. Op deze manier ziet de betreffende actor ook altijd de berichten die zijn keuzes beïnvloeden, doordat hij ze verstuurt of ontvangt.
 Als voorbeeld: de kok mag alleen maar Before of After relaties gebruiken met transacties waarin hij zelf als initiator of executor meewerkt en deze transacties moeten direct gekoppeld zijn aan de transactie die de kok op dit moment wil behandelen.
 
-Verwijzingen naar bericht in transactie beperkingen:</ br>
-Bericht in transactie</ br>
-In het bericht in transactie type wordt ingesteld dat deze beperkt wordt, door te verwijzen naar de beperkende mittconditie.</ br>
-MessageInTransactionTypeCondition</ br>
-id: 		mtc1</ br>
-sendAfter: mit_VTWoordeelpositief_1</ br>
+Verwijzingen naar bericht in transactie beperkingen:<br/>
+Bericht in transactie<br/>
+In het bericht in transactie type wordt ingesteld dat deze beperkt wordt, door te verwijzen naar de beperkende mittconditie.<br/>
+MessageInTransactionTypeCondition<br/>
+id: 		mtc1<br/>
+sendAfter: mit_VTWoordeelpositief_1<br/>
 
 ### Type bijlage (AppendixType)
 In ieder VISI bericht kunnen bestanden bijgevoegd worden. Een bestand moet wel altijd aan een bijlage type gekoppeld worden. Een raamwerk moet daarom altijd minimaal één bijlage type hebben. Als een raamwerk meerdere bijlage types heeft en er geen specifiek bijlage type op een bericht ingesteld staat, kan er gekozen worden aan welk bijlage type een bijlage in een bericht gekoppeld wordt. 
