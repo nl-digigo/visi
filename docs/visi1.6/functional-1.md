@@ -53,12 +53,10 @@ Unieke identificatie:   _0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
 Naam:                   Urbain Servranckx<br>
 Gebruikersnaam:         uservranckx
 
-
 <b>Persoon</b><br>
 Unieke identificatie:   _974e4822-4944-45ad-ab2f-161370662e30<br>
 Naam:                   Georges Remi<br>
 Gebruikersnaam:         gremi
-
 
 <b>Persoon</b>
 Unieke identificatie:   _d4e02752-2ac6-4700-ae67-d33f428f78fb<br>
@@ -189,7 +187,7 @@ Het sjabloon dient tevens ter validatie van de communicatie. Zoals de naam aange
 ### Type rol (RoleType)
 Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
 
-<div class="def" title="Eigenschappen van het element">
+<div class="def" title="Eigenschappen van het element RoleType">
 	<dl> 
 		<dt>[=id=]*
 			<dd> Unieke identificatie
@@ -242,57 +240,100 @@ Communicatie vindt in een project altijd plaats op basis van een type transactie
 
 Van een type transactie wordt een aantal eigenschappen vastgelegd. Niet alle eigenschappen zijn even belangrijk, daarom volgt een opdeling of eigenschappen verplicht of optioneel zijn. Een optionele eigenschap kan belangrijk zijn, ondanks dat de eigenschap niet verplicht is. Een voorbeeld hiervan is de eigenschap helptekst (helpInfo). helpInfo is beschikbaar om de nadere, uitgebreide uitleg te geven over het doel en gebruik van het type transactie. Ook kan er beschreven worden waarom bepaalde rollen met elkaar communiceren.
 
-Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description), initierende rol (initiator), uitvoerende rol (executor)</i> 
+<div class="def" title="Eigenschappen van het element TransactionType">	
+<dl> 
+		<dt>[=id=]*
+			<dd> Unieke identificatie
+		<dt>[=description=]*
+			<dd> Omschrijving
+		<dt>[=initiator=]*
+			<dd>initiërende rol
+		<dt>[=executor=]*
+			<dd>uitvoerende rol
+		<dt>[=startDate=]
+		<dt>[=endDate=]
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=language=]
+		<dt>[=category=]
+		<dt>[=helpInfo=]
+			<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
+		<dt>[=code=]
+		<dt>[=result=]
+			<dd>Resultaat
+		<dt>[=subTransactions=]
+			<dd>Overbodige eigenschap
+		<dt>[=appendixTypes=]
+			<dd>Type bijlage
+	</dl>
+</div>
 
-<i>initierende rol (initiator)</i><br/>
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
+#### <dfn>`initator`</dfn>
 Dit is een verwijzing naar een type rol. Deze eigenschap legt vast welke type rol een persoon moet hebben om een transactie van dit type te starten. Met starten wordt in dit kader hetzelfde bedoelt als initieren. 
 
-<i>uitvoerende rol (executor)</i><br/>
+#### <dfn>`executor`</dfn>
 Dit is ook een verwijzing naar een type rol. Deze eigenschap legt echter vast welke type rol een persoon moet hebben om een eerste bericht in dit type transactie te mogen ontvangen. Feitelijk is dit de type rol die het resultaat van de transactie gaat realiseren / uitvoeren. 
 
-<aside class="example" title="Gegevens van een type transactie (in een raamwerk)">
+#### <dfn>`result`</dfn>
+Deze eigenschap is optioneel, en geldt alleen voor type transactie. Voorbeelden in eerdere documentatie geven aan dat het resultaat van een type transactie hierin beschreven kan worden.
+
+#### <dfn>`subTransactions`</dfn>
+De eigenschap subTransactions is redundant. Met deze eigenschap wordt - voor een type transactie - gedefinieerd welke type transacties "binnen deze transactie vallen". De samenhang tussen type transacties wordt echter al gedefinieerd met opgave van de voorgaande type berichten (in de transactie), zie paragraaf https://bimloket.github.io/visi/visi1.6/#transacties-koppelen-tot-een-procedure-m-a-w-hoofd-sub-transacties
+	
+#### <dfn>`appendixTypes1`</dfn>
+Met deze optionele eigenschap kan een beperking worden opgelegd aan welke typen bijlage bijgevoegd mogen worden aan de type berichten van dit type transactie. Deze eigenschap is een verwijzing naar een of meerder typen bijlage. Indien deze eigenschap ontbreekt voor een type transactie, mag ieder type bijlage bijgevoegd worden.
+
+P.S. Legacy
+</dl>
+
+<div class="example" title="Gegevens van een type transactie (in een raamwerk)">
 <b>Type transactie</b><br/>
 unieke identificatie:	TT_Contractwijziging_door_opdrachtgever<br/>
 omschrijving:		Contractwijziging (door de opdrachtgever)<br/>
 helptekst:		Met dit transactie type kan opdrachtgever een contractwijziging aan de opdrachtnemer melden, met als tussendoelen het verkrijgen van een technisch voorstel van opdrachtnemer, een technisch akkoord van opdrachtgever, een offerte van opdrachtnemer, een acceptatie van die offerte door opdrachtgever en uiteindelijk de acceptatie van een of meerdere gereedmeldingen van het uitgevoerde werk middels de levering van prestatieverklaringen.<br/>
 initierende rol:	<u>Opdrachtgevende_contractueel</u><br/>
 uitvoerende rol:	<u>Opdrachtnemende_contractueel</u><br/>
-
-</aside>
-
-Optionele eigenschappen zijn: <i>startDate, endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, result, subTransactions, appendixTypes</i>
-
-Nadere uitleg van deze eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
-
-<i>typen bijlage (appendixTypes)</i><br/>
-Met deze optionele eigenschap kan een beperking worden opgelegd aan welke typen bijlage bijgevoegd mogen worden aan de type berichten van dit type transactie. Deze eigenschap  is een verwijzing naar een of meerder typen bijlage. Indien deze eigenschap ontbreekt voor een type transactie, mag ieder type bijlage bijgevoegd worden.
-
-P.S. Legacy<br/>
-<i>resultaat (result)</i><br/>
-Deze eigenschap is optioneel, en geldt alleen voor type transactie. Voorbeelden in eerdere documentatie geven aan dat het resultaat van een type transactie hierin beschreven kan worden.
-
-<i>typen subtransacties (subTransactions)</i><br/>
-De eigenschap subTransactions is redundant. Met deze eigenschap wordt - voor een type transactie - gedefinieerd welke type transacties "binnen deze transactie vallen". De samenhang tussen type transacties wordt echter al gedefinieerd met opgave van de voorgaande type berichten (in de transactie), zie paragraaf https://bimloket.github.io/visi/visi1.6/#transacties-koppelen-tot-een-procedure-m-a-w-hoofd-sub-transacties
+</div>
 
 ### Type bericht (MessageType)
 
 Met type bericht wordt gedefinieerd welke informatie uitgewisseld kan worden. Het type wordt vastgelegd met een unieke identificatie (id) en een tekstuele omschrijving (description). P.S. Deze omschrijving geeft impliciet de status van een type transactie aan.
 
-Verplichte eigenschappen zijn: <i>unieke identificatie (id), omschrijving (description), elementen (complexElements)</i> 
+<div class="def" title="Eigenschappen van het element MessageType">
+	<dl> 
+		<dt>[=id=]*
+			<dd> Unieke identificatie
+		<dt>[=description=]*
+			<dd> Omschrijving
+		<dt>[=complexElements=]*
+			<dd> Berichthoofdstukken
+		<dt>[=startDate=]
+		<dt>[=endDate=]
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=language=]
+		<dt>[=category=]
+		<dt>[=helpInfo=]
+		<dt>[=code=]
+		<dt>[=appendixMandatory=]
+			<dd>Bijlage verplicht
+		<dt>[=appendixTypes=]
+			<dd>Type bijlage
+	</dl>
+</div>
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
+#### <dfn>`complexElements`</dfn>
+Hiermee wordt de inhoud van een type bericht vastgelegd, want in die berichthoofdstukken zitten de informatievelden. De volgorde waarmee de hoofdstukken in het berichttype staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de berichten. Technisch is met de huidige controlemechanismes helaas mogelijk om een bericht te versturen waarin een of meerdere berichthoofdstukken ontbreken, maar dit is niet de bedoeling. Er lopen onderzoeken naar een betere beveiliging hiervoor.
 
-_elementen (complexElements)_<br/>
-Hiermee wordt de inhoud van een type bericht vastgelegd, want in die berichthoofdstukken zitten de informatievelden. De volgorde waarmee de hoofdstukken in het berichttype staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de berichten.
-Technisch is met de huidige controlemechanismes helaas mogelijk om een bericht te versturen waarin een of meerdere berichthoofdstukken ontbreken, maar dit is niet de bedoeling. Er lopen onderzoeken naar een betere beveiliging hiervoor.
-
-Optionele eigenschappen zijn: <i>startDate, endDate, state, dateLaMu, userLaMu, language, category, helpInfo, code, appendixMandatory, appendixTypes</i>
-
-Nadere uitleg van de globale eigenschappen staat beschreven in paragraaf https://bimloket.github.io/visi/visi1.6/#globale-eigenschappen.
-
-_appendixMandatory_<br/>
+#### <dfn>`appendixMandatory`</dfn>
 Met deze eigenschap kan ingesteld worden dat het verplicht is om minimaal één bijlage toe te voegen aan een bericht van dit type. Hiermee kan voorkomen worden dat een type bericht met de omschrijving "Document ter acceptatie" zonder bijlage verzonden wordt.
 
-_type bijlagen (appendixType)_<br/>
+#### <dfn>`appendixTypes2`</dfn>
 Omdat het binnen een raamwerk mogelijk is om verschillende metadata-formulieren te specificeren voor een bij te voegen bijlage, kan ook per bericht type ingesteld worden welk(e) metadata formulier(en) gekozen kan/kunnen worden voor een bijlage bij een bericht. Als er geen bijlage types gekoppeld zijn, kan ieder bijlage type uit het raamwerk gekozen worden door de gebruiker.
+</dl>
 
 <div class="example" title="Gegevens van een type bericht (in een raamwerk)">
 <b>Type bericht</b><br/>
@@ -300,36 +341,59 @@ unieke identificatie:	MT_Acceptatie_technisch_voorstel_contractwijziging<br/>
 omschrijving:		Acceptatie van het technisch voorstel (voor contractwijziging)<br/>
 helptekst:		Met dit bericht accepteert de opdrachtgever het technisch voorstel, waarna de opdrachtnemer verder kan met een fnancieel voorstel / offerte voor de contractwijziging.<br/>
 elementen:		<u>CE_Contractwijziging_Basis</u>, <u>CE_Contractwijziging_Voorstel</u>, <u>CE_Contractwijziging_Opmerkingen</u><br/>
-
 </div>
 
 ### Elementen van een type bericht (SimpleElementType)
+<div class="def" title="Eigenschappen van het element SimpelElementType">
+	<dl> 
+		<dt>[=id=]*
+			<dd> Unieke identificatie
+		<dt>[=description=]*
+			<dd> Omschrijving
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=language=]
+		<dt>[=category=]
+		<dt>[=helpInfo=]
+			<dd> Specifiek voor berichtvelden wordt de helptekst veelvuldig gebruikt om de opsteller van een bericht uit te leggen wat er exact verwacht wordt bij het invullen van dat veld. Dit zowel op abstract niveau, zoals: “Vul hier de lengte van het element in, zonder rekening te houden met uitstekende delen zoals wapening en dergelijke” Maar ook specifiek in de vorm van een uitleg welke getal notatie op gecontroleerd wordt: “Noteer de lengte met een komma en twee decimalen”.<br/>Ook bij het lezen van een bericht helpt de helptekst om de inhoud van een veld beter te kunnen duiden.
+		<dt>[=interfaceType=]
+		<dt>[=valueList=]
+			<dd>
+		<dt>[=responsibilityTask=]
+			<dd>
+	</dl>
+</div>
 
-In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo
 
-Specifiek voor berichtvelden wordt de helptekst veelvuldig gebruikt om de opsteller van een bericht uit te leggen wat er exact verwacht wordt bij het invullen van dat veld. Dit zowel op abstract niveau, zoals: “Vul hier de lengte van het element in, zonder rekening te houden met uitstekende delen zoals wapening en dergelijke” Maar ook specifiek in de vorm van een uitleg welke getal notatie op gecontroleerd wordt: “Noteer de lengte met een komma en twee decimalen”.
+<!-- Specifiek voor berichtvelden wordt de helptekst veelvuldig gebruikt om de opsteller van een bericht uit te leggen wat er exact verwacht wordt bij het invullen van dat veld. Dit zowel op abstract niveau, zoals: “Vul hier de lengte van het element in, zonder rekening te houden met uitstekende delen zoals wapening en dergelijke” Maar ook specifiek in de vorm van een uitleg welke getal notatie op gecontroleerd wordt: “Noteer de lengte met een komma en twee decimalen”.
 
-Ook bij het lezen van een bericht helpt de helptekst om de inhoud van een veld beter te kunnen duiden.
+Ook bij het lezen van een bericht helpt de helptekst om de inhoud van een veld beter te kunnen duiden. -->
 
-NB: Gereserveerd veld-ID: het veld met ID “SOAPServerURL” is exclusief gereserveerd voor het berichthoofdstuk dat aan het organisatie type gekoppeld is. Dit zodat hiermee voor VISI software altijd het SOAP-adres van een organisatie gevonden kan worden.
-
-In te stellen specifieke eigenschappen:<br />
-interfaceType<br/>
+<p class="note" title="Relatie persoon en rol">
+Een persoon kan meerdere rollen hebben. Een rol kan door meerdere personen vervuld worden. Gereserveerd veld-ID: het veld met ID “SOAPServerURL” is exclusief gereserveerd voor het berichthoofdstuk dat aan het organisatie type gekoppeld is. Dit zodat hiermee voor VISI software altijd het SOAP-adres van een organisatie gevonden kan worden.
+	
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
+#### <dfn>`interfaceType`</dfn>
 Dit veld is bij de allereerste opzet van de systematiek bedacht, maar heeft nooit een echte toepassing of duidelijke uitleg gekend. In de vorige documentatie stond het volgende:<br/>
-“Type interface c.q. view op dit SimpleElementType voor dit specifieke bericht. Bijvoorbeeld als hetgegevenselement bedoeld is als invoer (inputText)of slechts een vaste inhoud bevat en nietaangepast mag worden (label). OP het moment wordt hier in de praktijk geen functionaliteit aan verbonden."
-valueList
+“Type interface c.q. view op dit SimpleElementType voor dit specifieke bericht. Bijvoorbeeld als hetgegevenselement bedoeld is als invoer (inputText)of slechts een vaste inhoud bevat en niet aangepast mag worden (label). Op het moment wordt hier in de praktijk geen functionaliteit aan verbonden."
+#### <dfn>`valueList`</dfn>	
 Is niet in gebruik. Dit is de uitleg uit de vorige documentatie:
-“Puntkomma geseparate lijst van waarden die een instance op berichtniveau uiteindelijk aan mag nemen. Oorspronkelijk was dit element bedoeld als enumeration. In de huidige praktijk wordt dit opgelost met het element type UserDefinedType en het element xsdRestriction. In de xsdRestriction worden de enumeration values aangegeven. Aan het element valueList wordt in de huidige praktijk geen betekenis toegekend.”<br/>
+“Puntkomma geseparate lijst van waarden die een instance op berichtniveau uiteindelijk aan mag nemen. Oorspronkelijk was dit element bedoeld als enumeration. In de huidige praktijk wordt dit opgelost met het element type UserDefinedType en het element xsdRestriction. In de xsdRestriction worden de enumeration values aangegeven. Aan het element valueList wordt in de huidige praktijk geen betekenis toegekend.”
+
 Verwijzingen vanuit het Berichtveld type:<br/>
 Veld eigenschappen<br/>
 Verwijzingen naar het Berichtveld type:<br/>
 Berichtveld beperkingen<br/>
-Bericht hoofdstukken<br/>
-Simple element type<br/>
+</dl>
+
+<div class="example" title="Gegevens van een simpel element type (in een raamwerk)">
+<b>Simple element type</b><br/>
 id: 		SE_DatumUitvoering<br/>
 description:	 Gepland moment start uitvoering<br/>
 helpinfo:	Kies hier de beoogde startdatum waarop de hier benoemde werkzaakheden beginnen.<br/>
 User defined type: UDT_Datumveld<br/>
+</div>	
 
 ### Datatype van een element (UserDefinedType)
 Hiermee wordt het gedrag van het invoerveld bepaald en hoe het gevalideerd moet worden.<br/>
@@ -760,7 +824,7 @@ Geen
 Verwijzingen vanuit organisatie types: 
 complexElements
 Een organisatie type kan metadata elementen bevatten, zoals adres, telefoonnummer enz.
-Voor projecten met SOAP-communicatie moet minimaal het Berichtveld met het exacte Id “SOAPServerURL” via een berichthoofdstuk aan het organisatie type gekoppeld zijn, zodat het soap-adres ingesteld kan worden.
+	Voor projecten met SOAP-communicatie moet minimaal het Berichtveld met het exacte Id “SOAPServerURL” via een berichthoofdstuk aan het organisatie type gekoppeld zijn, zodat het soap-adres ingesteld kan worden.
 Verwijzingen naar organisatie types:
 geen
 OrganisationType
