@@ -264,13 +264,14 @@ Van een type transactie wordt een aantal eigenschappen vastgelegd. Niet alle eig
 			<dd>Resultaat
 		<dt>[=subTransactions=]
 			<dd>Overbodige eigenschap
-		<dt>[=appendixTypes=]
+		<dt>[=appendixTypes1=]
 			<dd>Type bijlage
 	</dl>
 </div>
 
-<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
-#### <dfn>`initator`</dfn>
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">
+
+#### <dfn>`initiator`</dfn>
 Dit is een verwijzing naar een type rol. Deze eigenschap legt vast welke type rol een persoon moet hebben om een transactie van dit type te starten. Met starten wordt in dit kader hetzelfde bedoelt als initieren. 
 
 #### <dfn>`executor`</dfn>
@@ -320,11 +321,12 @@ Met type bericht wordt gedefinieerd welke informatie uitgewisseld kan worden. He
 		<dt>[=code=]
 		<dt>[=appendixMandatory=]
 			<dd>Bijlage verplicht
-		<dt>[=appendixTypes=]
+		<dt>[=appendixTypes2=]
 			<dd>Type bijlage
 	</dl>
 </div>
-<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">
+
 #### <dfn>`complexElements`</dfn>
 Hiermee wordt de inhoud van een type bericht vastgelegd, want in die berichthoofdstukken zitten de informatievelden. De volgorde waarmee de hoofdstukken in het berichttype staan, bepaalt in welke volgorde de VISI software deze hoofdstukken aanbiedt in de berichten. Technisch is met de huidige controlemechanismes helaas mogelijk om een bericht te versturen waarin een of meerdere berichthoofdstukken ontbreken, maar dit is niet de bedoeling. Er lopen onderzoeken naar een betere beveiliging hiervoor.
 
@@ -359,12 +361,8 @@ elementen:		<u>CE_Contractwijziging_Basis</u>, <u>CE_Contractwijziging_Voorstel<
 			<dd> Specifiek voor berichtvelden wordt de helptekst veelvuldig gebruikt om de opsteller van een bericht uit te leggen wat er exact verwacht wordt bij het invullen van dat veld. Dit zowel op abstract niveau, zoals: “Vul hier de lengte van het element in, zonder rekening te houden met uitstekende delen zoals wapening en dergelijke” Maar ook specifiek in de vorm van een uitleg welke getal notatie op gecontroleerd wordt: “Noteer de lengte met een komma en twee decimalen”.<br/>Ook bij het lezen van een bericht helpt de helptekst om de inhoud van een veld beter te kunnen duiden.
 		<dt>[=interfaceType=]
 		<dt>[=valueList=]
-			<dd>
-		<dt>[=responsibilityTask=]
-			<dd>
 	</dl>
 </div>
-
 
 <!-- Specifiek voor berichtvelden wordt de helptekst veelvuldig gebruikt om de opsteller van een bericht uit te leggen wat er exact verwacht wordt bij het invullen van dat veld. Dit zowel op abstract niveau, zoals: “Vul hier de lengte van het element in, zonder rekening te houden met uitstekende delen zoals wapening en dergelijke” Maar ook specifiek in de vorm van een uitleg welke getal notatie op gecontroleerd wordt: “Noteer de lengte met een komma en twee decimalen”.
 
@@ -373,10 +371,12 @@ Ook bij het lezen van een bericht helpt de helptekst om de inhoud van een veld b
 <p class="note" title="Relatie persoon en rol">
 Een persoon kan meerdere rollen hebben. Een rol kan door meerdere personen vervuld worden. Gereserveerd veld-ID: het veld met ID “SOAPServerURL” is exclusief gereserveerd voor het berichthoofdstuk dat aan het organisatie type gekoppeld is. Dit zodat hiermee voor VISI software altijd het SOAP-adres van een organisatie gevonden kan worden.
 	
-<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">
+
 #### <dfn>`interfaceType`</dfn>
 Dit veld is bij de allereerste opzet van de systematiek bedacht, maar heeft nooit een echte toepassing of duidelijke uitleg gekend. In de vorige documentatie stond het volgende:<br/>
 “Type interface c.q. view op dit SimpleElementType voor dit specifieke bericht. Bijvoorbeeld als hetgegevenselement bedoeld is als invoer (inputText)of slechts een vaste inhoud bevat en niet aangepast mag worden (label). Op het moment wordt hier in de praktijk geen functionaliteit aan verbonden."
+
 #### <dfn>`valueList`</dfn>	
 Is niet in gebruik. Dit is de uitleg uit de vorige documentatie:
 “Puntkomma geseparate lijst van waarden die een instance op berichtniveau uiteindelijk aan mag nemen. Oorspronkelijk was dit element bedoeld als enumeration. In de huidige praktijk wordt dit opgelost met het element type UserDefinedType en het element xsdRestriction. In de xsdRestriction worden de enumeration values aangegeven. Aan het element valueList wordt in de huidige praktijk geen betekenis toegekend.”
