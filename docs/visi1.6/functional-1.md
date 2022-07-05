@@ -7,7 +7,7 @@ De functionele documentatie is bedoeld voor een software productmanager of een s
 De functionele uitleg is opgebouwd in hoofdstukken, en leest het beste hoofdstuk voor hoofdstuk. Met een hoofdstuk wordt een functioneel abstractieniveau inclusief bouwstenen uitgelegd. Aan het einde van een hoofdstuk wordt getoetst of de inhoud in voldoende mate begrepen wordt, en lezer verder kan naar het volgende hoofdstuk. In het volgende hoofdstuk wordt de functionele beschrijving aangevuld of verdiept qua bouwstenen. Hoofdstukken overslaan leidt tot het missen van bouwstenen en logische denkvolgorde.
 De hoofdstukopbouw is afgestemd om het kennisniveau van de lezer, en verloopt van newbie tot expert. 
 
-Voor de newbie wordt in paragraaf 4.3 uitgelegd hoe er communicatie in een project plaatsvindt. 
+Voor de nieuwkomer wordt in paragraaf 4.3 uitgelegd hoe er communicatie in een project plaatsvindt. 
 
 Daarna staat in paragraaf 4.4 de verdiepingsslag dat deze communicatie verschillend is per project, en in een sjabloon vastgelegd wordt. Niet ieder project heeft namelijk dezelfde communicatiepatronen. 
 
@@ -31,14 +31,14 @@ Alles wordt opgehangen aan een project. De definitie van een project is in dit g
 
 Van een project worden beperkte, verplichte eigenschappen vastgelegd. Ieder project heeft een unieke identificatie waarmee naar het project gerefereerd kan worden, zonder dat misverstanden kunnen ontstaan welk project bedoeld wordt. Daarnaast heeft een project een naam en een omschrijving. Deze naam en omschrijving behoeven niet uniek te zijn, en is een aanvulling op de unieke identificatie, en is bedoeld voor toelichting en zorgt voor eenvoudigere herkenning voor het project (door mensen). Aanvullend wordt van het project het moment van start en einde vastgelegd met start- en einddatum.
 
-<aside class="example" title="Gegevens van een project (in een project specifiek bestand)">
+<div class="example" title="Gegevens van een project (in een project specifiek bestand)">
 <b>Project</b><br>
 Unieke identificatie:    _badc9dab-807e-4319-bd56-60c57605e109<br>
 Naam:                    Realisatie West- / Oostlijn<br>
 Omschrijving:            Realisatie van metrolijn 47 inclusief 7 nieuwe stations met 9,7 kilometer spoor, waarvan 7,1 kilometer ondergronds<br>
 Startdatum:              23-12-2020 14:59<br>
 Einddatum:               20-05-2022 07:08
-</aside>
+</div>
 
 ### Persoon
 
@@ -46,7 +46,7 @@ De activiteit van een project wordt uitgevoerd door personen. De mensen, die aan
 
 <div class="issue" data-number="136"></div> 
 
-<aside class="example" title="Gegevens van personen (in een project specifiek bestand)">
+<div class="example" title="Gegevens van personen (in een project specifiek bestand)">
 
 <b>Persoon</b><br>
 Unieke identificatie:   _0c585186-fa97-4de7-8fe0-5c4bee3afead<br>
@@ -65,7 +65,7 @@ Unieke identificatie:   _d4e02752-2ac6-4700-ae67-d33f428f78fb<br>
 Naam:                   Luc Dupanloup<br>
 Gebruikersnaam:         ldupanloup
 
-</aside>
+</div>
 
 <p class="note" title="Identificatie is niet globaal">
 N.B. Indien een persoon aan twee projecten werkt, kan de unieke identificatie van deze persoon per project verschillend zijn. Er is geen sprake van een globale unieke identificatie, maar een unieke identificatie binnen een project.
@@ -76,14 +76,14 @@ Personen voeren een activiteit in een project uit namens een organisatie. In een
 
 Uit de afkorting is de organisatorische bron van communicatie ter herleiden, zie … (Verwijzing naar uitleg over eigenschap van TransactionTemplate). Voor een organisatie wordt een contactpersoon gedefinieerd middels een verwijzing naar de unieke identificatie van een persoon. Deze verwijzing heeft geen functionele betekenis, en betreft enkel een administratief doel.
 
-<aside class="example" title="Gegevens van een organisatie (in een project specifiek bestand">
+<div class="example" title="Gegevens van een organisatie (in een project specifiek bestand">
 <b>Organisatie</b><br>
 Unieke identificatie:  _87e9144d-04d6-4a5f-bdcb-b50e96c2b498<br>
 Naam:                  Gemeente Rommelgem<br>
 Afkorting:             GRG<br>
 Contactpersoon:        <u>_0c585186-fa97-4de7-8fe0-5c4bee3afead</u><br>
 
-</aside>
+</div>
 
 <p class="note" title="Organisatie heeft een adres">
 Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres, maar een digitaal adres. Dit digitale adres heeft een technisch doel, zie paragraaf https://bimloket.github.io/visi/visi1.6/#soap over SOAP protocol.
@@ -93,12 +93,12 @@ Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres,
 
 De differentiatie in autorisatie, taken en verantwoordelijkheden in een project worden expliciet gemaakt middels het definiëren van verschillende rollen. Een rol staat voor samenhangende autorisatie, taken en verantwoordelijkheden voor het uitvoeren van activiteiten, die een persoon meestal tijdelijk op zich neemt, en die (afwisselend) door verschillende personen kunnen worden vervuld. Van een rol wordt een zeer beperkte aantal eigenschappen vastgelegd. Iedere rol heeft een unieke identificatie, aangevuld met een naam en omschrijving. Deze naam en omschrijving behoeven niet uniek te zijn, en zijn een aanvulling op de unieke identificatie bedoeld voor toelichting en betekenis geven aan de rol. De naam en omschrijving zorgen voor eenvoudigere herkenning van de rol (door mensen).
 
-<aside class="example" title="Gegevens van een rol (in een project specifiek bestand)">
+<div class="example" title="Gegevens van een rol (in een project specifiek bestand)">
 <b>Rol</b><br>
 Unieke identificatie:  _1252a67a-5f69-4a9c-b4ca-506a4459c7c3 <br>
 Naam:                  Beoordelende rol<br>
 Omschrijving:          Deze rol geeft een onafhankelijke beoordeling op basis van competenties en deskundigheid binnen het kader van project. Bij de beoordeling doorloopt de rol een aantal vaste stappen. Rol inventariseert gegevens, weegt, motiveert en beoordeelt deze informatie en velt vervolgens het oordeel.<br>
-</aside>
+</div>
 
 <p class="note" title="Rol versus functie">
 Een rol is fundamenteel anders dan een functie. Verantwoordelijkheden en taken zijn **niet** toegekend aan functionarissen van een organisatie, maar aan rollen. Een essentieel verschil is dat rollen een afspiegeling zijn van _het werk_ dat georganiseerd wordt, terwijl functies een afspiegeling zijn van _mensen_ die georganiseerd worden (in een organisatie). Een project heeft geen functie "Afdelingshoofd", maar wel de rollen "Beoordelende", "Adviserende".
@@ -113,13 +113,13 @@ Op basis van de rolverdeling tussen organisaties kunnen taken en verantwoordelij
 
 Personen handelen in een project altijd vanuit een rol namens een organisatie. Een persoon is niet rechtstreeks gekoppeld aan de organisatie. De persoon heeft een relatie met een rol en een organisatie in het project. Deze relatie is te zien als een unieke sleutel die persoon, rol en organisatie verbindt. Deze sleutel noemen we "Persoon in Rol van Organisatie". Van deze sleutel worden zeer beperkte, verplichte eigenschappen vastgelegd. Voor de sleutel wordt persoon, rol en organisatie gedefinieerd middels een verwijzing naar de unieke identificatie van een persoon, een rol en een organisatie.
  
-<aside class="example" title="Gegevens van een persoon in een rol van een organisatie (in een project specifiek bestand)">
+<div class="example" title="Gegevens van een persoon in een rol van een organisatie (in een project specifiek bestand)">
 <b>Persoon in Rol van Organisatie</b><br/>
 Unieke identificatie:  _e0ad4954-7986-417c-96d6-813efa36e86b<br/>
 Contactpersoon:        <u>_0c585186-fa97-4de7-8fe0-5c4bee3afead</u><br/>
 Rol:                   <u>_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</u><br/>
 Organisatie:           <u>_87e9144d-04d6-4a5f-bdcb-b50e96c2b498</u>
-</aside>
+</div>
 
 <p class="note" title="Relatie persoon en rol">
 Een persoon kan meerdere rollen hebben. Een rol kan door meerdere personen vervuld worden.
@@ -134,7 +134,7 @@ Permanente vervanging wordt ook wel opvolging genoemd. De opvolger is een geauto
 
 Permanente vervanging is altijd op rolniveau. Bij de genoemde sleutel van Persoon in Rol van Organisatie wordt deze permanente vervanger vastgelegd middels een verwijzing naar de unieke identificatie van een persoon, een rol en een organisatie.  De relatie is van geautoriseerde naar de opvolger. Hierbij dienen de rollen exact overeen te komen.
 
-<aside class="example" title="Permanente vervanging cg opvolging">
+<div class="example" title="Permanente vervanging cg opvolging">
 <b>Persoon in Rol van Organisatie</b><br/>
 Unieke identificatie:   _e0ad4954-7986-417c-96d6-813efa36e86b<br/>
 Contactpersoon:         <u>_0c585186-fa97-4de7-8fe0-5c4bee3afead</u><br/>
@@ -147,7 +147,7 @@ Unieke identificatie:   <font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea
 Contactpersoon:         <u>_974e4822-4944-45ad-ab2f-161370662e30</u><br/>
 Rol:                    <u><font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font></u><br/>
 Organisatie:            <u>_2ba76318-83ab-4a6e-9257-ea91045717d2</u>
-</aside>
+</div>
   
 Heeft een persoon (in een rol van een organisatie) een opvolger, dan betekent dit dat de persoon niet langer geautoriseerd is om te handelen vanuit deze rol. Alleen de opvolger is geautoriseerd.
 Een persoon (in een rol van een organisatie) kan maximaal één (1) opvolger hebben.
@@ -159,14 +159,14 @@ Een tijdelijke vervanging kan ook gelezen worden als een (tijdelijke) machtiging
 
 De tijdelijke vervanging is altijd op rolniveau. Bij de genoemde sleutel van Persoon in Rol van Organisatie wordt deze tijdelijke machtiging vastgelegd middels een verwijzing naar de unieke identificatie van de geautoriseerde persoon, rol en organisatie. De relatie is van gemachtigde naar de geautoriseerde. Hierbij dienen de rollen exact overeen te komen.
 
-<aside class="example" title="Tijdelijke vervanging">
+<div class="example" title="Tijdelijke vervanging">
 <b>Persoon in Rol van Organisatie</b><br>
 Unieke identificatie:  _752b1dfd-dd91-4404-9708-39b91047ca66<br>
 Contactpersoon:        <u>_d4e02752-2ac6-4700-ae67-d33f428f78fb</u><br>
 Rol:                   <u><font color = "00ff00">_1252a67a-5f69-4a9c-b4ca-506a4459c7c3</font></u><br>
 Organisatie:           <u>_87e9144d-04d6-4a5f-bdcb-b50e96c2b498</u><br>
 Vervangt:              <u><font color = "B71C1C">_51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb</font></u><br>
-</aside>
+</div>
 
 Voert een gemachtigd persoon (in een rol van een organisatie) een handeling uit, dan is dit altijd uit naam van de geautoriseerde persoon. Bij een handeling wordt de geautoriseerde vastgelegd en de gemachtigde. De geautoriseerde / gemachtigde kan antwoorden op transacties van de rol van de geautoriseerde, ongeacht wie de transactie gestart heeft. Indien een machtiging ongedaan gemaakt wordt, kan alleen de geautoriseerde de handeling afmaken. Een machtiging mag namelijk wel ongedaan gemaakt worden, omdat machtigingen een tijdelijk karakter kunnen hebben.
 
@@ -189,7 +189,7 @@ Het sjabloon dient tevens ter validatie van de communicatie. Zoals de naam aange
 ### Type rol (RoleType)
 Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
 
-<aside class="def" title="Eigenschappen van het element">
+<div class="def" title="Eigenschappen van het element">
 	<dl> 
 		<dt>[=id=]*
 			<dd> Unieke identificatie
@@ -215,14 +215,14 @@ Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarisse
 		<dt>[=responsibilitySupportTask=]
 		<dt>[=responsibilityFeedback=]
 	</dl>
-</aside>
+</div>
 
-<aside class="example" title="Gegevens van een type rol (in een raamwerk)">
+<div class="example" title="Gegevens van een type rol (in een raamwerk)">
 <b>Rol</b><br>
 unieke identificatie:	RT_Beoordelende_rol<br>
 omschrijving:		Beoordelende rol
 [startDate](#startdate)
-</aside>	
+</div>	
 <dl class="def" title="Beschrijving van de specifieke eigenschappen">
 	
 	
@@ -294,96 +294,99 @@ Met deze eigenschap kan ingesteld worden dat het verplicht is om minimaal één 
 _type bijlagen (appendixType)_<br/>
 Omdat het binnen een raamwerk mogelijk is om verschillende metadata-formulieren te specificeren voor een bij te voegen bijlage, kan ook per bericht type ingesteld worden welk(e) metadata formulier(en) gekozen kan/kunnen worden voor een bijlage bij een bericht. Als er geen bijlage types gekoppeld zijn, kan ieder bijlage type uit het raamwerk gekozen worden door de gebruiker.
 
-<aside class="example" title="Gegevens van een type bericht (in een raamwerk)">
+<div class="example" title="Gegevens van een type bericht (in een raamwerk)">
 <b>Type bericht</b><br/>
 unieke identificatie:	MT_Acceptatie_technisch_voorstel_contractwijziging<br/>
 omschrijving:		Acceptatie van het technisch voorstel (voor contractwijziging)<br/>
 helptekst:		Met dit bericht accepteert de opdrachtgever het technisch voorstel, waarna de opdrachtnemer verder kan met een fnancieel voorstel / offerte voor de contractwijziging.<br/>
 elementen:		<u>CE_Contractwijziging_Basis</u>, <u>CE_Contractwijziging_Voorstel</u>, <u>CE_Contractwijziging_Opmerkingen</u><br/>
 
-</aside>
+</div>
 
 ### Elementen van een type bericht (SimpleElementType)
 
 In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo
 
 Specifiek voor berichtvelden wordt de helptekst veelvuldig gebruikt om de opsteller van een bericht uit te leggen wat er exact verwacht wordt bij het invullen van dat veld. Dit zowel op abstract niveau, zoals: “Vul hier de lengte van het element in, zonder rekening te houden met uitstekende delen zoals wapening en dergelijke” Maar ook specifiek in de vorm van een uitleg welke getal notatie op gecontroleerd wordt: “Noteer de lengte met een komma en twee decimalen”.
+
 Ook bij het lezen van een bericht helpt de helptekst om de inhoud van een veld beter te kunnen duiden.
+
 NB: Gereserveerd veld-ID: het veld met ID “SOAPServerURL” is exclusief gereserveerd voor het berichthoofdstuk dat aan het organisatie type gekoppeld is. Dit zodat hiermee voor VISI software altijd het SOAP-adres van een organisatie gevonden kan worden.
 
-In te stellen specifieke eigenschappen:
-interfaceType
-Dit veld is bij de allereerste opzet van de systematiek bedacht, maar heeft nooit een echte toepassing of duidelijke uitleg gekend. In de vorige documentatie stond het volgende:
-“Type interface c.q. view op dit SimpleElementType voor dit specifieke bericht. Bijvoorbeeld als hetgegevenselement bedoeld is als invoer (inputText)of slechts een vaste inhoud bevat en nietaangepast mag worden (label). OP het moment wordt hier in de praktijk geen functionaliteit aan verbonden. “
+In te stellen specifieke eigenschappen:<br />
+interfaceType<br/>
+Dit veld is bij de allereerste opzet van de systematiek bedacht, maar heeft nooit een echte toepassing of duidelijke uitleg gekend. In de vorige documentatie stond het volgende:<br/>
+“Type interface c.q. view op dit SimpleElementType voor dit specifieke bericht. Bijvoorbeeld als hetgegevenselement bedoeld is als invoer (inputText)of slechts een vaste inhoud bevat en nietaangepast mag worden (label). OP het moment wordt hier in de praktijk geen functionaliteit aan verbonden."
 valueList
 Is niet in gebruik. Dit is de uitleg uit de vorige documentatie:
-“Puntkomma geseparate lijst van waarden die een instance op berichtniveau uiteindelijk aan mag nemen. Oorspronkelijk was dit element bedoeld als enumeration. In de huidige praktijk wordt dit opgelost met het element type UserDefinedType en het element xsdRestriction. In de xsdRestriction worden de enumeration values aangegeven. Aan het element valueList wordt in de huidige praktijk geen betekenis toegekend.”
-Verwijzingen vanuit het Berichtveld type: 
-Veld eigenschappen
-Verwijzingen naar het Berichtveld type:
-Berichtveld beperkingen
-Bericht hoofdstukken
-Simple element type
-id: 		SE_DatumUitvoering
-description:	 Gepland moment start uitvoering
-helpinfo:	Kies hier de beoogde startdatum waarop de hier benoemde werkzaakheden beginnen.
-User defined type: UDT_Datumveld
+“Puntkomma geseparate lijst van waarden die een instance op berichtniveau uiteindelijk aan mag nemen. Oorspronkelijk was dit element bedoeld als enumeration. In de huidige praktijk wordt dit opgelost met het element type UserDefinedType en het element xsdRestriction. In de xsdRestriction worden de enumeration values aangegeven. Aan het element valueList wordt in de huidige praktijk geen betekenis toegekend.”<br/>
+Verwijzingen vanuit het Berichtveld type:<br/>
+Veld eigenschappen<br/>
+Verwijzingen naar het Berichtveld type:<br/>
+Berichtveld beperkingen<br/>
+Bericht hoofdstukken<br/>
+Simple element type<br/>
+id: 		SE_DatumUitvoering<br/>
+description:	 Gepland moment start uitvoering<br/>
+helpinfo:	Kies hier de beoogde startdatum waarop de hier benoemde werkzaakheden beginnen.<br/>
+User defined type: UDT_Datumveld<br/>
 
 ### Datatype van een element (UserDefinedType)
-Hiermee wordt het gedrag van het invoerveld bepaald en hoe het gevalideerd moet worden.
+Hiermee wordt het gedrag van het invoerveld bepaald en hoe het gevalideerd moet worden.<br/>
 Zo kan een veld een datum/tijdstip/valuta/verplichte tekst/optionele tekst/een exact aantal karakters enzovoorts als vereiste mee krijgen. VISI software biedt doorgaans invoerfunctionaliteit op maat voor de meest voorkomende invoer soorten, zoals een datum keuze venster bij een datum veld en een keuzelijst functie als er een keuze uit lijst met waardes vereist wordt.
 
 In te stellen globale eigenschappen: id, description, state, dateLaMu, userLaMu, language, category, helpinfo
 
 Voor veldeigenschappen is nog geen toepassing bekend voor de helpinfo. Het is denkbaar dat deze naast de helpinfo weergegeven zou kunnen worden, om de invul instructie hier te beheren in plaats van in de helpinfo van meerdere veld types die deze eigenschap hebben.
 
-In te stellen specifieke eigenschappen:
+In te stellen specifieke eigenschappen:<br/>
 baseType
 Per Veld eigenschap moet uit een aantal basis XML veldsoorten gekozen worden om het basis gedrag van een veld vast te stellen. De keuze is beperkt tot de volgende basis XML veldsoorten:
--	BOOLEAN  
--	DATE 
--	DATETIME
--	TIME
--	DECIMAL
--	INTEGER
--	STRING
-XsdRestriction
+<ul>
+	<li>BOOLEAN</li>
+<li>DATE</li> 
+<li>DATETIME</li>
+<li>TIME</li>
+<li>DECIMAL</li>
+<li>INTEGER</li>
+<li>STRING</li>
+<li>XsdRestriction</li>
 Hiermee kan zeer exact gedrag aan een veld van een bepaald basetype gedefinieerd worden. Voor het basetype STRING kan een reguliere expressie gedefinieerd worden.
-Enkele voorbeelden die nu veel gebruikt worden voor basetype STRING zijn:
--	1 keuze mogelijkheid, dus veld heeft altijd deze waarde:
-<xs:enumeration value="Automatisch gevuld"/>
--	Keuzelijst met meerdere waardes
-<xs:enumeration value="k1"/>
-<xs:enumeration value="k2"/>
-<xs:enumeration value="k3"/>
--	Optionele keuzelijst:
-<xs:enumeration value=""/>
-<xs:enumeration value="Keuze 1"/>
-<xs:enumeration value="Keuze 2"/>
--	Verplichte tekst van minimaal 1 karakter
-<xs:minLength value="1"/>
--	Optionele tekst
-geen xsd restrictie
--	Bijvoorbeeld een jaarnummer
-<xs:pattern value="(20\d\d)"/>
-Een voorbeeld dat veel gebruikt wordt voor basetype DECIMAL zijn:
--	Bedrag met twee decimalen
-<xs:fractionDigits value="2"/>
-Verwijzingen vanuit het Veld eigenschap type:
-Geen
-Verwijzingen naar het Veld eigenschap type:
-Berichtvelden
-Op deze manier krijgt een veld de eigenschappen gekoppeld
-User defined type
-id:		UDT_Datumveld
-description:	Datumveld
-basetype:	DATE
-
-id:		UDT_VerplichteTekst
-description:	Verplichte tekst veld
-basetype:	STRING
-xsdRestriction:	xs:minLength value="1"
-
+Enkele voorbeelden die nu veel gebruikt worden voor basetype STRING zijn:<br/>
+-	1 keuze mogelijkheid, dus veld heeft altijd deze waarde:<br/>
+<xs:enumeration value="Automatisch gevuld"/><br/>
+-	Keuzelijst met meerdere waardes<br/>
+<xs:enumeration value="k1"/><br/>
+<xs:enumeration value="k2"/><br/>
+<xs:enumeration value="k3"/><br/>
+-	Optionele keuzelijst:<br/>
+<xs:enumeration value=""/><br/>
+<xs:enumeration value="Keuze 1"/><br/>
+<xs:enumeration value="Keuze 2"/><br/>
+-	Verplichte tekst van minimaal 1 karakter<br/>
+<xs:minLength value="1"/><br/>
+-	Optionele tekst<br/>
+geen xsd restrictie<br/>
+-	Bijvoorbeeld een jaarnummer<br/>
+<xs:pattern value="(20\d\d)"/><br/>
+Een voorbeeld dat veel gebruikt wordt voor basetype DECIMAL zijn:<br/>
+-	Bedrag met twee decimalen<br/>
+<xs:fractionDigits value="2"/><br/>
+Verwijzingen vanuit het Veld eigenschap type:<br/>
+Geen<br/>
+Verwijzingen naar het Veld eigenschap type:<br/>
+Berichtvelden<br/>
+Op deze manier krijgt een veld de eigenschappen gekoppeld<br/>
+User defined type<br/>
+id:		UDT_Datumveld<br/>
+description:	Datumveld<br/>
+basetype:	DATE<br/>
+<br/>
+id:		UDT_VerplichteTekst<br/>
+description:	Verplichte tekst veld<br/>
+basetype:	STRING<br/>
+xsdRestriction:	xs:minLength value="1"<br/>
+</ul>
 ### Tabel als element van een type bericht
 Een speciaal element is een tabel.
 
@@ -402,42 +405,53 @@ Hieronder wordt uitgelegd dat er een hoofdstuk in een hoofdstuk kan worden ingev
 _maxOccurs_<br/>
 Zoals bij MinOccurs, is het op dezelfde manier ook mogelijk om aan te geven dat een tabel niet meer dan x regels mag bevatten. Door Min en Max op hetzelfde aantal te zetten, is ook een exact aantal aan te maken regels instelbaar.
 
-Verwijzingen vanuit het Hoofdstuk type:
-Berichthoofdstukken (Tabelvorming)
-Het is toegestaan om in een hoofdstuk naast berichtvelden, ook een ander hoofdstuk te benoemen. De afgesproken werking hiervan is dat het hoofdstuk in het “bovenliggende” hoofdstuk weergegeven wordt als tabel. De bericht velden in het ingevoegde hoofdstuk worden dan als kolommen aangeboden.
+Verwijzingen vanuit het Hoofdstuk type:<br/>
+Berichthoofdstukken (Tabelvorming)<br/>
+Het is toegestaan om in een hoofdstuk naast berichtvelden, ook een ander hoofdstuk te benoemen. De afgesproken werking hiervan is dat het hoofdstuk in het “bovenliggende” hoofdstuk weergegeven wordt als tabel. De bericht velden in het ingevoegde hoofdstuk worden dan als kolommen aangeboden.<br/>
 Op deze manier kan een hoofdstuk bestaan uit een of meerdere tabellen, eventueel ook aangevuld met normale berichtvelden. 
-NB1: Op dit moment is technisch nog niet aan te geven op welke locatie de tabellen in een hoofdstuk getoond moeten worden. Hierdoor komen ze op dit moment soms boven en soms onder de normale velden en is het niet mogelijk om een hoofdstuk te maken waarin velden en tabellen elkaar afwisselen. In issue 37 wordt aan dit probleem gewerkt.
-NB2: Technisch is het mogelijk om een hoofdstuk in een hoofdstuk in een hoofdstuk enz. te maken, wat bijvoorbeeld een 3d-tabel op zou kunnen leveren. Over dergelijke toepassingen zijn nog geen afspraken in de systematiek en het wordt ook nog nergens toegepast. Dit wordt wel als ruimte voor nog niet bekende evt toekomstige toepassingen beschouwd.
-Berichtvelden
-Door berichtvelden in een bepaalde volgorde in een hoofdstuk te plaatsen, ontstaat de structuur van dat hoofdstuk, zoals het in alle berichten waarin  dit hoofdstuk staat wordt weergegeven. 
-Verwijzingen naar het Hoofdstuk type:
-Berichthoofdstukken (Tabelvorming)
+NB1: Op dit moment is technisch nog niet aan te geven op welke locatie de tabellen in een hoofdstuk getoond moeten worden. Hierdoor komen ze op dit moment soms boven en soms onder de normale velden en is het niet mogelijk om een hoofdstuk te maken waarin velden en tabellen elkaar afwisselen. In issue 37 wordt aan dit probleem gewerkt.<br/>
+NB2: Technisch is het mogelijk om een hoofdstuk in een hoofdstuk in een hoofdstuk enz. te maken, wat bijvoorbeeld een 3d-tabel op zou kunnen leveren. Over dergelijke toepassingen zijn nog geen afspraken in de systematiek en het wordt ook nog nergens toegepast. Dit wordt wel als ruimte voor nog niet bekende evt toekomstige toepassingen beschouwd.<br/>
+
+Berichtvelden<br/>
+Door berichtvelden in een bepaalde volgorde in een hoofdstuk te plaatsen, ontstaat de structuur van dat hoofdstuk, zoals het in alle berichten waarin  dit hoofdstuk staat wordt weergegeven. <br/>
+Verwijzingen naar het Hoofdstuk type:<br/>
+Berichthoofdstukken (Tabelvorming)<br/>
 Zie hierboven.
-ProjectType
+	
+ProjectType<br/>
 Voor zover bekend is het technisch mogelijk en hoofdstuk aan een projecttype te koppelen, maar is er nog geen toepassing voor bekend.
+	
 PersonType
 Hiermee kan er in het projectspecifieke bericht aanvullende informatie bij personen ingevuld worden, zoals bijvoorbeeld een telefoonnummer of andere voor het project relevante persoonsinformatie.
+	
 OrganisationType
 Hiermee kan er in het projectspecifieke bericht aanvullende informatie bij organisaties ingevuld worden, zoals bijvoorbeeld een adres of andere voor het project relevante informatie.
+
 AppendixType
 Op deze manier kan er per bijlage type een andere set aan berichtvelden met metadata over de bijlage ingevoerd worden.
-Bericht type
-Voor de opbouw van berichten
-Complex element type
-id: 		CeContractwijzigingVoorstel
+	
+Bericht type<br/>
+Voor de opbouw van berichten<br/>
+Complex element type<br/>
+id: 		CeContractwijzigingVoorstel<br/>
 description:	Technisch voorstel
-Simple elements: 
--	SE_Wijzigingsnummer
--	SE_BeschrijvingTechnisch
--	SE_DatumUitvoering
--	SE_KostenramingEUR
--	CE_Tabel_Werkpakketten
+	
+Simple elements:
+<ul>
+<li>SE_Wijzigingsnummer</li>
+<li>SE_BeschrijvingTechnisch</li>
+<li>SE_DatumUitvoering</li>
+<li>SE_KostenramingEUR</li>
+</ul>
+CE_Tabel_Werkpakketten
 Complex element type in Complex element type (tabel)
 id: 		CE_Tabel_Werkpakketten
 description:	Werkpakketten
 Simple elements: 
--	SE_Werkpakket
--	SE_WPkostenpercentage
+<ul>
+<li>SE_Werkpakket</li>
+</li>SE_WPkostenpercentage</li>
+</ul>
 
 
 Berichtveld beperkingen
@@ -472,52 +486,52 @@ TODO: terugkeerantwoorden schijnen wel door te mogen.. Opzoeken!!!!!!!! ARNE met
 firstMessage
 Optional Boolean waarde die bedoeld is om onbetwistbaar vast te kunnen stellen dat een bericht alleen gebruikt kan worden als eerste bericht van een subtransactie. Gebruik van een MITT met deze instelling resulteert dus altijd in een nieuwe subtransactie.
 
-Verwijzingen vanuit het Bericht in transactie type:
-Berichten
-Hiermee wordt de berichtnaam en inhoud van het element in de berichtenstroom bepaald.
-Voorgaand(previous) bericht
-Op deze manier ligt vast hoe de stroom van berichten verloopt. Doordat MITT’s  de voorgaande MITT’s hier hebben staan, weet je vanuit welk bericht dit bericht gekozen kan worden als volgend bericht. Er zijn grofweg 4 soorten previous-koppelingen die er qua definitie precies hetzelfde uitzien(deze MITT is een previous op deze MITT), maar in werking anders zijn:
--	Start van een nieuwe hoofdtransactie. De waarde van previous is dan leeg. Deze MITT mag de eigenschap “firstmessage” hebben, alleen aangezien dit bericht per definitie een eerste bericht is, is dit niet nodig.
--	Een antwoord binnen dezelfde transactie (De previous MiTT is ook aan dezelfde transactie gekoppeld)
--	Een start van een nieuwe transactie op basis van de MITT in deze transactie. Dit noemen we ook wel een “Subtransactie” starten. Deze MITT moet altijd de eigenschap “firstmessage” hebben, anders kan er geen nieuwe transactie gestart worden en doet de previous koppeling waarschijnlijk niets.
--	Een terugkering vanuit de subtransactie naar de bovenliggende transactie. 
+Verwijzingen vanuit het Bericht in transactie type:</ br>
+Berichten</ br>
+Hiermee wordt de berichtnaam en inhoud van het element in de berichtenstroom bepaald.</ br>
+Voorgaand(previous) bericht</ br>
+Op deze manier ligt vast hoe de stroom van berichten verloopt. Doordat MITT’s  de voorgaande MITT’s hier hebben staan, weet je vanuit welk bericht dit bericht gekozen kan worden als volgend bericht. Er zijn grofweg 4 soorten previous-koppelingen die er qua definitie precies hetzelfde uitzien(deze MITT is een previous op deze MITT), maar in werking anders zijn:</ br>
+-	Start van een nieuwe hoofdtransactie. De waarde van previous is dan leeg. Deze MITT mag de eigenschap “firstmessage” hebben, alleen aangezien dit bericht per definitie een eerste bericht is, is dit niet nodig.</ br>
+-	Een antwoord binnen dezelfde transactie (De previous MiTT is ook aan dezelfde transactie gekoppeld)</ br>
+-	Een start van een nieuwe transactie op basis van de MITT in deze transactie. Dit noemen we ook wel een “Subtransactie” starten. Deze MITT moet altijd de eigenschap “firstmessage” hebben, anders kan er geen nieuwe transactie gestart worden en doet de previous koppeling waarschijnlijk niets.</ br>
+-	Een terugkering vanuit de subtransactie naar de bovenliggende transactie.</ br>
 Deze optie is alleen toegestaan vanuit een bericht in een subtransactie terug naar de transactie waaruit de subtransactie is opgestart. Dit bericht in de bovenliggende transactie mag niet de eigenschap “firstmessage” hebben, want dan wordt er een subtransactie onder de subtransactie aangemaakt.
 
-Transactie
+Transactie</ br>
 Een MITT is altijd aan een transactie gekoppeld. Minimaal plaatst een MITT dus een berichttype in een transactie.
 
-Transactiefase
+Transactiefase</ br>
 Deze eigenschap is bedoeld om de transactie fases van het DEMO universele transactie patroon mee aan te geven. Hier wordt nog weinig gebruik van gemaakt. De eerste DEMO oplegger op de VISI systematiek gebruikt deze eigenschap wel als essentieel onderdeel.
 
-Groeptypes
+Groeptypes</ br>
 Er kan een groep ingevuld worden, maar hier wordt tot op dit moment niets mee gedaan.
 
-Bijlage types
+Bijlage types</ br>
 Dit is de meest specifieke manier om te benoemen welke metadata set (berichthoofdstuk) aan berichtvelden ingevuld moet worden voor een bijlage die bij een bericht wordt toegevoegd. 
 
-Bericht in transactie beperkingen
+Bericht in transactie beperkingen</ br>
 Voorwaardelijkheid wanneer je dit bericht mag kiezen.
 
-Verwijzingen naar het Bericht in transactie type:
+Verwijzingen naar het Bericht in transactie type:</ br>
 Berichtveld beperkingen (elementcondition)
 
-Bericht in transactie beperkingen
+Bericht in transactie beperkingen</ br>
 Voorwaardelijkheid wanneer je een ander bericht mag kiezen op basis van de aanwezigheid van dit bericht.
 Voorgaand(previous) bericht in transactie
 
 Als dit bericht een voorgaand bericht is voor het bericht waarop het ingesteld staat
 
-<aside class="example" title="Definitie van de volgorde van type berichten">
+<div class="example" title="Definitie van de volgorde van type berichten">
 <b>MessageInTransactionType</b><br/>
-id:			mit40170_T7
-initiatorToExecutor:	true
-firstMessage:		false
-messageType:		MS_AcceptatieVoorstelWijziging
-previous:		mitt563
-transactionType:	TR_ContractwijzigingOG
-MessageInTransactionTypeCondition: mtc1
+id:			mit40170_T7</ br>
+initiatorToExecutor:	true</ br>
+firstMessage:		false</ br>
+messageType:		MS_AcceptatieVoorstelWijziging</ br>
+previous:		mitt563</ br>
+transactionType:	TR_ContractwijzigingOG</ br>
+MessageInTransactionTypeCondition: mtc1</ br>
 
-</aside>
+</div>
 
 #### ONTDUBBELEN In meerdere gekoppelde type transacties (m.a.w. hoofd- & sub-transacties)
 WAARSCHIJNLIJK DUBBEL??? 
@@ -527,7 +541,7 @@ Hoe een koppeling aangebracht wordt tussen twee transacties wordt uitgelegd aan 
 
 De transactie Accorderen_Wijziging tussen opstellende rol en accorderende rol bestaat uit drie berichten: Voorstel_tot_Wijziging, Akkoord_Wijziging, Niet_Akkoord_Wijziging. Het bericht Voorstel_tot_Wijziging is het eerste bericht van de transactie. Het bericht in transactie van Voorstel_tot_Wijziging heeft GEEN vorig bericht in transactie. De berichten in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging hebben wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Voorstel_tot_Wijziging.
 
-<aside class="example" title="Definitie van de volgorde van type berichten">
+<div class="example" title="Definitie van de volgorde van type berichten">
 <b>Bericht in Transactie</b><br/>
 Unieke identificatie: _ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Vorig:		 	
@@ -546,38 +560,38 @@ Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
 Bericht:		Niet_Akkkord_Wijziging
 Transactie:		Accorderen_Wijziging
 
-</aside>
+</div>
 
 De transactie Adviseren_Wijziging tussen accorderende rol en adviserende rol en bestaat uit twee berichten: Verzoek_Advies_Wijziging en Advies_Wijziging. Het bericht Verzoek_Advies_Wijziging is het eerste bericht van de transactie. Het bericht in transactie van Verzoek_Advies_Wijziging heeft GEEN vorig bericht in transactie. Het bericht in transactie van Advies_Wijziging heeft wel een vorig bericht in transactie. Dit is namelijk het bericht in transactie van Verzoek_Advies_Wijziging.
 
-Bericht in Transactie
-Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-Vorig:		 	
-Bericht:		Verzoek_Advies_Wijziging
-Transactie:		Adviseren_Wijziging
-Bericht in Transactie
-Unieke identificatie: _ f75a35c7-30f3-4b3b-8776-120cd7811fd4
-Vorig:		 	_ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-Bericht:		Advies_Wijziging
-Transactie:		Adviseren_Wijziging
-Hoe wordt de adviestransactie gekoppeld aan de accorderingstransactie? Met de verwijzing naar het vorige bericht in transactie. Echter omdat de eigenschap van het eerste bericht van de transactie Adviseren_Wijziging - een lege verwijzing naar het vorige bericht in transactie - dient het eerste bericht een vlag (Waar / Onwaar) te krijgen dat dit het eerste bericht is van de transactie.
-Bericht in Transactie
-Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce
-Eerste bericht:	Waar
-Bericht:		Verzoek_Advies_Wijziging
-Transactie:		Adviseren_Wijziging
-Na het ontvangen van Voorstel_tot_Wijziging kan de accorderende rol kiezen voor drie reactieberichten: Akkoord_Wijziging, Niet_Akkkoord en Verzoek_Advies_Wijziging. Echter na ontvangst van het bericht Advies_Wijziging is er geen reactiebericht. De koppeling terug van adviestransactie naar accorderende transactie is nog niet aangebracht. Dit wordt ook gemodelleerd met de verwijzing naar het vorige bericht in transactie. In dit geval het bericht in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging.
-Bericht in Transactie
-Unieke identificatie: _ 6bdae158-a6dc-491b-a9ea-692fd419a828
-Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce, _ f75a35c7-30f3-4b3b-8776-120cd7811fd4
-Bericht:		Akkoord_Wijziging
-Transactie:		Accorderen_Wijziging
-Bericht in Transactie
-Unieke identificatie: _ 4e5569b7-0c6a-4976-811d-9d9189b8b1df
-Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce, _ f75a35c7-30f3-4b3b-8776-120cd7811fd4
-Bericht:		Niet_Akkkord_Wijziging
-Transactie:		Accorderen_Wijziging
+Bericht in Transactie</ br>
+Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228</ br>
+Vorig:</ br>		 	
+Bericht:		Verzoek_Advies_Wijziging</ br>
+Transactie:		Adviseren_Wijziging</ br>
+Bericht in Transactie</ br>
+Unieke identificatie: _ f75a35c7-30f3-4b3b-8776-120cd7811fd4</ br>
+Vorig:		 	_ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228</ br>
+Bericht:		Advies_Wijziging</ br>
+Transactie:		Adviseren_Wijziging</ br>
+Hoe wordt de adviestransactie gekoppeld aan de accorderingstransactie? Met de verwijzing naar het vorige bericht in transactie. Echter omdat de eigenschap van het eerste bericht van de transactie Adviseren_Wijziging - een lege verwijzing naar het vorige bericht in transactie - dient het eerste bericht een vlag (Waar / Onwaar) te krijgen dat dit het eerste bericht is van de transactie.</ br>
+Bericht in Transactie</ br>
+Unieke identificatie: _ a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228</ br>
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce</ br>
+Eerste bericht:	Waar</ br>
+Bericht:		Verzoek_Advies_Wijziging</ br>
+Transactie:		Adviseren_Wijziging</ br>
+Na het ontvangen van Voorstel_tot_Wijziging kan de accorderende rol kiezen voor drie reactieberichten: Akkoord_Wijziging, Niet_Akkkoord en Verzoek_Advies_Wijziging. Echter na ontvangst van het bericht Advies_Wijziging is er geen reactiebericht. De koppeling terug van adviestransactie naar accorderende transactie is nog niet aangebracht. Dit wordt ook gemodelleerd met de verwijzing naar het vorige bericht in transactie. In dit geval het bericht in transactie van Akkoord_Wijziging en Niet_Akkoord_Wijziging.</ br>
+Bericht in Transactie</ br>
+Unieke identificatie: _ 6bdae158-a6dc-491b-a9ea-692fd419a828</ br>
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce, _ f75a35c7-30f3-4b3b-8776-120cd7811fd4</ br>
+Bericht:		Akkoord_Wijziging</ br>
+Transactie:		Accorderen_Wijziging</ br>
+Bericht in Transactie</ br>
+Unieke identificatie: _ 4e5569b7-0c6a-4976-811d-9d9189b8b1df</ br>
+Vorig:		 	_ 666f01b3-6714-44cc-8865-0a9ae1f938ce, _ f75a35c7-30f3-4b3b-8776-120cd7811fd4</ br>
+Bericht:		Niet_Akkkord_Wijziging</ br>
+Transactie:		Accorderen_Wijziging</ br>
 Voor het correct definiëren van één procedure (opgebouwd uit hoofd- en subtransacties) gelden twee aanvullende functionele basisregels, die niet technisch af te dwingen zijn.
 IS DIT WEL EEN REGEL??? Rollen kunnen anders zijn tussen hoofd en sub transacties
 Regel 1: de rollen in hoofd- en subtransactie dienen op elkaar aansluiten. Hiermee wordt bedoeld dat de ontvangende rol in de hoofdtransactie gelijk moet zijn aan de verzendende rol in de subtransactie. De definitie van verzendende en ontvangende rol is niet op berichtniveau. De rollen staan gedefinieerd als initiator en executor op type (hoofd en sub)transactie. 
@@ -626,20 +640,20 @@ Hiermee wordt geregeld wanneer een gebruiker een veld wel of niet mag aanpassen,
 
 In te stellen globale eigenschappen: id, description, helpinfo
 
-In te stellen specifieke eigenschappen:
-condition
-Hiermee wordt het gedrag van een veld bepaald. Er is keuze uit de volgende conditions:
--	FREE
-Het veld mag aangepast worden
--	FIXED
-Het veld mag niet aangepast worden
--	EMPTY
-Het veld wordt door de software leeggemaakt voor de gebruiker
-Verwijzingen vanuit de Berichtveld beperkingen:
-Door een of meerdere van onderstaande elementen te benoemen, wordt de situatie waar de conditie op van toepassing is gedefinieerd. 
-complexElements
-simpleElement
-messageInTransaction
+In te stellen specifieke eigenschappen:</ br>
+condition</ br>
+Hiermee wordt het gedrag van een veld bepaald. Er is keuze uit de volgende conditions:</ br>
+-	FREE</ br>
+Het veld mag aangepast worden</ br>
+-	FIXED</ br>
+Het veld mag niet aangepast worden</ br>
+-	EMPTY</ br>
+Het veld wordt door de software leeggemaakt voor de gebruiker</ br>
+Verwijzingen vanuit de Berichtveld beperkingen:</ br>
+Door een of meerdere van onderstaande elementen te benoemen, wordt de situatie waar de conditie op van toepassing is gedefinieerd.</ br>
+complexElements</ br>
+simpleElement</ br>
+messageInTransaction</ br>
 
 De basis regels zijn:
 -	Een veld dat voor de eerste keer aangeboden wordt, dus nog niet bestaat in het voorgaande bericht, is altijd invulbaar en wordt nooit geblokkeerd door deze instelling.
@@ -649,16 +663,16 @@ De basis regels zijn:
 Het hoogste getal in de eerste kolom “wint”. Dus als er een conditie op een CE en SE ingesteld is (5) dan geldt deze conditie tov een instelling alleen op een SE  (1).
  
 
-Verwijzingen naar de Berichtveld beperkingen:
-Geen
-ElementCondition
-id: 		EC_116
-description:	 New element condition
-condition:	 FREE
-ComplexElement: CeContractwijzigingVoorstel
-ComplexElement: CE_Tabel_Werkpakketten
-simpleElement: SE_WPkostenpercentage
-messageInTransaction: mitt_265
+Verwijzingen naar de Berichtveld beperkingen:</ br>
+Geen</ br>
+ElementCondition</ br>
+id: 		EC_116</ br>
+description:	 New element condition</ br>
+condition:	 FREE</ br>
+ComplexElement: CeContractwijzigingVoorstel</ br>
+ComplexElement: CE_Tabel_Werkpakketten</ br>
+simpleElement: SE_WPkostenpercentage</ br>
+messageInTransaction: mitt_265</ br>
 
 
 ### Voorwaarden voor opvolgende type berichten (MessageInTransactionTypeCondition)
@@ -688,22 +702,22 @@ Verwijzingen vanuit bericht in transactie beperkingen:
 Bij meerdere van onderstaande verwijzingen in een conditie, is er een OF - situatie. Dus als één van de benoemde berichten gevonden wordt, wordt voldaan aan de conditie en mag het bericht gekozen worden.
 Door aan een bericht meerdere condities te koppelen met bijvoorbeeld maar 1 berichttype in onderstaande opties, onstaat een EN - situatie. Alle benoemde condities moet aan voldaan zijn voordat je dit bericht mag gebruiken.
 
-sendAfter bericht in transactie
-Zie situatie 1 hierboven	
-sendBefore bericht in transactie
-Zie situatie 2 en 3 hierboven	
-Voor situatie 3: 
+sendAfter bericht in transactie</ br>
+Zie situatie 1 hierboven</ br>
+sendBefore bericht in transactie</ br>
+Zie situatie 2 en 3 hierboven</ br>
+Voor situatie 3:</ br>
 Het effect om een bericht slechts één keer te mogen versturen wordt bereikt door de MiTT van het betreffende bericht in de sendBefore lijst van diezelfde MITT te plaatsen. In dit specifieke geval mag een bericht dus niet naar meerdere executors worden verzonden.
 Toegestane verwijzingen bij "sendAfter" en "sendBefore "zijn "Bericht in transactie types" die ontvangen kunnen worden in de actuele transactie of van de aangesloten transacties, waarbij de  persoon die het actuele bericht behandelt initiator of executor is. Met aangesloten transacties worden de transactie waaruit een transactie geïnitieerd is en de directe subtransacties bedoeld. Met  directe subtransacties worden transacties bedoeld die vanuit de actuele transactie geïnitieerd zijn, dus niet subtransacties van subtransacties. 
 Deze beperking bestaat omdat een VISI Raamwerk plus PSB zich altijd op dezelfde manier moet gedragen, onafhankelijk of alle actoren op dezelfde VISI server werken, of dat iedere actor op een andere VISI server werkt. Op deze manier ziet de betreffende actor ook altijd de berichten die zijn keuzes beïnvloeden, doordat hij ze verstuurt of ontvangt.
 Als voorbeeld: de kok mag alleen maar Before of After relaties gebruiken met transacties waarin hij zelf als initiator of executor meewerkt en deze transacties moeten direct gekoppeld zijn aan de transactie die de kok op dit moment wil behandelen.
 
-Verwijzingen naar bericht in transactie beperkingen:
-Bericht in transactie
-In het bericht in transactie type wordt ingesteld dat deze beperkt wordt, door te verwijzen naar de beperkende mittconditie.
-MessageInTransactionTypeCondition
-id: 		mtc1
-sendAfter: mit_VTWoordeelpositief_1
+Verwijzingen naar bericht in transactie beperkingen:</ br>
+Bericht in transactie</ br>
+In het bericht in transactie type wordt ingesteld dat deze beperkt wordt, door te verwijzen naar de beperkende mittconditie.</ br>
+MessageInTransactionTypeCondition</ br>
+id: 		mtc1</ br>
+sendAfter: mit_VTWoordeelpositief_1</ br>
 
 ### Type bijlage (AppendixType)
 In ieder VISI bericht kunnen bestanden bijgevoegd worden. Een bestand moet wel altijd aan een bijlage type gekoppeld worden. Een raamwerk moet daarom altijd minimaal één bijlage type hebben. Als een raamwerk meerdere bijlage types heeft en er geen specifiek bijlage type op een bericht ingesteld staat, kan er gekozen worden aan welk bijlage type een bijlage in een bericht gekoppeld wordt. 
