@@ -184,7 +184,9 @@ De projectcommunicatie middels het versturen en beantwoorden van berichten kan s
 
 Het raamwerk is het communicatiesjabloon van een project. Alle communicatie moet verlopen conform dit sjabloon. In het sjabloon staat gedefinieerd welke type informatie overgedragen kan worden tussen personen. In het sjabloon is vastgelegd welke type informatie overgedragen kan worden (wat), tussen welke type rollen (wie), en wanneer (hoe). 
 
-Het sjabloon dient tevens ter validatie van de communicatie. Zoals de naam aangeeft is het een sjabloon waaraan de communicatie moet voldoen. Op basis van dit sjabloon kan geverifieerd worden of de verstrekte informatie voldoet aan de afspraken. 
+Het sjabloon dient tevens ter validatie van de communicatie. Zoals de naam aangeeft is het een sjabloon waaraan de communicatie moet voldoen. Op basis van dit sjabloon kan geverifieerd worden of de verstrekte informatie voldoet aan de afspraken.
+
+![Raamwerk](media/projectinitiatie_raamwerk.jpg)</aside>
 
 ### Type rol (RoleType)
 Verantwoordelijkheden en taken zijn niet toegekend aan functies / functionarissen binnen organisaties, maar aan type rollen. Definitie van een type rol is met een unieke identificatie en een tekstuele beschrijving. Daarom heeft een type rol de eigenschappen unieke identificatie (id) en omschrijving (description).
