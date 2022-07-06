@@ -25,6 +25,7 @@ Het project specifiek maken van de communicatiepatronen heeft nog een verdieping
 
 Voordat communicate conform de open standaard VISI kan plaatsvinden, moet een project ingericht worden met een project specifiek bestand (psb), een raamwerk en een hieruit gegenereerd berichtenschema.
 
+![PSB](media/projectinitiatie_psb.jpg)</aside>
 
 ### Project
 
