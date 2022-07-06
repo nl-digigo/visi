@@ -262,7 +262,7 @@ Van een type transactie wordt een aantal eigenschappen vastgelegd. Niet alle eig
 		<dt>[=language=]
 		<dt>[=category=]
 		<dt>[=helpInfo=]
-			<dd> Voor helpinfo TransactionType is nog geen (software)toepassing bekend.
+			<dd> Voor helpinfo van een type transactie is geen (software)toepassing bekend.
 		<dt>[=code=]
 		<dt>[=result=]
 			<dd>Resultaat
@@ -439,49 +439,49 @@ Per Veld eigenschap moet uit een aantal basis XML veldsoorten gekozen worden om 
 #### <dfn>`XsdRestriction`</dfn>
 Hiermee kan zeer exact gedrag aan een veld van een bepaald basetype gedefinieerd worden. Voor het basetype STRING kan een reguliere expressie gedefinieerd worden.
 
-`<xs:enumeration value="code binnen backticks buiten UL LI"/>`
 
 Enkele voorbeelden die nu veel gebruikt worden voor basetype STRING zijn:
 <ul>
 	<li>1 keuze mogelijkheid, dus veld heeft altijd deze waarde:</li>
-	`<xs:enumeration value="Automatisch gevuld"/>`<br/>
+</ul>
+`<xs:enumeration value="Automatisch gevuld"/>`<br/>
+<ul>
 	<li>Keuzelijst met meerdere waardes</li>
-		<ul>
-			<li>`<xs:enumeration value="k1"/>`</li>
-			<li>`<xs:enumeration value="k2"/>`</li>
-			<li>`<xs:enumeration value="k3"/>`</li>
-		</ul>
-	<li>Optionele keuzelijst:</li>
-		<ul>
-			<li>`<xs:enumeration value=""/>`</li>
-			<li>`<xs:enumeration value="Keuze 1"/>`</li>
-			<li>`<xs:enumeration value="Keuze 2"/>`</li>
-		</ul>
+</ul>
+`<xs:enumeration value="k1"/>`
+`<xs:enumeration value="k2"/>`
+`<xs:enumeration value="k3"/>`
+<ul>
+<li>Optionele keuzelijst:</li>
+</ul>
+`<xs:enumeration value=""/>`
+`<xs:enumeration value="Keuze 1"/>`
+`<xs:enumeration value="Keuze 2"/>`
+<ul>
 	<li>Verplichte tekst van minimaal 1 karakter</li>
-		`<xs:minLength value="1"/>`<br/>
+</ul>
+`<xs:minLength value="1"/>`<br/>
+<ul>
 	<li>Optionele tekst</li>
-		<ul>
-			<li>geen xsd restrictie</li>
-		</ul>
-	<li>Bijvoorbeeld een jaarnummer</li>
-		<ul>
-			<li>`<xs:pattern value="(20\d\d)"/>`</li>
-		</ul>
-</ul>	
+</ul>
+geen xsd restrictie
+<ul>
+<li>Bijvoorbeeld een jaarnummer</li>
+</ul>
+`<xs:pattern value="(20\d\d)"/>`
+	
 Een voorbeeld dat veel gebruikt wordt voor basetype DECIMAL zijn:
 <ul>
 	<li>Bedrag met twee decimalen</li>
-		<ul>
-			<li>`<xs:fractionDigits value="2"/>`</li>
-		</ul>
 </ul>
-
+`<xs:fractionDigits value="2"/>`<
+</dl>
+	
 Verwijzingen vanuit het Veld eigenschap type:
 		Geen<br/>
 Verwijzingen naar het Veld eigenschap type:
 		Berichtvelden<br/>		
 
-</dl>
 
 <div class="example" title="Gegevens van veldeigenschappen (in een raamwerk)">
 Op deze manier krijgt een veld de eigenschappen gekoppeld<br/>
@@ -519,7 +519,7 @@ De volgorde waarmee de berichtvelden in het hoofdstuk staan, bepaalt in welke vo
 		<dt>[=language=]
 		<dt>[=category=]
 		<dt>[=helpInfo=]
-			<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
+			<dd> Voor helpinfo type complex element is geen (software)toepassing bekend.
 		<dt>[=minOccurs=]
 			<dd>
 		<dt>[=maxOccurs=]
@@ -568,10 +568,12 @@ Op deze manier kan er per bijlage type een andere set aan berichtvelden met meta
 	
 Bericht type<br/>
 Voor de opbouw van berichten<br/>
-Complex element type<br/>
+
+<div class="example" title="Gegevens van een type complex element (in een raamwerk)">	
+<b>Complex element type</b><br/>
 id: 		CeContractwijzigingVoorstel<br/>
 description:	Technisch voorstel
-	
+
 Simple elements:
 <ul>
 <li>SE_Wijzigingsnummer</li>
@@ -579,22 +581,25 @@ Simple elements:
 <li>SE_DatumUitvoering</li>
 <li>SE_KostenramingEUR</li>
 </ul>
+	
 CE_Tabel_Werkpakketten
-Complex element type in Complex element type (tabel)
-id: 		CE_Tabel_Werkpakketten
-description:	Werkpakketten
+<b>Complex element type in Complex element type (tabel)</b><br/>
+id: 		CE_Tabel_Werkpakketten<br/>
+description:	Werkpakketten<br/>
+	
 Simple elements: 
 <ul>
 <li>SE_Werkpakket</li>
 </li>SE_WPkostenpercentage</li>
 </ul>
+</div>
 
 
 Berichtveld beperkingen
 
 ### Volgorde van type berichten (MessageInTransactionType)
-De vormgeving van de opvolging van berichten zodat een stroomschema gevolgd kan worden wordt geregeld in het bericht in transacties type (vanaf hier aangeduid als “MITT”). 
-De MITT’s koppelen berichttypes aan elkaar binnen- en tussen transacties.
+De vormgeving van de opvolging van berichten zodat een stroomschema gevolgd kan worden wordt geregeld in het bericht in transacties type (vanaf hier aangeduid als “MITT”).<br/>
+De MITT’s koppelen berichttypes aan elkaar binnen- en tussen transacties.<br/>
 Als een bericht type op meerdere plekken in een transactie voorkomt, bijvoorbeeld 1 keer als start bericht en 1 keer als reactie, dan bestaan er 2 MITT’s. Beiden verwijzen naar de transactie en het bericht type, alleen verschilt de koppeling tussen de MITT’s.
 
 <div class="def" title="Eigenschappen van het element MessageInTransactionType">
@@ -797,11 +802,13 @@ IS DIT WEL EEN REGEL??? Rollen kunnen anders zijn tussen hoofd en sub transactie
 Regel 1: de rollen in hoofd- en subtransactie dienen op elkaar aansluiten. Hiermee wordt bedoeld dat de ontvangende rol in de hoofdtransactie gelijk moet zijn aan de verzendende rol in de subtransactie. De definitie van verzendende en ontvangende rol is niet op berichtniveau. De rollen staan gedefinieerd als initiator en executor op type (hoofd en sub)transactie. 
 
 <div class="example" title="Definitie van de volgorde van type berichten">
+	
 <b>Transactietype</b><br/>
 id: 		Accorderen_Wijziging<br/>
 description:	Accorderen wijziging<br/>
 initiator rol: Opdrachtnemende_contractueel<br/>
 executor rol:	Opdrachtgevende_contractueel<br/>
+
 <b>Transactietype</b><br/>
 id: 		Adviseren_Wijziging<br/> 
 description:	Adviseren wijziging<br/>
@@ -809,7 +816,7 @@ initiator rol: Opdrachtgevende_contractueel<br/>
 executor rol:	Adviserende_contractueel<br/>
 </div>
 	
-Voor een type bericht in een type transactie (bericht in transactie) staat een richting gedefinieerd. De richting is van initiator naar executor of van executor naar initiator. Deze richting gaat dan respectievelijk van initiërende rol naar uitvoerende rol (van een type transactie).
+Voor een type bericht in een type transactie (bericht in transactie) staat een richting gedefinieerd. De richting is van initiator-naar-executor of van executor-naar-initiator. Deze richting gaat dan respectievelijk van initiërende rol naar uitvoerende rol (van een type transactie).
 
 <div class="example" title="Definitie van de volgorde van type berichten">
 	
@@ -859,7 +866,7 @@ Hiermee wordt geregeld wanneer een gebruiker een veld wel of niet mag aanpassen,
 		<dt>[=description=]*
 			<dd> Omschrijving
 		<dt>[=helpInfo=]
-			<dd> Voor helpinfo roltypes is nog geen (software)toepassing bekend.
+			<dd> Voor helpinfo element conditie is nog geen (software)toepassing bekend.
 		<dt>[=condition=]
 	</dl>
 </div>
@@ -893,17 +900,21 @@ complexElements<br/>
 simpleElement<br/>
 messageInTransaction<br/>
 
-De basis regels zijn:
--	Een veld dat voor de eerste keer aangeboden wordt, dus nog niet bestaat in het voorgaande bericht, is altijd invulbaar en wordt nooit geblokkeerd door deze instelling.
--	Standaard wordt een veld dat in het voorgaande bericht al bestaat geblokkeerd in de opvolgende berichten. Ook als het veld toevallig “leeg” was in het voorgaande bericht. Dus alleen doordat het veld de eigenschap “FREE” mee krijgt, kan een veld aangepast worden.
--	OVERNEMEN VAN WAARDEN???
--	Berichtveld beperkingen kunnen ingesteld worden op Berichthoofdstukken, Berichtvelden en Berichten in transacties of een combinatie daarvan. Onderstaande tabel geeft aan welke beperking gebruikt moet worden als er meerdere beperkingen op een veld in een bericht staan:
+De basis regels zijn:<br/>
+- Een veld dat voor de eerste keer aangeboden wordt, dus nog niet bestaat in het voorgaande bericht, is altijd invulbaar en wordt nooit geblokkeerd door deze instelling.<br/>
+- Standaard wordt een veld dat in het voorgaande bericht al bestaat geblokkeerd in de opvolgende berichten. Ook als het veld toevallig “leeg” was in het voorgaande bericht. Dus alleen doordat het veld de eigenschap “FREE” mee krijgt, kan een veld aangepast worden.<br/>
+- OVERNEMEN VAN WAARDEN???<br/>
+- Berichtveld beperkingen kunnen ingesteld worden op Berichthoofdstukken, Berichtvelden en Berichten in transacties of een combinatie daarvan. 
+	
+Onderstaande tabel geeft aan welke beperking gebruikt moet worden als er meerdere beperkingen op een veld in een bericht staan:
 Het hoogste getal in de eerste kolom “wint”. Dus als er een conditie op een CE en SE ingesteld is (5) dan geldt deze conditie tov een instelling alleen op een SE  (1).
  
 
 Verwijzingen naar de Berichtveld beperkingen:<br/>
 Geen<br/>
-ElementCondition<br/>
+
+<div class="example" title="Gegevens van een element conditie (in een raamwerk)">
+<b>ElementCondition</b><br/>
 id: 		EC_116<br/>
 description:	 New element condition<br/>
 condition:	 FREE<br/>
@@ -911,208 +922,310 @@ ComplexElement: CeContractwijzigingVoorstel<br/>
 ComplexElement: CE_Tabel_Werkpakketten<br/>
 simpleElement: SE_WPkostenpercentage<br/>
 messageInTransaction: mitt_265<br/>
-
+</div>
 
 ### Voorwaarden voor opvolgende type berichten (MessageInTransactionTypeCondition)
-Soms is het nodig om te zorgen dat je berichten pas kunt versturen nadat andere
-berichten zijn ontvangen, dat berichten alleen verstuurd mogen worden wanneer andere berichten
-nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden.
-Dit doen we door de volgordelijkheid van te versturen berichten af te dwingen.
-Doel is het inperken van mogelijke voorzettingen uitgaande van een bepaalde toestand in de
-berichtenflow binnen een transactie en haar subtransacties. Er zijn drie oorzaken waarom bepaalde
-voortzettingen niet aangeboden mogen worden:
+Soms is het nodig om te zorgen dat je berichten pas kunt versturen nadat andere berichten zijn ontvangen, dat berichten alleen verstuurd mogen worden wanneer andere berichten nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden.
+	
+Dit doen we door de volgordelijkheid van te versturen berichten af te dwingen.<br/>
+Doel is het inperken van mogelijke voorzettingen uitgaande van een bepaalde toestand in de berichtenflow binnen een transactie en haar subtransacties. Er zijn drie oorzaken waarom bepaalde voortzettingen niet aangeboden mogen worden:<br/>
+	
 1. Een bericht mag pas verzonden worden nadat één of meerdere specifieke berichten
 aanwezig zijn (reeds ontvangen of verzonden) in de transactie of zijn subtransacties, er is dus
 een afhankelijkheid tussen twee (of meer) al aanwezige berichten.
+
 2. Een bericht mag alleen verzonden worden wanneer één of meerdere specifieke berichten
 niet aanwezig zijn (nog niet ontvangen of verzonden) in de transactie of zijn subtransacties,
 er is dus een afhankelijkheid tussen twee (of meer) nog niet aanwezige berichten.
+
 3. Een bericht dat maar één keer verzonden mag worden is reeds verzonden, er is dus een
 restrictie op het aantal keren dat een bericht verzonden mag worden.
 
+<div class="def" title="Eigenschappen van het element MessageInTransactionTypeCondition">
+	<dl> 
+		<dt>[=id=]*
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=helpInfo=]
+			<dd> Voor helpinfo van bericht-in-transactie beperkingen is nog geen (software)toepassing bekend.
+	</dl>
+</div>
 
-In te stellen globale eigenschappen: id, state, dateLaMu, userLaMu, helpinfo
-
-Voor bericht in transactie beperkingen is nog geen toepassing bekend voor de helpinfo.<br/>
-In te stellen specifieke eigenschappen:<br/>
-Geen<br/>
 Verwijzingen vanuit bericht in transactie beperkingen:<br/>
 Bij meerdere van onderstaande verwijzingen in een conditie, is er een OF - situatie. Dus als één van de benoemde berichten gevonden wordt, wordt voldaan aan de conditie en mag het bericht gekozen worden.
 Door aan een bericht meerdere condities te koppelen met bijvoorbeeld maar 1 berichttype in onderstaande opties, onstaat een EN - situatie. Alle benoemde condities moet aan voldaan zijn voordat je dit bericht mag gebruiken.
 
 sendAfter bericht in transactie<br/>
 Zie situatie 1 hierboven<br/>
+	
 sendBefore bericht in transactie<br/>
 Zie situatie 2 en 3 hierboven<br/>
+	
 Voor situatie 3:<br/>
 Het effect om een bericht slechts één keer te mogen versturen wordt bereikt door de MiTT van het betreffende bericht in de sendBefore lijst van diezelfde MITT te plaatsen. In dit specifieke geval mag een bericht dus niet naar meerdere executors worden verzonden.
+	
 Toegestane verwijzingen bij "sendAfter" en "sendBefore "zijn "Bericht in transactie types" die ontvangen kunnen worden in de actuele transactie of van de aangesloten transacties, waarbij de  persoon die het actuele bericht behandelt initiator of executor is. Met aangesloten transacties worden de transactie waaruit een transactie geïnitieerd is en de directe subtransacties bedoeld. Met  directe subtransacties worden transacties bedoeld die vanuit de actuele transactie geïnitieerd zijn, dus niet subtransacties van subtransacties. 
+	
 Deze beperking bestaat omdat een VISI Raamwerk plus PSB zich altijd op dezelfde manier moet gedragen, onafhankelijk of alle actoren op dezelfde VISI server werken, of dat iedere actor op een andere VISI server werkt. Op deze manier ziet de betreffende actor ook altijd de berichten die zijn keuzes beïnvloeden, doordat hij ze verstuurt of ontvangt.
+	
 Als voorbeeld: de kok mag alleen maar Before of After relaties gebruiken met transacties waarin hij zelf als initiator of executor meewerkt en deze transacties moeten direct gekoppeld zijn aan de transactie die de kok op dit moment wil behandelen.
 
 Verwijzingen naar bericht in transactie beperkingen:<br/>
 Bericht in transactie<br/>
+
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
 In het bericht in transactie type wordt ingesteld dat deze beperkt wordt, door te verwijzen naar de beperkende mittconditie.<br/>
 MessageInTransactionTypeCondition<br/>
 id: 		mtc1<br/>
 sendAfter: mit_VTWoordeelpositief_1<br/>
-
+</div>
+	
 ### Type bijlage (AppendixType)
 In ieder VISI bericht kunnen bestanden bijgevoegd worden. Een bestand moet wel altijd aan een bijlage type gekoppeld worden. Een raamwerk moet daarom altijd minimaal één bijlage type hebben. Als een raamwerk meerdere bijlage types heeft en er geen specifiek bijlage type op een bericht ingesteld staat, kan er gekozen worden aan welk bijlage type een bijlage in een bericht gekoppeld wordt. 
+
 Een bijlage type is meestal gekoppeld aan een berichthoofdstuk, zodat er bij het invoeren van een bijlage metadata velden beschikbaar zijn, om bijbehorende gegevens bij de bijlage in te vullen.
 
-In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo
+<div class="def" title="Eigenschappen van het element AppendixType">
+	<dl> 
+		<dt>[=id=]*
+		<dt>[=description=]*
+			<dd> Met deze naamgeving kiezen gebruikers welk bijlage type ze de bijlage aan koppelen.  
+		<dt>[=startDate=]
+		<dt>[=endDate=]
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=language=]
+		<dt>[=category=]
+		<dt>[=helpInfo=]
+			<dd> Voor helpinfo van type  bijlage is geen (software)toepassing bekend.
+		<dt>[=code=]
+	</dl>
+</div>
+	
 
-Voor bijlage types is nog geen toepassing bekend voor de helpinfo.
-code
-In te stellen specifieke eigenschappen:
-geen
 Verwijzingen vanuit bijlage types:
 Berichthoofdstuk
+
 Het berichthoofdstuk verzorgt de berichtvelden waarmee de metadata aan de bijlage gekoppeld worden.
 
 Verwijzingen naar bijlage types:
 Het is mogelijk om het aantal bijlage types in een bericht te beperken als het raamwerk meer dan één bijlage type bevat. Als er niets op het bericht ingesteld staat, moet de gebruiker uit alle beschikbare types kiezen.  
-Transactie types
+
+Transactie types<br/>
 Een bijlage type dat op dit niveau gekoppeld is, wordt aangeboden in alle berichten in die transactie.
-Bericht types
+	
+Bericht types<br/>
 Een bijlage type dat op dit niveau gekoppeld is, wordt aangeboden in dit bericht type in alle transacties (waar dit bericht in voorkomt).
-Bericht in transactie
+	
+Bericht in transactie<br/>
 Een bijlage type dat op dit niveau gekoppeld is, wordt alleen in dit specifieke bericht op deze plek in de transactie aangeboden.
+	
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
 AppendixType
 id: 			AT_WijzigingGereed
 description:		 Bijlagen bij gereedmelding wijziging
 ComplexElementType: CE_BijlagenBijWijzigingGereed
-
+</div>
 
 ### Type organisatie (OrganisationType)
 In ieder raamwerk is een organisatie type nodig. Deze wordt gebruikt bij het aanmaken van organisaties in het project specifieke bericht. Normaal gesproken bevat een raamwerk maar 1 organisatie type. Raamwerken met meer dan 1 variant zijn nog niet toegepast. 
 
+<div class="def" title="Eigenschappen van het element OrganisationType">
+	<dl> 
+		<dt>[=id=]*
+			<dd> Unieke identificatie
+		<dt>[=description=]*
+			<dd> Omschrijving
+		<dt>[=startDate=]
+		<dt>[=endDate=]
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=language=]
+		<dt>[=category=]
+		<dt>[=helpInfo=]
+			<dd> Voor helpinfo van type organisatie is geen (software)toepassing bekend.
+		<dt>[=code=]
+	</dl>
+</div>
+	
 
-In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo
-
-Voor organisatie types is nog geen toepassing bekend voor de helpinfo.
-code
-
-In te stellen specifieke eigenschappen:
-Geen
 Verwijzingen vanuit organisatie types: 
 complexElements
+	
 Een organisatie type kan metadata elementen bevatten, zoals adres, telefoonnummer enz.
-	Voor projecten met SOAP-communicatie moet minimaal het Berichtveld met het exacte Id “SOAPServerURL” via een berichthoofdstuk aan het organisatie type gekoppeld zijn, zodat het soap-adres ingesteld kan worden.
+	
+Voor projecten met SOAP-communicatie moet minimaal het Berichtveld met het exacte Id “SOAPServerURL” via een berichthoofdstuk aan het organisatie type gekoppeld zijn, zodat het soap-adres ingesteld kan worden.
+	
 Verwijzingen naar organisatie types:
 geen
-OrganisationType
-id: 		StandaardOrganisatie
-description:	 Standaard organisatie
-ComplexElementType: CeOrganisatieSOAPServer
+
+<div class="example" title="Gegevens van een type organisatie (in een raamwerk)">
+<b>OrganisationType</b><br/>
+id: 		StandaardOrganisatie<br/>
+description:	 Standaard organisatie<br/>
+ComplexElementType: CeOrganisatieSOAPServer<br/>
 
 ### Type persoon (PersonType)
 In ieder raamwerk is een persoon type nodig. Deze wordt gebruikt bij het aanmaken van personen in het project specifieke bericht. Normaal gesproken bevat een raamwerk maar 1 persoon type. Raamwerken met meer dan 1 variant zijn nog niet toegepast.
-De basis velden van een persoon in een project specifiek bericht, zoals Naam, gebruikersnaam en Id afkorting enz. staan niet in het raamwerk. Zie#verwijzing naar psb werking#…….
+	
+De basis velden van een persoon in een project specifiek bericht, zoals Naam, gebruikersnaam en Id afkorting enz. staan niet in het raamwerk. Zie #verwijzing naar psb werking#.
+
+<div class="def" title="Eigenschappen van het element PersonType">
+	<dl> 
+		<dt>[=id=]*
+		<dt>[=description=]*
+		<dt>[=startDate=]
+		<dt>[=endDate=]
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=language=]
+		<dt>[=category=]
+		<dt>[=helpInfo=]
+			<dd> Voor helpinfo van type persoon is nog geen (software)toepassing bekend.
+		<dt>[=code=]
+	</dl>
+</div>
 
 
-In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo
-
-Voor persoon types is nog geen toepassing bekend voor de helpinfo.
-code
-			
-					
-In te stellen specifieke eigenschappen:
-Verwijzingen vanuit persoon types: 
-complexElements
+Verwijzingen vanuit persoon types:<br/>
+complexElements<br/>
 Een persoon type kan metadata elementen bevatten, zoals adres, telefoonnummer enz. Onder andere als gevolg van nieuwe privacy wetgeving wordt hier steeds minder in ingevuld.
 
 Verwijzingen naar persoon types:
 Geen 
-PersonType 
-id: 		StandaardPersoon
-description:	 Standaard persoon
-ComplexElementType: CE_Persoonspecifieke_informatie
 
+<div class="example" title="Gegevens van een type persoon (in een raamwerk)">	
+<b>PersonType</b><br/>
+id: 		StandaardPersoon<br/>
+description:	 Standaard persoon<br/>
+ComplexElementType: CE_Persoonspecifieke_informatie<br/>
+</div>
+	
 ### Type project (ProjectType)
 In ieder raamwerk is een project type nodig. Deze wordt gebruikt voor het vastleggen van bijvoorbeeld de projectnaam en de raamwerk namespace in het project specifieke bericht. Raamwerken met meer dan 1 variant zijn niet toegestaan.
-De basis velden van een projecttype in een project specifiek bericht, zoals de projectnaam, project Id enz. staan niet in het raamwerk. 
+
+De basisvelden van een projecttype in een project specifiek bericht, zoals de projectnaam, project Id enz. staan niet in het raamwerk. 
 
 
-In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo
+<div class="def" title="Eigenschappen van het element ProjectType">
+	<dl> 
+		<dt>[=id=]*
+			<dd> Unieke identificatie
+		<dt>[=description=]*
+			<dd> Omschrijving
+		<dt>[=startDate=]
+		<dt>[=endDate=]
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=language=]
+		<dt>[=category=]
+		<dt>[=helpInfo=]
+			<dd>Bij project type wordt de help info soms door raamwerkbouwers gebruikt voor aantekeningen of uitleg over het raamwerk. Er is geen toepassing verder in VISI software van bekend.
+		<dt>[=code=]
+		<dt>[=namespace=]
+	</dl>
+</div>
 
-Bij project type wordt de help info soms door raamwerkbouwers gebruikt voor aantekeningen of uitleg over het raamwerk. Er is geen toepassing verder in VISI software van bekend.
-code
-
-<aside class='def'>
-In te stellen specifieke eigenschappen:<br>
-Namespace<br>
-Hier moet per versie van een raamwerk een unieke namespace in het raamwerk staan. Dit zodat visi software kan identificeren met welk raamwerk een visi transactie afgehandeld moet worden.<br>
-<br>
-Verwijzingen vanuit project types:<br>
-Complex element<br>
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
+#### <dfn>`namespace`</dfn>
+Hier moet per versie van een raamwerk een unieke namespace in het raamwerk staan. Dit zodat VISI software kan identificeren met welk raamwerk een VISI transactie afgehandeld moet worden.
+</dl>
+	
+Verwijzingen vanuit project types:<br/>
+Complex element<br/>
 Voor zover bekend is er in VISI software geen toepassing van metadata velden op het project type en wordt deze dus niet gekoppeld.<br>
-Verwijzingen naar project types:<br>
-Geen
-</aside>
+Verwijzingen naar project types:<br/>
 
-<aside class="example" title="Project in transactie">
+
+<div class="example" title="Gegevens van een type project (in een raamwerk)">
 <b>ProjectType</b><br/>
 id: 		RaamwerkUAVGCGemLutjebroek<br/>
 namespace:	http://www.visi.nl/schemas/20160331/RaamwerkUAVGCGemLutjebroek_v2<br/>
 description:	 Standaard raamwerk UAV GC Gemeente Lutjebroek
-</aside>
+</div>
 
 ### TransactieFaseType
 
 *TransactionPhaseType*
 
-De DEMO methodologie kent de transactiefases requested, promised, declared, accepted, declined, rejected, revoked, allowed en refused. Het is mogelijk om deze transactie fases te koppelen aan bericht in transactie types, zodat VISI software deze zou kunnen gebruiken voor aanvullende ondersteuning of informering . 
+De DEMO methodologie kent de transactiefases requested, promised, declared, accepted, declined, rejected, revoked, allowed en refused. Het is mogelijk om deze transactie fases te koppelen aan bericht in transactie types, zodat VISI software deze zou kunnen gebruiken voor aanvullende ondersteuning of informering. 
   
-Buiten scope: Bij het gebruik van de DEMO oplegger van de systematiek worden in ieder geval de transactie fase Promised en  de volgende revoked-types actief gebruikt voor specifiek software gedrag:  Revoke Acceptance Allow, Revoke Promise Allow, Revoke Request Allow en Revoke Statement Allow
+Buiten scope: Bij het gebruik van de DEMO oplegger van de systematiek worden in ieder geval de transactie fase Promised en de volgende revoked-types actief gebruikt voor specifiek software gedrag: Revoke Acceptance Allow, Revoke Promise Allow, Revoke Request Allow en Revoke Statement Allow
 
-<aside class='def'>
-In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo, code
-</aside>
+<div class="def" title="Eigenschappen van het element">
+	<dl> 
+		<dt>[=id=]*
+			<dd> Unieke identificatie
+		<dt>[=description=]*
+			<dd> Omschrijving
+		<dt>[=startDate=]
+		<dt>[=endDate=]
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=language=]
+		<dt>[=category=]
+		<dt>[=helpInfo=]
+			<dd> Voor helpinfo van transactiefasen is nog geen (software)toepassing bekend.
+		<dt>[=code=]
+	</dl>
+</div>
 
-<aside class='def'>
-In te stellen specifieke eigenschappen:<br>
-Verwijzingen vanuit transactie fases:<br>
-Geen<br>
-<br>
-Verwijzingen naar transactie fases:<br>
-Bericht in transactie<br>
+
+In te stellen specifieke eigenschappen:<br/>
+Verwijzingen vanuit transactie fases:<br/>
+Geen<br/>
+
+Verwijzingen naar transactie fases:<br/>
+Bericht in transactie<br/>
 Op deze manier kan een bericht in transactie aan een bepaalde transactiefase gekoppeld worden.
-</aside>
+
   
 ### Type groep (GroupType)
-<aside class='def'>
+
 De definitie van de groep voor het opslaan van bijlagen verzonden met een bericht binnen een transactie. Op dit moment wordt in de praktijk geen functionaliteit door leveranciers toegekend aan dit element. Een GroupType maakt echter wel onderdeel uit van de structuur van een raamwerk.
-</aside>
 
 <div class="issue" data-number="139"></div>   
  
-<aside class='def'>
-In te stellen globale eigenschappen: id, description, startDate, endDate, state, dateLaMu, userLaMu, language, category, helpinfo
-</aside>
+<div class="def" title="Eigenschappen van het element GroupType">
+	<dl> 
+		<dt>[=id=]*
+			<dd> Unieke identificatie
+		<dt>[=description=]*
+			<dd> Omschrijving
+		<dt>[=startDate=]
+		<dt>[=endDate=]
+		<dt>[=state=]
+		<dt>[=dateLaMu=]
+		<dt>[=userLaMu=]
+		<dt>[=language=]
+		<dt>[=category=]
+		<dt>[=helpInfo=]
+			<dd> Voor helpinfo van type groep is nog geen (software)toepassing bekend.
+	</dl>
+</div>
+	
 
-<aside class='def'>
-In te stellen specifieke eigenschappen:
- </aside>
+Verwijzingen vanuit GroepTypes:</br>
 
-<aside class='def'> 
-Verwijzingen vanuit GroepTypes:
-</aside>
-
-<aside class='def'> 
-Verwijzingen naar GroepTypes:<br>
+Verwijzingen naar GroepTypes:<br/>
 Bericht in transactie
-</aside>  
+ 
 
-### Globale eigenschappen
+## Globale eigenschappen
 
-Alle elementen…..
+Alle eigenschappen die globaal kunnen voorkomen. Door op de naam van de eigenschap te klikken kun je zien op welke plaatsen in de documentatie aan de eigenschap wordt gerefereerd.
 
 #### <dfn>`id`
 
-Ieder element in een raamwerk heeft een unieke identificatie (id). Hiermee worden de relaties technisch binnen en buiten het raamwerk gelegd. Een hoofdvereiste is dat een Id uniek is binnen het raamwerk. Een voorbeeld van relaties binnen het raamwerk is bijvoorbeeld het koppelen van een veld (SimpleElement) aan een berichthoofdstuk (ComplexElement). Een voorbeeld van een koppeling buiten een raamwerk is de Rol die aangemaakt wordt in een Projectspcifiek bericht obv de rol in het raamwerk of een veldnaam in een VISI bericht enz.
-Een id kan een niet leesbare waarde zijn zoals TR_532856857120. Op dit moment maken bijna alle raamwerkschrijvers daar iets begrijpbaars van, zoals TR_Acceptatiedocument, zodat bijvoorbeeld de originele XML VISI berichten ook zonder visi software te lezen en begrijpen zijn.
+Ieder element in een raamwerk heeft een unieke identificatie (id). Hiermee worden de relaties technisch binnen en buiten het raamwerk gelegd. Een hoofdvereiste is dat een Id uniek is binnen het raamwerk. Een voorbeeld van relaties binnen het raamwerk is bijvoorbeeld het koppelen van een veld (SimpleElement) aan een berichthoofdstuk (ComplexElement).<br/>
+Een voorbeeld van een koppeling buiten een raamwerk is de Rol die aangemaakt wordt in een Projectspcifiek bericht obv de rol in het raamwerk of een veldnaam in een VISI bericht enz.<br/>
+Een id kan een niet leesbare waarde zijn zoals TR_532856857120. Op dit moment maken bijna alle raamwerkschrijvers daar iets begrijpbaars van, zoals TR_Acceptatiedocument, zodat bijvoorbeeld de originele XML VISI berichten ook zonder visi software te lezen en begrijpen zijn.<br/>
 
 #### <dfn>`description`
   
@@ -1120,7 +1233,7 @@ Dit is de leesbare naam van een element. Deze waarde wordt meestal getoond aan d
 
 #### <dfn>`startDate`
 
-Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. De verschillende VISI software pakketten hebben tot op heden nooit iets met deze “startDate” gedaan. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker. 
+Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. De verschillende VISI software pakketten hebben tot op heden nooit iets met deze “startDate” gedaan. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.<br/>
 Bij het opstellen van de standaard was dit de verder nog onuitgewerkte gedachte: “Startdatum en tijd van geldigheid van deze objectinstantie.” 
 
 #### <dfn>`endDate`
@@ -1133,11 +1246,13 @@ Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. Moge
 
 #### <dfn>`dateLaMu`
 
-Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. Raamwerkschrijvers gebruiken dit om in de XML file aan te geven wanneer er als laatste een wijziging aan een element is gemaakt.(date Last Mutation) Tot nu toe zijn er geen verwachtingen of bekende toepassingen in VISI software. Wel in raamwerk opstel software om dit veld  automatisch bij te werken. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
+Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. Raamwerkschrijvers gebruiken dit om in de XML file aan te geven wanneer er als laatste een wijziging aan een element is gemaakt.(date Last Mutation)<br/>
+Tot nu toe zijn er geen verwachtingen of bekende toepassingen in VISI software. Wel in raamwerk opstelsoftware om dit veld automatisch bij te werken. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
 
 #### <dfn>`userLaMu`
   
-Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. Raamwerkschrijvers gebruiken dit om in de XML file aan te geven wie er als laatste een wijziging aan een element heeft uitgevoerd.(user Last Mutation) Tot nu toe zijn er geen verwachtingen of bekende toepassingen in VISI software. Wel in raamwerk opstel software om dit veld  automatisch bij te werken. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
+Dit attribuut is optioneel in te stellen op veel elementen in een raamwerk. Raamwerkschrijvers gebruiken dit om in de XML file aan te geven wie er als laatste een wijziging aan een element heeft uitgevoerd.(user Last Mutation)<br/>
+Tot nu toe zijn er geen verwachtingen of bekende toepassingen in VISI software. Wel in raamwerk opstelsoftware om dit veld automatisch bij te werken. Dus als een raamwerkschrijver iets in dit veld invult, komt dit nooit in beeld bij de gebruiker.
 
 #### <dfn>`language`
   
