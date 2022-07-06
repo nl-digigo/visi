@@ -1023,11 +1023,11 @@ Een bijlage type dat op dit niveau gekoppeld is, wordt aangeboden in dit bericht
 Bericht in transactie<br/>
 Een bijlage type dat op dit niveau gekoppeld is, wordt alleen in dit specifieke bericht op deze plek in de transactie aangeboden.
 	
-<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
-AppendixType
-id: 			AT_WijzigingGereed
-description:		 Bijlagen bij gereedmelding wijziging
-ComplexElementType: CE_BijlagenBijWijzigingGereed
+<div class="example" title="Gegevens van een type bijlage (in een raamwerk)">
+<b>AppendixType</b><br/>
+id: 			AT_WijzigingGereed<br/>
+description:		 Bijlagen bij gereedmelding wijziging<br/>
+ComplexElementType: CE_BijlagenBijWijzigingGereed<br/>
 </div>
 
 ### Type organisatie (OrganisationType)
@@ -1068,7 +1068,8 @@ geen
 id: 		StandaardOrganisatie<br/>
 description:	 Standaard organisatie<br/>
 ComplexElementType: CeOrganisatieSOAPServer<br/>
-
+</div>
+	
 ### Type persoon (PersonType)
 In ieder raamwerk is een persoon type nodig. Deze wordt gebruikt bij het aanmaken van personen in het project specifieke bericht. Normaal gesproken bevat een raamwerk maar 1 persoon type. Raamwerken met meer dan 1 variant zijn nog niet toegepast.
 	
@@ -1115,9 +1116,7 @@ De basisvelden van een projecttype in een project specifiek bericht, zoals de pr
 <div class="def" title="Eigenschappen van het element ProjectType">
 	<dl> 
 		<dt>[=id=]*
-			<dd> Unieke identificatie
 		<dt>[=description=]*
-			<dd> Omschrijving
 		<dt>[=startDate=]
 		<dt>[=endDate=]
 		<dt>[=state=]
@@ -1158,12 +1157,10 @@ De DEMO methodologie kent de transactiefases requested, promised, declared, acce
   
 Buiten scope: Bij het gebruik van de DEMO oplegger van de systematiek worden in ieder geval de transactie fase Promised en de volgende revoked-types actief gebruikt voor specifiek software gedrag: Revoke Acceptance Allow, Revoke Promise Allow, Revoke Request Allow en Revoke Statement Allow
 
-<div class="def" title="Eigenschappen van het element">
+<div class="def" title="Eigenschappen van het element TransactionPhaseType">
 	<dl> 
 		<dt>[=id=]*
-			<dd> Unieke identificatie
 		<dt>[=description=]*
-			<dd> Omschrijving
 		<dt>[=startDate=]
 		<dt>[=endDate=]
 		<dt>[=state=]
@@ -1172,7 +1169,7 @@ Buiten scope: Bij het gebruik van de DEMO oplegger van de systematiek worden in 
 		<dt>[=language=]
 		<dt>[=category=]
 		<dt>[=helpInfo=]
-			<dd> Voor helpinfo van transactiefasen is nog geen (software)toepassing bekend.
+			<dd> Voor helpinfo van type transactiefasen is geen (software)toepassing bekend.
 		<dt>[=code=]
 	</dl>
 </div>
