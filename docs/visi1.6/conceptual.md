@@ -255,10 +255,9 @@ Een belangrijk basisprincipe is dat een transactie altijd iets oplevert. Als een
 **Condities binnen een transactie**
 
 Om bepaalde afhankelijkheden in een transactie af te kunnen dwingen kunnen bij het opstellen van een transactie op bepaalde momenten condities worden gesteld. Denk hierbij aan de volgende zaken:
-*	Volgordelijkheid van berichten afdwingen. Hiermee wordt bedoeld dat berichten pas kunnen worden verstuurd nadat andere berichten zijn ontvangen of dat berichten alleen verstuurd mogen worden wanneer andere berichten nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden. <div class="issue" data-number="140"> verwijzing naar MessageInTransactionTypeCondition op het functionele niveau
-*	Het is wel of niet toegestaan om meerdere secundaire transacties te initiëren <div class="issue" data-number="140"> verwijzing naar secundary transactions allowed op het functionele niveau
-*	Het is wel of niet toegestaan om bepaalde velden in een bericht op een bepaald moment in de transactie te bewerken of bepaalde velden worden gewist <div class="issue" data-number="140"> Verwijzing naar elementcondition op het functionele niveau
-
+*	Volgordelijkheid van berichten afdwingen. Hiermee wordt bedoeld dat berichten pas kunnen worden verstuurd nadat andere berichten zijn ontvangen of dat berichten alleen verstuurd mogen worden wanneer andere berichten nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden.
+*	Het is wel of niet toegestaan om meerdere secundaire transacties te initiëren
+*	Het is wel of niet toegestaan om bepaalde velden in een bericht op een bepaald moment in de transactie te bewerken of bepaalde velden worden gewist
 
 **Kan een raamwerk worden aangevuld of gewijzigd worden tijdens een project?**
   
@@ -267,7 +266,6 @@ Tijdens het gebruik van een VISI-raamwerk in een project of een ander samenwerki
  Hierbij dienen altijd wel een aantal zaken in het achterhoofd te worden gehouden, namelijk:
 *	Lopende transacties worden afgerond  in de versie van het raamwerk waarin ze zijn opgestart. Dit houdt in dat een wijziging van een raamwerk geen effect heeft op lopende VISI communicatie;
 *	Een nieuwe versie van het raamwerk dient bij alle projectpartners te worden ingelezen.
-
 
 
 
