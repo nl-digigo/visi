@@ -1131,9 +1131,11 @@ De basisvelden van een projecttype in een project specifiek bericht, zoals de pr
 	</dl>
 </div>
 
-<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
+<dl class="def" title="Beschrijving van de specifieke eigenschappen">
+	
 #### <dfn>`namespace`</dfn>
 Hier moet per versie van een raamwerk een unieke namespace in het raamwerk staan. Dit zodat VISI software kan identificeren met welk raamwerk een VISI transactie afgehandeld moet worden.
+	
 </dl>
 	
 Verwijzingen vanuit project types:<br/>
