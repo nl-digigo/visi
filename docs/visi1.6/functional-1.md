@@ -434,7 +434,9 @@ Per Veld eigenschap moet uit een aantal basis XML veldsoorten gekozen worden om 
 	
 #### <dfn>`XsdRestriction`</dfn>
 Hiermee kan zeer exact gedrag aan een veld van een bepaald basetype gedefinieerd worden. Voor het basetype STRING kan een reguliere expressie gedefinieerd worden.
-	
+
+`<xs:enumeration value="code binnen backticks buiten UL LI"/>`
+
 Enkele voorbeelden die nu veel gebruikt worden voor basetype STRING zijn:
 <ul>
 	<li>1 keuze mogelijkheid, dus veld heeft altijd deze waarde:</li>
