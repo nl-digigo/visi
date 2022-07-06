@@ -925,6 +925,7 @@ messageInTransaction: mitt_265<br/>
 </div>
 
 ### Voorwaarden voor opvolgende type berichten (MessageInTransactionTypeCondition)
+	
 Soms is het nodig om te zorgen dat je berichten pas kunt versturen nadat andere berichten zijn ontvangen, dat berichten alleen verstuurd mogen worden wanneer andere berichten nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden.
 	
 Dit doen we door de volgordelijkheid van te versturen berichten af te dwingen.<br/>
@@ -974,9 +975,9 @@ Als voorbeeld: de kok mag alleen maar Before of After relaties gebruiken met tra
 Verwijzingen naar bericht in transactie beperkingen:<br/>
 Bericht in transactie<br/>
 
-<dl class="def" title="Beschrijving van de specifieke eigenschappen">	
-In het bericht in transactie type wordt ingesteld dat deze beperkt wordt, door te verwijzen naar de beperkende mittconditie.<br/>
-MessageInTransactionTypeCondition<br/>
+<div class="example" title="Gegevens van een type bericht in transactie beperking(in een raamwerk)">
+In het bericht in transactie type wordt ingesteld dat deze beperkt wordt, door te verwijzen naar de beperkende MITT conditie.<br/>
+<b>MessageInTransactionTypeCondition</b><br/>
 id: 		mtc1<br/>
 sendAfter: mit_VTWoordeelpositief_1<br/>
 </div>
