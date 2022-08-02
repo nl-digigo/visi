@@ -446,19 +446,22 @@ Enkele voorbeelden die nu veel gebruikt worden voor basetype STRING zijn:
 <ul>
 	<li>1 keuze mogelijkheid, dus veld heeft altijd deze waarde:</li>
 </ul>
-```<xs:enumeration value="Automatisch gevuld"/>```<br/>
+	
+`
+	<xs:enumeration value="Automatisch gevuld"/>
+`
 <ul>
 	<li>Keuzelijst met meerdere waardes</li>
 </ul>
-```<xs:enumeration value="k1"/>```
-```<xs:enumeration value="k2"/>```
-```<xs:enumeration value="k3"/>```
+`<xs:enumeration value="k1"/>`
+`<xs:enumeration value="k2"/>`
+`<xs:enumeration value="k3"/>`
 <ul>
 <li>Optionele keuzelijst:</li>
 </ul>
 `<xs:enumeration value=""/>`
-```<xs:enumeration value="Keuze 1"/>```
-```<xs:enumeration value="Keuze 2"/>```
+`<xs:enumeration value="Keuze 1"/>`
+`<xs:enumeration value="Keuze 2"/>`
 <ul>
 	<li>Verplichte tekst van minimaal 1 karakter</li>
 </ul>
