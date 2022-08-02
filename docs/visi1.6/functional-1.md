@@ -480,8 +480,11 @@ Een voorbeeld dat veel gebruikt wordt voor basetype DECIMAL zijn:
 Verwijzingen vanuit het Veld eigenschap type:
 		Geen<br/>
 Verwijzingen naar het Veld eigenschap type:
-		Berichtvelden<br/>		
-
+		Berichtvelden<br/>
+Verwijzingen naar het Veld eigenschap type:
+		Berichtvelden<br/>
+[Berichtvelden(https://bimloket.github.io/visi/visi1.6/#berichtvelden-simpleelementtype)
+	
 
 <div class="example" title="Gegevens van veldeigenschappen (in een raamwerk)">
 Op deze manier krijgt een veld de eigenschappen gekoppeld<br/>
