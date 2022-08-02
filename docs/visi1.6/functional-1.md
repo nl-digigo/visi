@@ -446,23 +446,23 @@ Enkele voorbeelden die nu veel gebruikt worden voor basetype STRING zijn:
 <ul>
 	<li>1 keuze mogelijkheid, dus veld heeft altijd deze waarde:</li>
 </ul>
-`<xs:enumeration value="Automatisch gevuld"/>`<br/>
+```<xs:enumeration value="Automatisch gevuld"/>```<br/>
 <ul>
 	<li>Keuzelijst met meerdere waardes</li>
 </ul>
-`<xs:enumeration value="k1"/>`
-`<xs:enumeration value="k2"/>`
-`<xs:enumeration value="k3"/>`
+```<xs:enumeration value="k1"/>```
+```<xs:enumeration value="k2"/>```
+```<xs:enumeration value="k3"/>```
 <ul>
 <li>Optionele keuzelijst:</li>
 </ul>
 `<xs:enumeration value=""/>`
-`<xs:enumeration value="Keuze 1"/>`
-`<xs:enumeration value="Keuze 2"/>`
+```<xs:enumeration value="Keuze 1"/>```
+```<xs:enumeration value="Keuze 2"/>```
 <ul>
 	<li>Verplichte tekst van minimaal 1 karakter</li>
 </ul>
-`<xs:minLength value="1"/>`<br/>
+```<xs:minLength value="1"/>```<br/>
 <ul>
 	<li>Optionele tekst</li>
 </ul>
@@ -470,13 +470,14 @@ geen xsd restrictie
 <ul>
 <li>Bijvoorbeeld een jaarnummer</li>
 </ul>
-`<xs:pattern value="(20\d\d)"/>`
+```<xs:pattern value="(20\d\d)"/>```
 	
 Een voorbeeld dat veel gebruikt wordt voor basetype DECIMAL zijn:
 <ul>
 	<li>Bedrag met twee decimalen</li>
 </ul>
-`<xs:fractionDigits value="2"/>`<
+	`<xs:fractionDigits value="2"/>`
+	```<xs:fractionDigits value="2"/>```
 </dl>
 	
 
