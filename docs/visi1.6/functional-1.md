@@ -350,7 +350,8 @@ elementen:		<u>CE_Contractwijziging_Basis</u>, <u>CE_Contractwijziging_Voorstel<
 </div>
 
 ### Berichtvelden (SimpleElementType)
-<div class="def" title="Eigenschappen van het element SimpelElementType">
+Binnen de bericht worden berichtvelden gedefinieerd. Aan een berichtveld wordt een [veldeigenschap](https://bimloket.github.io/visi/visi1.6/#datatype-van-een-element-userdefinedtype) toegekend.
+<div class="def" title="Eigenschappen van het element SimpleElementType">
 	<dl> 
 		<dt>[=id=]*
 			<dd> Unieke identificatie
@@ -401,7 +402,8 @@ Een persoon kan meerdere rollen hebben. Een rol kan door meerdere personen vervu
 	
 ### Datatype van een element (UserDefinedType)
 Hiermee wordt het gedrag van het invoerveld bepaald en hoe het gevalideerd moet worden.<br/>
-Zo kan een veld een datum/tijdstip/valuta/verplichte tekst/optionele tekst/een exact aantal karakters enzovoorts als vereiste mee krijgen. VISI software biedt doorgaans invoerfunctionaliteit op maat voor de meest voorkomende invoer soorten, zoals een datum keuze venster bij een datum veld en een keuzelijst functie als er een keuze uit lijst met waardes vereist wordt.
+Aan een [berichtveld](https://bimloket.github.io/visi/visi1.6/#berichtvelden-simpleelementtype) wordt een veldeigenschap (UDT) toegekend.
+Zo kan een veld een datum/tijdstip/valuta/verplichte tekst/optionele tekst/een exact aantal karakters enzovoorts als vereiste mee krijgen. VISI software biedt doorgaans invoerfunctionaliteit op maat voor de meest voorkomende invoersoorten, zoals een datum keuze venster bij een datumveld en een keuzelijst functie als er een keuze uit lijst met waardes vereist wordt.
 
 <div class="def" title="Eigenschappen van het element UserDefinedType">
 	<dl> 
@@ -415,7 +417,7 @@ Zo kan een veld een datum/tijdstip/valuta/verplichte tekst/optionele tekst/een e
 		<dt>[=language=]
 		<dt>[=category=]
 		<dt>[=helpInfo=]
-			<dd> Voor veldeigenschappen is nog geen toepassing bekend voor de helpinfo. Het is denkbaar dat deze naast de helpinfo weergegeven zou kunnen worden, om de invul instructie hier te beheren in plaats van in de helpinfo van meerdere veld types die deze eigenschap hebben.
+			<dd> Voor veldeigenschappen is nog geen toepassing bekend voor de helpinfo. Het is denkbaar dat deze naast de helpinfo weergegeven zou kunnen worden, om de invul instructie hier te beheren in plaats van in de helpinfo van meerdere veldtypes die deze eigenschap hebben.
 		<dt>[=code=]
 		<dt>[=baseType=]
 		<dt>[=XsdRestriction=]
@@ -425,7 +427,7 @@ Zo kan een veld een datum/tijdstip/valuta/verplichte tekst/optionele tekst/een e
 <dl class="def" title="Beschrijving van de specifieke eigenschappen">
 	
 #### <dfn>`baseType`</dfn>
-Per Veld eigenschap moet uit een aantal basis XML veldsoorten gekozen worden om het basis gedrag van een veld vast te stellen. De keuze is beperkt tot de volgende basis XML veldsoorten:
+Per Veldeigenschap moet uit een aantal basis XML veldsoorten gekozen worden om het basis gedrag van een veld vast te stellen. De keuze is beperkt tot de volgende basis XML veldsoorten:
 <ul>
 	<li>BOOLEAN</li>
 	<li>DATE</li> 
@@ -476,14 +478,6 @@ Een voorbeeld dat veel gebruikt wordt voor basetype DECIMAL zijn:
 </ul>
 `<xs:fractionDigits value="2"/>`<
 </dl>
-	
-Verwijzingen vanuit het Veld eigenschap type:
-		Geen<br/>
-Verwijzingen naar het Veld eigenschap type:
-		Berichtvelden<br/>
-Verwijzingen naar het Veld eigenschap type:
-		Berichtvelden<br/>
-[Berichtvelden](https://bimloket.github.io/visi/visi1.6/#berichtvelden-simpleelementtype)
 	
 
 <div class="example" title="Gegevens van veldeigenschappen (in een raamwerk)">
