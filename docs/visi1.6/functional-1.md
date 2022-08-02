@@ -5,7 +5,7 @@ De functionele documentatie is bedoeld voor een software productmanager of een s
 ## Leeswijzer
 
 De functionele uitleg is opgebouwd in hoofdstukken, en leest het beste hoofdstuk voor hoofdstuk. Met een hoofdstuk wordt een functioneel abstractieniveau inclusief bouwstenen uitgelegd. Aan het einde van een hoofdstuk wordt getoetst of de inhoud in voldoende mate begrepen wordt, en lezer verder kan naar het volgende hoofdstuk. In het volgende hoofdstuk wordt de functionele beschrijving aangevuld of verdiept qua bouwstenen. Hoofdstukken overslaan leidt tot het missen van bouwstenen en logische denkvolgorde.
-De hoofdstukopbouw is afgestemd om het kennisniveau van de lezer, en verloopt van newbie tot expert. 
+De hoofdstukopbouw is afgestemd om het kennisniveau van de lezer. Het verloopt van beginner tot expert. 
 
 Voor de nieuwkomer wordt in paragraaf 4.3 uitgelegd hoe er communicatie in een project plaatsvindt. 
 
@@ -350,7 +350,7 @@ elementen:		<u>CE_Contractwijziging_Basis</u>, <u>CE_Contractwijziging_Voorstel<
 </div>
 
 ### Berichtvelden (SimpleElementType)
-Binnen de bericht worden berichtvelden gedefinieerd. Aan een berichtveld wordt een [veldeigenschap](https://bimloket.github.io/visi/visi1.6/#datatype-van-een-element-userdefinedtype) toegekend.
+Binnen de bericht worden berichtvelden gedefinieerd. Aan een berichtveld wordt een [veldeigenschap (UDT)(https://bimloket.github.io/visi/visi1.6/#datatype-van-een-element-userdefinedtype) toegekend.
 <div class="def" title="Eigenschappen van het element SimpleElementType">
 	<dl> 
 		<dt>[=id=]*
@@ -383,10 +383,12 @@ Dit veld is bij de allereerste opzet van de systematiek bedacht, maar heeft nooi
 Is niet in gebruik. Dit is de uitleg uit de vorige documentatie:
 “Puntkomma geseparate lijst van waarden die een instance op berichtniveau uiteindelijk aan mag nemen. Oorspronkelijk was dit element bedoeld als enumeration. In de huidige praktijk wordt dit opgelost met het element type UserDefinedType en het element xsdRestriction. In de xsdRestriction worden de enumeration values aangegeven. Aan het element valueList wordt in de huidige praktijk geen betekenis toegekend.”
 
-Verwijzingen vanuit het Berichtveld type:<br/>
-Veld eigenschappen<br/>
+<!--
+ <Verwijzingen vanuit het Berichtveld type:<br/>
+Veld eigenschappen
+-->
 Verwijzingen naar het Berichtveld type:<br/>
-Berichtveld beperkingen<br/>
+[Berichtveld beperkingen](https://bimloket.github.io/visi/visi1.6/#voorwaarden-voor-elementen-van-type-berichten-elementcondition)<br/> 
 </dl>
 
 <div class="example" title="Gegevens van een simpel element type (in een raamwerk)">
@@ -453,19 +455,35 @@ Enkele voorbeelden die nu veel gebruikt worden voor basetype STRING zijn:
 <ul>
 	<li>Keuzelijst met meerdere waardes</li>
 </ul>
-`<xs:enumeration value="k1"/>`
-`<xs:enumeration value="k2"/>`
-`<xs:enumeration value="k3"/>`
+`
+	<xs:enumeration value="k1"/>
+`
+`
+	<xs:enumeration value="k2"/>
+`
+`
+	<xs:enumeration value="k3"/>
+`
 <ul>
 <li>Optionele keuzelijst:</li>
 </ul>
-`<xs:enumeration value=""/>`
-`<xs:enumeration value="Keuze 1"/>`
-`<xs:enumeration value="Keuze 2"/>`
+
+`
+	<xs:enumeration value=""/>
+`
+`
+	<xs:enumeration value="Keuze 1"/>
+`
+`
+	<xs:enumeration value="Keuze 2"/>
+`
 <ul>
 	<li>Verplichte tekst van minimaal 1 karakter</li>
 </ul>
-```<xs:minLength value="1"/>```<br/>
+
+`
+	<xs:minLength value="1"/>
+`
 <ul>
 	<li>Optionele tekst</li>
 </ul>
@@ -473,14 +491,22 @@ geen xsd restrictie
 <ul>
 <li>Bijvoorbeeld een jaarnummer</li>
 </ul>
-```<xs:pattern value="(20\d\d)"/>```
+
+`
+	<xs:pattern value="(20\d\d)"/>
+`
 	
 Een voorbeeld dat veel gebruikt wordt voor basetype DECIMAL zijn:
 <ul>
 	<li>Bedrag met twee decimalen</li>
 </ul>
-	`<xs:fractionDigits value="2"/>`
-	```<xs:fractionDigits value="2"/>```
+
+`
+	<xs:fractionDigits value="2"/>
+`
+`
+	<xs:fractionDigits value="2"/>
+`
 </dl>
 	
 
@@ -542,33 +568,31 @@ Zoals bij MinOccurs, is het op dezelfde manier ook mogelijk om aan te geven dat 
 </dl>
 	
 
-Verwijzingen vanuit het Hoofdstuk type:<br/>
-Berichthoofdstukken (Tabelvorming)<br/>
-Het is toegestaan om in een hoofdstuk naast berichtvelden, ook een ander hoofdstuk te benoemen. De afgesproken werking hiervan is dat het hoofdstuk in het “bovenliggende” hoofdstuk weergegeven wordt als tabel. De bericht velden in het ingevoegde hoofdstuk worden dan als kolommen aangeboden.<br/>
+[Berichthoofdstukken (Tabelvorming)](https://bimloket.github.io/visi/visi1.6/#groepering-van-elementen-complexelementtype)<br/>
+Het is toegestaan om in een hoofdstuk naast berichtvelden, ook een ander hoofdstuk te benoemen. De afgesproken werking hiervan is dat het hoofdstuk in het “bovenliggende” hoofdstuk weergegeven wordt als [tabel](https://bimloket.github.io/visi/visi1.6/#tabel-als-element-van-een-type-bericht). De bericht velden in het ingevoegde hoofdstuk worden dan als kolommen aangeboden.<br/>
 Op deze manier kan een hoofdstuk bestaan uit een of meerdere tabellen, eventueel ook aangevuld met normale berichtvelden. 
 NB1: Op dit moment is technisch nog niet aan te geven op welke locatie de tabellen in een hoofdstuk getoond moeten worden. Hierdoor komen ze op dit moment soms boven en soms onder de normale velden en is het niet mogelijk om een hoofdstuk te maken waarin velden en tabellen elkaar afwisselen. In issue 37 wordt aan dit probleem gewerkt.<br/>
 NB2: Technisch is het mogelijk om een hoofdstuk in een hoofdstuk in een hoofdstuk enz. te maken, wat bijvoorbeeld een 3d-tabel op zou kunnen leveren. Over dergelijke toepassingen zijn nog geen afspraken in de systematiek en het wordt ook nog nergens toegepast. Dit wordt wel als ruimte voor nog niet bekende evt toekomstige toepassingen beschouwd.<br/>
 
-Berichtvelden<br/>
+[Berichtvelden](https://bimloket.github.io/visi/visi1.6/#berichtvelden-simpleelementtype)<br/>
 Door berichtvelden in een bepaalde volgorde in een hoofdstuk te plaatsen, ontstaat de structuur van dat hoofdstuk, zoals het in alle berichten waarin  dit hoofdstuk staat wordt weergegeven. <br/>
-Verwijzingen naar het Hoofdstuk type:<br/>
-Berichthoofdstukken (Tabelvorming)<br/>
-Zie hierboven.
 	
-ProjectType<br/>
-Voor zover bekend is het technisch mogelijk en hoofdstuk aan een projecttype te koppelen, maar is er nog geen toepassing voor bekend.
+[ProjectType](https://bimloket.github.io/visi/visi1.6/#type-project-projecttype)<br/>
+Voor zover bekend is het technisch mogelijk om een hoofdstuk aan een projecttype te koppelen, maar is er nog geen toepassing voor bekend.
 	
-PersonType
+[PersonType](https://bimloket.github.io/visi/visi1.6/#type-persoon-persontype)
 Hiermee kan er in het projectspecifieke bericht aanvullende informatie bij personen ingevuld worden, zoals bijvoorbeeld een telefoonnummer of andere voor het project relevante persoonsinformatie.
 	
-OrganisationType
+[OrganisationType](https://bimloket.github.io/visi/visi1.6/#type-organisatie-organisationtype)
 Hiermee kan er in het projectspecifieke bericht aanvullende informatie bij organisaties ingevuld worden, zoals bijvoorbeeld een adres of andere voor het project relevante informatie.
 
-AppendixType
+[AppendixType](https://bimloket.github.io/visi/visi1.6/#type-bijlage-appendixtype)
 Op deze manier kan er per bijlage type een andere set aan berichtvelden met metadata over de bijlage ingevoerd worden.
 	
-Bericht type<br/>
+[MessageType](https://bimloket.github.io/visi/visi1.6/#type-bericht-messagetype)<br/>
 Voor de opbouw van berichten<br/>
+
+Met [Berichtveld beperkingen](https://bimloket.github.io/visi/visi1.6/#voorwaarden-voor-elementen-van-type-berichten-elementcondition) kan over een veld worden gezegd dat deze niet aanpasbaar mag zijn of juist wel aanpasbaar moet zijn.
 
 <div class="example" title="Gegevens van een type complex element (in een raamwerk)">	
 <b>Complex element type</b><br/>
@@ -596,7 +620,7 @@ Simple elements:
 </div>
 
 
-Berichtveld beperkingen
+
 
 ### Volgorde van type berichten (MessageInTransactionType)
 De vormgeving van de opvolging van berichten zodat een stroomschema gevolgd kan worden wordt geregeld in het bericht in transacties type (vanaf hier aangeduid als “MITT”).<br/>
@@ -651,7 +675,7 @@ Optional Boolean waarde die bedoeld is om onbetwistbaar vast te kunnen stellen d
 
 
 Verwijzingen vanuit het Bericht in transactie type:<br/>
-Berichten<br/>
+[Berichten](https://bimloket.github.io/visi/visi1.6/#type-bericht-messagetype)<br/>
 Hiermee wordt de berichtnaam en inhoud van het element in de berichtenstroom bepaald.<br/>
 Voorgaand(previous) bericht<br/>
 Op deze manier ligt vast hoe de stroom van berichten verloopt. Doordat MITT’s  de voorgaande MITT’s hier hebben staan, weet je vanuit welk bericht dit bericht gekozen kan worden als volgend bericht. Er zijn grofweg 4 soorten previous-koppelingen die er qua definitie precies hetzelfde uitzien(deze MITT is een previous op deze MITT), maar in werking anders zijn:<br/>
@@ -661,23 +685,23 @@ Op deze manier ligt vast hoe de stroom van berichten verloopt. Doordat MITT’s 
 -	Een terugkering vanuit de subtransactie naar de bovenliggende transactie.<br/>
 Deze optie is alleen toegestaan vanuit een bericht in een subtransactie terug naar de transactie waaruit de subtransactie is opgestart. Dit bericht in de bovenliggende transactie mag niet de eigenschap “firstmessage” hebben, want dan wordt er een subtransactie onder de subtransactie aangemaakt.
 
-Transactie<br/>
+[Transactie](https://bimloket.github.io/visi/visi1.6/#informatie-overdracht-conform-type-transactie-transactiontype)<br/>
 Een MITT is altijd aan een transactie gekoppeld. Minimaal plaatst een MITT dus een berichttype in een transactie.
 
-Transactiefase<br/>
+[Transactiefase](https://bimloket.github.io/visi/visi1.6/#transactiefasetype)<br/>
 Deze eigenschap is bedoeld om de transactie fases van het DEMO universele transactie patroon mee aan te geven. Hier wordt nog weinig gebruik van gemaakt. De eerste DEMO oplegger op de VISI systematiek gebruikt deze eigenschap wel als essentieel onderdeel.
 
-Groeptypes<br/>
+[Groeptypes](https://bimloket.github.io/visi/visi1.6/#type-groep-grouptype)<br/>
 Er kan een groep ingevuld worden, maar hier wordt tot op dit moment niets mee gedaan.
 
-Bijlage types<br/>
+[Bijlage types](https://bimloket.github.io/visi/visi1.6/#type-bijlage-appendixtype)<br/>
 Dit is de meest specifieke manier om te benoemen welke metadata set (berichthoofdstuk) aan berichtvelden ingevuld moet worden voor een bijlage die bij een bericht wordt toegevoegd. 
 
-Bericht in transactie beperkingen<br/>
+[Bericht in transactie beperkingen](https://bimloket.github.io/visi/visi1.6/#voorwaarden-voor-opvolgende-type-berichten-messageintransactiontypecondition)<br/>
 Voorwaardelijkheid wanneer je dit bericht mag kiezen.
 
 Verwijzingen naar het Bericht in transactie type:<br/>
-Berichtveld beperkingen (elementcondition)
+[Berichtveld beperkingen (elementcondition)]((https://bimloket.github.io/visi/visi1.6/#voorwaarden-voor-elementen-van-type-berichten-elementcondition))
 
 Bericht in transactie beperkingen<br/>
 Voorwaardelijkheid wanneer je een ander bericht mag kiezen op basis van de aanwezigheid van dit bericht.
@@ -875,11 +899,7 @@ Hiermee wordt geregeld wanneer een gebruiker een veld wel of niet mag aanpassen,
 <dl class="def" title="Beschrijving van de specifieke eigenschappen">	
 	
 #### <dfn>`condition`</dfn>
-Hiermee wordt het gedrag van een veld bepaald.
-
-</dl>
-	
- Er is keuze uit de volgende conditions:
+Hiermee wordt het gedrag van een veld bepaald.Er is keuze uit de volgende conditions:
 	<ul>
 		<li>FREE</li>
 			<ul>
@@ -894,12 +914,13 @@ Hiermee wordt het gedrag van een veld bepaald.
 				<li>Het veld wordt door de software leeggemaakt voor de gebruiker</li>
 			</ul>
 	</ul>
-
+</dl>
+	
 Verwijzingen vanuit de Berichtveld beperkingen:<br/>
 Door een of meerdere van onderstaande elementen te benoemen, wordt de situatie waar de conditie op van toepassing is gedefinieerd.<br/>
-complexElements<br/>
-simpleElement<br/>
-messageInTransaction<br/>
+[complexElement](https://bimloket.github.io/visi/visi1.6/#groepering-van-elementen-complexelementtype)<br/>
+[simpleElement](https://bimloket.github.io/visi/visi1.6/#groepering-van-elementen-complexelementtype)<br/>
+[messageInTransaction](https://bimloket.github.io/visi/visi1.6/#volgorde-van-type-berichten-messageintransactiontype)<br/>
 
 De basis regels zijn:<br/>
 - Een veld dat voor de eerste keer aangeboden wordt, dus nog niet bestaat in het voorgaande bericht, is altijd invulbaar en wordt nooit geblokkeerd door deze instelling.<br/>
@@ -911,8 +932,8 @@ Onderstaande tabel geeft aan welke beperking gebruikt moet worden als er meerder
 Het hoogste getal in de eerste kolom “wint”. Dus als er een conditie op een CE en SE ingesteld is (5) dan geldt deze conditie tov een instelling alleen op een SE  (1).
  
 
-Verwijzingen naar de Berichtveld beperkingen:<br/>
-Geen<br/>
+<!-- Verwijzingen naar de Berichtveld beperkingen:<br/>
+Geen<br/>-->
 
 <div class="example" title="Gegevens van een element conditie (in een raamwerk)">
 <b>ElementCondition</b><br/>
@@ -1008,20 +1029,19 @@ Een bijlage type is meestal gekoppeld aan een berichthoofdstuk, zodat er bij het
 	
 
 Verwijzingen vanuit bijlage types:
-Berichthoofdstuk
 
-Het berichthoofdstuk verzorgt de berichtvelden waarmee de metadata aan de bijlage gekoppeld worden.
+Het [berichthoofdstuk](https://bimloket.github.io/visi/visi1.6/#groepering-van-elementen-complexelementtype) verzorgt de berichtvelden waarmee de metadata aan de bijlage gekoppeld worden.
 
-Verwijzingen naar bijlage types:
-Het is mogelijk om het aantal bijlage types in een bericht te beperken als het raamwerk meer dan één bijlage type bevat. Als er niets op het bericht ingesteld staat, moet de gebruiker uit alle beschikbare types kiezen.  
+Verwijzingen naar bijlagetypes:
+Het is mogelijk om het aantal bijlagetypes in een bericht te beperken als het raamwerk meer dan één bijlage type bevat. Als er niets op het bericht ingesteld staat, moet de gebruiker uit alle beschikbare types kiezen.  
 
-Transactie types<br/>
+[Transactietypes](https://bimloket.github.io/visi/visi1.6/#informatie-overdracht-conform-type-transactie-transactiontype)<br/>
 Een bijlage type dat op dit niveau gekoppeld is, wordt aangeboden in alle berichten in die transactie.
 	
-Bericht types<br/>
-Een bijlage type dat op dit niveau gekoppeld is, wordt aangeboden in dit bericht type in alle transacties (waar dit bericht in voorkomt).
+[Berichttypes](https://bimloket.github.io/visi/visi1.6/#type-bericht-messagetype)<br/>
+Een bijlagetype dat op dit niveau gekoppeld is, wordt aangeboden in dit bericht type in alle transacties (waar dit bericht in voorkomt).
 	
-Bericht in transactie<br/>
+[Bericht in transactie](https://bimloket.github.io/visi/visi1.6/#volgorde-van-type-berichten-messageintransactiontype)<br/>
 Een bijlage type dat op dit niveau gekoppeld is, wordt alleen in dit specifieke bericht op deze plek in de transactie aangeboden.
 	
 <div class="example" title="Gegevens van een type bijlage (in een raamwerk)">
@@ -1055,14 +1075,14 @@ In ieder raamwerk is een organisatie type nodig. Deze wordt gebruikt bij het aan
 	
 
 Verwijzingen vanuit organisatie types: 
-complexElements
-	
-Een organisatie type kan metadata elementen bevatten, zoals adres, telefoonnummer enz.
+[complexElements]https://bimloket.github.io/visi/visi1.6/#groepering-van-elementen-complexelementtype
+<br/>
+Een [organisatie type](https://bimloket.github.io/visi/visi1.6/#type-organisatie-organisationtype) kan metadata elementen bevatten, zoals adres, telefoonnummer enz.
 	
 Voor projecten met SOAP-communicatie moet minimaal het Berichtveld met het exacte Id “SOAPServerURL” via een berichthoofdstuk aan het organisatie type gekoppeld zijn, zodat het soap-adres ingesteld kan worden.
 	
-Verwijzingen naar organisatie types:
-geen
+<!--Verwijzingen naar organisatie types:
+geen-->
 
 <div class="example" title="Gegevens van een type organisatie (in een raamwerk)">
 <b>OrganisationType</b><br/>
@@ -1094,12 +1114,12 @@ De basis velden van een persoon in een project specifiek bericht, zoals Naam, ge
 </div>
 
 
-Verwijzingen vanuit persoon types:<br/>
-complexElements<br/>
+Verwijzingen vanuit persoontypes:<br/>
+[complexElements](https://bimloket.github.io/visi/visi1.6/#groepering-van-elementen-complexelementtype)<br/>
 Een persoon type kan metadata elementen bevatten, zoals adres, telefoonnummer enz. Onder andere als gevolg van nieuwe privacy wetgeving wordt hier steeds minder in ingevuld.
 
-Verwijzingen naar persoon types:
-Geen 
+<!--Verwijzingen naar persoon types:
+Geen-->
 
 <div class="example" title="Gegevens van een type persoon (in een raamwerk)">	
 <b>PersonType</b><br/>
@@ -1183,8 +1203,7 @@ Verwijzingen vanuit transactie fases:<br/>
 Geen<br/>
 
 Verwijzingen naar transactie fases:<br/>
-Bericht in transactie<br/>
-Op deze manier kan een bericht in transactie aan een bepaalde transactiefase gekoppeld worden.
+Met [Bericht in transactie](https://bimloket.github.io/visi/visi1.6/#volgorde-van-type-berichten-messageintransactiontype) kan een bericht in transactie aan een bepaalde transactiefase gekoppeld worden.
 
   
 ### Type groep (GroupType)
