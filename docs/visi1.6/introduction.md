@@ -4,11 +4,6 @@
 
 VISI is een afsprakenstelsel dat tot doel heeft samenwerken met digitale communicatie te ondersteunen.
 
-De drijfveren van VISI:
-
--	Gezamenlijke werkafspraken: Altijd helderheid te bieden over wie wat op welk moment moet doen of besloten heeft;
--	Actuele en complete communicatiedossiers: Waarmee inzicht in de voortgang van de samenwerking te verkrijgen is en ruis in de communicatie voorkomen wordt.
-
 Met hulp van VISI krijgen organisaties beter grip op, en worden volwassener in, sturing en structurering van projecten en samenwerkingen.
 
 
@@ -27,11 +22,3 @@ De documentatie is opgedeeld in drie delen: conceptueel, functioneel en technisc
 
 In de documentatie worden op elk niveau twee voorbeelden gebruikt: een bouwproject, met een samenwerking tussen een opdrachtgever en een opdrachtnemer; en een pizzeria, met een klant, een ober en een kok.
 
-### niveau 1 Conceptueel
-In het conceptuele deel worden de volgende zaken beschreven:
-- Hoe werkt VISI voor de gebruiker (zowel in de uitvoering als voorbereiding);
-- structuur aanbrengen met behulp van VISI;
-- belangrijkste VISI termen;
-- communicatie op basis van een VISI raamwerk;
-- verdieping van het VISI raamwerk;
-- garanties voor de gebruiker.
