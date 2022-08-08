@@ -4,6 +4,10 @@
 
 VISI is een afsprakenstelsel dat tot doel heeft samenwerken met digitale communicatie te ondersteunen.
 
+De drijfveren van VISI:
+- Gezamenlijke werkafspraken. Altijd helderheid te bieden over wie wat op welk moment moet doen of heeft besloten;
+- Actuele en complete communicatiedossiers. Waarmee inzicht in de voortgang van de samenwerking te verkrijgen is en ruis in de communicatie voorkomen wordt.
+
 Met hulp van VISI krijgen organisaties beter grip op, en worden volwassener in, sturing en structurering van projecten en samenwerkingen.
 
 
