@@ -53,21 +53,3 @@ In het conceptuele deel worden de volgende zaken beschreven:
 > blocknote p
 > niveau 2 Functioneel 
 > niveau 3 Technisch
-
-
-<!--
-<div class="issue" data-number="">Blok voor issue - rood</div> 
-
-<aside class="example" title="Blok voor voorbeelden - geel">
-
-Blok voor voorbeelden - geel
-</aside>
-
-<aside class="def" title="Blok voor eigenschappen van elementen - blauw">
-
-Blok voor eigenschappen van elementen - blauw
-</aside>
-
-<p class="note" title="Blok voor notities">
-Blok voor aanvullende notities - groen
--->
