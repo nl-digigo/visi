@@ -57,6 +57,7 @@ In het functionele deel worden de volgende zaken beschreven:
 - ;
 - ;
 - .
+
 -->
 
 <!--
@@ -65,5 +66,6 @@ In het technische deel worden de volgende zaken beschreven:
 - ;
 - ;
 - ;
--->
 - .
+
+-->
