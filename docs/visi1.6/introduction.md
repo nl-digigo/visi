@@ -10,3 +10,8 @@ De verschillende softwareontwikkelaars zijn elk verantwoordelijk voor (en eigena
 De conceptuele documentatie is voor softwareleveranciers of systeembeheerders die meer willen weten over de VISI-standaard en hoe het wordt toegepast. Eindgebruikers van organisaties die VISI gebruiken voor communicatie en andere geïnteresseerden kunnen op de [website van het BIM Loket](https://www.bimloket.nl/VISI) terecht voor meer gebruikersgerichte documentatie en toepassingsvoorbeelden.
 
 De functionele- en technische documentatie van de VISI-standaard is bedoeld voor partijen die de standaard in hun software willen implementeren. Softwareleveranciers zorgen voor de informatiesystemen die geschikt zijn om op basis van VISI te communiceren. Om de documentatie zowel geschikt te maken voor lezers op productmanagementniveau als software implementatie niveau is gekozen om een opdeling te maken in een conceptueel-, functioneel en technisch deel.
+
+## Leeswijzer
+De documentatie is opgedeeld in drie delen: conceptueel, functioneel en technisch. Deze delen worden in de onderstaande paragrafen toegelicht.
+
+In de documentatie worden op elk niveau twee voorbeelden gebruikt: een bouwproject, met een samenwerking tussen een opdrachtgever en een opdrachtnemer; en een pizzeria, met een klant, een ober en een kok.
