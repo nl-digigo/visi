@@ -16,6 +16,10 @@ Met hulp van VISI krijgen organisaties beter grip op, en worden volwassener in, 
   </p>
 </div>
 
+<!-- <div class="example" title="Pizzeria">
+<p> Voorbeeld pizzeria </p>
+</div>
+-->
 
 ## Waarom en voor wie deze documentatie?
 
@@ -45,3 +49,21 @@ In het conceptuele deel worden de volgende zaken beschreven:
 - communicatie op basis van een VISI raamwerk;
 - verdieping van het VISI raamwerk;
 - garanties voor de gebruiker.
+
+<!--
+### niveau 2 Functioneel
+In het functionele deel worden de volgende zaken beschreven:
+- ;
+- ;
+- ;
+- .
+-->
+
+<!--
+### niveau 3 Technisch
+In het technische deel worden de volgende zaken beschreven:
+- ;
+- ;
+- ;
+-->
+- .
