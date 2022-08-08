@@ -455,6 +455,7 @@ Enkele voorbeelden die nu veel gebruikt worden voor basetype STRING zijn:
 <ul>
 	<li>Keuzelijst met meerdere waardes</li>
 </ul>
+	
 `
 	<xs:enumeration value="k1"/>
 `
@@ -464,6 +465,7 @@ Enkele voorbeelden die nu veel gebruikt worden voor basetype STRING zijn:
 `
 	<xs:enumeration value="k3"/>
 `
+	
 <ul>
 <li>Optionele keuzelijst:</li>
 </ul>
