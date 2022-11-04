@@ -117,7 +117,7 @@ var respecConfig = {
     // this can be simple or more elaborated
     editors: [
         {
-          name:       "Elisabeth Klören",
+          name:       "",
           company:    "CROW",
           companyURL: "https://www.crow.nl"
         },
