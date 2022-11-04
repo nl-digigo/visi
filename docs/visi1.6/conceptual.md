@@ -49,9 +49,9 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 
 <aside class="example" title="Bouwproject">
-<p> De interactie start in dit voorbeeld bij de Opdrachtnemer (projectleverende). De Opdrachtgever kan het voorstel afkeuren of goedkeuren met verzoek om een offerte. Als de Opdrachtnemer een afkeuring ontvangt dan wordt het proces om een contractwijziging vast te leggen beëindigd. Als het voorstel wel wordt goedgekeurd dan levert de Opdrachtnemer een offerte met consequenties van de contractwijziging. Hierka kan de Opdrachtgever opnieuw een afkeuring of acceptatie versturen waarna de contractwijziging wordt stopgezet cq. geaccepteerd.</p>
+<p> De interactie start in dit voorbeeld bij de Opdrachtnemer (projectleverende). De Opdrachtgever kan het voorstel afkeuren of goedkeuren met verzoek om een offerte. Als de Opdrachtnemer een afkeuring ontvangt dan wordt het proces om een contractwijziging vast te leggen beëindigd. Als het voorstel wel wordt goedgekeurd dan levert de Opdrachtnemer een offerte met consequenties van de contractwijziging. Hierna kan de Opdrachtgever opnieuw een afkeuring of acceptatie versturen waarna de contractwijziging wordt stopgezet cq. geaccepteerd.</p>
   
-![Communicatie tussen Opdrahchtnemer en Opdrachtgever door middel van berichten](media/Contractwijziging1.png) 
+![Communicatie tussen Opdrachtnemer en Opdrachtgever door middel van berichten](media/Contractwijziging1.png) 
 </aside>
 
 <aside class="example" title="Pizzeria"> 
@@ -72,7 +72,7 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 
 ### Rol
 
-Binnen (bouw)projecten en samenwerkingsvormen komen verschillende verantwoordelijkheden en hierbij behorende taken voor. Denk hierbij aan een simpele overeenkomst met een Opdrachtnemer en Opdrachtgever met overeengekomen taken en verantwoordelijkheden. Deze verantwoordelijkheden met bijbehorende taken worden gebundeld in logische rollen. Het concept hoe partijen met elkaar omgaan en de overeenkomst die ze met elkaar hebben is van invloed op de verdeling van rollen over de partijen.
+Binnen projecten en samenwerkingsvormen komen verschillende taken met bijbehorende verantwoordelijkheden voor. Denk hierbij aan een simpele overeenkomst met een Opdrachtnemer en Opdrachtgever met overeengekomen taken en verantwoordelijkheden. Deze taken met bijbehorende verantwoordelijkheden worden gebundeld in logische rollen. Het concept hoe partijen met elkaar omgaan en de overeenkomst die ze met elkaar hebben is van invloed op de verdeling van rollen over de partijen.
 
 Een rol is fundamenteel anders dan een functie. Een essentieel verschil is dat rollen een afspiegeling zijn van het werk dat georganiseerd wordt, terwijl functies een afspiegeling zijn van mensen die georganiseerd worden (in een organisatie). Een VISI-project heeft geen functie Afdelingshoofd, maar wel de rollen Beoordelende, Adviserende.
 
@@ -81,7 +81,7 @@ Een rol is fundamenteel anders dan een functie. Een essentieel verschil is dat r
 
 ### Bericht
 
-Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisselen. De berichtnaam staat gelijk aan een bepaalde status, afhankelijk van de positie binnen een proces (aanleveren document, of een afkeuring). Een bericht bestaat uit verschillende velden, afhankelijk van de informatie die nodig is. Sommige onderdelen van een bericht staan vast, zoals de afzender en het tijdstip van verzenden.
+Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisselen. De berichtnaam vertegenwoordigt een bepaalde status, afhankelijk van de positie binnen een proces (aanleveren document, of een afkeuring). Een bericht bestaat uit verschillende velden, afhankelijk van de informatie die nodig is. Sommige onderdelen van een bericht staan vast, zoals de afzender en het tijdstip van verzenden.
 
 
 ![Berichtenverkeer](media/MiTT1.png)
@@ -89,18 +89,18 @@ Berichten zijn een middel om informatie over te dragen cq. gegevens uit te wisse
 
 **Informatie in een bericht**
 
-De inhoud van een bericht is te vergelijken met een formulier met velden. Zoals: tekstvelden, data, bedragen, Ja/Nee, keuzelijsten, en/of tabellen.
-Hier vindt overerving plaats. Ingevulde gegevens uit een voorgaand bericht worden in principe mee verstuurd in een volgend bericht, tenzij er een zogenoemde conditie is meegegeven in het raamwerk.
+De inhoud van een bericht kan worden weergegeven als een formulier met velden. Zoals: tekstvelden, data, bedragen, Ja/Nee, keuzelijsten, en/of tabellen.
+Ingevulde gegevens uit een voorgaand bericht worden in principe mee verstuurd in een volgend bericht, tenzij er een zogenoemde conditie is meegegeven in het raamwerk.
 
 
-**Bijlagen en META-gegevens**
+**Bijlagen en metagegevens**
 
-Aan VISI-berichten kunnen één of meerdere bijlagen worden toegevoegd. Dit komt sterk overeen met een ‘attachement’ van een e-mail. Een belangrijk verschil is echter dat een bijlage  van een VISI-bericht kan worden voorzien van META-gegevens. Deze elementen kunnen vooraf worden gedefinieerd. Denk hierbij bijvoorbeeld aan het versienummer, documentdatum, status, etcetera. Hierbij kan bijvoorbeeld rekening worden gehouden met de META-gegevens die in een organisatiespecifieke documentmanagementsysteem noodzakelijk zijn.
+Aan VISI-berichten kunnen één of meerdere bijlagen worden toegevoegd. Dit komt sterk overeen met een ‘attachment’ van een e-mail. Een belangrijk verschil is echter dat een bijlage van een VISI-bericht wél kan worden voorzien van metagegevens. Deze elementen kunnen vooraf worden gedefinieerd. Denk hierbij bijvoorbeeld aan het versienummer, documentdatum, status, etcetera. Hierbij kan bijvoorbeeld rekening worden gehouden met de metagegevens die in een organisatiespecifieke documentmanagementsysteem noodzakelijk zijn.
 
 
 **Bijlagen (één of meerdere bijlagen)**
 
-Doordat bijlagen zijn toegevoegd aan een bericht, is een bijlage achteraf altijd in context te plaatsen. Op welk moment is de bijlage verstuurd en met welke status? 
+Doordat bijlagen zijn toegevoegd aan een bericht, is een bijlage achteraf altijd in context te plaatsen. Op welk moment is de bijlage verstuurd en bijvoorbeeld met welke status?
 * Goedgekeurd/afgekeurd/ter kennisgeving
 * Concept/definitief
 * Datum/versie
