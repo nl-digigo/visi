@@ -2,17 +2,18 @@
 
 ***Wat is VISI en wat is het doel ervan***
 
-VISI is een afsprakenstelsel dat tot doel heeft samenwerken met digitale communicatie te ondersteunen.
+VISI is een afsprakenstelsel dat tot doel heeft om samenwerking met gestructueerde digitale communicatie te ondersteunen.
 
 De drijfveren van VISI:
-- Gezamenlijke werkafspraken. Altijd helderheid te bieden over wie wat op welk moment moet doen of heeft besloten;
+- Gezamenlijke werkafspraken digitaal uitvoeren bieden helderheid over wie wat op welk moment moet doen of heeft besloten;
 - Actuele en complete communicatiedossiers. Waarmee inzicht in de voortgang van de samenwerking te verkrijgen is en ruis in de communicatie voorkomen wordt.
 
 Met hulp van VISI krijgen organisaties beter grip op, en worden volwassener in, sturing en structurering van projecten en samenwerkingen.
 
 <div class="example" title="Bouwproject">
   <p> 
-    Dit doen we door van te voren na te denken over de communicatie die plaatsvindt tussen Opdrachtgever en Opdrachtnemer conform de contractvormen UAV en UAVgc met toevoeging van de contractstukken waarin afspraken zijn opgenomen over de communicatie. Dit wordt vertaald naar berichten in een vooraf afgesproken workflow met bijbehorende reactietermijnen. Hierdoor kunnen alle partijen zich tijdens het project concentreren op de inhoud en de uitvoering van het project. 
+Bouwproject voorbeeld:
+    Dit doen we door van te voren na te denken over de communicatie die plaatsvindt tussen Opdrachtgever en Opdrachtnemer conform onder andere de contractvormen UAV en UAVgc met toevoeging van de contractstukken waarin afspraken zijn opgenomen over de communicatie. Dit wordt vertaald naar berichten in een vooraf afgesproken workflow met bijbehorende reactietermijnen. Hierdoor kunnen alle partijen zich tijdens het project concentreren op de inhoud en de uitvoering van het project. 
   </p>
 </div>
 
