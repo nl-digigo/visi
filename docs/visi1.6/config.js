@@ -126,8 +126,13 @@ var respecConfig = {
     // this can be simple or more elaborated
     authors:  [
         {
-          name:       "Voornaam Achternaam",
-          company:    "Organisatie",
+          name:       "Persoon 1",
+          company:    "Organisatie 1",
+          companyURL: "https://www.bimloket.nl"
+        },
+        {
+          name:       "Persoon 2",
+          company:    "Organisatie 2",
           companyURL: "https://www.bimloket.nl"
         },
       ],
