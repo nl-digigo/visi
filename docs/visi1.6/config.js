@@ -117,7 +117,7 @@ var respecConfig = {
     // this can be simple or more elaborated
     editors: [
         {
-          name:       "",
+          name:       "N/A",
           company:    "CROW",
           companyURL: "https://www.crow.nl"
         },
@@ -126,13 +126,38 @@ var respecConfig = {
     // this can be simple or more elaborated
     authors:  [
         {
-          name:       "Persoon 1",
-          company:    "Organisatie 1",
-          companyURL: "https://www.bimloket.nl"
+          name:       "Arne Bruinse",
+          company:    "Bakker & Spees",
+          companyURL: "https://www.bakkerspees.nl/visi/"
         },
         {
-          name:       "Persoon 2",
-          company:    "Organisatie 2",
+          name:       "Jeroen Hiemstra",
+          company:    "Technia",
+          companyURL: "https://www.alfamail.nl"
+        },
+            {
+          name:       "Jos Hamilton",
+          company:    "Hamilton Consult",
+          companyURL: "https://www.hamilton-consult.nl"
+        },
+       {
+          name:       "Niek Pluijmert",
+          company:    "Inqa Quality Consultants" ,
+          companyURL: "https://inqa.nl"
+        },
+       {
+          name:       "Tessa de Roos",
+          company:    "Gobar Adviseurs",
+          companyURL: "https://gobar.nl/"
+        },
+             {
+          name:       "Jeroen van Geijlswijk",
+          company:    "N/A",
+          companyURL: "https://www.bimloket.nl"
+        },
+       {
+          name:       "Michon Maas",
+          company:    "N/A",
           companyURL: "https://www.bimloket.nl"
         },
       ],
