@@ -141,6 +141,11 @@ var respecConfig = {
           companyURL: "https://www.hamilton-consult.nl"
         },
        {
+          name:       "Mark Mulder",
+          company:    "TEEC2",
+          companyURL: "https://teec2.nl/"
+        },
+       {
           name:       "Niek Pluijmert",
           company:    "Inqa Quality Consultants" ,
           companyURL: "https://inqa.nl"
