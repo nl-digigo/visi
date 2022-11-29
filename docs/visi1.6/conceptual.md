@@ -51,7 +51,7 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 <aside class="example" title="Bouwproject">
 <p> De interactie start in dit voorbeeld bij de Opdrachtnemer (projectleverende). De Opdrachtgever kan het voorstel afkeuren of goedkeuren met verzoek om een offerte. Als de Opdrachtnemer een afkeuring ontvangt dan wordt het proces om een contractwijziging vast te leggen beëindigd. Als het voorstel wel wordt goedgekeurd dan levert de Opdrachtnemer een offerte met consequenties van de contractwijziging. Hierna kan de Opdrachtgever opnieuw een afkeuring of acceptatie versturen waarna de contractwijziging wordt stopgezet cq. geaccepteerd.</p>
   
-![Communicatie tussen Opdrachtnemer en Opdrachtgever door middel van berichten](media/Contractwijziging1.png) 
+![Communicatie tussen Opdrachtnemer en Opdrachtgever door middel van berichten](media/Contractwijziging2.png) 
 </aside>
 
 <aside class="example" title="Pizzeria"> 
