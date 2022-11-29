@@ -19,8 +19,6 @@ Wat er aan het einde van een project met de communicatie en informatie gebeurt s
 
 Het project specifiek maken van de communicatiepatronen heeft nog een verdiepingsslag, welke in hoofdstuk 6 beschreven staat. Als toegift staan in laatste hoofdstuk de overige (optionele) bouwstenen toegelicht.
 
-<div class="issue" data-number="141"></div> 
-
 ## Project specifiek bestand
 
 Voordat communicate conform de open standaard VISI kan plaatsvinden, moet een project ingericht worden met een project specifiek bestand (psb), een raamwerk en een hieruit gegenereerd berichtenschema.
@@ -46,7 +44,6 @@ Einddatum:               20-05-2022 07:08
 
 De communicatie binnen een project wordt uitgevoerd door personen. De mensen, die in een project participeren, worden personen genoemd. Ieder persoon in een project heeft een unieke identificatie waarmee naar de persoon in het project gerefereerd wordt, zonder dat misverstanden kunnen ontstaan welke persoon bedoeld wordt. Naast de identificatie heeft een persoon een naam en een gebruikersnaam. De naam is een aanvulling op de unieke identificatie, en is bedoeld voor eenvoudigere herkenning (door mensen). De gebruikersnaam is niet verplicht en kan een zelfgekozen (technische) invulling krijgen. Gebruikersnaam kan - bijvoorbeeld - gebruikt worden voor het linken naar een gebruiker in een (bestaand) software systeem.
 
-<div class="issue" data-number="136"></div> 
 
 <div class="example" title="Gegevens van personen (in een project specifiek bestand)">
 
@@ -87,7 +84,6 @@ Contactpersoon:        <u>_0c585186-fa97-4de7-8fe0-5c4bee3afead</u><br>
 
 <p class="note" title="Organisatie heeft een adres">
 Per organisatie wordt ook het adres vastgelegd. Dit is geen fysiek of postadres, maar een digitaal adres. Dit digitale adres heeft een technisch doel, zie paragraaf https://bimloket.github.io/visi/visi1.6/#soap over SOAP protocol.
-<div class="issue" data-number="136"></div>
 
 ### Rol
 
@@ -668,7 +664,6 @@ OPTIONAL??? Zie exp_2
 	
 #### <dfn>`openSecondaryTransactionsAllowed`</dfn>
 Optional Boolean waarde die de mogelijkheid aangeeft of secundaire transacties nog niet afgerond hoeven te zijn voordat met de primaire transactie kan worden verder gegaan. De interpretatie voor "TRUE" is dat niet alle instanties van secundaire transacties hoeven te zijn afgerond voordat met de primaire transactie kan worden verder gegaan. Als de waarde "FALSE" is dienen alle instanties van secundaire transacties te worden afgerond voordat de primaire transactie hervat kan worden. Indien openSecondaryTransactionsAllowed niet is gedefinieerd wordt dit geïnterpreteerd als "TRUE".
-<b>TODO: terugkeerantwoorden schijnen wel door te mogen..Opzoeken ARNE met Jos!!</b>
 	
 #### <dfn>`firstMessage`</dfn>
 Optional Boolean waarde die bedoeld is om onbetwistbaar vast te kunnen stellen dat een bericht alleen gebruikt kan worden als eerste bericht van een subtransactie. Gebruik van een MITT met deze instelling resulteert dus altijd in een nieuwe subtransactie.
