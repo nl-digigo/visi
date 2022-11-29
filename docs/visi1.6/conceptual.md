@@ -6,8 +6,6 @@
 
 Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of takenmanager, waarin precies zichtbaar is welke berichten nog moeten worden beantwoord, welke antwoorden kunnen worden verwacht en welke deadlines er afgesproken zijn.
 
-![Visualisatie VISI voor de gebruiker](media/plaatje.jpg "Visualisatie VISI voor de gebruiker")
-
 ### Uitvoering
 
 ***Berichten versturen en afspraken nakomen***  
@@ -22,16 +20,13 @@ Voor een gebruiker van een VISI-applicatie voelt VISI als een berichtenbox of ta
 
 **Met VISI zijn wijzigingen in de samenwerkafspraken altijd traceerbaar.** Tijdens het project kunnen de afspraken over de workflow, berichtinhoud, rollen en verantwoordelijkheden gewijzigd worden.  
 
-<div class="issue" data-number="115"></div>
-
-
 ### Voorbereiding
 
 ***Flexibiliteit van VISI in het maken van samenwerkafspraken***
   
-  **Door van te voren afspraken te maken over taken en verantwoordelijkheden weet men van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking wordt afgesproken wie welke rol heeft, en welke taken deze rol heeft.
+  **Door van te voren afspraken te maken over taken en verantwoordelijkheden weten projectdeelnemers van elkaar waar zij aan toe zijn.** Bij de voorbereiding van de samenwerking wordt afgesproken wie welke rol heeft, en welke taken deze rol heeft.
   
-  **Door van te voren afspraken te maken over de communicatie weet iedereen van elkaar waar men aan toe is.** Bij de voorbereiding van de samenwerking wordt bepaald welke rollen met elkaar communiceren over taken, en welke berichtenflow hier bij hoort. Door van te voren afspraken te maken over de informatie die van elkaar verwacht wordt, weten betrokkenen van elkaar wat verwacht mag worden. Bij de voorbereiding van de samenwerking wordt bij elk bericht bepaald welke inhoud het bericht heeft, inclusief bijlagen.
+  **Door van te voren afspraken te maken over de communicatie weet iedereen van elkaar waar zij aan toe zijn.** Bij de voorbereiding van de samenwerking wordt bepaald welke rollen met elkaar communiceren over taken, en welke berichtenflow hier bij hoort. Door van te voren afspraken te maken over de informatie die van elkaar verwacht wordt, weten betrokkenen van elkaar wat verwacht mag worden. Bij de voorbereiding van de samenwerking wordt bij elk bericht bepaald welke inhoud het bericht heeft, inclusief bijlagen.
   
   **Partijen hebben de vrijheid om de samenwerking vorm te geven zoals is gewenst.** VISI is zeer flexibel: Partijen zijn vrij om de samenwerking vorm te geven zoals de betrokkenen wensen, VISI standaardiseert de manier waarop je rollen, workflows en berichten digitaal vastlegt. Dit vraagt van softwarepakketten, dat zij voorbereid  zijn om deze flexibele afspraken per project of samenwerking te kunnen inlezen  en activeren, waardoor de communicatie op basis van VISI kan worden gestart. 
 
@@ -57,13 +52,13 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 <aside class="example" title="Pizzeria"> 
 <p> De interactie start in dit voorbeeld bij de Ober. De Klant heeft een beperkt aantal reactiemogelijkheden. Als de Klant geen menukaart wenst te zien dan stopt de interactie. Als de Klant wel een menukaart wil zien dan gaat de transactie verder. De scope van deze transactie is het plaatsen van een bestelling. Een andere transactie zou bijvoorbeeld zijn dat de Klant vraagt om de rekening aan de Ober waarna de Ober de rekening brengt. </p>
 
-![Communicatie tussen Klant en Ober door middel van berichten](media/KlantOber%201.png)
+![Communicatie tussen Klant en Ober door middel van berichten](media/KlantOber2.png)
 </aside>
 
 <aside class="example" title="Pizzeria"> 
 <p> De Ober plaatst de bestelling bij de Kok. De Kok kan de bestelling accepteren óf weigeren. Afhankelijk van de reactie van de Kok wordt een reactie gegeven aan de Klant. Bijvoorbeeld een vraag over bestelling. Het wordt dusdanig gestructureerd dat de Klant niet direct met de Kok kan communiceren. </p>
 
-![Interactie tussen Ober en Kok door middel van berichten](media/OberKok%201.png)
+![Interactie tussen Ober en Kok door middel van berichten](media/OberKok2.png)
 </aside>
 
 
@@ -75,8 +70,6 @@ Tussen die rollen vinden workflows plaats om een bepaald resultaat te behalen. H
 Binnen projecten en samenwerkingsvormen komen verschillende taken met bijbehorende verantwoordelijkheden voor. Denk hierbij aan een simpele overeenkomst met een Opdrachtnemer en Opdrachtgever met overeengekomen taken en verantwoordelijkheden. Deze taken met bijbehorende verantwoordelijkheden worden gebundeld in logische rollen. Het concept hoe partijen met elkaar omgaan en de overeenkomst die ze met elkaar hebben is van invloed op de verdeling van rollen over de partijen.
 
 Een rol is fundamenteel anders dan een functie. Een essentieel verschil is dat rollen een afspiegeling zijn van het werk dat georganiseerd wordt, terwijl functies een afspiegeling zijn van mensen die georganiseerd worden (in een organisatie). Een VISI-project heeft geen functie Afdelingshoofd, maar wel de rollen Beoordelende, Adviserende.
-
-<div class="issue" data-number="119"></div>
 
 
 ### Bericht
@@ -107,14 +100,13 @@ Doordat bijlagen zijn toegevoegd aan een bericht, is een bijlage achteraf altijd
 
 **Volgordelijkheid van berichten**
 
-De berichten zijn niet alleen invulbaar, maar de opeenvolging van de berichten is ook van te voren vastgelegd. Na ontvangt van een bericht kan men in de regel één of meerdere antwoorden kiezen. Zo ligt van te voren vast hoe de communicatie er uit ziet en ook hoe het verloop is. Of met andere woorden de werkstroom ligt vast.
+De berichten zijn niet alleen invulbaar, maar de opeenvolging van de berichten is ook van te voren vastgelegd. Na ontvangst van een bericht kan de gebruiker in de regel één of meerdere antwoorden kiezen. Zo ligt van te voren vast hoe de communicatie er uit ziet en ook hoe het verloop is. Of met andere woorden de werkstroom ligt vast.
 
 
 ### Transactie
 
-<div class="issue" data-number="114"></div>
 
-De berichten zijn ook gegroepeerd per onderwerp en vormen zo steeds kleine procedures. Procedures, dus het onderwerp waarover men wil communiceren, zijn in het algemeen steeds los van elkaar te kiezen. In VISI noemen we zo’n procedure een transactie. Met het woord transactie wordt hier bedoeld ‘overeenkomst’ of ‘verrichting’. Een transactie kan een verzoek zijn om iets te doen of iets te leveren. Vaak op basis van vooraf gemaakte afspraken.
+De berichten zijn ook gegroepeerd per onderwerp en vormen zo steeds kleine procedures. Procedures, dus het onderwerp waarover het project wilt communiceren, zijn in het algemeen steeds los van elkaar te kiezen. In VISI noemen we zo’n procedure een transactie. Met het woord transactie wordt hier bedoeld ‘overeenkomst’ of ‘verrichting’. Een transactie kan een verzoek zijn om iets te doen of iets te leveren. Vaak op basis van vooraf gemaakte afspraken.
 
 ![Transactie](media/InitiatorExecutor.png)
 
@@ -134,13 +126,13 @@ In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruik
 <aside class="example" title="Bouwproject">
 <p> De Projectleverende dient een beoordelingsdocument, zoals is afgesproken in het contract, in. De Opdrachtgever kan het beoordelingsdocument afwijzen waarna een nieuw document wordt ingediend. Als de Opdrachtgever het beoordelingsdocument goedkeurt dan is de transactie afgehandeld.  </p>
 
-![Transactie Aanleveren beoordelingsdocument](media/Beoordelingsdocument1.png)
+![Transactie Aanleveren beoordelingsdocument](media/Beoordelingsdocument2.png)
 </aside>
 
 <aside class="example" title="Bouwproject">
 <p> De Projectleverende dient een beoordelingsdocument zoals is afgesproken in het contract. De Opdrachtgever wil aan één of meerdere Adviseurs vragen om het beoordelingsdocument te beoordelen. Dit noemen we een aangesloten transactie of subtransactie. Deze transactie vindt ook weer plaats tussen twee rollen (niet meer, niet minder).  </p>
   
-![Transactie Verzoek beoordelen beoordelingsdocument](media/Beoordelingsdocument_intern1.png)
+![Transactie Verzoek beoordelen beoordelingsdocument](media/Beoordelingsdocument_intern2.png)
 </aside>
 
 
@@ -153,8 +145,6 @@ In het raamwerk wordt vastgelegd welke volgorde van berichten kan worden gebruik
 Het geheel van beschrijvingen van rollen, transacties, berichten en gegevens, die de afspraken en/of communicatie omvatten die in een project/samenwerkingsverband gebruikt kunnen en mogen worden, wordt een raamwerk genoemd. Om op basis van een VISI raamwerk te kunnen communiceren dienen een aantal zaken ingesteld te worden.  
   
 ***Project specifiek bericht***
-<div class="issue" data-number="116"></div>
-
 Het projectspecifieke bericht plaatst het raamwerk in de context van een project. Hiermee wordt bedoeld dat in dit bestand wordt aangegeven welk specifiek project en/of contract het raamwerk representeert. Hierin wordt ook vastgesteld welke personen vanuit welke organisatie in welke rol(len) deelnemen aan het project. 
 
 ***Koppeling van personen aan rollen***
