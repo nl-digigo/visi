@@ -42,16 +42,16 @@ Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit berich
 
 <pre>
 
-	<ProjectType id="Project_xyz">
+    <ProjectType id="Project_xyz">
 		
-		<description>Standaard project</description>
+        <description>Standaard project</description>
 		
-		<complexElements>
+        <complexElements>
 		
-			<ComplexElementTypeRef idref="AnderWillekeurigComplexElement"/>
+            <ComplexElementTypeRef idref="AnderWillekeurigComplexElement"/>
 			
-		</complexElements>
-	</ProjectType>
+        </complexElements>
+    </ProjectType>
 	<ComplexElementType id="AnderWillekeurigComplexElement">
 		<description>Een ander willekeurig complex element</description>
 	
