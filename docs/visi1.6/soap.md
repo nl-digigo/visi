@@ -193,7 +193,7 @@ Op berichtniveau: we gaan er vanuit dat er bij een project een projectspecifiek 
 
 ### Gevolgen
 
-De gevolgen van deze aanpak is dat het informatie systeem (IS) in staat is bij elk bericht binnen een transactie te achterhalen welke URL behoort tot de afzender en welke URL behoort tot de ontvanger. Deze gegevens (URL afzender, URL ontvanger en optioneel één of meerdere URL’s centrale server(s)) zullen gecommuniceerd moeten worden met de SOAP server behorende bij dit informatiesysteem, natuurlijk samen met het VISI bericht zelf. Deze communicatie tussen het informatiesysteem en bijbehorende SOAP server valt buiten deze notitie en is aan de ontwikkelaar van het informatiesysteem en de bijbehorende SOAP server zelf.
+De gevolgen van deze aanpak is dat het informatie systeem (IS) in staat is bij elk bericht binnen een transactie te achterhalen welke URL behoort tot de afzender en welke URL behoort tot de ontvanger. Deze gegevens (URL afzender, URL ontvanger) zullen gecommuniceerd moeten worden met de SOAP server behorende bij dit informatiesysteem, natuurlijk samen met het VISI bericht zelf. Deze communicatie tussen het informatiesysteem en bijbehorende SOAP server valt buiten deze notitie en is aan de ontwikkelaar van het informatiesysteem en de bijbehorende SOAP server zelf.
  
  
 ### Berichtuitwisseling initialisatie
@@ -205,7 +205,7 @@ De initialisatie van elk informatiesysteem begint met het invoeren van het adres
  
 ### Berichtuitwisseling scenario
 
-Deze beschrijving is geschikt voor alle type berichten binnen transacties, zowel een eerste bericht binnen een transactie als reacties op ontvangen berichten binnen een transactie. Belangrijk is dat berichten binnen een organisatie niet via dit pad hoeven te lopen, dit betekent ook dat deze berichten niet op de centrale server komen te staan.
+Deze beschrijving is geschikt voor alle type berichten binnen transacties, zowel een eerste bericht binnen een transactie als reacties op ontvangen berichten binnen een transactie. Belangrijk is dat berichten binnen een organisatie niet via dit pad hoeven te lopen.
 
 Bij de voorbeelden:
 * URL SOAP server versturende partij: 	http://192.168.0.102
@@ -264,7 +264,7 @@ note: de id van elke attachment is gelijk aan de id die in het VISI bericht
 </code>
 </p>
 
-5. De SOAP server van de versturende partij verstuurt dit bericht naar de SOAP Central Server of indien dit niet mogelijk is (bij dit scenario niet mogelijk) naar de SOAP server van de ontvangende partij.
+5. De SOAP server van de versturende partij verstuurt dit bericht naar de SOAP server van de ontvangende partij.
 
 6. De SOAP server van de ontvangende partij stuurt een standaard SOAP exception error bericht naar de versturende partij.
 6.a.De SOAP server van de ontvangende partij stuurt het VISI message deel van het bericht door naar het IS van de ontvangende partij (wijze van communicatie wordt aan de softwarepartijen zelf overgelaten).
@@ -282,9 +282,6 @@ note: de id van elke attachment is gelijk aan de id die in het VISI bericht
 			<sender>http://192.168.0.102</sender>
 			<reciever>http://192.168.0.138</reciever>
 		</SOAPServerURL>
-		<SOAPCentralServerURL ...>
-			<server/>
-		</SOAPCentralServerURL>
 		<UniqueID ...>
 			<ID>UniqueIDonMessageInitiatingSOAPServer_XYZ</ID>
 		</UniqueID>
@@ -308,9 +305,6 @@ bij een enkelvoudige fout:
 			<sender>http://192.168.0.102</sender>
 			<receiver>http://192.168.0.138</reciever>
 		</SOAPServerURL>
-		<SOAPCentralServerURL ...>
-			<server/>
-		</SOAPCentralServerURL>
 		<UniqueID ...>
 			<ID>UniqueIDonMessageInitiatingSOAPServer_XYZ</ID>
 		</UniqueID>
@@ -334,9 +328,6 @@ Bij meerdere fouten (bijvoorbeeld bij validatie van de xsd):
 			<sender>http://192.168.0.102</sender>
 			<receiver>http://192.168.0.138</reciever>
 		</SOAPServerURL>
-		<SOAPCentralServerURL ...>
-			<server/>
-		</SOAPCentralServerURL>
 		<UniqueID ...>
 			<ID>UniqueIDonMessageInitiatingSOAPServer_XYZ</ID>
 		</UniqueID>
@@ -353,7 +344,7 @@ Bij meerdere fouten (bijvoorbeeld bij validatie van de xsd):
 		
 In geval van geen fout is de code 0, bij een onbekende fout  is de code 1, deze foutmeldingen zullen moeten worden opgelost door de programmeurs. Alle foutmeldingen met een hogere code betreffen fouten die door de software begrepen kunnen worden.
 
-9. De SOAP server van de ontvangende partij verstuurt dit reactiebericht naar de SOAP server van de versturende partij en naar elke SOAP central server.
+9. De SOAP server van de ontvangende partij verstuurt dit reactiebericht naar de SOAP server van de versturende partij.
 9a.	De SOAP server van de versturende partij stuurt een standaard SOAP exception error bericht naar de ontvangende partij als standaard reactie op dit reactiebericht.
 
 10. Reactiebericht terug bij af, controleer of de informatie overeenkomt met het verstuurde bericht en indien akkoord notificeer het IS van de ontvangende partij dat het bericht volgens afspraak is verstuurd en ontvangen.
