@@ -41,29 +41,29 @@ Voor implementatie wordt het MTOM (SOAP Message Transmission Optimization Mechan
 Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit bericht bevat onder projectinformatie een simpel element "SOAPProtocol". De huidige mogelijkheid is alleen "MTOM", dit ziet er dus bijv. uit als onderdeel van het raamwerk:
 
 <pre>
-
+    ...
     <ProjectType id="Project_xyz">
-		
+    	
         <description>Standaard project</description>
-		
+    	
         <complexElements>
-		
+    	
             <ComplexElementTypeRef idref="AnderWillekeurigComplexElement"/>
-			
+    		
         </complexElements>
     </ProjectType>
-	<ComplexElementType id="AnderWillekeurigComplexElement">
-		<description>Een ander willekeurig complex element</description>
-	
-		<simpleElements>
-			
-			<SimpleElementTypeRef idref="SOAPProtocol"/>
-			
-		</simpleElements>
-	</ComplexElementType>
-	<SimpleElementType id="SOAPProtocol">
-		
-	</SimpleElementType>
+    <ComplexElementType id="AnderWillekeurigComplexElement">
+        <description>Een ander willekeurig complex element</description>
+    
+        <simpleElements>
+    		
+            <SimpleElementTypeRef idref="SOAPProtocol"/>
+    		
+        </simpleElements>
+    </ComplexElementType>
+    <SimpleElementType id="SOAPProtocol">
+    	
+    </SimpleElementType>
 </pre>	
 
 En voor het projectspecifieke bericht:
