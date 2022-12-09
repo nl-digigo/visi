@@ -256,8 +256,13 @@ De volgorde van berichtuitwisseling:
 
 <p class="note" title="ID van attachement">
 note: de id van elke attachment is gelijk aan de id die in het VISI bericht 
-	wordt gebruikt om de metadata van een attachment te beschrijven. (<pre><Data id=”abc”></pre>)
-	</p>
+	wordt gebruikt om de metadata van een attachment te beschrijven:
+<code>
+    
+    <Data id=”abc”>
+    
+</code>
+</p>
 
 5. De SOAP server van de versturende partij verstuurt dit bericht naar de SOAP Central Server of indien dit niet mogelijk is (bij dit scenario niet mogelijk) naar de SOAP server van de ontvangende partij.
 
@@ -297,7 +302,7 @@ bij een enkelvoudige fout:
 
 <code>
     
-   <SOAP-ENV:Envelope ...>
+    <SOAP-ENV:Envelope ...>
 	<SOAP-ENV:Header>
 		<SOAPServerURL ...>
 			<sender>http://192.168.0.102</sender>
