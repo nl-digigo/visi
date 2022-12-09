@@ -3,10 +3,8 @@
 ## Inleiding
 Dit document bevat de richtlijn voor implementatie van VISI communicatie op basis van het SOAP protocol. Het doel van de richtlijn is om handreikingen te geven voor de implementatie van VISI communicatie waardoor gewaarborgd wordt dat het betreffende informatiesysteem in technische zin VISI-berichten met bijlagen kan uitwisselen met een ander informatiesysteem dat volgens de richtlijn is ingericht.
 
-Wijzigingen ten opzichte van eerdere versie
-De voorliggende richtlijn is een licht aangepaste versie (1.2) van de eerste versie (1.0). Wijzigingen ten opzichte van versie 1.1 zijn geel gemarkeerd.
 
-De maximale grootte van een VISI-bericht (inclusief attachments) is 120 MB. Deze oplossing is gebaseerd op de MTOM-SOAP   implementatie van XOP (XML-binary Optimized Packaging) [Zie ook hier](http://www.w3.org/TR/soap12-mtom/). Dit wordt voor verdere optimalisatie gecombineerd met "chunking", een methode om bestanden in kleine stukken te versturen en vervolgens weer samen te voegen.
+De maximale grootte van een VISI-bericht (inclusief attachments) is 10 GB. Deze oplossing is gebaseerd op de MTOM-SOAP implementatie van XOP (XML-binary Optimized Packaging) [Zie ook hier](http://www.w3.org/TR/soap12-mtom/). Dit wordt voor verdere optimalisatie gecombineerd met "chunking", een methode om bestanden in kleine stukken te versturen en vervolgens weer samen te voegen.
 
 De VISI Standaard dient af te dwingen dat de communicatie tussen SOAP Servers plaatsvindt via https en SSL, waardoor de inhoud van ontvangen berichten niet onderschept kan worden.
 
@@ -28,8 +26,31 @@ De onderliggende eisen van dit protocol:
 * geen eisen aan VISI compatibiliteit voor de nieuwe/extra software/servers.
 * mogelijkheid een kopie van alle bilaterale communicatie op 1 of meerdere servers te plaatsen.
 
-Het doel van de SOAP Central Server is het opslaan van alle berichten (m.u.v. berichten binnen 1 organisatie) die binnen een project plaatsvinden. Wat er vervolgens met deze berichten gedaan wordt, welke partijen toegang tot welke berichten hebben en hoe de beveiliging en opslag van deze berichten is geregeld valt buiten dit protocol. 
 
+## Architectuur
+
+De architectuur is simpel gehouden door slechts een scenario te ondersteunen. Het scenario bevat onderlinge communicatie tussen SOAP servers.
+
+Het doel en de achtergrond van deze architectuur:
+* de architectuur moet onderlinge communicatie tussen servers in een project kunnen ondersteunen zonder tussenkomst van andere servers,
+* communicatie moet beveiligd uitgevoerd kunnen worden,
+* berichten moeten eenduidig gecommuniceerd en opgeslagen kunnen worden,
+* attachments moeten meegestuurd kunnen worden,
+* de verzender moet te weten kunnen komen of een bericht goed is aangekomen,
+
+
+Architectuur:
+ 
+Figuur 1 Architectuur
+
+![Afbeelding](media/fig-1-architectuur.png)
+ 
+
+Scenario
+In dit geschetste scenario zijn de volgende objecten te vinden:
+* De SOAP Server (SOAP Server), dit is de server welke de afhandeling van VISI berichten volgens het in dit document beschreven pad afhandelt.
+* Dit Informatie Systeem (IS), dit is de applicatie die VISI berichten verwerkt en genereert.
+* De eindgebruiker (P van persoon), dit is een persoon die voor een bepaalde organisatie een bepaalde rol vervuld. 
 
  
 ## Protocollen
@@ -40,93 +61,60 @@ Voor implementatie wordt het MTOM (SOAP Message Transmission Optimization Mechan
 
 Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit bericht bevat onder projectinformatie een simpel element "SOAPProtocol". De huidige mogelijkheid is alleen "MTOM", dit ziet er dus bijv. uit als onderdeel van het raamwerk:
 
-<pre>
-    ...
+<code>
+    
     <ProjectType id="Project_xyz">
-    	
+    	...
         <description>Standaard project</description>
-    	
+    	...
         <complexElements>
-    	
+            ...
             <ComplexElementTypeRef idref="AnderWillekeurigComplexElement"/>
-    		
+    	    ...
         </complexElements>
     </ProjectType>
     <ComplexElementType id="AnderWillekeurigComplexElement">
         <description>Een ander willekeurig complex element</description>
-    
+        ...
         <simpleElements>
-    		
+    	    ...
             <SimpleElementTypeRef idref="SOAPProtocol"/>
-    		
+    	    ...
         </simpleElements>
     </ComplexElementType>
     <SimpleElementType id="SOAPProtocol">
-    	
+        ...
     </SimpleElementType>
-</pre>	
+    
+</code>	
 
 En voor het projectspecifieke bericht:
 
-<pre>
-
-	<Project_xyz id="Project-000">
-		
-		<anderWillekeurigComplexElement>
-			
-			<AnderWillekeurigComplexElementRef idref="ProjectGegevens"/>
-			
-		</anderWillekeurigComplexElement>
-	</Project_xyz>
-	<AnderWillekeurigComplexElement id="ProjectGegevens">
-		
-		<SOAPProtocol>MTOM</SOAPProtocol>
-		
-	</AnderWillekeurigComplexElement>
-
-</pre>	
-
-
-## Architectuur
-
-De architectuur is simpel gehouden door slechts een scenario te ondersteunen. Voorheen waren er meerdere architecturen waarbij de communicatie optioneel ook via een centrale server of gecombineerde server liep. Het scenario bevat onderlinge communicatie tussen SOAP servers met een kopie van deze berichten naar een of meerdere centrale servers indien aanwezig.
-
-Het doel en de achtergrond van deze architectuur:
-* de architectuur moet onderlinge communicatie tussen servers in een project kunnen ondersteunen zonder tussenkomst van andere servers,
-* de architectuur moet opslag van alle berichten op een of meerdere servers binnen een VISI project kunnen ondersteunen,
-* de gebruikte SOAP servers hoeven geen kennis van VISI te hebben,
-* communicatie moet beveiligd uitgevoerd kunnen worden,
-* berichten moeten eenduidig gecommuniceerd en opgeslagen kunnen worden,
-* attachments moeten meegestuurd kunnen worden,
-* de verzender moet te weten kunnen komen of een bericht goed is aangekomen,
-* elke server moet in staat zijn zonder extra kennis meerdere projecten te kunnen ondersteunen.
+<code>
+    
+    <Project_xyz id="Project-000">
+        ...
+        <anderWillekeurigComplexElement>
+            ...	
+            <AnderWillekeurigComplexElementRef idref="ProjectGegevens"/>
+            ...		
+        </anderWillekeurigComplexElement>
+    </Project_xyz>
+    <AnderWillekeurigComplexElement id="ProjectGegevens">
+        ...	
+        <SOAPProtocol>MTOM</SOAPProtocol>
+        ...	
+    </AnderWillekeurigComplexElement>
+    
+</code>	
 
 
-Architectuur:
- 
-Figuur 1 Architectuur
-
-![Afbeelding](media/fig-1-architectuur.png)
- 
-Scenario
-In dit geschetste scenario zijn de volgende objecten te vinden:
-* Dit Informatie Systeem (IS), dit is de applicatie die VISI berichten verwerkt en genereert en daarnaast de user interface is naar de eindgebruiker .
-* De eindgebruiker (P van persoon), dit is een persoon die voor een bepaalde organisatie een bepaalde rol vervuld. 
-* De SOAP Server (SOAP Server), dit is de server welke de afhandeling van VISI berichten volgens het in dit document beschreven pad afhandelt.
-* Een SOAP Central Server (SOAP Central Server), dit is een SOAP server welke een kopie krijgt van al het berichtenverkeer. Deze server doet niets anders dan het opslaan van deze berichten en het vermelden aan de verzendende SOAP server dat het bericht in goede orde ontvangen is. Er kunnen in een project 0 tot n (meerdere) SOAP Central Servers aanwezig zijn. Elke SOAP server is verplicht alle gecommuniceerde berichten ook naar alle aanwezige SOAP Central Servers te sturen (exacte kopie van gecommuniceerd bericht).
-
- 
 ## Scenario berichtuitwisseling
 
-De berichtuitwisseling (header etc., server address)  is opgezet op basis van drie randvoorwaarden:
-* De SOAP Servers en de SOAP Central Server(s) zijn niet in staat VISI berichten te parsen (inhoudelijk te begrijpen).
-* Het informatie systeem (IS) en de SOAP Server hebben geen (statische) kennis van het wel of niet aanwezig zijn van SOAP Central Servers, aanwezigheid van een of meerdere SOAP Central Servers moet dus ondersteund kunnen worden zonder iets aan het informatiesysteem of de SOAP server te wijzigen.
-* Alle informatie over de aanwezige configuratie, URL adressen van personen in een bepaalde rol e.d. zijn gevat in VISI berichten volgens het raamwerk voor het uit te voeren project (natuurlijk mag deze randvoorwaarde de software niet van een specifiek VISI raamwerk afhankelijk maken).
+De berichtuitwisseling (header etc., server address)  is opgezet op basis van de randvoorwaarden over informatie over de aanwezige configuratie, URL adressen van personen in een bepaalde rol e.d. zijn gevat in VISI berichten volgens het raamwerk voor het uit te voeren project (natuurlijk mag deze randvoorwaarde de software niet van een specifiek VISI raamwerk afhankelijk maken).
 
 Om aan bovenstaande randvoorwaarden te kunnen voldoen zullen we een nieuw concept binnen VISI lanceren.
 
-
-Ter info gebruikt nieuw VISI concept:
 * Enkele SimpleElementType objecten welk gedefinieerd kunnen worden in het raamwerk zullen op basis van hun naamgeving (attribuut: id) over alle raamwerken heen een specifiek gedrag/invulling toegekend krijgen.
 
 
@@ -135,7 +123,6 @@ We zullen aan de volgende SimpleElementTypes raamwerk-overschrijdend gedrag/invu
 <p>
 SimpleElementType	Behavior<br>
 SOAPServerURL	Bevat het URL van de SOAP server behorende bij deze Persoon, Rol of Organisatie<br>
-SOAPCentralServerURL	Bevat het URL van de SOAP central servers behorende bij dit project<br>
 SOAPProtocol	Bevat het gebruikte SOAP protocol</p>
 
  
@@ -146,7 +133,8 @@ Binnen deze notitie zullen we het volgende gebruik voorstellen (let wel: dit val
 Op raamwerkniveau: 
 * Elk raamwerk zal het volgende stukje XML bevatten om de SOAPServerURL aan een organisatie toe te kunnen wijzen:
 
-<pre>
+<code>
+    
 	<OrganisationType id="Organisatie">
 	
 		<description>Standaard organisatie</description>
@@ -169,35 +157,8 @@ Op raamwerkniveau:
 	<SimpleElementType id="SOAPServerURL">
 		
 	</SimpleElementType>
-	
-</pre>
-
-* Elk raamwerk zal het volgende stukje XML bevatten om de SOAPCentralServerURL aan een project toe te kunnen wijzen:
-	
-<pre>	
-
-	<ProjectType id="Project_xyz">
-		<description>Standaard project</description>
-		
-		<complexElements>
-			
-			<ComplexElementTypeRef idref="AnderWillekeurigComplexElement"/>
-			
-		</complexElements>
-	</ProjectType>
-	<ComplexElementType id="AnderWillekeurigComplexElement">
-		<description>Een ander willekeurig complex element</description>
-		
-		<simpleElements>
-			
-			<SimpleElementTypeRef idref="SOAPCentralServerURL"/>
-			
-		</simpleElements>
-	</ComplexElementType>
-	<SimpleElementType id="SOAPCentralServerURL">
-		
-	</SimpleElementType>
-</pre>		
+    
+</code>
 
 
 Alternatieven:
@@ -210,49 +171,29 @@ Op berichtniveau: we gaan er vanuit dat er bij een project een projectspecifiek 
 
 * In dit projectspecifieke bericht is voor elke organisatie gedefinieerd wat zijn SOAPServerURL is:
 
-<pre>	
-
-	<Organisatie id="Kraaijeveld">
-		<name>Kraaijeveld"s Aannemingsbedrijf BV</name>
+<code>	
+    
+	<Organisatie id="Bierco">
+		<name>Biereco"s Aannemingsbedrijf BV</name>
 		
 		<willekeurigComplexElement>
 			
-			<WillekeurigComplexElementRef idref="KraaijeveldGegevens"/>
+			<WillekeurigComplexElementRef idref="BierecoGegevens"/>
 			
 		</willekeurigComplexElement>
 	</Organisatie>
-	<WillekeurigComplexElement id="KraaijeveldGegevens">
+	<WillekeurigComplexElement id="BierecoGegevens">
 		
-		<SOAPServerURL>http://192.168.0.102/visi.wsdl-</SOAPServerURL>
+		<SOAPServerURL>http://192.168.0.102/visi</SOAPServerURL>
 		
 	</WillekeurigComplexElement>
-	
-</pre>	
-
-* Bij de projectdefinitie in het projectspecifieke bericht zal de SOAPCentralServerURL te vinden zijn:
-
-<pre>	
-
-	<Project_xyz id="Project-000">
-		<name>VISI-Showcase</name>
-		
-		<anderWillekeurigComplexElement>
-			
-			<AnderWillekeurigComplexElementRef idref="ProjectGegevens"/>
-			
-		</anderWillekeurigComplexElement>
-	</Project_xyz>
-	<AnderWillekeurigComplexElement id="ProjectGegevens">
-		
-		<SOAPCentralServerURL>http://192.168.0.1/visi.wsdl</SOAPCentralServerURL>
-		
-	</AnderWillekeurigComplexElement>
-</pre>	
+    
+</code>	
 
 
 ### Gevolgen
 
-De gevolgen van deze aanpak is dat het informatie systeem (IS) in staat is bij elk bericht binnen een transactie te achterhalen welke URL behoort tot de afzender en welke URL behoort tot de ontvanger. Daarnaast kan in het geval van aanwezigheid van Central Servers direct gezien worden welke URL behoort tot de centrale server. Deze gegevens (URL afzender, URL ontvanger en optioneel één of meerdere URL’s centrale server(s)) zullen gecommuniceerd moeten worden met de SOAP server behorende bij dit informatiesysteem, natuurlijk samen met het VISI bericht zelf. Deze communicatie tussen het informatiesysteem en bijbehorende SOAP server valt buiten deze notitie en is aan de ontwikkelaar van het informatiesysteem en de bijbehorende SOAP server zelf.
+De gevolgen van deze aanpak is dat het informatie systeem (IS) in staat is bij elk bericht binnen een transactie te achterhalen welke URL behoort tot de afzender en welke URL behoort tot de ontvanger. Deze gegevens (URL afzender, URL ontvanger en optioneel één of meerdere URL’s centrale server(s)) zullen gecommuniceerd moeten worden met de SOAP server behorende bij dit informatiesysteem, natuurlijk samen met het VISI bericht zelf. Deze communicatie tussen het informatiesysteem en bijbehorende SOAP server valt buiten deze notitie en is aan de ontwikkelaar van het informatiesysteem en de bijbehorende SOAP server zelf.
  
  
 ### Berichtuitwisseling initialisatie
@@ -269,7 +210,6 @@ Deze beschrijving is geschikt voor alle type berichten binnen transacties, zowel
 Bij de voorbeelden:
 * URL SOAP server versturende partij: 	http://192.168.0.102
 * URL SOAP server ontvangende partij:	http://192.168.0.138
-* URL SOAP central server:			
  
 ![Afbeelding](media/fig-2.png)
 
@@ -279,21 +219,17 @@ De volgorde van berichtuitwisseling:
 
 2. De URL adressen van het versturende en het ontvangende IS worden door het versturende IS uit het opgemaakte bericht gehaald.
 
-3. Het URL adres van de SOAP central server wordt gezocht maar niet gevonden in het project¬specifieke bericht (anders bevonden we ons in scenario II).
-
-4. Het opgestelde VISI bericht + URL adres van versturende SOAP server + URL adres van ontvangende SOAP server + URL adres van SOAP central server (deze is in dit scenario leeg) worden naar de bijbehorende server gecommuniceerd (wijze van communicatie wordt aan de softwarepartijen zelf overgelaten).
+3. Het opgestelde VISI bericht + URL adres van versturende SOAP server + URL adres van ontvangende SOAP server worden naar de bijbehorende server gecommuniceerd (wijze van communicatie wordt aan de softwarepartijen zelf overgelaten).
  
-5. De SOAP server van de versturende partij bouwt een SOAP bericht als volgt op:
-<pre>
-<SOAP-ENV:Envelope ...>
+4. De SOAP server van de versturende partij bouwt een SOAP bericht als volgt op:
+<code>
+    
+    <SOAP-ENV:Envelope ...>
 	<SOAP-ENV:Header>
 		<SOAPServerURL ...>
 			<sender>http://192.168.0.102</sender>
 			<receiver>http://192.168.0.138</reciever>
 		</SOAPServerURL>
-		<SOAPCentralServerURL ...>
-			<server/>
-		</SOAPCentralServerURL>
 		<UniqueID ...>
 			<ID>UniqueIDonMessageInitiatingSOAPServer_XYZ</ID>
 		</UniqueID>
@@ -314,26 +250,28 @@ De volgorde van berichtuitwisseling:
 			</visiXML_MessageSchema>
 		</parseMessage>
 	</SOAP-ENV:Body>
-</SOAP-ENV:Envelope>
-</pre> 
+    </SOAP-ENV:Envelope>
+    
+</code> 
 
 <p class="note" title="ID van attachement">
 note: de id van elke attachment is gelijk aan de id die in het VISI bericht 
 	wordt gebruikt om de metadata van een attachment te beschrijven. (<pre><Data id=”abc”></pre>)
 	</p>
 
-6. De SOAP server van de versturende partij verstuurt dit bericht naar de SOAP Central Server of indien dit niet mogelijk is (bij dit scenario niet mogelijk) naar de SOAP server van de ontvangende partij.
+5. De SOAP server van de versturende partij verstuurt dit bericht naar de SOAP Central Server of indien dit niet mogelijk is (bij dit scenario niet mogelijk) naar de SOAP server van de ontvangende partij.
 
-7. De SOAP server van de ontvangende partij stuurt een standaard SOAP exception error bericht naar de versturende partij.
-7.a.De SOAP server van de ontvangende partij stuurt het VISI message deel van het bericht door naar het IS van de ontvangende partij (wijze van communicatie wordt aan de softwarepartijen zelf overgelaten).
+6. De SOAP server van de ontvangende partij stuurt een standaard SOAP exception error bericht naar de versturende partij.
+6.a.De SOAP server van de ontvangende partij stuurt het VISI message deel van het bericht door naar het IS van de ontvangende partij (wijze van communicatie wordt aan de softwarepartijen zelf overgelaten).
 
-8. Het IS van de ontvangende partij interpreteert het VISI bericht en indien akkoord verstuurt hij dit bericht + URL adres van versturende SOAP server + URL adres van ontvan¬gende SOAP server + URL adres van SOAP central server (deze is in dit scenario leeg) naar zijn eigen SOAP server (dus van de ontvangende partij). De wijze van communicatie wordt aan de softwarepartijen zelf overgelaten.
+7. Het IS van de ontvangende partij interpreteert het VISI bericht en indien akkoord verstuurt hij dit bericht + URL adres van versturende SOAP server + URL adres van ontvan¬gende SOAP server naar zijn eigen SOAP server (dus van de ontvangende partij). De wijze van communicatie wordt aan de softwarepartijen zelf overgelaten.
 
 
 9. De SOAP server van de ontvangende partij bouwt bij succes een SOAP reactiebericht op als volgt:
 
-	<pre>
-<SOAP-ENV:Envelope ...>
+<code>
+    
+    <SOAP-ENV:Envelope ...>
 	<SOAP-ENV:Header>
 		<SOAPServerURL ...>
 			<sender>http://192.168.0.102</sender>
@@ -351,13 +289,15 @@ note: de id van elke attachment is gelijk aan de id die in het VISI bericht
 		<ERROR CODE=”0”></ERROR>
 	<ERRORS>
 	</SOAP-ENV:Body>
-</SOAP-ENV:Envelope>
-</pre>
+    </SOAP-ENV:Envelope>
+    
+</code>
 
 bij een enkelvoudige fout:
 
-<pre>
-<SOAP-ENV:Envelope ...>
+<code>
+    
+   <SOAP-ENV:Envelope ...>
 	<SOAP-ENV:Header>
 		<SOAPServerURL ...>
 			<sender>http://192.168.0.102</sender>
@@ -375,13 +315,15 @@ bij een enkelvoudige fout:
 		<ERROR CODE=”1”> Er is een fout opgetreden bij …</ERROR>
 	<ERRORS>
 	</SOAP-ENV:Body>
-</SOAP-ENV:Envelope>
-</pre>
+    </SOAP-ENV:Envelope>
+    
+</code>
 
 Bij meerdere fouten (bijvoorbeeld bij validatie van de xsd):
 
-<pre>
-<SOAP-ENV:Envelope ...>
+<code>
+    
+    <SOAP-ENV:Envelope ...>
 	<SOAP-ENV:Header>
 		<SOAPServerURL ...>
 			<sender>http://192.168.0.102</sender>
@@ -400,21 +342,22 @@ Bij meerdere fouten (bijvoorbeeld bij validatie van de xsd):
 				<ERROR CODE=”1”>Waarden van simpel element2 is niet volgens definitie</ERROR>
 	<ERRORS>
 	</SOAP-ENV:Body>
-</SOAP-ENV:Envelope>
-</pre>
+    </SOAP-ENV:Envelope>
+    
+</code>
 		
 In geval van geen fout is de code 0, bij een onbekende fout  is de code 1, deze foutmeldingen zullen moeten worden opgelost door de programmeurs. Alle foutmeldingen met een hogere code betreffen fouten die door de software begrepen kunnen worden.
 
-10. De SOAP server van de ontvangende partij verstuurt dit reactiebericht naar de SOAP server van de versturende partij en naar elke SOAP central server.
-a.	De SOAP server van de versturende partij stuurt een standaard SOAP exception error bericht naar de ontvangende partij als standaard reactie op dit reactiebericht.
+9. De SOAP server van de ontvangende partij verstuurt dit reactiebericht naar de SOAP server van de versturende partij en naar elke SOAP central server.
+9a.	De SOAP server van de versturende partij stuurt een standaard SOAP exception error bericht naar de ontvangende partij als standaard reactie op dit reactiebericht.
 
-11. Reactiebericht terug bij af, controleer of de informatie overeenkomt met het verstuurde bericht en indien akkoord notificeer het IS van de ontvangende partij dat het bericht volgens afspraak is verstuurd en ontvangen.
+10. Reactiebericht terug bij af, controleer of de informatie overeenkomt met het verstuurde bericht en indien akkoord notificeer het IS van de ontvangende partij dat het bericht volgens afspraak is verstuurd en ontvangen.
 
 Opmerking:
 * Bovengenoemde proces blijft hanteerbaar indien beide partijen dezelfde IS gebruiken. In dat geval is het URL adres van de ontvangende en de versturende SOAP server identiek.
 * Tijdens het uitkomen van dit protocol zijn er geen standaard fout codes hoger dan 1 gedefinieerd. Zodra een dergelijke fout code is vastgelegd wordt duidelijk aangegeven wat de fout code is, een omschrijving van de fout en een eenduidige omschrijving van hoe de software zou moeten reageren.
 * Indien er niet (‘op tijd’) gereageerd wordt op een bericht wordt niet nogmaals hetzelfde bericht verstuurd. We blijven wachten op het antwoord of vinden een oplossing buiten VISI om.
-* In stap 7 en stap 10 is een bericht altijd eerst naar de andere partij gestuurd. Pas als via het standaard SOAP protocol een goede reactie is ontvangen (7a en 10a) wordt een kopie naar de SOAP Central Server(s) gestuurd.
+* In stap 6 en stap 9 is een bericht altijd eerst naar de andere partij gestuurd. 
  
 	
 ## Ontsluiten Raamwerk en update scenario
@@ -456,7 +399,7 @@ De attachments en elementen in de header file worden zoals in 3. beschreven verw
  
 ## Encryptie
 
-Het gekozen protocol MTOM heeft in de Microsoft Web Services Enhancements (WSE) 3.0 een integratie van MTOM en security voor de implementeur. Mijn voorstel zou zijn deze door Microsoft gekozen bij MTOM passende security aan te houden en op basis van ervaringen van eerste implementaties uitspraken voor deze VISI notitie vast te stellen.
+Het gekozen protocol MTOM heeft in de Microsoft Web Services Enhancements (WSE) 3.0 een integratie van MTOM en security voor de implementeur. 
 
 <p class="note" title="Geldigheid">
 Alleen geldig indien deze encryptie ondersteund wordt door alle systemen.</p>
