@@ -173,7 +173,7 @@ Een persoon kan gemachtigd zijn om namens meerdere geautoriseerde personen (in r
 ### Project Setup
 
 Project, personen, organisaties, rollen en vervangingen dienen bij alle projectdeelnemers bekend en gelijk te zijn. Daarom wordt deze setup van een project vastgelegd in een uitwisselbaarformaat: project specifiek bestand. Dit bestand wordt verspreid onder de deelnemende organisaties. Dit is meestal per organisatie vanwege het eerdergenoemde digitale adres van een organisatie. Dit digitale adres weet hierdoor van het bestaan van een project. In het gebruikte voorbeeld "Realisatie West- / Oostlijn" met unieke identificatie _ _badc9dab-807e-4319-bd56-60c57605e109_ is bekend bij alle organisaties van het project.
-De projectcommunicatie middels het versturen en beantwoorden van berichten kan starten, zie paragraaf https://bimloket.github.io/visi/visi1.6/#versturen-van-een-bericht<div class="issue" data-number="138"></div> 
+De projectcommunicatie middels het versturen en beantwoorden van berichten kan starten, zie paragraaf https://bimloket.github.io/visi/visi1.6/#versturen-van-een-bericht</div> 
 
 
 ## Raamwerk / Communicatiesjabloon van een project
@@ -1207,8 +1207,6 @@ Met [Bericht in transactie](https://bimloket.github.io/visi/visi1.6/#volgorde-va
 
 De definitie van de groep voor het opslaan van bijlagen verzonden met een bericht binnen een transactie. Op dit moment wordt in de praktijk geen functionaliteit door leveranciers toegekend aan dit element. Een GroupType maakt echter wel onderdeel uit van de structuur van een raamwerk.
 
-<div class="issue" data-number="139"></div>   
- 
 <div class="def" title="Eigenschappen van het element GroupType">
 	<dl> 
 		<dt>[=id=]*
