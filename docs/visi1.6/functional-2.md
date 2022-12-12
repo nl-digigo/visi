@@ -254,7 +254,7 @@ tekst
 
 ### Wijzigingen in een raamwerk
 
-Gedurende de looptijd van een project kunnen twee soorten wijzigen doorgevoerd worden. De eerste wijziging betreft wijzigingen aan het project, zoals gewijzigde projectnaam, gewijzigde rolverdeling. Bijvoorbeeld een extra projectmedewerker of een nieuwe projectmedewerker als permanente vervanger van een huidige medewerker. De tweede wijzing betreft wijzigingen aan het projectcommunicatiesjabloon, zoals een gewijzigd transactietype, gewijzigd berichttype.
+Gedurende de looptijd van een project kunnen twee soorten wijzigingen doorgevoerd worden. De eerste wijziging betreft wijzigingen aan het project, zoals gewijzigde projectnaam, gewijzigde rolverdeling. Bijvoorbeeld een extra projectmedewerker of een nieuwe projectmedewerker als permanente vervanger van een huidige medewerker. De tweede wijzing betreft wijzigingen aan het projectcommunicatiesjabloon, zoals een gewijzigd transactietype, gewijzigd berichttype.
 
 Iedere wijziging moet bij alle betrokken organisaties doorgevoerd worden. Dit betekent dat de gewijzigde bestanden (project specifiek bestand en / of raamwerk) verstrekt moeten worden aan alle - bij het project betrokken - organisaties. Omdat wijzigingen van invloed kunnen zijn op de inhoud van een project, dient de wijziging vooraf inhoudelijk afgestemd te worden tussen projectmedewerkers. 
 
@@ -266,7 +266,7 @@ Iedere wijziging moet bij alle betrokken organisaties doorgevoerd worden. Dit be
 #### Machtiging / tijdelijke vervanging
 
 *Substituting*
-De wijziging met de kleinste impact is het wijzigen van de machtigingen. Zoals in paragraaf 1.6.2 beschreven is erin voorzien om één of meerdere gemachtigden aan te wijzen voor een persoon in rol (van organisatie). Voert een gemachtigde een handeling uit, dan is dit altijd uit naam van de geautoriseerde persoon. Een machtiging kan verwijderd worden, want de geautoriseerde persoon kan de handeling altijd afmaken. Wordt een machtiging toegevoegd, dan kan de gemachtigde direct handelen op bestaande transacties van de geautoriseerde persoon, en nieuwe transacties starten (namens de geautoriseerde persoon). Een geautoriseerd persoon mag nooit verwijderd worden (zie paragraaf ....).
+De wijziging met de kleinste impact is het wijzigen van de machtigingen. Zoals in paragraaf 1.6.2 beschreven is erin voorzien om één of meerdere gemachtigden aan te wijzen voor een persoon in rol (van organisatie). Voert een gemachtigde een handeling uit, dan is dit altijd uit naam van de geautoriseerde persoon. Een machtiging kan verwijderd worden, want de geautoriseerde persoon kan de handeling altijd afmaken. Wordt een machtiging toegevoegd, dan kan de gemachtigde direct handelen op bestaande transacties van de geautoriseerde persoon, en nieuwe transacties starten (namens de geautoriseerde persoon). Een geautoriseerd persoon mag nooit verwijderd worden.
 
 
 #### Nieuwe personen
@@ -284,7 +284,7 @@ Voor de traceerbaarheid en transparantie kunnen a) er nooit geautoriseerde perso
 <p>Piet heeft Rol A en Rol B (pir 1 en pir2). Truus vervangt rol A (pir3 successor van pir 1) en kees vervangt rol B (pir4 successor van pir 2)  Op een bepaald moment neemt hans de verantwoordelijkheid voor rol  A van Truus over (pir5 successor van pir 3) Weer later komt piet op het project terug en neemt beide rollen weer op zich (pir 6 successor van pir 5 en pir 7 successor van pir 4)<br>
 <br>
 Als je nu kijkt naar rol A, dan is er een onafgebroken keten vanaf de eerste verantwoordelijke tot de huidige verantwoordelijke. Piet behandelt vanaf dat moment dus de transacties van Pir 1(zichzelf), Pir3 (Truus), Pir5(Hans) en Pir 6, (de actuele Pir van zichzelf)<br>
-PLAATJE???</p>
+</p>
 </aside>
 
 
@@ -334,12 +334,12 @@ De verwijzing naar het bijbehorende raamwerk is eveneens aanwezig in ieder beric
 
 #### Gedrag software rondom gekoppelde berichtenflow
 
-tekst
+
 
 
 #### Gedrag rondom wel en niet aanbieden berichten obv raamwerk/rol
 
-tekst
+
 
 # Projectarchief
 
@@ -423,9 +423,9 @@ Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)autom
 DEMO considers an organisation as a system of social actors working together to achieve results (products and / or services) for the organisation. A human being is the only social actor we know. DEMO always considers human beings responsible for what happens in an organisation. Collaboration takes place in transactions involving two actors:
 
 <ul>
-<li> initiator, who wants something (the result);</li>
-<li>executor, who accomplishes the result.</li>
-<ul>
+1. initiator, who wants something (the result);
+2. executor, who accomplishes the result.
+</ul>
 A transaction has three phases, 1) Order Phase, 2) Execution Phase and 3) Result Phase. Order Phase is a conversation in which actors try to reach agreement on the product to be produced. During Execution Phase the product and / or service of the transaction is being produced. Result Phase is a conversation in which the actors try to reach agreement on the produced product.
 
 ![Transaction phases](media/phases-of-a-transaction.png)</aside>
