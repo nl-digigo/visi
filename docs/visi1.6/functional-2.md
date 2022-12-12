@@ -428,7 +428,7 @@ DEMO considers an organisation as a system of social actors working together to 
 <ul>
 A transaction has three phases, 1) Order Phase, 2) Execution Phase and 3) Result Phase. Order Phase is a conversation in which actors try to reach agreement on the product to be produced. During Execution Phase the product and / or service of the transaction is being produced. Result Phase is a conversation in which the actors try to reach agreement on the produced product.
 
-afbeelding phases-of-a-transaction.png
+![Transaction phases](media/phases-of-a-transaction.png)</aside>
   
 The sequence of actions request, promise, state and accept leads to a successful transaction. This sequence is also called "happy flow".
   
@@ -439,7 +439,7 @@ The sequence of actions request, promise, state and accept leads to a successful
 | st           | State   | Stated               |
 | ac           | Accept  | Accepted             |
   
-afbeelding DEMO-transaction-pattern.gif
+![Demo transaction pattern](media/DEMO-transaction-pattern.gif)</aside>
   
 After the action request or a state the flow is extended with two discussions. The actions (events) are displayed by squares. The actions are: request, decline, quit, promise, state, reject, stop, accept.
 
@@ -463,8 +463,8 @@ Usually the actors agree, and this results into a (modified) request and a promi
 Something comparable happens after a state by the executor. The initiator may not accept the product and / or service. The initiator rejects the product. The transaction is in a state of discussion in which the actors talk to each other to agree.
 
 Usually the actors agree, and this results into a (modified) state and a accept. When no agreement is reached the executor stops the transaction. The transaction has reached a final state, but failed.
-  
-afbeelding DEMO-transaction-pattern-with-revokes.gif
+
+![Demo transaction pattern with revokes](media/DEMO-transaction-pattern-with-revokes.gif)</aside> 
   
 A complete transaction pattern arises when we also take into account the fact that actors can revoke their primary actions (request, promise, state, accept). The initiator can declare a revoke request and revoke accept. The executor can always declare a revoke promise and revoke state. A revoke must be followed by an allow or a refuse. An allow changes the state of the transaction. An allow of a revoke request changes the state of the transaction into "initiated". An allow of a revoke promise changes the state of the transaction into "requested". An allow of a revoke state changes the state of the transaction into "promised". An allow of a revoke accept changes the state of the transaction into "stated".
 
