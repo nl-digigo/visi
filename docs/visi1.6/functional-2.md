@@ -423,9 +423,10 @@ Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)autom
 DEMO considers an organisation as a system of social actors working together to achieve results (products and / or services) for the organisation. A human being is the only social actor we know. DEMO always considers human beings responsible for what happens in an organisation. Collaboration takes place in transactions involving two actors:
 
 <ul>
-1. initiator, who wants something (the result);
-2. executor, who accomplishes the result.
+<li> initiator, who wants something (the result);</li>
+<li> executor, who accomplishes the result.</li>
 </ul>
+
 A transaction has three phases, 1) Order Phase, 2) Execution Phase and 3) Result Phase. Order Phase is a conversation in which actors try to reach agreement on the product to be produced. During Execution Phase the product and / or service of the transaction is being produced. Result Phase is a conversation in which the actors try to reach agreement on the produced product.
 
 ![Transaction phases](media/phases-of-a-transaction.png)</aside>
