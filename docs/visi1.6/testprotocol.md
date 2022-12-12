@@ -75,7 +75,6 @@ Nadat Ober A naar Klant K heeft communiceerd geeft Kok X alsnog een akkoord aan 
 
 ### Scenario 2c
 
-<div class="issue" data-number="134"></div>
 
 *Doel*
 
@@ -599,7 +598,6 @@ Kok X heeft nu het recept en kan akkoord geven aan Ober A
 
 Ober A bevestigt de bestelling aan Klant K
 
-<div class="issue" data-number="135"></div>
 
 
 ### Scenario 7a
