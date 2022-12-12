@@ -402,8 +402,8 @@ Voor het wijzigen van een raamwerk of een projectspecifiekbericht zijn de rollen
 ## De beschikbare transacties binnen het META-raamwerk
 Het META-raamwerk bevat twee transacties met als doel:
 
-- Verspreiden van een initieel raamwerk en projectspecifiek bericht (VISI project initia-tie).
-- Verspreiden van een gewijzigd raamwerk en/of projectspecifiek bericht (Nieuw of ge-wijzigd raamwerk of projectspecifiekbericht transactie)
+- Verspreiden van een initieel raamwerk en projectspecifiek bericht (VISI project initiatie).
+- Verspreiden van een gewijzigd raamwerk en/of projectspecifiek bericht (Nieuw of gewijzigd raamwerk of projectspecifiekbericht transactie)
 
 Hieronder is de communicatie per transactie weergegeven in een transactiediagram.
 
@@ -417,7 +417,90 @@ Hieronder is de communicatie per transactie weergegeven in een transactiediagram
 ## Toepassing META-raamwerk
 Het META-raamwerk biedt de mogelijkheid aan software leveranciers om (semi)automatisch een nieuw- of gewijzigd raamwerk en/of projectspecifiekbericht in gebruik te nemen. Daarnaast komt het META-raamwerk de interoperabiliteit ten goede omdat meer zekerheid bestaat of de juiste versie van een raamwerk eb/of projectspecifiekbericht in gebruik is. 
 
+# DEMO oplegger
 
+## DEMO transaction pattern
+DEMO considers an organisation as a system of social actors working together to achieve results (products and / or services) for the organisation. A human being is the only social actor we know. DEMO always considers human beings responsible for what happens in an organisation. Collaboration takes place in transactions involving two actors:
+
+<ul>
+<li> initiator, who wants something (the result);</li>
+<li>executor, who accomplishes the result.</li>
+<ul>
+A transaction has three phases, 1) Order Phase, 2) Execution Phase and 3) Result Phase. Order Phase is a conversation in which actors try to reach agreement on the product to be produced. During Execution Phase the product and / or service of the transaction is being produced. Result Phase is a conversation in which the actors try to reach agreement on the produced product.
+
+afbeelding phases-of-a-transaction.png
+  
+The sequence of actions request, promise, state and accept leads to a successful transaction. This sequence is also called "happy flow".
+  
+| Abbreviation | Action  | State of Transaction |
+| ------------ | ------- | -------------------- |
+| rq           | Request | Requested            |
+| pm           | Promise | Promised             |
+| st           | State   | Stated               |
+| ac           | Accept  | Accepted             |
+  
+afbeelding DEMO-transaction-pattern.gif
+  
+After the action request or a state the flow is extended with two discussions. The actions (events) are displayed by squares. The actions are: request, decline, quit, promise, state, reject, stop, accept.
+
+An action creates a fact, which is displayed with a circle. The transaction has reached a certain state: requested, declined, quitted, promised, stated, rejected, stopped, accepted.
+  
+| Abbreviation | Action  | State of Transaction |
+| ------------ | ------- | -------------------- |
+| rq           | Request | Requested            |
+| pm           | Promise | Promised             |
+| st           | State   | Stated               |
+| ac           | Accept  | Accepted             |
+| dc           | Decline | Declined             |
+| qt           | Quit    | Quitted              |
+| rj           | Reject  | Rejected             |
+| sp           | Stop    | Stopped              |
+  
+The executor may not be able to execute the request. The executor declines the request. The transaction is in a state of discussion in which the actors talk to each other to agree. (A discussion state is indicated by a white circle with double black border.)
+
+Usually the actors agree, and this results into a (modified) request and a promise. When no agreement is reached the initiator quits the transaction. The transaction has reached a final state, but failed.
+
+Something comparable happens after a state by the executor. The initiator may not accept the product and / or service. The initiator rejects the product. The transaction is in a state of discussion in which the actors talk to each other to agree.
+
+Usually the actors agree, and this results into a (modified) state and a accept. When no agreement is reached the executor stops the transaction. The transaction has reached a final state, but failed.
+  
+afbeelding DEMO-transaction-pattern-with-revokes.gif
+  
+A complete transaction pattern arises when we also take into account the fact that actors can revoke their primary actions (request, promise, state, accept). The initiator can declare a revoke request and revoke accept. The executor can always declare a revoke promise and revoke state. A revoke must be followed by an allow or a refuse. An allow changes the state of the transaction. An allow of a revoke request changes the state of the transaction into "initiated". An allow of a revoke promise changes the state of the transaction into "requested". An allow of a revoke state changes the state of the transaction into "promised". An allow of a revoke accept changes the state of the transaction into "stated".
+
+A refuse doesn't change the state of the transaction.
+  
+| Abbreviation | Action         | State of Transaction |
+| ------------ | -------------- | -------------------- |
+| rq           | Request        | Requested            |
+| pm           | Promise        | Promised             |
+| st           | State          | Stated               |
+| ac           | Accept         | Accepted             |
+| dc           | Decline        | Declined             |
+| qt           | Quit           | Quitted              |
+| rj           | Reject         | Rejected             |
+| sp           | Stop           | Stopped              |
+| rv rq        | Revoke Request | Revoked Request      |
+| rv pm        | Revoke Promise | Revoked Promise      |
+| rv st        | Revoke State   | Revoked State        |
+| rv ac        | Revoke Accept  | Revoked Accept       |
+| al           | Allow          | Allowed              |
+| rf           | Refuse         | Refused              |
+
+
+An examples to illustrate.
+
+The result was accepted by the initiator, and then the initiator detects an error. The action accept is revoked, because the result is not according to the request. The executor receives the revoke accept and can allow or refuse it. A negotiation may start between the actors about the error on the result. The actors can agree on a modified result. In that case the action "state" is also revoked (and allowed). The executor creates a customized result and states it.
+
+If the revoke is refused, the state of the transaction doesn't change (and is accepted).
+
+Another examples to illustrate.
+
+The result has already been accepted, but the initiator wants something else. The action request is revoked, because a different result is requested. The executor receives the revoke request and can allow or refuse it. A negotiation may start between the actors about a different result. The actors can agree on a different result. In that case the action "request" is revoked (and allowed). The initiator sends a different request to the executor. The executor promises and states. The initiator accepts the different result which is according to the different request.
+
+If the revoke is refused, the state of the transaction doesn't change (and is accepted).
+  
+  
 # Interactief informatiemodel
 <p>1 Interactief informatiemodel van _2.exp Raamwerken</p>
 
