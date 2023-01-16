@@ -52,4 +52,38 @@ In dit geschetste scenario zijn de volgende objecten te vinden:
 * Dit Informatie Systeem (IS), dit is de applicatie die VISI berichten verwerkt en genereert.
 * De eindgebruiker (P van persoon), dit is een persoon die voor een bepaalde organisatie een bepaalde rol vervuld. 
 
+## Protocollen
+
+De volgende protocollen worden gebruikt:
+
+Voor implementatie wordt het MTOM (SOAP Message Transmission Optimization Mechanism) protocol vereist. De laatste versie van MTOM op het moment van uitbrengen van deze notitie is [deze](http://www.w3.org/TR/soap12-mtom/)
+
+Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit bericht bevat onder projectinformatie een simpel element "SOAPProtocol". De huidige mogelijkheid is alleen "MTOM", dit ziet er dus bijv. uit als onderdeel van het raamwerk:
+
+<code>
+    
+    <ProjectType id="Project_xyz">
+    	...
+        <description>Standaard project</description>
+    	...
+        <complexElements>
+            ...
+            <ComplexElementTypeRef idref="AnderWillekeurigComplexElement"/>
+    	    ...
+        </complexElements>
+    </ProjectType>
+    <ComplexElementType id="AnderWillekeurigComplexElement">
+        <description>Een ander willekeurig complex element</description>
+        ...
+        <simpleElements>
+    	    ...
+            <SimpleElementTypeRef idref="SOAPProtocol"/>
+    	    ...
+        </simpleElements>
+    </ComplexElementType>
+    <SimpleElementType id="SOAPProtocol">
+        ...
+    </SimpleElementType>
+    
+</code>	
 
