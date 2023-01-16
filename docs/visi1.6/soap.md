@@ -60,6 +60,7 @@ Voor implementatie wordt het MTOM (SOAP Message Transmission Optimization Mechan
 
 Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit bericht bevat onder projectinformatie een simpel element "SOAPProtocol". De huidige mogelijkheid is alleen "MTOM", dit ziet er dus bijv. uit als onderdeel van het raamwerk:
 
+<div class="example" title="Code">
 <code>
     
     <ProjectType id="Project_xyz">
@@ -86,4 +87,4 @@ Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit berich
     </SimpleElementType>
     
 </code>	
-
+</div>
