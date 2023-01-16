@@ -62,27 +62,46 @@ Het gebruikte protocol is te vinden in het projectspecifieke bericht. Dit berich
 
 `
 	<xs:enumeration value="Automatisch gevuld"/>
-  
+` 
+`
     <ProjectType id="Project_xyz">
-    	...
+`
+`
         <description>Standaard project</description>
-    	...
+`
+`
         <complexElements>
-            ...
+`
+`
             <ComplexElementTypeRef idref="AnderWillekeurigComplexElement"/>
-    	    ...
+`
+`
         </complexElements>
+`
+`
     </ProjectType>
+`
+`
     <ComplexElementType id="AnderWillekeurigComplexElement">
+`
+`
         <description>Een ander willekeurig complex element</description>
-        ...
+`
+`
         <simpleElements>
-    	    ...
+`
+`
             <SimpleElementTypeRef idref="SOAPProtocol"/>
-    	    ...
+`
+`
         </simpleElements>
+`
+`
     </ComplexElementType>
+`
+`
     <SimpleElementType id="SOAPProtocol">
-        ...
+`
+`
     </SimpleElementType>
 `
