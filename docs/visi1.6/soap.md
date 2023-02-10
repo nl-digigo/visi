@@ -43,7 +43,7 @@ Architectuur:
  
 Figuur 1 Architectuur
 
-![Afbeelding](media/fig-1-architectuur.png)
+![Afbeelding](media/fig-1-architectuur.jpg)
  
 
 Scenario
@@ -303,7 +303,7 @@ Bij de voorbeelden:
 * URL SOAP server versturende partij: 	http://192.168.0.102
 * URL SOAP server ontvangende partij:	http://192.168.0.138
  
-![Afbeelding](media/fig-2.png)
+![Afbeelding](media/fig-2.jpg)
 
 De volgorde van berichtuitwisseling:	
 
