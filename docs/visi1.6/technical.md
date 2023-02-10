@@ -9,9 +9,18 @@ abcdef
 
 abcdef
 
+## De volgorde van berichtuitwisseling
+
+1. Het VISI bericht wordt opgemaakt door het versturende IS op basis van het ontvangen bericht (in geval van een nieuwe transactie wordt de informatie uit het projectspecifieke bericht gehaald).
+
+2. De URL adressen van het versturende en het ontvangende IS worden door het versturende IS uit het opgemaakte bericht gehaald.
+
+3. Het opgestelde VISI bericht + URL adres van versturende SOAP server + URL adres van ontvangende SOAP server worden naar de bijbehorende server gecommuniceerd (wijze van communicatie wordt aan de softwarepartijen zelf overgelaten).
+
 ## Hoe bouw je een VISI XML bericht op
 
-1. De SOAP server van de versturende partij bouwt een VISI XML bericht als volgt op:
+4. De softwareleverancier moet ervoor zorgen dat een VISI XML bericht wordt opgebouwd.
+De SOAP server van de versturende partij bouwt een VISI XML bericht op met een vaste volgorde.
 
 `
     <SOAP-ENV:Envelope ...>
@@ -102,7 +111,7 @@ abcdef
 `
 <br>
 `
-				…						//	VISI XML Bericht
+				…						//	VISI Bericht
 `
 <br>
 `
@@ -126,6 +135,9 @@ note: de id van elke attachment is gelijk aan de id die in het VISI XML bericht
 	wordt gebruikt om de metadata van een attachment te beschrijven:
 </p>
 
+<p class="note" title="ID van attachement">
+VISI software moet het raamwerk raadplegen om op te nemen in het VISI XML bericht ter hoogte van <visiXML_MessageSchema …>
+</p>
 
 ## Hoe verstuur je een VISI bericht
 
