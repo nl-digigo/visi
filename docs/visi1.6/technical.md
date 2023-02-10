@@ -136,7 +136,10 @@ note: de id van elke attachment is gelijk aan de id die in het SOAP bericht
 </p>
 
 <p class="note" title="ID van attachement">
-VISI software moet het raamwerk raadplegen om op te nemen in het SOAP bericht ter hoogte van '<visiXML_MessageSchema …>'
+VISI software moet het raamwerk raadplegen om op te nemen in het SOAP bericht ter hoogte van 
+`
+<visiXML_MessageSchema …>
+` 
 </p>
 
 ## Hoe verstuur je een VISI bericht
