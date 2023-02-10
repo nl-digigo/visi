@@ -10,22 +10,65 @@ abcdef
 abcdef
 
 
-## Architectuur
+## Hoe verstuur je een SOAP bericht
+
+abcdef
+
+
+## Hoe bouw je een VISI bericht op
+
+abcdef
+
+ 
+### Berichtuitwisseling vaste elementen op raamwerkniveau
+
+abcdef
+
+
+### Berichtuitwisseling vaste elementen op berichtniveau
+
+abcdef
+
+
+### Gevolgen
 
 abcdef
  
-Figuur 1 Architectuur
-
-![Afbeelding](media/fig-1-architectuur.png)
  
-
-* A
-* B
-* C
-
-## Protocollen
+### Berichtuitwisseling initialisatie
 
 abcdef
+
+ 
+### Berichtuitwisseling scenario
+
+abcdef
+
+	
+## Ontsluiten Raamwerk en update scenario
+
+abcdef
+ 
+	
+## Ontsluiten projectspecifiek bericht scenario
+
+abcdef
+
+ 
+## Attachments, Ref’s en Id’s
+
+abcdef
+ 
+## Encryptie
+
+abcdef
+
+## SOAP function calls
+
+abcdef
+
+## Project specifiek bericht
+voorbeeld code markdown
 
 `
 	<xs:enumeration value="Automatisch gevuld"/>
@@ -123,285 +166,18 @@ En voor het projectspecifieke bericht:
 `
 
 
-## Scenario berichtuitwisseling
-
-abcdef
-
- 
-### Berichtuitwisseling vaste elementen op raamwerkniveau
-
-abcdef
-
-Op raamwerkniveau: 
-* Elk raamwerk zal het volgende stukje XML bevatten om de SOAPServerURL aan een organisatie toe te kunnen wijzen:
-
-`
-	<OrganisationType id="Organisatie">
-`
-<br>
-`
-		<description>Standaard organisatie</description>
-`
-<br>
-`
-		<complexElements>
-`
-<br>
-`
-			<ComplexElementTypeRef idref="WillekeurigComplexElement"/>
-`
-<br>
-`
-		</complexElements>
-`
-<br>
-`
-	</OrganisationType>
-`
-<br>
-`
-	<ComplexElementType id="WillekeurigComplexElement">
-`
-<br>
-`
-		<description>Een willekeurig complex element</description>
-`
-<br>
-`
-		<simpleElements>
-`
-<br>
-`	
-			<SimpleElementTypeRef idref="SOAPServerURL"/>
-`
-<br>
-`			
-		</simpleElements>
-`
-<br>
-`
-	</ComplexElementType>
-`
-<br>
-`
-	<SimpleElementType id="SOAPServerURL">
-`
-<br>
-`
-	</SimpleElementType>
-`
-
-abcdef
-
-
-### Berichtuitwisseling vaste elementen op berichtniveau
-
-abcdef
-
-* In dit projectspecifieke bericht is voor elke organisatie gedefinieerd wat zijn SOAPServerURL is:
-
-`
-	<Organisatie id="Bierco">
-`
-<br>
-`
-		<name>Biereco"s Aannemingsbedrijf BV</name>
-`
-<br>
-`
-		<willekeurigComplexElement>
-`
-<br>
-`
-			<WillekeurigComplexElementRef idref="BierecoGegevens"/>
-`
-<br>
-`
-		</willekeurigComplexElement>
-`
-<br>
-`
-	</Organisatie>
-`
-<br>
-`
-	<WillekeurigComplexElement id="BierecoGegevens">
-`
-<br>
-`
-		<SOAPServerURL>http://192.168.0.102/visi</SOAPServerURL>
-`
-<br>
-`
-	</WillekeurigComplexElement>
-`
-
-
-### Gevolgen
+## Architectuur
 
 abcdef
  
+Figuur 1 Architectuur
+
+![Afbeelding](media/fig-1-architectuur.png)
  
-### Berichtuitwisseling initialisatie
 
-abcdef
-
- 
-### Berichtuitwisseling scenario
-
-abcdef
-
-Bij de voorbeelden:
-* URL SOAP server versturende partij: 	http://192.168.0.102
-* URL SOAP server ontvangende partij:	http://192.168.0.138
- 
-`
-    <SOAP-ENV:Envelope ...>
-`
-<br>
-`
-	<SOAP-ENV:Header>
-`
-<br>
-`
-		<SOAPServerURL ...>
-`
-<br>
-`
-			<sender>http://192.168.0.102</sender>
-`
-<br>
-`
-			<receiver>http://192.168.0.138</reciever>
-`
-<br>
-`
-		</SOAPServerURL>
-`
-<br>
-`
-		<UniqueID ...>
-`
-<br>
-`
-			<ID>UniqueIDonMessageInitiatingSOAPServer_XYZ</ID>
-`
-<br>
-`
-		</UniqueID>
-`
-<br>
-`
-		<Attachments ...>
-`
-<br>
-`
-			<count>2</count>
-`
-<br>
-`
-		</Attachments>
-`
-<br>
-`
-	</SOAP-ENV:Header>
-`
-<br>
-`
-	<SOAP-ENV:Body>
-`
-<br>
-`
-		<parseMessage …>
-`
-<br>
-`
-			<Data …>
-`
-<br>
-`
-				…						//	Attachment I
-`
-<br>
-`
-			</Data>
-`
-<br>
-`
-			<Data …>
-`
-<br>
-`
-				…						//	Attachment II
-`
-<br>
-`
-			</Data>
-`
-<br>
-`
-			<visiXML_MessageSchema …>
-`
-<br>
-`
-				…						//	VISI Bericht
-`
-<br>
-`
-			</visiXML_MessageSchema>
-`
-<br>
-`
-		</parseMessage>
-`
-<br>
-`
-	</SOAP-ENV:Body>
-`
-<br>
-`
-    </SOAP-ENV:Envelope>
-`
-
-<p class="note" title="ID van attachement">
-note: de id van elke attachment is gelijk aan de id die in het VISI bericht 
-	wordt gebruikt om de metadata van een attachment te beschrijven:
-</p>
-
-`    
-    <Data id=”abc”>
-`
-<br>
-`
-
-	
-## Ontsluiten Raamwerk en update scenario
-
-abcdef
- 
-	
-## Ontsluiten projectspecifiek bericht scenario
-
-abcdef
-
- 
-## Attachments, Ref’s en Id’s
-
-abcdef
- 
-## Encryptie
-
-abcdef
-
-## SOAP function calls
-
-abcdef
-
-## Project specifiek bericht
-
-abcdef
-
-
+* A
+* B
+* C
 
 
 Systematiek Part II
