@@ -331,13 +331,15 @@ Indien een gewijzigd projectcommunicatiesjabloon (c.q. raamwerk) zonder gewijzig
 
 De verwijzing naar het bijbehorende raamwerk is eveneens aanwezig in ieder bericht. Hierdoor is voor ieder bericht te achterhalen conform welk raamwerk het bericht opgesteld is, en is na te gaan of het bericht valide is conform dit raamwerk. En welke opvolgende berichten als vervolgstap mogelijk zijn.
 
+## Gedrag software voor het starten van een transactie of het beantwoorden van een bericht
 
-#### Gedrag software rondom gekoppelde berichtenflow
+### Gedrag software rondom gekoppelde berichtenflow
+
+Hier uitleggen dat een transactie volgens een bepaalde raamwerkversie moet worden afgehandeld
 
 
+### Gedrag rondom wel en niet aanbieden berichten obv raamwerk/rol
 
-
-#### Gedrag rondom wel en niet aanbieden berichten obv raamwerk/rol
 
 
 
