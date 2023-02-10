@@ -17,10 +17,10 @@ abcdef
 
 3. Het opgestelde VISI bericht + URL adres van versturende SOAP server + URL adres van ontvangende SOAP server worden naar de bijbehorende server gecommuniceerd (wijze van communicatie wordt aan de softwarepartijen zelf overgelaten).
 
-## Hoe bouw je een VISI XML bericht op
+## Hoe bouw je een SOAP bericht op
 
-4. De softwareleverancier moet ervoor zorgen dat een VISI XML bericht wordt opgebouwd.
-De SOAP server van de versturende partij bouwt een VISI XML bericht op met een vaste volgorde.
+4. De softwareleverancier moet ervoor zorgen dat een SOAP bericht wordt opgebouwd.
+De SOAP server van de versturende partij bouwt een SOAP bericht op met een vaste volgorde.
 
 `
     <SOAP-ENV:Envelope ...>
@@ -111,7 +111,7 @@ De SOAP server van de versturende partij bouwt een VISI XML bericht op met een v
 `
 <br>
 `
-				…						//	VISI Bericht
+				…						//	VISI XML Bericht
 `
 <br>
 `
@@ -131,12 +131,12 @@ De SOAP server van de versturende partij bouwt een VISI XML bericht op met een v
 `
 
 <p class="note" title="ID van attachement">
-note: de id van elke attachment is gelijk aan de id die in het VISI XML bericht 
+note: de id van elke attachment is gelijk aan de id die in het SOAP bericht 
 	wordt gebruikt om de metadata van een attachment te beschrijven:
 </p>
 
 <p class="note" title="ID van attachement">
-VISI software moet het raamwerk raadplegen om op te nemen in het VISI XML bericht ter hoogte van <visiXML_MessageSchema …>
+VISI software moet het raamwerk raadplegen om op te nemen in het SOAP bericht ter hoogte van <visiXML_MessageSchema …>
 </p>
 
 ## Hoe verstuur je een VISI bericht
