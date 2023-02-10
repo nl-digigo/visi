@@ -156,13 +156,111 @@ En voor het projectspecifieke bericht:
 `
     </AnderWillekeurigComplexElement>
 `
+## Hoe bouw je een VISI XML bericht op
 
-## Hoe bouw je een SOAP bericht op
+Gebruiker vult velden in software om een VISI bericht te versturen. De velden in de software corresponderen met simple elements uit het VISI raamwerk.
+Het unieke ID dat wordt meegegeven aan een VISI XML bericht  TransactionType nodig om het VISI XML bericht op te stellen.
+Elk VISI XML bericht moet een ID krijgen. Elke ID moet een global unique identifier bevatten.
+
+
+`
+ENTITY MessageTemplate;
+ identification : STRING;
+ dateSend : DATETIME;
+ dateRead : OPTIONAL DATETIME;
+ state : OPTIONAL STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
+ initiatingTransactionMessageID : OPTIONAL STRING;
+ initiatorToExecutor : BOOLEAN;
+ messageInTransaction : MessageInTransactionTemplate;
+ transaction : TransactionTemplate;
+ template : ComplexElementTemplate;
+END_ENTITY;
+`
+
+Een instantie van een VISI XML bericht:
+
+<msgWiltuDeKaartZien id="m_ad91b471-4a45-4467-ac98-e04741c1f9aa">
+	<identification>BerichtInTransactie1</identification>
+	<dateSend>2022-12-04T18:52:16Z</dateSend>
+	<dateRead>2022-12-04T18:52:16Z</dateRead>
+	<state>active</state>
+	<dateLaMu>2022-12-04T18:52:16Z</dateLaMu>
+	<userLaMu>z</userLaMu>
+	<initiatorToExecutor>true</initiatorToExecutor>
+	<messageInTransaction>
+		<BerichtInTransactie1Ref idref="BerichtInTransactie1"/>
+	</messageInTransaction>
+	<transaction>
+		<t1_OpnameBestellingRef idref="t_b70c6d2f-7183-4b0b-b239-9e85fc8d3154"/>
+	</transaction>
+	<ceBaseTypeTest>
+		<CeBaseTypeTest id="ce_4ca9e7cd-edec-40da-b1ab-150ddf99b67f">
+			<seBoolean>false</seBoolean>
+			<seDate>2022-12-04</seDate>
+			<seDatetime>2022-12-04T00:00:00</seDatetime>
+			<seDecimal>0.00</seDecimal>
+			<sePrijs>0.00</sePrijs>
+			<seInteger>0</seInteger>
+			<seString/>
+			<seKeuzelijst>No accents here</seKeuzelijst>
+			<seTime>00:00:00</seTime>
+			<seString_minlength_1>asdfasdfasdf</seString_minlength_1>
+			<seString_minlength_64>asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf</seString_minlength_64>
+		</CeBaseTypeTest>
+	</ceBaseTypeTest>
+	<ceReactietermijn>
+		<CeReactietermijn id="ce_42260338-221b-49b1-b28b-59df9f3a83b7">
+			<gewensteReactietermijn>2022-12-04</gewensteReactietermijn>
+		</CeReactietermijn>
+	</ceReactietermijn>
+</msgWiltuDeKaartZien>
+<BerichtInTransactie1 id="BerichtInTransactie1">
+	<identification/>
+	<dateSend>2022-12-04T18:52:16Z</dateSend>
+	<dateRead>2022-12-04T18:52:16Z</dateRead>
+	<state>active</state>
+	<dateLaMu>2022-12-04T18:52:16Z</dateLaMu>
+	<userLaMu>z</userLaMu>
+</BerichtInTransactie1>
+<t1_OpnameBestelling id="t_b70c6d2f-7183-4b0b-b239-9e85fc8d3154">
+	<number>29</number>
+	<name>asdfasdf2222</name>
+	<description>asdfasdf2222</description>
+	<startDate>2022-12-04T18:52:16Z</startDate>
+	<endDate>2022-12-04T18:52:16Z</endDate>
+	<state>active</state>
+	<dateLaMu>2022-12-04T18:52:16Z</dateLaMu>
+	<userLaMu>z</userLaMu>
+	<initiator>
+		<PersonInRoleRef idref="PiR002"/>
+	</initiator>
+	<executor>
+		<PersonInRoleRef idref="PiR001"/>
+	</executor>
+	<project>
+		<ProjectTopKoks2123434534Ref idref="ProjectTopKoks2123434534"/>
+	</project>
+</t1_OpnameBestelling>
+
+
+
+
+## Hoe verstuur je een VISI XML bericht
+
+### Hoe bouw je een SOAP bericht op
 
 1. Het VISI XML bericht (payload) vormt de basis van een SOAP bericht.
 2. Het SOAP bericht wordt opgemaakt door de versturende VISI software op basis van het VISI XML bericht.
 3. De softwareleverancier moet ervoor zorgen dat een SOAP bericht wordt opgebouwd.
 De SOAP server van de versturende partij bouwt een SOAP bericht op met een vaste volgorde.
+
+### Verstuur het SOAP bericht
+
+## Hoe ontvang je een VISI XML bericht
+
+
 
 
 ## Scenario berichtuitwisseling
