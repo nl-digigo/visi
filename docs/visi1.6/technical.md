@@ -22,8 +22,9 @@ abcdef
 4. De softwareleverancier moet ervoor zorgen dat een SOAP bericht wordt opgebouwd.
 De SOAP server van de versturende partij bouwt een SOAP bericht op met een vaste volgorde.
 
+
 `
-    <SOAP-ENV:Envelope ...>
+    <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
 `
 <br>
 `
@@ -39,7 +40,7 @@ De SOAP server van de versturende partij bouwt een SOAP bericht op met een vaste
 `
 <br>
 `
-			<receiver>http://192.168.0.138</reciever>
+			<receiver>http://192.168.0.138</receiver>
 `
 <br>
 `
