@@ -9,63 +9,16 @@ abcdef
 
 abcdef
 
+## Hoe bouw je een VISI bericht op
+
+abcdef
 
 ## Hoe verstuur je een SOAP bericht
 
 abcdef
 
 
-## Hoe bouw je een VISI bericht op
 
-abcdef
-
- 
-### Berichtuitwisseling vaste elementen op raamwerkniveau
-
-abcdef
-
-
-### Berichtuitwisseling vaste elementen op berichtniveau
-
-abcdef
-
-
-### Gevolgen
-
-abcdef
- 
- 
-### Berichtuitwisseling initialisatie
-
-abcdef
-
- 
-### Berichtuitwisseling scenario
-
-abcdef
-
-	
-## Ontsluiten Raamwerk en update scenario
-
-abcdef
- 
-	
-## Ontsluiten projectspecifiek bericht scenario
-
-abcdef
-
- 
-## Attachments, Ref’s en Id’s
-
-abcdef
- 
-## Encryptie
-
-abcdef
-
-## SOAP function calls
-
-abcdef
 
 ## Project specifiek bericht
 voorbeeld code markdown
