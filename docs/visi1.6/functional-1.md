@@ -1,4 +1,4 @@
-# Functioneel - 1. PROJECTINRICHTING
+# Functioneel - 1. Projectinrichting
 
 De functionele documentatie is bedoeld voor een software productmanager of een softwareontwikkelaar.
 
