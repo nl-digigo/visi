@@ -1,4 +1,4 @@
-# Functioneel (2. PROJECTUITVOERING)
+# Functioneel 2. Projectuitvoering
 
 Gebruik Raamwerk en PSB in project
 
