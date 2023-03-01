@@ -1,4 +1,4 @@
-2.2 Belangrijkste verbeteringen in versie 1.2
+## Belangrijkste verbeteringen in versie 1.2
 Hieronder de belangrijkste wijzigingen die in versie 1.2 al zijn doorgevoerd t.o.v. de vorige versies (deze verbeteringen zijn dus inmiddels integraal onderdeel van versie 1.3). In bijlage 5 worden deze punten verder toegelicht.
 
 Transactiekoppeling; communicatie over meerdere transacties.
@@ -48,7 +48,7 @@ Vastgesteld is dat voor Booleans de waarde ‘1’ = ‘True’ en ‘0’ = ‘
 Optionele velden
 Door een aantal velden optioneel te maken, kunnen raamwerken (xml en xsd) compacter worden. Een compacter en efficiënter raamwerk resulteert in vergrootte schaalbaarheid en snelheid van VISIsoftware en betere leesbaarheid. N.B. Deze verbetering kon nog niet worden doorgevoerd in de IDM-DIS (mogelijk wel in de F-DIS).
 
-2.4 Wijzigingen in versie 1.4 t.o.v. versie 1.3
+## Wijzigingen in versie 1.4 t.o.v. versie 1.3
 (de nummering is overeenkomstig Codeplex).
 
 Beveiliging van VISI-communicatie (1003).
@@ -69,7 +69,7 @@ Dit betreft een uitbreiding van het fenomeen ‘Meta-raamwerk’ zodat een VISI-
 (Impact op) backwards compatibiliteit (1040)
 Backwards compatibiliteit betekent dat de werking van een nieuwe versie van de VISI Standaard (en/of een raamwerk volgens deze standaard) minimaal dezelfde werking heeft als de vorige versie. Bij ieder verbeterpunt wordt geanalyseerd en gedocumenteerd of de technische oplossing impact daarop heeft. Backwards compatibiliteit is niet altijd vanzelfsprekend. Indien er functionaliteit weloverwogen wordt verwijderd, of indien gedrag wordt gewijzigd, is er op dat punt geen sprake meer van backwards compatibiliteit.
 
-2.5 Wijzigingen in versie 1.6 t.o.v. versie 1.4
+## Wijzigingen in versie 1.6 t.o.v. versie 1.4
 (de nummering is overeenkomstig Github).
 
 Definiëren van aantal rijen in een tabel (1008)
@@ -101,7 +101,7 @@ Tot versie 1.6 bestond geen eenduidige afspraak op welk niveau een Element Condi
 Ophogen van bijlagegrootte naar 10GB (1236)
 Voor de grootte van de bijlagen is er een beperking volgens de VISI Standaard. Voor VISI Standaarden versie 1.0, 1.1 en 1.2 is het maximum 20MB per bericht, en voor versie 1.3 en 1.4 is dit maximum 120MB per bericht. Een maximum van 20MB of 120MB is anno 2019 niet realistisch. Met de VISI Standaard kunnen ook BIM-containers of opleverdossiers uitgewisseld worden. Deze containers en opleverdossiers kunnen bijzonder omvangrijk zijn/worden, daarom is het maximum verhoog naar 10 GB.
 
-2.6 Wijzigingen in versie 1.7 t.o.v. versie 1.6 (in ontwikkeling)
+## Wijzigingen in versie 1.7 t.o.v. versie 1.6 (in ontwikkeling)
 (de nummering is overeenkomstig Github).
 
 Raamwerk met niet-ascii tekens in keuzelijsten en omschrijvingen (enumerations & descriptions) (#68)
