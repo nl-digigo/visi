@@ -1,4 +1,4 @@
-# Change-log VISI systematiek vanaf versie 1.2
+# Change-log vanaf versie 1.2
 
 ## Belangrijkste verbeteringen in versie 1.2
 Hieronder de belangrijkste wijzigingen die in versie 1.2 al zijn doorgevoerd t.o.v. de vorige versies (deze verbeteringen zijn dus inmiddels integraal onderdeel van versie 1.3). In bijlage 5 worden deze punten verder toegelicht.
