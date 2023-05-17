@@ -664,6 +664,8 @@ OPTIONAL??? Zie exp_2
 	
 #### <dfn>`openSecondaryTransactionsAllowed`</dfn>
 Optional Boolean waarde die de mogelijkheid aangeeft of secundaire transacties nog niet afgerond hoeven te zijn voordat met de primaire transactie kan worden verder gegaan. De interpretatie voor "TRUE" is dat niet alle instanties van secundaire transacties hoeven te zijn afgerond voordat met de primaire transactie kan worden verder gegaan. Als de waarde "FALSE" is dienen alle instanties van secundaire transacties te worden afgerond voordat de primaire transactie hervat kan worden. Indien openSecondaryTransactionsAllowed niet is gedefinieerd wordt dit geïnterpreteerd als "TRUE".
+Als primaire transactie bedoelen we de transactie waarin we de mitt willen versturen die deze openSecondaryTransactionsAllowed setting heeft. De secundaire transacties bedoeld in deze regel zijn transacties die opgestart zijn vanuit het laatste veronden bericht in de primaire transactie en die via een previous koppeling vanuit het laatste verzonden bericht de secundaire transactie naar het nieuw te verzenden bericht verwijzen. 
+Dit betekent dat als het laatste bericht van de primaire transactie zelf ook gekoppeld is aan het te verzenden bericht in de primaire transactie, dat deze manier van reageren altijd toegestaan is. Met deze regel worden dus alleen de verplichte routes via subtransacties beperkt. 
 	
 #### <dfn>`firstMessage`</dfn>
 Optional Boolean waarde die bedoeld is om onbetwistbaar vast te kunnen stellen dat een bericht alleen gebruikt kan worden als eerste bericht van een subtransactie. Gebruik van een MITT met deze instelling resulteert dus altijd in een nieuwe subtransactie.
