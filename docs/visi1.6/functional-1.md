@@ -950,14 +950,25 @@ messageInTransaction: mitt_265<br/>
 Soms is het nodig om te zorgen dat je berichten pas kunt versturen nadat andere berichten zijn ontvangen, dat berichten alleen verstuurd mogen worden wanneer andere berichten nog niet zijn ontvangen of dat een bericht slechts één keer verzonden mag worden.
 	
 Dit doen we door de volgordelijkheid van te versturen berichten af te dwingen.<br/>
-Doel is het inperken van mogelijke voorzettingen uitgaande van een bepaalde toestand in de berichtenflow binnen een transactie en haar subtransacties. Er zijn drie oorzaken waarom bepaalde voortzettingen niet aangeboden mogen worden:<br/>
-	
+Doel is het inperken van mogelijke voorzettingen uitgaande van een bepaalde toestand in de berichtenflow binnen een transactie en haar subtransacties.<br/>
+Met de begrippen "transactie", "bovenliggende transactie", "subtransactie" en "aangesloten transacties" bedoelen we hier het volgende:
+Vanaf VISI systematiek versie 1.2 worden transacties aan elkaar gekoppeld via de "previous mitt methode" waardoor men op basis van het bericht in de ene transactie een bericht van een andere transactie kan versturen. Zie !!verwijzing naar mitt koppeling in documentatie!!<br/>
+	@Mark @Tessa pas op deze tekst is op 8 juni 2023 door Jos en Arne verder verduidelijkt.!!!!!!!!!!
+- transactie: de transactie die we op dat moment bekijken wat betreft het wel of niet aanbieden van berichten. Deze transactie kan 1 of meerdere transacties "boven" zich hebben en ook een of meerdere "onder" zich hebben.<br/>
+- direct bovenliggende transactie: <br/>
+De transactie waaruit "de transactie" die we bekijken is gestart(via een previous mitt koppeling). Hiermee bedoelen we niet andere transacties die zich op hetzelfde niveau naast of boven deze "bovenliggende transactie" bevinden.<br/>
+- directe subtransactie: die we op dat moment bekijken. <br/>
+Iedere transactie die direct vanuit "de transactie" die we bekijken is gestart(via een previous mitt koppeling). <br/>
+- aangesloten transacties: "de transactie" samen met zijn directe bovenliggende transactie en zijn directe subtransacties.<br/>
+<br/>
+Er zijn drie oorzaken waarom bepaalde voortzettingen niet aangeboden mogen worden:<br/>
+<br/>	
 1. Een bericht mag pas verzonden worden nadat één of meerdere specifieke berichten
-aanwezig zijn (reeds ontvangen of verzonden) in de transactie of zijn subtransacties, er is dus
+aanwezig zijn (reeds ontvangen of verzonden) in de transactie of zijn directe subtransacties, er is dus
 een afhankelijkheid tussen twee (of meer) al aanwezige berichten.
 
 2. Een bericht mag alleen verzonden worden wanneer één of meerdere specifieke berichten
-niet aanwezig zijn (nog niet ontvangen of verzonden) in de transactie of zijn subtransacties,
+niet aanwezig zijn (nog niet ontvangen of verzonden) in de transactie of zijn directe subtransacties,
 er is dus een afhankelijkheid tussen twee (of meer) nog niet aanwezige berichten.
 
 3. Een bericht dat maar één keer verzonden mag worden is reeds verzonden, er is dus een
@@ -987,7 +998,7 @@ Zie situatie 2 en 3 hierboven<br/>
 Voor situatie 3:<br/>
 Het effect om een bericht slechts één keer te mogen versturen wordt bereikt door de MiTT van het betreffende bericht in de sendBefore lijst van diezelfde MITT te plaatsen. In dit specifieke geval mag een bericht dus niet naar meerdere executors worden verzonden.
 	
-Toegestane verwijzingen bij "sendAfter" en "sendBefore "zijn "Bericht in transactie types" die ontvangen kunnen worden in de actuele transactie of van de aangesloten transacties, waarbij de  persoon die het actuele bericht behandelt initiator of executor is. Met aangesloten transacties worden de transactie waaruit een transactie geïnitieerd is en de directe subtransacties bedoeld. Met  directe subtransacties worden transacties bedoeld die vanuit de actuele transactie geïnitieerd zijn, dus niet subtransacties van subtransacties. 
+Toegestane verwijzingen bij "sendAfter" en "sendBefore "zijn "Bericht in transactie types" die verzonden kunnen worden in de actuele transactie of van de aangesloten transacties, waarbij de persoon die het actuele bericht behandelt initiator of executor is.   
 	
 Deze beperking bestaat omdat een VISI Raamwerk plus PSB zich altijd op dezelfde manier moet gedragen, onafhankelijk of alle actoren op dezelfde VISI server werken, of dat iedere actor op een andere VISI server werkt. Op deze manier ziet de betreffende actor ook altijd de berichten die zijn keuzes beïnvloeden, doordat hij ze verstuurt of ontvangt.
 	
