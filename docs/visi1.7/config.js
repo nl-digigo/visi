@@ -248,7 +248,7 @@ var respecConfig = {
     // this url points to the folder where organsation specific css files are stored
     // defaults to https://tools.geostandaarden.nl/respec/style/ if not set
     // nl_organisationStylesURL: "https://publicatie.centrumvoorstandaarden.nl/respec/style/",
-    nl_organisationStylesURL: "media/",
+    nl_organisationStylesURL: "images/",
     // nl_organisationStylesURL: "http://localhost:8081/respec/style/",
   
     // nl_organisationPublishURL points to organisation specific publication page, used in header
@@ -259,7 +259,7 @@ var respecConfig = {
     // defaults to https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg
     nl_logo: {
       //  src: "https://tools.geostandaarden.nl/respec/style/logos/OmgevingswetLogo.svg",
-      src: "media/logo_BIM_Loket.jpg",
+      src: "images/logo_BIM_Loket.jpg",
       alt: "BIM Loket",
       id: "TopLogo",
       //height: 20,
