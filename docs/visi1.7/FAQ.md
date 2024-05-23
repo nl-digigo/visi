@@ -137,24 +137,6 @@ in de VISI Systematiek Deel 1 (voorheen Systematiek I) uitgebreid met de
 eigenschap 'firstMessage'. Daarmee kan worden aangegeven of een
 MessageInTransaction een startbericht betreft.
 
-    ENTITY MessageInTransactionType;
-        requiredNotify : INTEGER;
-        dateLamu : DATETIME;
-        userLamu : STRING;
-        received : BOOLEAN;
-        send : BOOLEAN;
-        state : STRING;
-        initiatorToExecutor : OPTIONAL BOOLEAN;
-        openSecondaryTransactionsAllowed : OPTIONAL BOOLEAN;
-        firstMessage : OPTIONAL BOOLEAN; // <--
-        message : MessageType;
-        previous : OPTIONAL SET [0:?] O F MessageInTransactionType;
-        transaction : TransactionType;
-        VISI Pagina 46 van 46
-        transactionPhase : OPTIONAL TransactionPhaseType;
-        group : GroupType;
-    END_ENTITY;
-
 Deze nieuwe eigenschap is een optionele Boolean ('True', of 'False').
 Indien deze Boolean afwezig is, geldt de standaard waarde 'False' en kan
 er met de betreffende MessageInTransactionType GEEN nieuwe transactie
