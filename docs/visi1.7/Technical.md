@@ -171,49 +171,48 @@ reference="globaleeigenschappendefinitietabel"}
 
 -   Fragment regarding readability
 
-```{=html}
-<!-- -->
 ```
-    <ComplexElementType id="CeDocumentAttributen">
-        <description>Documentgegevens</description>
-        <startDate>2008-10-08</startDate>
-        <endDate>2008-10-08</endDate>
-        <state>-</state>
-        <dateLaMu>2009-11-10</dateLaMu>
-        <userLaMu>ALFAmail</userLaMu>
-        <language>onbekend</language>
-        <category>-</category>
-        <helpInfo>Gegevens van een document</helpInfo>
-        <simpleElements>
-            <SimpleElementTypeRef idref="documentNaam" />
-            <SimpleElementTypeRef idref="documentKenmerk" />
-            <SimpleElementTypeRef idref="versieNummer" />
-            <SimpleElementTypeRef idref="documentSoort" />
-            <SimpleElementTypeRef idref="disciplineType" />
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeDocumentAttributen">
+    <description>Documentgegevens</description>
+    <startDate>2008-10-08</startDate>
+    <endDate>2008-10-08</endDate>
+    <state>-</state>
+    <dateLaMu>2009-11-10</dateLaMu>
+    <userLaMu>ALFAmail</userLaMu>
+    <language>onbekend</language>
+    <category>-</category>
+    <helpInfo>Gegevens van een document</helpInfo>
+    <simpleElements>
+        <SimpleElementTypeRef idref="documentNaam" />
+        <SimpleElementTypeRef idref="documentKenmerk" />
+        <SimpleElementTypeRef idref="versieNummer" />
+        <SimpleElementTypeRef idref="documentSoort" />
+        <SimpleElementTypeRef idref="disciplineType" />
+    </simpleElements>
+</ComplexElementType>
 
-    <MessageInTransactionType id="MITT1_Verzoek_advies_korting">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-11-10</dateLaMu>
-        <userLaMu>ALFAmail</userLaMu>
-        <received>0</received>
-        <send>0</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <message>
-            <MessageTypeRef idref="Verzoek_advies_korting" />
-        </message>
-        <transaction>
-            <TransactionTypeRef idref="T8_04_Verzoek_Advies_ADV" />
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="verzocht" />
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="standaardGroep" />
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="MITT1_Verzoek_advies_korting">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-11-10</dateLaMu>
+    <userLaMu>ALFAmail</userLaMu>
+    <received>0</received>
+    <send>0</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+        <MessageTypeRef idref="Verzoek_advies_korting" />
+    </message>
+    <transaction>
+        <TransactionTypeRef idref="T8_04_Verzoek_Advies_ADV" />
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="verzocht" />
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="standaardGroep" />
+    </group>
+</MessageInTransactionType>
+```
 
 #### Framework after
 
@@ -221,29 +220,28 @@ reference="globaleeigenschappendefinitietabel"}
 
 -   Fragment regarding readability
 
-```{=html}
-<!-- -->
 ```
-    <ComplexElementType id="CeDocumentAttributen">
-        <description>Documentgegevens</description>
-        <simpleElements>
-            <SimpleElementTypeRef idref="documentNaam" />
-            <SimpleElementTypeRef idref="documentKenmerk" />
-            <SimpleElementTypeRef idref="versieNummer" />
-            <SimpleElementTypeRef idref="documentSoort" />
-            <SimpleElementTypeRef idref="disciplineType" />
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeDocumentAttributen">
+    <description>Documentgegevens</description>
+    <simpleElements>
+        <SimpleElementTypeRef idref="documentNaam" />
+        <SimpleElementTypeRef idref="documentKenmerk" />
+        <SimpleElementTypeRef idref="versieNummer" />
+        <SimpleElementTypeRef idref="documentSoort" />
+        <SimpleElementTypeRef idref="disciplineType" />
+    </simpleElements>
+</ComplexElementType>
 
-    <MessageInTransactionType id="MITT1_Verzoek_advies_korting">
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <message>
-            <MessageTypeRef idref="Aanbod_weekrapport" />
-        </message>
-        <transaction>
-            <TransactionTypeRef idref="T2_06_Weekrapporten_PLB-AN" />
-        </transaction>
-    </MessageInTransactionType>
+<MessageInTransactionType id="MITT1_Verzoek_advies_korting">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+        <MessageTypeRef idref="Aanbod_weekrapport" />
+    </message>
+    <transaction>
+        <TransactionTypeRef idref="T2_06_Weekrapporten_PLB-AN" />
+    </transaction>
+</MessageInTransactionType>
+```
 
 ## Appendix C: Validating frameworks
 

@@ -14,11 +14,15 @@ value cannot start with a number. See also \[xml:id Version
 Example at message level: Piece of XML within a message (defines the
 organisation TNO of the OrganisationType Research Institution):
 
-    <Onderzoeksinstelling id="TNO">
-        ...
-    </Onderzoeksinstelling>
+```
+<Onderzoeksinstelling id="TNO">
+    ...
+</Onderzoeksinstelling>
+```
 
 The following piece of XML within this same message can now refer to
 TNO:
 
-    <OnderzoeksinstellingRef idref="TNO"/>
+```
+<OnderzoeksinstellingRef idref="TNO"/>
+```

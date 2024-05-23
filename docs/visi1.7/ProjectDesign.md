@@ -65,11 +65,13 @@ explanation and allows easier recognition for the project (by people).
 In addition, the moment of start and end of the project is recorded with
 start and end dates.\
 
-    Unique ID: _badc9dab-807e-4319-bd56-60c57605e109
-    Name: Realization of the West/East line
-    Description: Realization of metro line 47, including 7 new stations with 9.7 kilometres of track, of which 7.1 kilometres are underground
-    Startdate: 23-12-2020 14:59
-    Enddate: 20-05-2022 07:08
+```
+Unique ID: _badc9dab-807e-4319-bd56-60c57605e109
+Name: Realization of the West/East line
+Description: Realization of metro line 47, including 7 new stations with 9.7 kilometres of track, of which 7.1 kilometres are underground
+Startdate: 23-12-2020 14:59
+Enddate: 20-05-2022 07:08
+```
 
 ### Person
 
@@ -83,20 +85,22 @@ recognition (by humans). The username is not mandatory and can be given
 a (technical) interpretation of your choice. Username can - for
 example - be used to link to a user in an (existing) software system.\
 
-    Person
-    Unique ID: _0c585186-fa97-4de7-8fe0-5c4bee3afead
-    Name: Urbain Servranckx
-    Username: uservranckx
+```
+Person
+Unique ID: _0c585186-fa97-4de7-8fe0-5c4bee3afead
+Name: Urbain Servranckx
+Username: uservranckx
 
-    Person
-    Unique ID: _974e4822-4944-45ad-ab2f-161370662e30
-    Name: Georges Remi
-    Username: gremi
+Person
+Unique ID: _974e4822-4944-45ad-ab2f-161370662e30
+Name: Georges Remi
+Username: gremi
 
-    Person
-    Unique ID: _d4e02752-2ac6-4700-ae67-d33f428f78fb
-    Name: Luc Dupanloup
-    Username: ldupanloup
+Person
+Unique ID: _d4e02752-2ac6-4700-ae67-d33f428f78fb
+Name: Luc Dupanloup
+Username: ldupanloup
+```
 
 **Note:**\
 If a person works on two projects, the unique identification of this
@@ -121,11 +125,13 @@ property). For an organization, a contact person is defined by reference
 to a person's unique identifier. This reference has no functional
 meaning, and is for administrative purpose only.\
 
-    Organization
-    Unique ID: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498
-    Name: Gemeente Rommelgem
-    Abbreviation: GRG
-    Contactperson: _0c585186-fa97-4de7-8fe0-5c4bee3afead
+```
+Organization
+Unique ID: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498
+Name: Gemeente Rommelgem
+Abbreviation: GRG
+Contactperson: _0c585186-fa97-4de7-8fe0-5c4bee3afead
+```
 
 **Note:** Organization has an address The address is also recorded for
 each organization. This is not a physical or postal address, but a
@@ -146,10 +152,12 @@ This name and description need not be unique, and are an addition to the
 unique identifier intended to explain and give meaning to the role. The
 name and description make it easier for people to recognize the role.\
 
-    Role
-    Unique ID: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
-    Name: Beoordelende rol
-    Description: This role provides an independent assessment based on competences and expertise within the framework of the project. During the assessment, the role goes through a number of fixed steps. Role makes an inventory of data, weighs, motivates and assesses this information and then makes the judgement.
+```
+Role
+Unique ID: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
+Name: Beoordelende rol
+Description: This role provides an independent assessment based on competences and expertise within the framework of the project. During the assessment, the role goes through a number of fixed steps. Role makes an inventory of data, weighs, motivates and assesses this information and then makes the judgement.
+```
 
 **Note:** Role versus function\
 A role is fundamentally different from a function. Responsibilities and
@@ -182,11 +190,13 @@ Organization\". Very limited, mandatory properties are recorded for this
 key. For the key, person, role and organization are defined by reference
 to the unique identifier of a person, role and organization.\
 
-    Person in Role of Organization
-    Unique ID: _e0ad4954-7986-417c-96d6-813efa36e86b
-    Contactperson: _0c585186-fa97-4de7-8fe0-5c4bee3afead
-    Role: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
-    Organization: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498
+```
+Person in Role of Organization
+Unique ID: _e0ad4954-7986-417c-96d6-813efa36e86b
+Contactperson: _0c585186-fa97-4de7-8fe0-5c4bee3afead
+Role: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
+Organization: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498
+```
 
 **Note:** Relationship between person and role\
 A person can have multiple roles. A role can be fulfilled by more than
@@ -213,18 +223,20 @@ recorded by means of a reference to the unique identification of a
 person, a role and an organization. The relationship is from authorized
 to successor. The roles must match exactly.\
 
-    Person in Role of Organization
-    Unique ID: _e0ad4954-7986-417c-96d6-813efa36e86b
-    Contactperson: _0c585186-fa97-4de7-8fe0-5c4bee3afead
-    Role: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
-    Organization: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498
-    Successor: _51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb
+```
+Person in Role of Organization
+Unique ID: _e0ad4954-7986-417c-96d6-813efa36e86b
+Contactperson: _0c585186-fa97-4de7-8fe0-5c4bee3afead
+Role: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
+Organization: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498
+Successor: _51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb
 
-    Person in Role of Organization
-    Unique ID: _51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb
-    Contactperson: _974e4822-4944-45ad-ab2f-161370662e30
-    Role: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
-    Organization: _2ba76318-83ab-4a6e-9257-ea91045717d2
+Person in Role of Organization
+Unique ID: _51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb
+Contactperson: _974e4822-4944-45ad-ab2f-161370662e30
+Role: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
+Organization: _2ba76318-83ab-4a6e-9257-ea91045717d2
+```
 
 If a person (in a role of an organization) has a successor, this means
 that the person is no longer authorized to act from this role. Only the
@@ -245,12 +257,14 @@ identification of the authorized person, role and organization. The
 relationship is from authorized person to authorized person. The roles
 must match exactly.\
 
-    Person in Role of Organization
-    Unique ID: _752b1dfd-dd91-4404-9708-39b91047ca66
-    Contactperson: _d4e02752-2ac6-4700-ae67-d33f428f78fb
-    Role: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
-    Organization: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498
-    Replaces: _51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb
+```
+Person in Role of Organization
+Unique ID: _752b1dfd-dd91-4404-9708-39b91047ca66
+Contactperson: _d4e02752-2ac6-4700-ae67-d33f428f78fb
+Role: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
+Organization: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498
+Replaces: _51693b0e-84e5-4a9a-9fb6-ec4a7dea6edb
+```
 
 If an authorized person (in a role of an organization) performs an
 action, this is always on behalf of the authorized person. With an
@@ -353,9 +367,11 @@ within organizations, but to types of roles. Definition of a role type
 is with a unique identifier and a textual description. Therefore, a role
 type has the unique identifier and description properties.\
 
-    Role type
-    id: RT_Beoordelende_rol
-    description: Beoordelende rol [startDate](#startdate)
+```
+Role type
+id: RT_Beoordelende_rol
+description: Beoordelende rol [startDate](#startdate)
+```
 
 ### Information transfer conform to transaction type (TransactionType)
 
@@ -384,11 +400,13 @@ more detailed explanation of the purpose and use of the transaction
 type. It can also describe why certain roles communicate with each
 other.\
 
-    id: TT_Contractwijziging_door_opdrachtgever
-    description: Contractwijziging (door de opdrachtgever)
-    helpinfo: With this transaction type, the client can report a contract change to the contractor, with the intermediate goals of obtaining a technical proposal from the contractor, a technical agreement from the client, a quotation from the contractor, an acceptance of that quotation by the client and ultimately the acceptance of one or more multiple completion notifications of the work carried out through the delivery of performance declarations.
-    initiating role: Opdrachtgevende_contractueel
-    executing role: Opdrachtnemende_contractueel
+```
+id: TT_Contractwijziging_door_opdrachtgever
+description: Contractwijziging (door de opdrachtgever)
+helpinfo: With this transaction type, the client can report a contract change to the contractor, with the intermediate goals of obtaining a technical proposal from the contractor, a technical agreement from the client, a quotation from the contractor, an acceptance of that quotation by the client and ultimately the acceptance of one or more multiple completion notifications of the work carried out through the delivery of performance declarations.
+initiating role: Opdrachtgevende_contractueel
+executing role: Opdrachtnemende_contractueel
+```
 
 ### Message type (MessageType)
 
@@ -397,11 +415,13 @@ recorded with a unique identifier (id) and a textual description
 (description). P.S. This description implicitly indicates the status of
 a type of transaction.\
 
-    Message type
-    ID: MT_Acceptatie_technisch_voorstel_contractwijziging
-    Description: Acceptance of the technical proposal (for contract modification)
-    helpinfo: With this message the client accepts the technical proposal, after which the contractor can continue with a financial proposal/quote for the contract change.
-    elementen: CE_Contractwijziging_Basis, CE_Contractwijziging_Voorstel, CE_Contractwijziging_Opmerkingen
+```
+Message type
+ID: MT_Acceptatie_technisch_voorstel_contractwijziging
+Description: Acceptance of the technical proposal (for contract modification)
+helpinfo: With this message the client accepts the technical proposal, after which the contractor can continue with a financial proposal/quote for the contract change.
+elementen: CE_Contractwijziging_Basis, CE_Contractwijziging_Voorstel, CE_Contractwijziging_Opmerkingen
+```
 
 ### Message fields (SimpleElementType)
 
@@ -409,11 +429,13 @@ Message fields are defined within the message. A field property
 (UDT)(<https://bimloket.github.io/visi/visi1.6/#datatype-van-een-element-userdefinedtype>)
 is assigned to a message field.\
 
-    Simple element type
-    id: SE_DatumUitvoering
-    description: Gepland moment start uitvoering
-    helpinfo: Kies hier de beoogde startdatum waarop de hier benoemde werkzaakheden beginnen.
-    User defined type: UDT_Datumveld
+```
+Simple element type
+id: SE_DatumUitvoering
+description: Gepland moment start uitvoering
+helpinfo: Kies hier de beoogde startdatum waarop de hier benoemde werkzaakheden beginnen.
+User defined type: UDT_Datumveld
+```
 
 **Note:** Relation between person and role\
 A person can have multiple roles. A role can be fulfilled by more than
@@ -434,14 +456,16 @@ types, such as a date selection window with a date field and a drop-down
 function if a choice from a list of values is required.\
 This is how a field gets the properties associated:\
 
-    User defined type
-    id: UDT_Datumveld
-    description: Datumveld
-    basetype: DATE
-    id: UDT_VerplichteTekst
-    description: Verplichte tekst veld
-    basetype: STRING
-    xsdRestriction: xs:minLength value="1"
+```
+User defined type
+id: UDT_Datumveld
+description: Datumveld
+basetype: DATE
+id: UDT_VerplichteTekst
+description: Verplichte tekst veld
+basetype: STRING
+xsdRestriction: xs:minLength value="1"
+```
 
 ### Table as element of a message type
 
@@ -510,21 +534,23 @@ For building messages\
 This allows you to say about a field that it should not be editable or
 that it should be editable.\
 
-    Complex element type
-    id: CeContractwijzigingVoorstel
-    description: Technisch voorstel
-    Simple elements:
-    SE_Wijzigingsnummer
-    SE_BeschrijvingTechnisch
-    SE_DatumUitvoering
-    SE_KostenramingEUR
-    CE_Tabel_Werkpakketten
-    Complex element type in Complex element type (tabel)
-    id: CE_Tabel_Werkpakketten
-    description: Werkpakketten
-    Simple elements:
-    SE_Werkpakket
-    SE_WPkostenpercentage
+```
+Complex element type
+id: CeContractwijzigingVoorstel
+description: Technisch voorstel
+Simple elements:
+SE_Wijzigingsnummer
+SE_BeschrijvingTechnisch
+SE_DatumUitvoering
+SE_KostenramingEUR
+CE_Tabel_Werkpakketten
+Complex element type in Complex element type (tabel)
+id: CE_Tabel_Werkpakketten
+description: Werkpakketten
+Simple elements:
+SE_Werkpakket
+SE_WPkostenpercentage
+```
 
 ### Order of message types (MessageInTransactionType)
 
@@ -593,14 +619,16 @@ choose another message based on the presence of this message.\
 Previous message in transaction If this message is a previous message to
 the message it is set to.\
 
-    MessageInTransactionType
-    id: mit40170_T7
-    initiatorToExecutor: true
-    firstMessage: false
-    messageType: MS_AcceptatieVoorstelWijziging
-    previous: mitt563
-    transactionType: TR_ContractwijzigingOG
-    MessageInTransactionTypeCondition: mtc1
+```
+MessageInTransactionType
+id: mit40170_T7
+initiatorToExecutor: true
+firstMessage: false
+messageType: MS_AcceptatieVoorstelWijziging
+previous: mitt563
+transactionType: TR_ContractwijzigingOG
+MessageInTransactionTypeCondition: mtc1
+```
 
 #### ONTDUBBELEN In meerdere gekoppelde type transacties (m.a.w. hoofd- & sub-transacties)
 
@@ -640,20 +668,22 @@ The MITT of Proposal_to_Change has NO previous message in transaction.
 The MITTS of Agree_Change en Disagree_Change do have a previous message
 in transaction. This is the MITT of Proposal_to_Change.\
 
-    Bericht in Transactie
-    Unieke identificatie: _666f01b3-6714-44cc-8865-0a9ae1f938ce
-    Vorig: Bericht: Voorstel_tot_Wijziging
-    Transactie:Accorderen\_Wijziging
+```
+Bericht in Transactie
+Unieke identificatie: _666f01b3-6714-44cc-8865-0a9ae1f938ce
+Vorig: Bericht: Voorstel_tot_Wijziging
+Transactie:Accorderen\_Wijziging
 
-    Bericht in Transactie
-    Unieke identificatie: _6bdae158-a6dc-491b-a9ea-692fd419a828
-    Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ceBericht: Akkoord_Wijziging
-    Transactie: Accorderen_Wijziging
+Bericht in Transactie
+Unieke identificatie: _6bdae158-a6dc-491b-a9ea-692fd419a828
+Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ceBericht: Akkoord_Wijziging
+Transactie: Accorderen_Wijziging
 
-    Bericht in Transactie
-    Unieke identificatie: _4e5569b7-0c6a-4976-811d-9d9189b8b1df
-    Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ceBericht: Niet_Akkkord_Wijziging
-    Transactie: Accorderen_Wijziging
+Bericht in Transactie
+Unieke identificatie: _4e5569b7-0c6a-4976-811d-9d9189b8b1df
+Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ceBericht: Niet_Akkkord_Wijziging
+Transactie: Accorderen_Wijziging
+```
 
 The transaction Advise_Change between approving role and advisory role
 and consists of two messages:
@@ -666,17 +696,19 @@ The message Request_Advice_Change is the first MITT. The MITT of
 Request_Advice_Change has NO previous MITT. The MITT of Advise_Change
 does have a previous MITT. This is the MITT of Request_Advice_Change.\
 
-    Bericht in Transactie
-    Unieke identificatie: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-    Vorig:
-    Bericht: Verzoek_Advies_Wijziging
-    Transactie: Adviseren_Wijziging
+```
+Bericht in Transactie
+Unieke identificatie: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
+Vorig:
+Bericht: Verzoek_Advies_Wijziging
+Transactie: Adviseren_Wijziging
 
-    Bericht in Transactie
-    Unieke identificatie: _f75a35c7-30f3-4b3b-8776-120cd7811fd4
-    Vorig: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-    Bericht: Advies_Wijziging
-    Transactie: Adviseren_Wijziging
+Bericht in Transactie
+Unieke identificatie: _f75a35c7-30f3-4b3b-8776-120cd7811fd4
+Vorig: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
+Bericht: Advies_Wijziging
+Transactie: Adviseren_Wijziging
+```
 
 How is the advisory transaction linked to the approval transaction? With
 reference to the previous MITT. However, because the property of the
@@ -684,12 +716,14 @@ first MITT Adviseren_Wijziging an empty reference to the previous MITT
 should flag the first message (True/False) that this is the first
 message of the transaction.\
 
-    Bericht in Transactie
-    Unieke identificatie: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-    Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ce
-    Eerste bericht: Waar
-    Bericht: Verzoek_Advies_Wijziging
-    Transactie: Adviseren_Wijziging
+```
+Bericht in Transactie
+Unieke identificatie: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
+Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ce
+Eerste bericht: Waar
+Bericht: Verzoek_Advies_Wijziging
+Transactie: Adviseren_Wijziging
+```
 
 After receiving Voorstel_tot_Wijziging the approving role can choose
 three response messages:
@@ -706,17 +740,19 @@ approving transaction has not yet been made. This is also modeled with
 the reference to the previous MITT. In this case the MITT of
 Akkoord_Wijziging and Niet_Akkoord_Wijziging.\
 
-    Bericht in Transactie
-    Unieke identificatie: _6bdae158-a6dc-491b-a9ea-692fd419a828
-    Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ce, _f75a35c7-30f3-4b3b-8776-120cd7811fd4
-    Bericht: Akkoord_Wijziging
-    Transactie: Accorderen_Wijziging
+```
+Bericht in Transactie
+Unieke identificatie: _6bdae158-a6dc-491b-a9ea-692fd419a828
+Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ce, _f75a35c7-30f3-4b3b-8776-120cd7811fd4
+Bericht: Akkoord_Wijziging
+Transactie: Accorderen_Wijziging
 
-    Bericht in Transactie
-    Unieke identificatie: _4e5569b7-0c6a-4976-811d-9d9189b8b1df
-    Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ce, _f75a35c7-30f3-4b3b-8776-120cd7811fd4
-    Bericht: Niet_Akkoord_Wijziging
-    Transactie: Accorderen_Wijziging
+Bericht in Transactie
+Unieke identificatie: _4e5569b7-0c6a-4976-811d-9d9189b8b1df
+Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ce, _f75a35c7-30f3-4b3b-8776-120cd7811fd4
+Bericht: Niet_Akkoord_Wijziging
+Transactie: Accorderen_Wijziging
+```
 
 For the correct definition of one procedure (made up of main and
 sub-transactions), two additional functional basic rules apply, which
@@ -730,30 +766,34 @@ sending role in the subtransaction. The definition of sending and
 receiving role is not at the message level. The roles are defined as
 initiator and executor by type of (main and sub) transaction.\
 
-    Transactietype
-    id: Accorderen_Wijziging
-    description: Accorderen wijziging
-    initiator rol: Opdrachtnemende_contractueel
-    executor rol: Opdrachtgevende_contractueel
+```
+Transactietype
+id: Accorderen_Wijziging
+description: Accorderen wijziging
+initiator rol: Opdrachtnemende_contractueel
+executor rol: Opdrachtgevende_contractueel
 
-    Transactietype
-    id: Adviseren_Wijziging
-    description: Adviseren wijziging
-    initiator rol: Opdrachtgevende_contractueel
-    executor rol: Adviserende_contractueel
+Transactietype
+id: Adviseren_Wijziging
+description: Adviseren wijziging
+initiator rol: Opdrachtgevende_contractueel
+executor rol: Adviserende_contractueel
+```
 
 For a type of message in a type of transaction (MITT) a direction is
 defined. The direction is from initiator-to-executor or from
 executor-to-initiator. This direction then moves from initiating role to
 executing role (of a type of transaction) respectively.\
 
-    Bericht in Transactie
-    Unieke identificatie: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-    Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ce
-    Eerste bericht: Waar
-    Richting: Van initiator naar executor
-    Bericht: Verzoek_Advies_Wijziging
-    Transactie: Adviseren_Wijziging
+```
+Bericht in Transactie
+Unieke identificatie: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
+Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ce
+Eerste bericht: Waar
+Richting: Van initiator naar executor
+Bericht: Verzoek_Advies_Wijziging
+Transactie: Adviseren_Wijziging
+```
 
 IS DIT WEL EEN REGEL??? Initiator to Executor is optional in the
 framework.\
@@ -761,18 +801,20 @@ Rule 2: The direction of the messages must match.\
 By direction is meant the value or a message from initiator to executor
 of a transaction, or from executor to initiator.\
 
-    Bericht in Transactie
-    Unieke identificatie: _666f01b3-6714-44cc-8865-0a9ae1f938ce
-    Vorig:
-    Bericht: Voorstel_tot_Wijziging
-    Transactie: Accorderen_Wijziging
+```
+Bericht in Transactie
+Unieke identificatie: _666f01b3-6714-44cc-8865-0a9ae1f938ce
+Vorig:
+Bericht: Voorstel_tot_Wijziging
+Transactie: Accorderen_Wijziging
 
-    Bericht in Transactie
-    Unieke identificatie: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
-    Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ce
-    Eerste bericht: Waar
-    Bericht: Verzoek_Advies_Wijziging
-    Transactie: Adviseren_Wijziging
+Bericht in Transactie
+Unieke identificatie: _a7e9fa9c-13ce-49f7-bbd6-f5eeb4688228
+Vorig: _666f01b3-6714-44cc-8865-0a9ae1f938ce
+Eerste bericht: Waar
+Bericht: Verzoek_Advies_Wijziging
+Transactie: Adviseren_Wijziging
+```
 
 If an instance of MITT is sent, openSecondaryTransactionsAllowed must
 also be sent. A message that does not appear as previous is required, so
@@ -820,14 +862,16 @@ The highest number in the first column "wins". So if a condition is set
 on a CE and SE (5) then this condition applies relative to a setting
 only on a SE (1).\
 
-    ElementCondition
-    id: EC_116
-    description: New element condition
-    condition: FREE
-    ComplexElement: CeContractwijzigingVoorstel
-    ComplexElement: CE_Tabel_Werkpakketten
-    simpleElement: SE_WPkostenpercentage
-    messageInTransaction: mitt_265
+```
+ElementCondition
+id: EC_116
+description: New element condition
+condition: FREE
+ComplexElement: CeContractwijzigingVoorstel
+ComplexElement: CE_Tabel_Werkpakketten
+simpleElement: SE_WPkostenpercentage
+messageInTransaction: mitt_265
+```
 
 ### Conditions for subsequent message types (MessageInTransactionTypeCondition)
 
@@ -915,9 +959,11 @@ Message in transaction\
 It is set in the MITT to be restricted by referencing in it to the
 restricting MITT condition.\
 
-    MessageInTransactionTypeCondition
-    id: mtc1
-    sendAfter: mit_VTWoordeelpositief_1
+```
+MessageInTransactionTypeCondition
+id: mtc1
+sendAfter: mit_VTWoordeelpositief_1
+```
 
 ### Order of messages
 
@@ -1012,14 +1058,18 @@ three reasons why certain continuations may not be offered:
 
 **Addition to existing class**
 
-         MessageInTransactionType;
-         conditions : OPTIONAL SET[1:?] OF MessageInTransactionTypeCondition;  -- AND
+```
+     MessageInTransactionType;
+     conditions : OPTIONAL SET[1:?] OF MessageInTransactionTypeCondition;  -- AND
+```
 
 **New class**
 
-         MessageInTransactionTypeCondition;
-         sendAfter : OPTIONAL SET [1:?] MessageInTransactionType;  -- OR
-         sendBefore : OPTIONAL SET [1:?] MessageInTransactionType;  -- OR
+```
+     MessageInTransactionTypeCondition;
+     sendAfter : OPTIONAL SET [1:?] MessageInTransactionType;  -- OR
+     sendBefore : OPTIONAL SET [1:?] MessageInTransactionType;  -- OR
+```
 
 \## Backwards compatibiliteit Voor backward comptabiliteit is de
 "conditions" relatie optioneel: zonder deze relatie is de afhandeling
@@ -1057,10 +1107,12 @@ in all transactions (where this message appears).\
 An appendix type that is connected at this level is only offered in this
 specific message at this place in the transaction.\
 
-    AppendixType
-    id: AT_WijzigingGereed
-    description: Bijlagen bij gereedmelding wijziging
-    ComplexElementType: CE_BijlagenBijWijzigingGereed
+```
+AppendixType
+id: AT_WijzigingGereed
+description: Bijlagen bij gereedmelding wijziging
+ComplexElementType: CE_BijlagenBijWijzigingGereed
+```
 
 ### Organisation type (OrganisationType)
 
@@ -1078,10 +1130,12 @@ For projects with SOAP communication, at least the Message field with
 the exact Id "SOAPServerURL" must be linked to the organization type via
 a message chapter, so that the SOAP address can be set.\
 
-    OrganisationType
-    id: StandaardOrganisatie
-    description: Standaard organisatie
-    ComplexElementType: CeOrganisatieSOAPServer
+```
+OrganisationType
+id: StandaardOrganisatie
+description: Standaard organisatie
+ComplexElementType: CeOrganisatieSOAPServer
+```
 
 ### Type persoon (PersonType)
 
@@ -1100,10 +1154,12 @@ A person type can contain metadata elements, such as address, telephone
 number, etc. Due to, among other things, new privacy legislation, this
 is being entered less and less.\
 
-    PersonType
-    id: StandaardPersoon
-    description: Standaard persoon
-    ComplexElementType: CE_Persoonspecifieke_informatie
+```
+PersonType
+id: StandaardPersoon
+description: Standaard persoon
+ComplexElementType: CE_Persoonspecifieke_informatie
+```
 
 ### Project type (ProjectType)
 
@@ -1120,10 +1176,12 @@ As far as we know, no metadata fields are applied to the project type in
 VISI software, so it is not linked.\
 References to project types:\
 
-    ProjectType
-    id: RaamwerkUAVGCGemLutjebroek
-    namespace: http://www.visi.nl/schemas/20160331/RaamwerkUAVGCGemLutjebroek_v2
-    description: Standaard raamwerk UAV GC Gemeente Lutjebroek
+```
+ProjectType
+id: RaamwerkUAVGCGemLutjebroek
+namespace: http://www.visi.nl/schemas/20160331/RaamwerkUAVGCGemLutjebroek_v2
+description: Standaard raamwerk UAV GC Gemeente Lutjebroek
+```
 
 ### Transaction phase type (TransactionPhaseType)
 
@@ -1423,31 +1481,43 @@ Some examples that are now widely used for base type STRING are:
 
 -   1 choice, so field always has this value:
 
-            <xs:enumeration value="Automatisch gevuld"/>
+    ```
+        <xs:enumeration value="Automatisch gevuld"/>
+    ```
 
 -   Selection list with multiple values
 
-            <xs:enumeration value="k1"/><xs:enumeration value="k2"/><xs:enumeration value="k3"/>
+    ```
+        <xs:enumeration value="k1"/><xs:enumeration value="k2"/><xs:enumeration value="k3"/>
+    ```
 
 -   Optional dropdown list:
 
-            <xs:enumeration value=""/><xs:enumeration value="Keuze 1"/><xs:enumeration value="Keuze 2"/>
+    ```
+        <xs:enumeration value=""/><xs:enumeration value="Keuze 1"/><xs:enumeration value="Keuze 2"/>
+    ```
 
 -   Mandatory text of at least 1 character
 
-            <xs:minLength value="1"/>
+    ```
+        <xs:minLength value="1"/>
+    ```
 
 -   Optional text no xsd restriction
 
 -   For example a year number
 
-            <xs:pattern value="(20\d\d)"/>
+    ```
+        <xs:pattern value="(20\d\d)"/>
+    ```
 
     An example that is often used for base type DECIMAL is:
 
 -   Amount with two decimal places
 
-            <xs:fractionDigits value="2"/><xs:fractionDigits value="2"/>
+    ```
+        <xs:fractionDigits value="2"/><xs:fractionDigits value="2"/>
+    ```
 
 ## Appendix 12 Guidance for Element Conditions
 
@@ -1519,105 +1589,109 @@ For example:
 
 Proposed pseudo code for determining the condition:
 
-    als Eerste bericht of Element niet aanwezig in vorige bericht
+```
+als Eerste bericht of Element niet aanwezig in vorige bericht
 
-    als Conditie gevonden(MITT, Ce normaal/parent, Cechild, SE )
-      <Conditie(MITT, Ce normaal/parent, Cechild, SE)>
+als Conditie gevonden(MITT, Ce normaal/parent, Cechild, SE )
+  <Conditie(MITT, Ce normaal/parent, Cechild, SE)>
 
-    als Conditie gevonden(MITT, Ce normaal/parent, Cechild, -)
-    <Conditie(MITT, Ce normaal/parent, Cechild, -)>
+als Conditie gevonden(MITT, Ce normaal/parent, Cechild, -)
+<Conditie(MITT, Ce normaal/parent, Cechild, -)>
 
-    als Conditie gevonden(MITT, Ce normaal/parent, -, SE )
-      <Conditie(MITT, Ce normaal/parent, -, SE )>
+als Conditie gevonden(MITT, Ce normaal/parent, -, SE )
+  <Conditie(MITT, Ce normaal/parent, -, SE )>
 
-    als Conditie gevonden(MITT, Ce normaal/parent, -, - )
-      <Conditie(MITT, Ce normaal/parent, -, - )>
+als Conditie gevonden(MITT, Ce normaal/parent, -, - )
+  <Conditie(MITT, Ce normaal/parent, -, - )>
 
-    als Conditie gevonden(MITT, - , Cechild, SE )
-      <Conditie(MITT, - , Cechild, SE )>
+als Conditie gevonden(MITT, - , Cechild, SE )
+  <Conditie(MITT, - , Cechild, SE )>
 
-    als Conditie gevonden(MITT, - , Cechild, -)
-      <Conditie(MITT, - , Cechild, -)>
+als Conditie gevonden(MITT, - , Cechild, -)
+  <Conditie(MITT, - , Cechild, -)>
 
-    als Conditie gevonden(MITT, - , -, SE )
-      <Conditie(MITT, - , -, SE ).
+als Conditie gevonden(MITT, - , -, SE )
+  <Conditie(MITT, - , -, SE ).
 
-    als Conditie gevonden(MITT, -, -, -)
-      <Conditie(MITT, -, -, -)>
+als Conditie gevonden(MITT, -, -, -)
+  <Conditie(MITT, -, -, -)>
 
-    als Conditie gevonden(-, Ce normaal/parent, Cechild, SE )
-      <Conditie(-, Ce normaal/parent, Cechild, SE )>
+als Conditie gevonden(-, Ce normaal/parent, Cechild, SE )
+  <Conditie(-, Ce normaal/parent, Cechild, SE )>
 
-    als Conditie gevonden(-, Ce normaal/parent, Cechild, -)
-      <Conditie(-, Ce normaal/parent, Cechild, -)>
+als Conditie gevonden(-, Ce normaal/parent, Cechild, -)
+  <Conditie(-, Ce normaal/parent, Cechild, -)>
 
-    als Conditie gevonden(- , Ce normaal/parent, -, SE )
-      <Conditie(- , Ce normaal/parent, -, SE )>
+als Conditie gevonden(- , Ce normaal/parent, -, SE )
+  <Conditie(- , Ce normaal/parent, -, SE )>
 
-    als Conditie gevonden(-, Ce normaal/parent, -, -)
-      <Conditie(-, Ce normaal/parent, -, -)>
+als Conditie gevonden(-, Ce normaal/parent, -, -)
+  <Conditie(-, Ce normaal/parent, -, -)>
 
-    als Conditie gevonden(- , -, Cechild, SE )
-      <Conditie(- , -, Cechild, SE )>
+als Conditie gevonden(- , -, Cechild, SE )
+  <Conditie(- , -, Cechild, SE )>
 
-    als Conditie gevonden(- , - , Cechild, -)
-      <Conditie(- , - , Cechild, -)>
-      
-    als Conditie gevonden(- , - , -, SE )
-      <Conditie(- , - , -, SE )>
+als Conditie gevonden(- , - , Cechild, -)
+  <Conditie(- , - , Cechild, -)>
+  
+als Conditie gevonden(- , - , -, SE )
+  <Conditie(- , - , -, SE )>
 
-    als Conditie gevonden(- , - , -, - ) (geen element condition gevonden)
-      <Conditie(- , - , -, - )>
+als Conditie gevonden(- , - , -, - ) (geen element condition gevonden)
+  <Conditie(- , - , -, - )>
+```
 
-    as First message or Element not present in previous message
+```
+as First message or Element not present in previous message
 
-    as Condition found(MITT, Ce normal/parent, Cechild, SE )
-       <Condition(MITT, Ce normal/parent, Cechild, SE)>
+as Condition found(MITT, Ce normal/parent, Cechild, SE )
+   <Condition(MITT, Ce normal/parent, Cechild, SE)>
 
-    as Condition found(MITT, Ce normal/parent, Cechild, -)
-    <Condition(MITT, Ce normal/parent, Cechild, -)>
+as Condition found(MITT, Ce normal/parent, Cechild, -)
+<Condition(MITT, Ce normal/parent, Cechild, -)>
 
-    as Condition found(MITT, Ce normal/parent, -, SE )
-       <Condition(MITT, Ce normal/parent, -, SE )>
+as Condition found(MITT, Ce normal/parent, -, SE )
+   <Condition(MITT, Ce normal/parent, -, SE )>
 
-    if Condition found(MITT, Ce normal/parent, -, - )
-       <Condition(MITT, Ce normal/parent, -, - )>
+if Condition found(MITT, Ce normal/parent, -, - )
+   <Condition(MITT, Ce normal/parent, -, - )>
 
-    as Condition found(MITT, - , Cechild, SE )
-       <Condition(MITT, - , Cechild, SE )>
+as Condition found(MITT, - , Cechild, SE )
+   <Condition(MITT, - , Cechild, SE )>
 
-    as Condition found(MITT, - , Cechild, -)
-       <Condition(MITT, - , Cechild, -)>
+as Condition found(MITT, - , Cechild, -)
+   <Condition(MITT, - , Cechild, -)>
 
-    as Condition found(MITT, - , -, SE )
-       <Condition(MITT, - , -, SE ).
+as Condition found(MITT, - , -, SE )
+   <Condition(MITT, - , -, SE ).
 
-    if Condition found(MITT, -, -, -)
-       <Condition(MITT, -, -, -)>
+if Condition found(MITT, -, -, -)
+   <Condition(MITT, -, -, -)>
 
-    as Condition found(-, Ce normal/parent, Cechild, SE )
-       <Condition(-, Ce normal/parent, Cechild, SE )>
+as Condition found(-, Ce normal/parent, Cechild, SE )
+   <Condition(-, Ce normal/parent, Cechild, SE )>
 
-    if Condition found(-, Ce normal/parent, Cechild, -)
-       <Condition(-, Ce normal/parent, Cechild, -)>
+if Condition found(-, Ce normal/parent, Cechild, -)
+   <Condition(-, Ce normal/parent, Cechild, -)>
 
-    as Condition found(- , Ce normal/parent, -, SE )
-       <Condition(- , Ce normal/parent, -, SE )>
+as Condition found(- , Ce normal/parent, -, SE )
+   <Condition(- , Ce normal/parent, -, SE )>
 
-    if Condition found(-, Ce normal/parent, -, -)
-       <Condition(-, Ce normal/parent, -, -)>
+if Condition found(-, Ce normal/parent, -, -)
+   <Condition(-, Ce normal/parent, -, -)>
 
-    as Condition found(- , -, Cechild, SE )
-       <Condition(- , -, Cechild, SE )>
+as Condition found(- , -, Cechild, SE )
+   <Condition(- , -, Cechild, SE )>
 
-    as Condition found(- , - , Cechild, -)
-       <Condition(- , - , Cechild, -)>
-      
-    as Condition found(- , - , -, SE )
-       <Condition(- , - , -, SE )>
+as Condition found(- , - , Cechild, -)
+   <Condition(- , - , Cechild, -)>
+  
+as Condition found(- , - , -, SE )
+   <Condition(- , - , -, SE )>
 
-    if Condition found(- , - , -, - ) (no condition element found)
-       <Condition(- , - , -, - )>
+if Condition found(- , - , -, - ) (no condition element found)
+   <Condition(- , - , -, - )>
+```
 
 -   Is the SE" Comments" in MITT "MiTT01" now EMPTY or FREE?
 

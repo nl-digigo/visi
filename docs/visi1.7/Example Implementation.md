@@ -73,24 +73,26 @@ width="50%"}
 Based on the above roles and transactions, communication can proceed as
 follows:
 
-    Ober $\rightarrow$ Klant        Wilt u de kaart zien?
-    Klant $\rightarrow$ Ober        Ja graag/Nee, nog niet (transactie eindigt dan).
-    Ober $\rightarrow$ Klant        Aanbieding menukaart met kaart als bijlage bij het bericht.
-    Klant $\rightarrow$ Ober        Kan gerecht x ook in variant Y worden bereid?
+```
+Ober $\rightarrow$ Klant        Wilt u de kaart zien?
+Klant $\rightarrow$ Ober        Ja graag/Nee, nog niet (transactie eindigt dan).
+Ober $\rightarrow$ Klant        Aanbieding menukaart met kaart als bijlage bij het bericht.
+Klant $\rightarrow$ Ober        Kan gerecht x ook in variant Y worden bereid?
 
 
-    Ober $\rightarrow$ Kok(s)       Vraag: Kan gerecht x ook in variant Y worden bereid?
-    Kok(s) $\rightarrow$ Ober       Antwoord/Advies: Ja, maar ik adviseer deze bereidingswijze
+Ober $\rightarrow$ Kok(s)       Vraag: Kan gerecht x ook in variant Y worden bereid?
+Kok(s) $\rightarrow$ Ober       Antwoord/Advies: Ja, maar ik adviseer deze bereidingswijze
 
-    Ober $\rightarrow$ Klant        Antwoord/Advies: Het kan maar we adviseren deze bereidingswijze.
-    Klant $\rightarrow$ Ober        Plaatsing bestelling.
+Ober $\rightarrow$ Klant        Antwoord/Advies: Het kan maar we adviseren deze bereidingswijze.
+Klant $\rightarrow$ Ober        Plaatsing bestelling.
 
-    Ober $\rightarrow$ Kok          Plaatsing bestelling.
-    Kok $\rightarrow$ Keukenhulp    Is dit gerecht nog voorradig?
-    Keukenhulp $\rightarrow$ Kok    Ja/Nee
-    Kok $\rightarrow$ Ober          Akkoord/Niet Akkoord.
+Ober $\rightarrow$ Kok          Plaatsing bestelling.
+Kok $\rightarrow$ Keukenhulp    Is dit gerecht nog voorradig?
+Keukenhulp $\rightarrow$ Kok    Ja/Nee
+Kok $\rightarrow$ Ober          Akkoord/Niet Akkoord.
 
-    Ober $\rightarrow$ Klant        Bevestiging bestelling/Bestelling niet mogelijk.
+Ober $\rightarrow$ Klant        Bevestiging bestelling/Bestelling niet mogelijk.
+```
 
 The following diagram shows all transactions and messages from the
 example in relation to each other. **This diagram guides the test
@@ -147,7 +149,9 @@ The header of the framework refers to the VISI System in the form of an
 XML schema (.xsd extension) which forms the basic restriction of this
 and every other VISI compliant framework.
 
-    <?xml version="1.0" encoding="UTF-8" standalone="no" ?> <visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/ 20160331">
+```
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?> <visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/ 20160331">
+```
 
 #### ProjectType
 
@@ -158,18 +162,20 @@ or UAV-gc, this can be processed in the id and description. In our case
 it is a framework to support a number of operational processes in a
 restaurant.
 
-    <ProjectType id="ProjectType1">
-        <namespace>http://www.visi.nl/schemas/20160331/TestFramework</namespace>
-        <description>VISI Testscenario's Raamwerk</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-28T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeSOAP"/>
-        </complexElements>
-    </ProjectType>
+```
+<ProjectType id="ProjectType1">
+    <namespace>http://www.visi.nl/schemas/20160331/TestFramework</namespace>
+    <description>VISI Testscenario's Raamwerk</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-28T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeSOAP"/>
+    </complexElements>
+</ProjectType>
+```
 
 #### PersonType
 
@@ -182,14 +188,16 @@ type: minor, adult and 65+. O.a. to different disciplines. In this
 simple example we will limit ourselves to a PersonType and define it as
 simply as possible.
 
-    <PersonType id="StandardPersonType">
-        <description>Standard person type</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-28T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-    </PersonType>
+```
+<PersonType id="StandardPersonType">
+    <description>Standard person type</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-28T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+</PersonType>
+```
 
 The id *StandardPersonType* will soon become a message-level object.
 
@@ -204,17 +212,19 @@ company, sole proprietorship or public law body. In this simple example
 we will limit ourselves to an OrganizationType and define it as simply
 as possible.
 
-    <OrganisationType id="StandardOrganisationType">
-        <description>Standard organisation type</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-28T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeOrganisatie"/>
-        </complexElements>
-    </OrganisationType>
+```
+<OrganisationType id="StandardOrganisationType">
+    <description>Standard organisation type</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-28T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeOrganisatie"/>
+    </complexElements>
+</OrganisationType>
+```
 
 The id *StandardOrganizationType* will soon become a message-level
 object.
@@ -230,14 +240,16 @@ its own interpretation of specific group data. In this simple example we
 will limit ourselves to a single *GroupType* and also define it as
 simply as possible.
 
-    <GroupType id="StandardGroupType">
-        <description>Standard Group Type</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-28T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-    </GroupType>
+```
+<GroupType id="StandardGroupType">
+    <description>Standard Group Type</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-28T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+</GroupType>
+```
 
 The id *StandardGroupType* will soon become a message-level object.
 
@@ -258,41 +270,43 @@ several people. The example contains four *RoleType's*, namely:
 
 The roles are defined in the framework as follows.
 
-    <RoleType id="keukenhulp">
-        <description>Keukenhulp</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-02-02T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-    </RoleType>
+```
+<RoleType id="keukenhulp">
+    <description>Keukenhulp</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-02-02T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+</RoleType>
 
-    <RoleType id="klant">
-        <description>Klant</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-28T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-    </RoleType>
+<RoleType id="klant">
+    <description>Klant</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-28T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+</RoleType>
 
-    <RoleType id="kok">
-        <description>Kok</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-    </RoleType>
+<RoleType id="kok">
+    <description>Kok</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+</RoleType>
 
-    <RoleType id="ober">
-        <description>Ober</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-28T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-    </RoleType>
+<RoleType id="ober">
+    <description>Ober</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-28T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+</RoleType>
+```
 
 We now have a role *customer*, a role *waiter*, a role *cook* and a role
 *kitchen assistant*.
@@ -318,59 +332,61 @@ most frameworks:
 
 The *TransactionPhaseType's* are defined as follows.
 
-    <TransactionPhaseType id="aanvaardEinde">
-        <description>Aanvaard/Einde</description>
-        <startDate>2008-05-04T00:00:00</startDate>
-        <endDate>2008-05-04T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2008-05-04T00:00:00</dateLaMu>
-        <userLaMu>MMA</userLaMu>
-    </TransactionPhaseType>
+```
+<TransactionPhaseType id="aanvaardEinde">
+    <description>Aanvaard/Einde</description>
+    <startDate>2008-05-04T00:00:00</startDate>
+    <endDate>2008-05-04T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2008-05-04T00:00:00</dateLaMu>
+    <userLaMu>MMA</userLaMu>
+</TransactionPhaseType>
 
-    <TransactionPhaseType id="beloofdExecutie">
-        <description>Beloofd/Executie</description>
-        <startDate>2008-05-04T00:00:00</startDate>
-        <endDate>2008-05-04T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2008-05-04T00:00:00</dateLaMu>
-        <userLaMu>MMA</userLaMu>
-    </TransactionPhaseType>
+<TransactionPhaseType id="beloofdExecutie">
+    <description>Beloofd/Executie</description>
+    <startDate>2008-05-04T00:00:00</startDate>
+    <endDate>2008-05-04T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2008-05-04T00:00:00</dateLaMu>
+    <userLaMu>MMA</userLaMu>
+</TransactionPhaseType>
 
-    <TransactionPhaseType id="meldingGereed">
-        <description>Melding Gereed</description>
-        <startDate>2008-05-04T00:00:00</startDate>
-        <endDate>2008-05-04T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2008-05-04T00:00:00</dateLaMu>
-        <userLaMu>MMA</userLaMu>
-    </TransactionPhaseType>
+<TransactionPhaseType id="meldingGereed">
+    <description>Melding Gereed</description>
+    <startDate>2008-05-04T00:00:00</startDate>
+    <endDate>2008-05-04T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2008-05-04T00:00:00</dateLaMu>
+    <userLaMu>MMA</userLaMu>
+</TransactionPhaseType>
 
-    <TransactionPhaseType id="start">
-        <description>Start</description>
-        <startDate>2008-05-04T00:00:00</startDate>
-        <endDate>2008-05-04T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2008-05-04T00:00:00</dateLaMu>
-        <userLaMu>MMA</userLaMu>
-    </TransactionPhaseType>
+<TransactionPhaseType id="start">
+    <description>Start</description>
+    <startDate>2008-05-04T00:00:00</startDate>
+    <endDate>2008-05-04T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2008-05-04T00:00:00</dateLaMu>
+    <userLaMu>MMA</userLaMu>
+</TransactionPhaseType>
 
-    <TransactionPhaseType id="verzocht">
-        <description>Verzocht</description>
-        <startDate>2008-05-04T00:00:00</startDate>
-        <endDate>2008-05-04T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2008-05-04T00:00:00</dateLaMu>
-        <userLaMu>MMA</userLaMu>
-    </TransactionPhaseType>
+<TransactionPhaseType id="verzocht">
+    <description>Verzocht</description>
+    <startDate>2008-05-04T00:00:00</startDate>
+    <endDate>2008-05-04T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2008-05-04T00:00:00</dateLaMu>
+    <userLaMu>MMA</userLaMu>
+</TransactionPhaseType>
 
-    <TransactionPhaseType id="wijzigingHold">
-        <description>Wijziging/Hold</description>
-        <startDate>2008-05-04T00:00:00</startDate>
-        <endDate>2008-05-04T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2008-05-04T00:00:00</dateLaMu>
-        <userLaMu>MMA</userLaMu>
-    </TransactionPhaseType>
+<TransactionPhaseType id="wijzigingHold">
+    <description>Wijziging/Hold</description>
+    <startDate>2008-05-04T00:00:00</startDate>
+    <endDate>2008-05-04T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2008-05-04T00:00:00</dateLaMu>
+    <userLaMu>MMA</userLaMu>
+</TransactionPhaseType>
+```
 
 #### TransactionType
 
@@ -390,68 +406,70 @@ T4 Ask a Chef for Kitchen Help\
 \
 The *TransactionType's* are defined as follows.
 
-    <TransactionType id="t1_OpnameBestelling">
-        <description>T1 Opname van bestelling (ober aan klant)</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2011-10-26T00:00:00</dateLaMu>
-        <userLaMu>PWi</userLaMu>
-        <initiator>
-            <RoleTypeRef idref="ober"/>
-        </initiator>
-        <executor>
-            <RoleTypeRef idref="klant"/>
-        </executor>
-    </TransactionType>
+```
+<TransactionType id="t1_OpnameBestelling">
+    <description>T1 Opname van bestelling (ober aan klant)</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2011-10-26T00:00:00</dateLaMu>
+    <userLaMu>PWi</userLaMu>
+    <initiator>
+        <RoleTypeRef idref="ober"/>
+    </initiator>
+    <executor>
+        <RoleTypeRef idref="klant"/>
+    </executor>
+</TransactionType>
 
-    <TransactionType id="t2_VraagOberAanKok">
-        <description>T2 Vraag (ober aan kok)</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-28T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <initiator>
-            <RoleTypeRef idref="ober"/>
-        </initiator>
-        <executor>
-            <RoleTypeRef idref="kok"/>
-        </executor>
-    </TransactionType>
+<TransactionType id="t2_VraagOberAanKok">
+    <description>T2 Vraag (ober aan kok)</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-28T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <initiator>
+        <RoleTypeRef idref="ober"/>
+    </initiator>
+    <executor>
+        <RoleTypeRef idref="kok"/>
+    </executor>
+</TransactionType>
 
-    <TransactionType id="t3_OpdrachtKok">
-        <description>T3 Opdracht (ober aan kok)</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <initiator>
-            <RoleTypeRef idref="ober"/>
-        </initiator>
-        <executor>
-            <RoleTypeRef idref="kok"/>
-        </executor>
-    </TransactionType>
+<TransactionType id="t3_OpdrachtKok">
+    <description>T3 Opdracht (ober aan kok)</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <initiator>
+        <RoleTypeRef idref="ober"/>
+    </initiator>
+    <executor>
+        <RoleTypeRef idref="kok"/>
+    </executor>
+</TransactionType>
 
-    <TransactionType id="t4_VraagKokAanKeukenhulp">
-        <description>T4 Vraag (kok aan keukenhulp)</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2011-10-26T00:00:00</dateLaMu>
-        <userLaMu>PWi</userLaMu>
-        <initiator>
-            <RoleTypeRef idref="kok"/>
-        </initiator>
-        <executor>
-            <RoleTypeRef idref="keukenhulp"/>
-        </executor>
-        <appendixTypes>
-            <AppendixTypeRef idref="AppRapport"/>
-        </appendixTypes>
-    </TransactionType>
+<TransactionType id="t4_VraagKokAanKeukenhulp">
+    <description>T4 Vraag (kok aan keukenhulp)</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2011-10-26T00:00:00</dateLaMu>
+    <userLaMu>PWi</userLaMu>
+    <initiator>
+        <RoleTypeRef idref="kok"/>
+    </initiator>
+    <executor>
+        <RoleTypeRef idref="keukenhulp"/>
+    </executor>
+    <appendixTypes>
+        <AppendixTypeRef idref="AppRapport"/>
+    </appendixTypes>
+</TransactionType>
+```
 
 #### MessageType
 
@@ -465,185 +483,187 @@ form and content of the messages. put our hand. In some messages we have
 not come up with a self-defined form for the message, they are purely
 notifications.
 
-    <MessageType id="msgAanbiedingMenuKaart">
-        <description>Menukaart</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <appendixMandatory>true</appendixMandatory>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeMenuKaart"/>
-            <ComplexElementTypeRef idref="CeDagMenu"/>
-            <ComplexElementTypeRef idref="CeDrankenKaart"/>
-            <ComplexElementTypeRef idref="CeMenuKaartType"/>
-        </complexElements>
-    </MessageType>
+```
+<MessageType id="msgAanbiedingMenuKaart">
+    <description>Menukaart</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <appendixMandatory>true</appendixMandatory>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeMenuKaart"/>
+        <ComplexElementTypeRef idref="CeDagMenu"/>
+        <ComplexElementTypeRef idref="CeDrankenKaart"/>
+        <ComplexElementTypeRef idref="CeMenuKaartType"/>
+    </complexElements>
+</MessageType>
 
-    <MessageType id="msgAntwoord">
-        <description>Antwoord</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2011-10-26T00:00:00</dateLaMu>
-        <userLaMu>PWi</userLaMu>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeVraag"/>
-            <ComplexElementTypeRef idref="CeAntwoord"/>
-            <ComplexElementTypeRef idref="CeMenuKaart"/>
-        </complexElements>
-        <appendixTypes>
-            <AppendixTypeRef idref="AppTekening"/>
-        </appendixTypes>
-    </MessageType>
+<MessageType id="msgAntwoord">
+    <description>Antwoord</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2011-10-26T00:00:00</dateLaMu>
+    <userLaMu>PWi</userLaMu>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeVraag"/>
+        <ComplexElementTypeRef idref="CeAntwoord"/>
+        <ComplexElementTypeRef idref="CeMenuKaart"/>
+    </complexElements>
+    <appendixTypes>
+        <AppendixTypeRef idref="AppTekening"/>
+    </appendixTypes>
+</MessageType>
 
-    <MessageType id="msgAntwoordIsOvergenomen">
-        <description>Antwoord is overgenomen in antwoord aan ober</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2013-10-24T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <helpInfo>Dit bericht wordt alleen aangeboden als de kok een Antwoord naar de
-    ober gestuurd heeft.</helpInfo>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeVraag"/>
-            <ComplexElementTypeRef idref="CeAntwoord"/>
-        </complexElements>
-    </MessageType>
+<MessageType id="msgAntwoordIsOvergenomen">
+    <description>Antwoord is overgenomen in antwoord aan ober</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2013-10-24T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <helpInfo>Dit bericht wordt alleen aangeboden als de kok een Antwoord naar de
+ober gestuurd heeft.</helpInfo>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeVraag"/>
+        <ComplexElementTypeRef idref="CeAntwoord"/>
+    </complexElements>
+</MessageType>
 
-    <MessageType id="msgAntwoordWordtNietGebruikt">
-        <description>Antwoord wordt niet gebruikt</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2013-10-24T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <helpInfo>Dit bericht wordt aangeboden zolang de kok nog niet gereageerd heeft
-    naar de ober. Hiermee sluit hij de transactie af en kan bijvoorbeeld een andere
-    keukenhulp inschakelen.</helpInfo>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeVraag"/>
-            <ComplexElementTypeRef idref="CeAntwoord"/>
-        </complexElements>
-    </MessageType>
+<MessageType id="msgAntwoordWordtNietGebruikt">
+    <description>Antwoord wordt niet gebruikt</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2013-10-24T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <helpInfo>Dit bericht wordt aangeboden zolang de kok nog niet gereageerd heeft
+naar de ober. Hiermee sluit hij de transactie af en kan bijvoorbeeld een andere
+keukenhulp inschakelen.</helpInfo>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeVraag"/>
+        <ComplexElementTypeRef idref="CeAntwoord"/>
+    </complexElements>
+</MessageType>
 
-    <MessageType id="msgBestellingAkkoord">
-        <description>Bestelling: akkoord</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2011-10-26T00:00:00</dateLaMu>
-        <userLaMu>PWi</userLaMu>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeBestelling"/>
-        </complexElements>
-    </MessageType>
+<MessageType id="msgBestellingAkkoord">
+    <description>Bestelling: akkoord</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2011-10-26T00:00:00</dateLaMu>
+    <userLaMu>PWi</userLaMu>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeBestelling"/>
+    </complexElements>
+</MessageType>
 
-    <MessageType id="msgBestellingIsAfgekeurdOpBasisVanAntwoord">
-        <description>Bestelling is afgekeurd op basis van antwoord</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2013-10-24T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <helpInfo>Dit bericht wordt alleen aangeboden als de kok een Niet akkoord naar
-    de ober gestuurd heeft.</helpInfo>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeVraag"/>
-            <ComplexElementTypeRef idref="CeAntwoord"/>
-        </complexElements>
-    </MessageType>
+<MessageType id="msgBestellingIsAfgekeurdOpBasisVanAntwoord">
+    <description>Bestelling is afgekeurd op basis van antwoord</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2013-10-24T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <helpInfo>Dit bericht wordt alleen aangeboden als de kok een Niet akkoord naar
+de ober gestuurd heeft.</helpInfo>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeVraag"/>
+        <ComplexElementTypeRef idref="CeAntwoord"/>
+    </complexElements>
+</MessageType>
 
-    <MessageType id="msgBestellingIsGoedgekeurdOpBasisVanAntwoord">
-        <description>Bestelling is goedgekeurd op basis van antwoord</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2013-10-24T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <helpInfo>Dit bericht wordt alleen aangeboden als de kok een Akkoord naar de
-    ober gestuurd heeft.</helpInfo>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeVraag"/>
-            <ComplexElementTypeRef idref="CeAntwoord"/>
-        </complexElements>
-    </MessageType>
+<MessageType id="msgBestellingIsGoedgekeurdOpBasisVanAntwoord">
+    <description>Bestelling is goedgekeurd op basis van antwoord</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2013-10-24T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <helpInfo>Dit bericht wordt alleen aangeboden als de kok een Akkoord naar de
+ober gestuurd heeft.</helpInfo>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeVraag"/>
+        <ComplexElementTypeRef idref="CeAntwoord"/>
+    </complexElements>
+</MessageType>
 
-    <MessageType id="msgBestellingNietAkkoord">
-        <description>Bestelling: niet akkoord</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2011-10-26T00:00:00</dateLaMu>
-        <userLaMu>PWi</userLaMu>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeBestelling"/>
-        </complexElements>
-    </MessageType>
+<MessageType id="msgBestellingNietAkkoord">
+    <description>Bestelling: niet akkoord</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2011-10-26T00:00:00</dateLaMu>
+    <userLaMu>PWi</userLaMu>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeBestelling"/>
+    </complexElements>
+</MessageType>
 
-    <MessageType id="msgJa">
-        <description>Antwoord: Ja</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-03-16T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeMenuKaartType"/>
-        </complexElements>
-    </MessageType>
+<MessageType id="msgJa">
+    <description>Antwoord: Ja</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-03-16T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeMenuKaartType"/>
+    </complexElements>
+</MessageType>
 
-    <MessageType id="msgNee">
-        <description>Antwoord: Nee</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-    </MessageType>
+<MessageType id="msgNee">
+    <description>Antwoord: Nee</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+</MessageType>
 
-    <MessageType id="msgPlaatsingBestelling">
-        <description>Bestelling</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <appendixMandatory>false</appendixMandatory>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeBestelling"/>
-        </complexElements>
-    </MessageType>
+<MessageType id="msgPlaatsingBestelling">
+    <description>Bestelling</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <appendixMandatory>false</appendixMandatory>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeBestelling"/>
+    </complexElements>
+</MessageType>
 
-    <MessageType id="msgVraag">
-        <description>Vraag</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeVraag"/>
-            <ComplexElementTypeRef idref="CeMenuKaart"/>
-            <ComplexElementTypeRef idref="CeDagMenu"/>
-            <ComplexElementTypeRef idref="CeDrankenKaart"/>
-        </complexElements>
-    </MessageType>
+<MessageType id="msgVraag">
+    <description>Vraag</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeVraag"/>
+        <ComplexElementTypeRef idref="CeMenuKaart"/>
+        <ComplexElementTypeRef idref="CeDagMenu"/>
+        <ComplexElementTypeRef idref="CeDrankenKaart"/>
+    </complexElements>
+</MessageType>
 
-    <MessageType id="msgWiltuDeKaartZien">
-        <description>Wilt u de menukaart zien?</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-28T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeReactieTermijn"/>
-            <ComplexElementTypeRef idref="CeBaseTypeTest"/>
-        </complexElements>
-    </MessageType>
+<MessageType id="msgWiltuDeKaartZien">
+    <description>Wilt u de menukaart zien?</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-28T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeReactieTermijn"/>
+        <ComplexElementTypeRef idref="CeBaseTypeTest"/>
+    </complexElements>
+</MessageType>
+```
 
 #### MessageInTransactionType
 
@@ -701,591 +721,595 @@ completing transaction T2.
 
 ![](images/visiwikib4.7image.png){#fig: width="90%"}
 
-    <MessageInTransactionType id="BerichtInTransactie1">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-28T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
-        <firstMessage>true</firstMessage>
-        <message>
-            <MessageTypeRef idref="msgWiltuDeKaartZien"/>
-        </message>
-        <transaction>
-            <TransactionTypeRef idref="t1_OpnameBestelling"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="start"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+```
+<MessageInTransactionType id="BerichtInTransactie1">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-28T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <firstMessage>true</firstMessage>
+    <message>
+        <MessageTypeRef idref="msgWiltuDeKaartZien"/>
+    </message>
+    <transaction>
+        <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="start"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie10">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
-        <firstMessage>true</firstMessage>
-        <message>
-            <MessageTypeRef idref="msgVraag"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t2_VraagOberAanKok"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="start"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie10">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <firstMessage>true</firstMessage>
+    <message>
+        <MessageTypeRef idref="msgVraag"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t2_VraagOberAanKok"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="start"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie11">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>false</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
-        <message>
-            <MessageTypeRef idref="msgAntwoord"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie10"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t2_VraagOberAanKok"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="aanvaardEinde"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie11">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+    <message>
+        <MessageTypeRef idref="msgAntwoord"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie10"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t2_VraagOberAanKok"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="aanvaardEinde"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie12">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
-        <firstMessage>true</firstMessage>
-        <message>
-            <MessageTypeRef idref="msgPlaatsingBestelling"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie7"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t3_OpdrachtKok"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="start"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-        <conditions>
-            <MessageInTransactionTypeConditionRef idref="MC_MaarEenBestellingToegestaan"/>
-        </conditions>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie12">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <firstMessage>true</firstMessage>
+    <message>
+        <MessageTypeRef idref="msgPlaatsingBestelling"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie7"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t3_OpdrachtKok"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="start"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <conditions>
+        <MessageInTransactionTypeConditionRef idref="MC_MaarEenBestellingToegestaan"/>
+    </conditions>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie13">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>false</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
-        <message>
-            <MessageTypeRef idref="msgBestellingAkkoord"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t3_OpdrachtKok"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="aanvaardEinde"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie13">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+    <message>
+        <MessageTypeRef idref="msgBestellingAkkoord"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t3_OpdrachtKok"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="aanvaardEinde"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie14">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>false</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
-        <message>
-            <MessageTypeRef idref="msgBestellingNietAkkoord"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t3_OpdrachtKok"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="aanvaardEinde"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie14">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+    <message>
+        <MessageTypeRef idref="msgBestellingNietAkkoord"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t3_OpdrachtKok"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="aanvaardEinde"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie15">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-02-02T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
-        <firstMessage>true</firstMessage>
-        <message>
-            <MessageTypeRef idref="msgVraag"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie10"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="start"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-        <conditions>
-            <MessageInTransactionTypeConditionRef idref="MC_GeenVraagAanHulpAlsOberAntwoordHeeft"/>
-        </conditions>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie15">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-02-02T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+    <firstMessage>true</firstMessage>
+    <message>
+        <MessageTypeRef idref="msgVraag"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie10"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="start"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <conditions>
+        <MessageInTransactionTypeConditionRef idref="MC_GeenVraagAanHulpAlsOberAntwoordHeeft"/>
+    </conditions>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie16">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-02-02T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>false</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
-        <message>
-            <MessageTypeRef idref="msgAntwoord"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie15"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="aanvaardEinde"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie16">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-02-02T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+        <MessageTypeRef idref="msgAntwoord"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie15"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="aanvaardEinde"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie17">
-        <requiredNotify>0</requiredNotify>
-        <received>false</received>
-        <send>false</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <message>
-            <MessageTypeRef idref="msgAntwoordIsOvergenomen"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
-        </transaction>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-        <conditions>
-            <MessageInTransactionTypeConditionRef idref="MC_AntwoordIsVerstuurd"/>
-        </conditions>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie17">
+    <requiredNotify>0</requiredNotify>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+        <MessageTypeRef idref="msgAntwoordIsOvergenomen"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
+    </transaction>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <conditions>
+        <MessageInTransactionTypeConditionRef idref="MC_AntwoordIsVerstuurd"/>
+    </conditions>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie18">
-        <requiredNotify>0</requiredNotify>
-        <received>false</received>
-        <send>false</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <message>
-            <MessageTypeRef idref="msgAntwoordWordtNietGebruikt"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
-        </transaction>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-        <conditions>
-            <MessageInTransactionTypeConditionRef idref="MC_AntwoordNietGebruikt"/>
-        </conditions>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie18">
+    <requiredNotify>0</requiredNotify>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+        <MessageTypeRef idref="msgAntwoordWordtNietGebruikt"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
+    </transaction>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <conditions>
+        <MessageInTransactionTypeConditionRef idref="MC_AntwoordNietGebruikt"/>
+    </conditions>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie19">
-        <requiredNotify>0</requiredNotify>
-        <received>false</received>
-        <send>false</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <message>
-            <MessageTypeRef idref="msgBestellingIsAfgekeurdOpBasisVanAntwoord"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
-        </transaction>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-        <conditions>
-            <MessageInTransactionTypeConditionRef idref="MC_AfkeuringIsVerstuurd"/>
-        </conditions>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie19">
+    <requiredNotify>0</requiredNotify>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+        <MessageTypeRef idref="msgBestellingIsAfgekeurdOpBasisVanAntwoord"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
+    </transaction>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <conditions>
+        <MessageInTransactionTypeConditionRef idref="MC_AfkeuringIsVerstuurd"/>
+    </conditions>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie2">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>false</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
-        <message>
-            <MessageTypeRef idref="msgNee"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie1"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t1_OpnameBestelling"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="aanvaardEinde"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie2">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+        <MessageTypeRef idref="msgNee"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie1"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="aanvaardEinde"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie20">
-        <requiredNotify>0</requiredNotify>
-        <received>false</received>
-        <send>false</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <message>
-            <MessageTypeRef idref="msgBestellingIsGoedgekeurdOpBasisVanAntwoord"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
-        </transaction>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-        <conditions>
-            <MessageInTransactionTypeConditionRef idref="MC_GoedkeuringIsVerstuurd"/>
-        </conditions>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie20">
+    <requiredNotify>0</requiredNotify>
+    <received>false</received>
+    <send>false</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+        <MessageTypeRef idref="msgBestellingIsGoedgekeurdOpBasisVanAntwoord"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
+    </transaction>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <conditions>
+        <MessageInTransactionTypeConditionRef idref="MC_GoedkeuringIsVerstuurd"/>
+    </conditions>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie3">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>false</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
-        <firstMessage>false</firstMessage>
-        <message>
-            <MessageTypeRef idref="msgJa"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie1"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t1_OpnameBestelling"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="verzocht"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie3">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <firstMessage>false</firstMessage>
+    <message>
+        <MessageTypeRef idref="msgJa"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie1"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="verzocht"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie4">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
-        <message>
-            <MessageTypeRef idref="msgAanbiedingMenuKaart"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie3"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t1_OpnameBestelling"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="beloofdExecutie"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie4">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+        <MessageTypeRef idref="msgAanbiedingMenuKaart"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie3"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="beloofdExecutie"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie5">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>false</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
-        <message>
-            <MessageTypeRef idref="msgVraag"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie4"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie6"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie8"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t1_OpnameBestelling"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="wijzigingHold"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie5">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+        <MessageTypeRef idref="msgVraag"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie4"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie6"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie8"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="wijzigingHold"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie6">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2011-10-26T00:00:00</dateLaMu>
-        <userLaMu>PWi</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
-        <message>
-            <MessageTypeRef idref="msgAntwoord"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t1_OpnameBestelling"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="beloofdExecutie"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-        <appendixTypes>
-            <AppendixTypeRef idref="AppVideo"/>
-        </appendixTypes>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie6">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2011-10-26T00:00:00</dateLaMu>
+    <userLaMu>PWi</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+    <message>
+        <MessageTypeRef idref="msgAntwoord"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="beloofdExecutie"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <appendixTypes>
+        <AppendixTypeRef idref="AppVideo"/>
+    </appendixTypes>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie7">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>false</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
-        <message>
-            <MessageTypeRef idref="msgPlaatsingBestelling"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie4"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie6"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie8"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t1_OpnameBestelling"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="meldingGereed"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie7">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+        <MessageTypeRef idref="msgPlaatsingBestelling"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie4"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie6"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie8"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="meldingGereed"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie8">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
-        <message>
-            <MessageTypeRef idref="msgBestellingNietAkkoord"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t1_OpnameBestelling"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="beloofdExecutie"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie8">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+        <MessageTypeRef idref="msgBestellingNietAkkoord"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="beloofdExecutie"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
 
-    <MessageInTransactionType id="BerichtInTransactie9">
-        <requiredNotify>0</requiredNotify>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <received>true</received>
-        <send>true</send>
-        <state>active</state>
-        <initiatorToExecutor>true</initiatorToExecutor>
-        <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
-        <message>
-            <MessageTypeRef idref="msgBestellingAkkoord"/>
-        </message>
-        <previous>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
-        </previous>
-        <transaction>
-            <TransactionTypeRef idref="t1_OpnameBestelling"/>
-        </transaction>
-        <transactionPhase>
-            <TransactionPhaseTypeRef idref="aanvaardEinde"/>
-        </transactionPhase>
-        <group>
-            <GroupTypeRef idref="StandardGroupType"/>
-        </group>
-    </MessageInTransactionType>
+<MessageInTransactionType id="BerichtInTransactie9">
+    <requiredNotify>0</requiredNotify>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <received>true</received>
+    <send>true</send>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+        <MessageTypeRef idref="msgBestellingAkkoord"/>
+    </message>
+    <previous>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
+    </previous>
+    <transaction>
+        <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+        <TransactionPhaseTypeRef idref="aanvaardEinde"/>
+    </transactionPhase>
+    <group>
+        <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+</MessageInTransactionType>
+```
 
 #### MessageInTransactionTypeCondition
 
 Further conditions may be imposed on the order in which messages are
 sent.
 
-    <MessageInTransactionTypeCondition id="MC_AfkeuringIsVerstuurd">
-        <sendAfter>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
-        </sendAfter>
-        <helpInfo>Melden dat een afkeuring van de bestelling is verstuurd op basis van
-    het antwoord mag alleen nadat die afkeuring verstuurd is.</helpInfo>
-    </MessageInTransactionTypeCondition>
+```
+<MessageInTransactionTypeCondition id="MC_AfkeuringIsVerstuurd">
+    <sendAfter>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
+    </sendAfter>
+    <helpInfo>Melden dat een afkeuring van de bestelling is verstuurd op basis van
+het antwoord mag alleen nadat die afkeuring verstuurd is.</helpInfo>
+</MessageInTransactionTypeCondition>
 
-    <MessageInTransactionTypeCondition id="MC_AntwoordIsVerstuurd">
-        <sendAfter>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
-        </sendAfter>
-        <helpInfo>Antwoord is overgenomen mag alleen aangeboden worden nadat de kok een
-    antwoord terug aan de ober gegeven heeft.</helpInfo>
-    </MessageInTransactionTypeCondition>
+<MessageInTransactionTypeCondition id="MC_AntwoordIsVerstuurd">
+    <sendAfter>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
+    </sendAfter>
+    <helpInfo>Antwoord is overgenomen mag alleen aangeboden worden nadat de kok een
+antwoord terug aan de ober gegeven heeft.</helpInfo>
+</MessageInTransactionTypeCondition>
 
-    <MessageInTransactionTypeCondition id="MC_AntwoordNietGebruikt">
-        <sendBefore>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
-        </sendBefore>
-        <helpInfo>Melden dat het antwoord niet gebruikt is, mag alleen maar gekozen
-    worden zolang er nog geen antwoord terug naar de ober gestuurd is.</helpInfo>
-    </MessageInTransactionTypeCondition>
+<MessageInTransactionTypeCondition id="MC_AntwoordNietGebruikt">
+    <sendBefore>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
+    </sendBefore>
+    <helpInfo>Melden dat het antwoord niet gebruikt is, mag alleen maar gekozen
+worden zolang er nog geen antwoord terug naar de ober gestuurd is.</helpInfo>
+</MessageInTransactionTypeCondition>
 
-    <MessageInTransactionTypeCondition id="MC_GeenVraagAanHulpAlsOberAntwoordHeeft">
-        <sendBefore>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
-        </sendBefore>
-        <helpInfo>Testcase: Als de kok het antwoord op de bestelling of de vraag
-    gegeven heeft, mag er geen vraag meer naar de keukenhulp.</helpInfo>
-    </MessageInTransactionTypeCondition>
+<MessageInTransactionTypeCondition id="MC_GeenVraagAanHulpAlsOberAntwoordHeeft">
+    <sendBefore>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
+    </sendBefore>
+    <helpInfo>Testcase: Als de kok het antwoord op de bestelling of de vraag
+gegeven heeft, mag er geen vraag meer naar de keukenhulp.</helpInfo>
+</MessageInTransactionTypeCondition>
 
-    <MessageInTransactionTypeCondition id="MC_GoedkeuringIsVerstuurd">
-        <sendAfter>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
-        </sendAfter>
-        <helpInfo>Melden dat een goedkeuring van de bestelling is verstuurd op basis
-    van het antwoord mag alleen nadat die goedkeuring verstuurd is.</helpInfo>
-    </MessageInTransactionTypeCondition>
+<MessageInTransactionTypeCondition id="MC_GoedkeuringIsVerstuurd">
+    <sendAfter>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
+    </sendAfter>
+    <helpInfo>Melden dat een goedkeuring van de bestelling is verstuurd op basis
+van het antwoord mag alleen nadat die goedkeuring verstuurd is.</helpInfo>
+</MessageInTransactionTypeCondition>
 
-    <MessageInTransactionTypeCondition id="MC_MaarEenBestellingToegestaan">
-        <sendBefore>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
-        </sendBefore>
-        <helpInfo>Testcase: als de klant een bestelling aan de ober geeft, mag er mmaar
-    1 bestelling naar de keuken gaan om dubbele bestellingen te voorkomen.</helpInfo>
-    </MessageInTransactionTypeCondition>
+<MessageInTransactionTypeCondition id="MC_MaarEenBestellingToegestaan">
+    <sendBefore>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
+    </sendBefore>
+    <helpInfo>Testcase: als de klant een bestelling aan de ober geeft, mag er mmaar
+1 bestelling naar de keuken gaan om dubbele bestellingen te voorkomen.</helpInfo>
+</MessageInTransactionTypeCondition>
+```
 
 #### ComplexElementType
 
@@ -1299,249 +1323,251 @@ can enforce this by including the reference to this *SimpleElementType*
 three times. In our example we have included only one (but at least 1)
 of each *SimpleElementType* reference.
 
-    <ComplexElementType id="CeAntwoord">
-        <description>Antwoord</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="Antwoord"/>
-        </simpleElements>
-    </ComplexElementType>
+```
+<ComplexElementType id="CeAntwoord">
+    <description>Antwoord</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="Antwoord"/>
+    </simpleElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeBaseTypeTest">
-        <description>Veldsoorten test</description>
-        <startDate>2013-10-25T00:00:00</startDate>
-        <endDate>2013-10-25T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="SeBoolean"/>
-            <SimpleElementTypeRef idref="SeDate"/>
-            <SimpleElementTypeRef idref="SeDatetime"/>
-            <SimpleElementTypeRef idref="SeTime"/>
-            <SimpleElementTypeRef idref="SeDecimal"/>
-            <SimpleElementTypeRef idref="SeInteger"/>
-            <SimpleElementTypeRef idref="SeKeuzelijst"/>
-            <SimpleElementTypeRef idref="SeString"/>
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeBaseTypeTest">
+    <description>Veldsoorten test</description>
+    <startDate>2013-10-25T00:00:00</startDate>
+    <endDate>2013-10-25T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="SeBoolean"/>
+        <SimpleElementTypeRef idref="SeDate"/>
+        <SimpleElementTypeRef idref="SeDatetime"/>
+        <SimpleElementTypeRef idref="SeTime"/>
+        <SimpleElementTypeRef idref="SeDecimal"/>
+        <SimpleElementTypeRef idref="SeInteger"/>
+        <SimpleElementTypeRef idref="SeKeuzelijst"/>
+        <SimpleElementTypeRef idref="SeString"/>
+    </simpleElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeBestelling">
-        <description>Bestelling</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2014-06-20T15:17:11</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <helpInfo>de gerechten en drankjes worden in aparte tabellen ingevoerd, met per
-    regel de mogelijkheid een opmerking toe te voegen. Er is ook een totaalopmerking in
-    te voeren, als er iets bijzonders over bijvoorbeeld de manier van opdienen
-    ingevoerd moet worden.</helpInfo>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeInhoudBestelling"/>
-            <ComplexElementTypeRef idref="CeInhoudDrankbestelling"/>
-        </complexElements>
-        <simpleElements>
-            <SimpleElementTypeRef idref="Opmerking"/>
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeBestelling">
+    <description>Bestelling</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2014-06-20T15:17:11</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <helpInfo>de gerechten en drankjes worden in aparte tabellen ingevoerd, met per
+regel de mogelijkheid een opmerking toe te voegen. Er is ook een totaalopmerking in
+te voeren, als er iets bijzonders over bijvoorbeeld de manier van opdienen
+ingevoerd moet worden.</helpInfo>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeInhoudBestelling"/>
+        <ComplexElementTypeRef idref="CeInhoudDrankbestelling"/>
+    </complexElements>
+    <simpleElements>
+        <SimpleElementTypeRef idref="Opmerking"/>
+    </simpleElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeDagMenu">
-        <description>Dagmenu</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2016-06-07T10:00:01</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-        </complexElements>
-    </ComplexElementType>
-    <ComplexElementType id="CeDrankenKaart">
-        <description>Drankenkaart</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2016-06-07T10:00:21</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-        </complexElements>
-    </ComplexElementType>
+<ComplexElementType id="CeDagMenu">
+    <description>Dagmenu</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2016-06-07T10:00:01</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+</ComplexElementType>
+<ComplexElementType id="CeDrankenKaart">
+    <description>Drankenkaart</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2016-06-07T10:00:21</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeInhoudBestelling">
-        <description>Inhoud van de bestelling</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="NaamGerecht"/>
-            <SimpleElementTypeRef idref="Opmerking"/>
-        </simpleElements>
-        <minOccurs>1</minOccurs>
-    </ComplexElementType>
+<ComplexElementType id="CeInhoudBestelling">
+    <description>Inhoud van de bestelling</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="NaamGerecht"/>
+        <SimpleElementTypeRef idref="Opmerking"/>
+    </simpleElements>
+    <minOccurs>1</minOccurs>
+</ComplexElementType>
 
-    <ComplexElementType id="CeInhoudDrankbestelling">
-        <description>Inhoud drankbestelling</description>
-        <startDate>2014-06-20T00:00:00</startDate>
-        <endDate>2014-06-20T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2014-06-20T15:11:28</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="SeSoortDrank"/>
-            <SimpleElementTypeRef idref="SeHoeveelheid"/>
-            <SimpleElementTypeRef idref="Opmerking"/>
-        </simpleElements>
-        <minOccurs>1</minOccurs>
-        <maxOccurs>1</maxOccurs>
-    </ComplexElementType>
+<ComplexElementType id="CeInhoudDrankbestelling">
+    <description>Inhoud drankbestelling</description>
+    <startDate>2014-06-20T00:00:00</startDate>
+    <endDate>2014-06-20T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2014-06-20T15:11:28</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="SeSoortDrank"/>
+        <SimpleElementTypeRef idref="SeHoeveelheid"/>
+        <SimpleElementTypeRef idref="Opmerking"/>
+    </simpleElements>
+    <minOccurs>1</minOccurs>
+    <maxOccurs>1</maxOccurs>
+</ComplexElementType>
 
-    <ComplexElementType id="CeInhoudMenuKaart">
-        <description>Inhoud van de menukaart</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="NaamMenukaartItem"/>
-            <SimpleElementTypeRef idref="Omschrijving"/>
-            <SimpleElementTypeRef idref="Prijs"/>
-        </simpleElements>
-        <maxOccurs>3</maxOccurs>
-    </ComplexElementType>
+<ComplexElementType id="CeInhoudMenuKaart">
+    <description>Inhoud van de menukaart</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="NaamMenukaartItem"/>
+        <SimpleElementTypeRef idref="Omschrijving"/>
+        <SimpleElementTypeRef idref="Prijs"/>
+    </simpleElements>
+    <maxOccurs>3</maxOccurs>
+</ComplexElementType>
 
-    <ComplexElementType id="CeJaNee">
-        <description>Antwoord</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="Wachttijd"/>
-            <SimpleElementTypeRef idref="JaNee"/>
-            <SimpleElementTypeRef idref="Opmerking"/>
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeJaNee">
+    <description>Antwoord</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="Wachttijd"/>
+        <SimpleElementTypeRef idref="JaNee"/>
+        <SimpleElementTypeRef idref="Opmerking"/>
+    </simpleElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeMenuKaart">
-        <description>Menukaart</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-        </complexElements>
-    </ComplexElementType>
+<ComplexElementType id="CeMenuKaart">
+    <description>Menukaart</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeMenuKaartType">
-        <description>MenukaartType</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="MenuKaartType"/>
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeMenuKaartType">
+    <description>MenukaartType</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="MenuKaartType"/>
+    </simpleElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeOrganisatie">
-        <description>Organisatie specs</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2011-10-26T00:00:00</dateLaMu>
-        <userLaMu>PWi</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="SOAPServerURL"/>
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeOrganisatie">
+    <description>Organisatie specs</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2011-10-26T00:00:00</dateLaMu>
+    <userLaMu>PWi</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="SOAPServerURL"/>
+    </simpleElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeRapport">
-        <description>Rapport</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-02-03T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="Auteur"/>
-            <SimpleElementTypeRef idref="Versie"/>
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeRapport">
+    <description>Rapport</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-02-03T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="Auteur"/>
+        <SimpleElementTypeRef idref="Versie"/>
+    </simpleElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeReactieTermijn">
-        <description>Reactietermijn</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-28T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="Wachttijd"/>
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeReactieTermijn">
+    <description>Reactietermijn</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-28T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="Wachttijd"/>
+    </simpleElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeSOAP">
-        <description>SOAP specificaties</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2011-10-26T00:00:00</dateLaMu>
-        <userLaMu>PWi</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="SOAPProtocol"/>
-            <SimpleElementTypeRef idref="SOAPServerURL"/>
-            <SimpleElementTypeRef idref="SOAPCentralServerURL"/>
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeSOAP">
+    <description>SOAP specificaties</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2011-10-26T00:00:00</dateLaMu>
+    <userLaMu>PWi</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="SOAPProtocol"/>
+        <SimpleElementTypeRef idref="SOAPServerURL"/>
+        <SimpleElementTypeRef idref="SOAPCentralServerURL"/>
+    </simpleElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeTekening">
-        <description>Tekening</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-02-03T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="AantalLagen"/>
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeTekening">
+    <description>Tekening</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-02-03T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="AantalLagen"/>
+    </simpleElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeVideo">
-        <description>Video</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-02-03T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="VideoFormaat"/>
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeVideo">
+    <description>Video</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-02-03T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="VideoFormaat"/>
+    </simpleElements>
+</ComplexElementType>
 
-    <ComplexElementType id="CeVraag">
-        <description>Vraag</description>
-        <startDate>2009-01-01T00:00:00</startDate>
-        <endDate>2010-01-01T00:00:00</endDate>
-        <state>active</state>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <simpleElements>
-            <SimpleElementTypeRef idref="Vraag"/>
-        </simpleElements>
-    </ComplexElementType>
+<ComplexElementType id="CeVraag">
+    <description>Vraag</description>
+    <startDate>2009-01-01T00:00:00</startDate>
+    <endDate>2010-01-01T00:00:00</endDate>
+    <state>active</state>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <simpleElements>
+        <SimpleElementTypeRef idref="Vraag"/>
+    </simpleElements>
+</ComplexElementType>
+```
 
 Zoals is te zien, bijvoorbeeld bij *CeMenuKaart*, is het mogelijk een
 complex element in een ander complex element op te nemen. Dit dient
@@ -1557,308 +1583,310 @@ integer). Het kan echter ook een referentie naar een
 *ComplexElementType* bevatten, dit houdt in dat op berichtniveau 0 tot
 onbeperkt aantal van deze *ComplexElementType* elementen aanwezig zijn.
 
-    <SimpleElementType id="AantalLagen">
-        <description>Aantal lagen in de tekening</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-02-03T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="INTEGER"/>
-        </userDefinedType>
-    </SimpleElementType>
+```
+<SimpleElementType id="AantalLagen">
+    <description>Aantal lagen in de tekening</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-02-03T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="INTEGER"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="Antwoord">
-        <description>Antwoord</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="Antwoord">
+    <description>Antwoord</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="Auteur">
-        <description>Auteur</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-02-03T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="Auteur">
+    <description>Auteur</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-02-03T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="JaNee">
-        <description>Ja of Nee</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="BOOLEAN"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="JaNee">
+    <description>Ja of Nee</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="BOOLEAN"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="MenuKaartType">
-        <description>Menukaarttype</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-02-02T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="MenuKaartType">
+    <description>Menukaarttype</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-02-02T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="NaamGerecht">
-        <description>Naam van het gerecht</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="NaamGerecht">
+    <description>Naam van het gerecht</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="NaamMenukaartItem">
-        <description>Naam van menukaartitem</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="NaamMenukaartItem">
+    <description>Naam van menukaartitem</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="Omschrijving">
-        <description>Omschrijving</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="Omschrijving">
+    <description>Omschrijving</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="Opmerking">
-        <description>Opmerking</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-01-31T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="Opmerking">
+    <description>Opmerking</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-01-31T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="Prijs">
-        <description>Prijs</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="Prijs">
+    <description>Prijs</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SeBoolean">
-        <description>Boolean</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="BOOLEAN"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SeBoolean">
+    <description>Boolean</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="BOOLEAN"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SeDate">
-        <description>Date/Datum</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="DATE"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SeDate">
+    <description>Date/Datum</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="DATE"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SeDatetime">
-        <description>Datetime/Datum en tijd</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <helpInfo></helpInfo>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="DATETIME"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SeDatetime">
+    <description>Datetime/Datum en tijd</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <helpInfo></helpInfo>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="DATETIME"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SeDecimal">
-        <description>Decimal/Decimaal</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <helpInfo></helpInfo>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="DECIMAL"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SeDecimal">
+    <description>Decimal/Decimaal</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <helpInfo></helpInfo>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="DECIMAL"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SeHoeveelheid">
-        <description>Hoeveelheid</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2014-06-20T15:13:39</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <helpInfo>De hoeveelheid drankjes die besteld zijn</helpInfo>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="INTEGER"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SeHoeveelheid">
+    <description>Hoeveelheid</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2014-06-20T15:13:39</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <helpInfo>De hoeveelheid drankjes die besteld zijn</helpInfo>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="INTEGER"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SeInteger">
-        <description>Integer/Geheel getal</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="INTEGER"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SeInteger">
+    <description>Integer/Geheel getal</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="INTEGER"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SeKeuzelijst">
-        <description>Keuzelijst</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <helpInfo></helpInfo>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="Keuzelijst"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SeKeuzelijst">
+    <description>Keuzelijst</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <helpInfo></helpInfo>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="Keuzelijst"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SeSoortDrank">
-        <description>Soort drankje</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2014-06-20T15:12:24</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SeSoortDrank">
+    <description>Soort drankje</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2014-06-20T15:12:24</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SeString">
-        <description>String/Vrije tekst</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <helpInfo></helpInfo>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SeString">
+    <description>String/Vrije tekst</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <helpInfo></helpInfo>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SeTime">
-        <description>Time/Tijd</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <helpInfo></helpInfo>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="TIME"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SeTime">
+    <description>Time/Tijd</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <helpInfo></helpInfo>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="TIME"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SOAPCentralServerURL">
-        <description>SOAP Central Server URL</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-03-16T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SOAPCentralServerURL">
+    <description>SOAP Central Server URL</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-03-16T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SOAPProtocol">
-        <description>SOAP Protocol</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-03-16T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SOAPProtocol">
+    <description>SOAP Protocol</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-03-16T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="SOAPServerURL">
-        <description>SOAP Server URL</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-03-16T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="SOAPServerURL">
+    <description>SOAP Server URL</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-03-16T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="Versie">
-        <description>Versienummer</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-02-03T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="INTEGER"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="Versie">
+    <description>Versienummer</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-02-03T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="INTEGER"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="VideoFormaat">
-        <description>Videoformaat</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-02-03T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="VideoFormaat">
+    <description>Videoformaat</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-02-03T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="Vraag">
-        <description>Vraag</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="STRING"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="Vraag">
+    <description>Vraag</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+</SimpleElementType>
 
-    <SimpleElementType id="Wachttijd">
-        <description>Wachttijd (in seconden)</description>
-        <interfaceType></interfaceType>
-        <state>active</state>
-        <dateLaMu>2009-02-02T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <userDefinedType>
-            <UserDefinedTypeRef idref="INTEGER"/>
-        </userDefinedType>
-    </SimpleElementType>
+<SimpleElementType id="Wachttijd">
+    <description>Wachttijd (in seconden)</description>
+    <interfaceType></interfaceType>
+    <state>active</state>
+    <dateLaMu>2009-02-02T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <userDefinedType>
+        <UserDefinedTypeRef idref="INTEGER"/>
+    </userDefinedType>
+</SimpleElementType>
+```
 
 #### ElementCondition
 
@@ -1875,119 +1903,121 @@ time (no value available yet), or after it has been announced that an
 order is not possible (values are available from the previous message
 but must be editable).
 
-    <ElementCondition id="ElementCondition1">
-        <description>De bestelling moet gewijzigd kunnen worden na een negatieve
-    reactie van de kok.</description>
-        <condition>FREE</condition>
-        <messageInTransaction>
-         <MessageInTransactionTypeRef idref="BerichtInTransactie7"/>
-        </messageInTransaction>
-    </ElementCondition>
+```
+<ElementCondition id="ElementCondition1">
+    <description>De bestelling moet gewijzigd kunnen worden na een negatieve
+reactie van de kok.</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+     <MessageInTransactionTypeRef idref="BerichtInTransactie7"/>
+    </messageInTransaction>
+</ElementCondition>
 
-    <ElementCondition id="ElementCondition2">
-        <description>Na een antwoord volgt mogelijk een nieuwe vraag.</description>
-        <condition>EMPTY</condition>
-        <simpleElement>
-            <SimpleElementTypeRef idref="Vraag"/>
-        </simpleElement>
-        <messageInTransaction>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
-        </messageInTransaction>
-    </ElementCondition>
+<ElementCondition id="ElementCondition2">
+    <description>Na een antwoord volgt mogelijk een nieuwe vraag.</description>
+    <condition>EMPTY</condition>
+    <simpleElement>
+        <SimpleElementTypeRef idref="Vraag"/>
+    </simpleElement>
+    <messageInTransaction>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
+    </messageInTransaction>
+</ElementCondition>
 
-    <ElementCondition id="ElementCondition3">
-        <description>Wachttijd mag nooit worden overschreven.</description>
-        <condition>FIXED</condition>
-        <simpleElement>
-            <SimpleElementTypeRef idref="Wachttijd"/>
-        </simpleElement>
-    </ElementCondition>
+<ElementCondition id="ElementCondition3">
+    <description>Wachttijd mag nooit worden overschreven.</description>
+    <condition>FIXED</condition>
+    <simpleElement>
+        <SimpleElementTypeRef idref="Wachttijd"/>
+    </simpleElement>
+</ElementCondition>
 
-    <ElementCondition id="ElementCondition1vanScenario10">
-        <description>Free op Prijs SE in Child CE Inhoud van de menukaart</description>
-        <condition>FREE</condition>
-        <helpInfo/>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-        </complexElements>
-        <simpleElement>
-            <SimpleElementTypeRef idref="Prijs"/>
-        </simpleElement>
-    </ElementCondition>
+<ElementCondition id="ElementCondition1vanScenario10">
+    <description>Free op Prijs SE in Child CE Inhoud van de menukaart</description>
+    <condition>FREE</condition>
+    <helpInfo/>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+    <simpleElement>
+        <SimpleElementTypeRef idref="Prijs"/>
+    </simpleElement>
+</ElementCondition>
 
-    <ElementCondition id="ElementCondition2vanScenario10">
-        <description>Free op Omschrijving SE in Parent CE Menukaart</description>
-        <condition>FREE</condition>
-        <helpInfo/>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeMenuKaart"/>
-        </complexElements>
-        <simpleElement>
-            <SimpleElementTypeRef idref="Omschrijving"/>
-        </simpleElement>
-    </ElementCondition>
+<ElementCondition id="ElementCondition2vanScenario10">
+    <description>Free op Omschrijving SE in Parent CE Menukaart</description>
+    <condition>FREE</condition>
+    <helpInfo/>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeMenuKaart"/>
+    </complexElements>
+    <simpleElement>
+        <SimpleElementTypeRef idref="Omschrijving"/>
+    </simpleElement>
+</ElementCondition>
 
-    <ElementCondition id="ElementCondition3vanScenario10">
-        <description>Empty op Parent CE Dagmenu</description>
-        <condition>EMPTY</condition>
-        <helpInfo/>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeDagMenu"/>
-        </complexElements>
-    </ElementCondition>
+<ElementCondition id="ElementCondition3vanScenario10">
+    <description>Empty op Parent CE Dagmenu</description>
+    <condition>EMPTY</condition>
+    <helpInfo/>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeDagMenu"/>
+    </complexElements>
+</ElementCondition>
 
-    <ElementCondition id="ElementCondition4vanScenario10">
-        <description>Free op MITT, Parent CE, Child CE, en SE</description>
-        <condition>FREE</condition>
-        <helpInfo/>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeDagMenu"/>
-            <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-        </complexElements>
-        <simpleElement>
-            <SimpleElementTypeRef idref="NaamMenukaartItem"/>
-        </simpleElement>
-        <messageInTransaction>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
-        </messageInTransaction>
-    </ElementCondition>
+<ElementCondition id="ElementCondition4vanScenario10">
+    <description>Free op MITT, Parent CE, Child CE, en SE</description>
+    <condition>FREE</condition>
+    <helpInfo/>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeDagMenu"/>
+        <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+    <simpleElement>
+        <SimpleElementTypeRef idref="NaamMenukaartItem"/>
+    </simpleElement>
+    <messageInTransaction>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
+    </messageInTransaction>
+</ElementCondition>
 
-    <ElementCondition id="ElementCondition5vanScenario10">
-        <description>Free op Parent en Child CE</description>
-        <condition>FREE</condition>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeDrankenKaart"/>
-            <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-        </complexElements>
-    </ElementCondition>
+<ElementCondition id="ElementCondition5vanScenario10">
+    <description>Free op Parent en Child CE</description>
+    <condition>FREE</condition>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeDrankenKaart"/>
+        <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+</ElementCondition>
 
-    <ElementCondition id="ElementCondition6vanScenario10">
-        <description>Fixed op parent en child CE en op SE prijs</description>
-        <condition>FIXED</condition>
-        <helpInfo/>
-        <complexElements>
-            ComplexElementTypeRef idref="CeDrankenKaart"/>
-            <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-        </complexElements>
-        <simpleElement>
-            <SimpleElementTypeRef idref="Prijs"/>
-        </simpleElement>
-    </ElementCondition>
+<ElementCondition id="ElementCondition6vanScenario10">
+    <description>Fixed op parent en child CE en op SE prijs</description>
+    <condition>FIXED</condition>
+    <helpInfo/>
+    <complexElements>
+        ComplexElementTypeRef idref="CeDrankenKaart"/>
+        <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+    <simpleElement>
+        <SimpleElementTypeRef idref="Prijs"/>
+    </simpleElement>
+</ElementCondition>
 
-    <ElementCondition id="ElementCondition7vanScenario10">
-        <description>Foute element condition: Inhoud van de menukaart is child CE en
-    menukaart is parent CE. Deze EC heeft inhoud als parant gedefinieerd en menukaart
-    als child. Deze situatie bestaat niet in dit raamwerk.</description>
-        <condition>FREE</condition>
-        <helpInfo/>
-        <complexElements>
-            <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
-            <ComplexElementTypeRef idref="CeMenuKaart"/>
-        </complexElements>
-        <messageInTransaction>
-            <MessageInTransactionTypeRef idref="BerichtInTransactie6"/>
-        </messageInTransaction>
-    </ElementCondition>
+<ElementCondition id="ElementCondition7vanScenario10">
+    <description>Foute element condition: Inhoud van de menukaart is child CE en
+menukaart is parent CE. Deze EC heeft inhoud als parant gedefinieerd en menukaart
+als child. Deze situatie bestaat niet in dit raamwerk.</description>
+    <condition>FREE</condition>
+    <helpInfo/>
+    <complexElements>
+        <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+        <ComplexElementTypeRef idref="CeMenuKaart"/>
+    </complexElements>
+    <messageInTransaction>
+        <MessageInTransactionTypeRef idref="BerichtInTransactie6"/>
+    </messageInTransaction>
+</ElementCondition>
+```
 
 #### UserDefinedType
 
@@ -1997,70 +2027,72 @@ are also determined, for example a string of a maximum of 9 characters
 or an integer smaller than 1000. For the restrictions, all restrictions
 allowed by XML are possible.
 
-    <UserDefinedType id="BOOLEAN">
-        <description>BOOLEAN</description>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <baseType>BOOLEAN</baseType>
-    </UserDefinedType>
+```
+<UserDefinedType id="BOOLEAN">
+    <description>BOOLEAN</description>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <baseType>BOOLEAN</baseType>
+</UserDefinedType>
 
-    <UserDefinedType id="DATE">
-        <description>DATE</description>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <baseType>DATE</baseType>
-    </UserDefinedType>
+<UserDefinedType id="DATE">
+    <description>DATE</description>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <baseType>DATE</baseType>
+</UserDefinedType>
 
-    <UserDefinedType id="DATETIME">
-        <description>DATETIME</description>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <baseType>DATETIME</baseType>
-    </UserDefinedType>
+<UserDefinedType id="DATETIME">
+    <description>DATETIME</description>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <baseType>DATETIME</baseType>
+</UserDefinedType>
 
-    <UserDefinedType id="DECIMAL">
-        <description>DECIMAL</description>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <baseType>DECIMAL</baseType>
-    </UserDefinedType>
+<UserDefinedType id="DECIMAL">
+    <description>DECIMAL</description>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <baseType>DECIMAL</baseType>
+</UserDefinedType>
 
-    <UserDefinedType id="INTEGER">
-        <description>INTEGER</description>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <baseType>INTEGER</baseType>
-    </UserDefinedType>
+<UserDefinedType id="INTEGER">
+    <description>INTEGER</description>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <baseType>INTEGER</baseType>
+</UserDefinedType>
 
-    <UserDefinedType id="Keuzelijst">
-        <description>Keuzelijst</description>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <baseType>STRING</baseType>
-        <xsdRestriction>\&lt;xs:enumeration value="Keuze 1"/\&gt;\&lt;xs:enumeration value="Keuze 2"/\&gt;\&lt;xs:enumeration value="Keuze 3"/\&gt;</xsdRestriction>
-    </UserDefinedType>
+<UserDefinedType id="Keuzelijst">
+    <description>Keuzelijst</description>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>\&lt;xs:enumeration value="Keuze 1"/\&gt;\&lt;xs:enumeration value="Keuze 2"/\&gt;\&lt;xs:enumeration value="Keuze 3"/\&gt;</xsdRestriction>
+</UserDefinedType>
 
-    <UserDefinedType id="STRING">
-        <description>STRING</description>
-        <state>active</state>
-        <dateLaMu>2009-01-29T00:00:00</dateLaMu>
-        <userLaMu>PWI</userLaMu>
-        <baseType>STRING</baseType>
-    </UserDefinedType>
+<UserDefinedType id="STRING">
+    <description>STRING</description>
+    <state>active</state>
+    <dateLaMu>2009-01-29T00:00:00</dateLaMu>
+    <userLaMu>PWI</userLaMu>
+    <baseType>STRING</baseType>
+</UserDefinedType>
 
-    <UserDefinedType id="TIME">
-        <description>TIME</description>
-        <state>active</state>
-        <dateLaMu>2013-10-25T00:00:00</dateLaMu>
-        <userLaMu>Arne</userLaMu>
-        <baseType>TIME</baseType>
-    </UserDefinedType>
+<UserDefinedType id="TIME">
+    <description>TIME</description>
+    <state>active</state>
+    <dateLaMu>2013-10-25T00:00:00</dateLaMu>
+    <userLaMu>Arne</userLaMu>
+    <baseType>TIME</baseType>
+</UserDefinedType>
+```
 
 ### Elaboration of messages
 
@@ -2121,258 +2153,262 @@ element can be activated.\
 **Project specifiekbericht 1:
 "project_specifiek_bericht_tot_en_met_bericht_6.xml"**.
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework" 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20160331/TestFramework10.xsd">
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling</description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>https://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>https://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="consument">
-            <name>Consument</name>
-            <abbreviation>CSMT</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensConsument">
-                    <sOAPServerURL>https://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>https://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="KeesDeVries">
-            <userName>kvd</userName>
-            <name>Kees de Vries</name>
-        </StandardPersonType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <StandardPersonType id="DirkZwart">
-            <userName>dz</userName>
-            <name>Dirk Zwart</name>
-        </StandardPersonType>
-        <StandardPersonType id="RobTaal">
-            <userName>rt</userName>
-            <name>Rob Taal</name>
-        </StandardPersonType>
-        <klant id="klantRol">
-            <name>Klant Rol</name>
-            <description>Diegene die de klant is</description>
-        </klant>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <kok id="kokRol">
-            <name>Kok Rol</name>
-            <description>Diegene die kookt</description>
-        </kok>
-        <PersonInRole id="PiR001">
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="consument" />
-            </organisation>
-            <role>
-                <klantRef idref="klantRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR003">
-            <contactPerson>
-                <StandardPersonTypeRef idref="DirkZwart" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR004">
-            <substituting>
-                <PersonInRoleRef idref="PiR003" />
-            </substituting>
-            <contactPerson>
-                <StandardPersonTypeRef idref="RobTaal" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20160331/TestFramework10.xsd">
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling</description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>https://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>https://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="consument">
+        <name>Consument</name>
+        <abbreviation>CSMT</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensConsument">
+                <sOAPServerURL>https://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>https://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="KeesDeVries">
+        <userName>kvd</userName>
+        <name>Kees de Vries</name>
+    </StandardPersonType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <StandardPersonType id="DirkZwart">
+        <userName>dz</userName>
+        <name>Dirk Zwart</name>
+    </StandardPersonType>
+    <StandardPersonType id="RobTaal">
+        <userName>rt</userName>
+        <name>Rob Taal</name>
+    </StandardPersonType>
+    <klant id="klantRol">
+        <name>Klant Rol</name>
+        <description>Diegene die de klant is</description>
+    </klant>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <kok id="kokRol">
+        <name>Kok Rol</name>
+        <description>Diegene die kookt</description>
+    </kok>
+    <PersonInRole id="PiR001">
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="consument" />
+        </organisation>
+        <role>
+            <klantRef idref="klantRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR003">
+        <contactPerson>
+            <StandardPersonTypeRef idref="DirkZwart" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR004">
+        <substituting>
+            <PersonInRoleRef idref="PiR003" />
+        </substituting>
+        <contactPerson>
+            <StandardPersonTypeRef idref="RobTaal" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 **Project specifiekbericht 2:
 "project_specifiek_bericht_vanaf_bericht_7.xml"**.
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework" 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20160331/TestFramework10.xsd">
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling</description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>https://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>https://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="consument">
-            <name>Consument</name>
-            <abbreviation>CSMT</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensConsument">
-                    <sOAPServerURL>https://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>https://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="KeesDeVries">
-            <userName>kvd</userName>
-            <name>Kees de Vries</name>
-        </StandardPersonType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <StandardPersonType id="DirkZwart">
-            <userName>dz</userName>
-            <name>Dirk Zwart</name>
-        </StandardPersonType>
-        <StandardPersonType id="RobTaal">
-            <userName>rt</userName>
-            <name>Rob Taal</name>
-        </StandardPersonType>
-        <StandardPersonType id="JanToet">
-            <userName>jt</userName>
-            <name>Jan Toet</name>
-        </StandardPersonType>
-        <klant id="klantRol">
-            <name>Klant Rol</name>
-            <description>Diegene die de klant is</description>
-        </klant>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <kok id="kokRol">
-            <name>Kok Rol</name>
-            <description>Diegene die kookt</description>
-        </kok>
-        <PersonInRole id="PiR001">
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="consument" />
-            </organisation>
-            <role>
-                <klantRef idref="klantRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR003">
-            <contactPerson>
-                <StandardPersonTypeRef idref="DirkZwart" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR004">
-            <successor>
-                <PersonInRoleRef idref="PiR005" />
-            </successor>
-            <contactPerson>
-                <StandardPersonTypeRef idref="RobTaal" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR005">
-            <contactPerson>
-                <StandardPersonTypeRef idref="JanToet" />
-            </contactPerson>
-            <organisation>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/20160331/TestFramework10.xsd">
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling</description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>https://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>https://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="consument">
+        <name>Consument</name>
+        <abbreviation>CSMT</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensConsument">
+                <sOAPServerURL>https://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>https://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="KeesDeVries">
+        <userName>kvd</userName>
+        <name>Kees de Vries</name>
+    </StandardPersonType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <StandardPersonType id="DirkZwart">
+        <userName>dz</userName>
+        <name>Dirk Zwart</name>
+    </StandardPersonType>
+    <StandardPersonType id="RobTaal">
+        <userName>rt</userName>
+        <name>Rob Taal</name>
+    </StandardPersonType>
+    <StandardPersonType id="JanToet">
+        <userName>jt</userName>
+        <name>Jan Toet</name>
+    </StandardPersonType>
+    <klant id="klantRol">
+        <name>Klant Rol</name>
+        <description>Diegene die de klant is</description>
+    </klant>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <kok id="kokRol">
+        <name>Kok Rol</name>
+        <description>Diegene die kookt</description>
+    </kok>
+    <PersonInRole id="PiR001">
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="consument" />
+        </organisation>
+        <role>
+            <klantRef idref="klantRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR003">
+        <contactPerson>
+            <StandardPersonTypeRef idref="DirkZwart" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR004">
+        <successor>
+            <PersonInRoleRef idref="PiR005" />
+        </successor>
+        <contactPerson>
+            <StandardPersonTypeRef idref="RobTaal" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR005">
+        <contactPerson>
+            <StandardPersonTypeRef idref="JanToet" />
+        </contactPerson>
+        <organisation>
 
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### Compose messages
 
@@ -2398,8 +2434,10 @@ framework. The receiving software will now have to retrieve the
 associated framework based on this header or check whether this
 framework is already present in its cache.
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd" xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework">
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd" xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework">
+```
 
 *The message*\
 \
@@ -2410,6 +2448,212 @@ message in transaction type (MITT). The message that starts with is
 *msgWiltuDeKaartZien*. This message has no previous message via the
 MITT.
 
+```
+<msgWiltuDeKaartZien id="bericht001">
+    <identification />
+    <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <messageInTransaction>
+        <BerichtInTransactie1Ref idref="BiT001" />
+    </messageInTransaction>
+    <transaction>
+        <t1_OpnameBestellingRef idref="transactie001" />
+    </transaction>
+    <ceReactieTermijn>
+        <CeReactieTermijnRef idref="ce001a"/>
+    </ceReactieTermijn>
+    <ceBaseTypeTest>
+        <CeBaseTypeTestRef idref="ce001b"/>
+    </ceBaseTypeTest>
+</msgWiltuDeKaartZien>
+```
+
+**Message in transaction**\
+\
+When system 1.2 was introduced, it was already agreed to include the
+associated MessageInTransactionType in the message. This decision arises
+from the problems surrounding the possibility of including the same
+message several times within a transaction at different places in the
+flow of the transaction. This made it possible to imagine cases where
+the same message within a transaction has other follow-up messages,
+depending on the position in the flow. To prevent this, this is
+recorded.
+
+```
+<BerichtInTransactie1 id="BiT001">
+    <identification />
+</BerichtInTransactie1>
+```
+
+**Transaction**\
+\
+Then we define the transaction that is used. Within the transaction we
+see standard fields, 'who created it and when' and the option for a more
+extensive description and naming. But we also see the initiator and
+executor, in our case Piet Jansen (*PiR002*) in the role of waiter asks
+whether Kees de Vries (*PiR001*) in the role of customer wants to see
+the menu.
+
+```
+<t1_OpnameBestelling id="transactie001">
+    <number>1</number>
+    <name />
+    <description>Onderwerp van de transactie</description>
+    <startDate>2008-05-04T00:00:00.0Z</startDate>
+    <endDate>2009-05-04T00:00:00.0Z</endDate>
+    <initiator>
+        <PersonInRoleRef idref="PiR002" />
+    </initiator>
+    <executor>
+        <PersonInRoleRef idref="PiR001" />
+    </executor>
+    <project>
+        <ProjectType1Ref idref="Project1" />
+    </project>
+</t1_OpnameBestelling>
+```
+
+**Project**\
+\
+A *ProjectType* is indicated at framework level. The project-specific
+context is provided in the project-specific message. The project data is
+processed in the message as follows.
+
+```
+<ProjectType1 id="Project1">
+    <name>Project Top Koks</name>
+    <description>Project voor het opnemen van een bestelling</description>
+    <startDate>2008-05-04T00:00:00.0Z</startDate>
+    <endDate>2009-05-04T00:00:00.0Z</endDate>
+    <ceSOAP>
+        <CeSOAP id="ProjectGegevens">
+            <sOAPProtocol>MTOM</sOAPProtocol>
+            <sOAPServerURL>https://192.168.0.1/visi.wsdl</sOAPServerURL>
+            <sOAPCentralServerURL>https://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+        </CeSOAP>
+    </ceSOAP>
+</ProjectType1>
+```
+
+**PersonInRole**\
+\
+Both the initiator and executor, already mentioned in the transaction,
+are specific persons belonging to a specific organization who behave
+according to a specific role. The persons, organizations and roles are
+defined separately. However, to get a good initiator and executor
+definition, the collection object *PersonInRole* exists (this object
+exists for every message schema regardless of the framework).
+
+```
+<PersonInRole id="PiR001">
+    <contactPerson>
+        <StandardPersonTypeRef idref="KeesDeVries" />
+    </contactPerson>
+    <organisation>
+        <StandardOrganisationTypeRef idref="consument" />
+    </organisation>
+    <role>
+        <klantRef idref="klantRol" />
+    </role>
+</PersonInRole>
+<PersonInRole id="PiR002">
+    <contactPerson>
+        <StandardPersonTypeRef idref="PietJansen" />
+    </contactPerson>
+    <organisation>
+        <StandardOrganisationTypeRef idref="restaurant" />
+    </organisation>
+    <role>
+        <klantRef idref="oberRol" />
+    </role>
+</PersonInRole>
+```
+
+**Instances of roles** At framework level we have already created the
+Waiter role. Here we define an instance of this role, namely the
+*waiterRole*. We need this authority to ask if the customer wants to see
+the menu.
+
+```
+<ober id="oberRol">
+    <name>Ober Rol</name>
+    <description>Diegene die serveert</description>
+</ober>
+```
+
+We do the same for the Customer role (the customerRole).
+
+```
+<klant id="klantRol">
+    <name>Klant Rol</name>
+    <description>Diegene die de klant is</description>
+</klant>
+```
+
+**DefaultOrganizationType**\
+\
+At framework level we have only created an OrganizationType, so it is
+simple to choose according to which object we want to specify the
+participating organizations. In this section, the URL of the SOAP server
+is also given to the project using a complex element.
+
+```
+<StandardOrganisationType id="consument">
+    <name>Consument</name>
+    <abbreviation>CSMT</abbreviation>
+    <contactPerson>
+        <StandardPersonTypeRef idref="KeesDeVries" />
+    </contactPerson>
+    <ceOrganisatie>
+        <CeOrganisatie id="OrganisatieGegevensConsument">
+            <sOAPServerURL>https://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
+        </CeOrganisatie>
+    </ceOrganisatie>
+</StandardOrganisationType>
+<StandardOrganisationType id="restaurant">
+    <name>Restaurant</name>
+    <abbreviation>RSTR</abbreviation>
+    <contactPerson>
+        <StandardPersonTypeRef idref="PietJansen" />
+    </contactPerson>
+    <ceOrganisatie>
+        <CeOrganisatie id="OrganisatieGegevensRestaurant">
+            <sOAPServerURL>https://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+        </CeOrganisatie>
+    </ceOrganisatie>
+</StandardOrganisationType>
+```
+
+Note: A single organization is also possible if both roles are fulfilled
+within the same organization.\
+\
+**DefaultPersonType**\
+\
+At framework level we have created only one PersonType. So it is easy to
+choose according to which object we want to specify the participating
+persons.
+
+```
+<StandardPersonType id="KeesDeVries">
+    <userName>kvd</userName>
+    <name>Kees de Vries</name>
+</StandardPersonType>
+<StandardPersonType id="PietJansen">
+    <userName>pj</userName>
+    <name>Piet Jansen</name>
+</StandardPersonType>
+```
+
+Note: Only one person is also possible if both roles are fulfilled by
+one person (this seems unnatural but can be advantageous for
+administrative reasons).\
+\
+The complete first message now looks like this:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd" 
+    xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework">
     <msgWiltuDeKaartZien id="bericht001">
         <identification />
         <dateSend>2008-05-04T00:00:00.0Z</dateSend>
@@ -2427,31 +2671,22 @@ MITT.
             <CeBaseTypeTestRef idref="ce001b"/>
         </ceBaseTypeTest>
     </msgWiltuDeKaartZien>
-
-**Message in transaction**\
-\
-When system 1.2 was introduced, it was already agreed to include the
-associated MessageInTransactionType in the message. This decision arises
-from the problems surrounding the possibility of including the same
-message several times within a transaction at different places in the
-flow of the transaction. This made it possible to imagine cases where
-the same message within a transaction has other follow-up messages,
-depending on the position in the flow. To prevent this, this is
-recorded.
-
+    <CeReactieTermijn id="ce001a">
+        <wachttijd>40</wachttijd>
+    </CeReactieTermijn>
+    <CeBaseTypeTest id="ce001b">
+        <seBoolean>true</seBoolean>
+        <seDate>2008-05-04</seDate>
+        <seDatetime>2008-05-04T00:00:00.0Z</seDatetime>
+        <seTime>00:00:00.0Z</seTime>
+        <seDecimal>100.00</seDecimal>
+        <seInteger>123</seInteger>
+        <seKeuzelijst>Keuze 1</seKeuzelijst>
+        <seString>een string</seString>
+    </CeBaseTypeTest>
     <BerichtInTransactie1 id="BiT001">
         <identification />
     </BerichtInTransactie1>
-
-**Transaction**\
-\
-Then we define the transaction that is used. Within the transaction we
-see standard fields, 'who created it and when' and the option for a more
-extensive description and naming. But we also see the initiator and
-executor, in our case Piet Jansen (*PiR002*) in the role of waiter asks
-whether Kees de Vries (*PiR001*) in the role of customer wants to see
-the menu.
-
     <t1_OpnameBestelling id="transactie001">
         <number>1</number>
         <name />
@@ -2468,13 +2703,6 @@ the menu.
             <ProjectType1Ref idref="Project1" />
         </project>
     </t1_OpnameBestelling>
-
-**Project**\
-\
-A *ProjectType* is indicated at framework level. The project-specific
-context is provided in the project-specific message. The project data is
-processed in the message as follows.
-
     <ProjectType1 id="Project1">
         <name>Project Top Koks</name>
         <description>Project voor het opnemen van een bestelling</description>
@@ -2488,63 +2716,6 @@ processed in the message as follows.
             </CeSOAP>
         </ceSOAP>
     </ProjectType1>
-
-**PersonInRole**\
-\
-Both the initiator and executor, already mentioned in the transaction,
-are specific persons belonging to a specific organization who behave
-according to a specific role. The persons, organizations and roles are
-defined separately. However, to get a good initiator and executor
-definition, the collection object *PersonInRole* exists (this object
-exists for every message schema regardless of the framework).
-
-    <PersonInRole id="PiR001">
-        <contactPerson>
-            <StandardPersonTypeRef idref="KeesDeVries" />
-        </contactPerson>
-        <organisation>
-            <StandardOrganisationTypeRef idref="consument" />
-        </organisation>
-        <role>
-            <klantRef idref="klantRol" />
-        </role>
-    </PersonInRole>
-    <PersonInRole id="PiR002">
-        <contactPerson>
-            <StandardPersonTypeRef idref="PietJansen" />
-        </contactPerson>
-        <organisation>
-            <StandardOrganisationTypeRef idref="restaurant" />
-        </organisation>
-        <role>
-            <klantRef idref="oberRol" />
-        </role>
-    </PersonInRole>
-
-**Instances of roles** At framework level we have already created the
-Waiter role. Here we define an instance of this role, namely the
-*waiterRole*. We need this authority to ask if the customer wants to see
-the menu.
-
-    <ober id="oberRol">
-        <name>Ober Rol</name>
-        <description>Diegene die serveert</description>
-    </ober>
-
-We do the same for the Customer role (the customerRole).
-
-    <klant id="klantRol">
-        <name>Klant Rol</name>
-        <description>Diegene die de klant is</description>
-    </klant>
-
-**DefaultOrganizationType**\
-\
-At framework level we have only created an OrganizationType, so it is
-simple to choose according to which object we want to specify the
-participating organizations. In this section, the URL of the SOAP server
-is also given to the project using a complex element.
-
     <StandardOrganisationType id="consument">
         <name>Consument</name>
         <abbreviation>CSMT</abbreviation>
@@ -2569,16 +2740,6 @@ is also given to the project using a complex element.
             </CeOrganisatie>
         </ceOrganisatie>
     </StandardOrganisationType>
-
-Note: A single organization is also possible if both roles are fulfilled
-within the same organization.\
-\
-**DefaultPersonType**\
-\
-At framework level we have created only one PersonType. So it is easy to
-choose according to which object we want to specify the participating
-persons.
-
     <StandardPersonType id="KeesDeVries">
         <userName>kvd</userName>
         <name>Kees de Vries</name>
@@ -2587,141 +2748,38 @@ persons.
         <userName>pj</userName>
         <name>Piet Jansen</name>
     </StandardPersonType>
-
-Note: Only one person is also possible if both roles are fulfilled by
-one person (this seems unnatural but can be advantageous for
-administrative reasons).\
-\
-The complete first message now looks like this:
-
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd" 
-        xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework">
-        <msgWiltuDeKaartZien id="bericht001">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie1Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t1_OpnameBestellingRef idref="transactie001" />
-            </transaction>
-            <ceReactieTermijn>
-                <CeReactieTermijnRef idref="ce001a"/>
-            </ceReactieTermijn>
-            <ceBaseTypeTest>
-                <CeBaseTypeTestRef idref="ce001b"/>
-            </ceBaseTypeTest>
-        </msgWiltuDeKaartZien>
-        <CeReactieTermijn id="ce001a">
-            <wachttijd>40</wachttijd>
-        </CeReactieTermijn>
-        <CeBaseTypeTest id="ce001b">
-            <seBoolean>true</seBoolean>
-            <seDate>2008-05-04</seDate>
-            <seDatetime>2008-05-04T00:00:00.0Z</seDatetime>
-            <seTime>00:00:00.0Z</seTime>
-            <seDecimal>100.00</seDecimal>
-            <seInteger>123</seInteger>
-            <seKeuzelijst>Keuze 1</seKeuzelijst>
-            <seString>een string</seString>
-        </CeBaseTypeTest>
-        <BerichtInTransactie1 id="BiT001">
-            <identification />
-        </BerichtInTransactie1>
-        <t1_OpnameBestelling id="transactie001">
-            <number>1</number>
-            <name />
-            <description>Onderwerp van de transactie</description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR001" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t1_OpnameBestelling>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling</description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>https://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>https://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="consument">
-            <name>Consument</name>
-            <abbreviation>CSMT</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensConsument">
-                    <sOAPServerURL>https://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>https://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="KeesDeVries">
-            <userName>kvd</userName>
-            <name>Kees de Vries</name>
-        </StandardPersonType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <klant id="klantRol">
-            <name>Klant Rol</name>
-            <description>Diegene die de klant is</description>
-        </klant>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <PersonInRole id="PiR001">
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="consument" />
-            </organisation>
-            <role>
-                <klantRef idref="klantRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+    <klant id="klantRol">
+        <name>Klant Rol</name>
+        <description>Diegene die de klant is</description>
+    </klant>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <PersonInRole id="PiR001">
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="consument" />
+        </organisation>
+        <role>
+            <klantRef idref="klantRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The second message ("tweede_bericht.xml")
 
@@ -2730,121 +2788,123 @@ to see the card, the customer indicates with the second message (msgYes)
 that he indeed wants to see the card. Since the message is almost
 identical to the first message, here is the entire message.
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgJa id="bericht002">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie3Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t1_OpnameBestellingRef idref="transactie001" />
-            </transaction>
-            <ceMenuKaartType>
-                <CeMenuKaartType id="menuKaartType001">
-                    <menuKaartType>Dinerkaart</menuKaartType>
-                </CeMenuKaartType>
-            </ceMenuKaartType>
-        </msgJa>
-        <BerichtInTransactie3 id="BiT001">
-            <identification />
-        </BerichtInTransactie3>
-        <t1_OpnameBestelling id="transactie001">
-            <number>1</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR001" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t1_OpnameBestelling>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling
-            </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="consument">
-            <name>Consument</name>
-            <abbreviation>CSMT</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensConsument">
-                    <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL/>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="KeesDeVries">
-            <userName>kvd</userName>
-            <name>Kees de Vries</name>
-        </StandardPersonType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <klant id="klantRol">
-            <name>Klant Rol</name>
-            <description>Diegene die de klant is</description>
-        </klant>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <PersonInRole id="PiR001">
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="consument" />
-            </organisation>
-            <role>
-                <klantRef idref="klantRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgJa id="bericht002">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie3Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t1_OpnameBestellingRef idref="transactie001" />
+        </transaction>
+        <ceMenuKaartType>
+            <CeMenuKaartType id="menuKaartType001">
+                <menuKaartType>Dinerkaart</menuKaartType>
+            </CeMenuKaartType>
+        </ceMenuKaartType>
+    </msgJa>
+    <BerichtInTransactie3 id="BiT001">
+        <identification />
+    </BerichtInTransactie3>
+    <t1_OpnameBestelling id="transactie001">
+        <number>1</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR001" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t1_OpnameBestelling>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling
+        </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="consument">
+        <name>Consument</name>
+        <abbreviation>CSMT</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensConsument">
+                <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL/>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="KeesDeVries">
+        <userName>kvd</userName>
+        <name>Kees de Vries</name>
+    </StandardPersonType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <klant id="klantRol">
+        <name>Klant Rol</name>
+        <description>Diegene die de klant is</description>
+    </klant>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <PersonInRole id="PiR001">
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="consument" />
+        </organisation>
+        <role>
+            <klantRef idref="klantRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The third message ("derde_bericht.xml")
 
@@ -2858,6 +2918,52 @@ another complex element *CeContentMenuCard*. It has been agreed that a
 complex element within a complex element is interpreted as a table. The
 message will therefore look like this:
 
+```
+<msgAanbiedingMenuKaart id="bericht003">
+    <identification />
+    <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <messageInTransaction>
+        <BerichtInTransactie4Ref idref="BiT001" />
+    </messageInTransaction>
+    <transaction>
+        <t1_OpnameBestellingRef idref="transactie001" />
+    </transaction>
+    <ceMenuKaart>
+        <CeMenuKaart id="menuKaart001">
+            <ceInhoudMenuKaart>
+                <CeInhoudMenuKaart id="inhoudMenuKaart001">
+                    <naamMenukaartItem>Carpatio</naamMenukaartItem>
+                    <omschrijving>Dunne lapjes vlees + garneering</omschrijving>
+                    <prijs>25.00</prijs>
+                </CeInhoudMenuKaart>
+                <CeInhoudMenuKaart id="inhoudMenuKaart002">
+                    <naamMenukaartItem>Biefstuk</naamMenukaartItem>
+                    <omschrijving>Biefstuk + gepofte aardappelen en salade</omschrijving>
+                    <prijs>35.00</prijs>
+                </CeInhoudMenuKaart>
+                <CeInhoudMenuKaart id="inhoudMenuKaart003">
+                    <naamMenukaartItem>Vruchten</naamMenukaartItem>
+                    <omschrijving>Verse vruchten</omschrijving>
+                    <prijs>12.50</prijs>
+                </CeInhoudMenuKaart>
+            </ceInhoudMenuKaart>
+        </CeMenuKaart>
+    </ceMenuKaart>
+    <ceMenuKaartType>
+        <CeMenuKaartType id="menuKaartType001">
+            <menuKaartType>Dinerkaart</menuKaartType>
+        </CeMenuKaartType>
+    </ceMenuKaartType>
+</msgAanbiedingMenuKaart>
+```
+
+The entire message looks like this.
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
     <msgAanbiedingMenuKaart id="bericht003">
         <identification />
         <dateSend>2008-05-04T00:00:00.0Z</dateSend>
@@ -2878,7 +2984,7 @@ message will therefore look like this:
                     </CeInhoudMenuKaart>
                     <CeInhoudMenuKaart id="inhoudMenuKaart002">
                         <naamMenukaartItem>Biefstuk</naamMenukaartItem>
-                        <omschrijving>Biefstuk + gepofte aardappelen en salade</omschrijving>
+                        <omschrijving>Biefstuk + gepofte aardappelen en garneering</omschrijving>
                         <prijs>35.00</prijs>
                     </CeInhoudMenuKaart>
                     <CeInhoudMenuKaart id="inhoudMenuKaart003">
@@ -2895,145 +3001,103 @@ message will therefore look like this:
             </CeMenuKaartType>
         </ceMenuKaartType>
     </msgAanbiedingMenuKaart>
-
-The entire message looks like this.
-
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgAanbiedingMenuKaart id="bericht003">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie4Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t1_OpnameBestellingRef idref="transactie001" />
-            </transaction>
-            <ceMenuKaart>
-                <CeMenuKaart id="menuKaart001">
-                    <ceInhoudMenuKaart>
-                        <CeInhoudMenuKaart id="inhoudMenuKaart001">
-                            <naamMenukaartItem>Carpatio</naamMenukaartItem>
-                            <omschrijving>Dunne lapjes vlees + garneering</omschrijving>
-                            <prijs>25.00</prijs>
-                        </CeInhoudMenuKaart>
-                        <CeInhoudMenuKaart id="inhoudMenuKaart002">
-                            <naamMenukaartItem>Biefstuk</naamMenukaartItem>
-                            <omschrijving>Biefstuk + gepofte aardappelen en garneering</omschrijving>
-                            <prijs>35.00</prijs>
-                        </CeInhoudMenuKaart>
-                        <CeInhoudMenuKaart id="inhoudMenuKaart003">
-                            <naamMenukaartItem>Vruchten</naamMenukaartItem>
-                            <omschrijving>Verse vruchten</omschrijving>
-                            <prijs>12.50</prijs>
-                        </CeInhoudMenuKaart>
-                    </ceInhoudMenuKaart>
-                </CeMenuKaart>
-            </ceMenuKaart>
-            <ceMenuKaartType>
-                <CeMenuKaartType id="menuKaartType001">
-                    <menuKaartType>Dinerkaart</menuKaartType>
-                </CeMenuKaartType>
-            </ceMenuKaartType>
-        </msgAanbiedingMenuKaart>
-        <BerichtInTransactie4 id="BiT001">
-            <identification />
-        </BerichtInTransactie4>
-        <t1_OpnameBestelling id="transactie001">
-            <number>1</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR001" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t1_OpnameBestelling>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling
-            </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="consument">
-            <name>Consument</name>
-            <abbreviation>CSMT</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensConsument">
-                    <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="KeesDeVries">
-            <userName>kvd</userName>
-            <name>Kees de Vries</name>
-        </StandardPersonType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <klant id="klantRol">
-            <name>Klant Rol</name>
-            <description>Diegene die de klant is</description>
-        </klant>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <PersonInRole id="PiR001">
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="consument" />
-            </organisation>
-            <role>
-                <klantRef idref="klantRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+    <BerichtInTransactie4 id="BiT001">
+        <identification />
+    </BerichtInTransactie4>
+    <t1_OpnameBestelling id="transactie001">
+        <number>1</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR001" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t1_OpnameBestelling>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling
+        </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="consument">
+        <name>Consument</name>
+        <abbreviation>CSMT</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensConsument">
+                <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="KeesDeVries">
+        <userName>kvd</userName>
+        <name>Kees de Vries</name>
+    </StandardPersonType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <klant id="klantRol">
+        <name>Klant Rol</name>
+        <description>Diegene die de klant is</description>
+    </klant>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <PersonInRole id="PiR001">
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="consument" />
+        </organisation>
+        <role>
+            <klantRef idref="klantRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The fourth message ("vierde_bericht.xml")
 
@@ -3046,120 +3110,122 @@ The message *msgQuestion* contains a complex element containing a simple
 element with which the question can be asked. The message looks like
 this:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgVraag id="bericht004">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie5Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t1_OpnameBestellingRef idref="transactie001" />
-            </transaction>
-            <ceVraag>
-                <CeVraag id="vraag001">
-                    <vraag>Kan er ook mayonaise bij de gepofte aardappelen geserveerd worden</vraag>
-                </CeVraag>
-            </ceVraag>
-        </msgVraag>
-        <BerichtInTransactie15 id="BiT001">
-            <identification />
-        </BerichtInTransactie15>
-        <t1_OpnameBestelling id="transactie001">
-            <number>1</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR001" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t1_OpnameBestelling>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="consument">
-            <name>Consument</name>
-            <abbreviation>CSMT</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensConsument">
-                    <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="KeesDeVries">
-            <userName>kvd</userName>
-            <name>Kees de Vries</name>
-        </StandardPersonType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <klant id="klantRol">
-            <name>Klant Rol</name>
-            <description>Diegene die de klant is</description>
-        </klant>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <PersonInRole id="PiR001">
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="consument" />
-            </organisation>
-            <role>
-                <klantRef idref="klantRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgVraag id="bericht004">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie5Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t1_OpnameBestellingRef idref="transactie001" />
+        </transaction>
+        <ceVraag>
+            <CeVraag id="vraag001">
+                <vraag>Kan er ook mayonaise bij de gepofte aardappelen geserveerd worden</vraag>
+            </CeVraag>
+        </ceVraag>
+    </msgVraag>
+    <BerichtInTransactie15 id="BiT001">
+        <identification />
+    </BerichtInTransactie15>
+    <t1_OpnameBestelling id="transactie001">
+        <number>1</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR001" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t1_OpnameBestelling>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="consument">
+        <name>Consument</name>
+        <abbreviation>CSMT</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensConsument">
+                <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="KeesDeVries">
+        <userName>kvd</userName>
+        <name>Kees de Vries</name>
+    </StandardPersonType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <klant id="klantRol">
+        <name>Klant Rol</name>
+        <description>Diegene die de klant is</description>
+    </klant>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <PersonInRole id="PiR001">
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="consument" />
+        </organisation>
+        <role>
+            <klantRef idref="klantRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The fifth and sixth messages ("vijfde_bericht.xml" and "sixth_message.xml")
 
@@ -3181,215 +3247,219 @@ are shown below.\
 \
 **The fifth message**
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgVraag id="bericht005">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatingTransactionMessageID>bericht004</initiatingTransactionMessageID>
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie11Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t2_VraagOberAanKokRef idref="transactie002" />
-            </transaction>
-            <ceVraag>
-                <CeVraag id="vraag002">
-                    <vraag>Kan er ook mayonaise bij de gepofte aardappelen geserveerd worden</vraag>
-                </CeVraag>
-            </ceVraag>
-        </msgVraag>
-        <BerichtInTransactie11 id="BiT001">
-            <identification />
-        </BerichtInTransactie11>
-        <t2_VraagOberAanKok id="transactie002">
-            <number>2</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR003" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t2_VraagOberAanKok>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <StandardPersonType id="DirkZwart">
-            <userName>dz</userName>
-            <name>Dirk Zwart</name>
-        </StandardPersonType>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <kok id="kokRol">
-            <name>Kok Rol</name>
-            <description>Diegene die kookt</description>
-        </kok>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR003">
-            <contactPerson>
-                <StandardPersonTypeRef idref="DirkZwart" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgVraag id="bericht005">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatingTransactionMessageID>bericht004</initiatingTransactionMessageID>
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie11Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t2_VraagOberAanKokRef idref="transactie002" />
+        </transaction>
+        <ceVraag>
+            <CeVraag id="vraag002">
+                <vraag>Kan er ook mayonaise bij de gepofte aardappelen geserveerd worden</vraag>
+            </CeVraag>
+        </ceVraag>
+    </msgVraag>
+    <BerichtInTransactie11 id="BiT001">
+        <identification />
+    </BerichtInTransactie11>
+    <t2_VraagOberAanKok id="transactie002">
+        <number>2</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR003" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t2_VraagOberAanKok>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <StandardPersonType id="DirkZwart">
+        <userName>dz</userName>
+        <name>Dirk Zwart</name>
+    </StandardPersonType>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <kok id="kokRol">
+        <name>Kok Rol</name>
+        <description>Diegene die kookt</description>
+    </kok>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR003">
+        <contactPerson>
+            <StandardPersonTypeRef idref="DirkZwart" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 **The sixth message**
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgVraag id="bericht006">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatingTransactionMessageID>bericht004</initiatingTransactionMessageID>
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie11Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t2_VraagOberAanKokRef idref="transactie003" />
-            </transaction>
-            <ceVraag>
-                <CeVraag id="vraag003">
-                    <vraag>Kan er ook mayonaise bij de gepofte aardappelen geserveerd worden</vraag>
-                </CeVraag>
-            </ceVraag>
-        </msgVraag>
-        <BerichtInTransactie11 id="BiT001">
-            <identification />
-        </BerichtInTransactie11>
-        <t2_VraagOberAanKok id="transactie003">
-            <number>3</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR004" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t2_VraagOberAanKok>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <StandardPersonType id="RobTaal">
-            <userName>rt</userName>
-            <name>Rob Taal</name>
-        </StandardPersonType>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <kok id="kokRol">
-            <name>Kok Rol</name>
-            <description>Diegene die kookt</description>
-        </kok>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR004">
-            <contactPerson>
-                <StandardPersonTypeRef idref="RobTaal" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgVraag id="bericht006">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatingTransactionMessageID>bericht004</initiatingTransactionMessageID>
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie11Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t2_VraagOberAanKokRef idref="transactie003" />
+        </transaction>
+        <ceVraag>
+            <CeVraag id="vraag003">
+                <vraag>Kan er ook mayonaise bij de gepofte aardappelen geserveerd worden</vraag>
+            </CeVraag>
+        </ceVraag>
+    </msgVraag>
+    <BerichtInTransactie11 id="BiT001">
+        <identification />
+    </BerichtInTransactie11>
+    <t2_VraagOberAanKok id="transactie003">
+        <number>3</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR004" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t2_VraagOberAanKok>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <StandardPersonType id="RobTaal">
+        <userName>rt</userName>
+        <name>Rob Taal</name>
+    </StandardPersonType>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <kok id="kokRol">
+        <name>Kok Rol</name>
+        <description>Diegene die kookt</description>
+    </kok>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR004">
+        <contactPerson>
+            <StandardPersonTypeRef idref="RobTaal" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The seventh message ("zevende_bericht.xml")
 
@@ -3411,132 +3481,134 @@ positive answer to the customer's question that he received through the
 waiter. Please note that the guideline for inheriting and blocking data
 elements applies to this message again. The message looks like this:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgAntwoord id="bericht007">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatingTransactionMessageID>bericht004</initiatingTransactionMessageID>
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie12Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t2_VraagOberAanKokRef idref="transactie003" />
-            </transaction>
-            <ceVraag>
-                <CeVraag id="vraag004">
-                    <vraag>Kan er ook mayonaise bij de gepofte aardappelen geserveerd worden</vraag>
-                </CeVraag>
-            </ceVraag>
-            <ceAntwoord>
-                <CeAntwoord id="antwoord001">
-                    <antwoord>Dat is prima</antwoord>
-                </CeAntwoord>
-            </ceAntwoord>
-        </msgAntwoord>
-        <BerichtInTransactie12 id="BiT001">
-            <identification />
-        </BerichtInTransactie12>
-        <t2_VraagOberAanKok id="transactie003">
-            <number>3</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR004" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t2_VraagOberAanKok>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <StandardPersonType id="RobTaal">
-            <userName>rt</userName>
-            <name>Rob Taal</name>
-        </StandardPersonType>
-        <StandardPersonType id="JanToet">
-            <userName>jt</userName>
-            <name>Jan Toet</name>
-        </StandardPersonType>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <kok id="kokRol">
-            <name>Kok Rol</name>
-            <description>Diegene die kookt</description>
-        </kok>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR004">
-            <successor>
-                <PersonInRoleRef idref="PiR005" />
-            </successor>
-            <contactPerson>
-                <StandardPersonTypeRef idref="RobTaal" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR005">
-            <contactPerson>
-                <StandardPersonTypeRef idref="JanToet" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgAntwoord id="bericht007">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatingTransactionMessageID>bericht004</initiatingTransactionMessageID>
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie12Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t2_VraagOberAanKokRef idref="transactie003" />
+        </transaction>
+        <ceVraag>
+            <CeVraag id="vraag004">
+                <vraag>Kan er ook mayonaise bij de gepofte aardappelen geserveerd worden</vraag>
+            </CeVraag>
+        </ceVraag>
+        <ceAntwoord>
+            <CeAntwoord id="antwoord001">
+                <antwoord>Dat is prima</antwoord>
+            </CeAntwoord>
+        </ceAntwoord>
+    </msgAntwoord>
+    <BerichtInTransactie12 id="BiT001">
+        <identification />
+    </BerichtInTransactie12>
+    <t2_VraagOberAanKok id="transactie003">
+        <number>3</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR004" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t2_VraagOberAanKok>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <StandardPersonType id="RobTaal">
+        <userName>rt</userName>
+        <name>Rob Taal</name>
+    </StandardPersonType>
+    <StandardPersonType id="JanToet">
+        <userName>jt</userName>
+        <name>Jan Toet</name>
+    </StandardPersonType>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <kok id="kokRol">
+        <name>Kok Rol</name>
+        <description>Diegene die kookt</description>
+    </kok>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR004">
+        <successor>
+            <PersonInRoleRef idref="PiR005" />
+        </successor>
+        <contactPerson>
+            <StandardPersonTypeRef idref="RobTaal" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR005">
+        <contactPerson>
+            <StandardPersonTypeRef idref="JanToet" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The eighth message ("achtste_bericht.xml")
 
@@ -3547,125 +3619,127 @@ transaction *T1_RecordingOrder*. The previous one in the MITT in this
 case is msgAnswer from transaction *T2_VraagOberAanKok*. The guideline
 for copying and blocking data elements also applies here.
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgAntwoord id="bericht008">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie12Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t1_OpnameBestellingRef idref="transactie001" />
-            </transaction>
-            <ceVraag>
-                <CeVraag id="vraag005">
-                    <vraag>Kan er ook mayonaise bij de gepofte aardappelen geserveerd worden</vraag>
-                </CeVraag>
-            </ceVraag>
-            <ceAntwoord>
-                <CeAntwoord id="antwoord002">
-                    <antwoord>Dat is prima</antwoord>
-                </CeAntwoord>
-            </ceAntwoord>
-        </msgAntwoord>
-        <BerichtInTransactie12 id="BiT001">
-            <identification />
-        </BerichtInTransactie12>
-        <t1_OpnameBestelling id="transactie001">
-            <number>1</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR001" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t1_OpnameBestelling>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="consument">
-            <name>Consument</name>
-            <abbreviation>CSMT</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensConsument">
-                    <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="KeesDeVries">
-            <userName>kvd</userName>
-            <name>Kees de Vries</name>
-        </StandardPersonType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <klant id="klantRol">
-            <name>Klant Rol</name>
-            <description>Diegene die de klant is</description>
-        </klant>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <PersonInRole id="PiR001">
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="consument" />
-            </organisation>
-            <role>
-                <klantRef idref="klantRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgAntwoord id="bericht008">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie12Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t1_OpnameBestellingRef idref="transactie001" />
+        </transaction>
+        <ceVraag>
+            <CeVraag id="vraag005">
+                <vraag>Kan er ook mayonaise bij de gepofte aardappelen geserveerd worden</vraag>
+            </CeVraag>
+        </ceVraag>
+        <ceAntwoord>
+            <CeAntwoord id="antwoord002">
+                <antwoord>Dat is prima</antwoord>
+            </CeAntwoord>
+        </ceAntwoord>
+    </msgAntwoord>
+    <BerichtInTransactie12 id="BiT001">
+        <identification />
+    </BerichtInTransactie12>
+    <t1_OpnameBestelling id="transactie001">
+        <number>1</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR001" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t1_OpnameBestelling>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="consument">
+        <name>Consument</name>
+        <abbreviation>CSMT</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensConsument">
+                <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="KeesDeVries">
+        <userName>kvd</userName>
+        <name>Kees de Vries</name>
+    </StandardPersonType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <klant id="klantRol">
+        <name>Klant Rol</name>
+        <description>Diegene die de klant is</description>
+    </klant>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <PersonInRole id="PiR001">
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="consument" />
+        </organisation>
+        <role>
+            <klantRef idref="klantRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The ninth message ("negende_bericht.xml")
 
@@ -3674,125 +3748,127 @@ customer can place an order. The customer does this with the message
 *msgPlaceOrder*. In this message there is a complex element within a
 complex element.
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgPlaatsingBestelling id="bericht009">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie7Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t1_OpnameBestellingRef idref="transactie001" />
-            </transaction>
-            <ceBestelling>
-                <CeBestelling id="bestelling001">
-                    <ceInhoudBestelling>
-                        <CeInhoudBestelling id="inhoudBestelling001">
-                            <naamGerecht>Biefstuk</naamGerecht>
-                            <opmerking>met mayonaise</opmerking>
-                        </CeInhoudBestelling>
-                    </ceInhoudBestelling>
-                </CeBestelling>
-            </ceBestelling>
-        </msgPlaatsingBestelling>
-        <BerichtInTransactie7 id="BiT001">
-            <identification />
-        </BerichtInTransactie7>
-        <t1_OpnameBestelling id="transactie001">
-            <number>1</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR001" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t1_OpnameBestelling>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="consument">
-            <name>Consument</name>
-            <abbreviation>CSMT</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensConsument">
-                    <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="KeesDeVries">
-            <userName>kvd</userName>
-            <name>Kees de Vries</name>
-        </StandardPersonType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <klant id="klantRol">
-            <name>Klant Rol</name>
-            <description>Diegene die de klant is</description>
-        </klant>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <PersonInRole id="PiR001">
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="consument" />
-            </organisation>
-            <role>
-                <klantRef idref="klantRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgPlaatsingBestelling id="bericht009">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie7Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t1_OpnameBestellingRef idref="transactie001" />
+        </transaction>
+        <ceBestelling>
+            <CeBestelling id="bestelling001">
+                <ceInhoudBestelling>
+                    <CeInhoudBestelling id="inhoudBestelling001">
+                        <naamGerecht>Biefstuk</naamGerecht>
+                        <opmerking>met mayonaise</opmerking>
+                    </CeInhoudBestelling>
+                </ceInhoudBestelling>
+            </CeBestelling>
+        </ceBestelling>
+    </msgPlaatsingBestelling>
+    <BerichtInTransactie7 id="BiT001">
+        <identification />
+    </BerichtInTransactie7>
+    <t1_OpnameBestelling id="transactie001">
+        <number>1</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR001" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t1_OpnameBestelling>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="consument">
+        <name>Consument</name>
+        <abbreviation>CSMT</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensConsument">
+                <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="KeesDeVries">
+        <userName>kvd</userName>
+        <name>Kees de Vries</name>
+    </StandardPersonType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <klant id="klantRol">
+        <name>Klant Rol</name>
+        <description>Diegene die de klant is</description>
+    </klant>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <PersonInRole id="PiR001">
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="consument" />
+        </organisation>
+        <role>
+            <klantRef idref="klantRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The tenth message (\"tiende_bericht.xml\")
 
@@ -3803,114 +3879,116 @@ transaction *T1 \_Recording_order*). The directive on the acquisition
 and blocking of data elements is again in force in this situation. The
 message looks like this:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgPlaatsingBestelling id="bericht010">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatingTransactionMessageID>bericht009</initiatingTransactionMessageID>
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie13Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t3_OpdrachtKokRef idref="transactie004" />
-            </transaction>
-            <ceBestelling>
-                <CeBestelling id="bestelling002">
-                    <ceInhoudBestelling>
-                        <CeInhoudBestelling id="inhoudBestelling002">
-                            <naamGerecht>Biefstuk</naamGerecht>
-                            <opmerking>met mayonaise</opmerking>
-                        </CeInhoudBestelling>
-                    </ceInhoudBestelling>
-                </CeBestelling>
-            </ceBestelling>
-        </msgPlaatsingBestelling>
-        <BerichtInTransactie13 id="BiT001">
-            <identification />
-        </BerichtInTransactie13>
-        <t3_OpdrachtKok id="transactie004">
-            <number>4</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR005" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t3_OpdrachtKok>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <StandardPersonType id="JanToet">
-            <userName>jt</userName>
-            <name>Jan Toet</name>
-        </StandardPersonType>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <kok id="kokRol">
-            <name>Kok Rol</name>
-            <description>Diegene die kookt</description>
-        </kok>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR005">
-            <contactPerson>
-                <StandardPersonTypeRef idref="JanToet" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgPlaatsingBestelling id="bericht010">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatingTransactionMessageID>bericht009</initiatingTransactionMessageID>
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie13Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t3_OpdrachtKokRef idref="transactie004" />
+        </transaction>
+        <ceBestelling>
+            <CeBestelling id="bestelling002">
+                <ceInhoudBestelling>
+                    <CeInhoudBestelling id="inhoudBestelling002">
+                        <naamGerecht>Biefstuk</naamGerecht>
+                        <opmerking>met mayonaise</opmerking>
+                    </CeInhoudBestelling>
+                </ceInhoudBestelling>
+            </CeBestelling>
+        </ceBestelling>
+    </msgPlaatsingBestelling>
+    <BerichtInTransactie13 id="BiT001">
+        <identification />
+    </BerichtInTransactie13>
+    <t3_OpdrachtKok id="transactie004">
+        <number>4</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR005" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t3_OpdrachtKok>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <StandardPersonType id="JanToet">
+        <userName>jt</userName>
+        <name>Jan Toet</name>
+    </StandardPersonType>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <kok id="kokRol">
+        <name>Kok Rol</name>
+        <description>Diegene die kookt</description>
+    </kok>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR005">
+        <contactPerson>
+            <StandardPersonTypeRef idref="JanToet" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The eleventh message (\"elfde_bericht.xml")
 
@@ -3921,114 +3999,116 @@ he cannot accept the order in this form. He sends the message
 blocking of data elements is again in force in this situation. The
 message looks like this:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgBestellingNietAkkoord id="bericht011">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatingTransactionMessageID>bericht009</initiatingTransactionMessageID>
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie15Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t3_OpdrachtKokRef idref="transactie004" />
-            </transaction>
-            <ceBestelling>
-                <CeBestelling id="bestelling003">
-                    <ceInhoudBestelling>
-                        <CeInhoudBestelling id="inhoudBestelling003">
-                            <naamGerecht>Biefstuk</naamGerecht>
-                            <opmerking>met mayonaise</opmerking>
-                        </CeInhoudBestelling>
-                    </ceInhoudBestelling>
-                </CeBestelling>
-            </ceBestelling>
-        </msgBestellingNietAkkoord>
-        <BerichtInTransactie15 id="BiT001">
-            <identification />
-        </BerichtInTransactie15>
-        <t3_OpdrachtKok id="transactie004">
-            <number>4</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR005" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t3_OpdrachtKok>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <StandardPersonType id="JanToet">
-            <userName>jt</userName>
-            <name>Jan Toet</name>
-        </StandardPersonType>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <kok id="kokRol">
-            <name>Kok Rol</name>
-            <description>Diegene die kookt</description>
-        </kok>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR005">
-            <contactPerson>
-                <StandardPersonTypeRef idref="JanToet" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgBestellingNietAkkoord id="bericht011">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatingTransactionMessageID>bericht009</initiatingTransactionMessageID>
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie15Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t3_OpdrachtKokRef idref="transactie004" />
+        </transaction>
+        <ceBestelling>
+            <CeBestelling id="bestelling003">
+                <ceInhoudBestelling>
+                    <CeInhoudBestelling id="inhoudBestelling003">
+                        <naamGerecht>Biefstuk</naamGerecht>
+                        <opmerking>met mayonaise</opmerking>
+                    </CeInhoudBestelling>
+                </ceInhoudBestelling>
+            </CeBestelling>
+        </ceBestelling>
+    </msgBestellingNietAkkoord>
+    <BerichtInTransactie15 id="BiT001">
+        <identification />
+    </BerichtInTransactie15>
+    <t3_OpdrachtKok id="transactie004">
+        <number>4</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR005" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t3_OpdrachtKok>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <StandardPersonType id="JanToet">
+        <userName>jt</userName>
+        <name>Jan Toet</name>
+    </StandardPersonType>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <kok id="kokRol">
+        <name>Kok Rol</name>
+        <description>Diegene die kookt</description>
+    </kok>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR005">
+        <contactPerson>
+            <StandardPersonTypeRef idref="JanToet" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The twelfth message (\"twaalfde_bericht.xml\")
 
@@ -4041,125 +4121,127 @@ transaction *T3_OpdrachtKok* in the MITT). The directive on the
 acquisition and blocking of data elements is again in force in this
 situation. The message looks like this:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgBestellingNietAkkoord id="bericht012">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie8Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t1_OpnameBestellingRef idref="transactie001" />
-            </transaction>
-            <ceBestelling>
-                <CeBestelling id="bestelling004">
-                    <ceInhoudBestelling>
-                        <CeInhoudBestelling id="inhoudBestelling004">
-                            <naamGerecht>Biefstuk</naamGerecht>
-                            <opmerking>met mayonaise</opmerking>
-                        </CeInhoudBestelling>
-                    </ceInhoudBestelling>
-                </CeBestelling>
-            </ceBestelling>
-        </msgBestellingNietAkkoord>
-        <BerichtInTransactie8 id="BiT001">
-            <identification />
-        </BerichtInTransactie8>
-        <t1_OpnameBestelling id="transactie001">
-            <number>1</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR001" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t1_OpnameBestelling>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="consument">
-            <name>Consument</name>
-            <abbreviation>CSMT</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensConsument">
-                    <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="KeesDeVries">
-            <userName>kvd</userName>
-            <name>Kees de Vries</name>
-        </StandardPersonType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <klant id="klantRol">
-            <name>Klant Rol</name>
-            <description>Diegene die de klant is</description>
-        </klant>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <PersonInRole id="PiR001">
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="consument" />
-            </organisation>
-            <role>
-                <klantRef idref="klantRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgBestellingNietAkkoord id="bericht012">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie8Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t1_OpnameBestellingRef idref="transactie001" />
+        </transaction>
+        <ceBestelling>
+            <CeBestelling id="bestelling004">
+                <ceInhoudBestelling>
+                    <CeInhoudBestelling id="inhoudBestelling004">
+                        <naamGerecht>Biefstuk</naamGerecht>
+                        <opmerking>met mayonaise</opmerking>
+                    </CeInhoudBestelling>
+                </ceInhoudBestelling>
+            </CeBestelling>
+        </ceBestelling>
+    </msgBestellingNietAkkoord>
+    <BerichtInTransactie8 id="BiT001">
+        <identification />
+    </BerichtInTransactie8>
+    <t1_OpnameBestelling id="transactie001">
+        <number>1</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR001" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t1_OpnameBestelling>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="consument">
+        <name>Consument</name>
+        <abbreviation>CSMT</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensConsument">
+                <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="KeesDeVries">
+        <userName>kvd</userName>
+        <name>Kees de Vries</name>
+    </StandardPersonType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <klant id="klantRol">
+        <name>Klant Rol</name>
+        <description>Diegene die de klant is</description>
+    </klant>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <PersonInRole id="PiR001">
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="consument" />
+        </organisation>
+        <role>
+            <klantRef idref="klantRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The thirteenth message ("dertiende_bericht.xml"")
 
@@ -4174,125 +4256,127 @@ in the framework for this purpose. This condition indicates that in this
 MITT *MessageInTransaction9* the condition is FREE. This means that
 orders can be adjusted. The customer does this in this message.
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgPlaatsingBestelling id="bericht013">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie9Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t1_OpnameBestellingRef idref="transactie001" />
-            </transaction>
-            <ceBestelling>
-                <CeBestelling id="bestelling005">
-                    <ceInhoudBestelling>
-                        <CeInhoudBestelling id="inhoudBestelling005">
-                            <naamGerecht>Carpaccio</naamGerecht>
-                            <opmerking>Ik hoop dat jullie dit wel hebben</opmerking>
-                        </CeInhoudBestelling>
-                    </ceInhoudBestelling>
-                </CeBestelling>
-            </ceBestelling>
-        </msgPlaatsingBestelling>
-        <BerichtInTransactie9 id="BiT001">
-            <identification />
-        </BerichtInTransactie9>
-        <t1_OpnameBestelling id="transactie001">
-            <number>1</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR001" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t1_OpnameBestelling>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="consument">
-            <name>Consument</name>
-            <abbreviation>CSMT</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensConsument">
-                    <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="KeesDeVries">
-            <userName>kvd</userName>
-            <name>Kees de Vries</name>
-        </StandardPersonType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <klant id="klantRol">
-            <name>Klant Rol</name>
-            <description>Diegene die de klant is</description>
-        </klant>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <PersonInRole id="PiR001">
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="consument" />
-            </organisation>
-            <role>
-                <klantRef idref="klantRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgPlaatsingBestelling id="bericht013">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie9Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t1_OpnameBestellingRef idref="transactie001" />
+        </transaction>
+        <ceBestelling>
+            <CeBestelling id="bestelling005">
+                <ceInhoudBestelling>
+                    <CeInhoudBestelling id="inhoudBestelling005">
+                        <naamGerecht>Carpaccio</naamGerecht>
+                        <opmerking>Ik hoop dat jullie dit wel hebben</opmerking>
+                    </CeInhoudBestelling>
+                </ceInhoudBestelling>
+            </CeBestelling>
+        </ceBestelling>
+    </msgPlaatsingBestelling>
+    <BerichtInTransactie9 id="BiT001">
+        <identification />
+    </BerichtInTransactie9>
+    <t1_OpnameBestelling id="transactie001">
+        <number>1</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR001" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t1_OpnameBestelling>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="consument">
+        <name>Consument</name>
+        <abbreviation>CSMT</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensConsument">
+                <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="KeesDeVries">
+        <userName>kvd</userName>
+        <name>Kees de Vries</name>
+    </StandardPersonType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <klant id="klantRol">
+        <name>Klant Rol</name>
+        <description>Diegene die de klant is</description>
+    </klant>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <PersonInRole id="PiR001">
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="consument" />
+        </organisation>
+        <role>
+            <klantRef idref="klantRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 The waiter has now received the order again from the customer and will
 send it with the message *msgPlacingOrder* from transaction
@@ -4301,114 +4385,116 @@ send it with the message *msgPlacingOrder* from transaction
 directive on the acquisition and blocking of data elements is again in
 force in this situation. The message looks like this:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgPlaatsingBestelling id="bericht014">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatingTransactionMessageID>bericht013</initiatingTransactionMessageID>
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie13Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t1_OpnameBestellingRef idref="transactie005" />
-            </transaction>
-            <ceBestelling>
-                <CeBestelling id="bestelling006">
-                    <ceInhoudBestelling>
-                        <CeInhoudBestelling id="inhoudBestelling006">
-                            <naamGerecht>Carpatio</naamGerecht>
-                            <opmerking>Ik hoop dat jullie dit wel hebben</opmerking>
-                        </CeInhoudBestelling>
-                    </ceInhoudBestelling>
-                </CeBestelling>
-            </ceBestelling>
-        </msgPlaatsingBestelling>
-        <BerichtInTransactie13 id="BiT001">
-            <identification />
-        </BerichtInTransactie13>
-        <t3_OpdrachtKok id="transactie005">
-            <number>5</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR005" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t3_OpdrachtKok>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <StandardPersonType id="JanToet">
-            <userName>jt</userName>
-            <name>Jan Toet</name>
-        </StandardPersonType>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <kok id="kokRol">
-            <name>Kok Rol</name>
-            <description>Diegene die kookt</description>
-        </kok>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR005">
-            <contactPerson>
-                <StandardPersonTypeRef idref="JanToet" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgPlaatsingBestelling id="bericht014">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatingTransactionMessageID>bericht013</initiatingTransactionMessageID>
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie13Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t1_OpnameBestellingRef idref="transactie005" />
+        </transaction>
+        <ceBestelling>
+            <CeBestelling id="bestelling006">
+                <ceInhoudBestelling>
+                    <CeInhoudBestelling id="inhoudBestelling006">
+                        <naamGerecht>Carpatio</naamGerecht>
+                        <opmerking>Ik hoop dat jullie dit wel hebben</opmerking>
+                    </CeInhoudBestelling>
+                </ceInhoudBestelling>
+            </CeBestelling>
+        </ceBestelling>
+    </msgPlaatsingBestelling>
+    <BerichtInTransactie13 id="BiT001">
+        <identification />
+    </BerichtInTransactie13>
+    <t3_OpdrachtKok id="transactie005">
+        <number>5</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR005" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t3_OpdrachtKok>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <StandardPersonType id="JanToet">
+        <userName>jt</userName>
+        <name>Jan Toet</name>
+    </StandardPersonType>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <kok id="kokRol">
+        <name>Kok Rol</name>
+        <description>Diegene die kookt</description>
+    </kok>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR005">
+        <contactPerson>
+            <StandardPersonTypeRef idref="JanToet" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The fifteenth message (\"vijftiende_bericht.xml\")
 
@@ -4417,114 +4503,116 @@ he can accept the order. He sends the message *msgOrderAccept* to the
 waiter. The directive on the acquisition and blocking of data elements
 is again in force in this situation. The message looks like this:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgBestellingAkkoord id="bericht015">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatingTransactionMessageID>bericht013</initiatingTransactionMessageID>
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie14Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t1_OpnameBestellingRef idref="transactie005" />
-            </transaction>
-            <ceBestelling>
-                <CeBestelling id="bestelling007">
-                    <ceInhoudBestelling>
-                        <CeInhoudBestelling id="inhoudBestelling007">
-                            <naamGerecht>Carpatio</naamGerecht>
-                            <opmerking>Ik hoop dat jullie dit wel hebben</opmerking>
-                        </CeInhoudBestelling>
-                    </ceInhoudBestelling>
-                </CeBestelling>
-            </ceBestelling>
-        </msgBestellingAkkoord>
-        <BerichtInTransactie14 id="BiT001">
-            <identification />
-        </BerichtInTransactie14>
-        <t3_OpdrachtKok id="transactie005">
-            <number>5</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR005" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t3_OpdrachtKok>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <StandardPersonType id="JanToet">
-            <userName>jt</userName>
-            <name>Jan Toet</name>
-        </StandardPersonType>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <kok id="kokRol">
-            <name>Kok Rol</name>
-            <description>Diegene die kookt</description>
-        </kok>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR005">
-            <contactPerson>
-                <StandardPersonTypeRef idref="JanToet" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="kokRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgBestellingAkkoord id="bericht015">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatingTransactionMessageID>bericht013</initiatingTransactionMessageID>
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie14Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t1_OpnameBestellingRef idref="transactie005" />
+        </transaction>
+        <ceBestelling>
+            <CeBestelling id="bestelling007">
+                <ceInhoudBestelling>
+                    <CeInhoudBestelling id="inhoudBestelling007">
+                        <naamGerecht>Carpatio</naamGerecht>
+                        <opmerking>Ik hoop dat jullie dit wel hebben</opmerking>
+                    </CeInhoudBestelling>
+                </ceInhoudBestelling>
+            </CeBestelling>
+        </ceBestelling>
+    </msgBestellingAkkoord>
+    <BerichtInTransactie14 id="BiT001">
+        <identification />
+    </BerichtInTransactie14>
+    <t3_OpdrachtKok id="transactie005">
+        <number>5</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR005" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t3_OpdrachtKok>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <StandardPersonType id="JanToet">
+        <userName>jt</userName>
+        <name>Jan Toet</name>
+    </StandardPersonType>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <kok id="kokRol">
+        <name>Kok Rol</name>
+        <description>Diegene die kookt</description>
+    </kok>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR005">
+        <contactPerson>
+            <StandardPersonTypeRef idref="JanToet" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="kokRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 #### The sixteenth message (\"zestiende_bericht.xml\")
 
@@ -4538,122 +4626,124 @@ in force in this situation. The message is also the last message from
 the primary transaction *T1_RecordingOrder*. The transaction has now
 been completed. The message looks like this:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
-        <msgBestellingAkkoord id="bericht016">
-            <identification />
-            <dateSend>2008-05-04T00:00:00.0Z</dateSend>
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <messageInTransaction>
-                <BerichtInTransactie10Ref idref="BiT001" />
-            </messageInTransaction>
-            <transaction>
-                <t1_OpnameBestellingRef idref="transactie001" />
-            </transaction>
-            <ceBestelling>
-                <CeBestelling id="bestelling008">
-                    <ceInhoudBestelling>
-                        <CeInhoudBestelling id="inhoudBestelling008">
-                            <naamGerecht>Carpatio</naamGerecht>
-                            <opmerking>Ik hoop dat jullie dit wel hebben</opmerking>
-                        </CeInhoudBestelling>
-                    </ceInhoudBestelling>
-                </CeBestelling>
-            </ceBestelling>
-        </msgBestellingAkkoord>
-        <BerichtInTransactie10 id="BiT001">
-            <identification />
-        </BerichtInTransactie10>
-        <t1_OpnameBestelling id="transactie001">
-            <number>1</number>
-            <name />
-            <description />
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <initiator>
-                <PersonInRoleRef idref="PiR002" />
-            </initiator>
-            <executor>
-                <PersonInRoleRef idref="PiR001" />
-            </executor>
-            <project>
-                <ProjectType1Ref idref="Project1" />
-            </project>
-        </t1_OpnameBestelling>
-        <ProjectType1 id="Project1">
-            <name>Project Top Koks</name>
-            <description>Project voor het opnemen van een bestelling </description>
-            <startDate>2008-05-04T00:00:00.0Z</startDate>
-            <endDate>2009-05-04T00:00:00.0Z</endDate>
-            <ceSOAP>
-                <CeSOAP id="ProjectGegevens">
-                    <sOAPProtocol>MTOM</sOAPProtocol>
-                    <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
-                    <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
-                </CeSOAP>
-            </ceSOAP>
-        </ProjectType1>
-        <StandardOrganisationType id="consument">
-            <name>Consument</name>
-            <abbreviation>CSMT</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensConsument">
-                    <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardOrganisationType id="restaurant">
-            <name>Restaurant</name>
-            <abbreviation>RSTR</abbreviation>
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <ceOrganisatie>
-                <CeOrganisatie id="OrganisatieGegevensRestaurant">
-                    <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
-                </CeOrganisatie>
-            </ceOrganisatie>
-        </StandardOrganisationType>
-        <StandardPersonType id="KeesDeVries">
-            <userName>kvd</userName>
-            <name>Kees de Vries</name>
-        </StandardPersonType>
-        <StandardPersonType id="PietJansen">
-            <userName>pj</userName>
-            <name>Piet Jansen</name>
-        </StandardPersonType>
-        <klant id="klantRol">
-            <name>Klant Rol</name>
-            <description>Diegene die de klant is</description>
-        </klant>
-        <ober id="oberRol">
-            <name>Ober Rol</name>
-            <description>Diegene die serveert</description>
-        </ober>
-        <PersonInRole id="PiR001">
-            <contactPerson>
-                <StandardPersonTypeRef idref="KeesDeVries" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="consument" />
-            </organisation>
-            <role>
-                <klantRef idref="klantRol" />
-            </role>
-        </PersonInRole>
-        <PersonInRole id="PiR002">
-            <contactPerson>
-                <StandardPersonTypeRef idref="PietJansen" />
-            </contactPerson>
-            <organisation>
-                <StandardOrganisationTypeRef idref="restaurant" />
-            </organisation>
-            <role>
-                <klantRef idref="oberRol" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/ 20160331 /TestFramework " 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.visi.nl/schemas/ 20160331 /TestFramework 10.xsd ">
+    <msgBestellingAkkoord id="bericht016">
+        <identification />
+        <dateSend>2008-05-04T00:00:00.0Z</dateSend>
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <messageInTransaction>
+            <BerichtInTransactie10Ref idref="BiT001" />
+        </messageInTransaction>
+        <transaction>
+            <t1_OpnameBestellingRef idref="transactie001" />
+        </transaction>
+        <ceBestelling>
+            <CeBestelling id="bestelling008">
+                <ceInhoudBestelling>
+                    <CeInhoudBestelling id="inhoudBestelling008">
+                        <naamGerecht>Carpatio</naamGerecht>
+                        <opmerking>Ik hoop dat jullie dit wel hebben</opmerking>
+                    </CeInhoudBestelling>
+                </ceInhoudBestelling>
+            </CeBestelling>
+        </ceBestelling>
+    </msgBestellingAkkoord>
+    <BerichtInTransactie10 id="BiT001">
+        <identification />
+    </BerichtInTransactie10>
+    <t1_OpnameBestelling id="transactie001">
+        <number>1</number>
+        <name />
+        <description />
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <initiator>
+            <PersonInRoleRef idref="PiR002" />
+        </initiator>
+        <executor>
+            <PersonInRoleRef idref="PiR001" />
+        </executor>
+        <project>
+            <ProjectType1Ref idref="Project1" />
+        </project>
+    </t1_OpnameBestelling>
+    <ProjectType1 id="Project1">
+        <name>Project Top Koks</name>
+        <description>Project voor het opnemen van een bestelling </description>
+        <startDate>2008-05-04T00:00:00.0Z</startDate>
+        <endDate>2009-05-04T00:00:00.0Z</endDate>
+        <ceSOAP>
+            <CeSOAP id="ProjectGegevens">
+                <sOAPProtocol>MTOM</sOAPProtocol>
+                <sOAPServerURL>http://192.168.0.1/visi.wsdl</sOAPServerURL>
+                <sOAPCentralServerURL>http://www.crow.nl/testcases/case001/visi.wsdl</sOAPCentralServerURL>
+            </CeSOAP>
+        </ceSOAP>
+    </ProjectType1>
+    <StandardOrganisationType id="consument">
+        <name>Consument</name>
+        <abbreviation>CSMT</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensConsument">
+                <sOAPServerURL>http://192.168.0.102/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardOrganisationType id="restaurant">
+        <name>Restaurant</name>
+        <abbreviation>RSTR</abbreviation>
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <ceOrganisatie>
+            <CeOrganisatie id="OrganisatieGegevensRestaurant">
+                <sOAPServerURL>http://192.168.0.105/specifiek_project/visi.wsdl</sOAPServerURL>
+            </CeOrganisatie>
+        </ceOrganisatie>
+    </StandardOrganisationType>
+    <StandardPersonType id="KeesDeVries">
+        <userName>kvd</userName>
+        <name>Kees de Vries</name>
+    </StandardPersonType>
+    <StandardPersonType id="PietJansen">
+        <userName>pj</userName>
+        <name>Piet Jansen</name>
+    </StandardPersonType>
+    <klant id="klantRol">
+        <name>Klant Rol</name>
+        <description>Diegene die de klant is</description>
+    </klant>
+    <ober id="oberRol">
+        <name>Ober Rol</name>
+        <description>Diegene die serveert</description>
+    </ober>
+    <PersonInRole id="PiR001">
+        <contactPerson>
+            <StandardPersonTypeRef idref="KeesDeVries" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="consument" />
+        </organisation>
+        <role>
+            <klantRef idref="klantRol" />
+        </role>
+    </PersonInRole>
+    <PersonInRole id="PiR002">
+        <contactPerson>
+            <StandardPersonTypeRef idref="PietJansen" />
+        </contactPerson>
+        <organisation>
+            <StandardOrganisationTypeRef idref="restaurant" />
+        </organisation>
+        <role>
+            <klantRef idref="oberRol" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```

@@ -72,26 +72,30 @@ and receiving role Advisory. Person Urbain Servranckx sends the start
 message of type \"Assignment\" to person Georges Remi.\
 Example 11: Example message\
 
-    Bericht
-    Type: Opdracht
-    Unieke identificatie: _9a163e84-a83e-47ea-b5f3-220c403da98b
-    Verzenddatum: 2021-12-23T14:38:56
-    Richting (Van-Naar): TRUE
-    Transactie: _f8275cfe-3d8d-4bda-a05b-164a5087a1af
-    Inhoud: _170ef962-685f-4fc8-8728-df1bfe2317ba
+```
+Bericht
+Type: Opdracht
+Unieke identificatie: _9a163e84-a83e-47ea-b5f3-220c403da98b
+Verzenddatum: 2021-12-23T14:38:56
+Richting (Van-Naar): TRUE
+Transactie: _f8275cfe-3d8d-4bda-a05b-164a5087a1af
+Inhoud: _170ef962-685f-4fc8-8728-df1bfe2317ba
+```
 
 The receiving person can only send a response message to the initiating
 person. So Georges Remi sends a disapproval (or approval) to Urbain
 Servranckx.\
 Example 12: Example message\
 
-    Bericht
-    Type: Afkeuring
-    Unieke identificatie: _2bbecc10-948e-4b1a-b6ce-3a133576297c
-    Verzenddatum: 2021-12-27T10:13:42
-    Richting (Van-Naar): FALSE
-    Transactie: _f8275cfe-3d8d-4bda-a05b-164a5087a1af
-    Inhoud: _657ad592-5d76-4248-b959-68af07465cd6
+```
+Bericht
+Type: Afkeuring
+Unieke identificatie: _2bbecc10-948e-4b1a-b6ce-3a133576297c
+Verzenddatum: 2021-12-27T10:13:42
+Richting (Van-Naar): FALSE
+Transactie: _f8275cfe-3d8d-4bda-a05b-164a5087a1af
+Inhoud: _657ad592-5d76-4248-b959-68af07465cd6
+```
 
 After this, Urbain sends another response message to Georges. This goes
 back and forth until the final message is sent.\
@@ -110,14 +114,16 @@ message has a reference to the transaction. This transaction - just like
 a message - is of a certain type.\
 Example 13: Example message\
 
-    Transactie
-    Type: Opdrachtverstrekking
-    Unieke identificatie: _f8275cfe-3d8d-4bda-a05b-164a5087a1af
-    Nummer: GRG000282
-    Omschrijving: Opdracht voor project Realisatie West-/Oostlijn
-    Van: _e0ad4954-7986-417c-96d6-813efa36e86b
-    Naar: _752b1dfd-dd91-4404-9708-39b91047ca66
-    Project: _badc9dab-807e-4319-bd56-60c57605e109;
+```
+Transactie
+Type: Opdrachtverstrekking
+Unieke identificatie: _f8275cfe-3d8d-4bda-a05b-164a5087a1af
+Nummer: GRG000282
+Omschrijving: Opdracht voor project Realisatie West-/Oostlijn
+Van: _e0ad4954-7986-417c-96d6-813efa36e86b
+Naar: _752b1dfd-dd91-4404-9708-39b91047ca66
+Project: _badc9dab-807e-4319-bd56-60c57605e109;
+```
 
 The regulations and rules that the message communication must comply
 with are recorded in a project communication template. This template
@@ -148,16 +154,18 @@ and date. The name of the property indicates which information of the
 file should be recorded.\
 Example 14: Example message\
 
-    Bijlage
-    Type: Opdrachtbon
-    Unieke identificatie: _a0186218-82d9-4b0f-a616-8aa1f162128a
-    Naam: Bon_9601.pdf
-    Bestandslocatie: ???
-    Bestandstype: application/pdf
-    Bestandsversie: DF43111
-    Datum: 2021-10-23T08:31:58
-    Bericht: _9a163e84-a83e-47ea-b5f3-220c403da98b
-    Inhoud: _04cdb00c-fd4d-4e58-b0ad-0cc19a3b07c9, _a1cd32d-ae5ed41-e0bc-1ee28b1c08d1
+```
+Bijlage
+Type: Opdrachtbon
+Unieke identificatie: _a0186218-82d9-4b0f-a616-8aa1f162128a
+Naam: Bon_9601.pdf
+Bestandslocatie: ???
+Bestandstype: application/pdf
+Bestandsversie: DF43111
+Datum: 2021-10-23T08:31:58
+Bericht: _9a163e84-a83e-47ea-b5f3-220c403da98b
+Inhoud: _04cdb00c-fd4d-4e58-b0ad-0cc19a3b07c9, _a1cd32d-ae5ed41-e0bc-1ee28b1c08d1
+```
 
 An appendix has a reference to the message of which it is a
 substantiation and/or clarification.
@@ -179,34 +187,36 @@ or more complex elements. A complex element consists of simple elements.
 And a simple element has a value.\
 Example 15: Example appendix with optional properties\
 
-    Bijlage
-    Type: Bon_van_de_opdracht
-    Unieke identificatie: _a0186218-82d9-4b0f-a616-8aa1f162128a
-    Naam: purchase-order-9601.pdf
-    Inhoud: _04cdb00c-fd4d-4e58-b0ad-0cc19a3b07c9, _a1cd32d-ae5ed41-e0bc-1ee28b1c08d1
-    Complex Element
-    Type: Gegevens_van_de_opdracht
-    Unieke identificatie: _04cdb00c-fd4d-4e58-b0ad-0cc19a3b07c9
-    Elementen:
-    Simpel Element
-    Type: nummer_van_de_opdracht
-    Waarde: ROM/2022-666
-    Simpel Element
-    Type: naam_opdrachtgever
-    Waarde: Gemeente Rommelgem
-    Complex Element
-    Type: Betalingsgegevens
-    Unieke identificatie: _a1cd32d-ae5ed41-e0bc-1ee28b1c08d1
-    Elementen:
-    Simpel Element
-    Type: iBAN
-    Waarde: RABO28932392
-    Simpel Element
-    Type: naam_van_de_rekeninghouder
-    Waarde: Afdeling Inkoop, Gemeente Rommelgem
-    Simpel Element
-    Type: bTW_Nummer
-    Waarde: 2933092392809B01
+```
+Bijlage
+Type: Bon_van_de_opdracht
+Unieke identificatie: _a0186218-82d9-4b0f-a616-8aa1f162128a
+Naam: purchase-order-9601.pdf
+Inhoud: _04cdb00c-fd4d-4e58-b0ad-0cc19a3b07c9, _a1cd32d-ae5ed41-e0bc-1ee28b1c08d1
+Complex Element
+Type: Gegevens_van_de_opdracht
+Unieke identificatie: _04cdb00c-fd4d-4e58-b0ad-0cc19a3b07c9
+Elementen:
+Simpel Element
+Type: nummer_van_de_opdracht
+Waarde: ROM/2022-666
+Simpel Element
+Type: naam_opdrachtgever
+Waarde: Gemeente Rommelgem
+Complex Element
+Type: Betalingsgegevens
+Unieke identificatie: _a1cd32d-ae5ed41-e0bc-1ee28b1c08d1
+Elementen:
+Simpel Element
+Type: iBAN
+Waarde: RABO28932392
+Simpel Element
+Type: naam_van_de_rekeninghouder
+Waarde: Afdeling Inkoop, Gemeente Rommelgem
+Simpel Element
+Type: bTW_Nummer
+Waarde: 2933092392809B01
+```
 
 The available types of appendices are defined in the project
 communication template (or framework) and which additional properties a
@@ -219,48 +229,50 @@ see paragraph ???) per appendix.
 
 Example 16: Example appendix with optional properties\
 
-    Bijlage
-    Unieke identificatie: Bon_van_de_opdracht
-    Omschrijving: Opdrachtbon ten behoeve van opdrachtverstrekking
-    Complex Elementen: Opdrachtgegevens, Betalingsgegevens
-    Complex Element
-    Unieke identificatie: Gegevens_van_de_opdracht
-    Omschrijving: Gegevens van de opdracht
-    SimpelElementen: Opdrachtnummer, Naam_opdrachtgever
-    Complex Element
-    Unieke identificatie: Betalingsgegevens
-    Omschrijving: Gegevens voor betaling
-    Simpel Elementen:Naam_van_de_rekeninghouder, BTW_Nummer
-    Simpel Element
-    Unieke identificatie: opdrachtnummer
-    Omschrijving: Het unieke identificatie van de opdracht
-    Type: Tekst
-    Simpel Element
-    Unieke identificatie: naam_opdrachtgever
-    Omschrijving: Naam van de organisatie, die opdracht verstrekt
-    Type: Tekst
-    Simpel Element
-    Unieke identificatie: iBAN
-    Omschrijving: IBAN nummer
-    Type: Tekst_verplicht
-    Simpel Element
-    Unieke identificatie: naam_van_de_rekeninghouder
-    Omschrijving: Naam van de rekeninghouder
-    Type: Tekst_verplicht
-    Simpel Element
-    Unieke identificatie: bTW_Nummer
-    Omschrijving: BTW Nummer van de organisatie, die opdracht verstrekt
-    Type: Nummer
-    Waarde
-    Unieke identificatie: Tekst
-    Basis XML Type: STRING
-    Waarde
-    Unieke identificatie: Tekst_verplicht
-    Basis XML Type: STRING
-    XSD Restrictie: minlength=1
-    Waarde
-    Unieke identificatie: Nummer
-    Basis XML Type: INTEGER
+```
+Bijlage
+Unieke identificatie: Bon_van_de_opdracht
+Omschrijving: Opdrachtbon ten behoeve van opdrachtverstrekking
+Complex Elementen: Opdrachtgegevens, Betalingsgegevens
+Complex Element
+Unieke identificatie: Gegevens_van_de_opdracht
+Omschrijving: Gegevens van de opdracht
+SimpelElementen: Opdrachtnummer, Naam_opdrachtgever
+Complex Element
+Unieke identificatie: Betalingsgegevens
+Omschrijving: Gegevens voor betaling
+Simpel Elementen:Naam_van_de_rekeninghouder, BTW_Nummer
+Simpel Element
+Unieke identificatie: opdrachtnummer
+Omschrijving: Het unieke identificatie van de opdracht
+Type: Tekst
+Simpel Element
+Unieke identificatie: naam_opdrachtgever
+Omschrijving: Naam van de organisatie, die opdracht verstrekt
+Type: Tekst
+Simpel Element
+Unieke identificatie: iBAN
+Omschrijving: IBAN nummer
+Type: Tekst_verplicht
+Simpel Element
+Unieke identificatie: naam_van_de_rekeninghouder
+Omschrijving: Naam van de rekeninghouder
+Type: Tekst_verplicht
+Simpel Element
+Unieke identificatie: bTW_Nummer
+Omschrijving: BTW Nummer van de organisatie, die opdracht verstrekt
+Type: Nummer
+Waarde
+Unieke identificatie: Tekst
+Basis XML Type: STRING
+Waarde
+Unieke identificatie: Tekst_verplicht
+Basis XML Type: STRING
+XSD Restrictie: minlength=1
+Waarde
+Unieke identificatie: Nummer
+Basis XML Type: INTEGER
+```
 
 ### Is an appendix required?
 
@@ -272,12 +284,14 @@ has a flag (Yes/No) whether an appendix is required (zie paragraaf
 2.2).\
 Example 17: Example message with mandatory appendix\
 
-    Bericht
-    Unieke identificatie: Voorstel_tot_Wijziging
-    Omschrijving: Voorstel tot een wijziging
-    Bijlage verplicht: Ja
-    Bijlage typen: Foto, Offerte, Berekening
-    Complex Elementen: Voorstel, Wijziging, Planning, Opmerkingen
+```
+Bericht
+Unieke identificatie: Voorstel_tot_Wijziging
+Omschrijving: Voorstel tot een wijziging
+Bijlage verplicht: Ja
+Bijlage typen: Foto, Offerte, Berekening
+Complex Elementen: Voorstel, Wijziging, Planning, Opmerkingen
+```
 
 The maximum number of appendices cannot be prescribed. The minimum
 number is 0 or 1 (appendix required: Yes/No)
@@ -570,23 +584,25 @@ organization) will receive a successor (with the same advisory role).
 This can also be an existing person (with the same advisory role).\
 Example 20: Removing people
 
-    Persoon in Rol van Organisatie
-    Unieke identificatie: _b16d7aeb-6a5e-4326-9283-aef843684f5c
-    Contactpersoon: _d4e02752-2ac6-4700-ae67-d33f428f78fb
-    Rol: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
-    Organisatie: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498
-    Opvolger: _666f01b3-6714-44cc-8865-0a9ae1f938ce
+```
+Persoon in Rol van Organisatie
+Unieke identificatie: _b16d7aeb-6a5e-4326-9283-aef843684f5c
+Contactpersoon: _d4e02752-2ac6-4700-ae67-d33f428f78fb
+Rol: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
+Organisatie: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498
+Opvolger: _666f01b3-6714-44cc-8865-0a9ae1f938ce
 
-    Persoon in Rol van Organisatie
-    Unieke identificatie: _666f01b3-6714-44cc-8865-0a9ae1f938ce
-    Contactpersoon: _c6e4430e-65aa-4e55-a8db-1beb6d3f4250
-    Rol: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
-    Organisatie: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498
+Persoon in Rol van Organisatie
+Unieke identificatie: _666f01b3-6714-44cc-8865-0a9ae1f938ce
+Contactpersoon: _c6e4430e-65aa-4e55-a8db-1beb6d3f4250
+Rol: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
+Organisatie: _87e9144d-04d6-4a5f-bdcb-b50e96c2b498
 
-    Rol v
-    Unieke identificatie: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
-    Naam: Adviserende rol
-    Omschrijving: Deze rol geeft een onafhankelijk advies op basis van competenties en deskundigheid binnen het kader van project. Bij het advies doorloopt de rol een aantal vaste stappen. Rol inventariseert gegevens, weegt, motiveert en beoordeelt deze informatie en geeft vervolgens het advies.
+Rol v
+Unieke identificatie: _1252a67a-5f69-4a9c-b4ca-506a4459c7c3
+Naam: Adviserende rol
+Omschrijving: Deze rol geeft een onafhankelijk advies op basis van competenties en deskundigheid binnen het kader van project. Bij het advies doorloopt de rol een aantal vaste stappen. Rol inventariseert gegevens, weegt, motiveert en beoordeelt deze informatie en geeft vervolgens het advies.
+```
 
 ## Changing framework
 
@@ -601,10 +617,12 @@ project communication template must contain a new unique namespace.\
 \
 Example 21: Adjusting framework\
 
-    Project
-    Unieke identificatie: UAV
-    Omschrijving: Uniforme Administratieve Voorwaarden
-    Namespace: http://www.visi.nl/schemas/20160331/uav_20-10-2020\_1723
+```
+Project
+Unieke identificatie: UAV
+Omschrijving: Uniforme Administratieve Voorwaarden
+Namespace: http://www.visi.nl/schemas/20160331/uav_20-10-2020\_1723
+```
 
 If an amended project communication template (or framework) is supplied
 without a modified project-specific file, then the \"previous\"
@@ -700,22 +718,24 @@ The table below gives an example of the application in practice and
 provides insight into the structure of a VISI project archive. In the
 example, a VISI project is archived in a file system structure.
 
-    Communication
-    |
-    |-- 2011/ // Year in which the transaction started (yyyy)
-    | |-- 02/ // Month in which the transaction started (MM)
-    | | |-- 28/ // Day the transaction started (dd)
-    | | | |-- Weekly report no. 1\_tc1b35f17-8351- 4bb9-a4cb- f2fb53a16018/
-    | | | | |-- 20110228\_1524\_Delivery\_weekly report\_m42f15ce5-c97a-4c34-9eb0-ef9894777f36.xml // VISI Messages
-    | | | \-- 20110228\_1524\_10A06 attachment to weekly report \_a1e8d4d55-3a7a- 4508-897c-a1a261c4c629.pdf // Attachments
-    |
-    Project
-    |
-    |-- 2009-01-01T00:00:00.0Z |-- Raamwerk.xml
-    | \-- Project specific message.xml
-    |
-    |-- 2010-12-31T00:00:00.0Z |-- Raamwerk.xml
-    | \-- Project specific message.xml
+```
+Communication
+|
+|-- 2011/ // Year in which the transaction started (yyyy)
+| |-- 02/ // Month in which the transaction started (MM)
+| | |-- 28/ // Day the transaction started (dd)
+| | | |-- Weekly report no. 1\_tc1b35f17-8351- 4bb9-a4cb- f2fb53a16018/
+| | | | |-- 20110228\_1524\_Delivery\_weekly report\_m42f15ce5-c97a-4c34-9eb0-ef9894777f36.xml // VISI Messages
+| | | \-- 20110228\_1524\_10A06 attachment to weekly report \_a1e8d4d55-3a7a- 4508-897c-a1a261c4c629.pdf // Attachments
+|
+Project
+|
+|-- 2009-01-01T00:00:00.0Z |-- Raamwerk.xml
+| \-- Project specific message.xml
+|
+|-- 2010-12-31T00:00:00.0Z |-- Raamwerk.xml
+| \-- Project specific message.xml
+```
 
 -   Weekly report no. 1_tc1b35f17-8351- 4bb9-a4cb- f2fb53a16018: First
     50 characters [^1] of the subject of a transaction, followed by id
@@ -985,673 +1005,677 @@ executor'; vice versa)
 
 The meta framework is defined in XML as follows.
 
-    <visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20140331" 
-        xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-        <AppendixType id="APT-NieuwOfGewijzigdRaamwerkOfProjectspecifiekBericht">
-            <description>Nieuw of gewijzigd raamwerk en/of projectspecifiek bericht</description>
-        </AppendixType>
-        <ComplexElementType id="C00-Algemeen">
-            <description>Algemeen</description>
-            <simpleElements>
-                <SimpleElementTypeRef idref="S00-Algemeen" />
-            </simpleElements>
-        </ComplexElementType>
-        <ComplexElementType id="C01-MotivatieVoorstelNietAkkoord">
-            <description>Motivatie voorstel niet akkoord</description>
-            <simpleElements>
-                <SimpleElementTypeRef idref="S01-MotivatieVoorstelNietAkkoord" />
-            </simpleElements>
-        </ComplexElementType>
-        <ComplexElementType id="C02-MotivatieVoorstelGecanceld">
-            <description>Motivatie voorstel gecanceld</description>
-            <simpleElements>
-                <SimpleElementTypeRef idref="S02-MotivatieVoorstelGecanceld" />
-            </simpleElements>
-        </ComplexElementType>
-        <ComplexElementType id="C03-Ingangsdatum">
-            <description>Ingangsdatum</description>
-            <simpleElements>
-                <SimpleElementTypeRef idref="S03-Ingangsdatum" />
-            </simpleElements>
-        </ComplexElementType>
-        <ComplexElementType id="C04-Start-project">
-            <description>Start project</description>
-            <simpleElements>
-                <SimpleElementTypeRef idref="S04-Moment-start-project" />
-            </simpleElements>
-        </ComplexElementType>
-        <ComplexElementType id="C05-Projectgegevens">
-            <description>Projectgegevens</description>
-            <simpleElements>
-                <SimpleElementTypeRef idref="S05-Project-ID" />
-                <SimpleElementTypeRef idref="S06-Projectnaam" />
-            </simpleElements>
-        </ComplexElementType>
-        <ComplexElementType id="C06-Beeindiging-project">
-            <description>Beeindiging project</description>
-            <simpleElements>
-                <SimpleElementTypeRef idref="S04-Moment-beeindiging-project" />
-            </simpleElements>
-        </ComplexElementType>
-        <ComplexElementType id="CeOrganisatieSOAPServer">
-            <description>Gegevens van SOAP server</description>
-            <helpInfo>Hier kan een omschrijving worden weergegeven</helpInfo>
-            <simpleElements>
-                <SimpleElementTypeRef idref="SOAPServerURL" />
-            </simpleElements>
-        </ComplexElementType>
-        <ElementCondition id="EL-S00-Algemeen">
-            <description>-</description>
-            <condition>FREE</condition>
-            <simpleElement>
-                <SimpleElementTypeRef idref="S00-Algemeen" />
-            </simpleElement>
-        </ElementCondition>
-        <ElementCondition id="EL-S04-Moment-start-project">
-            <description>-</description>
-            <condition>FREE</condition>
-            <simpleElement>
-                <SimpleElementTypeRef idref="S04-Moment-start-project" />
-            </simpleElement>
-        </ElementCondition>
-        <GroupType id="StandardGroupType">
-            <description>Standaard Groep</description>
-        </GroupType>
-        <MessageInTransactionType id="Mitt_1">
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBericht" />
-            </message>
-            <transaction>
-                <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_10">
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M10-VoorstelNieuwVISIproject" />
-            </message>
-            <transaction>
-                <TransactionTypeRef idref="T02-" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_11">
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M11-AfwijzingVoorgesteldVISIproject" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_10" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T02-" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_12">
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M12-AcceptatieNieuwVISIproject" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_10" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T02-" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_13">
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M13-AnnuleringProjectInitiatie" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_12" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T02-" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_14">
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M14-BevestigingProjectInitiatie" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_12" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T02-" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_15">
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M15-ProjectIngericht" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_14" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T02-" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_16">
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M16-VerzoekBeeindigingProject" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_15" />
-                <MessageInTransactionTypeRef idref="Mitt_18" />
-                <MessageInTransactionTypeRef idref="Mitt_21" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T02-" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_17">
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M17-AkkoordBeeindigingProject" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_16" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T02-" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_18">
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M18-AfwijzingBeeindigingProject" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_16" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T02-" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_19">
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M19-AnnuleringProjectbeeindiging" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_17" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T02-" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_2">
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M02-VoorstelAkkoord" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_1" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_20">
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M20-BevestigingBeeindigingProject" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_17" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T02-" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_21">
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M21-BevestigingVoortzettingProject" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_19" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T02-" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_3">
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M03-VoorstelNietAkkoord" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_1" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_4">
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M04-VoorstelGecanceld" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_3" />
-                <MessageInTransactionTypeRef idref="Mitt_2" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_5">
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M05-VoorstelIngangsdatum" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_2" />
-                <MessageInTransactionTypeRef idref="Mitt_7" />
-                <MessageInTransactionTypeRef idref="Mitt_6" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_6">
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M06-IngangsdatumAkkoord" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_5" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_7">
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M07-IngangsdatumNietAkkoord" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_5" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageInTransactionType id="Mitt_8">
-            <initiatorToExecutor>true</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M08-BevestigingIngangsdatum" />
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="Mitt_6" />
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
-            </transaction>
-        </MessageInTransactionType>
-        <MessageType id="M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBericht">
-            <description>Voorstel voor een nieuw of gewijzigd raamwerk of projectspecifiekbericht</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M02-VoorstelAkkoord">
-            <description>Voorstel akkoord</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M03-VoorstelNietAkkoord">
-            <description>Voorstel niet akkoord</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C01-MotivatieVoorstelNietAkkoord" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M04-VoorstelGecanceld">
-            <description>Voorstel is gecanceld</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C02-MotivatieVoorstelGecanceld" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M05-VoorstelIngangsdatum">
-            <description>Voorstel ingangsdatum</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C03-Ingangsdatum" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M06-IngangsdatumAkkoord">
-            <description>Ingangsdatum akkoord</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C03-Ingangsdatum" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M07-IngangsdatumNietAkkoord">
-            <description>Ingangsdatum niet akkoord</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C01-MotivatieVoorstelNietAkkoord" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M08-BevestigingIngangsdatum">
-            <description>Bevestiging ingangsdatum</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C03-Ingangsdatum" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M10-VoorstelNieuwVISIproject">
-            <description>Voorstel voor een nieuw VISI project</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C04-Start-project" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M11-AfwijzingVoorgesteldVISIproject">
-            <description>Afwijzing voorgesteld VISI project</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M12-AcceptatieNieuwVISIproject">
-            <description>Acceptatie nieuw VISI project</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C04-Start-project" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M13-AnnuleringProjectInitiatie">
-            <description>Annulering project initiatie</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M14-BevestigingProjectInitiatie">
-            <description>Bevestiging project initiatie</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C04-Start-project" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M15-ProjectIngericht">
-            <description>Project is ingericht</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M16-VerzoekBeeindigingProject">
-            <description>Verzoek tot beeindiging project</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C06-Beeindiging-project" />
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M17-AkkoordBeeindigingProject">
-            <description>Akkoord beeindiging project</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C06-Beeindiging-project" />
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M18-AfwijzingBeeindigingProject">
-            <description>Afwijzing beeindiging project</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M19-AnnuleringProjectbeeindiging">
-            <description>Annulering projectbeeindiging</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M20-BevestigingBeeindigingProject">
-            <description>Bevestiging beeindiging project</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C06-Beeindiging-project" />
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <MessageType id="M21-BevestigingVoortzettingProject">
-            <description>Bevestiging voortzetting project</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="C00-Algemeen" />
-                <ComplexElementTypeRef idref="C05-Projectgegevens" />
-            </complexElements>
-        </MessageType>
-        <OrganisationType id="standaardOrganisatie">
-            <description>Standaard Organisatie</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="CeOrganisatieSOAPServer" />
-            </complexElements>
-        </OrganisationType>
-        <PersonType id="standaardPersoon">
-            <description>Standaard Persoon</description>
-        </PersonType>
-        <ProjectType id="PRT-Meta-raamwerk">
-            <namespace>http://www.visi.nl/schemas/20140331/metaframework</namespace>
-            <description>Meta-raamwerk projecttype</description>
-        </ProjectType>
-        <RoleType id="R01-VISI-communicatiemanager">
-            <description>VISI Communicatiemanager</description>
-        </RoleType>
-        <RoleType id="R02-Wijzigingsinitiator">
-            <description>Wijzigingsinitiator</description>
-        </RoleType>
-        <RoleType id="R03-Initiator-VISI-project">
-            <description>Project-initiator</description>
-        </RoleType>
-        <RoleType id="R04-Executor-VISI-project">
-            <description>Project-executor</description>
-        </RoleType>
-        <SimpleElementType id="S00-Algemeen">
-            <description>Eventuele opmerkingen</description>
-            <userDefinedType>
-                <UserDefinedTypeRef idref="String" />
-            </userDefinedType>
-        </SimpleElementType>
-        <SimpleElementType id="S01-MotivatieVoorstelNietAkkoord">
-            <description>Motivatie voorstel niet akkoord</description>
-            <userDefinedType>
-                <UserDefinedTypeRef idref="String" />
-            </userDefinedType>
-        </SimpleElementType>
-        <SimpleElementType id="S02-MotivatieVoorstelGecanceld">
-            <description>Motivatie voorstel gecanceld</description>
-            <userDefinedType>
-                <UserDefinedTypeRef idref="String" />
-            </userDefinedType>
-        </SimpleElementType>
-        <SimpleElementType id="S03-Ingangsdatum">
-            <description>Ingangsdatum actualisering</description>
-            <userDefinedType>
-                <UserDefinedTypeRef idref="Datumtijd" />
-            </userDefinedType>
-        </SimpleElementType>
-        <SimpleElementType id="S04-Moment-beeindiging-project">
-            <description>Moment van beeindiging project</description>
-            <userDefinedType>
-                <UserDefinedTypeRef idref="Datumtijd" />
-            </userDefinedType>
-        </SimpleElementType>
-        <SimpleElementType id="S04-Moment-start-project">
-            <description>Moment van start project</description>
-            <userDefinedType>
-                <UserDefinedTypeRef idref="Datumtijd" />
-            </userDefinedType>
-        </SimpleElementType>
-        <SimpleElementType id="S05-Project-ID">
-            <description>Project-ID</description>
-            <userDefinedType>
-                <UserDefinedTypeRef idref="ProjectID" />
-            </userDefinedType>
-        </SimpleElementType>
-        <SimpleElementType id="S06-Projectnaam">
-            <description>Projectnaam</description>
-            <userDefinedType>
-                <UserDefinedTypeRef idref="StringVerplicht" />
-            </userDefinedType>
-        </SimpleElementType>
-        <SimpleElementType id="SOAPServerURL">
-            <description>SOAPServerURL</description>
-            <userDefinedType>
-                <UserDefinedTypeRef idref="String" />
-            </userDefinedType>
-        </SimpleElementType>
-        <TransactionPhaseType id="AanvaardEinde">
-            <description>Aanvaard/Einde</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="BeloofdExecutie">
-            <description>Beloofd/Executie</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="MeldingGereed">
-            <description>Melding Gereed</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="Start">
-            <description>Start</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="Verzocht">
-            <description>Verzocht</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="WijzigingHold">
-            <description>Wijziging/Hold</description>
-        </TransactionPhaseType>
-        <TransactionType id="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie">
-            <description>Nieuw of gewijzigd raamwerk of projectspecifiekbericht transactie</description>
-            <initiator>
-                <RoleTypeRef idref="R02-Wijzigingsinitiator" />
-            </initiator>
-            <executor>
-                <RoleTypeRef idref="R01-VISI-communicatiemanager" />
-            </executor>
-        </TransactionType>
-        <TransactionType id="T02-">
-            <description>VISI project initiatie</description>
-            <initiator>
-                <RoleTypeRef idref="R03-Initiator-VISI-project" />
-            </initiator>
-            <executor>
-                <RoleTypeRef idref="R04-Executor-VISI-project" />
-            </executor>
-        </TransactionType>
-        <UserDefinedType id="Datum">
-            <description>Datum</description>
-            <baseType>DATE</baseType>
-        </UserDefinedType>
-        <UserDefinedType id="Datumtijd">
-            <description>Datum en tijd</description>
-            <baseType>DATETIME</baseType>
-        </UserDefinedType>
-        <UserDefinedType id="ProjectID">
-            <description>Project ID</description>
-            <baseType>STRING</baseType>
-            <xsdRestriction>\&lt;xs:pattern value="[a-zA-Z][\w-]*"/\&gt;</xsdRestriction>
-        </UserDefinedType>
-        <UserDefinedType id="String">
-            <description>String</description>
-            <baseType>STRING</baseType>
-        </UserDefinedType>
-        <UserDefinedType id="StringVerplicht">
-            <description>String Verplicht</description>
-            <baseType>STRING</baseType>
-            <xsdRestriction>\&lt;xs:minLength value="1"/\&gt;</xsdRestriction>
-        </UserDefinedType>
-    </visiXML_VISI_Systematics>
+```
+<visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20140331" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <AppendixType id="APT-NieuwOfGewijzigdRaamwerkOfProjectspecifiekBericht">
+        <description>Nieuw of gewijzigd raamwerk en/of projectspecifiek bericht</description>
+    </AppendixType>
+    <ComplexElementType id="C00-Algemeen">
+        <description>Algemeen</description>
+        <simpleElements>
+            <SimpleElementTypeRef idref="S00-Algemeen" />
+        </simpleElements>
+    </ComplexElementType>
+    <ComplexElementType id="C01-MotivatieVoorstelNietAkkoord">
+        <description>Motivatie voorstel niet akkoord</description>
+        <simpleElements>
+            <SimpleElementTypeRef idref="S01-MotivatieVoorstelNietAkkoord" />
+        </simpleElements>
+    </ComplexElementType>
+    <ComplexElementType id="C02-MotivatieVoorstelGecanceld">
+        <description>Motivatie voorstel gecanceld</description>
+        <simpleElements>
+            <SimpleElementTypeRef idref="S02-MotivatieVoorstelGecanceld" />
+        </simpleElements>
+    </ComplexElementType>
+    <ComplexElementType id="C03-Ingangsdatum">
+        <description>Ingangsdatum</description>
+        <simpleElements>
+            <SimpleElementTypeRef idref="S03-Ingangsdatum" />
+        </simpleElements>
+    </ComplexElementType>
+    <ComplexElementType id="C04-Start-project">
+        <description>Start project</description>
+        <simpleElements>
+            <SimpleElementTypeRef idref="S04-Moment-start-project" />
+        </simpleElements>
+    </ComplexElementType>
+    <ComplexElementType id="C05-Projectgegevens">
+        <description>Projectgegevens</description>
+        <simpleElements>
+            <SimpleElementTypeRef idref="S05-Project-ID" />
+            <SimpleElementTypeRef idref="S06-Projectnaam" />
+        </simpleElements>
+    </ComplexElementType>
+    <ComplexElementType id="C06-Beeindiging-project">
+        <description>Beeindiging project</description>
+        <simpleElements>
+            <SimpleElementTypeRef idref="S04-Moment-beeindiging-project" />
+        </simpleElements>
+    </ComplexElementType>
+    <ComplexElementType id="CeOrganisatieSOAPServer">
+        <description>Gegevens van SOAP server</description>
+        <helpInfo>Hier kan een omschrijving worden weergegeven</helpInfo>
+        <simpleElements>
+            <SimpleElementTypeRef idref="SOAPServerURL" />
+        </simpleElements>
+    </ComplexElementType>
+    <ElementCondition id="EL-S00-Algemeen">
+        <description>-</description>
+        <condition>FREE</condition>
+        <simpleElement>
+            <SimpleElementTypeRef idref="S00-Algemeen" />
+        </simpleElement>
+    </ElementCondition>
+    <ElementCondition id="EL-S04-Moment-start-project">
+        <description>-</description>
+        <condition>FREE</condition>
+        <simpleElement>
+            <SimpleElementTypeRef idref="S04-Moment-start-project" />
+        </simpleElement>
+    </ElementCondition>
+    <GroupType id="StandardGroupType">
+        <description>Standaard Groep</description>
+    </GroupType>
+    <MessageInTransactionType id="Mitt_1">
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBericht" />
+        </message>
+        <transaction>
+            <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_10">
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M10-VoorstelNieuwVISIproject" />
+        </message>
+        <transaction>
+            <TransactionTypeRef idref="T02-" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_11">
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M11-AfwijzingVoorgesteldVISIproject" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_10" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T02-" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_12">
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M12-AcceptatieNieuwVISIproject" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_10" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T02-" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_13">
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M13-AnnuleringProjectInitiatie" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_12" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T02-" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_14">
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M14-BevestigingProjectInitiatie" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_12" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T02-" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_15">
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M15-ProjectIngericht" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_14" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T02-" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_16">
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M16-VerzoekBeeindigingProject" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_15" />
+            <MessageInTransactionTypeRef idref="Mitt_18" />
+            <MessageInTransactionTypeRef idref="Mitt_21" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T02-" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_17">
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M17-AkkoordBeeindigingProject" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_16" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T02-" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_18">
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M18-AfwijzingBeeindigingProject" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_16" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T02-" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_19">
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M19-AnnuleringProjectbeeindiging" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_17" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T02-" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_2">
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M02-VoorstelAkkoord" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_1" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_20">
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M20-BevestigingBeeindigingProject" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_17" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T02-" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_21">
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M21-BevestigingVoortzettingProject" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_19" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T02-" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_3">
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M03-VoorstelNietAkkoord" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_1" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_4">
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M04-VoorstelGecanceld" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_3" />
+            <MessageInTransactionTypeRef idref="Mitt_2" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_5">
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M05-VoorstelIngangsdatum" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_2" />
+            <MessageInTransactionTypeRef idref="Mitt_7" />
+            <MessageInTransactionTypeRef idref="Mitt_6" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_6">
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M06-IngangsdatumAkkoord" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_5" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_7">
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M07-IngangsdatumNietAkkoord" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_5" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageInTransactionType id="Mitt_8">
+        <initiatorToExecutor>true</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M08-BevestigingIngangsdatum" />
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="Mitt_6" />
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie" />
+        </transaction>
+    </MessageInTransactionType>
+    <MessageType id="M01-VoorstelNieuwOfGewijzigdRaamwerkOfProjectSpeciekBericht">
+        <description>Voorstel voor een nieuw of gewijzigd raamwerk of projectspecifiekbericht</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M02-VoorstelAkkoord">
+        <description>Voorstel akkoord</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M03-VoorstelNietAkkoord">
+        <description>Voorstel niet akkoord</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C01-MotivatieVoorstelNietAkkoord" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M04-VoorstelGecanceld">
+        <description>Voorstel is gecanceld</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C02-MotivatieVoorstelGecanceld" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M05-VoorstelIngangsdatum">
+        <description>Voorstel ingangsdatum</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C03-Ingangsdatum" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M06-IngangsdatumAkkoord">
+        <description>Ingangsdatum akkoord</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C03-Ingangsdatum" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M07-IngangsdatumNietAkkoord">
+        <description>Ingangsdatum niet akkoord</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C01-MotivatieVoorstelNietAkkoord" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M08-BevestigingIngangsdatum">
+        <description>Bevestiging ingangsdatum</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C03-Ingangsdatum" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M10-VoorstelNieuwVISIproject">
+        <description>Voorstel voor een nieuw VISI project</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C04-Start-project" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M11-AfwijzingVoorgesteldVISIproject">
+        <description>Afwijzing voorgesteld VISI project</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M12-AcceptatieNieuwVISIproject">
+        <description>Acceptatie nieuw VISI project</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C04-Start-project" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M13-AnnuleringProjectInitiatie">
+        <description>Annulering project initiatie</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M14-BevestigingProjectInitiatie">
+        <description>Bevestiging project initiatie</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C04-Start-project" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M15-ProjectIngericht">
+        <description>Project is ingericht</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M16-VerzoekBeeindigingProject">
+        <description>Verzoek tot beeindiging project</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C06-Beeindiging-project" />
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M17-AkkoordBeeindigingProject">
+        <description>Akkoord beeindiging project</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C06-Beeindiging-project" />
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M18-AfwijzingBeeindigingProject">
+        <description>Afwijzing beeindiging project</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M19-AnnuleringProjectbeeindiging">
+        <description>Annulering projectbeeindiging</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M20-BevestigingBeeindigingProject">
+        <description>Bevestiging beeindiging project</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C06-Beeindiging-project" />
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <MessageType id="M21-BevestigingVoortzettingProject">
+        <description>Bevestiging voortzetting project</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="C00-Algemeen" />
+            <ComplexElementTypeRef idref="C05-Projectgegevens" />
+        </complexElements>
+    </MessageType>
+    <OrganisationType id="standaardOrganisatie">
+        <description>Standaard Organisatie</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="CeOrganisatieSOAPServer" />
+        </complexElements>
+    </OrganisationType>
+    <PersonType id="standaardPersoon">
+        <description>Standaard Persoon</description>
+    </PersonType>
+    <ProjectType id="PRT-Meta-raamwerk">
+        <namespace>http://www.visi.nl/schemas/20140331/metaframework</namespace>
+        <description>Meta-raamwerk projecttype</description>
+    </ProjectType>
+    <RoleType id="R01-VISI-communicatiemanager">
+        <description>VISI Communicatiemanager</description>
+    </RoleType>
+    <RoleType id="R02-Wijzigingsinitiator">
+        <description>Wijzigingsinitiator</description>
+    </RoleType>
+    <RoleType id="R03-Initiator-VISI-project">
+        <description>Project-initiator</description>
+    </RoleType>
+    <RoleType id="R04-Executor-VISI-project">
+        <description>Project-executor</description>
+    </RoleType>
+    <SimpleElementType id="S00-Algemeen">
+        <description>Eventuele opmerkingen</description>
+        <userDefinedType>
+            <UserDefinedTypeRef idref="String" />
+        </userDefinedType>
+    </SimpleElementType>
+    <SimpleElementType id="S01-MotivatieVoorstelNietAkkoord">
+        <description>Motivatie voorstel niet akkoord</description>
+        <userDefinedType>
+            <UserDefinedTypeRef idref="String" />
+        </userDefinedType>
+    </SimpleElementType>
+    <SimpleElementType id="S02-MotivatieVoorstelGecanceld">
+        <description>Motivatie voorstel gecanceld</description>
+        <userDefinedType>
+            <UserDefinedTypeRef idref="String" />
+        </userDefinedType>
+    </SimpleElementType>
+    <SimpleElementType id="S03-Ingangsdatum">
+        <description>Ingangsdatum actualisering</description>
+        <userDefinedType>
+            <UserDefinedTypeRef idref="Datumtijd" />
+        </userDefinedType>
+    </SimpleElementType>
+    <SimpleElementType id="S04-Moment-beeindiging-project">
+        <description>Moment van beeindiging project</description>
+        <userDefinedType>
+            <UserDefinedTypeRef idref="Datumtijd" />
+        </userDefinedType>
+    </SimpleElementType>
+    <SimpleElementType id="S04-Moment-start-project">
+        <description>Moment van start project</description>
+        <userDefinedType>
+            <UserDefinedTypeRef idref="Datumtijd" />
+        </userDefinedType>
+    </SimpleElementType>
+    <SimpleElementType id="S05-Project-ID">
+        <description>Project-ID</description>
+        <userDefinedType>
+            <UserDefinedTypeRef idref="ProjectID" />
+        </userDefinedType>
+    </SimpleElementType>
+    <SimpleElementType id="S06-Projectnaam">
+        <description>Projectnaam</description>
+        <userDefinedType>
+            <UserDefinedTypeRef idref="StringVerplicht" />
+        </userDefinedType>
+    </SimpleElementType>
+    <SimpleElementType id="SOAPServerURL">
+        <description>SOAPServerURL</description>
+        <userDefinedType>
+            <UserDefinedTypeRef idref="String" />
+        </userDefinedType>
+    </SimpleElementType>
+    <TransactionPhaseType id="AanvaardEinde">
+        <description>Aanvaard/Einde</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="BeloofdExecutie">
+        <description>Beloofd/Executie</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="MeldingGereed">
+        <description>Melding Gereed</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="Start">
+        <description>Start</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="Verzocht">
+        <description>Verzocht</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="WijzigingHold">
+        <description>Wijziging/Hold</description>
+    </TransactionPhaseType>
+    <TransactionType id="T01-NieuwOfGewijzigdRaamwerkOfProjectSpeciekBerichtTransactie">
+        <description>Nieuw of gewijzigd raamwerk of projectspecifiekbericht transactie</description>
+        <initiator>
+            <RoleTypeRef idref="R02-Wijzigingsinitiator" />
+        </initiator>
+        <executor>
+            <RoleTypeRef idref="R01-VISI-communicatiemanager" />
+        </executor>
+    </TransactionType>
+    <TransactionType id="T02-">
+        <description>VISI project initiatie</description>
+        <initiator>
+            <RoleTypeRef idref="R03-Initiator-VISI-project" />
+        </initiator>
+        <executor>
+            <RoleTypeRef idref="R04-Executor-VISI-project" />
+        </executor>
+    </TransactionType>
+    <UserDefinedType id="Datum">
+        <description>Datum</description>
+        <baseType>DATE</baseType>
+    </UserDefinedType>
+    <UserDefinedType id="Datumtijd">
+        <description>Datum en tijd</description>
+        <baseType>DATETIME</baseType>
+    </UserDefinedType>
+    <UserDefinedType id="ProjectID">
+        <description>Project ID</description>
+        <baseType>STRING</baseType>
+        <xsdRestriction>\&lt;xs:pattern value="[a-zA-Z][\w-]*"/\&gt;</xsdRestriction>
+    </UserDefinedType>
+    <UserDefinedType id="String">
+        <description>String</description>
+        <baseType>STRING</baseType>
+    </UserDefinedType>
+    <UserDefinedType id="StringVerplicht">
+        <description>String Verplicht</description>
+        <baseType>STRING</baseType>
+        <xsdRestriction>\&lt;xs:minLength value="1"/\&gt;</xsdRestriction>
+    </UserDefinedType>
+</visiXML_VISI_Systematics>
+```
 
 #### Example project message
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/20140331/metaframework">
-        <PRT-Meta-raamwerk id="PRO-META-RW">
-            <name>Meta Raamwerk Project</name>
-            <description>Meta Raamwerk Project</description>
-            <startDate>2011-12-22T12:30:23.0Z</startDate>
-            <endDate>2012-12-22T12:30:23.0Z</endDate>
-        </PRT-Meta-raamwerk>
-        <standaardPersoon id="PER-COMG">
-            <userName>comg@visi.nl</userName>
-            <name>VISI communicatie manager</name>
-        </standaardPersoon>
-        <R01-VISI-communicatiemanager id="ROL-COMG">
-            <name>R01-VISI-communicatiemanager</name>
-            <description>R01-VISI-communicatiemanager</description>
-            <category>-</category>
-        </R01-VISI-communicatiemanager>
-        <standaardOrganisatie id="ORG-INF">
-            <name>org1</name>
-            <abbreviation>INF</abbreviation>
-            <contactPerson>
-                <standaardPersoonRef idref="PER-COMG" />
-            </contactPerson>
-            <ceOrganisatieSOAPServer>
-                <CeOrganisatieSOAPServerRef idref="SCE-INF" />
-            </ceOrganisatieSOAPServer>
-        </standaardOrganisatie>
-        <CeOrganisatieSOAPServer id="SCE-INF">
-            <sOAPServerURL>http://visi.nl/soapservice.asmx</sOAPServerURL>
-        </CeOrganisatieSOAPServer>
-        <PersonInRole id="PIR-COMG">
-            <contactPerson>
-                <standaardPersoonRef idref="PER-COMG" />
-            </contactPerson>
-            <organisation>
-                <standaardOrganisatieRef idref="ORG-INF" />
-            </organisation>
-            <role>
-                <R01-VISI-communicatiemanagerRef idref="ROL-COMG" />
-            </role>
-        </PersonInRole>
-        <standaardPersoon id="PER-WZGI">
-            <userName>wzgi@visi.nl</userName>
-            <name>Wijzigingsinitiator</name>
-        </standaardPersoon>
-        <R02-Wijzigingsinitiator id="ROL-WZGI">
-            <name>R02-Wijzigingsinitiator</name>
-            <description>R02-Wijzigingsinitiator</description>
-            <category>-</category>
-        </R02-Wijzigingsinitiator>
-        <PersonInRole id="PIR-WZGI">
-            <contactPerson>
-                <standaardPersoonRef idref="PER-WZGI" />
-            </contactPerson>
-            <organisation>
-                <standaardOrganisatieRef idref="ORG-INF" />
-            </organisation>
-            <role>
-                <R02-WijzigingsinitiatorRef idref="ROL-WZGI" />
-            </role>
-        </PersonInRole>
-    </visiXML_MessageSchema>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/20140331/metaframework">
+    <PRT-Meta-raamwerk id="PRO-META-RW">
+        <name>Meta Raamwerk Project</name>
+        <description>Meta Raamwerk Project</description>
+        <startDate>2011-12-22T12:30:23.0Z</startDate>
+        <endDate>2012-12-22T12:30:23.0Z</endDate>
+    </PRT-Meta-raamwerk>
+    <standaardPersoon id="PER-COMG">
+        <userName>comg@visi.nl</userName>
+        <name>VISI communicatie manager</name>
+    </standaardPersoon>
+    <R01-VISI-communicatiemanager id="ROL-COMG">
+        <name>R01-VISI-communicatiemanager</name>
+        <description>R01-VISI-communicatiemanager</description>
+        <category>-</category>
+    </R01-VISI-communicatiemanager>
+    <standaardOrganisatie id="ORG-INF">
+        <name>org1</name>
+        <abbreviation>INF</abbreviation>
+        <contactPerson>
+            <standaardPersoonRef idref="PER-COMG" />
+        </contactPerson>
+        <ceOrganisatieSOAPServer>
+            <CeOrganisatieSOAPServerRef idref="SCE-INF" />
+        </ceOrganisatieSOAPServer>
+    </standaardOrganisatie>
+    <CeOrganisatieSOAPServer id="SCE-INF">
+        <sOAPServerURL>http://visi.nl/soapservice.asmx</sOAPServerURL>
+    </CeOrganisatieSOAPServer>
+    <PersonInRole id="PIR-COMG">
+        <contactPerson>
+            <standaardPersoonRef idref="PER-COMG" />
+        </contactPerson>
+        <organisation>
+            <standaardOrganisatieRef idref="ORG-INF" />
+        </organisation>
+        <role>
+            <R01-VISI-communicatiemanagerRef idref="ROL-COMG" />
+        </role>
+    </PersonInRole>
+    <standaardPersoon id="PER-WZGI">
+        <userName>wzgi@visi.nl</userName>
+        <name>Wijzigingsinitiator</name>
+    </standaardPersoon>
+    <R02-Wijzigingsinitiator id="ROL-WZGI">
+        <name>R02-Wijzigingsinitiator</name>
+        <description>R02-Wijzigingsinitiator</description>
+        <category>-</category>
+    </R02-Wijzigingsinitiator>
+    <PersonInRole id="PIR-WZGI">
+        <contactPerson>
+            <standaardPersoonRef idref="PER-WZGI" />
+        </contactPerson>
+        <organisation>
+            <standaardOrganisatieRef idref="ORG-INF" />
+        </organisation>
+        <role>
+            <R02-WijzigingsinitiatorRef idref="ROL-WZGI" />
+        </role>
+    </PersonInRole>
+</visiXML_MessageSchema>
+```
 
 ### Scenario for using meta framework and meta project specific message
 

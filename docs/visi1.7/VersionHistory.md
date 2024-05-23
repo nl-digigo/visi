@@ -249,12 +249,14 @@ For a ComplexElementType, a minimum and/or maximum number of times that
 the ComplexElementType may occur can optionally be defined in a
 framework.
 
-    ENTITY ComplexElementType;
-    ...
-    minOccurs : OPTIONAL INTEGER;
-    maxOccurs : OPTIONAL INTEGER;
-    ...
-    END_ENTITY;
+```
+ENTITY ComplexElementType;
+...
+minOccurs : OPTIONAL INTEGER;
+maxOccurs : OPTIONAL INTEGER;
+...
+END_ENTITY;
+```
 
 When nothing is entered in a framework (in accordance with version 1.6)
 at minOccurs and maxOccurs, the rules of the previous system versions
@@ -279,11 +281,13 @@ advantage for users because attachments are no longer forgotten.
 The chosen solution is to indicate per MessageType whether an appendix
 is mandatory.
 
-    ENTITY MessageType;
-    ...
-    appendixMandatory: OPTIONAL BOOLEAN;
-    ...
-    END_ENTITY;
+```
+ENTITY MessageType;
+...
+appendixMandatory: OPTIONAL BOOLEAN;
+...
+END_ENTITY;
+```
 
 This solution is backwards compatible, because the boolean has been made
 optional. Therefore, this option is not enforced.\

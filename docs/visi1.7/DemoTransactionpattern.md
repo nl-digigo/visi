@@ -412,30 +412,32 @@ values for ids and descriptions are capital letters.\
 \
 Every framework will have the following phases of a transaction:
 
-    <TransactionPhaseType id="TPT_DEMO_STATE_REQUESTED">
-        <description>REQUESTED</description>
-    </TransactionPhaseType>
-    <TransactionPhaseType id="TPT_DEMO_STATE_PROMISED">
-        <description>PROMISED</description>
-    </TransactionPhaseType>
-    <TransactionPhaseType id="TPT_DEMO_STATE_STATED">
-        <description>STATED</description>`
-    </TransactionPhaseType>`
-    <TransactionPhaseType id="TPT_DEMO_STATE_ACCEPTED">
-        <description>ACCEPTED</description>
-    </TransactionPhaseType>
-    <TransactionPhaseType id="TPT_DEMO_STATE_QUITTED">
-        <description>QUITTED</description>
-    </TransactionPhaseType>
-    <TransactionPhaseType id="TPT_DEMO_STATE_DECLINED">
-        <description>DECLINED</description>
-    </TransactionPhaseType>
-    <TransactionPhaseType id="TPT_DEMO_STATE_REJECTED">
-        <description>REJECTED</description>
-    </TransactionPhaseType>
-    <TransactionPhaseType id="TPT_DEMO_STATE_STOPPED">
-        <description>STOPPED</description>
-    </TransactionPhaseType>
+```
+<TransactionPhaseType id="TPT_DEMO_STATE_REQUESTED">
+    <description>REQUESTED</description>
+</TransactionPhaseType>
+<TransactionPhaseType id="TPT_DEMO_STATE_PROMISED">
+    <description>PROMISED</description>
+</TransactionPhaseType>
+<TransactionPhaseType id="TPT_DEMO_STATE_STATED">
+    <description>STATED</description>`
+</TransactionPhaseType>`
+<TransactionPhaseType id="TPT_DEMO_STATE_ACCEPTED">
+    <description>ACCEPTED</description>
+</TransactionPhaseType>
+<TransactionPhaseType id="TPT_DEMO_STATE_QUITTED">
+    <description>QUITTED</description>
+</TransactionPhaseType>
+<TransactionPhaseType id="TPT_DEMO_STATE_DECLINED">
+    <description>DECLINED</description>
+</TransactionPhaseType>
+<TransactionPhaseType id="TPT_DEMO_STATE_REJECTED">
+    <description>REJECTED</description>
+</TransactionPhaseType>
+<TransactionPhaseType id="TPT_DEMO_STATE_STOPPED">
+    <description>STOPPED</description>
+</TransactionPhaseType>
+```
 
 ### 3.2.3 Skip messages/transaction phases
 
@@ -451,57 +453,61 @@ framework will have to skip/ignore these messages.\
 \
 To minimize the size of frameworks 8 general messages must be used:
 
-    <MessageType id="MT_NO_REQUEST">
-        <description>no request</description>
-        <state>PASSIVE</state>
-    </MessageType>
-    <MessageType id="MT_NO_PROMISE">
-        <description>no promise</description>
-        <state>PASSIVE</state>
-    </MessageType>
-    <MessageType id="MT_NO_STATE">
-        <description>no state</description>
-        <state>PASSIVE</state>
-    </MessageType>
-    <MessageType id="MT_NO_ACCEPT">
-        <description>no accept</description>
-        <state>PASSIVE</state>
-    </MessageType>
-    <MessageType id="MT_NO_QUIT">
-        <description>no quit</description>
-        <state>PASSIVE</state>
-    </MessageType>
-    <MessageType id="MT_NO_DECLINE">
-        <description>no decline</description>
-        <state>PASSIVE</state>
-    </MessageType>
-    <MessageType id="MT_NO_REJECT">
-        <description>no reject</description>
-        <state>PASSIVE</state>
-    </MessageType>
-    <MessageType id="MT_NO_STOP">
-        <description>no stop</description>
-        <state>PASSIVE</state>
-    </MessageType>
+```
+<MessageType id="MT_NO_REQUEST">
+    <description>no request</description>
+    <state>PASSIVE</state>
+</MessageType>
+<MessageType id="MT_NO_PROMISE">
+    <description>no promise</description>
+    <state>PASSIVE</state>
+</MessageType>
+<MessageType id="MT_NO_STATE">
+    <description>no state</description>
+    <state>PASSIVE</state>
+</MessageType>
+<MessageType id="MT_NO_ACCEPT">
+    <description>no accept</description>
+    <state>PASSIVE</state>
+</MessageType>
+<MessageType id="MT_NO_QUIT">
+    <description>no quit</description>
+    <state>PASSIVE</state>
+</MessageType>
+<MessageType id="MT_NO_DECLINE">
+    <description>no decline</description>
+    <state>PASSIVE</state>
+</MessageType>
+<MessageType id="MT_NO_REJECT">
+    <description>no reject</description>
+    <state>PASSIVE</state>
+</MessageType>
+<MessageType id="MT_NO_STOP">
+    <description>no stop</description>
+    <state>PASSIVE</state>
+</MessageType>
+```
 
 Transaction specific MessageInTransactionTypes need to point to these
 default PASSIVE messages.\
 \
 Example:
 
-        <MessageInTransactionType id="mit5349-promise">
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="MT_NO_PROMISE"/>
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="mit5348-request"/>
-                <MessageInTransactionTypeRef idref="mit5347-request"/>
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T11_1_Aanleveren_Omgevingsmelding"/>
-            </transaction>
-        </MessageInTransactionType>
+```
+    <MessageInTransactionType id="mit5349-promise">
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="MT_NO_PROMISE"/>
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="mit5348-request"/>
+            <MessageInTransactionTypeRef idref="mit5347-request"/>
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T11_1_Aanleveren_Omgevingsmelding"/>
+        </transaction>
+    </MessageInTransactionType>
+```
 
 A transaction with all messages set to PASSIVE is the best way to start
 modelling a new transaction.
@@ -512,19 +518,21 @@ The messages that need to be sent between initiator and executor are
 defined and the pointer to a PASSIVE message can be replaced in the
 MessageInTransactionType. For example a message Promise:
 
-        <MessageInTransactionType id="mit5349-promise">
-            <initiatorToExecutor>false</initiatorToExecutor>
-            <message>
-                <MessageTypeRef idref="M11_1_Belofte_Aanleveren_Omgevingsmelding"/>
-            </message>
-            <previous>
-                <MessageInTransactionTypeRef idref="mit5348-request"/>
-                <MessageInTransactionTypeRef idref="mit5347-request"/>
-            </previous>
-            <transaction>
-                <TransactionTypeRef idref="T11_1_Aanleveren_Omgevingsmelding"/>
-            </transaction>
-        </MessageInTransactionType>
+```
+    <MessageInTransactionType id="mit5349-promise">
+        <initiatorToExecutor>false</initiatorToExecutor>
+        <message>
+            <MessageTypeRef idref="M11_1_Belofte_Aanleveren_Omgevingsmelding"/>
+        </message>
+        <previous>
+            <MessageInTransactionTypeRef idref="mit5348-request"/>
+            <MessageInTransactionTypeRef idref="mit5347-request"/>
+        </previous>
+        <transaction>
+            <TransactionTypeRef idref="T11_1_Aanleveren_Omgevingsmelding"/>
+        </transaction>
+    </MessageInTransactionType>
+```
 
 ### Sub transations
 
@@ -677,81 +685,85 @@ modeled in a framework as follows.
 
 The ids of the transactions are predefined:
 
-        <TransactionType id="TT_DEMO_Revoke_Pattern_Request">
-            <description>DEMO REVOKE PATTERN - REQUEST</description>
-            <initiator>
-                <RoleTypeRef idref="RT_Initiator"/>
-            </initiator>
-            <executor>
-                <RoleTypeRef idref="RT_Executor"/>
-            </executor>
-        </TransactionType>
-        <TransactionType id="TT_DEMO_Revoke_Pattern_Promise">
-            <description>DEMO REVOKE PATTERN - PROMISE</description>
-            <initiator>
-                <RoleTypeRef idref="RT_Initiator"/>
-            </initiator>
-            <executor>
-                <RoleTypeRef idref="RT_Executor"/>
-            </executor>
-        </TransactionType>
-        <TransactionType id="TT_DEMO_Revoke_Pattern_State">
-            <description>DEMO REVOKE PATTERN - STATE</description>
-            <initiator>
-                <RoleTypeRef idref="RT_Initiator"/>
-            </initiator>
-            <executor>
-                <RoleTypeRef idref="RT_Executor"/>
-            </executor>
-        </TransactionType>
-        <TransactionType id="TT_DEMO_Revoke_Pattern_Accept">
-            <description>DEMO REVOKE PATTERN - ACCEPT</description>
-            <initiator>
-                <RoleTypeRef idref="RT_Initiator"/>
-            </initiator>
-            <executor>
-                <RoleTypeRef idref="RT_Executor"/>
-            </executor>
-        </TransactionType>
+```
+    <TransactionType id="TT_DEMO_Revoke_Pattern_Request">
+        <description>DEMO REVOKE PATTERN - REQUEST</description>
+        <initiator>
+            <RoleTypeRef idref="RT_Initiator"/>
+        </initiator>
+        <executor>
+            <RoleTypeRef idref="RT_Executor"/>
+        </executor>
+    </TransactionType>
+    <TransactionType id="TT_DEMO_Revoke_Pattern_Promise">
+        <description>DEMO REVOKE PATTERN - PROMISE</description>
+        <initiator>
+            <RoleTypeRef idref="RT_Initiator"/>
+        </initiator>
+        <executor>
+            <RoleTypeRef idref="RT_Executor"/>
+        </executor>
+    </TransactionType>
+    <TransactionType id="TT_DEMO_Revoke_Pattern_State">
+        <description>DEMO REVOKE PATTERN - STATE</description>
+        <initiator>
+            <RoleTypeRef idref="RT_Initiator"/>
+        </initiator>
+        <executor>
+            <RoleTypeRef idref="RT_Executor"/>
+        </executor>
+    </TransactionType>
+    <TransactionType id="TT_DEMO_Revoke_Pattern_Accept">
+        <description>DEMO REVOKE PATTERN - ACCEPT</description>
+        <initiator>
+            <RoleTypeRef idref="RT_Initiator"/>
+        </initiator>
+        <executor>
+            <RoleTypeRef idref="RT_Executor"/>
+        </executor>
+    </TransactionType>
+```
 
 Also the ids and description of the transaction phases are predefined:
 
-        <TransactionPhaseType id="TPT_DEMO_STATE_REVOKED_ACCEPT">
-            <description>REVOKED ACCEPT</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="TPT_DEMO_STATE_ALLOWED_REVOKE_ACCEPT">
-            <description>ALLOWED REVOKE ACCEPT</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="TPT_DEMO_STATE_REFUSED_REVOKE_ACCEPT">
-            <description>REFUSED REVOKE ACCEPT</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="TPT_DEMO_STATE_REVOKED_PROMISE">
-            <description>REVOKED PROMISE</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="TPT_DEMO_STATE_ALLOWED_REVOKE_PROMISE">
-            <description>ALLOWED REVOKE PROMISE</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="TPT_DEMO_STATE_REFUSED_REVOKE_PROMISE">
-            <description>REFUSED REVOKE PROMISE</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="TPT_DEMO_STATE_REVOKED_REQUEST">
-            <description>REVOKED REQUEST</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="TPT_DEMO_STATE_ALLOWED_REVOKE_REQUEST">
-            <description>ALLOWED REVOKE REQUEST</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="TPT_DEMO_STATE_REFUSED_REVOKE_REQUEST">
-            <description>REFUSED REVOKE REQUEST</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="TPT_DEMO_STATE_REVOKED_STATE">
-            <description>REVOKED STATE</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="TPT_DEMO_STATE_ALLOWED_REVOKE_STATE">
-            <description>ALLOWED REVOKE STATE</description>
-        </TransactionPhaseType>
-        <TransactionPhaseType id="TPT_DEMO_STATE_REFUSED_REVOKE_STATE">
-            <description>REFUSED REVOKE STATE</description>
-        </TransactionPhaseType>
+```
+    <TransactionPhaseType id="TPT_DEMO_STATE_REVOKED_ACCEPT">
+        <description>REVOKED ACCEPT</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="TPT_DEMO_STATE_ALLOWED_REVOKE_ACCEPT">
+        <description>ALLOWED REVOKE ACCEPT</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="TPT_DEMO_STATE_REFUSED_REVOKE_ACCEPT">
+        <description>REFUSED REVOKE ACCEPT</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="TPT_DEMO_STATE_REVOKED_PROMISE">
+        <description>REVOKED PROMISE</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="TPT_DEMO_STATE_ALLOWED_REVOKE_PROMISE">
+        <description>ALLOWED REVOKE PROMISE</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="TPT_DEMO_STATE_REFUSED_REVOKE_PROMISE">
+        <description>REFUSED REVOKE PROMISE</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="TPT_DEMO_STATE_REVOKED_REQUEST">
+        <description>REVOKED REQUEST</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="TPT_DEMO_STATE_ALLOWED_REVOKE_REQUEST">
+        <description>ALLOWED REVOKE REQUEST</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="TPT_DEMO_STATE_REFUSED_REVOKE_REQUEST">
+        <description>REFUSED REVOKE REQUEST</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="TPT_DEMO_STATE_REVOKED_STATE">
+        <description>REVOKED STATE</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="TPT_DEMO_STATE_ALLOWED_REVOKE_STATE">
+        <description>ALLOWED REVOKE STATE</description>
+    </TransactionPhaseType>
+    <TransactionPhaseType id="TPT_DEMO_STATE_REFUSED_REVOKE_STATE">
+        <description>REFUSED REVOKE STATE</description>
+    </TransactionPhaseType>
+```
 
 #### Guideline for framework designers
 
@@ -841,38 +853,40 @@ The content of the 6 revocation messages are predefined but can best be
 held simple and focused on executing revocation transactions. For
 example:
 
-        <MessageType id="MT_Revoke_Request">
-            <description>... (REVOKE REQUEST)</description>
-            <complexElements>
-                <ComplexElementTypeRef idref="CET_Request"/>
-                <ComplexElementTypeRef idref="CET_Comments"/>
-                <ComplexElementTypeRef idref="CET_Response"/>
-            </complexElements>
-        </MessageType>
-        <ComplexElementType id="CET_Request">
-            <description>Request</description>
-            <simpleElements>
-                <SimpleElementTypeRef idref="SET_Request"/>
-            </simpleElements>
-        </ComplexElementType>
-        <SimpleElementType id="SET_Request">
-            <description>request</description>
-            <userDefinedType>
-                <UserDefinedTypeRef idref="UDT_StringMandatory"/>
-            </userDefinedType>
-        </SimpleElementType>
-        <ComplexElementType id="CET_Response">
-            <description>Response</description>
-            <simpleElements>
-                <SimpleElementTypeRef idref="SET_ResponseDate"/>
-            </simpleElements>
-        </ComplexElementType>
-        <SimpleElementType id="SET_ResponseDate">
-            <description>response date</description>
-            <userDefinedType>
-                <UserDefinedTypeRef idref="UDT_Date"/>
-            </userDefinedType>
-        </SimpleElementType>
+```
+    <MessageType id="MT_Revoke_Request">
+        <description>... (REVOKE REQUEST)</description>
+        <complexElements>
+            <ComplexElementTypeRef idref="CET_Request"/>
+            <ComplexElementTypeRef idref="CET_Comments"/>
+            <ComplexElementTypeRef idref="CET_Response"/>
+        </complexElements>
+    </MessageType>
+    <ComplexElementType id="CET_Request">
+        <description>Request</description>
+        <simpleElements>
+            <SimpleElementTypeRef idref="SET_Request"/>
+        </simpleElements>
+    </ComplexElementType>
+    <SimpleElementType id="SET_Request">
+        <description>request</description>
+        <userDefinedType>
+            <UserDefinedTypeRef idref="UDT_StringMandatory"/>
+        </userDefinedType>
+    </SimpleElementType>
+    <ComplexElementType id="CET_Response">
+        <description>Response</description>
+        <simpleElements>
+            <SimpleElementTypeRef idref="SET_ResponseDate"/>
+        </simpleElements>
+    </ComplexElementType>
+    <SimpleElementType id="SET_ResponseDate">
+        <description>response date</description>
+        <userDefinedType>
+            <UserDefinedTypeRef idref="UDT_Date"/>
+        </userDefinedType>
+    </SimpleElementType>
+```
 
 #### Revokes & sub transactions
 

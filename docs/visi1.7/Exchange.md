@@ -86,28 +86,7 @@ project information. The current capability is only \"MTOM\", so e.g.
 [2](#lst:MTOM){reference-type="ref" reference="lst:MTOM"}.
 
 <figure id="lst:MTOM">
-<pre><code>&lt;ProjectType id=&quot;Project_xyz&quot;&gt;
-    ...
-    &lt;description&gt;Standard project&lt;/description&gt;
-    ...
-    &lt;complexElements&gt;
-        ...
-        &lt;ComplexElementTypeRef idref=&quot;OtherRandomComplexElement&quot;/&gt;
-        ...
-    &lt;/complexElements&gt;
-&lt;/ProjectType&gt;
-&lt;ComplexElementType id=&quot;OtherRandomComplexElement&quot;&gt;
-    &lt;description&gt;An other random complex element&lt;/description&gt;
-    ...
-    &lt;simpleElements&gt;
-        ...
-        &lt;SimpleElementTypeRef idref=&quot;SOAPProtocol&quot;/&gt;
-        ...
-    &lt;/simpleElements&gt;
-&lt;/ComplexElementType&gt;
-&lt;SimpleElementType id=&quot;SOAPProtocol&quot;&gt;
-    ...
-&lt;/SimpleElementType&gt;</code></pre>
+
 <figcaption>MTOM Property Definition</figcaption>
 </figure>
 
@@ -115,19 +94,7 @@ And for the configuration [3](#lst:MTOMConfig){reference-type="ref"
 reference="lst:MTOMConfig"}.
 
 <figure id="lst:MTOMConfig">
-<pre><code>&lt;Project_xyz id=&quot;Project-000&quot;&gt;
-    ...
-    &lt;otherRandomComplexElement&gt;
-        ...
-        &lt;OtherRandomComplexElementRef idref=&quot;ProjectConfiguration&quot;/&gt;
-        ...
-    &lt;/otherRandomComplexElement&gt;
-&lt;/Project_xyz&gt;
-&lt;OtherRandomComplexElement id=&quot;ProjectConfiguration&quot;&gt;
-    ...
-    &lt;SOAPProtocol&gt;MTOM&lt;/SOAPProtocol&gt;
-    ...
-&lt;/OtherRandomComplexElement&gt;</code></pre>
+
 <figcaption>MTOM Property Configuration</figcaption>
 </figure>
 
@@ -172,28 +139,7 @@ outside the new VISI concept):
     reference="lst:SOAP Server Definition"}
 
 <figure id="lst:SOAP Server Definition">
-<pre><code>&lt;OrganisationType id=&quot;Organisatie&quot;&gt;
-    ...
-    &lt;description&gt;Standard organisation&lt;/description&gt;
-    ...
-    &lt;complexElements&gt;
-        ...
-        &lt;ComplexElementTypeRef idref=&quot;RandomComplexElement&quot;/&gt;
-        ...
-    &lt;/complexElements&gt;
-&lt;/OrganisationType&gt;
-&lt;ComplexElementType id=&quot;RandomComplexElement&quot;&gt;
-    &lt;description&gt;A random complex element&lt;/description&gt;
-    ...
-    &lt;simpleElements&gt;
-        ...
-        &lt;SimpleElementTypeRef idref=&quot;SOAPServerURL&quot;/&gt;
-        ...
-    &lt;/simpleElements&gt;
-&lt;/ComplexElementType&gt;
-&lt;SimpleElementType id=&quot;SOAPServerURL&quot;&gt;
-...
-&lt;/SimpleElementType&gt;</code></pre>
+
 <figcaption>SOAP Server URL Definition</figcaption>
 </figure>
 
@@ -215,20 +161,7 @@ we assume that a configuration is present for a project, as described in
     reference="lst:SOAPServerConfiguration"}
 
 <figure id="lst:SOAPServerConfiguration">
-<pre><code>&lt;Organisatie id=&quot;Biereco&quot;&gt;
-    &lt;name&gt;Biereco&#39;s Rebuildcompany BV&lt;/name&gt;
-    ...
-    &lt;randomComplexElement&gt;
-        ...
-        &lt;RandomComplexElementRef idref=&quot;BierecoInformation&quot;/&gt;
-        ...
-    &lt;/randomComplexElement&gt;
-&lt;/Organisatie&gt;
-&lt;RandomComplexElement id=&quot;BierecoInformation&quot;&gt;
-    ...
-    &lt;SOAPServerURL&gt;http://192.168.0.102/visi&lt;/SOAPServerURL&gt;
-    ...
-&lt;/RandomComplexElement&gt;</code></pre>
+
 <figcaption>SOAP Server URL Configuration</figcaption>
 </figure>
 
@@ -303,25 +236,7 @@ The order of message exchange:
     reference="lst:SendingXML"}.
 
 <figure id="lst:SendingXML">
-<pre><code>&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;
-    &lt;SOAP-ENV:Header&gt;
-        &lt;ns2:UniqueID xmlns:ns2=&quot;http://www.visi.nl/schemas/soap/version-1.0&quot;&gt;
-            &lt;ns2:ID&gt;m_a4fab2e7-251d-4bb3-9954-8733ebc088ee&lt;/ns2:ID&gt;
-        &lt;/ns2:UniqueID&gt;
-        &lt;ns2:SOAPServerURL xmlns:ns2=&quot;http://www.visi.nl/schemas/soap/version-1.0&quot;&gt;
-            &lt;ns2:sender&gt;https://192.168.0.102&lt;/ns2:sender&gt;
-            &lt;ns2:receiver&gt;https://192.168.0.138&lt;/ns2:receiver&gt;
-        &lt;/ns2:SOAPServerURL&gt;
-    &lt;/SOAP-ENV:Header&gt;
-    &lt;SOAP-ENV:Body&gt;
-        &lt;ns2:parseMessage xmlns:ns2=&quot;http://www.visi.nl/schemas/soap/version-1.0&quot;&gt;
-            &lt;ns2:message&gt;
-                &lt;visiXML_MessageSchema ...&gt;
-                &lt;/visiXML_MessageSchema&gt;
-            &lt;/ns2:message&gt;
-        &lt;/ns2:parseMessage&gt;
-    &lt;/SOAP-ENV:Body&gt;
-&lt;/SOAP-ENV:Envelope&gt;</code></pre>
+
 <figcaption>Sending Message</figcaption>
 </figure>
 
@@ -351,22 +266,7 @@ id="abc"$>$)
     reference="lst:Response Message"}.
 
 <figure id="lst:Response Message">
-<pre><code>&lt;SOAP-ENV:Envelope ...&gt;
-    &lt;SOAP-ENV:Header&gt;
-        &lt;SOAPServerURL ...&gt;
-            &lt;sender&gt;http://192.168.0.102&lt;/sender&gt;
-            &lt;reciever&gt;http://192.168.0.138&lt;/reciever&gt;
-        &lt;/SOAPServerURL&gt;
-        &lt;UniqueID ...&gt;
-            &lt;ID&gt;UniqueIDonMessageInitiatingSOAPServer_XYZ&lt;/ID&gt;
-        &lt;/UniqueID&gt;
-    &lt;/SOAP-ENV:Header&gt;
-    &lt;SOAP-ENV:Body&gt;
-        &lt;ERRORS&gt;
-            &lt;ERROR CODE=&quot;0&quot;&gt;&lt;/ERROR&gt;
-        &lt;ERRORS&gt;
-    &lt;/SOAP-ENV:Body&gt;
-&lt;/SOAP-ENV:Envelope&gt;</code></pre>
+
 <figcaption>Response No Error Message</figcaption>
 </figure>
 
@@ -375,22 +275,7 @@ In case of a single error
 reference="lst:Single Error Message"}.
 
 <figure id="lst:Single Error Message">
-<pre><code>&lt;SOAP-ENV:Envelope ...&gt;
-    &lt;SOAP-ENV:Header&gt;
-        &lt;SOAPServerURL ...&gt;
-            &lt;sender&gt;http://192.168.0.102&lt;/sender&gt;
-            &lt;receiver&gt;http://192.168.0.138&lt;/reciever&gt;
-        &lt;/SOAPServerURL&gt;
-        &lt;UniqueID ...&gt;
-            &lt;ID&gt;UniqueIDonMessageInitiatingSOAPServer_XYZ&lt;/ID&gt;
-        &lt;/UniqueID&gt;
-    &lt;/SOAP-ENV:Header&gt;
-    &lt;SOAP-ENV:Body&gt;
-        &lt;ERRORS&gt;
-            &lt;ERROR CODE=&quot;1&quot;&gt; Er is een fout opgetreden bij ...&lt;/ERROR&gt;
-        &lt;ERRORS&gt;
-    &lt;/SOAP-ENV:Body&gt;
-&lt;/SOAP-ENV:Envelope&gt;</code></pre>
+
 <figcaption>Response Single Error Message</figcaption>
 </figure>
 
@@ -399,23 +284,7 @@ In case of multiple errors (e.g. with validation of the xsd)
 reference="lst:Muliple Error Message"}.
 
 <figure id="lst:Muliple Error Message">
-<pre><code>&lt;SOAP-ENV:Envelope ...&gt;
-    &lt;SOAP-ENV:Header&gt;
-        &lt;SOAPServerURL ...&gt;
-            &lt;sender&gt;http://192.168.0.102&lt;/sender&gt;
-            &lt;receiver&gt;http://192.168.0.138&lt;/reciever&gt;
-        &lt;/SOAPServerURL&gt;
-        &lt;UniqueID ...&gt;
-            &lt;ID&gt;UniqueIDonMessageInitiatingSOAPServer_XYZ&lt;/ID&gt;
-        &lt;/UniqueID&gt;
-    &lt;/SOAP-ENV:Header&gt;
-    &lt;SOAP-ENV:Body&gt;
-        &lt;ERRORS&gt;
-            &lt;ERROR CODE=&quot;1&quot;&gt;Waarden van simpel element1 is niet volgens definitie&lt;/ERROR&gt;
-            &lt;ERROR CODE=&quot;1&quot;&gt;Waarden van simpel element2 is niet volgens definitie&lt;/ERROR&gt;
-        &lt;ERRORS&gt;
-    &lt;/SOAP-ENV:Body&gt;
-&lt;/SOAP-ENV:Envelope&gt;</code></pre>
+
 <figcaption>Response Muliple Error Message</figcaption>
 </figure>
 
@@ -672,62 +541,61 @@ width="\\textwidth"}
 -   
 -   
 
-```{=html}
-<!-- -->
 ```
-    <SOAP-ENV:Envelope ...>
-      <SOAP-ENV:Header>
-        <SOAPServerURL ...>
-          <sender>http://192.168.0.102</sender>
-          <receiver>http://192.168.0.138
-          </reciever>
-        </SOAPServerURL>
-        <UniqueID ...>
-          <ID>UniqueIDonMessageInitiatingSOAPServer_XYZ</ID>
-        </UniqueID>
-        <Appendices ...>
-          <count>2</count>
-        </Appendices>
-      </SOAP-ENV:Header>
-      <SOAP-ENV:Body>
-        <parseMessage ...>
-          <message>
-            <visiXML_MessageSchema ...>
-              ... // VISI Message
-              <Data> // Appendix I
-                <Bijlage id="VoorbeeldDocument">
-                  <name>Voorbeeld</name>
-                  <fileLocation>\\srv-bouw\Public\project\docs\msword\</fileLocation>
-                  <fileType>application/msword</fileType>
-                  <fileVersion>2010</fileVersion>
-    new-->        <Checksum>00BD947603...2526F6223898</Checksum>
-                  <documentIdentification>345899</documentIdentification>
-                  <documentVersion>1</documentVersion>
-                  <documentReference>FG783990</documentReference>
-                  <startDate>2011-02-04T00:00:00Z</startDate>
-                  <endDate>2011-12-31T00:00:00Z</endDate>
-                  <state>active</state>
-                  <dateLaMu>2011-02-04T00:00:00Z</dateLaMu>
-                  <userLaMu>bapa</userLaMu>
-                  <language>NL</language>
-                  <appendixGroup>
-                    <AppendixGroup id="...">
-                      ...
-                    </AppendixGroup>
-                  </appendixGroup>
-                </Bijlage>
-              </Data>
-              <Data ...>
-                ... // Appendix II
-              </Data>
-            </visiXML_MessageSchema>
-    new-->  <Signature>
-    new-->      ... // Signing message
-    new-->  </Signature>
-          </message>
-        </parseMessage>
-      </SOAP-ENV:Body>
-    </SOAP-ENV:Envelope>
+<SOAP-ENV:Envelope ...>
+  <SOAP-ENV:Header>
+    <SOAPServerURL ...>
+      <sender>http://192.168.0.102</sender>
+      <receiver>http://192.168.0.138
+      </reciever>
+    </SOAPServerURL>
+    <UniqueID ...>
+      <ID>UniqueIDonMessageInitiatingSOAPServer_XYZ</ID>
+    </UniqueID>
+    <Appendices ...>
+      <count>2</count>
+    </Appendices>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <parseMessage ...>
+      <message>
+        <visiXML_MessageSchema ...>
+          ... // VISI Message
+          <Data> // Appendix I
+            <Bijlage id="VoorbeeldDocument">
+              <name>Voorbeeld</name>
+              <fileLocation>\\srv-bouw\Public\project\docs\msword\</fileLocation>
+              <fileType>application/msword</fileType>
+              <fileVersion>2010</fileVersion>
+new-->        <Checksum>00BD947603...2526F6223898</Checksum>
+              <documentIdentification>345899</documentIdentification>
+              <documentVersion>1</documentVersion>
+              <documentReference>FG783990</documentReference>
+              <startDate>2011-02-04T00:00:00Z</startDate>
+              <endDate>2011-12-31T00:00:00Z</endDate>
+              <state>active</state>
+              <dateLaMu>2011-02-04T00:00:00Z</dateLaMu>
+              <userLaMu>bapa</userLaMu>
+              <language>NL</language>
+              <appendixGroup>
+                <AppendixGroup id="...">
+                  ...
+                </AppendixGroup>
+              </appendixGroup>
+            </Bijlage>
+          </Data>
+          <Data ...>
+            ... // Appendix II
+          </Data>
+        </visiXML_MessageSchema>
+new-->  <Signature>
+new-->      ... // Signing message
+new-->  </Signature>
+      </message>
+    </parseMessage>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
 
 []{#fig:Signing label="fig:Signing"}
 

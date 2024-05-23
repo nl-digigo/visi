@@ -4,40 +4,48 @@
 
 []{#sec:ref-appendixGroup label="sec:ref-appendixGroup"}
 
-    appendixGroup : OPTIONAL AppendixGroup;
+```
+appendixGroup : OPTIONAL AppendixGroup;
+```
 
 A subgrouping to which the specific attachment belongs.\
 \
 Message level example:
 
-    <Bijlage id="...">
+```
+<Bijlage id="...">
+  ...
+  <appendixGroup>
+    <AppendixGroup id="...">
       ...
-      <appendixGroup>
-        <AppendixGroup id="...">
-          ...
-        </AppendixGroup>
-      </appendixGroup>
-      ...
-    </Bijlage>
+    </AppendixGroup>
+  </appendixGroup>
+  ...
+</Bijlage>
+```
 
 #### 4.2. contactPerson
 
 []{#sec:ref-contactPerson label="sec:ref-contactPerson"}
 
-    contactPerson : PersonTemplate;
+```
+contactPerson : PersonTemplate;
+```
 
 The person linked to a PersonInRole \[1.8\] object or linked to a
 specific organization. Example at message level (with an organization
 chosen as a basis):
 
-    <Organisatie id="...">
+```
+<Organisatie id="...">
+  ...
+  <contactPerson>
+    <Persoon id="...">
       ...
-      <contactPerson>
-        <Persoon id="...">
-          ...
-        </Persoon>
-      </contactPerson>
-    </Organisatie>
+    </Persoon>
+  </contactPerson>
+</Organisatie>
+```
 
 So in the associated framework there is an OrganizationType Organization
 and a PersonType Person.
@@ -46,7 +54,9 @@ and a PersonType Person.
 
 []{#sec:ref-executor label="sec:ref-executor"}
 
-    executor : PersonInRole;
+```
+executor : PersonInRole;
+```
 
 Which role filler is the executive.
 
@@ -54,27 +64,33 @@ Which role filler is the executive.
 
 []{#sec:ref-group label="sec:ref-group"}
 
-    group : OPTIONAL GroupTemplate;
+```
+group : OPTIONAL GroupTemplate;
+```
 
 The general group to which a set of attachments belong.\
 \
 Message level example:
 
-    <AppendixGroup id="...">
-      ...
-        <group>
-            <Groep id="...">
-                ...
-            </Groep>
-        </group>
-      ...
-    </AppendixGroup>
+```
+<AppendixGroup id="...">
+  ...
+    <group>
+        <Groep id="...">
+            ...
+        </Groep>
+    </group>
+  ...
+</AppendixGroup>
+```
 
 #### 4.5. Initiator
 
 []{#sec:ref-initiator label="sec:ref-initiator"}
 
-    initiator : PersonInRole;
+```
+initiator : PersonInRole;
+```
 
 Which role filler is the initiator.
 
@@ -82,21 +98,25 @@ Which role filler is the initiator.
 
 []{#sec:ref-message label="sec:ref-message"}
 
-    message : MessageTemplate;
+```
+message : MessageTemplate;
+```
 
 The message to which a specific attachment belongs.\
 \
 Message level example:
 
-    <Bijlage id="...">
-      ...
-        <message>
-            <Bericht id="...">
-            ...
-            </Bericht>
-        </message>
-      ...
-    </Bijlage>
+```
+<Bijlage id="...">
+  ...
+    <message>
+        <Bericht id="...">
+        ...
+        </Bericht>
+    </message>
+  ...
+</Bijlage>
+```
 
 There is therefore an AppendixType Attachment and a MessageType Message
 in the associated framework.
@@ -105,7 +125,9 @@ in the associated framework.
 
 []{#sec:ref-messageInTransaction label="sec:ref-messageInTransaction"}
 
-    messageInTransaction : MessageInTransactionTemplate;
+```
+messageInTransaction : MessageInTransactionTemplate;
+```
 
 Reference to the place the message occupies in the flow of the
 transaction.
@@ -114,28 +136,34 @@ transaction.
 
 []{#sec:ref-organisation label="sec:ref-organisation"}
 
-    organisation : OrganisationTemplate;
+```
+organisation : OrganisationTemplate;
+```
 
 The organization belonging to a PersonInRole \[1.8\] object.\
 \
 Message level example:
 
-     
-    <PersonInRole id="...">
+```
+ 
+<PersonInRole id="...">
+  ...
+  <organisation>
+    <Organisatie id="...">
       ...
-      <organisation>
-        <Organisatie id="...">
-          ...
-        </Organisatie>
-      </organisation>
-      ...
-    </PersonInRole>
+    </Organisatie>
+  </organisation>
+  ...
+</PersonInRole>
+```
 
 #### 4.9. role
 
 []{#sec:ref-role label="sec:ref-role"}
 
-    role : RoleTemplate;
+```
+role : RoleTemplate;
+```
 
 Reference to a role that can be fulfilled by an organization on behalf
 of a PersonTemplate (person).
@@ -144,7 +172,9 @@ of a PersonTemplate (person).
 
 []{#sec:ref-substituting label="sec:ref-substituting"}
 
-    substituting : OPTIONAL PersonInRole;
+```
+substituting : OPTIONAL PersonInRole;
+```
 
 PersonInRole \[1.8\] on behalf of whom this PersonInRole can send
 messages.
@@ -153,7 +183,9 @@ messages.
 
 []{#sec:ref-successor label="sec:ref-successor"}
 
-    successor : OPTIONAL PersonInRole;
+```
+successor : OPTIONAL PersonInRole;
+```
 
 Successor to another person in a specific role.
 
@@ -161,22 +193,26 @@ Successor to another person in a specific role.
 
 []{#sec:ref-transaction label="sec:ref-transaction"}
 
-    transaction : TransactionTemplate;
+```
+transaction : TransactionTemplate;
+```
 
 The transaction to which a specific group, message or transaction phase
 belongs.\
 \
 Example at message level (with a message selected as the basis):
 
-    <Bericht id="...">
+```
+<Bericht id="...">
+  ...
+  <transaction>
+    <Transactie id="...">
       ...
-      <transaction>
-        <Transactie id="...">
-          ...
-        </Transactie>
-      </transaction>
-      ...
-    </Bericht>
+    </Transactie>
+  </transaction>
+  ...
+</Bericht>
+```
 
 There is therefore a MessageType *Message* and a TransactionType
 *Transaction* in the associated framework.
