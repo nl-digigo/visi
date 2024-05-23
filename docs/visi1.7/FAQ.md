@@ -137,8 +137,8 @@ Daartoe zijn de 'Referenties' van de entiteit 'MessageInTransactionType'
 in de VISI Systematiek Deel 1 (voorheen Systematiek I) uitgebreid met de
 eigenschap 'firstMessage'. Daarmee kan worden aangegeven of een
 MessageInTransaction een startbericht betreft.
-
- ENTITY MessageInTransactionType;
+```
+    ENTITY MessageInTransactionType;
         requiredNotify : INTEGER;
         dateLamu : DATETIME;
         userLamu : STRING;
@@ -154,8 +154,8 @@ MessageInTransaction een startbericht betreft.
         VISI Pagina 46 van 46
         transactionPhase : OPTIONAL TransactionPhaseType;
         group : GroupType;
- END_ENTITY;
-
+    END_ENTITY;
+```
 Deze nieuwe eigenschap is een optionele Boolean ('True', of 'False').
 Indien deze Boolean afwezig is, geldt de standaard waarde 'False' en kan
 er met de betreffende MessageInTransactionType GEEN nieuwe transactie
