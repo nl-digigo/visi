@@ -1,0 +1,146 @@
+SCHEMA visiXML_MessageSchema;
+
+-- Peter Bonsma (TNO), 29 Sept 2006
+
+-- Complete model Systematics Part II
+
+ENTITY GroupTemplate;
+ name : STRING;
+ description : STRING;
+ creationDate : DATE;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ versionNo : STRING;
+
+ transaction : TransactionTemplate;
+END_ENTITY;
+
+ENTITY AppendixGroup;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+
+ group : GroupTemplate;
+END_ENTITY;
+
+ENTITY AppendixTemplate;
+ name : STRING;
+ fileLokation : STRING;
+ fileType : STRING;
+ fileVersion : STRING;
+ documentIdentification : STRING;
+ documentVersion : STRING;
+ documentReference : STRING;
+ objectCode : OPTIONAL STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ language : OPTIONAL STRING;
+
+ message : MessageTemplate;
+ appendixGroup : AppendixGroup;
+ template : ComplexElementTemplate;
+END_ENTITY;
+
+ENTITY MessageTemplate;
+ identification : STRING;
+ dateSend : DATE;
+ dateRead : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ initiatorToExecutor : BOOLEAN;
+
+ transaction : TransactionTemplate;
+ template : ComplexElementTemplate;
+END_ENTITY;
+
+ENTITY TransactionTemplate;
+ name : STRING;
+ description : STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ result : OPTIONAL STRING;
+
+ initiator : PersonInRole;
+ executor : PersonInRole;
+ project : ProjectTypeInstance;
+END_ENTITY;
+
+ENTITY TransactionPhaseTemplate;
+ name : STRING;
+ description : STRING;
+ dateReached : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+
+ transaction : TransactionTemplate;
+END_ENTITY;
+
+ENTITY PersonTemplate;
+ userName : STRING;
+ name : STRING;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+
+ template : ComplexElementTemplate;
+END_ENTITY;
+
+ENTITY OrganisationTemplate;
+ name : STRING;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+
+ contactPerson : PersonTemplate;
+ template : ComplexElementTemplate;
+END_ENTITY;
+
+ENTITY PersonInRole;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+
+ authorise : OPTIONAL SET [1:?] OF PersonTemplate;
+ contactPerson : PersonTemplate;
+ organisation : OrganisationTemplate;
+ role : RoleTemplate;
+END_ENTITY;
+
+ENTITY RoleTemplate;
+ name : STRING;
+ description : STRING;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+ category : OPTIONAL STRING;
+END_ENTITY;
+
+ENTITY ProjectTypeInstance;
+ name : STRING;
+ description : STRING;
+ startDate : DATE;
+ endDate : DATE;
+ state : STRING;
+ dateLamu : DATE;
+ userLamu : STRING;
+
+ template : ComplexElementTemplate;
+END_ENTITY;
+
+ENTITY ComplexElementTemplate;
+ template : ComplexElementTemplate;
+ template : SimpleElementVirtual;
+END_ENTITY;
+
+END_SCHEMA;
