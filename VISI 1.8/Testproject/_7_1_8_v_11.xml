@@ -1,0 +1,4906 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<visiXML_VISI_Systematics xmlns="http://www.visi.nl/schemas/20250101">
+
+  <AppendixType id="AppRapport">
+    <description>Rapport</description>
+    <dateLaMu>2021-12-02T09:59:02</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language>NL</language>
+    <code>q</code>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeRapport"/>
+    </complexElements>
+  </AppendixType>
+
+  <AppendixType id="AppTekening">
+    <description>Tekening</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeTekening"/>
+    </complexElements>
+  </AppendixType>
+
+  <AppendixType id="AppVideo">
+    <description>Video Ω</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeVideo"/>
+    </complexElements>
+  </AppendixType>
+
+  <ComplexElementType id="CE_Basis">
+    <description>Basis</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T11:01:23</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SE_Tekstveld"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CE_Opmerkingen">
+    <description>Opmerkingen</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:19</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language></language>
+    <helpInfo>Opmerkingen</helpInfo>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SE_Opmerkingen"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeAntwoord">
+    <description>Antwoord</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="Antwoord"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeBestelling">
+    <description>Bestelling</description>
+    <helpInfo>de gerechten en drankjes worden in aparte tabellen ingevoerd, met per regel de mogelijkheid een opmerking toe te voegen. Er is ook een totaalopmerking in te voeren, als er iets bijzonders over bijvoorbeeld de manier van opdienen ingevoerd moet worden.</helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeInhoudBestelling"/>
+      <ComplexElementTypeRef idref="CeInhoudDrankbestelling"/>
+    </complexElements>
+    <simpleElements>
+      <SimpleElementTypeRef idref="Opmerking"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeBestellingB">
+    <description>Bestelling B</description>
+    <dateLaMu>2024-01-08T17:38:08</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <helpInfo>de gerechten en drankjes worden in aparte tabellen ingevoerd, met per regel de mogelijkheid een opmerking toe te voegen. Er is ook een totaalopmerking in te voeren, als er iets bijzonders over bijvoorbeeld de manier van opdienen ingevoerd moet worden.</helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeInhoudBestelling"/>
+    </complexElements>
+    <simpleElements>
+      <SimpleElementTypeRef idref="Opmerking"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeCommentaar">
+    <description>Commentaar</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SeCommentaar"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeComplexAB">
+    <description>Ce Inhoud AB</description>
+    <state>active</state>
+    <dateLaMu>2024-01-15T10:38:19</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SeSimple"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeComplexC">
+    <description>Ce Inhoud C</description>
+    <state>active</state>
+    <dateLaMu>2024-02-02T07:51:07</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SeSimple"/>
+      <SimpleElementTypeRef idref="NaamGerecht"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeComplexD">
+    <description>Ce Inhoud D</description>
+    <state>active</state>
+    <dateLaMu>2024-02-02T07:51:03</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SeSimple"/>
+      <SimpleElementTypeRef idref="NaamGerecht"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeDagMenu">
+    <description>§ Dagmenu (tabel met dagmenuitems)</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeDagMenuB">
+    <description>§ Dagmenu B (tabel met dagmenuitems)</description>
+    <dateLaMu>2024-01-08T17:39:38</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeDrankenKaart">
+    <description>§ Drankenkaart (tabel met dranken)</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeDrankenKaartB">
+    <description>§ Drankenkaart B (tabel met dranken)</description>
+    <dateLaMu>2024-01-08T17:39:35</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeInhoudBestelling">
+    <description>Inhoud van de bestelling</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="NaamGerecht"/>
+      <SimpleElementTypeRef idref="Opmerking"/>
+    </simpleElements>
+    <minOccurs>1</minOccurs>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeInhoudDrankbestelling">
+    <description>Inhoud drankbestelling</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SeSoortDrank"/>
+      <SimpleElementTypeRef idref="SeHoeveelheid"/>
+      <SimpleElementTypeRef idref="Opmerking"/>
+    </simpleElements>
+    <minOccurs>1</minOccurs>
+    <maxOccurs>1</maxOccurs>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeInhoudMenuKaart">
+    <description>Inhoud van de menukaart</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="NaamMenukaartItem"/>
+      <SimpleElementTypeRef idref="Omschrijving"/>
+      <SimpleElementTypeRef idref="SePrijs"/>
+    </simpleElements>
+    <maxOccurs>3</maxOccurs>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeMenuKaart">
+    <description>§ Menukaart (tabel met menuitems)</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeMenuKaartB">
+    <description>§ Menukaart B (tabel met menuitems)</description>
+    <dateLaMu>2024-01-08T17:39:42</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeMenuKaartType">
+    <description>Menukaart</description>
+    <dateLaMu>2021-12-02T10:02:51</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language>NL</language>
+    <simpleElements>
+      <SimpleElementTypeRef idref="MenuKaartType"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeMenukaartvraag">
+    <description>Menukaartvraag [rho ϱ]</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:26:53</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SeString_minlength_1"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeOrganisatie">
+    <description>Organisatie specs</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SOAPServerURL"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeRapport">
+    <description>Rapport</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="Auteur"/>
+      <SimpleElementTypeRef idref="Versie"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeReactietermijn">
+    <description>Reactietermijn</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="GewensteReactietermijn"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeRevokeAllow">
+    <description>Revoke allow</description>
+    <state>active</state>
+    <dateLaMu>2024-06-11T14:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SeRevokeAllowanceExplanation"/>
+      <SimpleElementTypeRef idref="SeRevokeRequestReason"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeRevokeRefuse">
+    <description>Revoke refuse</description>
+    <state>active</state>
+    <dateLaMu>2024-06-11T14:15:32</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SeRevokeRefusalReason"/>
+      <SimpleElementTypeRef idref="SeRevokeRequestReason"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeRevokeRequest">
+    <description>Revoke request</description>
+    <state>active</state>
+    <dateLaMu>2024-06-11T14:15:37</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SeRevokeRequestReason"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeSOAP">
+    <description>SOAP specificaties</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SOAPProtocol"/>
+      <SimpleElementTypeRef idref="SOAPServerURL"/>
+      <SimpleElementTypeRef idref="SOAPCentralServerURL"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeTekening">
+    <description>Tekening</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="AantalLagen"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeVideo">
+    <description>Video</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="VideoFormaat"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="CeVraag">
+    <description>Vraag</description>
+    <simpleElements>
+      <SimpleElementTypeRef idref="Vraag"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="ce23">
+    <description>Inhoud1: BaseType verzameling</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="SeBoolean"/>
+      <SimpleElementTypeRef idref="SeInteger"/>
+      <SimpleElementTypeRef idref="SeTime"/>
+      <SimpleElementTypeRef idref="SeDate"/>
+      <SimpleElementTypeRef idref="SeDatetime"/>
+      <SimpleElementTypeRef idref="SeDecimal"/>
+      <SimpleElementTypeRef idref="SeString"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="ce24">
+    <description>Inhoud 1: base type tabel</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="ce23"/>
+    </complexElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="ce26">
+    <description>Inhoud 4: User defined types basis</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="ce26_2"/>
+    </complexElements>
+    <simpleElements>
+      <SimpleElementTypeRef idref="Se_Straatnaam"/>
+      <SimpleElementTypeRef idref="SeKeuzelijst"/>
+      <SimpleElementTypeRef idref="se155_3_2"/>
+      <SimpleElementTypeRef idref="SE_Contractnummer"/>
+      <SimpleElementTypeRef idref="se168"/>
+      <SimpleElementTypeRef idref="se155"/>
+      <SimpleElementTypeRef idref="se155_2"/>
+      <SimpleElementTypeRef idref="se155_3"/>
+      <SimpleElementTypeRef idref="se155_4"/>
+      <SimpleElementTypeRef idref="se155_4_2"/>
+      <SimpleElementTypeRef idref="se155_4_2_2"/>
+      <SimpleElementTypeRef idref="se155_4_2_2_2_2"/>
+      <SimpleElementTypeRef idref="se155_4_2_2_2"/>
+      <SimpleElementTypeRef idref="SePrijs"/>
+      <SimpleElementTypeRef idref="se155_4_2_2_2_2_2"/>
+      <SimpleElementTypeRef idref="se155_4_2_2_2_2_2_2"/>
+      <SimpleElementTypeRef idref="SeString_minlength_64"/>
+      <SimpleElementTypeRef idref="se155_4_3"/>
+      <SimpleElementTypeRef idref="se155_4_3_2"/>
+      <SimpleElementTypeRef idref="se168_2"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ComplexElementType id="ce26_2">
+    <description>Inhoud 4: User defined types tabel</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <simpleElements>
+      <SimpleElementTypeRef idref="Se_Straatnaam"/>
+      <SimpleElementTypeRef idref="se155_3_2"/>
+      <SimpleElementTypeRef idref="SE_Contractnummer"/>
+      <SimpleElementTypeRef idref="se168"/>
+      <SimpleElementTypeRef idref="se155"/>
+      <SimpleElementTypeRef idref="se155_2"/>
+      <SimpleElementTypeRef idref="se155_3"/>
+      <SimpleElementTypeRef idref="se155_4"/>
+      <SimpleElementTypeRef idref="se155_4_2"/>
+      <SimpleElementTypeRef idref="se155_4_2_2"/>
+      <SimpleElementTypeRef idref="se155_4_2_2_2_2"/>
+      <SimpleElementTypeRef idref="se155_4_2_2_2"/>
+      <SimpleElementTypeRef idref="se155_4_2_2_2_2_2"/>
+      <SimpleElementTypeRef idref="se155_4_2_2_2_2_2_2"/>
+      <SimpleElementTypeRef idref="se155_4_3"/>
+      <SimpleElementTypeRef idref="se155_4_3_2"/>
+      <SimpleElementTypeRef idref="se168_2"/>
+    </simpleElements>
+  </ComplexElementType>
+
+  <ElementCondition id="EC_58082">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </ElementCondition>
+
+  <ElementCondition id="EC_58083">
+    <description>New element condition</description>
+    <condition>EMPTY</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="MT_97037"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_58084">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="MT_97038"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_58085">
+    <description>New element condition</description>
+    <condition>FIXED</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="MT_97039"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_58086">
+    <description>New element condition</description>
+    <condition>FIXED</condition>
+    <simpleElement>
+      <SimpleElementTypeRef idref="SE_Contractnummer"/>
+    </simpleElement>
+  </ElementCondition>
+
+  <ElementCondition id="EC_58087">
+    <description>New element condition</description>
+    <condition>EMPTY</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="MT_97041"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_58088">
+    <description>New element condition</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="MT_97042"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_58089">
+    <description>New element condition</description>
+    <condition>FIXED</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="MT_97043"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_T6A1_Dagmenu_Fixed">
+    <description>T6 A1 Dagmenu fixed</description>
+    <condition>FIXED</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeDagMenu"/>
+    </complexElements>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="Mitt_3"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_T6A2_Dagmenu_Fixed">
+    <description>T6 A2 Dagmenu fixed</description>
+    <condition>FIXED</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeDagMenu"/>
+    </complexElements>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="Mitt_4"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_T7A1_Dagmenu_Fixed">
+    <description>T7 A1 Dagmenu fixed</description>
+    <condition>FIXED</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeDagMenu"/>
+    </complexElements>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="Mitt_5"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="EC_T7A2_Dagmenu_Fixed">
+    <description>T7 A2 Dagmenu fixed</description>
+    <condition>FIXED</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeDagMenu"/>
+    </complexElements>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="Mitt_6"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="ElementCondition1">
+    <description>De bestelling moet gewijzigd kunnen worden na een negatieve reactie van de kok.</description>
+    <condition>FREE</condition>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie7"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="ElementCondition1vanScenario10">
+    <description>Free op Prijs SE in Child CE Inhoud van de menukaart</description>
+    <condition>FREE</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+    <simpleElement>
+      <SimpleElementTypeRef idref="SePrijs"/>
+    </simpleElement>
+  </ElementCondition>
+
+  <ElementCondition id="ElementCondition2">
+    <description>Na een antwoord volgt mogelijk een nieuwe vraag.</description>
+    <condition>EMPTY</condition>
+    <simpleElement>
+      <SimpleElementTypeRef idref="Vraag"/>
+    </simpleElement>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="ElementCondition2vanScenario10">
+    <description>Free op Omschrijving SE in Parent CE Menukaart</description>
+    <condition>FREE</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeMenuKaart"/>
+    </complexElements>
+    <simpleElement>
+      <SimpleElementTypeRef idref="Omschrijving"/>
+    </simpleElement>
+  </ElementCondition>
+
+  <ElementCondition id="ElementCondition3">
+    <description>Gewenste reactietermijn mag nooit worden overschreven.</description>
+    <condition>FIXED</condition>
+    <simpleElement>
+      <SimpleElementTypeRef idref="GewensteReactietermijn"/>
+    </simpleElement>
+  </ElementCondition>
+
+  <ElementCondition id="ElementCondition3vanScenario10">
+    <description>Empty op Parent CE Dagmenu</description>
+    <condition>EMPTY</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeDagMenu"/>
+    </complexElements>
+  </ElementCondition>
+
+  <ElementCondition id="ElementCondition4vanScenario10">
+    <description>Free op MITT, Parent CE, Child CE, en SE</description>
+    <condition>FREE</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeDagMenu"/>
+      <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+    <simpleElement>
+      <SimpleElementTypeRef idref="NaamMenukaartItem"/>
+    </simpleElement>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="ElementCondition5vanScenario10">
+    <description>Free op Parent en Child CE</description>
+    <condition>FREE</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeDrankenKaart"/>
+      <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+  </ElementCondition>
+
+  <ElementCondition id="ElementCondition6vanScenario10">
+    <description>Fixed op parent en child CE en op SE prijs</description>
+    <condition>FIXED</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeDrankenKaart"/>
+      <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+    </complexElements>
+    <simpleElement>
+      <SimpleElementTypeRef idref="SePrijs"/>
+    </simpleElement>
+  </ElementCondition>
+
+  <ElementCondition id="ElementCondition7vanScenario10">
+    <description>Foute element condition: Inhoud van de menukaart is child CE en menukaart is parent CE. Deze EC heeft inhoud als parant gedefinieerd en menukaart als child. Deze situatie bestaat niet in dit raamwerk.</description>
+    <condition>FREE</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeInhoudMenuKaart"/>
+      <ComplexElementTypeRef idref="CeMenuKaart"/>
+    </complexElements>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie6"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="ec_1">
+    <description>Description of ec_1</description>
+    <condition>FREE</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeComplexD"/>
+    </complexElements>
+    <simpleElement>
+      <SimpleElementTypeRef idref="NaamGerecht"/>
+    </simpleElement>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="Mitt_8"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="ec_2">
+    <description>Description of ec_2</description>
+    <condition>FREE</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeComplexC"/>
+    </complexElements>
+    <simpleElement>
+      <SimpleElementTypeRef idref="NaamGerecht"/>
+    </simpleElement>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="Mitt_10"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <ElementCondition id="ec_3">
+    <description>Description of ec_3</description>
+    <condition>FREE</condition>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeComplexC"/>
+    </complexElements>
+    <simpleElement>
+      <SimpleElementTypeRef idref="NaamGerecht"/>
+    </simpleElement>
+    <messageInTransaction>
+      <MessageInTransactionTypeRef idref="Mitt_12"/>
+    </messageInTransaction>
+  </ElementCondition>
+
+  <GroupType id="GRP_StandaardGroep">
+    <description>Standaard Groep</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:19</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </GroupType>
+
+  <GroupType id="StandardGroupType">
+    <description>Standard Group Type</description>
+    <dateLaMu>2021-12-02T09:58:53</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language>NL</language>
+  </GroupType>
+
+  <GroupType id="standaardGroep">
+    <description>Standaard groep</description>
+    <state>active</state>
+    <dateLaMu>2023-09-22T15:42:24</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </GroupType>
+
+  <MessageInTransactionType id="BerichtInTransactie1">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="msgWiltuDeKaartZien"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhStart"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie10">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="msgVraag"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t2_VraagOberAanKok"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhStart"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie10a">
+    <dateLaMu>2023-09-22T14:49:33</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgVraag"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="t2_VraagOberAanKok"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie11">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+    <message>
+      <MessageTypeRef idref="msgAntwoord"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie10"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie10a"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t2_VraagOberAanKok"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhAccept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie12">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="msgPlaatsingBestelling"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie7"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t3_OpdrachtKok"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhStart"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="MC_MaarEenBestellingToegestaan"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie12a">
+    <dateLaMu>2023-09-22T14:54:52</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgPlaatsingBestelling"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="t3_OpdrachtKok"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="MC_MaarEenKokAanschrijven"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie13">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+    <message>
+      <MessageTypeRef idref="msgBestellingAkkoord"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie12a"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t3_OpdrachtKok"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhAccept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie14">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+    <message>
+      <MessageTypeRef idref="msgBestellingNietAkkoord"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie12a"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t3_OpdrachtKok"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhAccept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie15">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="msgVraag"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie10"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie10a"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie12a"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhStart"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="MC_GeenVraagAanHulpAlsOberAntwoordHeeft"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie16">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+      <MessageTypeRef idref="msgAntwoord"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie15"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhAccept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie17">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgAntwoordIsOvergenomen"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="MC_AntwoordIsVerstuurd"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie18">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgAntwoordWordtNietGebruikt"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="MC_AntwoordNietGebruikt"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie19">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgBestellingIsAfgekeurdOpBasisVanAntwoord"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="MC_AfkeuringIsVerstuurd"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie20">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgBestellingIsGoedgekeurdOpBasisVanAntwoord"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie16"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t4_VraagKokAanKeukenhulp"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="MC_GoedkeuringIsVerstuurd"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie2a">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+      <MessageTypeRef idref="msgNee"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie1"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhAccept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie2b">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+      <MessageTypeRef idref="msgNeeMetCommentaar"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie1"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhAccept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie3">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="msgJa"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie1"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhRequest"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie4">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+      <MessageTypeRef idref="msgAanbiedingMenuKaart"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie3"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhPromise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie5">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+      <MessageTypeRef idref="msgVraag"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie4"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie6"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie8"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhWijzigingHold"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie6">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>true</openSecondaryTransactionsAllowed>
+    <message>
+      <MessageTypeRef idref="msgAntwoord"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie5"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhPromise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+    <appendixTypes>
+      <AppendixTypeRef idref="AppVideo"/>
+    </appendixTypes>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie7">
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+      <MessageTypeRef idref="msgPlaatsingBestelling"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie4"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie6"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie8"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhMeldingGereed"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie8">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+      <MessageTypeRef idref="msgBestellingNietAkkoord"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhPromise"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="BerichtInTransactie9">
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <message>
+      <MessageTypeRef idref="msgBestellingAkkoord"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="t1_OpnameBestelling"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhAccept"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_144985">
+    <dateLaMu>2023-09-22T15:42:24</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Sendafter_andConditie_afsluitbericht"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_144986"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_Sendafter_andConditie_hoofdtransactie"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="MC_13844"/>
+      <MessageInTransactionTypeConditionRef idref="MC_13845"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_144986">
+    <dateLaMu>2023-09-22T15:42:25</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Sendafter_andConditie_startbericht"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_Sendafter_andConditie_hoofdtransactie"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_144987">
+    <dateLaMu>2023-09-22T15:42:25</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Sendafter_andConditie_EersteSubBericht"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_144986"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_Sendafter_andConditie_EersteSubtransactie"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="MC_13846"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_144988">
+    <dateLaMu>2023-09-22T15:42:25</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Sendafter_andConditie_TweedeSubBericht"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_144986"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_Sendafter_andConditie_TweedeSubtransactie"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="MC_13847"/>
+      <MessageInTransactionTypeConditionRef idref="MC_13850"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_145019">
+    <dateLaMu>2024-06-04T10:32:54</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Sendafter_andConditie_DerdeSubBericht"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_144986"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_Sendafter_andConditie_DerdeSubtransactie"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+    <conditions>
+      <MessageInTransactionTypeConditionRef idref="MC_13848"/>
+      <MessageInTransactionTypeConditionRef idref="MC_13849"/>
+    </conditions>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_145043">
+    <dateLaMu>2024-06-10T13:51:19</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msg_OneBackPlease"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TrRevokeAlternative"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhRevokeRequest"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_145044">
+    <dateLaMu>2024-06-10T13:51:23</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="msg_OneBackOK"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_145043"/>
+      <MessageInTransactionTypeRef idref="MT_145047"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TrRevokeAlternative"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhRevokeAllow"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_145045">
+    <dateLaMu>2024-06-10T13:51:25</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="msg_OneBackNotAccepted"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_145043"/>
+      <MessageInTransactionTypeRef idref="MT_145047"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TrRevokeAlternative"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhRevokeRefuse"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_145046">
+    <dateLaMu>2024-06-10T13:51:33</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="msg_OneBackQuestion"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_145043"/>
+      <MessageInTransactionTypeRef idref="MT_145047"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TrRevokeAlternative"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_145047">
+    <dateLaMu>2024-06-10T13:51:35</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msg_OneBackPleaseExtraInfo"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_145046"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TrRevokeAlternative"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97031">
+    <dateLaMu>2021-12-02T11:04:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_FM_zonder"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_fm1"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97032">
+    <dateLaMu>2021-12-02T11:04:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_FM_met"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_fm1"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97033">
+    <dateLaMu>2021-12-02T11:05:37</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_FM_gekoppeld"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97032"/>
+      <MessageInTransactionTypeRef idref="MT_97031"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_fm2"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97035">
+    <dateLaMu>2021-12-02T13:15:19</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="Msg_47"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="tra_Basetypes"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97036">
+    <dateLaMu>2021-12-02T13:15:19</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="Msg_47_2"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97035"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="tra_Basetypes"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97037">
+    <dateLaMu>2021-12-02T13:15:19</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="Msg_47_3"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97035"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="tra_Basetypes"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97038">
+    <dateLaMu>2021-12-02T13:15:19</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="Msg_47_3_2"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97035"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="tra_Basetypes"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97039">
+    <dateLaMu>2021-12-02T13:15:20</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="Msg_47_2_2"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97035"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="tra_Basetypes"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97040">
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="Msg_49_5"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97044"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="tra_UDT"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97041">
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="Msg_49_3"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97044"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="tra_UDT"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97042">
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="Msg_49_4"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97044"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="tra_UDT"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97043">
+    <dateLaMu>2021-12-02T13:15:28</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="Msg_49_2"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97044"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="tra_UDT"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97044">
+    <dateLaMu>2021-12-02T13:15:28</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="Msg_49"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="tra_UDT"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97047">
+    <dateLaMu>2021-12-13T12:07:49</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Bericht"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_TestGelijkeInitiatorEnExecutor"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97048">
+    <dateLaMu>2021-12-13T12:08:01</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Bericht"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97047"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_TestGelijkeInitiatorEnExecutor"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97049">
+    <dateLaMu>2021-12-13T13:10:11</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start1"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_MeerdereStartberichtenTR1"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97050">
+    <dateLaMu>2021-12-13T13:10:13</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start2"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_MeerdereStartberichtenTR1"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97051">
+    <dateLaMu>2021-12-13T13:10:45</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start_sub1"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97049"/>
+      <MessageInTransactionTypeRef idref="MT_97050"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_MeerdereStartberichtenTR2"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97052">
+    <dateLaMu>2021-12-13T13:10:46</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start_sub2"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97049"/>
+      <MessageInTransactionTypeRef idref="MT_97050"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_MeerdereStartberichtenTR2"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97053">
+    <dateLaMu>2021-12-13T13:12:14</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start_sub_andere"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97050"/>
+      <MessageInTransactionTypeRef idref="MT_97049"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_MeerdereStartberichtenTR3"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97055">
+    <dateLaMu>2021-12-13T13:14:14</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_antwoord"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97049"/>
+      <MessageInTransactionTypeRef idref="MT_97050"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_MeerdereStartberichtenTR1"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97998">
+    <dateLaMu>2022-01-25T15:49:38</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start1_2"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_32"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_97999">
+    <dateLaMu>2022-01-25T15:51:29</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start1_2_2"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_98012"/>
+      <MessageInTransactionTypeRef idref="MT_97998"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_32"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_98000">
+    <dateLaMu>2022-01-25T15:52:03</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <openSecondaryTransactionsAllowed>false</openSecondaryTransactionsAllowed>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start1_2_3"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_98012"/>
+      <MessageInTransactionTypeRef idref="MT_97998"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_32"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_98001">
+    <dateLaMu>2022-01-25T15:52:32</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start1_2_4"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97998"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_32_2"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_98002">
+    <dateLaMu>2022-01-25T15:52:34</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start1_2_5"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_98001"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_32_2"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_98011">
+    <dateLaMu>2022-01-25T23:43:49</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start1_2_4_3"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_97998"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_32_2"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_98012">
+    <dateLaMu>2022-01-25T23:43:54</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start1_2_5"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_98011"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_32_2"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MT_98013">
+    <dateLaMu>2022-01-26T00:27:07</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Bericht_start1_2_3_2"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MT_98012"/>
+      <MessageInTransactionTypeRef idref="MT_97998"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_32"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc1Accept">
+    <dateLaMu>2024-06-10T11:37:45</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitPuc1Declare"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_1"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc1Declare">
+    <dateLaMu>2024-06-10T11:37:45</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Declare"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitPuc1Promise"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_1"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc1Promise">
+    <dateLaMu>2024-06-10T11:37:45</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Promise"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitPuc1Request"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_1"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc1Reject">
+    <dateLaMu>2024-06-10T11:37:45</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Reject"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitPuc1Declare"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_1"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc1Request">
+    <dateLaMu>2024-06-10T11:37:46</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_1"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc2Accept">
+    <dateLaMu>2024-06-10T11:37:49</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitPuc2Declare"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_2"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc2Declare">
+    <dateLaMu>2024-06-10T11:37:49</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Declare"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitPuc2Promise"/>
+      <MessageInTransactionTypeRef idref="MitPuc2Request"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_2"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc2Promise">
+    <dateLaMu>2024-06-10T11:37:49</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Promise"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitPuc2Request"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_2"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc2Reject">
+    <dateLaMu>2024-06-10T11:37:49</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Reject"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitPuc2Declare"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_2"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc2Request">
+    <dateLaMu>2024-06-10T11:37:49</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_2"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc3Accept">
+    <dateLaMu>2024-06-10T11:37:54</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitPuc3Declare"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_3"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc3Declare">
+    <dateLaMu>2024-06-10T11:37:54</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Declare"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitPuc3Promise"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_3"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc3Promise">
+    <dateLaMu>2024-06-10T11:37:54</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Promise"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitPuc3Request"/>
+      <MessageInTransactionTypeRef idref="MitPuc3Promise"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_3"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc3Reject">
+    <dateLaMu>2024-06-10T11:37:54</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Reject"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitPuc3Declare"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_3"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitPuc3Request">
+    <dateLaMu>2024-06-10T11:37:54</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_PromiseCase_3"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitRevokeRevokeAllow">
+    <dateLaMu>2024-06-10T11:59:54</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MsgRevokeAllow"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitRevokeRevokeRequest"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TrRevoke"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhRevokeAllow"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitRevokeRevokeRefuse">
+    <dateLaMu>2024-06-10T11:59:56</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MsgRevokeRefuse"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitRevokeRevokeRequest"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TrRevoke"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhRevokeRefuse"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitRevokeRevokeRequest">
+    <dateLaMu>2024-06-10T11:59:53</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MsgRevokeRequest"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TrRevoke"/>
+    </transaction>
+    <transactionPhase>
+      <TransactionPhaseTypeRef idref="PhRevokeRequest"/>
+    </transactionPhase>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitRucAccept">
+    <dateLaMu>2024-06-10T13:59:50</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Accept"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitRucDeclareNoRevokeTest"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TrRevokeCase"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitRucDeclareNoRevokeTest">
+    <dateLaMu>2024-06-10T13:59:50</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <revokeAllowed>false</revokeAllowed>
+    <message>
+      <MessageTypeRef idref="MS_Declare"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitRucPromise"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TrRevokeCase"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitRucDeclineAlternativeRevokeTransaction">
+    <dateLaMu>2024-06-10T14:01:56</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <revokeAllowed>true</revokeAllowed>
+    <message>
+      <MessageTypeRef idref="MS_Decline"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitRucRequest1"/>
+      <MessageInTransactionTypeRef idref="MitRucRequest2"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TrRevokeCase"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+    <revokePattern>
+      <TransactionTypeRef idref="TrRevokeAlternative"/>
+    </revokePattern>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitRucPromise">
+    <dateLaMu>2024-06-10T13:59:50</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <firstMessage>false</firstMessage>
+    <message>
+      <MessageTypeRef idref="MS_Promise"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitRucRequest1"/>
+      <MessageInTransactionTypeRef idref="MitRucRequest2"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TrRevokeCase"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitRucReject">
+    <dateLaMu>2024-06-10T13:59:50</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Reject"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitRucDeclareNoRevokeTest"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TrRevokeCase"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitRucRequest1">
+    <dateLaMu>2024-06-10T13:59:50</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TrRevokeCase"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="standaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="MitRucRequest2">
+    <dateLaMu>2024-06-10T14:02:05</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <revokeAllowed>true</revokeAllowed>
+    <message>
+      <MessageTypeRef idref="MS_Request"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="MitRucDeclineAlternativeRevokeTransaction"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TrRevokeCase"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="GRP_StandaardGroep"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="Mitt_1">
+    <dateLaMu>2024-01-15T10:46:02</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgOvernemenElementenInhoudA1"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_OvernemenElementenT5"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="Mitt_10">
+    <dateLaMu>2024-02-02T07:55:20</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgOvernemenElementenInhoudC2"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_9"/>
+      <MessageInTransactionTypeRef idref="Mitt_12"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_OvernemenElementenT6"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="Mitt_11">
+    <dateLaMu>2024-02-02T07:55:43</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="msgOvernemenElementenInhoudC1"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_9"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_OvernemenElementenT7"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="Mitt_12">
+    <dateLaMu>2024-02-02T07:55:49</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgOvernemenElementenInhoudC2"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_11"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_OvernemenElementenT7"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="Mitt_2">
+    <dateLaMu>2024-01-15T10:53:00</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgOvernemenElementenInhoudB"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_4"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_OvernemenElementenT5"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="Mitt_3">
+    <dateLaMu>2024-01-15T10:53:13</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="msgOvernemenElementenInhoudA1"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_1"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_OvernemenElementenT6"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="Mitt_4">
+    <dateLaMu>2024-01-15T10:53:43</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgOvernemenElementenInhoudA2"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_6"/>
+      <MessageInTransactionTypeRef idref="Mitt_3"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_OvernemenElementenT6"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="Mitt_5">
+    <dateLaMu>2024-01-15T10:54:17</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="msgOvernemenElementenInhoudA1"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_3"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_OvernemenElementenT7"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="Mitt_6">
+    <dateLaMu>2024-01-15T10:54:25</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgOvernemenElementenInhoudA2"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_5"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_OvernemenElementenT7"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="Mitt_7">
+    <dateLaMu>2024-02-02T07:53:36</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgOvernemenElementenInhoudC1"/>
+    </message>
+    <transaction>
+      <TransactionTypeRef idref="TR_OvernemenElementenT5"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="Mitt_8">
+    <dateLaMu>2024-02-02T07:54:31</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>false</initiatorToExecutor>
+    <message>
+      <MessageTypeRef idref="msgOvernemenElementenInhoudD"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_10"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_OvernemenElementenT5"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionType id="Mitt_9">
+    <dateLaMu>2024-02-02T07:54:50</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <state>active</state>
+    <initiatorToExecutor>true</initiatorToExecutor>
+    <firstMessage>true</firstMessage>
+    <message>
+      <MessageTypeRef idref="msgOvernemenElementenInhoudC1"/>
+    </message>
+    <previous>
+      <MessageInTransactionTypeRef idref="Mitt_7"/>
+    </previous>
+    <transaction>
+      <TransactionTypeRef idref="TR_OvernemenElementenT6"/>
+    </transaction>
+    <group>
+      <GroupTypeRef idref="StandardGroupType"/>
+    </group>
+  </MessageInTransactionType>
+
+  <MessageInTransactionTypeCondition id="MC_13844">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="MT_144988"/>
+    </sendAfter>
+    <state>active</state>
+    <dateLaMu>2023-09-22T15:42:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Werkt in combinatie met MC_NietAfsluitenVoorEersteSubtransactie</helpInfo>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_13845">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="MT_144988"/>
+    </sendAfter>
+    <state>active</state>
+    <dateLaMu>2023-09-22T15:42:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Werkt in combinatie met MC_NietAfsluitenVoorEersteSubtransactie</helpInfo>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_13846">
+    <sendBefore>
+      <MessageInTransactionTypeRef idref="MT_144987"/>
+    </sendBefore>
+    <state>active</state>
+    <dateLaMu>2023-09-22T15:42:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Testen dat na verzending subtransactie 1 alleen nog subtransactie 2 aangeboden wordt.</helpInfo>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_13847">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="MT_144987"/>
+    </sendAfter>
+    <state>active</state>
+    <dateLaMu>2023-09-22T15:42:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Testen dat eerst aklleen de eerste subtransactie aangeboden wordt</helpInfo>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_13848">
+    <sendBefore>
+      <MessageInTransactionTypeRef idref="MT_144988"/>
+    </sendBefore>
+    <state>active</state>
+    <dateLaMu>2024-06-04T10:45:23</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_13849">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="MT_144987"/>
+    </sendAfter>
+    <state>active</state>
+    <dateLaMu>2024-06-04T10:46:45</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_13850">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="MT_145019"/>
+    </sendAfter>
+    <state>active</state>
+    <dateLaMu>2024-06-04T10:47:08</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_AfkeuringIsVerstuurd">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
+    </sendAfter>
+    <helpInfo>Melden dat een afkeuring van de bestelling is verstuurd op basis van het antwoord mag alleen nadat die afkeuring verstuurd is.</helpInfo>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_AntwoordIsVerstuurd">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
+    </sendAfter>
+    <helpInfo>Antwoord is overgenomen mag alleen aangeboden worden nadat de kok een antwoord terug aan de ober gegeven heeft.</helpInfo>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_AntwoordNietGebruikt">
+    <sendBefore>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
+    </sendBefore>
+    <helpInfo>Melden dat het antwoord niet gebruikt is, mag alleen maar gekozen worden zolang er nog geen antwoord terug naar de ober gestuurd is.</helpInfo>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_GeenVraagAanHulpAlsOberAntwoordHeeft">
+    <sendBefore>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie11"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie14"/>
+    </sendBefore>
+    <helpInfo>Testcase: Als de kok het antwoord op de bestelling of de vraag gegeven heeft, mag er geen vraag meer naar de keukenhulp.</helpInfo>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_GoedkeuringIsVerstuurd">
+    <sendAfter>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie13"/>
+    </sendAfter>
+    <helpInfo>Melden dat een goedkeuring van de bestelling is verstuurd op basis van het antwoord mag alleen nadat die goedkeuring verstuurd is.</helpInfo>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_MaarEenBestellingToegestaan">
+    <sendBefore>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie12"/>
+    </sendBefore>
+    <dateLaMu>2023-09-22T14:57:04</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Testcase: als de klant een bestelling aan de ober geeft, mag er maar 1 bestelling naar de keuken gaan om dubbele bestellingen te voorkomen.</helpInfo>
+  </MessageInTransactionTypeCondition>
+
+  <MessageInTransactionTypeCondition id="MC_MaarEenKokAanschrijven">
+    <sendBefore>
+      <MessageInTransactionTypeRef idref="BerichtInTransactie12a"/>
+    </sendBefore>
+    <state>active</state>
+    <dateLaMu>2023-09-22T14:59:01</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Testcase: als de ober een bestelling aan de keuken geeft, mag dat maar 1 bestelling aan 1 kok zijn om dubbele bestellingen te voorkomen.</helpInfo>
+  </MessageInTransactionTypeCondition>
+
+  <MessageType id="MS_Accept">
+    <description>Accept</description>
+    <state>active</state>
+    <dateLaMu>2024-06-10T11:37:45</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht">
+    <description>Basis testbericht</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T11:21:50</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_antwoord">
+    <description>Antwoordbericht</description>
+    <state>active</state>
+    <dateLaMu>2021-12-13T13:14:08</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1">
+    <description>Startbericht 1</description>
+    <state>active</state>
+    <dateLaMu>2021-12-13T13:09:13</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2">
+    <description>Indiening (Opensecundary test)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-25T15:51:47</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_2">
+    <description>Opensecundary true (Er moet minimaal 1 subtransactie gesloten zijn als er subtransacties zijn)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-26T09:26:03</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_3">
+    <description>Opensecundary false (Staat niet explicitet in de documantatie, maar alle subtransacties moeten afgesloten zijn?)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-26T09:50:17</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_3_2">
+    <description>Opensecundary geen waarde (Geen beperkingen, alle subtransactie mgen nog open zijn)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-26T09:26:34</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_3_2_2">
+    <description>afkeuring</description>
+    <state>active</state>
+    <dateLaMu>2022-01-26T14:23:24</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_3_2_2_2">
+    <description>neg adv</description>
+    <state>active</state>
+    <dateLaMu>2022-01-26T14:24:34</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_3_2_2_3">
+    <description>a (3)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-26T14:23:13</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_4">
+    <description>Adviesverzoek met afsluitend advies(Opensecundary test)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-25T16:32:03</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_4_2">
+    <description>Adviesverzoek met goed te keuren advies (Opensecundary test)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-25T16:05:41</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_4_2_2">
+    <description>Afkeuring Advies (Opensecundary test)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-25T16:15:08</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_4_2_3">
+    <description>Goedkeuring advies (Opensecundary test)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-25T16:15:39</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_4_2_3_2">
+    <description>Goedkeuring advies (Opensecundary test) (2)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-25T16:32:51</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_4_2_4">
+    <description>Adviesverzoek met goed te keuren advies en terugkeer (Opensecundary test)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-25T16:32:42</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_4_3">
+    <description>Adviesverzoek met afsluitend advies en terugkeer (Opensecundary test)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-25T23:43:41</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start1_2_5">
+    <description>Advies (Opensecundary test)</description>
+    <state>active</state>
+    <dateLaMu>2022-01-25T16:01:48</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start2">
+    <description>Startbericht 2</description>
+    <state>active</state>
+    <dateLaMu>2021-12-13T13:09:25</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start_sub1">
+    <description>Subtransactie Startbericht 1</description>
+    <state>active</state>
+    <dateLaMu>2021-12-13T13:09:53</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start_sub2">
+    <description>Subtransactie Startbericht2</description>
+    <state>active</state>
+    <dateLaMu>2021-12-13T13:10:02</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Bericht_start_sub_andere">
+    <description>Andere subtransactie Startbericht</description>
+    <state>active</state>
+    <dateLaMu>2021-12-13T13:12:06</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Declare">
+    <description>Declare</description>
+    <state>active</state>
+    <dateLaMu>2024-06-10T11:37:45</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Decline">
+    <description>Decline</description>
+    <state>active</state>
+    <dateLaMu>2024-06-10T14:01:50</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_FM_gekoppeld">
+    <description>Startbericht met firstMessage gekoppeld</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T11:05:28</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_FM_gekoppeld_verboden">
+    <description>Startbericht zonder firstMessage dus niet aanbieden</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T11:06:59</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_FM_met">
+    <description>Startbericht met firstMessage</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T11:04:19</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_FM_zonder">
+    <description>Startbericht zonder firstMessage</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T11:04:03</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Promise">
+    <description>Promise</description>
+    <state>active</state>
+    <dateLaMu>2024-06-10T11:37:45</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Reject">
+    <description>Reject</description>
+    <state>active</state>
+    <dateLaMu>2024-06-10T11:37:45</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </MessageType>
+
+  <MessageType id="MS_Request">
+    <description>Request</description>
+    <state>active</state>
+    <dateLaMu>2024-06-10T11:37:46</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Sendafter_andConditie_DerdeSubBericht">
+    <description>Sendafter AND-Conditie DerdeSubBericht</description>
+    <state>active</state>
+    <dateLaMu>2024-06-04T10:32:17</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Sendafter_andConditie_EersteSubBericht">
+    <description>Sendafter AND-Conditie EersteSubBericht</description>
+    <state>active</state>
+    <dateLaMu>2023-09-22T15:42:25</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Sendafter_andConditie_TweedeSubBericht">
+    <description>Sendafter AND-Conditie TweedeSubBericht</description>
+    <state>active</state>
+    <dateLaMu>2023-09-22T15:42:25</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Sendafter_andConditie_afsluitbericht">
+    <description>Sendafter AND-Conditie afsluitbericht</description>
+    <state>active</state>
+    <dateLaMu>2023-09-22T15:42:24</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MS_Sendafter_andConditie_startbericht">
+    <description>Sendafter AND-Conditie startbericht</description>
+    <state>active</state>
+    <dateLaMu>2023-09-22T15:42:24</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Basis"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MsgRevokeAllow">
+    <description>Revoke allow</description>
+    <state>active</state>
+    <dateLaMu>2024-06-11T14:18:39</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeRevokeAllow"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MsgRevokeRefuse">
+    <description>Revoke refuse</description>
+    <state>active</state>
+    <dateLaMu>2024-06-11T14:15:06</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeRevokeRefuse"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="MsgRevokeRequest">
+    <description>Revoke request</description>
+    <state>active</state>
+    <dateLaMu>2024-06-11T14:15:01</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeRevokeRequest"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="Msg_47">
+    <description>Basetypes</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:29:52</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Dit bericht test meerdere zaken: 1 CE zowel in een tabel als normaal in hetzelfde bericht Alle basetypes testen of ze zowel in tabelvorm als in normale lijst vorm juist ondersteund worden</helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="ce23"/>
+      <ComplexElementTypeRef idref="ce24"/>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="Msg_47_2">
+    <description>Default FIXED reactie op Basetypes</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:29:56</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Dit bericht test meerdere zaken: 1 CE zowel in een tabel als normaal in hetzelfde bericht Alle basetypes testen of ze zowel in tabelvorm als in normale lijst vorm juist ondersteund worden</helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="ce23"/>
+      <ComplexElementTypeRef idref="ce24"/>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="Msg_47_2_2">
+    <description>Ingestelde FIXED reactie op Basetypes</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:30:23</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Test of alles niet aanpasbaar is</helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="ce23"/>
+      <ComplexElementTypeRef idref="ce24"/>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="Msg_47_3">
+    <description>EMPTY Basetypes</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:30:00</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Alles moet leeg zijn</helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="ce23"/>
+      <ComplexElementTypeRef idref="ce24"/>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="Msg_47_3_2">
+    <description>FREE Basetypes</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:30:10</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Alles moet aanpasbaar zijn</helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="ce23"/>
+      <ComplexElementTypeRef idref="ce24"/>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="Msg_49">
+    <description>User defined types</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:27:43</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="ce26"/>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="Msg_49_2">
+    <description>Ingestelde FIXED reactie User defined types</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:46:54</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="ce26"/>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="Msg_49_3">
+    <description>EMPTY User defined types</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:27:56</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="ce26"/>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="Msg_49_4">
+    <description>FREE User defined types</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:27:52</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="ce26"/>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="Msg_49_5">
+    <description>Default FIXED reactie User defined types</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:28:00</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <complexElements>
+      <ComplexElementTypeRef idref="ce26"/>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgAanbiedingMenuKaart">
+    <description>Menukaart</description>
+    <dateLaMu>2024-01-08T17:08:06</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <appendixMandatory>true</appendixMandatory>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeMenuKaartType"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgAntwoord">
+    <description>Antwoord</description>
+    <dateLaMu>2024-01-08T17:07:47</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <appendixMandatory>false</appendixMandatory>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeVraag"/>
+      <ComplexElementTypeRef idref="CeAntwoord"/>
+    </complexElements>
+    <appendixTypes>
+      <AppendixTypeRef idref="AppTekening"/>
+    </appendixTypes>
+  </MessageType>
+
+  <MessageType id="msgAntwoordIsOvergenomen">
+    <description>Antwoord is overgenomen in antwoord aan ober</description>
+    <helpInfo>Dit bericht wordt alleen aangeboden als de kok een Antwoord naar de ober gestuurd heeft.</helpInfo>
+    <appendixMandatory>false</appendixMandatory>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeVraag"/>
+      <ComplexElementTypeRef idref="CeAntwoord"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgAntwoordWordtNietGebruikt">
+    <description>Antwoord wordt niet gebruikt</description>
+    <helpInfo>Dit bericht wordt aangeboden zolang de kok nog niet gereageerd heeft naar de ober. Hiermee sluit hij de transactie af en kan bijvoorbeeld een andere keukenhulp inschakelen.</helpInfo>
+    <appendixMandatory>false</appendixMandatory>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeVraag"/>
+      <ComplexElementTypeRef idref="CeAntwoord"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgBestellingAkkoord">
+    <description>Bestelling: akkoord</description>
+    <dateLaMu>2024-01-08T17:07:18</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <appendixMandatory>false</appendixMandatory>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgBestellingIsAfgekeurdOpBasisVanAntwoord">
+    <description>Bestelling is afgekeurd op basis van antwoord</description>
+    <helpInfo>Dit bericht wordt alleen aangeboden als de kok een Niet akkoord naar de ober gestuurd heeft.</helpInfo>
+    <appendixMandatory>false</appendixMandatory>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeVraag"/>
+      <ComplexElementTypeRef idref="CeAntwoord"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgBestellingIsGoedgekeurdOpBasisVanAntwoord">
+    <description>Bestelling is goedgekeurd op basis van antwoord</description>
+    <helpInfo>Dit bericht wordt alleen aangeboden als de kok een Akkoord naar de ober gestuurd heeft.</helpInfo>
+    <appendixMandatory>false</appendixMandatory>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeVraag"/>
+      <ComplexElementTypeRef idref="CeAntwoord"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgBestellingNietAkkoord">
+    <description>Bestelling: niet akkoord</description>
+    <dateLaMu>2024-01-08T17:07:33</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <appendixMandatory>false</appendixMandatory>
+    <complexElements>
+      <ComplexElementTypeRef idref="CE_Opmerkingen"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgJa">
+    <description>Antwoord: Ja</description>
+    <dateLaMu>2021-12-02T09:59:49</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language></language>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeMenuKaartType"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgNee">
+    <description>Antwoord: Nee ™</description>
+  </MessageType>
+
+  <MessageType id="msgNeeMetCommentaar">
+    <description>Antwoord: Nee (met commentaar)</description>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeMenukaartvraag"/>
+      <ComplexElementTypeRef idref="CeCommentaar"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgOvernemenElementenInhoudA1">
+    <description>Inhoud A1</description>
+    <dateLaMu>2024-01-15T10:45:51</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <language></language>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeComplexAB"/>
+      <ComplexElementTypeRef idref="CeMenuKaart"/>
+      <ComplexElementTypeRef idref="CeDagMenu"/>
+      <ComplexElementTypeRef idref="CeDrankenKaart"/>
+      <ComplexElementTypeRef idref="CeBestelling"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgOvernemenElementenInhoudA2">
+    <description>Inhoud A2</description>
+    <dateLaMu>2024-01-15T10:45:55</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <language></language>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeComplexAB"/>
+      <ComplexElementTypeRef idref="CeMenuKaart"/>
+      <ComplexElementTypeRef idref="CeDagMenu"/>
+      <ComplexElementTypeRef idref="CeDrankenKaart"/>
+      <ComplexElementTypeRef idref="CeBestelling"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgOvernemenElementenInhoudB">
+    <description>Inhoud B</description>
+    <dateLaMu>2024-01-15T10:40:24</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <language></language>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeComplexAB"/>
+      <ComplexElementTypeRef idref="CeMenuKaartB"/>
+      <ComplexElementTypeRef idref="CeDagMenuB"/>
+      <ComplexElementTypeRef idref="CeDrankenKaartB"/>
+      <ComplexElementTypeRef idref="CeBestellingB"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgOvernemenElementenInhoudC1">
+    <description>Inhoud C1</description>
+    <dateLaMu>2024-02-02T07:52:54</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <language></language>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeComplexC"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgOvernemenElementenInhoudC2">
+    <description>Inhoud C2</description>
+    <dateLaMu>2024-02-02T07:52:57</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <language></language>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeComplexC"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgOvernemenElementenInhoudD">
+    <description>Inhoud D</description>
+    <dateLaMu>2024-02-02T07:53:00</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <language></language>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeComplexD"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgPlaatsingBestelling">
+    <description>Bestelling</description>
+    <dateLaMu>2024-01-08T17:08:55</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <appendixMandatory>false</appendixMandatory>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeReactietermijn"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgVraag">
+    <description>Vraag</description>
+    <dateLaMu>2024-01-08T17:09:18</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <appendixMandatory>false</appendixMandatory>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeVraag"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msgWiltuDeKaartZien">
+    <description>Wilt u de menukaart zien?</description>
+    <dateLaMu>2021-12-02T09:46:33</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language>NL</language>
+    <appendixMandatory>false</appendixMandatory>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeMenukaartvraag"/>
+      <ComplexElementTypeRef idref="CeReactietermijn"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msg_OneBackNotAccepted">
+    <description>Not accepted to go one messge back</description>
+    <state>active</state>
+    <dateLaMu>2024-06-10T13:51:31</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeRevokeRefuse"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msg_OneBackOK">
+    <description>OK to go one message back in the process</description>
+    <state>active</state>
+    <dateLaMu>2024-06-10T13:48:13</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeRevokeAllow"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msg_OneBackPlease">
+    <description>One back please</description>
+    <state>active</state>
+    <dateLaMu>2024-06-10T13:47:30</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeRevokeRequest"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msg_OneBackPleaseExtraInfo">
+    <description>One back please (with exta information)</description>
+    <state>active</state>
+    <dateLaMu>2024-06-10T13:50:29</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeRevokeRequest"/>
+    </complexElements>
+  </MessageType>
+
+  <MessageType id="msg_OneBackQuestion">
+    <description>Question about going one messge back</description>
+    <state>active</state>
+    <dateLaMu>2024-06-10T13:49:40</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeRevokeRefuse"/>
+    </complexElements>
+  </MessageType>
+
+  <OrganisationType id="StandardOrganisationType">
+    <description>Standard organisation type</description>
+    <dateLaMu>2021-12-02T09:59:14</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language>NL</language>
+    <code>r</code>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeOrganisatie"/>
+    </complexElements>
+  </OrganisationType>
+
+  <PersonType id="StandardPersonType">
+    <description>Standaard person type</description>
+  </PersonType>
+
+  <ProjectType id="ProjectType1">
+    <namespace>http://www.visi.nl/schemas/20220930/_7_1_8_v_11</namespace>
+    <description>VISI Testscenario's Raamwerk ©</description>
+    <dateLaMu>2024-06-13T15:49:24</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language></language>
+    <complexElements>
+      <ComplexElementTypeRef idref="CeSOAP"/>
+    </complexElements>
+  </ProjectType>
+
+  <RoleType id="RoA">
+    <description>Role A</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T15:47:25</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </RoleType>
+
+  <RoleType id="RoB">
+    <description>Role B</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T15:47:28</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </RoleType>
+
+  <RoleType id="RoC">
+    <description>Role C</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T15:47:31</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </RoleType>
+
+  <RoleType id="RoD">
+    <description>Role D</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T15:47:35</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </RoleType>
+
+  <RoleType id="RoExecutor">
+    <description>Executor</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T15:12:41</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </RoleType>
+
+  <RoleType id="RoRevoke">
+    <description>Revoke role</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T14:58:55</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </RoleType>
+
+  <RoleType id="keukenhulp">
+    <description>Keukenhûlp</description>
+  </RoleType>
+
+  <RoleType id="klant">
+    <description>Klant</description>
+  </RoleType>
+
+  <RoleType id="kok">
+    <description>Køk</description>
+    <dateLaMu>2021-12-02T09:59:22</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language>Nederlands</language>
+    <code>i</code>
+  </RoleType>
+
+  <RoleType id="ober">
+    <description>Obèr</description>
+    <dateLaMu>2021-12-02T10:04:50</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language>EN</language>
+    <responsibilityScope>Scope/kader waarbinnen de verantwoordelijkheden behorende bij de betreffende rol zijn gedefinieerd</responsibilityScope>
+    <responsibilityTask>Taken die voortkomen uit de verantwoordelijkheden van de betreffende rol</responsibilityTask>
+    <responsibilitySupportTask>Taken die worden uitgevoerd om andere rollen te ondersteunen. Denk hierbij bijvoorbeeld aan gedelegeerde verantwoordelijkheden</responsibilitySupportTask>
+    <responsibilityFeedback>Terugkoppeling die vanuit de verantwoordelijkheid van de rol wordt verwacht richting andere rollen</responsibilityFeedback>
+  </RoleType>
+
+  <SimpleElementType id="AantalLagen">
+    <description>Aantal lagen in de tekening</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="INTEGER"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="Antwoord">
+    <description>Antwoord</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="Auteur">
+    <description>Auteur</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="GewensteReactietermijn">
+    <description>Gewenste reactietermijn</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="DATE"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="JaNee">
+    <description>true or false / Ja of Nee</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="BOOLEAN"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="MenuKaartType">
+    <description>Type ©</description>
+    <dateLaMu>2021-12-02T10:02:39</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language>NL</language>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="NaamGerecht">
+    <description>Naam van het gerecht</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="NaamMenukaartItem">
+    <description>Naam</description>
+    <dateLaMu>2021-12-02T09:48:22</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language>NL</language>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="Omschrijving">
+    <description>Omschrijving</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="Opmerking">
+    <description>Opmerking ®</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SE_Contractnummer">
+    <description>UDT Keuzelijst 1 optie andere vorm</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language></language>
+    <helpInfo>Contractnummer van de opdrachtgever waar het product of levering onder bekend staat</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="UDT_Contractnummer"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SE_Opmerkingen">
+    <description>Eenmalige opmerkingen</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:19</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language></language>
+    <helpInfo>Te maken opmerking per bericht invulbaar. Bij een nieuw bericht wordt deze steeds leeggemaakt.</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="UDT_optionele_tekst"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SE_Tekstveld">
+    <description>Tekstveld</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T11:00:53</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SOAPCentralServerURL">
+    <description>SOAP Central Server URL</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SOAPProtocol">
+    <description>SOAP Protocol</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SOAPServerURL">
+    <description>SOAP Server URL</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeBoolean">
+    <description>Boolean</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="BOOLEAN"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeCommentaar">
+    <description>Commentaar</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING_MINLENGTH_1"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeDate">
+    <description>Date / Datum</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="DATE"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeDatetime">
+    <description>Datetime / Datum &amp; tijd</description>
+    <dateLaMu>2021-12-02T16:51:14</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="DATETIME"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeDecimal">
+    <description>Decimal / Decimaal</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="DECIMAL"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeHoeveelheid">
+    <description>Hoeveelheid</description>
+    <helpInfo>De hoeveelheid drankjes die besteld zijn</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="INTEGER"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeInteger">
+    <description>Integer / Geheel getal</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="INTEGER"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeKeuzelijst">
+    <description>UDT Enumeration / Keuzelijst</description>
+    <dateLaMu>2021-12-02T13:28:17</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="ENUMERATION"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SePrijs">
+    <description>UDT DECIMAL Euro's verplicht</description>
+    <dateLaMu>2021-12-02T13:40:29</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="DECIMAL_EURO"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeRevokeAllowanceExplanation">
+    <description>Allowance explanation</description>
+    <state>active</state>
+    <dateLaMu>2024-06-11T14:17:17</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="UDT_optionele_tekst"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeRevokeRefusalReason">
+    <description>Reason for refusal</description>
+    <state>active</state>
+    <dateLaMu>2024-06-11T14:17:21</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="UDT_Verplichte_tekst"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeRevokeRequestReason">
+    <description>Reason for revoke</description>
+    <state>active</state>
+    <dateLaMu>2024-06-11T14:17:25</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="UDT_Verplichte_tekst"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeSimple">
+    <description>SeSimple</description>
+    <dateLaMu>2024-01-08T17:22:37</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeSoortDrank">
+    <description>Naam van drank</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeString">
+    <description>String / Vrije tekst</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeString_minlength_1">
+    <description>String / Verplichte tekst</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING_MINLENGTH_1"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeString_minlength_64">
+    <description>UDT String / Verplichte tekst (&gt;=64 characters)</description>
+    <dateLaMu>2021-12-02T13:29:44</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING_MINLENGTH_64"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="SeTime">
+    <description>Time / Tijd</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="TIME"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="Se_Straatnaam">
+    <description>UDT lange keuzelijst: Straatnaam</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Je moet hier een lijst met straatnamen zien waar je uit kunt kiezen. Als je een deel van de naam typt, moet er automatisch gefilterd worden op die letters. Een niet bestaande straatnaam mag niet verstuurd worden.</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="Udt_Keuzelijststraatnamen"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="Versie">
+    <description>Versienummer</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="INTEGER"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="VideoFormaat">
+    <description>Videoformaat</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="Vraag">
+    <description>Vraag</description>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="STRING"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se152">
+    <description>BTT: STRING</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>STRING testveld: je mag hier alles invullen, voer getallen, vreemde tekens enz. in.</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udf105"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se152_2">
+    <description>BTT: BOOLEAN</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Boolean testveld: er moet hier een checkbox in de applicatie getoond worden</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udf105_2"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se152_3">
+    <description>BTT: DATE</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>DATE testveld: een datumkiezer/veld wordt door de applicatie getoond</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udf105_2_2"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se152_4">
+    <description>BTT: DATETIME</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>DATETIME testveld: een invoerveld wordt getoond waarin een datum met een tijdstip ingevuld kan worden.</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udf105_2_3"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se152_5">
+    <description>BTT: TIME</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>TIME testveld: de applicatie toont een invoerveld waarin UU:MM ingevoerd kan worden</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udf105_2_4"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se152_6">
+    <description>BTT: DECIMAL</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>DECIMAL testveld: beschrijvinmg zoeken</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udf105_2_5"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se152_7">
+    <description>BTT: INTEGER</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Integer testveld: er mogen hier alleen maar getallen zonder decimalen en dergelijke ingevoerd worden.</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udf105_2_4_2"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155">
+    <description>UDT Jaarnummer optioneel</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>je mag alleen maar jaarnummers invullen tussen 2000 en 2099</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="jaarnummer"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155_2">
+    <description>UDT Jaarnummer verplicht</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>je moet hier een jaarnummer invullen tussen 2000 en 2099</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="jaarnummer_verplicht"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155_3">
+    <description>UDT Weeknummer optioneel</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Je mag hier een getal tussen de 1 en 53 invullen</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="weeknummer"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155_3_2">
+    <description>UDT Keuzelijst 1 optie</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Hier moet automatischh de waarde uit het raamwerk staan</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="Udt_Keuzelijst1waarde"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155_4">
+    <description>UDT Weeknummer verplicht</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Je moet hier een getal tussen de 1 en 53 invullen</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="weeknummer_verplicht"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155_4_2">
+    <description>UDT Lengte in meters optioneel</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>je mag hier niets invullen of gehele getallen van 5 posities</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="lengte_optioneel"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155_4_2_2">
+    <description>UDT Lengte in meters verplicht</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>je moet hier gehele getallen van 5 posities</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="lengte_verplicht"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155_4_2_2_2">
+    <description>UDT STRING Euro's verplicht</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:32:01</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Je mag hier een geldbedrag invullen, waarbij duizendtalscheidingen optioneel zijn, maar een komma en twee decimalen verplicht</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="UDT_IsEUREuro_verplicht"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155_4_2_2_2_2">
+    <description>UDT STRING Euro's optioneel</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:32:12</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Je mag hier een geldbedrag invullen, waarbij duizendtalscheidingen optioneel zijn, maar een komma en twee decimalen verplicht</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="UDT_Euro_niet_verplichtIsEUR"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155_4_2_2_2_2_2">
+    <description>UDT Optionele tekst</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>je mag hier vanalles intypen</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="UDT_optionele_tekst"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155_4_2_2_2_2_2_2">
+    <description>UDT Verplichte tekst</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>je moet hier iets intypen, maar bent vrij in wat je typt.</helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="UDT_Verplichte_tekst"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155_4_3">
+    <description>UDT Kilometrering optioneel (#,###)</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="UdtKilometreringOptioneel"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se155_4_3_2">
+    <description>UDT Kilometrering verplicht (#,###)</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="UdtKilometreringVerplicht"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se168">
+    <description>UDT Optionele keuzelijst</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language></language>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udf108"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <SimpleElementType id="se168_2">
+    <description>UDT min4 max 8</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language></language>
+    <userDefinedType>
+      <UserDefinedTypeRef idref="udf109"/>
+    </userDefinedType>
+  </SimpleElementType>
+
+  <TransactionPhaseType id="PhAccept">
+    <description>Accept</description>
+    <dateLaMu>2024-06-13T12:23:06</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language>NL</language>
+    <code>y</code>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="PhMeldingGereed">
+    <description>Melding Gereed</description>
+    <dateLaMu>2024-06-13T12:22:37</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="PhPromise">
+    <description>Promise</description>
+    <dateLaMu>2024-06-13T12:22:51</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="PhRequest">
+    <description>Request</description>
+    <dateLaMu>2024-06-13T12:21:59</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="PhRevokeAllow">
+    <description>Revoke allow</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T12:21:20</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="PhRevokeRefuse">
+    <description>Revoke refuse</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T12:21:17</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="PhRevokeRequest">
+    <description>Revoke request</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T12:21:13</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="PhStart">
+    <description>Start</description>
+    <dateLaMu>2024-06-13T12:22:20</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionPhaseType id="PhWijzigingHold">
+    <description>Wijziging / Hold</description>
+    <dateLaMu>2024-06-13T12:24:34</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+  </TransactionPhaseType>
+
+  <TransactionType id="TR_32">
+    <description>Hoofdtransactie</description>
+    <state>active</state>
+    <dateLaMu>2022-01-25T15:48:50</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="keukenhulp"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="keukenhulp"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_32_2">
+    <description>Subtransactie</description>
+    <state>active</state>
+    <dateLaMu>2022-01-25T15:49:00</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="keukenhulp"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="keukenhulp"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_MeerdereStartberichtenTR1">
+    <description>Meerderestartberichten TR1</description>
+    <state>active</state>
+    <dateLaMu>2021-12-13T13:10:33</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoA"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoB"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_MeerdereStartberichtenTR2">
+    <description>Meerderestartberichten TR2</description>
+    <state>active</state>
+    <dateLaMu>2021-12-13T13:10:40</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoB"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoC"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_MeerdereStartberichtenTR3">
+    <description>Meerderestartberichten TR3</description>
+    <state>active</state>
+    <dateLaMu>2021-12-13T13:11:40</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoB"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoC"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_OvernemenElementenT5">
+    <description>T5 Overnemen van elementen (klant-ober)</description>
+    <state>active</state>
+    <dateLaMu>2024-02-02T07:54:34</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <helpInfo>Hierin wordt getest of waarde van SimpleElementType wordt overgenomen als deze binnen een transactie in verschillende ComplexElementTypes wordt aangeboden.</helpInfo>
+    <initiator>
+      <RoleTypeRef idref="klant"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="ober"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_OvernemenElementenT6">
+    <description>T6 Overnemen van elementen (ober-kok)</description>
+    <state>active</state>
+    <dateLaMu>2024-02-02T07:55:20</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <helpInfo>Hierin wordt getest of waarde van SimpleElementType wordt overgenomen als deze binnen een transactie in verschillende ComplexElementTypes wordt aangeboden.</helpInfo>
+    <initiator>
+      <RoleTypeRef idref="ober"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="kok"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_OvernemenElementenT7">
+    <description>T7 Overnemen van elementen (kok-keukenhulp)</description>
+    <state>active</state>
+    <dateLaMu>2024-02-02T07:55:49</dateLaMu>
+    <userLaMu>TessaGobar</userLaMu>
+    <helpInfo>Hierin wordt getest of waarde van SimpleElementType wordt overgenomen als deze binnen een transactie in verschillende ComplexElementTypes wordt aangeboden.</helpInfo>
+    <initiator>
+      <RoleTypeRef idref="kok"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="keukenhulp"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_PromiseCase_1">
+    <description>Promise Use case 1: Obligatory Promise</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T15:47:48</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoA"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoB"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_PromiseCase_2">
+    <description>Promise Use case 2: Optional Promise</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T15:47:55</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoA"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoB"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_PromiseCase_3">
+    <description>Promise Use case 3:  Repeating Promise</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T15:48:02</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <initiator>
+      <RoleTypeRef idref="RoA"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoB"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_Sendafter_andConditie_DerdeSubtransactie">
+    <description>Sendafter AND-Conditie Derde subtransactie</description>
+    <state>active</state>
+    <dateLaMu>2024-06-04T10:32:45</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoB"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoD"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_Sendafter_andConditie_EersteSubtransactie">
+    <description>Sendafter AND-Conditie Eerste subtransactie</description>
+    <state>active</state>
+    <dateLaMu>2023-09-22T15:45:07</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoB"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoC"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_Sendafter_andConditie_TweedeSubtransactie">
+    <description>Sendafter AND-Conditie Tweede subtransactie</description>
+    <state>active</state>
+    <dateLaMu>2023-09-22T15:45:13</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoB"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoD"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_Sendafter_andConditie_hoofdtransactie">
+    <description>Sendafter AND-Conditie Hoofdtransactie</description>
+    <state>active</state>
+    <dateLaMu>2023-09-22T15:45:00</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoA"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoB"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_TestGelijkeInitiatorEnExecutor">
+    <description>Test gelijke initiator en executor</description>
+    <state>active</state>
+    <dateLaMu>2021-12-13T12:07:25</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoA"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoA"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_fm1">
+    <description>firstMessage test 1</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T16:49:59</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoA"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoB"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TR_fm2">
+    <description>firstMessage test 2</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T10:43:52</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoA"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoB"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TrRevoke">
+    <description>Revoke</description>
+    <state>active</state>
+    <dateLaMu>2024-06-11T14:18:19</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoRevoke"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoRevoke"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TrRevokeAlternative">
+    <description>Revoke alternative process</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T15:06:12</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <initiator>
+      <RoleTypeRef idref="RoRevoke"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoRevoke"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="TrRevokeCase">
+    <description>Revoke Use case</description>
+    <state>active</state>
+    <dateLaMu>2024-06-13T15:12:11</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <initiator>
+      <RoleTypeRef idref="RoA"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoB"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="t1_OpnameBestelling">
+    <description>T1 Opnâme van bestelling (tussen ober aan klant)</description>
+    <dateLaMu>2021-12-02T09:57:45</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <language>NL</language>
+    <code>T1</code>
+    <initiator>
+      <RoleTypeRef idref="ober"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="klant"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="t2_VraagOberAanKok">
+    <description>T2 Vraāg (tussen ober aan kok)</description>
+    <initiator>
+      <RoleTypeRef idref="ober"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="kok"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="t3_OpdrachtKok">
+    <description>T3 Opdrącht (tussen ober aan kok)</description>
+    <initiator>
+      <RoleTypeRef idref="ober"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="kok"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="t4_VraagKokAanKeukenhulp">
+    <description>T4 Vraåg (tussen kok aan keukenhulp)</description>
+    <initiator>
+      <RoleTypeRef idref="kok"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="keukenhulp"/>
+    </executor>
+    <appendixTypes>
+      <AppendixTypeRef idref="AppRapport"/>
+    </appendixTypes>
+  </TransactionType>
+
+  <TransactionType id="tra_Basetypes">
+    <description>Base type test</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:31:23</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo>Hierin worden de base types getest.</helpInfo>
+    <initiator>
+      <RoleTypeRef idref="RoA"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoB"/>
+    </executor>
+  </TransactionType>
+
+  <TransactionType id="tra_UDT">
+    <description>User Defined Types test</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:47:19</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <helpInfo></helpInfo>
+    <initiator>
+      <RoleTypeRef idref="RoA"/>
+    </initiator>
+    <executor>
+      <RoleTypeRef idref="RoB"/>
+    </executor>
+  </TransactionType>
+
+  <UserDefinedType id="BOOLEAN">
+    <description>BOOLEAN</description>
+    <baseType>BOOLEAN</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="DATE">
+    <description>DATE</description>
+    <baseType>DATE</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="DATETIME">
+    <description>DATETIME</description>
+    <baseType>DATETIME</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="DECIMAL">
+    <description>DECIMAL</description>
+    <baseType>DECIMAL</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="DECIMAL_EURO">
+    <description>DecimalEuro (verplicht)</description>
+    <dateLaMu>2021-12-02T13:40:08</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>DECIMAL</baseType>
+    <xsdRestriction>&lt;xs:fractionDigits value="2"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="ENUMERATION">
+    <description>ENUMERATION</description>
+    <dateLaMu>2021-12-02T13:44:10</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:enumeration value="No accents here"/&gt;&lt;xs:enumeration value="space behind value "/&gt;&lt;xs:enumeration value="This is an e acute: é"/&gt;&lt;xs:enumeration value="eaiou with circumflexes: êâîôû"/&gt;&lt;xs:enumeration value="eaiou with umlauts: ëäïöü"/&gt;&lt;xs:enumeration value="less than: &amp;lt;"/&gt;&lt;xs:enumeration value="greater than: &amp;gt;"/&gt;&lt;xs:enumeration value="ampersand: &amp;amp;"/&gt;&lt;xs:enumeration value="quote: &amp;quot;"/&gt;&lt;xs:enumeration value="apostrophe: &amp;apos;"/&gt;&lt;xs:enumeration value="dollar sign: $"/&gt;&lt;xs:enumeration value="yen sign: ¥"/&gt;&lt;xs:enumeration value="euro sign: €"/&gt;&lt;xs:enumeration value="micro sign: µ"/&gt;&lt;xs:enumeration value="question mark: ?"/&gt;&lt;xs:enumeration value="at: @"/&gt;&lt;xs:enumeration value="cedilla: ¸"/&gt;&lt;xs:enumeration value="c with cedilla: ç"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="INTEGER">
+    <description>INTEGER</description>
+    <baseType>INTEGER</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="STRING">
+    <description>STRING OPTIONAL</description>
+    <dateLaMu>2021-12-02T09:49:17</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <language>NL</language>
+  </UserDefinedType>
+
+  <UserDefinedType id="STRING_MINLENGTH_1">
+    <description>STRING MINLENGTH 1</description>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:minLength value="1"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="STRING_MINLENGTH_64">
+    <description>STRING MINLENGTH 64</description>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:minLength value="64"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="TIME">
+    <description>TIME</description>
+    <baseType>TIME</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="UDT_Contractnummer">
+    <description>Contractnummer</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:minLength value="1"/&gt;&lt;xs:enumeration value="is ingevuld door wizard"/&gt;</xsdRestriction>
+    <language></language>
+    <helpInfo></helpInfo>
+  </UserDefinedType>
+
+  <UserDefinedType id="UDT_Euro_niet_verplichtIsEUR">
+    <description>StringEuro (niet verplicht)</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:29:15</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:pattern value="(-?([1-9]\d{0,2}(\.\d{3})*|[1-9]\d*|0),\d{2})?"/&gt;</xsdRestriction>
+    <language></language>
+    <helpInfo></helpInfo>
+  </UserDefinedType>
+
+  <UserDefinedType id="UDT_IsEUREuro_verplicht">
+    <description>StringEuro (verplicht)</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:29:20</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:minLength value="1"/&gt;&lt;xs:pattern value="(-?([1-9]\d{0,2}(\.\d{3})*|[1-9]\d*|0),\d{2})?"/&gt;</xsdRestriction>
+    <language></language>
+    <helpInfo></helpInfo>
+  </UserDefinedType>
+
+  <UserDefinedType id="UDT_Verplichte_tekst">
+    <description>Tekst (verplicht)</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:minLength value="1"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="UDT_optionele_tekst">
+    <description>Tekst (vrije tekst)</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:19</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction></xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="UdtKilometreringOptioneel">
+    <description>Kilometrering optioneel</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:pattern value="(\d*\d{1},\d{3})?"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="UdtKilometreringVerplicht">
+    <description>Kilometrering verplicht</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:pattern value="\d*\d{1},\d{3}"/&gt;</xsdRestriction>
+    <helpInfo></helpInfo>
+  </UserDefinedType>
+
+  <UserDefinedType id="Udt_Keuzelijst1waarde">
+    <description>Keuzelijst 1 waarde</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:enumeration value="Automatisch gevuld"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="Udt_Keuzelijststraatnamen">
+    <description>Keuzelijst straatnamen</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:43:06</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:enumeration value="Niet van toepassing"/&gt;&lt;xs:enumeration value="11 Bunder"/&gt;&lt;xs:enumeration value="24 Bunder"/&gt;&lt;xs:enumeration value="Aagje Dekenstraat"/&gt;&lt;xs:enumeration value="Aakendonk"/&gt;&lt;xs:enumeration value="Aardenburgsesteeg"/&gt;&lt;xs:enumeration value="Acaciastraat"/&gt;&lt;xs:enumeration value="Achterdijk"/&gt;&lt;xs:enumeration value="Achterste Hermalen"/&gt;&lt;xs:enumeration value="Akkermunthof"/&gt;&lt;xs:enumeration value="Akkerstraat"/&gt;&lt;xs:enumeration value="Aletta Jacobshof"/&gt;&lt;xs:enumeration value="Aloysiusstraat"/&gt;&lt;xs:enumeration value="Ambachtstraat"/&gt;&lt;xs:enumeration value="Andoornstraat"/&gt;&lt;xs:enumeration value="Anemoonstraat"/&gt;&lt;xs:enumeration value="Ankerpad"/&gt;&lt;xs:enumeration value="Anna Blamanstraat"/&gt;&lt;xs:enumeration value="Asterhof"/&gt;&lt;xs:enumeration value="Avantilaan"/&gt;&lt;xs:enumeration value="Bachhof"/&gt;&lt;xs:enumeration value="Baksdijk"/&gt;&lt;xs:enumeration value="Baroniestraat"/&gt;&lt;xs:enumeration value="Bartokstraat"/&gt;&lt;xs:enumeration value="Baselaarshoef"/&gt;&lt;xs:enumeration value="Beatrixstraat"/&gt;&lt;xs:enumeration value="Beek"/&gt;&lt;xs:enumeration value="Beemdstraat"/&gt;&lt;xs:enumeration value="Begoniastraat"/&gt;&lt;xs:enumeration value="Ben Peterspad"/&gt;&lt;xs:enumeration value="Berliozhof"/&gt;&lt;xs:enumeration value="Bernhardstraat"/&gt;&lt;xs:enumeration value="Betelgeuze"/&gt;&lt;xs:enumeration value="Betje Wolffstraat"/&gt;&lt;xs:enumeration value="Beukenstraat"/&gt;&lt;xs:enumeration value="Biezenstraat"/&gt;&lt;xs:enumeration value="Binnenweg"/&gt;&lt;xs:enumeration value="Bizetstraat"/&gt;&lt;xs:enumeration value="Bloemenpad"/&gt;&lt;xs:enumeration value="Bodem van Elde"/&gt;&lt;xs:enumeration value="Bogaard"/&gt;&lt;xs:enumeration value="Boogschutter"/&gt;&lt;xs:enumeration value="Boomstraat"/&gt;&lt;xs:enumeration value="Borne"/&gt;&lt;xs:enumeration value="Boschweg"/&gt;&lt;xs:enumeration value="Boskoopstraat"/&gt;&lt;xs:enumeration value="Boterbloemstraat"/&gt;&lt;xs:enumeration value="Boterweg"/&gt;&lt;xs:enumeration value="Boxtelseweg"/&gt;&lt;xs:enumeration value="Brahmsstraat"/&gt;&lt;xs:enumeration value="Bremert"/&gt;&lt;xs:enumeration value="Bremweg"/&gt;&lt;xs:enumeration value="Broekkant"/&gt;&lt;xs:enumeration value="Broekkantsedijk"/&gt;&lt;xs:enumeration value="Broekseweg"/&gt;&lt;xs:enumeration value="Brouwhuisstraat"/&gt;&lt;xs:enumeration value="Brouwketel"/&gt;&lt;xs:enumeration value="Brucknerstraat"/&gt;&lt;xs:enumeration value="Buisselpad"/&gt;&lt;xs:enumeration value="Bundershoeve"/&gt;&lt;xs:enumeration value="Bunderstraat"/&gt;&lt;xs:enumeration value="Buntweg"/&gt;&lt;xs:enumeration value="Burg. Janssensstraat"/&gt;&lt;xs:enumeration value="Busselsteeg"/&gt;&lt;xs:enumeration value="Catharinaplein"/&gt;&lt;xs:enumeration value="Chopinstraat"/&gt;&lt;xs:enumeration value="Chrysanthof"/&gt;&lt;xs:enumeration value="Claes van Griensvenstraat"/&gt;&lt;xs:enumeration value="Clematisstraat"/&gt;&lt;xs:enumeration value="Conventstraat"/&gt;&lt;xs:enumeration value="Cornelis Trompstraat"/&gt;&lt;xs:enumeration value="Crocushof"/&gt;&lt;xs:enumeration value="Dakotaweg"/&gt;&lt;xs:enumeration value="Daliastraat"/&gt;&lt;xs:enumeration value="De Bus"/&gt;&lt;xs:enumeration value="de Cock van Neerijnenstraat"/&gt;&lt;xs:enumeration value="De Glazen Boerderij"/&gt;&lt;xs:enumeration value="De Heikampen"/&gt;&lt;xs:enumeration value="De Pegstukken"/&gt;&lt;xs:enumeration value="De Schild"/&gt;&lt;xs:enumeration value="De Steenen Kamer"/&gt;&lt;xs:enumeration value="De Weerelt"/&gt;&lt;xs:enumeration value="Debussystraat"/&gt;&lt;xs:enumeration value="Deken Baekershof"/&gt;&lt;xs:enumeration value="Deken Baekersstraat"/&gt;&lt;xs:enumeration value="Deken van Dijkstraat"/&gt;&lt;xs:enumeration value="Dennensteeg"/&gt;&lt;xs:enumeration value="Diepenbrockstraat"/&gt;&lt;xs:enumeration value="Dierenriem"/&gt;&lt;xs:enumeration value="Dinthersedijk"/&gt;&lt;xs:enumeration value="Distelpad"/&gt;&lt;xs:enumeration value="Distelstraat"/&gt;&lt;xs:enumeration value="Dolfijn"/&gt;&lt;xs:enumeration value="Dopheiweg"/&gt;&lt;xs:enumeration value="Dr. Ariënsstraat"/&gt;&lt;xs:enumeration value="Dr. Poelsstraat"/&gt;&lt;xs:enumeration value="Dr. Schaepmanlaan"/&gt;&lt;xs:enumeration value="Dr. van Beurdenstraat"/&gt;&lt;xs:enumeration value="Duinweg"/&gt;&lt;xs:enumeration value="Dungensesteeg"/&gt;&lt;xs:enumeration value="Dwarsweg"/&gt;&lt;xs:enumeration value="Edisonweg"/&gt;&lt;xs:enumeration value="Eekelhof"/&gt;&lt;xs:enumeration value="Eenhoorn"/&gt;&lt;xs:enumeration value="Eerdsebaan"/&gt;&lt;xs:enumeration value="Eikenstraat"/&gt;&lt;xs:enumeration value="Elde"/&gt;&lt;xs:enumeration value="Elschotseweg"/&gt;&lt;xs:enumeration value="Emmalaan"/&gt;&lt;xs:enumeration value="Ericastraat"/&gt;&lt;xs:enumeration value="Esdoornstraat"/&gt;&lt;xs:enumeration value="Europalaan"/&gt;&lt;xs:enumeration value="Evert van Delftstraat"/&gt;&lt;xs:enumeration value="Evertsenstraat"/&gt;&lt;xs:enumeration value="Floralaan"/&gt;&lt;xs:enumeration value="Fresiahof"/&gt;&lt;xs:enumeration value="Galvaniweg"/&gt;&lt;xs:enumeration value="Gasthuisstraat"/&gt;&lt;xs:enumeration value="Gemondseweg"/&gt;&lt;xs:enumeration value="Gerstakker"/&gt;&lt;xs:enumeration value="Gestelseweg"/&gt;&lt;xs:enumeration value="Gladiolenhof"/&gt;&lt;xs:enumeration value="Goudenregenstraat"/&gt;&lt;xs:enumeration value="Goudsbloemhof"/&gt;&lt;xs:enumeration value="Gounodhof"/&gt;&lt;xs:enumeration value="Grevekeur"/&gt;&lt;xs:enumeration value="Griegstraat"/&gt;&lt;xs:enumeration value="Griendstraat"/&gt;&lt;xs:enumeration value="Groeneweg"/&gt;&lt;xs:enumeration value="Haagsebosch"/&gt;&lt;xs:enumeration value="Händelstraat"/&gt;&lt;xs:enumeration value="Hardekamp"/&gt;&lt;xs:enumeration value="Hardveld"/&gt;&lt;xs:enumeration value="Harry Bolsiuslaan"/&gt;&lt;xs:enumeration value="Harry Jansenlaan"/&gt;&lt;xs:enumeration value="Haydnhof"/&gt;&lt;xs:enumeration value="Haydnstraat"/&gt;&lt;xs:enumeration value="Heertveldseweg"/&gt;&lt;xs:enumeration value="Heidebloemstraat"/&gt;&lt;xs:enumeration value="Heikantstraat"/&gt;&lt;xs:enumeration value="Heiveld"/&gt;&lt;xs:enumeration value="Heiweg"/&gt;&lt;xs:enumeration value="Hermalen"/&gt;&lt;xs:enumeration value="Hertog Jan II Laan"/&gt;&lt;xs:enumeration value="Het Hooghekke"/&gt;&lt;xs:enumeration value="Heuvelstraat"/&gt;&lt;xs:enumeration value="Hoevenbraaksestraat"/&gt;&lt;xs:enumeration value="Hoeves"/&gt;&lt;xs:enumeration value="Hoofdstraat"/&gt;&lt;xs:enumeration value="Hopbelpad"/&gt;&lt;xs:enumeration value="Hopkuil"/&gt;&lt;xs:enumeration value="Hopstakenpad"/&gt;&lt;xs:enumeration value="Hopstamper"/&gt;&lt;xs:enumeration value="Hopstraat"/&gt;&lt;xs:enumeration value="Hopveld"/&gt;&lt;xs:enumeration value="Hopveldpad"/&gt;&lt;xs:enumeration value="Houterd"/&gt;&lt;xs:enumeration value="Houterdsedijk"/&gt;&lt;xs:enumeration value="Houtpad"/&gt;&lt;xs:enumeration value="Houtstraat"/&gt;&lt;xs:enumeration value="Houtweg"/&gt;&lt;xs:enumeration value="Huygensweg"/&gt;&lt;xs:enumeration value="Hyacinthof"/&gt;&lt;xs:enumeration value="Ina Boudierstraat"/&gt;&lt;xs:enumeration value="Industrieweg"/&gt;&lt;xs:enumeration value="Irenestraat"/&gt;&lt;xs:enumeration value="Jan van Amstelstraat"/&gt;&lt;xs:enumeration value="Jan van Cuykstraat"/&gt;&lt;xs:enumeration value="Jan van Galenstraat"/&gt;&lt;xs:enumeration value="Jansenpark"/&gt;&lt;xs:enumeration value="Jet Geerkensplein"/&gt;&lt;xs:enumeration value="Johannis Groenewaltstraat"/&gt;&lt;xs:enumeration value="Jos van de Schoorstraat"/&gt;&lt;xs:enumeration value="Julianastraat"/&gt;&lt;xs:enumeration value="Jupiter"/&gt;&lt;xs:enumeration value="Kanaaldijk-Zuid"/&gt;&lt;xs:enumeration value="Kapelaan Schröderstraat"/&gt;&lt;xs:enumeration value="Kapelaan Woestenburgstraat"/&gt;&lt;xs:enumeration value="Kapeleind"/&gt;&lt;xs:enumeration value="Kapittelpad"/&gt;&lt;xs:enumeration value="Karel Doormanstraat"/&gt;&lt;xs:enumeration value="Kastanjestraat"/&gt;&lt;xs:enumeration value="Kerkendijk"/&gt;&lt;xs:enumeration value="Kerkstraat"/&gt;&lt;xs:enumeration value="Keur"/&gt;&lt;xs:enumeration value="Klaprooshof"/&gt;&lt;xs:enumeration value="Klaverwei"/&gt;&lt;xs:enumeration value="Kleine Borne"/&gt;&lt;xs:enumeration value="Kloosterstraat"/&gt;&lt;xs:enumeration value="Kluisstraat"/&gt;&lt;xs:enumeration value="Koeveringsedijk"/&gt;&lt;xs:enumeration value="Korenbloemstraat"/&gt;&lt;xs:enumeration value="Korenmolen"/&gt;&lt;xs:enumeration value="Korte Heikantstraat"/&gt;&lt;xs:enumeration value="Kortenaerstraat"/&gt;&lt;xs:enumeration value="Korteweg"/&gt;&lt;xs:enumeration value="Kruissteeg"/&gt;&lt;xs:enumeration value="Lambertushof"/&gt;&lt;xs:enumeration value="Landingsweg"/&gt;&lt;xs:enumeration value="Lange Hegghe"/&gt;&lt;xs:enumeration value="Langeweg"/&gt;&lt;xs:enumeration value="Langstraat"/&gt;&lt;xs:enumeration value="Lariestraat"/&gt;&lt;xs:enumeration value="Lavendelhof"/&gt;&lt;xs:enumeration value="Leemputtenweg"/&gt;&lt;xs:enumeration value="Leemweg"/&gt;&lt;xs:enumeration value="Leliestraat"/&gt;&lt;xs:enumeration value="Lidwinahof"/&gt;&lt;xs:enumeration value="Lidwinastraat"/&gt;&lt;xs:enumeration value="Liekendonksesteeg"/&gt;&lt;xs:enumeration value="Lieseind"/&gt;&lt;xs:enumeration value="Lieseinds heike"/&gt;&lt;xs:enumeration value="Lieseindsedijk"/&gt;&lt;xs:enumeration value="Lieseindsestraat"/&gt;&lt;xs:enumeration value="Lijsterbeslaan"/&gt;&lt;xs:enumeration value="Lindenstraat"/&gt;&lt;xs:enumeration value="Lobbenhoef"/&gt;&lt;xs:enumeration value="Locht"/&gt;&lt;xs:enumeration value="Lochtenburg"/&gt;&lt;xs:enumeration value="Looierij"/&gt;&lt;xs:enumeration value="Loosbraak"/&gt;&lt;xs:enumeration value="Lorentzweg"/&gt;&lt;xs:enumeration value="Madame Curieweg"/&gt;&lt;xs:enumeration value="Madeliefstraat"/&gt;&lt;xs:enumeration value="Mandelalaan"/&gt;&lt;xs:enumeration value="Mandersstraat"/&gt;&lt;xs:enumeration value="Marijkestraat"/&gt;&lt;xs:enumeration value="Marjoleinhof"/&gt;&lt;xs:enumeration value="Markt"/&gt;&lt;xs:enumeration value="Mars"/&gt;&lt;xs:enumeration value="Martemanshurk"/&gt;&lt;xs:enumeration value="Mauritsstraat"/&gt;&lt;xs:enumeration value="Meester Michelsstraat"/&gt;&lt;xs:enumeration value="Meidoornstraat"/&gt;&lt;xs:enumeration value="Meierijstraat"/&gt;&lt;xs:enumeration value="Meijgraaf"/&gt;&lt;xs:enumeration value="Meijldoorn"/&gt;&lt;xs:enumeration value="Melkstraat"/&gt;&lt;xs:enumeration value="Mercurius"/&gt;&lt;xs:enumeration value="Mgr. Bekkersplein"/&gt;&lt;xs:enumeration value="Mgr. Bekkersstraat"/&gt;&lt;xs:enumeration value="Mgr. van de Venstraat"/&gt;&lt;xs:enumeration value="Mgr. Zwijsenstraat"/&gt;&lt;xs:enumeration value="Michiel de Ruijterstraat"/&gt;&lt;xs:enumeration value="Mieke de Brefstraat"/&gt;&lt;xs:enumeration value="Molendijk-Noord"/&gt;&lt;xs:enumeration value="Molendijk-Zuid"/&gt;&lt;xs:enumeration value="Molenhof"/&gt;&lt;xs:enumeration value="Molenstraat"/&gt;&lt;xs:enumeration value="Mouterij"/&gt;&lt;xs:enumeration value="Mozartpad"/&gt;&lt;xs:enumeration value="Mozartstraat"/&gt;&lt;xs:enumeration value="Mr. Goselingstraat"/&gt;&lt;xs:enumeration value="Narcishof"/&gt;&lt;xs:enumeration value="Neerlandstraat"/&gt;&lt;xs:enumeration value="Neptunus"/&gt;&lt;xs:enumeration value="Newtonweg"/&gt;&lt;xs:enumeration value="Nieuwe Eerdsebaan"/&gt;&lt;xs:enumeration value="Nieuwe Molenheide"/&gt;&lt;xs:enumeration value="Nieuwe Slender"/&gt;&lt;xs:enumeration value="Nieuwegaard"/&gt;&lt;xs:enumeration value="Nobelweg"/&gt;&lt;xs:enumeration value="Nonnenbos"/&gt;&lt;xs:enumeration value="Noorderkroon"/&gt;&lt;xs:enumeration value="Oetelaar"/&gt;&lt;xs:enumeration value="Oetelaarsestraat"/&gt;&lt;xs:enumeration value="Offenbachstraat"/&gt;&lt;xs:enumeration value="Olieëindsestraat"/&gt;&lt;xs:enumeration value="Oliemolen"/&gt;&lt;xs:enumeration value="Ollandseweg"/&gt;&lt;xs:enumeration value="Orion"/&gt;&lt;xs:enumeration value="Oude Dijk"/&gt;&lt;xs:enumeration value="Oude Molenheide"/&gt;&lt;xs:enumeration value="Oude Steeg"/&gt;&lt;xs:enumeration value="Papaverstraat"/&gt;&lt;xs:enumeration value="Parallelweg"/&gt;&lt;xs:enumeration value="Pastoor Dondersstraat"/&gt;&lt;xs:enumeration value="Pastoor Van den Brandhof"/&gt;&lt;xs:enumeration value="Pastoor van Erpstraat"/&gt;&lt;xs:enumeration value="Pastoor van Geldropstraat"/&gt;&lt;xs:enumeration value="Pastoor van Luijtelaarstraat"/&gt;&lt;xs:enumeration value="Pastoor van Vroonhovenstraat"/&gt;&lt;xs:enumeration value="Pater van den Elsenstraat"/&gt;&lt;xs:enumeration value="Pegasus"/&gt;&lt;xs:enumeration value="Pesserslaan"/&gt;&lt;xs:enumeration value="Piet Heijnstraat"/&gt;&lt;xs:enumeration value="Planetenlaan"/&gt;&lt;xs:enumeration value="Plataanstraat"/&gt;&lt;xs:enumeration value="Plein"/&gt;&lt;xs:enumeration value="Plein 1944"/&gt;&lt;xs:enumeration value="Pluto"/&gt;&lt;xs:enumeration value="Poelkensdijk"/&gt;&lt;xs:enumeration value="Pompstraat"/&gt;&lt;xs:enumeration value="Poolster"/&gt;&lt;xs:enumeration value="Populierstraat"/&gt;&lt;xs:enumeration value="Primulaplein"/&gt;&lt;xs:enumeration value="Primulastraat"/&gt;&lt;xs:enumeration value="Prins Hendrikstraat"/&gt;&lt;xs:enumeration value="Prinses Margrietstraat"/&gt;&lt;xs:enumeration value="Putsteeg"/&gt;&lt;xs:enumeration value="Ranonkelstraat"/&gt;&lt;xs:enumeration value="Ravelstraat"/&gt;&lt;xs:enumeration value="Renate Rubinsteinstraat"/&gt;&lt;xs:enumeration value="Rietbeemdweg"/&gt;&lt;xs:enumeration value="Rietstraat"/&gt;&lt;xs:enumeration value="Rooiseheide"/&gt;&lt;xs:enumeration value="Rooiseweg"/&gt;&lt;xs:enumeration value="Rossinistraat"/&gt;&lt;xs:enumeration value="Rozemarijnhof"/&gt;&lt;xs:enumeration value="Rozenplein"/&gt;&lt;xs:enumeration value="Rozenstraat"/&gt;&lt;xs:enumeration value="Salviahof"/&gt;&lt;xs:enumeration value="Saturnus"/&gt;&lt;xs:enumeration value="Schoolstraat"/&gt;&lt;xs:enumeration value="Schootsehoef"/&gt;&lt;xs:enumeration value="Schootsestraat"/&gt;&lt;xs:enumeration value="Schorpioen"/&gt;&lt;xs:enumeration value="Schrijvershoef"/&gt;&lt;xs:enumeration value="Schubertpad"/&gt;&lt;xs:enumeration value="Schubertstraat"/&gt;&lt;xs:enumeration value="Schutsboom"/&gt;&lt;xs:enumeration value="Schutskooi"/&gt;&lt;xs:enumeration value="Sint Jorisplein"/&gt;&lt;xs:enumeration value="Sliperman"/&gt;&lt;xs:enumeration value="Smaldonkstraat"/&gt;&lt;xs:enumeration value="Sophiastraat"/&gt;&lt;xs:enumeration value="Spierkesbos"/&gt;&lt;xs:enumeration value="Spoorlaan"/&gt;&lt;xs:enumeration value="Spoorpad"/&gt;&lt;xs:enumeration value="St. Servatiusstraat"/&gt;&lt;xs:enumeration value="St. Willibrordusstraat"/&gt;&lt;xs:enumeration value="Stamhuis"/&gt;&lt;xs:enumeration value="Steeg"/&gt;&lt;xs:enumeration value="Steenbok"/&gt;&lt;xs:enumeration value="Sterrenlaan"/&gt;&lt;xs:enumeration value="Structuurweg"/&gt;&lt;xs:enumeration value="Sweelinckstraat"/&gt;&lt;xs:enumeration value="Teeuwishoek"/&gt;&lt;xs:enumeration value="Tiboschlaan"/&gt;&lt;xs:enumeration value="Tijmhof"/&gt;&lt;xs:enumeration value="Tolakker"/&gt;&lt;xs:enumeration value="Toon Bolsiusstraat"/&gt;&lt;xs:enumeration value="Tredmolen"/&gt;&lt;xs:enumeration value="Truijenheide"/&gt;&lt;xs:enumeration value="Tulpstraat"/&gt;&lt;xs:enumeration value="Tweelingen"/&gt;&lt;xs:enumeration value="Uranus"/&gt;&lt;xs:enumeration value="Van Beethovenstraat"/&gt;&lt;xs:enumeration value="Van Berghenstraat"/&gt;&lt;xs:enumeration value="Van Beverwijkstraat"/&gt;&lt;xs:enumeration value="Van der Leckstraat"/&gt;&lt;xs:enumeration value="Van Doorenstraat"/&gt;&lt;xs:enumeration value="Van Heemskerckstraat"/&gt;&lt;xs:enumeration value="Van Helmontstraat"/&gt;&lt;xs:enumeration value="Van Leeuwenhoekweg"/&gt;&lt;xs:enumeration value="Van Oost-Frieslandstraat"/&gt;&lt;xs:enumeration value="Van Tuijllaan"/&gt;&lt;xs:enumeration value="Veghelsedijk"/&gt;&lt;xs:enumeration value="Venushoek"/&gt;&lt;xs:enumeration value="Verdipad"/&gt;&lt;xs:enumeration value="Verdistraat"/&gt;&lt;xs:enumeration value="Verhagenstraat"/&gt;&lt;xs:enumeration value="Verhoevenlaan"/&gt;&lt;xs:enumeration value="Verkensstraatje"/&gt;&lt;xs:enumeration value="Verlengde Kloosterpad"/&gt;&lt;xs:enumeration value="Veronicapark"/&gt;&lt;xs:enumeration value="Vicaris Aertsweg"/&gt;&lt;xs:enumeration value="Vicaris van Alphenstraat"/&gt;&lt;xs:enumeration value="Vier Gemalen"/&gt;&lt;xs:enumeration value="Vijverweg"/&gt;&lt;xs:enumeration value="Vinkenpad"/&gt;&lt;xs:enumeration value="Vissen"/&gt;&lt;xs:enumeration value="Vivaldistraat"/&gt;&lt;xs:enumeration value="Vlagheide"/&gt;&lt;xs:enumeration value="Vliegveldweg"/&gt;&lt;xs:enumeration value="Voltaweg"/&gt;&lt;xs:enumeration value="Voortstraat"/&gt;&lt;xs:enumeration value="Vossenberg"/&gt;&lt;xs:enumeration value="Vossenbergsesteeg"/&gt;&lt;xs:enumeration value="Vosseneind"/&gt;&lt;xs:enumeration value="Vossenstraat"/&gt;&lt;xs:enumeration value="Wagenaarstraat"/&gt;&lt;xs:enumeration value="Walvis"/&gt;&lt;xs:enumeration value="Watermolen"/&gt;&lt;xs:enumeration value="Weegschaal"/&gt;&lt;xs:enumeration value="Weidonk"/&gt;&lt;xs:enumeration value="Wielse Kamp"/&gt;&lt;xs:enumeration value="Wijbosscheweg"/&gt;&lt;xs:enumeration value="Wijsstraat"/&gt;&lt;xs:enumeration value="Wilgenstraat"/&gt;&lt;xs:enumeration value="Wilhelminalaan"/&gt;&lt;xs:enumeration value="Wilhelminaplein"/&gt;&lt;xs:enumeration value="Willem III straat"/&gt;&lt;xs:enumeration value="Willem van Oranjelaan"/&gt;&lt;xs:enumeration value="Wort"/&gt;&lt;xs:enumeration value="Woudseweg"/&gt;&lt;xs:enumeration value="Zaagmolen"/&gt;&lt;xs:enumeration value="Zandkantsestraat"/&gt;&lt;xs:enumeration value="Zeilkampjes"/&gt;&lt;xs:enumeration value="Zijweg Dungen"/&gt;&lt;xs:enumeration value="Zonnebloemhof"/&gt;&lt;xs:enumeration value="Zonnebloemstraat"/&gt;&lt;xs:enumeration value="Zwaardvis"/&gt;&lt;xs:enumeration value="Zwembadweg"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="jaarnummer">
+    <description>Jaarnummer</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:pattern value="(20\d\d)?"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="jaarnummer_verplicht">
+    <description>Jaarnummer verplicht</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:pattern value="(20\d\d)"/&gt;</xsdRestriction>
+    <helpInfo></helpInfo>
+  </UserDefinedType>
+
+  <UserDefinedType id="lengte_optioneel">
+    <description>Lengte in meters optioneel</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:pattern value="(\d?\d?\d?\d?\d?)"/&gt;</xsdRestriction>
+    <language></language>
+  </UserDefinedType>
+
+  <UserDefinedType id="lengte_verplicht">
+    <description>Lengte in meters verplicht</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:minLength value="1"/&gt;&lt;xs:pattern value="(\d?\d?\d?\d?\d)"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="udf105">
+    <description>bt:STRING</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="udf105_2">
+    <description>bt:BOOLEAN</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>BOOLEAN</baseType>
+    <xsdRestriction>&lt;xs:pattern value="true|1|TRUE|True"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="udf105_2_2">
+    <description>bt:DATE</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>DATE</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="udf105_2_3">
+    <description>bt:DATETIME</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>DATETIME</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="udf105_2_4">
+    <description>bt:TIME</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>TIME</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="udf105_2_4_2">
+    <description>bt:INTEGER</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>INTEGER</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="udf105_2_5">
+    <description>bt:DECIMAL</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:18</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>DECIMAL</baseType>
+  </UserDefinedType>
+
+  <UserDefinedType id="udf108">
+    <description>Optionelekeuzelijst</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:26</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:enumeration value=""/&gt;&lt;xs:enumeration value="Keuze 1"/&gt;&lt;xs:enumeration value="Keuze 2"/&gt;</xsdRestriction>
+    <helpInfo></helpInfo>
+  </UserDefinedType>
+
+  <UserDefinedType id="udf109">
+    <description>min 4 max 8</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:minLength value="4"/&gt;&lt;xs:maxLength value="8"/&gt;</xsdRestriction>
+  </UserDefinedType>
+
+  <UserDefinedType id="weeknummer">
+    <description>Weeknummer</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:pattern value="(([0-4]\d)|(5[0123])|\d)?"/&gt;</xsdRestriction>
+    <language></language>
+  </UserDefinedType>
+
+  <UserDefinedType id="weeknummer_verplicht">
+    <description>Weeknummer verplicht</description>
+    <state>active</state>
+    <dateLaMu>2021-12-02T13:15:27</dateLaMu>
+    <userLaMu>bruinse</userLaMu>
+    <baseType>STRING</baseType>
+    <xsdRestriction>&lt;xs:pattern value="(([0-4]\d)|(5[0123])|\d)"/&gt;</xsdRestriction>
+    <language></language>
+    <helpInfo></helpInfo>
+  </UserDefinedType>
+
+</visiXML_VISI_Systematics>
