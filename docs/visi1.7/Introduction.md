@@ -19,7 +19,8 @@ The drivers of VISI:
 With the help of VISI, organisation get a better grip on, and become
 more mature in, steering and structuring projects and collaborations.\
 
-::: tcolorbox
+<div class="example">
+<p>
 Construction project example: We do this by thinking in advance about
 the communication that takes place between the Client and the Contractor
 in accordance with, among other things, the UAV and UAVgc contract
@@ -28,7 +29,8 @@ about communication. This is translated into messages in a pre-agreed
 workflow with associated response times. This allows all parties to
 concentrate on the content and implementation of the project during the
 project.
-:::
+</p>
+</div>
 
 ## Purpose of this documentation
 
