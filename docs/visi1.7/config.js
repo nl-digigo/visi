@@ -91,7 +91,7 @@ var respecConfig = {
     // A YYYY-MM-DD date. The publication date of the present document. 
     // Als er geen publishDate is opgegeven, genereert ReSpec de dataum o.b.v. de laatste wijzigingen
     // Belangrijk: als publishDate niet opgegeven is, wordt bij de link "Laatst gepubliceerde versie" "geen" gezet. Anders wordt een link opgebouwd voor de laatste versie, met het formaat:
-    publishDate: "2024-06-20",
+    publishDate: "2024-07-20",
   
     // A YYYY-MM-DD date. When there is a previous release of a given specification, (W3C)
     // previousPublishDate: "2021-07-27",
@@ -158,7 +158,7 @@ var respecConfig = {
              {
           name:       "Jeroen van Geijlswijk",
           company:    "N/A",
-          companyURL: "https://www.bimloket.nl"
+          companyURL: "https://www.digigo.nu/"
         },
        {
           name:       "Michon Maas",
