@@ -91,7 +91,7 @@ var respecConfig = {
     // A YYYY-MM-DD date. The publication date of the present document. 
     // Als er geen publishDate is opgegeven, genereert ReSpec de dataum o.b.v. de laatste wijzigingen
     // Belangrijk: als publishDate niet opgegeven is, wordt bij de link "Laatst gepubliceerde versie" "geen" gezet. Anders wordt een link opgebouwd voor de laatste versie, met het formaat:
-    publishDate: "2024-05-23",
+    publishDate: "2024-06-20",
   
     // A YYYY-MM-DD date. When there is a previous release of a given specification, (W3C)
     // previousPublishDate: "2021-07-27",
@@ -163,11 +163,11 @@ var respecConfig = {
        {
           name:       "Michon Maas",
           company:    "N/A",
-          companyURL: "https://www.bimloket.nl"
+          companyURL: "https://www.digigo.nu/"
         },
       ],
     // The github option allows you associate your specification with a repository on GitHub.
-    github: "https://github.com/bimloket/visi",
+    github: "https://github.com/nl-digigo/visi",
   
     // The URL of your test suite, gets included in the specification's headers.
     // testSuiteURI: "https://portaal.digikoppeling.nl/CV/home.html",
@@ -230,7 +230,7 @@ var respecConfig = {
   
     // nl_organisationName is used for some company specific values in the header (and Sotd)
     // currently supported: Logius and Geonovum (default)  
-    nl_organisationName: "Bimloket",
+    nl_organisationName: "DigiGO",
   
     // prefix for the names of company specific css, svg and ico prefixes
     // defaults to "GN-"  
@@ -253,14 +253,14 @@ var respecConfig = {
   
     // nl_organisationPublishURL points to organisation specific publication page, used in header
     // defaults to  https://docs.geostandaarden.nl/"
-    nl_organisationPublishURL: "https://bimloket.github.io/",
+    nl_organisationPublishURL: "https://www.digigo.nu/",
   
     // nl_logo refers to company logo
     // defaults to https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg
     nl_logo: {
       //  src: "https://tools.geostandaarden.nl/respec/style/logos/OmgevingswetLogo.svg",
       src: "images/logo_BIM_Loket.jpg",
-      alt: "BIM Loket",
+      alt: "DigiGO",
       id: "TopLogo",
       //height: 20,
       //width: 100,
