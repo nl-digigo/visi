@@ -262,8 +262,8 @@ var respecConfig = {
       src: "images/logo_BIM_Loket.jpg",
       alt: "DigiGO",
       id: "TopLogo",
-      //height: 20,
-      //width: 100,
+      height: 20,
+      width: 100,
       //url: "https://www.geobasisregistraties.nl/basisregistraties/doorontwikkeling-in-samenhang"
     },
   
