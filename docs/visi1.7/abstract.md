@@ -1,4 +1,4 @@
-# Abstract {.unnumbered #abstract}
+# Abstract {-}
 
 This document contains the technical documentation of VISI 1.7, under
 translation by TEEC2.
