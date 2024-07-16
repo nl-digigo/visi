@@ -1,6 +1,6 @@
 # Project execution {#sec:Functional}
 
-Use Framework and PSB in project
+Use Framework and Configuration in project
 
 ## Message communication
 
