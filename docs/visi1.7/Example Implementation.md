@@ -27,13 +27,13 @@ must execute the order. If all Cooks refuse the order, the customer will
 be informed by the waiter that the order is not possible in its current
 form. The customer must then resubmit the order to the waiter.
 
-![](images/visiwiki4.1interactiekaart.png){#fig: width="40%"}
+![](images/visiwiki4.1interactiekaart.png)
 
 In this example, the processing of an order is translated into VISI
 communication. The following roles and transactions are required to
 process the order.
 
-::: {#tab:my_label}
+
   **Role**       **Responsible for:**
   -------------- -----------------------------------
   Customer       placing an order
@@ -42,9 +42,9 @@ process the order.
   Kitchen help   answering questions from the Cook
 
   : Roles
-:::
 
-::: {#tab:my_label}
+
+
   **Code**   **Name**
   ---------- -----------------------------
   T1         Order recording
@@ -53,22 +53,21 @@ process the order.
   T4         Ask a Chef for Kitchen Help
 
   : Transactions
-:::
+
 
 **Communication**
 
 ![Transactieschema T1: Opname
-bestelling](images/visiwiki4.2opnamebestelling.png){#fig: width="50%"}
+bestelling](images/visiwiki4.2opnamebestelling.png)
 
 ![Transactieschema T2: Vraag ober aan
-kok](images/visiwiki4.3vraagoberaankok.png){#fig: width="50%"}
+kok](images/visiwiki4.3vraagoberaankok.png)
 
 ![Transactieschema T3: Opdracht aan
-kok](images/visiwiki4.4opdrachtaankok.png){#fig: width="50%"}
+kok](images/visiwiki4.4opdrachtaankok.png)
 
 ![Transactieschema T4: Vraag kok aan
-keukenhulp](images/visiwiki4.5vraagkokaankeukenhulp.png){#fig:
-width="50%"}
+keukenhulp](images/visiwiki4.5vraagkokaankeukenhulp.png)
 
 Based on the above roles and transactions, communication can proceed as
 follows:
@@ -99,8 +98,7 @@ example in relation to each other. **This diagram guides the test
 scenario for VISI compatible software.**
 
 ![Complete restaurant
-workflow](images/visiwiki4.6restaurantfullworkflow.png){#fig:
-width="90%"}
+workflow](images/visiwiki4.6restaurantfullworkflow.png)
 
 ## Appendix 4 Detailed Implementation Example
 
@@ -139,7 +137,7 @@ when setting up a framework can be found in \_3.xsd. The second file
 relates to Systematics Part 2. It contains the additional rules that are
 specifically important for VISI messages.
 
-![](images/visiwikib4.1uitgewerktvoorbeeld.png){#fig: width="50%"}
+![](images/visiwikib4.1uitgewerktvoorbeeld.png)
 
 ### Description of example (file "\_7.xml")
 
@@ -709,17 +707,17 @@ MessageInTransaction6 can be sent even though MessageInTransaction10 has
 also been sent. The Waiter can therefore continue transaction T1 without
 completing transaction T2.
 
-![](images/visiwikib4.2image.png){#fig: width="90%"}
+![](images/visiwikib4.2image.png)
 
-![](images/visiwikib4.3image.png){#fig: width="90%"}
+![](images/visiwikib4.3image.png)
 
-![](images/visiwikib4.4image.png){#fig: width="90%"}
+![](images/visiwikib4.4image.png)
 
-![](images/visiwikib4.5image.png){#fig: width="90%"}
+![](images/visiwikib4.5image.png)
 
-![](images/visiwikib4.6image.png){#fig: width="90%"}
+![](images/visiwikib4.6image.png)
 
-![](images/visiwikib4.7image.png){#fig: width="90%"}
+![](images/visiwikib4.7image.png)
 
 ```
 <MessageInTransactionType id="BerichtInTransactie1">
@@ -2106,7 +2104,7 @@ which all possible messages including accessories are recorded. The
 diagram in the following figure shows the role of the Promoter in the
 creation of VISI messages.
 
-![](images/visiwikib4.8image.png){#fig: width="70%"}
+![](images/visiwikib4.8image.png)
 
 The Promoter is made freely available in the form of a Dynamically
 Linked Library (DLL), which is a library with functions that can be used
