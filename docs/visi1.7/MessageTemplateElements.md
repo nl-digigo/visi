@@ -349,7 +349,7 @@ result : OPTIONAL STRING;
 
 Result of this transaction, content is a string.
 
-#### startDate []{#sec:elem-startDate label="sec:elem-startDate"} 
+#### startDate  
 
 ```
 startDate : DATETIME;
