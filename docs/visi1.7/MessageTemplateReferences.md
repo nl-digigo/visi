@@ -2,7 +2,7 @@
 
 #### 4.1. appendixGroup
 
-[]{#sec:ref-appendixGroup label="sec:ref-appendixGroup"}
+
 
 ```
 appendixGroup : OPTIONAL AppendixGroup;
@@ -26,7 +26,7 @@ Message level example:
 
 #### 4.2. contactPerson
 
-[]{#sec:ref-contactPerson label="sec:ref-contactPerson"}
+
 
 ```
 contactPerson : PersonTemplate;
@@ -52,7 +52,7 @@ and a PersonType Person.
 
 #### 4.3. executor
 
-[]{#sec:ref-executor label="sec:ref-executor"}
+
 
 ```
 executor : PersonInRole;
@@ -62,7 +62,7 @@ Which role filler is the executive.
 
 #### 4.4. group
 
-[]{#sec:ref-group label="sec:ref-group"}
+
 
 ```
 group : OPTIONAL GroupTemplate;
@@ -86,7 +86,7 @@ Message level example:
 
 #### 4.5. Initiator
 
-[]{#sec:ref-initiator label="sec:ref-initiator"}
+
 
 ```
 initiator : PersonInRole;
@@ -96,7 +96,7 @@ Which role filler is the initiator.
 
 #### 4.6. message
 
-[]{#sec:ref-message label="sec:ref-message"}
+
 
 ```
 message : MessageTemplate;
@@ -123,7 +123,7 @@ in the associated framework.
 
 #### 4.7. messageInTransaction
 
-[]{#sec:ref-messageInTransaction label="sec:ref-messageInTransaction"}
+
 
 ```
 messageInTransaction : MessageInTransactionTemplate;
@@ -134,7 +134,7 @@ transaction.
 
 #### 4.8. organisation
 
-[]{#sec:ref-organisation label="sec:ref-organisation"}
+
 
 ```
 organisation : OrganisationTemplate;
@@ -159,7 +159,7 @@ Message level example:
 
 #### 4.9. role
 
-[]{#sec:ref-role label="sec:ref-role"}
+
 
 ```
 role : RoleTemplate;
@@ -170,7 +170,7 @@ of a PersonTemplate (person).
 
 #### 4.10. substituting
 
-[]{#sec:ref-substituting label="sec:ref-substituting"}
+
 
 ```
 substituting : OPTIONAL PersonInRole;
@@ -181,7 +181,7 @@ messages.
 
 #### 4.11. successor
 
-[]{#sec:ref-successor label="sec:ref-successor"}
+
 
 ```
 successor : OPTIONAL PersonInRole;
@@ -191,7 +191,7 @@ Successor to another person in a specific role.
 
 #### 4.12. transaction
 
-[]{#sec:ref-transaction label="sec:ref-transaction"}
+
 
 ```
 transaction : TransactionTemplate;
