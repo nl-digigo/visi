@@ -35,14 +35,7 @@ Making the communication patterns project-specific has an additional
 step, which is described in chapter 6. As an added bonus, the other
 (optional) building blocks are explained in the last chapter.\
 
-## Project specific file {#sec:PSB}
-
-Before communication can take place in accordance with the open standard
-VISI, a project must be set up with a project-specific file (psb), a
-framework and a message schedule generated from said framework.
-
-![Initiation - Projectspecific
-message](images/visi4.1initiation.jpg){#fig:Initiation width="70%"}
+## Project specific file 
 
 ### Project
 
@@ -310,13 +303,12 @@ Based on this template, it can be verified whether the information
 provided complies with the agreements.
 
 ![Initiation - VISI
-Framework](images/visi-diagram-project-initiation.jpg){#fig:Initiation
-width="70%"}
+Framework](images/visi-diagram-project-initiation.jpg)
 
 []{#globaleeigenschappendefinitietabel
 label="globaleeigenschappendefinitietabel"}
 
-::: {#tab:my_label}
+
   Attribute                                                                                  
   ---------------------------------- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
   id                                  X   X   X   X   X   X   X   X   X   X   X   X   X   X   X
@@ -358,7 +350,7 @@ label="globaleeigenschappendefinitietabel"}
                                                       X                                      
 
   : Every VISI Type's attributes
-:::
+
 
 ### Role Type (RoleType)
 
@@ -1541,7 +1533,7 @@ in the element condition.\
 If there are 2 CEs in an element condition, the first is always the
 parent and the second the child CE.
 
-::: {#tab:my_label}
+
        **MITT**   **CE1**   **CE2**   **SE**
   --- ---------- --------- --------- --------
    0      \-        \-        \-        \-
@@ -1554,7 +1546,7 @@ parent and the second the child CE.
    7      X          X         O        X
 
   : All options for Element condition (- absent, x defined, O optional)
-:::
+
 
 For example:
 
