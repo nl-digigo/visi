@@ -18,8 +18,7 @@ The framework contains four transaction types:
 And four roles: Customer, Waiter, Cook and Kitchen Help.
 
 ![Testscenario Raamwerk met
-keukenhulp](images/visiw8.1testscenarioframework.jpg){#fig:testscenarioframework
-width="100%"}
+keukenhulp](images/visiw8.1testscenarioframework.jpg)
 
 ### Scenario 1
 
@@ -32,7 +31,7 @@ Testing of functionality for:
 
 -   Using different types of data fields.
 
-![Scenario1](images/visiw8.2scenario1.png){#fig:scenario1 width="100%"}
+![Scenario1](images/visiw8.2scenario1.png)
 
 *Description*\
 \
@@ -42,7 +41,7 @@ Base Type fields are presented.\
 \
 Test if the following fields work as follows:
 
-::: {#tab:my_label}
+
   Field         Function (The input must be\...)
   ------------- -------------------------------------------------------------------------------------------------------------------------
   Boolean       \... either a check box or 0 - 1 or true-false (required)
@@ -53,7 +52,7 @@ Test if the following fields work as follows:
   Integer       \... an integer (required)
   Choice List   \... a field with checked input or drop-down list with the values \"Choice 1\", \"Choice 2\" or \"Choice 3\" (required)
   String        \... random characters can be entered (not required):
-:::
+
 
 Customer K answers the question with No.
 
@@ -66,8 +65,7 @@ Testing of functionality for:
 
 -   Returning to a (main) transaction.
 
-![Scenario2a](images/visiw8.3scenario2a.png){#fig:scenario2a
-width="100%"}
+![Scenario2a](images/visiw8.3scenario2a.png)
 
 *Description*
 
@@ -104,8 +102,7 @@ dit scenario sluit wel beter aan bij de tekst
 Testing for the functionality for a) starting two (sub)transactions and
 b) returning 1 (sub)transaction to the (main)transaction.
 
-![Scenario2c](images/visiw8.4scenario2c.png){#fig:scenario2c
-width="100%"}
+![Scenario2c](images/visiw8.4scenario2c.png)
 
 *Description*
 
@@ -150,8 +147,7 @@ Testing of functionality for:
 
 -   Starting the same type of (sub)transaction again.
 
-![Scenario3a](images/visiw8.5scenario3a.png){#fig:scenario3a
-width="100%"}
+![Scenario3a](images/visiw8.5scenario3a.png)
 
 *Description*
 
@@ -201,8 +197,7 @@ Testing of functionality for:
 
 -   Start the same type of (sub) transaction again.
 
-![Scenario3b](images/visiw8.6scenario3b.png){#fig:scenario3b
-width="100%"}
+![Scenario3b](images/visiw8.6scenario3b.png)
 
 *Description*
 
@@ -249,8 +244,7 @@ width="100%"}
 *Goal*\
 Testing of functionality for: ElementConditions.
 
-![Scenario4a](images/visiw8.7scenario4a.png){#fig:scenario4a
-width="100%"}
+![Scenario4a](images/visiw8.7scenario4a.png)
 
 *Description*
 
@@ -285,8 +279,7 @@ width="100%"}
 *Goal*\
 Testing of functionality for: ElementConditions.
 
-![Scenario4b](images/visiw8.8scenario4b.png){#fig:scenario4b
-width="100%"}
+![Scenario4b](images/visiw8.8scenario4b.png)
 
 *Description*
 
@@ -328,8 +321,7 @@ width="100%"}
 *Goal*\
 Testing of functionality for: ElementConditions.
 
-![Scenario4c](images/visiw8.9scenario4c.png){#fig:scenario4c
-width="100%"}
+![Scenario4c](images/visiw8.9scenario4c.png)
 
 *Description*
 
@@ -382,8 +374,7 @@ Testing of functionality for:
 
 -   openSecondaryTransactionsAllowed
 
-![Scenario5a](images/visiw8.10scenario5a.png){#fig:scenario5a
-width="100%"}
+![Scenario5a](images/visiw8.10scenario5a.png)
 
 *Description*
 
@@ -428,8 +419,7 @@ Testing of functionality for:
 
 -   openSecondaryTransactionsAllowed
 
-![Scenario5b](images/visiw8.11scenario5b.png){#fig:scenario5b
-width="100%"}
+![Scenario5b](images/visiw8.11scenario5b.png)
 
 *Description*
 
@@ -479,8 +469,7 @@ Testing of functionality for:
 
 -   openSecondaryTransactionsAllowed
 
-![Scenario5c](images/visiw8.12scenario5c.png){#fig:scenario5c
-width="100%"}
+![Scenario5c](images/visiw8.12scenario5c.png)
 
 *Description*
 
@@ -547,8 +536,7 @@ Testing of functionality for:
 
 -   openSecondaryTransactionsAllowed
 
-![Scenario5d](images/visiw8.13scenario5d.png){#fig:scenario5d
-width="100%"}
+![Scenario5d](images/visiw8.13scenario5d.png)
 
 *Description*
 
@@ -614,8 +602,7 @@ width="100%"}
 Testing of functionality for: A (main)transaction with two layers of
 (sub)transactions.
 
-![Scenario6a](images/visiw8.14scenario6a.jpg){#fig:scenario6a
-width="100%"}
+![Scenario6a](images/visiw8.14scenario6a.jpg)
 
 *Description*
 
@@ -714,16 +701,14 @@ Testing of functionality for: the correct operation of message sequence
     -   The waiter is not allowed to send another order to the cook
         after this.
 
-```{=html}
 <!-- -->
-```
+
 -   The cook sends a question to the kitchen helper (T4). This can be
     based on the request of the waiter (T2), or the order of the waiter
     (T3).
 
-```{=html}
 <!-- -->
-```
+
 -   The kitchen helper sends an answer in T4. The cook should now be
     able to choose from the following options:
 
@@ -744,9 +729,8 @@ Testing of functionality for: the correct operation of message sequence
 
         -   Report that the answer is not used in T4.
 
-```{=html}
 <!-- -->
-```
+
 -   Once the cook has sent a reply to the waiter in T2 or T3:
 
     -   Can the cook no longer send a new question to the kitchen helper
@@ -791,7 +775,7 @@ Testing of functionality for: Define the number of rows in a table.
 Testing of functionality for: the mandatory inclusion of an appendix for
 a message type (appendixMandatory).
 
-![Scenario9](images/visiw8.15scenario9.png){#fig:scenario9 width="100%"}
+![Scenario9](images/visiw8.15scenario9.png)
 
 *Description*
 
@@ -1053,8 +1037,7 @@ framework.\
 VISI Project met meta-raamwerk & meta-projectspecifiek bericht raamwerk
 projectspecifiek bericht
 
-![ScenarioA1](images/visiw8.16scenarioa1.png){#fig:scenarioA1
-width="100%" height="16cm"}
+![ScenarioA1](images/visiw8.16scenarioa1.png)
 
 *Description*\
 Project initiator offers Project executor a proposal for a new VISI
@@ -1075,8 +1058,7 @@ Testing of functionality for: ending a project with the meta framework.\
 VISI Project met meta-raamwerk & meta-projectspecifiek bericht VISI
 Project met raamwerk & projectspecifiek bericht
 
-![ScenarioA2](images/visiw8.17scenarioa2.png){#fig:scenarioA2
-width="100%"}
+![ScenarioA2](images/visiw8.17scenarioa2.png)
 
 *Description*\
 Project initiator offers Project executor a proposal for a new VISI
