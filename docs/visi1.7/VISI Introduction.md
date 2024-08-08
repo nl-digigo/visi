@@ -167,14 +167,14 @@ The numbering is arbitrary. The name of a role is derived from the main
 activity that the role performs in the process. The interactions can be
 summarised in a table. The example in figure 4 looks like this:
 
-::: {#tab:my_label}
+
   **Transaction Type**        **Transaction Result**
   --------------------------- ----------------------------------
   T1 Deliver design           Design has been delivered
   T2 Deliver specifications   Specification has been delivered
   T3 Deliver 3D model         3D model is delivered
   T4 Provide Cost Estimate    Cost Estimate has been delivered
-:::
+
 
 #### Summary
 
