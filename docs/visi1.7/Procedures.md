@@ -164,88 +164,88 @@ The overall timetable for the annual release cycles is as follows:\
 <figure id="tab:YearlyReleaseCycle">
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th style="text-align: left;">Date</th>
 <th style="text-align: left;">Responsible</th>
 <th style="text-align: left;">Actions</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">April 1</td>
 <td style="text-align: left;">Product Manager</td>
 <td style="text-align: left;">Compiling a prioritized list of
 Stakeholders’ improvement points for the upcoming Version</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">May 31</td>
 <td style="text-align: left;">working group</td>
 <td style="text-align: left;">Discussing, dividing, determining
 complexity of list of improvement points - Updating list</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">June 1</td>
 <td style="text-align: left;">Product Manager</td>
 <td style="text-align: left;">Public consultation with Stakeholders on
 improvements to be implemented</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">September 30</td>
 <td style="text-align: left;">working group</td>
 <td style="text-align: left;">Developing points for improvement into
 functional specifications, designs and technical solutions</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">October 1</td>
 <td style="text-align: left;">working group</td>
 <td style="text-align: left;">Publication of completed improvement
 points up to Release Candidate 1</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">March 31</td>
 <td style="text-align: left;">working group</td>
 <td style="text-align: left;">Developing points for improvement into
 functional specifications, designs and technical solutions</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">March 31</td>
 <td style="text-align: left;">working group</td>
 <td style="text-align: left;">Publication of completed improvement
 points up to Release Candidate 2</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">August 31</td>
 <td style="text-align: left;">Software Suppliers</td>
 <td style="text-align: left;">Adjusting end user software and framework
 editor software in accordance with Release Candidate 2 - Feedback of
 findings per improvement point</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">August 31</td>
 <td style="text-align: left;">Advisors</td>
 <td style="text-align: left;">Adjusting framework editor software in
 accordance with Release Candidate 2 - Feedback of findings per
 improvement point</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">September 1</td>
 <td style="text-align: left;">working group</td>
 <td style="text-align: left;">Compiling advice to the Administrator for
 final Version</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">September 30</td>
 <td style="text-align: left;">Product Manager</td>
 <td style="text-align: left;">Publishing Formal Version</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">September 30</td>
 <td style="text-align: left;">Software Suppliers</td>
 <td style="text-align: left;">Obtaining VISI quality mark in accordance
 with the testing procedure for the VISI quality mark (by inspection
 body)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">September 30</td>
 <td style="text-align: left;">group of Stakeholders</td>
 <td style="text-align: left;">Commissioning of formal Version</td>
