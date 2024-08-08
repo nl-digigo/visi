@@ -172,3 +172,126 @@ the position within a process (delivery document, or a rejection). A
 message consists of several fields, depending on the information
 required. Some parts of a message are fixed, such as the sender and the
 time of sending.
+
+![Message In Transaction
+Buildup](images/visi-diagram-MITT-1.jpg){#fig:messaging width="100%"}
+
+**Information in a message**\
+The content of a message can be compared to a form with fields. Such as:
+text fields, dates, amounts, Yes/No, list boxes, and/or tables. This is
+where inheritance takes place. In principle, data entered from a
+previous message will be sent in a subsequent message, unless a
+so-called condition has been included in the framework.\
+**Appendices and meta information**\
+One or more appendices can be added to VISI messages. This is very
+similar to an 'attachment' of an email. An important difference,
+however, is that an appendix of a VISI message can be provided with META
+data. These elements can be predefined. Think, for example, of the
+version number, document date, status, etc. For example, the META data
+that are necessary in an organisation-specific document management
+system can be taken into account.\
+**Appendices (one or more)**\
+Because appendices are added to a message, an appendix can always be
+placed in context afterwards. When was the appendix sent and with what
+state?
+
+1.  Approved/Rejected/Notification
+
+2.  Draft/Definitive
+
+3.  Date/Version
+
+**Message sequence**\
+The messages are not only fillable, but the sequence of the messages is
+also predetermined. After receiving a message, you can usually choose
+one or more answers. In this way it is determined in advance what the
+communication will look like and also how the course will proceed. In
+other words, the workflow is fixed.
+
+### Transaction
+
+The messages are also grouped by subject and thus always form small
+procedures. Procedures, ie the subject about which one wants to
+communicate, can in general always be chosen independently of each
+other. In VISI we call such a procedure a transaction. The word
+transaction here refers to 'an agreement'. A transaction can be a
+request to do or deliver something. Often on the basis of pre-arranged
+agreements.
+
+![Initiator
+Executor](images/visi-diagram-transaction-1.jpg){#fig:transaction
+width="50%"}
+
+Within VISI, the so-called transaction is central: a binding agreement
+between two roles that agree on what must be done. In practice, a
+transaction is a series of messages between two roles, resulting in a
+certain result.\
+The framework defines which order of messages can be used when
+communicating about the transaction. The order of messages always goes
+back and forth between roles: after a message from role A always follows
+a message from role B, after which it is role A's turn again, until the
+end of the transaction.\
+Example 4: Construction project\
+Think, for example, of Ask from role A to role B to assess something.
+The framework provides the messages that can be used as a response. In
+the picture, this is message X or message Y.
+
+![Transaction buildup](images/visi-diagram-MITT-2.jpg){#fig:bouwproject2
+width="100%"}
+
+Example 5: Construction project\
+The Projectprovider submits a document for approval, as agreed in the
+contract. The Client may reject the document, after which a new document
+will be submitted. If the Client approves the document for approval, the
+transaction is completed.
+
+![Document for
+approval](images/visi-diagram-document-approval-1.jpg){#fig:bouwproject3
+width="70%"}
+
+Example 6: Construction project\
+The Project provider must submit a document for approval as agreed in
+the contract. The Client wishes to ask one or more advisers to assess
+the document. We call this a connected transaction or sub-transaction.
+This transaction again takes place between two roles (no more, no less).
+
+![Document for approval-
+internal](images/visi-diagram-document-approval-2.jpg){#fig:bouwproject4
+width="80%"}
+
+Example 7: Pizzeria\
+Another example is a waiter's request to a cook to prepare a certain
+pizza (Ask), after which the cook goes to work and the relevant pizza is
+reported to the waiter as ready (Answer X) or it is reported that the
+pizza is ready. ingredients are not available (Answer Y) after which the
+transaction is completed.
+
+## Communicating based on a VISI framework {#sec:VisiFrameworkCommunication}
+
+The whole of descriptions of roles, transactions, messages and data,
+which comprise the agreements and/or communication that can and may be
+used in a project/collaboration, is called a framework. In order to be
+able to communicate on the basis of a VISI framework, a number of things
+need to be set.\
+**Project specific message**\
+The project-specific message puts the framework in the context of a
+project. This means that this file indicates which specific project
+and/or contract the framework represents. It also determines which
+persons from which organisation participate in the project in which
+role(s).\
+**Connecting persons to roles**\
+In VISI, responsibilities and tasks are not assigned to parties or
+persons, but to "roles". This was done because, for example, in
+construction projects the same "roles" always appear, but parties can
+often change roles.\
+Think of a situation in which a Client wants to have certain
+responsibilities and tasks fulfilled by an engineering firm or a
+situation in which a pizzeria does not have the delivery done by its own
+deliverers, but concludes a contract with an external party such as
+Deliveroo or Uber eats. A person can be associated with an organisation
+and a role using the project-specific message. But several people can
+also be linked to a role and a person can fulfil several roles. See the
+example below for additional explanation.\
+Example 8: Pizzeria\
+The role of \"waiter\" can be fulfilled by several people. A person can
+also be a waiter and dishwasher.
