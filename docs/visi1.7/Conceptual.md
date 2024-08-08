@@ -330,3 +330,62 @@ In a construction project, the distribution could look like this.
 
   : Construction project roles
 :::
+
+## Details of the framework
+
+**The framework as a file to read in VISI compatible software**\
+The VISI framework is recorded on the basis of the systematic rules in a
+file that can be read into VISI-compatible software. This should be done
+in combination with the previously discussed project-specific message
+and a so-called message schedule with which an extra check can be
+performed whether the messages that are sent and received conform to the
+rules of the system and the defined framework.\
+**Supporting a business process with connected transactions**\
+A business process or procedure often involves more than two roles.
+However, it is not possible to support an entire business process with a
+single transaction between two roles. The standard therefore offers the
+possibility to connect transactions with each other. For example, a
+business process can be supported using a set of connected
+transactions.\
+Example 10: Pizzeria\
+Think of a customer of the pizzeria who enters into a transaction with a
+waiter to obtain a delicious pizza. Based on the transaction with the
+customer, the waiter can in turn initiate a transaction towards a cook
+to make the pizza. In this example, the customer does not have the
+mandate to walk into the kitchen and ask a cook to make the pizza
+themselves. The waiter can also not initiate a transaction with the cook
+to make a pizza if there is no customer request.\
+An important basic principle is that a transaction always yields
+something. If a role from one transaction initiates one or more
+transactions with another role, something must always come back from
+these secondary transactions. A secondary transaction must always end in
+the transaction from which it was initiated.\
+**Conditions within a transaction**\
+In order to enforce certain dependencies in a transaction, conditions
+can be set at certain moments when creating a transaction. Think of the
+following:
+
+-   Enforce message sequence. This means that messages can only be sent
+    after other messages have been received or that messages may only be
+    sent when other messages have not yet been received or that a
+    message may only be sent once.
+
+-   You may or may not be allowed to initiate multiple secondary
+    transactions.
+
+-   You may or may not be allowed to edit or delete certain fields in a
+    message at some point in the transaction.
+
+**Can a framework be supplemented or changed during a project?**\
+While using a VISI framework in a project or other collaboration, it is
+possible to adapt the VISI framework. For example, if business processes
+or process requirements change or if predefined elements, such as
+selection lists in messages, need to be adjusted.\
+A number of things should always be kept in mind, namely:
+
+-   Pending transactions are completed in the version of the framework
+    in which they were initiated. This means that a change to a
+    framework has no effect on current VISI communication.
+
+-   A new version of the framework must be imported for all project
+    partners.
