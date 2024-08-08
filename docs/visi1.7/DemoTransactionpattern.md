@@ -98,21 +98,21 @@ A transaction has three phases;
 3.  ) Result Phase, a conversation in which the actors try to reach
     agreement on the produced product.
 
-![](images/visiwiki2.1transactionphases.png){#fig: width="80%"}
+![](images/visiwiki2.1transactionphases.png)
 
 The sequence of actions request, promise, state and accept leads to a
 successful transaction. This sequence is also called \"happy flow\".
 
-::: {#tab:my_label}
+
   **Abbreviation**    **Action**  **State of Transaction**
   ------------------ ------------ --------------------------
   rq                   Request    Requested
   pm                   Promise    Promised
   st                    State     Stated
   ac                    Accept    Accepted
-:::
 
-![](images/visiwiki2.2transactionpattern.png){#fig: width="50%"}
+
+![](images/visiwiki2.2transactionpattern.png)
 
 After the action request or a state the flow is extended with two
 discussions. The actions (events) are displayed by squares. The actions
@@ -122,7 +122,7 @@ An action creates a fact, which is displayed with a circle. The
 transaction has reached a certain state: requested, declined, quitted,
 promised, stated, rejected, stopped, accepted.
 
-::: {#tab:my_label}
+
   **Abbreviation**   **Action**   **State of Transaction**
   ------------------ ------------ --------------------------
   rq                 Request      Requested
@@ -133,7 +133,7 @@ promised, stated, rejected, stopped, accepted.
   qt                 Quit         Quitted
   rj                 Reject       Rejected
   sp                 Stop         Stopped
-:::
+
 
 The executor may not be able to execute the request. The executor
 declines the request. The transaction is in a state of discussion in
@@ -152,7 +152,7 @@ which the actors talk to each other to agree.\
 a accept. When no agreement is reached the executor stops the
 transaction. The transaction has reached a final state, but failed.
 
-![](images/visiwiki2.3transactionpatternwrevokes.png){#fig: width="20%"}
+![](images/visiwiki2.3transactionpatternwrevokes.png)
 
 A complete transaction pattern arises when we also take into account the
 fact that actors can revoke their primary actions (request, promise,
@@ -168,7 +168,7 @@ transaction into \"stated\".\
 \
 A refuse doesn't change the state of the transaction.
 
-::: {#tab:my_label}
+
   **Abbreviation**   **Action**       **State of Transaction**
   ------------------ ---------------- --------------------------
   rq                 Request          Requested
@@ -185,7 +185,7 @@ A refuse doesn't change the state of the transaction.
   rv ac              Revoke Accept    Revoked Accept
   al                 Allow            Allowed
   rf                 Refuse           Refused
-:::
+
 
 An examples to illustrate.\
 \
@@ -318,7 +318,7 @@ In theory, this restriction to the design of frameworks is already
 possible with the first version of VISI, but this document applies to
 version 1.6. (and higher).
 
-![](images/visiwiki3.1visitransactionpattern.png){#fig: width="30%"}
+![](images/visiwiki3.1visitransactionpattern.png)
 
 All VISI transactions must follow a fixed pattern to become a DEMO
 transaction. The messages are:
@@ -512,7 +512,7 @@ Example:
 A transaction with all messages set to PASSIVE is the best way to start
 modelling a new transaction.
 
-![](images/visiwiki3.2passieveberichten.png){#fig: width="30%"}
+![](images/visiwiki3.2passieveberichten.png)
 
 The messages that need to be sent between initiator and executor are
 defined and the pointer to a PASSIVE message can be replaced in the
@@ -681,7 +681,7 @@ The 4 revocation transactions are \"REVOKE REQUEST\", \"REVOKE
 PROMISE\", \"REVOKE STATE\" and \"REVOKE ACCEPT\". These should be
 modeled in a framework as follows.
 
-![](images/visiwiki3.3revokepatterns.png){#fig: width="90%"}
+![](images/visiwiki3.3revokepatterns.png)
 
 The ids of the transactions are predefined:
 
@@ -1176,21 +1176,18 @@ DST) consists of 4 consecutive steps or statuses. NB: we do not have the
 "Execute" phase in this application of the DST as we only model and
 automate the communication.
 
-![](images/visiwikiba.1demostandaardtransactiekort.png){#fig:
-width="30%"}
+![](images/visiwikiba.1demostandaardtransactiekort.png)
 
 In addition, there are 4 options to deviate from the happy flow.
 
-![](images/visiwikiba.2demostandaardtransactielang.png){#fig:
-width="30%"}
+![](images/visiwikiba.2demostandaardtransactielang.png)
 
 And for every happy flow status there is a Revoke phase, which must
 always be responded to with an Accept or Refuse. NOTE: In this
 application of the DST, the Allow and Refuse messages are always the
 same, regardless of which Revoke they are used for.
 
-![](images/visiwikiba.3demostandaardtransactierevokes.png){#fig:
-width="100%"}
+![](images/visiwikiba.3demostandaardtransactierevokes.png)
 
 Because all phases are always available as options in the DST, the first
 step in converting a VISI framework to a DST compatible framework is to
@@ -1204,7 +1201,7 @@ is not necessary to create dummy messages for the revokes because they
 are always available as an option and will therefore not be specifically
 modeled.
 
-![](images/visiwikiba.4demopassiveflow.png){#fig: width="30%"}
+![](images/visiwikiba.4demopassiveflow.png)
 
 After creating the 8 dummy messages you can analyze the VISI transaction
 to determine how often the DST occurs. In a regular VISI transaction it
@@ -1248,7 +1245,7 @@ It may happen that there are VISI messages that combine multiple DST
 phases in 1 message. In that case, split the message into multiple
 messages so that they can be modeled in their own DST transaction.
 
-![](images/visiwikiba.5demophasesinvisimessage.png){#fig: width="30%"}
+![](images/visiwikiba.5demophasesinvisimessage.png)
 
 Conversely, there may also be multiple VISI messages that concern the
 same DST phase. This often concerns a difference in the content of the
@@ -1256,7 +1253,7 @@ message, but the result is the same. For example, whether a payment is
 made via cash or ATM. The result is the same, i.e. payment is made, but
 the information required may differ.
 
-![](images/visiwikiba.6image.png){#fig: width="70%"}
+![](images/visiwikiba.6image.png)
 
 NB: Since we do not have a fact base in VISI and all information is in
 the message - a difference in the required information means that
@@ -1297,12 +1294,11 @@ to ON_1 (red, executor) TR_02 Judgment request: quotation change - from
 OG_1 (blue, initiator) to OG_2 (red, executor) TR_03 Advice request:
 (quotation) change - from OG_2 (blue, initiator) to OG_3 (red, executor)
 
-![](images/visiwikibb.1standardvisitransaction.png){#fig: width="40%"}
+![](images/visiwikibb.1standardvisitransaction.png)
 
 Identifying DEMO phases in the VISI transaction:
 
-![](images/visiwikibb.2standardvisitransactionphases.png){#fig:
-width="20%"}
+![](images/visiwikibb.2standardvisitransactionphases.png)
 
 Notes on identifying DST phases in existing UAV2012 changes
 transactions:
@@ -1342,20 +1338,19 @@ transactions:
 
 DEMO transaction 01 (DEMO_TR_01_Change_approved)
 
-![](images/visiwikibb.3standardvisitransactiondemo.png){#fig:
-width="60%"}
+![](images/visiwikibb.3standardvisitransactiondemo.png)
 
 DEMO transaction 01 including passive (dummy) messages
 
-![](images/visiwikibb.4image.png){#fig: width="60%"}
+![](images/visiwikibb.4image.png)
 
 DEMO transactie 03 (DEMO_TR_03_Betaalbaarstelling_totaal_afgegeven)
 
-![](images/visiwikibb.5image.png){#fig: width="60%"}
+![](images/visiwikibb.5image.png)
 
 DEMO transaction 03 including passive (dummy) messages
 
-![](images/visiwikibb.6image.png){#fig: width="70%"}
+![](images/visiwikibb.6image.png)
 
 DEMO transaction 03a including passive (dummy) messages - split into a
 and b because there are different State options, where the content of
@@ -1363,7 +1358,7 @@ the message may differ even though the result is the same.\
 \
 DEMO_TR_03a_Payment_total_in_term
 
-![](images/visiwikibb.7image.png){#fig: width="40%"}
+![](images/visiwikibb.7image.png)
 
 DEMO transaction 03b including passive (dummy) messages - split into a
 and b because there are different State options, where the content of
@@ -1371,15 +1366,15 @@ the message may differ even though the result is the same.\
 \
 DEMO_TR_03b_Payment_total_single_order
 
-![](images/visiwikibb.8image.png){#fig: width="40%"}
+![](images/visiwikibb.8image.png)
 
 DEMO transaction 04 (DEMO_TR_04_Payment_partial_issued)
 
-![](images/visiwikibb.9image.png){#fig: width="50%"}
+![](images/visiwikibb.9image.png)
 
 DEMO transaction 04 including passive (dummy) messages
 
-![](images/visiwikibb.10image.png){#fig: width="70%"}
+![](images/visiwikibb.10image.png)
 
 DEMO transaction 04a including passive (dummy) messages - split into a
 and b because there are different State options, where the content of
@@ -1387,7 +1382,7 @@ the message may differ even though the result is the same.\
 \
 DEMO_TR_04a_Payment_partial_in_term
 
-![](images/visiwikibb.11image.png){#fig: width="50%"}
+![](images/visiwikibb.11image.png)
 
 DEMO transaction 04b including passive (dummy) messages - split into a
 and b because there are different State options, where the content of
@@ -1395,15 +1390,15 @@ the message may differ even though the result is the same.\
 \
 DEMO_TR_04b_Payment_partial_single_order
 
-![](images/visiwikibb.12image.png){#fig: width="50%"}
+![](images/visiwikibb.12image.png)
 
 DEMO transaction 05 (DEMO_TR_05_Payment_final term_issued)
 
-![](images/visiwikibb.13image.png){#fig: width="60%"}
+![](images/visiwikibb.13image.png)
 
 DEMO transaction 05 including passive (dummy) messages
 
-![](images/visiwikibb.14image.png){#fig: width="60%"}
+![](images/visiwikibb.14image.png)
 
 DEMO transaction 05a including passive (dummy) messages - split into a
 and b because there are different State options, where the content of
@@ -1411,7 +1406,7 @@ the message may differ even though the result is the same.\
 \
 DEMO_TR_05a_Payment_final term_in_term
 
-![](images/visiwikibb.15image.png){#fig: width="50%"}
+![](images/visiwikibb.15image.png)
 
 DEMO transaction 05b including passive (dummy) messages - split into a
 and b because there are different State options, where the content of
@@ -1419,28 +1414,28 @@ the message may differ even though the result is the same.\
 \
 DEMO_TR_05b_Payment_final term_single_assignment
 
-![](images/visiwikibb.16image.png){#fig: width="50%"}
+![](images/visiwikibb.16image.png)
 
 DEMO transaction 06 (DEMO_TR_06_Judgment_consequences_given)
 
-![](images/visiwikibb.17image.png){#fig: width="50%"}
+![](images/visiwikibb.17image.png)
 
 DEMO transaction 06 including passive (dummy) messages
 
-![](images/visiwikibb.18image.png){#fig: width="50%"}
+![](images/visiwikibb.18image.png)
 
 DEMO transaction 07 (DEMO_TR_07_Advice_consequences_given)
 
-![](images/visiwikibb.19image.png){#fig: width="40%"}
+![](images/visiwikibb.19image.png)
 
 DEMO transaction 07 (DEMO_TR_07_Advice_consequences_given)
 
-![](images/visiwikibb.20image.png){#fig: width="50%"}
+![](images/visiwikibb.20image.png)
 
 Total scenario of all broken down DEMO compatible transactions with
 dummy messages
 
-![](images/visiwikibb.21visitodemotransactions.png){#fig: width="50%"}
+![](images/visiwikibb.21visitodemotransactions.png)
 
 Notes when splitting the VISI transaction into DEMO transactions:
 
