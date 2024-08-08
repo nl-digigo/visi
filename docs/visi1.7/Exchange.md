@@ -1,54 +1,4 @@
-# Message Communication {#exchangeinitsentirety}
-
-In the original documentation this chapter is called 'SOAP' because the
-original communication is over a Soap connection. Due to the progress in
-protocols we expect this to be subject to change and, therefore, we
-renamed the chapter. This document will only state the current version
-of the exchange protocol.
-
-## Introduction
-
-This part of the document contains the guideline for the implementation
-of VISI communication based on the SOAP protocol.\
-The aim of the guideline is to provide directions and boundaries for the
-implementation of VISI communication, which ensures that the information
-system concerned can technically exchange VISI messages with attachments
-to another information system that is set up in accordance with the
-guideline.
-
-## Goal
-
-The goal of this document is to describe a strict and clear protocol
-that can establish communication of VISI messages between all VISI
-supporting software parties. This should be described in such a way that
-the protocol is implementable for all parties, requires no unusual
-implementation, no unusual hardware requirements, and is strict enough
-to allow communication. The persistence, access permissions, and storage
-means of the stored messages is outside the scope of this guideline.
-
-## Architecture
-
-The architecture has been kept simple by supporting only one scenario.
-The scenario includes intercommunication between SOAP servers.
-
-The purpose and background of this architecture:
-
--   the architecture must be able to support communication between VISI
-    servers in a project without the intervention of other servers
-
--   communication must be able to be carried out securely
-
--   messages must be able to be unambiguously communicated
-
--   attachments must be able to be sent
-
--   the sender must be able to find out whether a message has arrived
-    correctly
-
-Architecture:
-
-![Architecture](images/visi8.1architecture.png){#fig:Architecture
-width="100%"}
+# Message Communication 
 
 **Scenario**\
 In this outlined scenario, the following objects can be found:
@@ -83,14 +33,15 @@ is currently no limit on the amount of appendix.
 The protocol used can be found in the configuration. This message
 contains a simple element \"SOAPProtocol\" (language independent) under
 project information. The current capability is only \"MTOM\", so e.g.
-[2](#lst:MTOM){reference-type="ref" reference="lst:MTOM"}.
+[2](#lst:MTOM){reference-type="ref+label" reference="lst:MTOM"}.
 
 <figure id="lst:MTOM">
 
 <figcaption>MTOM Property Definition</figcaption>
 </figure>
 
-And for the configuration [3](#lst:MTOMConfig){reference-type="ref"
+And for the configuration
+[3](#lst:MTOMConfig){reference-type="ref+label"
 reference="lst:MTOMConfig"}.
 
 <figure id="lst:MTOMConfig">
@@ -117,14 +68,14 @@ convention within VISI.
 We will assign the following SimpleElementTypes framework-crossing
 behaviour/definition:
 
-::: {#tab:my_label}
+
   SimpleElementType   Behavior
   ------------------- ---------------------------------------------------------------------------------------
   SOAPServerURL       Contains the URL of the SOAP server associated with this Person, Role or organisation
   SOAPProtocol        Contains the SOAP protocol used
 
   : Caption
-:::
+
 
 ### Message exchange of fixed elements at framework level
 
@@ -135,7 +86,7 @@ outside the new VISI concept):
 
 -   Each framework will contain the following bit of XML to map the
     SOAPServerURL to an organisation
-    [4](#lst:SOAP Server Definition){reference-type="ref"
+    [4](#lst:SOAP Server Definition){reference-type="ref+label"
     reference="lst:SOAP Server Definition"}
 
 <figure id="lst:SOAP Server Definition">
@@ -153,11 +104,11 @@ the conceptual choice to prescribe this communication.
 
 **At message level:**\
 we assume that a configuration is present for a project, as described in
-[\[sec:PSB\]](#sec:PSB){reference-type="ref" reference="sec:PSB"}.
+[\[sec:PSB\]](#sec:PSB){reference-type="ref+label" reference="sec:PSB"}.
 
 -   This configuration defines for each organisation what its
     SOAPServerURL is shown in
-    [5](#lst:SOAPServerConfiguration){reference-type="ref"
+    [5](#lst:SOAPServerConfiguration){reference-type="ref+label"
     reference="lst:SOAPServerConfiguration"}
 
 <figure id="lst:SOAPServerConfiguration">
@@ -187,9 +138,9 @@ unauthorised parties from modifying this information. This configuration
 is located at a location specified by the software supplier (existing
 infrastructures then provide security and availability). More
 information about the configuration can be found in
-[\[sec:Functional\]](#sec:Functional){reference-type="ref"
+[\[sec:Functional\]](#sec:Functional){reference-type="ref+label"
 reference="sec:Functional"} and
-[\[sec:Conformity\]](#sec:Conformity){reference-type="ref"
+[\[sec:Conformity\]](#sec:Conformity){reference-type="ref+label"
 reference="sec:Conformity"}.
 
 The initialisation of each information system starts with loading the
@@ -214,8 +165,7 @@ In the examples:
 -   URL SOAP server receiving party: http://192.168.0.138
 
 ![Message
-Exchange](images/visi8.2messageexchange.png){#fig:MessageExchange
-width=".6\\textwidth"}
+Exchange](images/visi8.2messageexchange.png)
 
 The order of message exchange:
 
@@ -232,7 +182,7 @@ The order of message exchange:
     themselves left).
 
 4.  The SOAP server of the sending party builds a SOAP message as show
-    in [7](#lst:SendingXML){reference-type="ref"
+    in [7](#lst:SendingXML){reference-type="ref+label"
     reference="lst:SendingXML"}.
 
 <figure id="lst:SendingXML">
@@ -247,7 +197,7 @@ id="abc"$>$)
 5.  The SOAP server of the sending party sends this message to the SOAP
     server of the receiving party.
 
-6.  []{#step:exception label="step:exception"} The receiving party's
+6.   The receiving party's
     SOAP server sends a standard SOAP exception error message to the
     sending party. a. The SOAP server of the receiving party forwards
     the VISI message part of the message to the IS of the receiving
@@ -262,7 +212,7 @@ id="abc"$>$)
 
 8.  If successful, the receiving party's SOAP server builds a SOAP
     response message as in
-    [8](#lst:Response Message){reference-type="ref"
+    [8](#lst:Response Message){reference-type="ref+label"
     reference="lst:Response Message"}.
 
 <figure id="lst:Response Message">
@@ -271,7 +221,7 @@ id="abc"$>$)
 </figure>
 
 In case of a single error
-[9](#lst:Single Error Message){reference-type="ref"
+[9](#lst:Single Error Message){reference-type="ref+label"
 reference="lst:Single Error Message"}.
 
 <figure id="lst:Single Error Message">
@@ -280,7 +230,7 @@ reference="lst:Single Error Message"}.
 </figure>
 
 In case of multiple errors (e.g. with validation of the xsd)
-[10](#lst:Muliple Error Message){reference-type="ref"
+[10](#lst:Muliple Error Message){reference-type="ref+label"
 reference="lst:Muliple Error Message"}.
 
 <figure id="lst:Muliple Error Message">
@@ -293,7 +243,7 @@ is 1, these error messages will have to be resolved by the programmers.
 All error messages with a higher code are errors that can be understood
 by the software.
 
-9.  []{#step:response label="step:response"} The receiving party's SOAP
+9.   The receiving party's SOAP
     server sends this response message to the sending parties' SOAP
     server. a. The sending party's SOAP server sends a standard SOAP
     exceptionerror message to the receiving party as a standard response
@@ -409,7 +359,7 @@ the attachments.
 The chosen solution requires only two function calls.\
 **parseMessage**\
 *(1 input variabele of the type string, contains an XML file, see
-[\[sec:VisiFrameworkCommunication\]](#sec:VisiFrameworkCommunication){reference-type="ref"
+[\[sec:VisiFrameworkCommunication\]](#sec:VisiFrameworkCommunication){reference-type="ref+label"
 reference="sec:VisiFrameworkCommunication"})*\
 \
 \
@@ -417,7 +367,7 @@ reference="sec:VisiFrameworkCommunication"})*\
 *(2 inputvariabelen of the type string,
 UniqueIDonMessageInitiatingSOAPServer_XYZ and the found errors errors,
 returns an XML file, see
-[\[sec:VisiFrameworkCommunication\]](#sec:VisiFrameworkCommunication){reference-type="ref"
+[\[sec:VisiFrameworkCommunication\]](#sec:VisiFrameworkCommunication){reference-type="ref+label"
 reference="sec:VisiFrameworkCommunication"})*
 
 The content is the same in both cases, namely the VISI message preceded
@@ -429,7 +379,7 @@ for the sending SOAP server are included in the header of the SOAP
 message.
 
 The method of implementation and use is described in
-[\[sec:VisiFrameworkCommunication\]](#sec:VisiFrameworkCommunication){reference-type="ref"
+[\[sec:VisiFrameworkCommunication\]](#sec:VisiFrameworkCommunication){reference-type="ref+label"
 reference="sec:VisiFrameworkCommunication"}.
 
 ## Configuration
@@ -526,15 +476,13 @@ tamper with the message. The signing will be sent along with the message
 in such a way that the signing is backwards compatible with non-signed
 messages. This is done by not including the signing in the parse
 message, but by appending it to after the parse message, while still in
-the body. See [\[fig:Signing\]](#fig:Signing){reference-type="ref"
+the body. See [\[fig:Signing\]](#fig:Signing){reference-type="ref+label"
 reference="fig:Signing"} for an example.
 
-![Signing Process](images/SigningProcess.png){#fig:signing process
-width="\\textwidth"}
+![Signing Process](images/SigningProcess.png)
 
 ![Enveloped and
-Detached](images/SigningEnvelopedDetached.png){#fig:EnvelopeDetached
-width="\\textwidth"}
+Detached](images/SigningEnvelopedDetached.png)
 
 -   
 -   
@@ -597,7 +545,7 @@ new-->  </Signature>
 </SOAP-ENV:Envelope>
 ```
 
-[]{#fig:Signing label="fig:Signing"}
+
 
 Distinguished name met department name in het PSB
 
