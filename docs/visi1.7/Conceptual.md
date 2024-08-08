@@ -295,3 +295,38 @@ example below for additional explanation.\
 Example 8: Pizzeria\
 The role of \"waiter\" can be fulfilled by several people. A person can
 also be a waiter and dishwasher.
+
+::: {#tab:my_label}
+                  Person1   Person2   Person3   Person4   Person5   Person6
+  -------------- --------- --------- --------- --------- --------- ---------
+  Client             X         X                                   
+  Waiter                                 X         X               
+  Cook                                                       X     
+  Kitchen help                                     X         X         X
+
+  : \"Waiter\" role fulfillment
+:::
+
+Example 9: Construction project\
+In a construction project, the distribution could look like this.
+
+::: {#tab:my_label}
+  -------- ------- ---------- ----------- -------------- ------------------- -------------------
+  Client   Advi-   Tester/    Project     Organisation   Name                Function
+           ser     Accepter   execution                                      
+  X                                       OG             Martijn Gerards     Client
+  X                                       OG             Marjon van Hagen    Project manager
+           X                              OG             WimSchilperoort     Controller
+           X                              OG             Hans Lijmbach       Contract manager
+           X                              OG             Iris Adegeest       Adviser
+                   X                      OG             Mario van Bemmel    Tester
+                   X                      OG             Peter Bloemers      Tester
+           X       X                      OG             Raj Dhaker          Cost expert
+                   X                      OG             Jose de Kwade       Technical Adviser
+                              X           ON             Arjen van der Hof   Project leader
+                              X           ON             Klaas Slot          Contractor
+                              X           ON             Jan van Geest       Planner
+  -------- ------- ---------- ----------- -------------- ------------------- -------------------
+
+  : Construction project roles
+:::
