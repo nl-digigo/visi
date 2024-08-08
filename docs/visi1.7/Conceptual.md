@@ -106,3 +106,19 @@ agreements.
 
 -   Certainty that everything is secured for the future in accordance
     with archive law
+
+### Examples of a project by means of VISI
+
+Example 1: Construction project\
+In this example, the interaction starts with the Contractor (project
+provider). The Client may reject or approve the proposal with a request
+for a quote. If the Contractor receives a rejection, the process to
+record a contract change is terminated. If the proposal is approved, the
+Contractor will provide an offer with the consequences of the contract
+amendment. After this, the Client can again send a rejection or
+acceptance, after which the contract change is stopped or accepted,
+respectively.
+
+![Contract
+change](images/visi-diagram-request-for-change-english.jpg){#fig:bouwproject1
+width=".7\\textwidth"}
