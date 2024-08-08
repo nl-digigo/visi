@@ -296,7 +296,7 @@ Example 8: Pizzeria\
 The role of \"waiter\" can be fulfilled by several people. A person can
 also be a waiter and dishwasher.
 
-
+:
                   Person1   Person2   Person3   Person4   Person5   Person6
   -------------- --------- --------- --------- --------- --------- ---------
   Client             X         X                                   
