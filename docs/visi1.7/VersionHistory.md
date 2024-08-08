@@ -10,16 +10,16 @@ versions.\
 \
 The history is summarised in the table below.
 
-::: {#tab:my_label}
+
    **Author**   **Version**   **Datum**    **Status**  **Remarks**
-  ------------ ------------- ------------ ------------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    TEEC2/EC        1.7       01-09-2023     Future    Translation to English documentation to support internationalisation. Changes in [0.2.6](#sec:ChangesVersion1.7){reference-type="ref" reference="sec:ChangesVersion1.7"}.
-                    1.6       31-03-2016    Current    Changes in [0.2.5](#sec:ChangesVersion1.6){reference-type="ref" reference="sec:ChangesVersion1.6"}.
-                    1.4       31-03-2014    Current    Changes in [0.2.4](#sec:ChangesVersion1.4){reference-type="ref" reference="sec:ChangesVersion1.4"}.
-    CROW/EC         1.3       25-11-2011    Current    The entire guide has been adapted in accordance with version 1.3 of the VISI system. The Guidance now consists of a main document with a series of normative or informative annexes, each containing a specific requirement or guideline. Version 1.3 is aligned with the ISO/DIS 29481 Part 2 (Information Delivery Manual IDM). Changes in [0.2.3](#sec:ChangesVersion1.3){reference-type="ref" reference="sec:ChangesVersion1.3"}
-    Gobar/EC        1.2       31-10-2008    Expired    Changes in [0.2.2](#sec:ChangesVersion1.2){reference-type="ref" reference="sec:ChangesVersion1.2"}.
+  ------------ ------------- ------------ ------------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    TEEC2/EC        1.7       01-09-2023     Future    Translation to English documentation to support internationalisation. Changes in [0.2.6](#sec:ChangesVersion1.7){reference-type="ref+label" reference="sec:ChangesVersion1.7"}.
+                    1.6       31-03-2016    Current    Changes in [0.2.5](#sec:ChangesVersion1.6){reference-type="ref+label" reference="sec:ChangesVersion1.6"}.
+                    1.4       31-03-2014    Current    Changes in [0.2.4](#sec:ChangesVersion1.4){reference-type="ref+label" reference="sec:ChangesVersion1.4"}.
+    CROW/EC         1.3       25-11-2011    Current    The entire guide has been adapted in accordance with version 1.3 of the VISI system. The Guidance now consists of a main document with a series of normative or informative annexes, each containing a specific requirement or guideline. Version 1.3 is aligned with the ISO/DIS 29481 Part 2 (Information Delivery Manual IDM). Changes in [0.2.3](#sec:ChangesVersion1.3){reference-type="ref+label" reference="sec:ChangesVersion1.3"}
+    Gobar/EC        1.2       31-10-2008    Expired    Changes in [0.2.2](#sec:ChangesVersion1.2){reference-type="ref+label" reference="sec:ChangesVersion1.2"}.
      Gobar        1.1(a)                    Expired    Still used in some cases.
-:::
+
 
 ## Important changes in the VISI system
 
@@ -239,7 +239,7 @@ that point.
 ### Changes in version 1.6 vs version 1.4 {#sec:ChangesVersion1.6}
 
 Belongs to:
-[\[propertiesexplanationminmax\]](#propertiesexplanationminmax){reference-type="ref"
+[\[propertiesexplanationminmax\]](#propertiesexplanationminmax){reference-type="ref+label"
 reference="propertiesexplanationminmax"}\
 The numbering of issues is now according to Github.\
 \
@@ -268,7 +268,7 @@ the Complex Element type types, a complex Element always occurs from 0
 to infinity.\
 \
 **Can make attachments mandatory per message type (1019)** (see
-[\[propertiesexplanationappendixmandatory\]](#propertiesexplanationappendixmandatory){reference-type="ref"
+[\[propertiesexplanationappendixmandatory\]](#propertiesexplanationappendixmandatory){reference-type="ref+label"
 reference="propertiesexplanationappendixmandatory"}
 
 When a document has to be sent for acceptance and the attachment is not
