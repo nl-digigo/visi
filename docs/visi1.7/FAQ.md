@@ -86,11 +86,11 @@ verlopen (belangrijk om communicatie ook in een later stadium
 traceerbaar te houden). Het onderstaande voorbeeld is fout, het is niet
 verstandig een raamwerk op een dergelijke wijze op te zetten.
 
-![](images/visiwikianders.1image.png){#fig: width="20%"}
+![](images/visiwikianders.1image.png)
 
 De opzet hieronder is juist, de communicatie blijft traceerbaar.
 
-![](images/visiwikianders.2image.png){#fig: width="20%"}
+![](images/visiwikianders.2image.png)
 
 Let bij het interpreteren van de schema's op het volgende. De cirkeltjes
 aan het begin en het eind geven respectievelijk het begin en het einde
@@ -118,7 +118,7 @@ transactie en op een enkel punt naar 2 of meer hoofdtransacties kan
 terugkeren. De groengekleurde transactie in figuur 6 hieronder voldoet
 aan deze voorwaarden.
 
-![](images/visiwikianders.3image.png){#fig: width="20%"}
+![](images/visiwikianders.3image.png)
 
 Indien in de bovenstaande figuur de communicatie vanaf T1 (zwart) via T2
 (rood) naar T4 (groen) is gelopen, en het laatste bericht van T4 (groen)
