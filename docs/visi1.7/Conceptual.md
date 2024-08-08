@@ -120,8 +120,7 @@ acceptance, after which the contract change is stopped or accepted,
 respectively.
 
 ![Contract
-change](images/visi-diagram-request-for-change-english.jpg){#fig:bouwproject1
-width=".7\\textwidth"}
+change](images/visi-diagram-request-for-change-english.jpg)
 
 Example 2: Pizzeria\
 In this example, the interaction starts with the Waiter. The Customer
@@ -133,8 +132,7 @@ Customer asks for the bill to the Waiter, after which the Waiter brings
 the bill.
 
 ![Pizzeria Customer
-Waiter](images/visi-diagram-customer-waiter-order.jpg){#fig:pizzaria1
-width=".7\\textwidth"}
+Waiter](images/visi-diagram-customer-waiter-order.jpg)
 
 Example 3: Pizzeria\
 The waiter places the order with the cook. The Cook can accept or refuse
@@ -143,8 +141,7 @@ the Customer. For example, a question about order. It is structured in
 such a way that the Customer cannot communicate directly with the Cook.
 
 ![Pizzeria Waiter
-Cook](images/visi-diagram-customer-waiter-cook-order.jpg){#fig:pizzaria2
-width="70%"}
+Cook](images/visi-diagram-customer-waiter-cook-order.jpg)
 
 ## VISI terminology
 
@@ -174,7 +171,7 @@ required. Some parts of a message are fixed, such as the sender and the
 time of sending.
 
 ![Message In Transaction
-Buildup](images/visi-diagram-MITT-1.jpg){#fig:messaging width="100%"}
+Buildup](images/visi-diagram-MITT-1.jpg)
 
 **Information in a message**\
 The content of a message can be compared to a form with fields. Such as:
@@ -219,8 +216,7 @@ request to do or deliver something. Often on the basis of pre-arranged
 agreements.
 
 ![Initiator
-Executor](images/visi-diagram-transaction-1.jpg){#fig:transaction
-width="50%"}
+Executor](images/visi-diagram-transaction-1.jpg)
 
 Within VISI, the so-called transaction is central: a binding agreement
 between two roles that agree on what must be done. In practice, a
@@ -236,8 +232,7 @@ Think, for example, of Ask from role A to role B to assess something.
 The framework provides the messages that can be used as a response. In
 the picture, this is message X or message Y.
 
-![Transaction buildup](images/visi-diagram-MITT-2.jpg){#fig:bouwproject2
-width="100%"}
+![Transaction buildup](images/visi-diagram-MITT-2.jpg)
 
 Example 5: Construction project\
 The Projectprovider submits a document for approval, as agreed in the
@@ -246,8 +241,7 @@ will be submitted. If the Client approves the document for approval, the
 transaction is completed.
 
 ![Document for
-approval](images/visi-diagram-document-approval-1.jpg){#fig:bouwproject3
-width="70%"}
+approval](images/visi-diagram-document-approval-1.jpg)
 
 Example 6: Construction project\
 The Project provider must submit a document for approval as agreed in
@@ -256,8 +250,7 @@ the document. We call this a connected transaction or sub-transaction.
 This transaction again takes place between two roles (no more, no less).
 
 ![Document for approval-
-internal](images/visi-diagram-document-approval-2.jpg){#fig:bouwproject4
-width="80%"}
+internal](images/visi-diagram-document-approval-2.jpg)
 
 Example 7: Pizzeria\
 Another example is a waiter's request to a cook to prepare a certain
@@ -296,7 +289,7 @@ Example 8: Pizzeria\
 The role of \"waiter\" can be fulfilled by several people. A person can
 also be a waiter and dishwasher.
 
-::: {#tab:my_label}
+
                   Person1   Person2   Person3   Person4   Person5   Person6
   -------------- --------- --------- --------- --------- --------- ---------
   Client             X         X                                   
@@ -305,12 +298,12 @@ also be a waiter and dishwasher.
   Kitchen help                                     X         X         X
 
   : \"Waiter\" role fulfillment
-:::
+
 
 Example 9: Construction project\
 In a construction project, the distribution could look like this.
 
-::: {#tab:my_label}
+
   -------- ------- ---------- ----------- -------------- ------------------- -------------------
   Client   Advi-   Tester/    Project     Organisation   Name                Function
            ser     Accepter   execution                                      
@@ -329,7 +322,7 @@ In a construction project, the distribution could look like this.
   -------- ------- ---------- ----------- -------------- ------------------- -------------------
 
   : Construction project roles
-:::
+
 
 ## Details of the framework
 
