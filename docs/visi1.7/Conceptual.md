@@ -389,3 +389,42 @@ A number of things should always be kept in mind, namely:
 
 -   A new version of the framework must be imported for all project
     partners.
+
+## User guarantees
+
+**VISI en ISO 29481-1 Building information models - Information delivery
+manual**\
+VISI interprets and extends the international standard ISO 29481-1
+Building information models -Information delivery manual.\
+\
+**Transferring projects from one system to another**\
+If a VISI user wants to switch to another supplier during a project, it
+is expected that they can read in the messages already sent, in order to
+allow the user to continue the project from another application.\
+\
+**Archiving**\
+After the project has been completed, the agreements and the messages
+are archived together. A VISI application is expected to be able to read
+in a project so that a user can read the message traffic again and offer
+it as an offline project archive where the messages and appendices are
+preserved in the context of the workflow.\
+**Control information: Monitoring cooperation progress**\
+You can see the progress of the collaboration for the entire project
+because you can check whether messages have been sent in accordance with
+the agreements. The delivery of monitoring data or control information
+across projects is not part of the standard, but is expected by users
+from the VISI applications.\
+**Messages are not editable after sending**\
+**Certification VISI compatible software**\
+Control questions:
+
+-   Do reports for control information also have to be supported by
+    software or is this software dependent?
+
+-   How do you know the message content is correct?
+
+-   How do you know your message has arrived?
+
+-   How do you know that the right person has received the message?
+
+-   How do you know that an authorised person wrote the message?
