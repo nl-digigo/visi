@@ -13,6 +13,9 @@ The drivers of VISI:
     into the progress of the collaboration and prevents noise in
     communication.
 
+3.  Organizations take the step from document-driven working to data-
+    and process-driven working
+
 With the help of VISI, organisation get a better grip on, and become
 more mature in, steering and structuring projects and collaborations.\
 
@@ -31,36 +34,35 @@ project.
 
 ## Purpose of this documentation
 
-The construction sector is the owner of the open standard VISI. BIM
-counter manages the VISI standard. BIM counter is advised by an expert
-committee. This expert committee includes the software suppliers who
-have implemented VISI. They are in close contact with the users, who in
-turn ask for new functionalities, which may lead to adjustments to the
-standard. The various software developers are each responsible for (and
-owner of) their own implementation of the VISI standard within their
-software applications. The VISI standard ensures that software packages
-can communicate with each other and BIM guarantees this. In a project or
+The construction sector is the owner of the open standard VISI. manages
+the VISI standard. is advised by an expert committee. This expert
+committee includes software vendors who have implemented VISI. They are
+in close contact with the users, who in turn ask for new
+functionalities, which may lead to adjustments to the standard. The
+various software developers are each responsible for (and owner of)
+their own implementation of the VISI standard within their software
+applications. The VISI standard ensures that software packages can
+communicate with each other and BIM guarantees this. In a project or
 collaboration, organisations can work with different software packages.
-By making the documentation accessible, more software suppliers can
+By making the documentation accessible, more software vendors can
 implement the VISI standard.
 
 **Target audience**\
 The conceptual documentation is for software vendors or system
 administrators who want to learn more about the VISI standard and how it
 is applied. End users of organisations that use VISI for communication
-and other interested parties can visit the website of the BIM Loket for
-more user-oriented documentation and application examples. We do this by
+and other interested parties can visit the website of the for more
+user-oriented documentation and application examples. We do this by
 thinking in advance about the communication that takes place between the
 Client and the Contractor in accordance with the appropriate contract
 types, with the addition of the contract documents containing agreements
 about communication. This is translated into messages in a pre-agreed
-workflow with associated response times. This allows all parties to
-concentrate on the content and execution of the project during the
-project.
+workflow with associated response times. This enables all parties to
+focus on project content and execution.
 
 The functional and technical documentation of the VISI standard is
 intended for parties who want to implement the standard in their
-software. Software suppliers provide the information systems that are
+software. Software vendors provide the information systems that are
 suitable for communicating on the basis of VISI. In order to make the
 documentation suitable for readers at product management level as well
 as software implementation level, it has been decided to divide it into
