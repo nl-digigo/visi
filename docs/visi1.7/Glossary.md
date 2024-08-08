@@ -59,7 +59,7 @@ Role that initiates a transaction.
 
 ### Interaction Diagram (Interactiekaart)
 
-See [1.0.25](#glos:VISI-InteractionDiagram){reference-type="ref"
+See [1.0.25](#glos:VISI-InteractionDiagram){reference-type="ref+label"
 reference="glos:VISI-InteractionDiagram"}.
 
 ### Project Specific Framework (Projectspecifiek raamwerk)
@@ -81,7 +81,7 @@ Promoter is made available by CROW.
 ### Framework (Raamwerk)
 
 Is used in this context in the sense of 'VISI framework'; see
-[1.0.28](#glos:VISI-Framework){reference-type="ref"
+[1.0.28](#glos:VISI-Framework){reference-type="ref+label"
 reference="glos:VISI-Framework"}.
 
 ### Role Description (Rolbeschrijving)
