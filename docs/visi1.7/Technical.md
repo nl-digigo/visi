@@ -35,7 +35,7 @@ function. These 'additional requirements' only apply if the VISI product
 contains a user interface for the end user. The additional requirements
 also relate to obtaining the VISI quality mark.
 
-::: {#tab:my_label}
+
         **Ensuring the authenticity of exchanged VISI messages and associated files**
   ----- ------------------------------------------------------------------------------------------------------------
    A.1  VISI messages must comply with the system as shown when sent from a VISI product(\*).
@@ -51,9 +51,9 @@ also relate to obtaining the VISI quality mark.
         under his/her sole control.
    A.5  Only the persons listed in the project-specific message may use the VISI product
         Perform VISI communications in accordance with the VISI roles assigned to them.
-:::
 
-::: {#tab:my_label}
+
+
   ----- ----------------------------------------------------------------------------------
         **Presenting in a recognizable manner**
         **the communication structure established in a VISI framework**
@@ -75,9 +75,9 @@ also relate to obtaining the VISI quality mark.
         the manner as laid down in the underlying VISI framework and where
         the user is involved as 'Person-in-Role' (initiator or executor).
   ----- ----------------------------------------------------------------------------------
-:::
 
-::: {#tab:my_label}
+
+
   ----- ---------------------------------------------------------------------------
         **The afterwards (i.e. after closing the project)**
         **being able to reproduce conducted VISI communications**
@@ -94,7 +94,7 @@ also relate to obtaining the VISI quality mark.
         (\*\*) N.B. Testing of this item is not possible;
         agreements can be made about uniform archiving
   ----- ---------------------------------------------------------------------------
-:::
+
 
 ## Appendix 13 Reducing frames using optional fields
 
@@ -125,10 +125,10 @@ messages.
 
 ### Part 1 (\_2.exp): VISI-framework
 
-[\[globaleeigenschappendefinitietabel\]](#globaleeigenschappendefinitietabel){reference-type="ref"
+[\[globaleeigenschappendefinitietabel\]](#globaleeigenschappendefinitietabel){reference-type="ref+label"
 reference="globaleeigenschappendefinitietabel"}
 
-::: {#tab:my_label}
+
   **Type**                   **Optional properties**
   -------------------------- -------------------------
   All elements               userLaMu
@@ -141,11 +141,11 @@ reference="globaleeigenschappendefinitietabel"}
                              received
                              send
                              group
-:::
+
 
 ### Part 2 (\_5.exp): VISI messages and project-specific message
 
-::: {#tab:my_label}
+
   **Type**                       **Properties to be made optional**
   ------------------------------ ------------------------------------
   All elements                   userLaMu
@@ -161,7 +161,7 @@ reference="globaleeigenschappendefinitietabel"}
   MessageInTransactionTemplate   dateSend
                                  dateRead
   AppendixGroup                  group
-:::
+
 
 ### Test result
 
