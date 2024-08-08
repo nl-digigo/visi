@@ -8,19 +8,19 @@ anticipated, and agreed-upon deadlines.
 
 ### Execution
 
-**Send messages and keep appointments**\
+**Send messages and keep appointments**
 
-1.  **VISI focuses on fulfilling agreements.**\
+1.  **VISI focuses on fulfilling agreements.**
     Users can easily identify their required actions and initiate
     message flows for specific transactions if they have the correct
     role. They can also view response options and anticipate incoming
     messages.
 
-2.  **It is clear whether a message has arrived.**\
+2.  **It is clear whether a message has arrived.**
     Due to the agreed-upon message traffic protocol, users can confirm
     message delivery.
 
-3.  **Transferring work to a new employee is seamless.**\
+3.  **Transferring work to a new employee is seamless.**
     Because an employee has a role, a successor can be appointed during
     a collaboration. From that moment on, this successor takes over the
     message flow. It is expected of a VISI application that the
