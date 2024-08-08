@@ -122,3 +122,53 @@ respectively.
 ![Contract
 change](images/visi-diagram-request-for-change-english.jpg){#fig:bouwproject1
 width=".7\\textwidth"}
+
+Example 2: Pizzeria\
+In this example, the interaction starts with the Waiter. The Customer
+has a limited number of response options. If the Customer does not wish
+to see a menu, the interaction will stop. If the Customer does want to
+see a menu, the transaction continues. The scope of this transaction is
+placing an order. For example, another transaction would be that the
+Customer asks for the bill to the Waiter, after which the Waiter brings
+the bill.
+
+![Pizzeria Customer
+Waiter](images/visi-diagram-customer-waiter-order.jpg){#fig:pizzaria1
+width=".7\\textwidth"}
+
+Example 3: Pizzeria\
+The waiter places the order with the cook. The Cook can accept or refuse
+the order. Depending on the response of the Cook, a response is given to
+the Customer. For example, a question about order. It is structured in
+such a way that the Customer cannot communicate directly with the Cook.
+
+![Pizzeria Waiter
+Cook](images/visi-diagram-customer-waiter-cook-order.jpg){#fig:pizzaria2
+width="70%"}
+
+## VISI terminology
+
+### Role
+
+Various responsibilities and associated tasks occur within
+(construction) projects and forms of cooperation. Think of a simple
+agreement with a Contractor and Client with agreed tasks and
+responsibilities. These responsibilities with associated tasks are
+bundled into logical roles. The concept of how parties interact and the
+agreement they have with each other influences the distribution of roles
+among the parties.
+
+A role is fundamentally different from a function. An essential
+difference is that roles are a reflection of the work being organised,
+while functions are a reflection of people being organised (in an
+organisation). A VISI project does not have the function of Head of
+Department, but does have the roles of Assessment, Advisory.
+
+### Message
+
+Messages are a means of transferring or transferring information
+exchange data. The message name equals a certain status, depending on
+the position within a process (delivery document, or a rejection). A
+message consists of several fields, depending on the information
+required. Some parts of a message are fixed, such as the sender and the
+time of sending.
