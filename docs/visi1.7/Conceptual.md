@@ -296,7 +296,7 @@ Example 8: Pizzeria\
 The role of \"waiter\" can be fulfilled by several people. A person can
 also be a waiter and dishwasher.
 
-:::
+|
                   Person1   Person2   Person3   Person4   Person5   Person6
   -------------- --------- --------- --------- --------- --------- ---------
   Client             X         X                                   
@@ -305,7 +305,7 @@ also be a waiter and dishwasher.
   Kitchen help                                     X         X         X
 
   : \"Waiter\" role fulfillment
-:::
+|
 
 Example 9: Construction project\
 In a construction project, the distribution could look like this.
