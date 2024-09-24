@@ -27,6 +27,7 @@ ENTITY AppendixTemplate;
  fileLocation : STRING;
  fileType : STRING;
  fileVersion : STRING;
+ checksum : STRING;
  documentIdentification : OPTIONAL STRING;
  documentVersion : OPTIONAL STRING;
  documentReference : OPTIONAL STRING;
