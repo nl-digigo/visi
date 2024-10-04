@@ -2,7 +2,7 @@
 
 Beheer- en publicatieomgeving van de VISI open standaard.
 
-Zie voor technische documentatie: https://bimloket.github.io/visi/
+Zie voor technische documentatie: https://nl-digigo.github.io/visi/
 
 ### Wat is VISI?
 
