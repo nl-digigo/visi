@@ -18,4 +18,4 @@ VISI definieert het proces in termen van raamwerk, rollen, transacties en berich
 
 **Technische documentatie voor softwareleveranciers**
 
-([nl-digigo.github.io/visi/](https://nl-digigo.github.io/visi/visi1.7/))
+[nl-digigo.github.io/visi/](https://nl-digigo.github.io/visi/visi1.7/)
