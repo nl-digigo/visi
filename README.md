@@ -14,7 +14,7 @@ VISI definieert het proces in termen van raamwerk, rollen, transacties en berich
 
 **Informatie voor gebruikers en beheerders van VISI**
 
-[http://www.nl-digigo.nl/visi](http://www.bimloket.nl/visi)
+[http://www.nl-digigo.nl/visi](http://www.nl-digigo.nl/visi)
 
 **Technische documentatie voor softwareleveranciers**
 
