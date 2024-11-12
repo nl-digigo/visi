@@ -109,8 +109,19 @@ ENTITY UserDefinedType;		--	A specification of a data type (to be used in a Simp
  userLaMu : OPTIONAL STRING;
  baseType : STRING;
  xsdRestriction : OPTIONAL STRING;
+ responseDueDate : OPTIONAL BOOLEAN;
+ sequenceSyntax : OPTIONAL STRING;
+ sequenceStartNumber : OPTIONAL INTEGER;
+ sequenceNumberMinLength : OPTIONAL INTEGER;
+ organisationSequencePrefix : OPTIONAL OrganisationSequencePrefixType;
  language : OPTIONAL STRING;
  helpInfo : OPTIONAL STRING;
+END_ENTITY;
+
+ENTITY OrganisationSequencePrefixType;	--	....
+ description : STRING; 
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
 END_ENTITY;
 
 ENTITY MessageInTransactionType;	--	The occurrence of a MessageType within a TransactionType related to a certain group type (GroupType). 
@@ -118,7 +129,6 @@ ENTITY MessageInTransactionType;	--	The occurrence of a MessageType within a Tra
  userLaMu : OPTIONAL STRING; 
  state : OPTIONAL STRING;
  initiatorToExecutor : OPTIONAL BOOLEAN;
- openSecondaryTransactionsAllowed : OPTIONAL BOOLEAN;
  firstMessage : OPTIONAL BOOLEAN;
  revokeAllowed : OPTIONAL BOOLEAN;
 

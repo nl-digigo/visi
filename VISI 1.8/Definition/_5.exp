@@ -105,9 +105,16 @@ ENTITY OrganisationTemplate;
  state : OPTIONAL STRING;
  dateLaMu : OPTIONAL DATETIME;
  userLaMu : OPTIONAL STRING;
-
  contactPerson : PersonTemplate;
+ organisationSequencePrefixes : OrganisationSequencePrefixTemplate;
  template : ComplexElementTemplate;
+END_ENTITY;
+
+ENTITY OrganisationSequencePrefixTemplate;
+ name : STRING;
+ organisationPrefix: STRING;
+ dateLaMu : OPTIONAL DATETIME;
+ userLaMu : OPTIONAL STRING;
 END_ENTITY;
 
 ENTITY PersonInRole;

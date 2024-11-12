@@ -1,0 +1,406 @@
+<visiXML_MessageSchema>
+	<ProjectType_testscenarios_visi id="visiTestFramework1_8_testproject2">
+		<name>visiTestFramework1_8_testproject 2</name>
+		<description>visiTestFramework1_8_testproject 2</description>
+		<startDate>2024-11-07T09:56:53Z</startDate>
+		<endDate>2024-11-07T09:56:53Z</endDate>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</ProjectType_testscenarios_visi>
+	<Per id="PER_c84eef3e6fb04b4fafa59910d57837f8">
+		<userName/>
+		<name>Person A</name>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</Per>
+	<Per id="PER_2b1235692c664ab1bced3759fe93a41d">
+		<userName/>
+		<name>Person B</name>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</Per>
+	<Per id="PER_df6046d243ad434a9217b2a55e50e114">
+		<userName/>
+		<name>Person C</name>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</Per>
+	<Per id="PER_4197066513ba4169ae3da01bed50003b">
+		<userName/>
+		<name>Person D</name>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</Per>
+	<Per id="PER_879033946b0c47e59e6052392bcebcac">
+		<userName/>
+		<name>Organisation A person 1</name>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</Per>
+	<Per id="PER_ab6c006bb4234fbb8fb05b33d841b7aa">
+		<userName/>
+		<name>Organisation A person 2 internal</name>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</Per>
+	<Per id="PER_9b564417b21b47b69b0749c3ea29da18">
+		<userName/>
+		<name>Organisation B  person 1</name>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</Per>
+	<Per id="PER_9a7b4f887928439c906f45f509ada4fd">
+		<userName/>
+		<name>Organisation B person 2 internal</name>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</Per>
+	<Per id="PER_c33227727ec547c987900e74e33b01e3">
+		<userName/>
+		<name>Organisation C person</name>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</Per>
+	<Per id="PER_b8f222fa8e5b4fc288b6f54b7172dccb">
+		<userName/>
+		<name>Organisation D person</name>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</Per>
+	<StGeneral id="st_GeneralCl">
+		<name>General prefix CL</name>
+		<organisationPrefix>CL</organisationPrefix>
+		<dateLaMu>2024-06-18T13:25:23Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</StGeneral>
+	<StGeneral id="st_GeneralCo">
+		<name>General prefix CO</name>
+		<organisationPrefix>CO</organisationPrefix>
+		<dateLaMu>2024-06-18T13:25:23Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</StGeneral>
+	<StChangeOrder id="st_ChangeCl">
+		<name>Change order prefix CL</name>
+		<organisationPrefix>6</organisationPrefix>
+		<dateLaMu>2024-06-18T13:25:23Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</StChangeOrder>
+	<StChangeOrder id="st_ChangeCo">
+		<name>Change order prefix CO</name>
+		<organisationPrefix>2</organisationPrefix>
+		<dateLaMu>2024-06-18T13:25:23Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</StChangeOrder>
+	<StChangeOrder id="st_ChangeEn">
+		<name>Change order prefix ENG</name>
+		<organisationPrefix>7</organisationPrefix>
+		<dateLaMu>2024-06-18T13:25:23Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</StChangeOrder>
+	<OrgStandard id="ORG_b1c79573b3624c09aea8c912e9b41203">
+		<name>Organisation A</name>
+		<abbreviation>A</abbreviation>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_c84eef3e6fb04b4fafa59910d57837f8"/>
+		</contactPerson>
+		<organisationSequencePrefixes>
+			<StGeneralRef idref="st_GeneralCo"/>
+			<StChangeOrderRef idref="st_ChangeCo"/>
+		</organisationSequencePrefixes>
+		<ceOrganisation>
+			<CeOrganisationRef idref="ce_2c611729-84ab-46ca-a28a-557682cf3dc3"/>
+		</ceOrganisation>
+	</OrgStandard>
+	<CeOrganisation id="ce_2c611729-84ab-46ca-a28a-557682cf3dc3">
+		<sOAPServerURL/>
+	</CeOrganisation>
+	<OrgStandard id="ORG_99d8fbb642944c079a7b83f389476088">
+		<name>Organisation B</name>
+		<abbreviation>B</abbreviation>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_c84eef3e6fb04b4fafa59910d57837f8"/>
+		</contactPerson>
+		<organisationSequencePrefixes>
+			<StGeneralRef idref="st_GeneralCl"/>
+			<StChangeOrderRef idref="st_ChangeCl"/>
+		</organisationSequencePrefixes>
+		<ceOrganisation>
+			<CeOrganisationRef idref="ce_9e3312f5-f954-43b4-8cf6-6f288eddedde"/>
+		</ceOrganisation>
+	</OrgStandard>
+	<CeOrganisation id="ce_9e3312f5-f954-43b4-8cf6-6f288eddedde">
+		<sOAPServerURL/>
+	</CeOrganisation>
+	<OrgStandard id="ORG_898bc76508c543adab806e201fd45bdc">
+		<name>Organisation C</name>
+		<abbreviation>C</abbreviation>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_c84eef3e6fb04b4fafa59910d57837f8"/>
+		</contactPerson>
+		<organisationSequencePrefixes>
+			<StChangeOrderRef idref="st_ChangeCl"/>
+		</organisationSequencePrefixes>
+		<ceOrganisation>
+			<CeOrganisationRef idref="ce_3c82e7ec-7ad1-406b-bf2f-297792761785"/>
+		</ceOrganisation>
+	</OrgStandard>
+	<CeOrganisation id="ce_3c82e7ec-7ad1-406b-bf2f-297792761785">
+		<sOAPServerURL/>
+	</CeOrganisation>
+	<OrgStandard id="ORG_b30a717392ab41569693e1aef39aee4f">
+		<name>Organisation D</name>
+		<abbreviation>D</abbreviation>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_c84eef3e6fb04b4fafa59910d57837f8"/>
+		</contactPerson>
+		<organisationSequencePrefixes>
+			<StChangeOrderRef idref="st_ChangeEn"/>
+		</organisationSequencePrefixes>
+		<ceOrganisation>
+			<CeOrganisationRef idref="ce_8d9ddc3b-ff47-4ea6-ab31-58b8188064f9"/>
+		</ceOrganisation>
+	</OrgStandard>
+	<CeOrganisation id="ce_8d9ddc3b-ff47-4ea6-ab31-58b8188064f9">
+		<sOAPServerURL/>
+	</CeOrganisation>
+	<RoA id="ROL_cafa475e7d4249eebbc8399632ede391">
+		<name>RoA</name>
+		<description>RoA</description>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</RoA>
+	<RoB id="ROL_27fae7f3e3b040188b3562d709e3b3a5">
+		<name>RoB</name>
+		<description>RoB</description>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</RoB>
+	<RoC id="ROL_dc5d78d277cb4663b2ce3580cb54a362">
+		<name>RoC</name>
+		<description>RoC</description>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</RoC>
+	<RoD id="ROL_e7161a8f1fc5467786b655af88a10b87">
+		<name>RoD</name>
+		<description>RoD</description>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</RoD>
+	<RoOrgAinternal id="ROL_1d00e014da754b95a68153c37072a489">
+		<name>RoOrgAinternal</name>
+		<description>RoOrgAinternal</description>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</RoOrgAinternal>
+	<RoOrgB id="ROL_23f3dd83849940caa880bf7ea6f6244d">
+		<name>RoOrgB</name>
+		<description>RoOrgB</description>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</RoOrgB>
+	<RoOrgBinternal id="ROL_533857b4ea954cb399a14a622f7c50fb">
+		<name>RoOrgBinternal</name>
+		<description>RoOrgBinternal</description>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</RoOrgBinternal>
+	<RoOrgCperson id="ROL_02d9cb65623a43029acb8bfba39d3990">
+		<name>RoOrgCperson</name>
+		<description>RoOrgCperson</description>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</RoOrgCperson>
+	<RoOrgDperson id="ROL_58c7d167c84c40c5993ca575dcce9bf0">
+		<name>RoOrgDperson</name>
+		<description>RoOrgDperson</description>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</RoOrgDperson>
+	<RoRevoke id="ROL_0969912e994c4d78a8c1642aafa59efd">
+		<name>RoRevoke</name>
+		<description>RoRevoke</description>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</RoRevoke>
+	<RoTestOrgA id="ROL_5d76c068054348f38abd9b21b9b5dcbd">
+		<name>RoTestOrgA</name>
+		<description>RoTestOrgA</description>
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+	</RoTestOrgA>
+	<PersonInRole id="PIR_7e730b3790c143cc8f3e34fd70f35d83">
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_c84eef3e6fb04b4fafa59910d57837f8"/>
+		</contactPerson>
+		<organisation>
+			<OrgStandardRef idref="ORG_b1c79573b3624c09aea8c912e9b41203"/>
+		</organisation>
+		<role>
+			<RoARef idref="ROL_cafa475e7d4249eebbc8399632ede391"/>
+		</role>
+	</PersonInRole>
+	<PersonInRole id="PIR_4503a920466242e78c49a599a8bdfa79">
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_2b1235692c664ab1bced3759fe93a41d"/>
+		</contactPerson>
+		<organisation>
+			<OrgStandardRef idref="ORG_b1c79573b3624c09aea8c912e9b41203"/>
+		</organisation>
+		<role>
+			<RoBRef idref="ROL_27fae7f3e3b040188b3562d709e3b3a5"/>
+		</role>
+	</PersonInRole>
+	<PersonInRole id="PIR_ca54cad023f04ffc89bf24cb8851b40c">
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_df6046d243ad434a9217b2a55e50e114"/>
+		</contactPerson>
+		<organisation>
+			<OrgStandardRef idref="ORG_b1c79573b3624c09aea8c912e9b41203"/>
+		</organisation>
+		<role>
+			<RoCRef idref="ROL_dc5d78d277cb4663b2ce3580cb54a362"/>
+		</role>
+	</PersonInRole>
+	<PersonInRole id="PIR_f199b1cc72be4dee9e38813e631063d2">
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_4197066513ba4169ae3da01bed50003b"/>
+		</contactPerson>
+		<organisation>
+			<OrgStandardRef idref="ORG_b1c79573b3624c09aea8c912e9b41203"/>
+		</organisation>
+		<role>
+			<RoDRef idref="ROL_e7161a8f1fc5467786b655af88a10b87"/>
+		</role>
+	</PersonInRole>
+	<PersonInRole id="PIR_35480352d9cd4a46b00b48eae64501fb">
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_ab6c006bb4234fbb8fb05b33d841b7aa"/>
+		</contactPerson>
+		<organisation>
+			<OrgStandardRef idref="ORG_b1c79573b3624c09aea8c912e9b41203"/>
+		</organisation>
+		<role>
+			<RoOrgAinternalRef idref="ROL_1d00e014da754b95a68153c37072a489"/>
+		</role>
+	</PersonInRole>
+	<PersonInRole id="PIR_892fe592dc5045f68b0131893e6be4e3">
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_9b564417b21b47b69b0749c3ea29da18"/>
+		</contactPerson>
+		<organisation>
+			<OrgStandardRef idref="ORG_99d8fbb642944c079a7b83f389476088"/>
+		</organisation>
+		<role>
+			<RoOrgBRef idref="ROL_23f3dd83849940caa880bf7ea6f6244d"/>
+		</role>
+	</PersonInRole>
+	<PersonInRole id="PIR_4be79af5df124ab481d00e430fed0a4d">
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_9a7b4f887928439c906f45f509ada4fd"/>
+		</contactPerson>
+		<organisation>
+			<OrgStandardRef idref="ORG_99d8fbb642944c079a7b83f389476088"/>
+		</organisation>
+		<role>
+			<RoOrgBinternalRef idref="ROL_533857b4ea954cb399a14a622f7c50fb"/>
+		</role>
+	</PersonInRole>
+	<PersonInRole id="PIR_07538a554ca941c2adeaed5dfe295b60">
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_c33227727ec547c987900e74e33b01e3"/>
+		</contactPerson>
+		<organisation>
+			<OrgStandardRef idref="ORG_898bc76508c543adab806e201fd45bdc"/>
+		</organisation>
+		<role>
+			<RoOrgCpersonRef idref="ROL_02d9cb65623a43029acb8bfba39d3990"/>
+		</role>
+	</PersonInRole>
+	<PersonInRole id="PIR_6a3139a08b0248bda90a47959dc26aa7">
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_b8f222fa8e5b4fc288b6f54b7172dccb"/>
+		</contactPerson>
+		<organisation>
+			<OrgStandardRef idref="ORG_b30a717392ab41569693e1aef39aee4f"/>
+		</organisation>
+		<role>
+			<RoOrgDpersonRef idref="ROL_58c7d167c84c40c5993ca575dcce9bf0"/>
+		</role>
+	</PersonInRole>
+	<PersonInRole id="PIR_c5b6ae7829b6474ca6b5c6fc65460fc2">
+		<state>active</state>
+		<dateLaMu>2024-11-07T09:56:53Z</dateLaMu>
+		<userLaMu>z</userLaMu>
+		<contactPerson>
+			<PerRef idref="PER_879033946b0c47e59e6052392bcebcac"/>
+		</contactPerson>
+		<organisation>
+			<OrgStandardRef idref="ORG_b1c79573b3624c09aea8c912e9b41203"/>
+		</organisation>
+		<role>
+			<RoTestOrgARef idref="ROL_5d76c068054348f38abd9b21b9b5dcbd"/>
+		</role>
+	</PersonInRole>
+</visiXML_MessageSchema>
