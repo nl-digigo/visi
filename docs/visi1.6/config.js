@@ -158,16 +158,16 @@ var respecConfig = {
              {
           name:       "Jeroen van Geijlswijk",
           company:    "N/A",
-          companyURL: "https://www.bimloket.nl"
+          companyURL: "https://www.digigo.nu/"
         },
        {
           name:       "Michon Maas",
           company:    "N/A",
-          companyURL: "https://www.bimloket.nl"
+          companyURL: "https://www.digigo.nu/"
         },
       ],
     // The github option allows you associate your specification with a repository on GitHub.
-    github: "https://github.com/bimloket/visi",
+    github: "https://github.com/nl-digigo/visi",
   
     // The URL of your test suite, gets included in the specification's headers.
     // testSuiteURI: "https://portaal.digikoppeling.nl/CV/home.html",
@@ -230,7 +230,7 @@ var respecConfig = {
   
     // nl_organisationName is used for some company specific values in the header (and Sotd)
     // currently supported: Logius and Geonovum (default)  
-    nl_organisationName: "Bimloket",
+    nl_organisationName: "DigiGo",
   
     // prefix for the names of company specific css, svg and ico prefixes
     // defaults to "GN-"  
@@ -253,14 +253,14 @@ var respecConfig = {
   
     // nl_organisationPublishURL points to organisation specific publication page, used in header
     // defaults to  https://docs.geostandaarden.nl/"
-    nl_organisationPublishURL: "https://bimloket.github.io/",
+    nl_organisationPublishURL: "https://github.com/nl-digigo/visi/",
   
     // nl_logo refers to company logo
     // defaults to https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg
     nl_logo: {
       //  src: "https://tools.geostandaarden.nl/respec/style/logos/OmgevingswetLogo.svg",
       src: "media/logo_BIM_Loket.jpg",
-      alt: "BIM Loket",
+      alt: "digiGO",
       id: "TopLogo",
       //height: 20,
       //width: 100,
