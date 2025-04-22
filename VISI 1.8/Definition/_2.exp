@@ -109,7 +109,7 @@ ENTITY UserDefinedType;		--	A specification of a data type (to be used in a Simp
  userLaMu : OPTIONAL STRING;
  baseType : STRING;
  xsdRestriction : OPTIONAL STRING;
- responseDueDate : OPTIONAL BOOLEAN;
+ reactionDueDate : OPTIONAL BOOLEAN;
  sequenceSyntax : OPTIONAL STRING;
  sequenceStartNumber : OPTIONAL INTEGER;
  sequenceNumberMinLength : OPTIONAL INTEGER;
