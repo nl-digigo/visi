@@ -551,7 +551,7 @@
 					<xsd:element name="userLaMu" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="baseType" type="xsd:string"/>
 					<xsd:element name="xsdRestriction" type="xsd:string" minOccurs="0"/>
-					<xsd:element name="responseDueDate" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="reactionDueDate" type="xsd:boolean" minOccurs="0"/>
 					<xsd:element name="sequenceSyntax" type="xsd:string" minOccurs="0"/>
 					<xsd:element name="sequenceStartNumber" type="xsd:integer" minOccurs="0"/>
 					<xsd:element name="sequenceNumberMinLength" type="xsd:integer" minOccurs="0"/>
