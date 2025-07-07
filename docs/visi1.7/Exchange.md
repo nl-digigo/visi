@@ -1,4 +1,32 @@
 # Message Communication 
+In the original documentation this chapter is called `SOAP' because the original communication is over a Soap connection.
+Due to the progress in protocols we expect this to be subject to change and, therefore, we renamed the chapter.
+This document will only state the current version of the exchange protocol.
+
+## Introduction
+This part of the document contains the guideline for the implementation of VISI communication based on the SOAP protocol.
+The aim of the guideline is to provide directions and boundaries for the implementation of VISI communication, which ensures that the information system concerned can technically exchange VISI messages with attachments to another information system that is set up in accordance with the guideline.
+
+## Goal
+The goal of this document is to describe a strict and clear protocol that can establish communication of VISI messages between all VISI supporting software parties.
+This should be described in such a way that the protocol is implementable for all parties, requires no unusual implementation, no unusual hardware requirements, and is strict enough to allow communication.
+The persistence, access permissions, and storage means of the stored messages is outside the scope of this guideline.
+
+## Architecture
+The architecture has been kept simple by supporting only one scenario.
+The scenario includes intercommunication between SOAP servers.
+
+The purpose and background of this architecture:
+- the architecture must be able to support communication between VISI servers in a project without the intervention of other servers
+- communication must be able to be carried out securely
+- messages must be able to be unambiguously communicated
+- attachments must be able to be sent
+- the sender must be able to find out whether a message has arrived correctly
+
+Architecture:
+
+<img src="images/visi8.1architecture.png" alt="Architecture" width="1000"/>
+
 
 **Scenario**\
 In this outlined scenario, the following objects can be found:
@@ -26,14 +54,14 @@ be intercepted. The use of HTTPS (TLS 1.0 or higher, with at least 128
 bit encryption) for sending VISI messages and attachments is mandatory.
 
 The maximum size of a VISI message (including attachments) is 10 GB.
-This is combined with \"chunking\" for further optimisation, a method of
+This is comb~~~~ined with \"chunking\" for further optimisation, a method of
 sending files in small chunks and then merging them back together. There
 is currently no limit on the amount of appendix.
 
 The protocol used can be found in the configuration. This message
 contains a simple element \"SOAPProtocol\" (language independent) under
 project information. The current capability is only \"MTOM\", so e.g.
-[2](#lst:MTOM){reference-type="ref+label" reference="lst:MTOM"}.
+[2](#lst:MTOM).
 
 <figure id="lst:MTOM">
 
@@ -41,8 +69,7 @@ project information. The current capability is only \"MTOM\", so e.g.
 </figure>
 
 And for the configuration
-[3](#lst:MTOMConfig){reference-type="ref+label"
-reference="lst:MTOMConfig"}.
+[3](#lst:MTOMConfig).
 
 <figure id="lst:MTOMConfig">
 
@@ -69,12 +96,11 @@ We will assign the following SimpleElementTypes framework-crossing
 behaviour/definition:
 
 
-  SimpleElementType   Behavior
-  ------------------- ---------------------------------------------------------------------------------------
-  SOAPServerURL       Contains the URL of the SOAP server associated with this Person, Role or organisation
-  SOAPProtocol        Contains the SOAP protocol used
+| SimpleElementType | Behavior                                                                              |
+|-------------------|---------------------------------------------------------------------------------------|
+| SOAPServerURL     | Contains the URL of the SOAP server associated with this Person, Role or organisation |
+| SOAPProtocol      | Contains the SOAP protocol used                                                       |
 
-  : Caption
 
 
 ### Message exchange of fixed elements at framework level
@@ -86,8 +112,7 @@ outside the new VISI concept):
 
 -   Each framework will contain the following bit of XML to map the
     SOAPServerURL to an organisation
-    [4](#lst:SOAP Server Definition){reference-type="ref+label"
-    reference="lst:SOAP Server Definition"}
+    [4](#lst:SOAP Server Definition)
 
 <figure id="lst:SOAP Server Definition">
 
@@ -104,12 +129,11 @@ the conceptual choice to prescribe this communication.
 
 **At message level:**\
 we assume that a configuration is present for a project, as described in
-[\[sec:PSB\]](#sec:PSB){reference-type="ref+label" reference="sec:PSB"}.
+[\[sec:PSB\]](#psb).
 
 -   This configuration defines for each organisation what its
     SOAPServerURL is shown in
-    [5](#lst:SOAPServerConfiguration){reference-type="ref+label"
-    reference="lst:SOAPServerConfiguration"}
+    [5](#lst:SOAPServerConfiguration)
 
 <figure id="lst:SOAPServerConfiguration">
 
@@ -164,8 +188,9 @@ In the examples:
 
 -   URL SOAP server receiving party: http://192.168.0.138
 
-![Message
-Exchange](images/visi8.2messageexchange.png)
+
+<img src="images/visi8.2messageexchange.png" alt="Message Exchange" width="1000"/>
+
 
 The order of message exchange:
 
@@ -182,8 +207,7 @@ The order of message exchange:
     themselves left).
 
 4.  The SOAP server of the sending party builds a SOAP message as show
-    in [7](#lst:SendingXML){reference-type="ref+label"
-    reference="lst:SendingXML"}.
+    in [7](#lst:SendingXML).
 
 <figure id="lst:SendingXML">
 
@@ -212,8 +236,7 @@ id="abc"$>$)
 
 8.  If successful, the receiving party's SOAP server builds a SOAP
     response message as in
-    [8](#lst:Response Message){reference-type="ref+label"
-    reference="lst:Response Message"}.
+    [8](#lst:Response Message).
 
 <figure id="lst:Response Message">
 
@@ -269,10 +292,8 @@ Remark:
     will not be sent again. We continue to wait for the answer or find a
     solution outside of VISI.
 
--   In step [\[step:exception\]](#step:exception){reference-type="ref"
-    reference="step:exception"} and step
-    [\[step:response\]](#step:response){reference-type="ref"
-    reference="step:response"}, a message is always sent to the other
+-   In step [\[step:exception\]](#step:exception) and step
+    [\[step:response\]](#step:response), a message is always sent to the other
     party first.
 
 ## Disclosure of the framework and update scenario
@@ -359,16 +380,14 @@ the attachments.
 The chosen solution requires only two function calls.\
 **parseMessage**\
 *(1 input variabele of the type string, contains an XML file, see
-[\[sec:VisiFrameworkCommunication\]](#sec:VisiFrameworkCommunication){reference-type="ref+label"
-reference="sec:VisiFrameworkCommunication"})*\
+[\[sec:VisiFrameworkCommunication\]](#communicating-based-on-a-visi-framework))*\
 \
 \
 **parseMessageConfirmation**\
 *(2 inputvariabelen of the type string,
 UniqueIDonMessageInitiatingSOAPServer_XYZ and the found errors errors,
 returns an XML file, see
-[\[sec:VisiFrameworkCommunication\]](#sec:VisiFrameworkCommunication){reference-type="ref+label"
-reference="sec:VisiFrameworkCommunication"})*
+[\[sec:VisiFrameworkCommunication\]](#communicating-based-on-a-visi-framework))*
 
 The content is the same in both cases, namely the VISI message preceded
 by the attachments. The form of the SOAP message should conform to the
@@ -379,8 +398,7 @@ for the sending SOAP server are included in the header of the SOAP
 message.
 
 The method of implementation and use is described in
-[\[sec:VisiFrameworkCommunication\]](#sec:VisiFrameworkCommunication){reference-type="ref+label"
-reference="sec:VisiFrameworkCommunication"}.
+[\[sec:VisiFrameworkCommunication\]](#communicating-based-on-a-visi-framework)
 
 ## Configuration
 
@@ -398,32 +416,33 @@ send messages to a SOAP Server.
 
 ### leidraad 1.7
 
-#### #72 Prio-801: Overdraagbaarheid lopende projecten of VISI archief bij switch van leverancier
+#### #72 Prio-801: Transferability of current projects or VISI archive when switching suppliers
 
-wat is de huidige opbouw van een archief?
+what is the current structure of an archive?
 
-jeroen: archiveren en inlezen van archief deel maken van cretificering
-Jeroen en arne hebben een sleutel gemaakt(gebruikt?) ter validatie van
-geslaagtheid van import/export. jeroen: aanbesteding amsterdam, dus
-alles open projecten die bij technia stonden moesten naar b&s. dus een
-export en import moeten er zijn. vergelijksingssleutel wordt gerenereerd
-en dan vergeleken na import wat b&s heeft geimporteerd. wordt iets wat
-in 1.8 gaat komen.
+jeroen: archiving and reading archive part of certification
+Jeroen and arne have created (used?) a key to validate
+success of import/export. jeroen: tender amsterdam, so
+all open projects that were at technia had to go to b&s. so an
+export and import must be there. comparison key is generated
+and then compared after import what b&s has imported. will be something that
+will come in 1.8.
 
-b&s heeft software oplossing gemaakt om oude raamwerk te updaten naar
-nieuwe versie van raamwerk, maar dit is buiten de standaard om. dat
-loopt dan niet goed in je archief.
+b&s has created a software solution to update old framework to
+new version of framework, but this is outside the standard. that
+doesn't run well in your archive.
 
-niek leest voor overdraging van lopende projecten getest, huidige
-archief formaat
+niek reads for transfer of ongoing projects tested, current
+archive format
 
-kunnen inlezen moet een testcase worden in de validatie tests. huidige
-archief structuur gaan naar tests leverancier en opdrachtgever
-omwisselen en dan testen. jeroen heeft als het goed is een oplossing
-voor het char limit van 250 probleem, voor berichten en voor bijlages
+reading must become a test case in the validation tests. current
+archive structure go to supplier and client tests
+swap and then test. jeroen has a solution
+for the char limit of 250 problem, for messages and for attachments
 
-structuur blijft gelijk voor 1.7 voor 1.8 misschien voor 1.7 wordt het
-nu getest
+structure remains the same for 1.7 for 1.8 maybe for 1.7 it is
+being tested now
+
 
 ## Message Signing
 
@@ -476,18 +495,38 @@ tamper with the message. The signing will be sent along with the message
 in such a way that the signing is backwards compatible with non-signed
 messages. This is done by not including the signing in the parse
 message, but by appending it to after the parse message, while still in
-the body. See [\[fig:Signing\]](#fig:Signing){reference-type="ref+label"
-reference="fig:Signing"} for an example.
+the body. See [\[fig:Signing\]](#fig:Signing) for an example.
 
-![Signing Process](images/SigningProcess.png)
+<img src="images/SigningProcess.png" alt="Signing Process" width="1000"/>
 
-![Enveloped and
-Detached](images/SigningEnvelopedDetached.png)
+<img src="images/SigningEnvelopedDetached.png" alt="Enveloped and Detached" width="1000"/>
 
--   
--   
--   
--   
+***A signature can be enveloped or detached, whether it is included as an element of the file containing the signed data or a separate signature file is created, that refers to the data upon which it bears:***
+***
+Four levels of baseline signatures have been defined by ETSI standards for the XAdES format. They are the:
+***
+- ***B-B level, which is the level of a Basic Signature meaning that it is a signature that can be validated as long as the signing certificate is valid (not revoked or expired).***
+
+- ***B-T level, which is the level of a Signature with Time, meaning that it is a signature that proves that the signature existed at a given point in time. It is built from the previous level by adding a time stamp token on the signature as unsigned properties.***
+
+- ***B-LT level, which is the level of a Signature with Long-Term Validation Material, meaning that it is a signature that provides the long-term availability of the validation material by incorporating all the material or references to material required for validating the signature. It is built from the previous level by adding this material, that is: the complete certificate and revocation data on the signature and the time stamp(s) as unsigned properties.***
+
+- ***B-LTA level, which is the level of a Signature providing Long Term Availability and Integrity of Validation Material. It is built from the previous level by adding a time stamp token on the validation material as unsigned properties, thereby establishing evidence that the validation data existed at the indicated time. This level targets the long-term availability and integrity of validation material, and if appropriate measures are put in place (e.g.\ periodical timestamping), a signature at this level could still be validated long after the cryptographic algorithms used for its creation are no longer considered secure enough, or more simply after the expiration of the validation data.***
+
+
+***For VISI, the XAdES-B-LT level is chosen and the signing will be done using the enveloped form for the messages and the detached form for the appendices.
+Looking at EnvelopeDetached, File can be interpreted as a VISI Soap message body.
+The parseMessage tags are first hashed into a digest value.
+Then other properties, such as the signing time are hashed into a digest value.
+The properties and data are added underneath the parseMessage and they have a child element with the digest value, and this whole SignedInfo section is hashed again in a digest value.
+A signature is created over this last Digest value, and also added to the message.
+This means that the signed data is the parsed message, and the signature is added to the message body by XAdES.
+For an appendix you need to look at the detached part of EnvelopeDetached.
+The original file is your appendix, and the signature file is the part added in the VISI message where the appendix is described.
+This means that your appendix contents are not included in the VISI message, as is the norm with VISI messages.
+This can be seen in Signing.
+For version 1.7 the attachments will only be hashed using the same encryption method as the signing and the hash will be stored in the new template field fileChecksum.***
+
 
 ```
 <SOAP-ENV:Envelope ...>
@@ -544,7 +583,22 @@ new-->  </Signature>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
+***In order to verify a message, we first hash the parseMessage into a new digest value, and compare it to the enclosed digest value of signedData.
+If this corresponds, we then proceed to extract the entire SignedInfo section, and we add the xlmns tag to root.
+If we dont add the tag, we can never get a valid verification.
+The reason for this is that in the process of signing, xades returns the section without tag.
+We then hash this section.
+After hashing this entire section, we create a public key from the certificate in the message.
+Now we call an RSA verify with the hashed data, the signature of the messagem, the method (e.g. sha256 ) and the public key.***
 
+***confirmation moet signing opnieuw signen.
+  The encoding will be done using a minimum of SHA256.
+  This can be enhanced to SHA384 or SHA512 in a later version, which should not impact the current implementation.
+  The certificate that is used must be a trusted certificate from a trusted issuer, not a testing certificate.***
+
+***The signing of the confirmation is not replicated in the current archives.
+To sign the confirmation a body needs to be added.
+When the confirmation is not signed correctly, this creates an error that is not solvable in the current architecture.***
 
 
 Distinguished name met department name in het PSB

@@ -73,7 +73,7 @@ determines the scope of each new release. Improvement points that cannot
 be included in the new release can, depending on the priority, already
 be considered by the TC for inclusion in a subsequent release.\
 \
-**Process**\
+**Process**
 
 The creation of a new Version of the VISI Standard takes place in the
 following steps:
@@ -159,7 +159,7 @@ necessary, so that the VISI-compatible software can also be tested for
 the implemented improvement points.\
 \
 **Planning**\
-The overall timetable for the annual release cycles is as follows:\
+The overall timetable for the annual release cycles is as follows:
 
 <figure id="tab:YearlyReleaseCycle">
 <table>
@@ -260,7 +260,7 @@ body)</td>
 Backwards compatibility relates to the functionality/operation of the
 VISI Standard (and/or frameworks according to this standard)\
 \
-**Definition**\
+**Definition**
 
 The \"backwards compatibility\" of a new VISI Standard means that the
 operation of the new VISI Standard (and/or a framework according to this
@@ -274,7 +274,7 @@ A new VISI Standard (and/or a framework according to this standard) does
 not have to be backwards compatible. This is a choice, a deliberate
 choice.\
 \
-**Process**\
+**Process**
 
 For each improvement point, the topic of \"backwards compatibility\" is
 included and it is analyzed whether the technical solution has an impact

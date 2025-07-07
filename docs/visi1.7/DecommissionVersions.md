@@ -21,12 +21,12 @@ with a maximum period of five years.
 ### Background
 
 VISI is an open standard that appears on the
-\[\"Pas-toe-of-explain-lijst\"\](https://www.forumstandardisatie.nl/open-standarden/lijst/vermand)
+["Pas-toe-of-explain-lijst"](https://www.forumstandardisatie.nl/open-standarden/lijst/vermand)
 of the Forum for Standardization (FvS ). One of the management
 requirements of FvS is backwards compatibility, and during intake by FvS
 of the VISI Standard, the subject of backwards compatibility was added
-to the documentation. In the \[change
-list\](https://github.com/bimloket/visi/wiki/2.-The-important-changes-in-the-VISI-system)
+to the documentation. In the [change
+list](https://github.com/bimloket/visi/wiki/2.-The-important-changes-in-the-VISI-system)
 for version 1.4, backwards compatibility is defined as follows: The
 \"backwards compatibility\" of a new VISI standard means that the
 operation of the new VISI standard (and/or a framework according to this

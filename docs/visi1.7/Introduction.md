@@ -17,7 +17,7 @@ The drivers of VISI:
     and process-driven working
 
 With the help of VISI, organisation get a better grip on, and become
-more mature in, steering and structuring projects and collaborations.\
+more mature in, steering and structuring projects and collaborations.
 
 <div class="example">
 <p>
@@ -34,8 +34,8 @@ project.
 
 ## Purpose of this documentation
 
-The construction sector is the owner of the open standard VISI. manages
-the VISI standard. is advised by an expert committee. This expert
+The construction sector is the owner of the open standard VISI.~~Bim Loket~~ **DigiGo** manages
+the VISI standard.~~Bim Loket~~ **DigiGo** is advised by an expert committee. This expert
 committee includes software vendors who have implemented VISI. They are
 in close contact with the users, who in turn ask for new
 functionalities, which may lead to adjustments to the standard. The
@@ -51,7 +51,7 @@ implement the VISI standard.
 The conceptual documentation is for software vendors or system
 administrators who want to learn more about the VISI standard and how it
 is applied. End users of organisations that use VISI for communication
-and other interested parties can visit the website of the for more
+and other interested parties can visit the website of the ~~Bim Loket~~ **DigiGo** for more
 user-oriented documentation and application examples. We do this by
 thinking in advance about the communication that takes place between the
 Client and the Contractor in accordance with the appropriate contract

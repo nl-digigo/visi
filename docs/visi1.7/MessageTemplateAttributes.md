@@ -1,6 +1,6 @@
 ### Attributes
 
-#### id {#sec:attr-id}
+#### id
 
 Unique code that provides a reference to this object instance within a
 given message. This reference can be used again later.\

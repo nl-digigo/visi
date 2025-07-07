@@ -1,14 +1,14 @@
 ## Guideline for implementation of the complete DEMO transaction pattern (with VISI Standard version 1.6)
 
-The VISI Standard is based on \[Design & Engineering Methodology for
-Organisations\](https://en.wikipedia.org/wiki/Design\_%26_Engineering_Methodology_for_Organizations)
+The VISI Standard is based on [Design & Engineering Methodology for
+Organisations](https://en.wikipedia.org/wiki/Design\_%26_Engineering_Methodology_for_Organizations)
 (DEMO), a methodology based on scientific theories and developed by
-prof. dr. ir. J.L.G. Dietz at TU Delft (Dietz, Jan L.G., \[Enterprise
+prof. dr. ir. J.L.G. Dietz at TU Delft (Dietz, Jan L.G., [Enterprise
 Ontology - Theory and
-Methodology\](http://www.springer.com/la/book/9783540291695),
+Methodology](http://www.springer.com/la/book/9783540291695),
 Springer-Berlin Berlin Heidelberg 2006). DEMO creates a model of
 cooperation in terms of roles, responsibilities and transactions, see
-\[characteristics\](http://www.ee-institute.org/en/demo/characteristics).
+[characteristics](http://www.ee-institute.org/en/demo/characteristics).
 When there is a collaboration between two people in their role, there is
 a transaction: according to one's role a person wants the other person
 to do something. This is called the DEMO transaction pattern. For each
@@ -16,8 +16,7 @@ bit of communication within the pattern it is clear what the meaning is
 (intention) and how it can be responded to. A DEMO model forms a network
 of roles and transactions. In the VISI Standard a network of roles and
 transactions is called a framework
-(\"\[raamwerk\](http://www.ee-institute.org/download.php?id=113\
-&type=doc)\"). A framework fully describes what the communication
+([raamwerk](http://www.ee-institute.org/download.php?id=113&type=doc)). A framework fully describes what the communication
 possibilities are. Communication is exchanged by sending and receiving
 digital messages. These messages are according to the VISI Standard and
 a framework of a project.\
@@ -25,14 +24,14 @@ a framework of a project.\
 In the following sections the DEMO transaction pattern is described as
 far as is necessary to understand a framework. In addition, figures from
 the original training material for DEMO are used with permission from
-author J. Dietz. In \[Chapter
-3\](https://github.com/bimloket/visi/wiki/Definition-of-Framework), the
+author J. Dietz. In [Chapter
+3](https://github.com/bimloket/visi/wiki/Definition-of-Framework), the
 VISI method is described, including the specifications for VISI
-software. \[Chapter
-4\](https://github.com/bimloket/visi/wiki/Data-Model) describes a method
+software. [Chapter
+4](https://github.com/bimloket/visi/wiki/Data-Model) describes a method
 of reaching the desired framework and messages in software that supports
-VISI communication. \[Chapter
-5\](https://github.com/bimloket/visi/wiki/Method) lists the technical
+VISI communication. [Chapter
+5](https://github.com/bimloket/visi/wiki/Method) lists the technical
 requirements that VISI software must comply with.
 
 ### Implementation of the complete DEMO transaction pattern with the VISI Standard 1.6
@@ -72,7 +71,7 @@ In particular, the option to revoke a message has been a wish that has
 been among users for a long time. In addition, various stakeholders have
 long wanted to support the complete transaction pattern in VISI. After a
 first attempt to enable revocations
-\[https://github.com/bimloket/visi/issues/6\](https://github.com/bimloket/visi/issues/6)
+[https://github.com/bimloket/visi/issues/6](https://github.com/bimloket/visi/issues/6)
 
 ## DEMO transaction pattern
 
@@ -83,36 +82,34 @@ always considers human beings responsible for what happens in an
 organisation. Collaboration takes place in transactions involving two
 actors:
 
-1.  initiator, who wants something (the result).
+1. initiator, who wants something (the result).
 
-2.  executor, who accomplishes the result.
+2. executor, who accomplishes the result.
 
 A transaction has three phases;
 
-1.  ) Order Phase, a conversation in which actors try to reach agreement
-    on the product to be produced.
+1. ) Order Phase, a conversation in which actors try to reach agreement
+   on the product to be produced.
 
-2.  ) Execution Phase, the product and/or service of the transaction
-    being produced.
+2. ) Execution Phase, the product and/or service of the transaction
+   being produced.
 
-3.  ) Result Phase, a conversation in which the actors try to reach
-    agreement on the produced product.
+3. ) Result Phase, a conversation in which the actors try to reach
+   agreement on the produced product.
 
-![](images/visiwiki2.1transactionphases.png)
+<img src="images/visiwiki2.1transactionphases.png" alt="" width="1000"/>
 
 The sequence of actions request, promise, state and accept leads to a
 successful transaction. This sequence is also called \"happy flow\".
 
+| **Abbreviation** | **Action** | **State of Transaction** |
+|------------------|------------|--------------------------|
+| rq               | Request    | Requested                |
+| pm               | Promise    | Promised                 |
+| st               | State      | Stated                   |
+| ac               | Accept     | Accepted                 |
 
-  **Abbreviation**    **Action**  **State of Transaction**
-  ------------------ ------------ --------------------------
-  rq                   Request    Requested
-  pm                   Promise    Promised
-  st                    State     Stated
-  ac                    Accept    Accepted
-
-
-![](images/visiwiki2.2transactionpattern.png)
+<img src="images/visiwiki2.2transactionpattern.png" alt="" width="1000"/>
 
 After the action request or a state the flow is extended with two
 discussions. The actions (events) are displayed by squares. The actions
@@ -122,18 +119,16 @@ An action creates a fact, which is displayed with a circle. The
 transaction has reached a certain state: requested, declined, quitted,
 promised, stated, rejected, stopped, accepted.
 
-
-  **Abbreviation**   **Action**   **State of Transaction**
-  ------------------ ------------ --------------------------
-  rq                 Request      Requested
-  pm                 Promise      Promised
-  st                 State        Stated
-  ac                 Accept       Accepted
-  dc                 Decline      Declined
-  qt                 Quit         Quitted
-  rj                 Reject       Rejected
-  sp                 Stop         Stopped
-
+| **Abbreviation** | **Action** | **State of Transaction** |
+|------------------|------------|--------------------------|
+| rq               | Request    | Requested                |
+| pm               | Promise    | Promised                 |
+| st               | State      | Stated                   |
+| ac               | Accept     | Accepted                 |
+| dc               | Decline    | Declined                 |
+| qt               | Quit       | Quitted                  |
+| rj               | Reject     | Rejected                 |
+| sp               | Stop       | Stopped                  |
 
 The executor may not be able to execute the request. The executor
 declines the request. The transaction is in a state of discussion in
@@ -147,12 +142,11 @@ transaction. The transaction has reached a final state, but failed.\
 Something comparable happens after a state by the executor. The
 initiator may not accept the product and/or service. The initiator
 rejects the product. The transaction is in a state of discussion in
-which the actors talk to each other to agree.\
- Usually the actors agree, and this results into a (modified) state and
+which the actors talk to each other to agree.\Usually the actors agree, and this results into a (modified) state and
 a accept. When no agreement is reached the executor stops the
 transaction. The transaction has reached a final state, but failed.
 
-![](images/visiwiki2.3transactionpatternwrevokes.png)
+<img src="images/visiwiki2.3transactionpatternwrevokes.png" alt="" width="1000"/>
 
 A complete transaction pattern arises when we also take into account the
 fact that actors can revoke their primary actions (request, promise,
@@ -168,24 +162,22 @@ transaction into \"stated\".\
 \
 A refuse doesn't change the state of the transaction.
 
-
-  **Abbreviation**   **Action**       **State of Transaction**
-  ------------------ ---------------- --------------------------
-  rq                 Request          Requested
-  pm                 Promise          Promised
-  st                 State            Stated
-  ac                 Accept           Accepted
-  dc                 Decline          Declined
-  qt                 Quit             Quitted
-  rj                 Reject           Rejected
-  sp                 Stop             Stopped
-  rv rq              Revoke Request   Revoked Request
-  rv pm              Revoke Promise   Revoked Promise
-  rv st              Revoke State     Revoked State
-  rv ac              Revoke Accept    Revoked Accept
-  al                 Allow            Allowed
-  rf                 Refuse           Refused
-
+| **Abbreviation** | **Action**     | **State of Transaction** |
+|------------------|----------------|--------------------------|
+| rq               | Request        | Requested                |
+| pm               | Promise        | Promised                 |
+| st               | State          | Stated                   |
+| ac               | Accept         | Accepted                 |
+| dc               | Decline        | Declined                 |
+| qt               | Quit           | Quitted                  |
+| rj               | Reject         | Rejected                 |
+| sp               | Stop           | Stopped                  |
+| rv rq            | Revoke Request | Revoked Request          |
+| rv pm            | Revoke Promise | Revoked Promise          |
+| rv st            | Revoke State   | Revoked State            |
+| rv ac            | Revoke Accept  | Revoked Accept           |
+| al               | Allow          | Allowed                  |
+| rf               | Refuse         | Refused                  |
 
 An examples to illustrate.\
 \
@@ -248,7 +240,7 @@ xmlns=\"http://www.visi.nl/schemas/20191231/DEMO\"\>'
 ### DEMO transaction pattern in VISI: default 4 states
 
 In paragraph
-\[3.2\](https://github.com/bimloket/visi/wiki/3.2-DEMO-happy-flow-in-a-VISI-frame)
+[3.2](https://github.com/bimloket/visi/wiki/3.2-DEMO-happy-flow-in-a-VISI-frame)
 is described how the standard DEMO transaction pattern is described in a
 VISI framework. An important difference between the reference framework
 for DEMO and the frameworks for VISI is that each transaction for DEMO
@@ -261,12 +253,12 @@ The complete transaction pattern (including revokes) can also be
 described in the same way, but to simplify the modeling of frameworks,
 it has been decided to record revokes as separate transactions in a
 framework. This definition is described in paragraph
-\[3.3\](https://github.com/bimloket/visi/wiki/3.3-DEMO-Herroepingen-vastleggen-in-een-VISI-raamwerk).
+[3.3](https://github.com/bimloket/visi/wiki/3.3-DEMO-Herroepingen-vastleggen-in-een-VISI-raamwerk).
 
 ### Asynchronous & revokes
 
 Paragraph
-\[3.4\](https://github.com/bimloket/visi/wiki/3.4-DEMO-Crossing-messages-and-order-of-events)
+[3.4](https://github.com/bimloket/visi/wiki/3.4-DEMO-Crossing-messages-and-order-of-events)
 explains how to deal with the asynchronicity of the VISI Standard and a
 a result crossing messages/revokes and the sequences of these events.
 
@@ -304,7 +296,7 @@ about \"Contract Mutation\". The pattern of messages has to go from
 initiator to executor to initiator to executor to initiator to etc.\
 \
 As described in chapter
-\[2\](https://github.com/bimloket/visi/wiki/2.-DEMO-transaction-pattern)
+[2](https://github.com/bimloket/visi/wiki/2.-DEMO-transaction-pattern)
 a DEMO transaction has a fixed/predefined pattern with a fixed number of
 messages and states. Special case is that two messages (\"promise\" and
 \"state\") need to be sent after each other, but by the same role - the
@@ -318,26 +310,26 @@ In theory, this restriction to the design of frameworks is already
 possible with the first version of VISI, but this document applies to
 version 1.6. (and higher).
 
-![](images/visiwiki3.1visitransactionpattern.png)
+<img src="images/visiwiki3.1visitransactionpattern.png" alt="" width="240"/>
 
 All VISI transactions must follow a fixed pattern to become a DEMO
 transaction. The messages are:
 
--   Request;
+- Request;
 
--   Decline;
+- Decline;
 
--   Quit;
+- Quit;
 
--   Promise;
+- Promise;
 
--   State;
+- State;
 
--   Accept;
+- Accept;
 
--   Reject;
+- Reject;
 
--   Stop.
+- Stop.
 
 #### Main transaction
 
@@ -351,21 +343,21 @@ Because there is a loop between message Request and message Decline,
 only one message Request would be insufficient, because no message that
 starts the transaction would be recognized.
 
-1.  message Request has no previous message.
+1. message Request has no previous message.
 
-2.  message Decline has message Request (1.) and message Request (3.) as
-    previous message.
+2. message Decline has message Request (1.) and message Request (3.) as
+   previous message.
 
-3.  message Request has message Decline as previous message.
+3. message Request has message Decline as previous message.
 
-4.  message Quit has message Decline as previous message.
+4. message Quit has message Decline as previous message.
 
-5.  message Promise has message Request (1.) and message Request (3.) as
-    previous message.
+5. message Promise has message Request (1.) and message Request (3.) as
+   previous message.
 
-6.  message State has message Promise as previous message.
+6. message State has message Promise as previous message.
 
-7.  etc.
+7. etc.
 
 To stay as close as possible to the current open standard VISI this
 solution is chosen to best fit the functional requirement of explicit
@@ -381,24 +373,24 @@ Also (sub) transactions - started from a main transaction - use this
 default pattern, and have two messages Request to define the message
 that starts a transaction.
 
-1.  message Request has a) message Request/Promise/State/Accept from
-    main transaction as previous message, and b) the property
-    firstMessage set to true.
+1. message Request has a) message Request/Promise/State/Accept from
+   main transaction as previous message, and b) the property
+   firstMessage set to true.
 
-2.  message Decline has message Request (1.) and message Request (3.) as
-    previous message.
+2. message Decline has message Request (1.) and message Request (3.) as
+   previous message.
 
-3.  message Request has a) message Decline as previous message, and b)
-    the property firstMessage set to false.
+3. message Request has a) message Decline as previous message, and b)
+   the property firstMessage set to false.
 
-4.  message Quit has message Decline as previous message.
+4. message Quit has message Decline as previous message.
 
-5.  message Promise has message Request (1.) and message Request (3.) as
-    previous message.
+5. message Promise has message Request (1.) and message Request (3.) as
+   previous message.
 
-6.  message State has message Promise as previous message.
+6. message State has message Promise as previous message.
 
-7.  etc.
+7. etc.
 
 ### 3.2.2 Mandatory transactionPhase and predefined values
 
@@ -512,7 +504,7 @@ Example:
 A transaction with all messages set to PASSIVE is the best way to start
 modelling a new transaction.
 
-![](images/visiwiki3.2passieveberichten.png)
+<img src="images/visiwiki3.2passieveberichten.png" alt="" width="275"/>
 
 The messages that need to be sent between initiator and executor are
 defined and the pointer to a PASSIVE message can be replaced in the
@@ -544,15 +536,15 @@ Transferring from main to sub transaction and from sub to main
 transaction must be done conform the default transaction pattern phases.
 For example:
 
--   From main transaction (phase=STATED) to sub transaction;
+- From main transaction (phase=STATED) to sub transaction;
 
--   Execution of sub transaction (phase=ACCEPTED) by sending messages
-    Request, Promise, State and Accept;
+- Execution of sub transaction (phase=ACCEPTED) by sending messages
+  Request, Promise, State and Accept;
 
--   Return to main transaction (phase=STATED);
+- Return to main transaction (phase=STATED);
 
--   Main transaction has two options to continue: message Accept or
-    message Reject.
+- Main transaction has two options to continue: message Accept or
+  message Reject.
 
 According to the open standard VISI main and sub transactions need to be
 designed cascading. This means from main transaction T1 to sub
@@ -625,9 +617,9 @@ MessageInTransactionType (MITT) in the frameworks. After all, when the
 MITTs are not included in the framework, an alternative has to be
 designed for capturing the following MITT properties:
 
--   transactionPhase
+- transactionPhase
 
--   openSecondaryTransactionsAllowed
+- openSecondaryTransactionsAllowed
 
 Future discussion can arise, and this discussion has also been conducted
 (by JL, JvG, GS) whether it is necessary to include MITTs in the
@@ -681,7 +673,7 @@ The 4 revocation transactions are \"REVOKE REQUEST\", \"REVOKE
 PROMISE\", \"REVOKE STATE\" and \"REVOKE ACCEPT\". These should be
 modeled in a framework as follows.
 
-![](images/visiwiki3.3revokepatterns.png)
+<img src="images/visiwiki3.3revokepatterns.png" alt="" width="1000"/>
 
 The ids of the transactions are predefined:
 
@@ -767,9 +759,9 @@ Also the ids and description of the transaction phases are predefined:
 
 #### Guideline for framework designers
 
-The framework designer starts by downloading the \[default framework
+The framework designer starts by downloading the [default framework
 with the DEMO transaction
-pattern\](https://github.com/bimloket/visi/blob/master/ISSUES%20docs/DEMO_voorbeeld_met_revoke_subtransacties_v2%20(1).xml).\
+pattern](https://github.com/bimloket/visi/blob/master/ISSUES%20docs/DEMO_voorbeeld_met_revoke_subtransacties_v2%20(1).xml).\
 In this basic framework for DEMO with open standard VISI, examples of
 the 4 revocation transactions are modelled in accordance with DEMO 3.
 These 4 revocation transactions must be present in the exact same way in
@@ -823,17 +815,17 @@ Upon receiving of a message MT_Allow, track back in the REVOKE
 transaction for the previous message to determine if it is an ALLOW of a
 revoke request, promise, state or accept. There are now 4 possibilities:
 
-1.  revoke request -\> allow, the main transaction cannot be continued
-    because the transaction phase is QUITTED
+1. revoke request -\> allow, the main transaction cannot be continued
+   because the transaction phase is QUITTED
 
-2.  revoke promise -\> allow, the main transaction can continue with the
-    messages Promise or Decline from transaction phase REQUESTED
+2. revoke promise -\> allow, the main transaction can continue with the
+   messages Promise or Decline from transaction phase REQUESTED
 
-3.  revoke state -\> allow, the main transaction can continue with the
-    message State from transaction phase PROMISED
+3. revoke state -\> allow, the main transaction can continue with the
+   message State from transaction phase PROMISED
 
-4.  revoke accept -\> allow, the main transaction can continue with the
-    messages Accept of Reject with transaction phase STATED
+4. revoke accept -\> allow, the main transaction can continue with the
+   messages Accept of Reject with transaction phase STATED
 
 Ad. 1. According to DEMO a revoke of a Request results into a
 quit/termination of the transaction.\
@@ -894,35 +886,35 @@ When a main transaction - that has already started one or more sub
 transactions - is receiving a request revoked then this revoke is
 handled as follows:
 
--   If property openSecondaryTransactionsAllowed = false and sub
-    transactions are open, then main transaction is NOT allowed to be
-    revoked.
+- If property openSecondaryTransactionsAllowed = false and sub
+  transactions are open, then main transaction is NOT allowed to be
+  revoked.
 
--   If property openSecondaryTransactionsAllowed = true and sub
-    transactions are open, then main transaction is allowed to be
-    revoked. Sub transactions stay open, but can optionally be revoked
-    by sending Revoke Request(s).
+- If property openSecondaryTransactionsAllowed = true and sub
+  transactions are open, then main transaction is allowed to be
+  revoked. Sub transactions stay open, but can optionally be revoked
+  by sending Revoke Request(s).
 
 #### Summary
 
--   REVOKE messages have fixed messaging types (6 type:
-    MT_Revoke_Accept, MT_Revoke_Promise, MT_Revoke_Request,
-    MT_Revoke_State, MT_Allow, MT_Refuse)
+- REVOKE messages have fixed messaging types (6 type:
+  MT_Revoke_Accept, MT_Revoke_Promise, MT_Revoke_Request,
+  MT_Revoke_State, MT_Allow, MT_Refuse)
 
--   REVOKE transactions can only be initiated from the corresponding
-    message (REVOKE REQUEST from a REQUEST, etc.)
+- REVOKE transactions can only be initiated from the corresponding
+  message (REVOKE REQUEST from a REQUEST, etc.)
 
--   REVOKE transactions become sub-transactions of the transactions from
-    which they are initiated. This is recorded with the property
-    initiatingTransactionMessageID
+- REVOKE transactions become sub-transactions of the transactions from
+  which they are initiated. This is recorded with the property
+  initiatingTransactionMessageID
 
--   REVOKE transactions are processed first before the main transaction
-    continues.
+- REVOKE transactions are processed first before the main transaction
+  continues.
 
--   REVOKE transactions - if present in the framework - always apply to
-    all transactions.
+- REVOKE transactions - if present in the framework - always apply to
+  all transactions.
 
--   REVOKE of (sub) transactions are handled as described above.
+- REVOKE of (sub) transactions are handled as described above.
 
 ## DEMO Crossing Messages (and order of events)
 
@@ -953,56 +945,56 @@ transaction determines the state of the transaction. In case the Revoke
 is replied with Allow, this determines the state of the transaction. The
 state becomes the state prior the revoke. For example:
 
--   An Allow of Revoke Requests results in state of transaction being
-    ???.
+- An Allow of Revoke Requests results in state of transaction being
+  ???.
 
--   An Allow of Revoke Promise results in state of transaction being
-    Requested.
+- An Allow of Revoke Promise results in state of transaction being
+  Requested.
 
--   An Allow of Revoke State results in state of transaction being
-    Promised.
+- An Allow of Revoke State results in state of transaction being
+  Promised.
 
--   An Allow of Revoke Accept results in state of transaction being
-    Stated.
+- An Allow of Revoke Accept results in state of transaction being
+  Stated.
 
 In more detail:
 
--   Organisation A sends a Accept;
+- Organisation A sends a Accept;
 
--   Organisation B sends a Revoke State;
+- Organisation B sends a Revoke State;
 
--   Organisation B receives the Accept, and sends a confirmation
-    message;
+- Organisation B receives the Accept, and sends a confirmation
+  message;
 
--   The main transaction of organisation A is not locked;
+- The main transaction of organisation A is not locked;
 
--   The main transaction of organisation B is not locked;
+- The main transaction of organisation B is not locked;
 
--   Organisation A receives the Revoke State and sends a confirmation
-    message;
+- Organisation A receives the Revoke State and sends a confirmation
+  message;
 
--   The main transaction of organisation A is locked;
+- The main transaction of organisation A is locked;
 
--   The main transaction of organisation B is locked;
+- The main transaction of organisation B is locked;
 
--   First organisation A needs to reply to the Revoke Accept (with Allow
-    or Refuse);
+- First organisation A needs to reply to the Revoke Accept (with Allow
+  or Refuse);
 
--   Organisation B receives organisation A's responds (Allow or Refuse)
-    to the Revoke State and sends a confirmation message;
+- Organisation B receives organisation A's responds (Allow or Refuse)
+  to the Revoke State and sends a confirmation message;
 
--   The main transaction of organisation B is unlocked;
+- The main transaction of organisation B is unlocked;
 
--   Organisation A receives the confirmation message from organisation
-    B;
+- Organisation A receives the confirmation message from organisation
+  B;
 
--   The main transaction of organisation A is unlocked;
+- The main transaction of organisation A is unlocked;
 
--   Organisation B has the reply (Allow or Refuse) to its Revoke State
-    and organisation B can now determine the state of the main
-    transaction; In case of Refuse the state of the transaction is
-    Accepted. And in case of Allow the state of the transaction is
-    Promised.
+- Organisation B has the reply (Allow or Refuse) to its Revoke State
+  and organisation B can now determine the state of the main
+  transaction; In case of Refuse the state of the transaction is
+  Accepted. And in case of Allow the state of the transaction is
+  Promised.
 
 #### Crossing revokes
 
@@ -1025,98 +1017,98 @@ are replied (with allow or refuse).\
 \
 When 2 Revokes cross each other the following rules apply:
 
--   before the main transaction continues, both revokes must be replied
-    (with Allow or Refuse);
+- before the main transaction continues, both revokes must be replied
+  (with Allow or Refuse);
 
--   if both revokes are refused, the state of the transaction remains
-    the same as before the revokes;
+- if both revokes are refused, the state of the transaction remains
+  the same as before the revokes;
 
--   if one of the two revokes is allowed (and the other refused) the
-    state of the transaction is equal to the state prior the revoke
-    (Allow of Revoke State result in state Promised);
+- if one of the two revokes is allowed (and the other refused) the
+  state of the transaction is equal to the state prior the revoke
+  (Allow of Revoke State result in state Promised);
 
--   if both revokes are allowed, the state of the transaction is equal
-    to the highest state reached by 1 of both revokes. (State order: 1.
-    Request, 2. Promise, 3. State, 4. Accept).
+- if both revokes are allowed, the state of the transaction is equal
+  to the highest state reached by 1 of both revokes. (State order: 1.
+  Request, 2. Promise, 3. State, 4. Accept).
 
 Example:
 
--   Both organisations send a revoke at the same time;
+- Both organisations send a revoke at the same time;
 
--   Both organisations confirm the reception of the revokes;
+- Both organisations confirm the reception of the revokes;
 
--   Each organisation handles the revoke they have received (by replying
-    with allow or refuse);
+- Each organisation handles the revoke they have received (by replying
+  with allow or refuse);
 
--   When both revokes are handled, replied and the replies are
-    confirmed, the state of the transaction is determined, and the main
-    transaction will continu.
+- When both revokes are handled, replied and the replies are
+  confirmed, the state of the transaction is determined, and the main
+  transaction will continu.
 
 In more detail:
 
--   Organisation A sends a Revoke Accept;
+- Organisation A sends a Revoke Accept;
 
--   Organisation B sends a Revoke State;
+- Organisation B sends a Revoke State;
 
--   Organisation B receives the Revoke Accept, and sends a confirmation
-    message;
+- Organisation B receives the Revoke Accept, and sends a confirmation
+  message;
 
--   The main transaction of organisation A is locked;
+- The main transaction of organisation A is locked;
 
--   Organisation A receives the Revoke State and sends a confirmation
-    message;
+- Organisation A receives the Revoke State and sends a confirmation
+  message;
 
--   The main transaction of organisation B is locked;
+- The main transaction of organisation B is locked;
 
--   Organisation A replies the Revoke State (with Allow or Refuse);
+- Organisation A replies the Revoke State (with Allow or Refuse);
 
--   Organisation B replies the Revoke Accept (with Allow or Refuse);
+- Organisation B replies the Revoke Accept (with Allow or Refuse);
 
--   Organisation B receives organisation A's responds (Allow or Refuse)
-    to the Revoke State and sends a confirmation message;
+- Organisation B receives organisation A's responds (Allow or Refuse)
+  to the Revoke State and sends a confirmation message;
 
--   The main transaction of organisation A is still locked;
+- The main transaction of organisation A is still locked;
 
--   The main transaction of organisation B is still locked;
+- The main transaction of organisation B is still locked;
 
--   Organisation A receives organisation B's responds (Allow or Refuse)
-    to the Revoke Accept and sends a confirmation message;
+- Organisation A receives organisation B's responds (Allow or Refuse)
+  to the Revoke Accept and sends a confirmation message;
 
--   Organisation A receives the confirmation message from organisation
-    B;
+- Organisation A receives the confirmation message from organisation
+  B;
 
--   Organisation B receives the confirmation message from organisation
-    A;
+- Organisation B receives the confirmation message from organisation
+  A;
 
--   Organisation A has the reply (Allow or Refuse) to its Revoke Accept
-    and a confirmation message on its reply to the revoke of
-    organisation B, and organisation A can now determine the state of
-    the main transaction;
+- Organisation A has the reply (Allow or Refuse) to its Revoke Accept
+  and a confirmation message on its reply to the revoke of
+  organisation B, and organisation A can now determine the state of
+  the main transaction;
 
--   Based on the state of the main transaction organisation A can or
-    cannot send a new message to organisation B;
+- Based on the state of the main transaction organisation A can or
+  cannot send a new message to organisation B;
 
--   Organisation A can also send another Revoke message (for example
-    Revoke Request);
+- Organisation A can also send another Revoke message (for example
+  Revoke Request);
 
--   Organisation B has the reply (Allow or Refuse) to its Revoke State
-    and a confirmation message on its reply to the revoke of
-    organisation A, and organisation B can now determine the state of
-    the main transaction;
+- Organisation B has the reply (Allow or Refuse) to its Revoke State
+  and a confirmation message on its reply to the revoke of
+  organisation A, and organisation B can now determine the state of
+  the main transaction;
 
--   Based on the state of the main transaction organisation B can or
-    cannot send a new message to organisation A;
+- Based on the state of the main transaction organisation B can or
+  cannot send a new message to organisation A;
 
--   Organisation B can also send another Revoke message (for example
-    Revoke Promise).
+- Organisation B can also send another Revoke message (for example
+  Revoke Promise).
 
 ## Getting started with DEMO Transaction Pattern
 
 ### Prerequisite
 
 Before starting to use the DEMO transaction pattern gain knowledge about
-it by reading a \[book\](http://www.springer.com/la/book/9783540291695)
-or following a \[course\](http://www.ee-institute.org/en/courses).
+it by reading a [book](http://www.springer.com/la/book/9783540291695)
+or following a [course](http://www.ee-institute.org/en/courses).
 
 ### Start with a VISI framework
 
@@ -1133,7 +1125,7 @@ melding\").\
 Second step is to determine which of the default actions of the DEMO
 transaction pattern are not available a VISI messages. These actions are
 added to the framework as implicit actions (see chapter
-\[\...\](https://github.com/bimloket/visi/wiki/Definition-of-Framework)).\
+[...](https://github.com/bimloket/visi/wiki/Definition-of-Framework)).\
 \
 Third step it to cut a VISI transaction up into one or more default DEMO
 transaction patterns.\
@@ -1146,18 +1138,18 @@ message: 1) \"positief advies\", 2) \"negatief advies\". This can be
 combined into one message \"advies\". The message contains an simple
 element with the type of advise: \"positief\" or \"negatief\".\
 \
-The appendix \"\[Bijlage A Translate VISI to DST
-method\](https://github.com/bimloket/visi/wiki/Bijlage-A---Translate-VISI-to-DST-method)\"
+The appendix \"[Bijlage A Translate VISI to DST
+method](https://github.com/bimloket/visi/wiki/Bijlage-A---Translate-VISI-to-DST-method)\"
 expands on this method of translating VISI transactions to DEMO
-transactions. The appendix \"\[Bijlage B Translate VISI to DST
-example\](https://github.com/bimloket/visi/wiki/Bijlage-B---Translate-VISI-to-DST-example)\"
+transactions. The appendix \"[Bijlage B Translate VISI to DST
+example](https://github.com/bimloket/visi/wiki/Bijlage-B---Translate-VISI-to-DST-example)\"
 gives an extensive example of how to translate one VISI transaction into
 several DEMO transaction patterns.
 
 ### Start from scratch
 
-The framework designer starts by downloading the \[default framework
-with the DEMO transaction pattern\]
+The framework designer starts by downloading the [default framework
+with the DEMO transaction pattern]
 https://github.com/bimloket/visi/blob/master/ISSUES%20docs/DEMO_voorbeeld_met_revoke_subtransacties_v2%20(1).xml).
 
 ## Attachment A: Translate VISI to DST method
@@ -1176,18 +1168,18 @@ DST) consists of 4 consecutive steps or statuses. NB: we do not have the
 "Execute" phase in this application of the DST as we only model and
 automate the communication.
 
-![](images/visiwikiba.1demostandaardtransactiekort.png)
+<img src="images/visiwikiba.1demostandaardtransactiekort.png" alt="" width="267"/>
 
 In addition, there are 4 options to deviate from the happy flow.
 
-![](images/visiwikiba.2demostandaardtransactielang.png)
+<img src="images/visiwikiba.2demostandaardtransactielang.png" alt="" width="240"/>
 
 And for every happy flow status there is a Revoke phase, which must
 always be responded to with an Accept or Refuse. NOTE: In this
 application of the DST, the Allow and Refuse messages are always the
 same, regardless of which Revoke they are used for.
 
-![](images/visiwikiba.3demostandaardtransactierevokes.png)
+<img src="images/visiwikiba.3demostandaardtransactierevokes.png" alt="" width="1000"/>
 
 Because all phases are always available as options in the DST, the first
 step in converting a VISI framework to a DST compatible framework is to
@@ -1201,7 +1193,9 @@ is not necessary to create dummy messages for the revokes because they
 are always available as an option and will therefore not be specifically
 modeled.
 
-![](images/visiwikiba.4demopassiveflow.png)
+
+<img src="images/visiwikiba.4demopassiveflow.png" alt="" width="1000"/>
+
 
 After creating the 8 dummy messages you can analyze the VISI transaction
 to determine how often the DST occurs. In a regular VISI transaction it
@@ -1245,7 +1239,9 @@ It may happen that there are VISI messages that combine multiple DST
 phases in 1 message. In that case, split the message into multiple
 messages so that they can be modeled in their own DST transaction.
 
-![](images/visiwikiba.5demophasesinvisimessage.png)
+
+<img src="images/visiwikiba.5demophasesinvisimessage.png" alt="" width="1000"/>
+
 
 Conversely, there may also be multiple VISI messages that concern the
 same DST phase. This often concerns a difference in the content of the
@@ -1253,7 +1249,7 @@ message, but the result is the same. For example, whether a payment is
 made via cash or ATM. The result is the same, i.e. payment is made, but
 the information required may differ.
 
-![](images/visiwikiba.6image.png)
+<img src="images/visiwikiba.6image.png" alt="" width="1000"/>
 
 NB: Since we do not have a fact base in VISI and all information is in
 the message - a difference in the required information means that
@@ -1279,9 +1275,9 @@ Existing options in the system regarding mit conditions and whether or
 not you can continue with the main transaction if a sub-transaction is
 open will continue to exist.\
 \
-A detailed practical example of this method can be found in \[Appendix B
+A detailed practical example of this method can be found in [Appendix B
 Translate VISI to DST
-example\](https://github.com/bimloket/visi/wiki/Bijlage-B---Translate-VISI-to-DST-example).
+example](https://github.com/bimloket/visi/wiki/Bijlage-B---Translate-VISI-to-DST-example).
 
 ## Attachment B Translate VISI to DST example
 
@@ -1294,63 +1290,63 @@ to ON_1 (red, executor) TR_02 Judgment request: quotation change - from
 OG_1 (blue, initiator) to OG_2 (red, executor) TR_03 Advice request:
 (quotation) change - from OG_2 (blue, initiator) to OG_3 (red, executor)
 
-![](images/visiwikibb.1standardvisitransaction.png)
+<img src="images/visiwikibb.1standardvisitransaction.png" alt="" width="1000"/>
 
 Identifying DEMO phases in the VISI transaction:
 
-![](images/visiwikibb.2standardvisitransactionphases.png)
+<img src="images/visiwikibb.2standardvisitransactionphases.png" alt="" width="1000"/>
 
 Notes on identifying DST phases in existing UAV2012 changes
 transactions:
 
--   The main transaction consists of several DEMO transactions
+- The main transaction consists of several DEMO transactions
 
--   Subtransactions such as judgment requests or advice requests often
-    consist of fewer phases in VISI frameworks (e.g. only request and
-    state), in this example no route is yet defined from the judgment in
-    the main transaction. For example, with a mandate you could see that
-    the sub-transaction already indicates which message you will end up
-    with in the main transaction - now you can ignore the judgment.
+- Subtransactions such as judgment requests or advice requests often
+  consist of fewer phases in VISI frameworks (e.g. only request and
+  state), in this example no route is yet defined from the judgment in
+  the main transaction. For example, with a mandate you could see that
+  the sub-transaction already indicates which message you will end up
+  with in the main transaction - now you can ignore the judgment.
 
--   Not all phases occur as a message (e.g. no promise, no stop in
-    "DEMO_TR_01")
+- Not all phases occur as a message (e.g. no promise, no stop in
+  "DEMO_TR_01")
 
--   Some phases occur more often per transaction (e.g.
-    "DEMO_TR_03_STATE"), because the content of the message may differ
-    (payment per installment or as a separate order)
+- Some phases occur more often per transaction (e.g.
+  "DEMO_TR_03_STATE"), because the content of the message may differ
+  (payment per installment or as a separate order)
 
--   Payment can be made in 3 different ways, immediately the total,
-    partially and after the parts a final term. These are now 3
-    different transactions because the result is different, also because
-    otherwise you cannot make multiple requests with different content.
-    But actually these transactions are very similar. When do you split
-    transactions? If the product/result is different. Does a different
-    amount mean a different result? Does a different accounting method
-    produce a different result? (in due course as a separate assignment)
+- Payment can be made in 3 different ways, immediately the total,
+  partially and after the parts a final term. These are now 3
+  different transactions because the result is different, also because
+  otherwise you cannot make multiple requests with different content.
+  But actually these transactions are very similar. When do you split
+  transactions? If the product/result is different. Does a different
+  amount mean a different result? Does a different accounting method
+  produce a different result? (in due course as a separate assignment)
 
--   The "DEMO_TR_03_04_05_QUIT - Withdraw: change by ON" is 1 message in
-    the VISI framework, in a DEMO framework this would be 3, 1 per DEMO
-    transaction
+- The "DEMO_TR_03_04_05_QUIT - Withdraw: change by ON" is 1 message in
+  the VISI framework, in a DEMO framework this would be 3, 1 per DEMO
+  transaction
 
--   Naming of messages should better reflect the result/product of the
-    DEMO transaction - e.g. "DEMO_TR_03_04_05_QUIT - Withdrawal: change
-    by ON", should be "Withdrawal: payment by ON" .
+- Naming of messages should better reflect the result/product of the
+  DEMO transaction - e.g. "DEMO_TR_03_04_05_QUIT - Withdrawal: change
+  by ON", should be "Withdrawal: payment by ON" .
 
 DEMO transaction 01 (DEMO_TR_01_Change_approved)
 
-![](images/visiwikibb.3standardvisitransactiondemo.png)
+<img src="images/visiwikibb.3standardvisitransactiondemo.png" alt="" width="1000"/>
 
 DEMO transaction 01 including passive (dummy) messages
 
-![](images/visiwikibb.4image.png)
+<img src="images/visiwikibb.4image.png" alt="" width="1000"/>
 
 DEMO transactie 03 (DEMO_TR_03_Betaalbaarstelling_totaal_afgegeven)
 
-![](images/visiwikibb.5image.png)
+<img src="images/visiwikibb.5image.png" alt="" width="1000"/>
 
 DEMO transaction 03 including passive (dummy) messages
 
-![](images/visiwikibb.6image.png)
+<img src="images/images/visiwikibb.6image.png" alt="" width="1000"/>
 
 DEMO transaction 03a including passive (dummy) messages - split into a
 and b because there are different State options, where the content of
@@ -1358,7 +1354,7 @@ the message may differ even though the result is the same.\
 \
 DEMO_TR_03a_Payment_total_in_term
 
-![](images/visiwikibb.7image.png)
+<img src="images/visiwikibb.7image.png" alt="" width="1000"/>
 
 DEMO transaction 03b including passive (dummy) messages - split into a
 and b because there are different State options, where the content of
@@ -1366,15 +1362,15 @@ the message may differ even though the result is the same.\
 \
 DEMO_TR_03b_Payment_total_single_order
 
-![](images/visiwikibb.8image.png)
+<img src="images/visiwikibb.8image.png" alt="" width="1000"/>
 
 DEMO transaction 04 (DEMO_TR_04_Payment_partial_issued)
 
-![](images/visiwikibb.9image.png)
+<img src="images/visiwikibb.9image.png" alt="" width="1000"/>
 
 DEMO transaction 04 including passive (dummy) messages
 
-![](images/visiwikibb.10image.png)
+<img src="images/visiwikibb.10image.png" alt="" width="1000"/>
 
 DEMO transaction 04a including passive (dummy) messages - split into a
 and b because there are different State options, where the content of
@@ -1382,7 +1378,7 @@ the message may differ even though the result is the same.\
 \
 DEMO_TR_04a_Payment_partial_in_term
 
-![](images/visiwikibb.11image.png)
+<img src="images/visiwikibb.11image.png" alt="" width="1000"/>
 
 DEMO transaction 04b including passive (dummy) messages - split into a
 and b because there are different State options, where the content of
@@ -1390,15 +1386,15 @@ the message may differ even though the result is the same.\
 \
 DEMO_TR_04b_Payment_partial_single_order
 
-![](images/visiwikibb.12image.png)
+<img src="images/visiwikibb.12image.png" alt="" width="1000"/>
 
 DEMO transaction 05 (DEMO_TR_05_Payment_final term_issued)
 
-![](images/visiwikibb.13image.png)
+<img src="images/visiwikibb.13image.png" alt="" width="1000"/>
 
 DEMO transaction 05 including passive (dummy) messages
 
-![](images/visiwikibb.14image.png)
+<img src="images/visiwikibb.14image.png" alt="" width="1000"/>
 
 DEMO transaction 05a including passive (dummy) messages - split into a
 and b because there are different State options, where the content of
@@ -1406,7 +1402,7 @@ the message may differ even though the result is the same.\
 \
 DEMO_TR_05a_Payment_final term_in_term
 
-![](images/visiwikibb.15image.png)
+<img src="images/visiwikibb.15image.png" alt="" width="1000"/>
 
 DEMO transaction 05b including passive (dummy) messages - split into a
 and b because there are different State options, where the content of
@@ -1414,67 +1410,67 @@ the message may differ even though the result is the same.\
 \
 DEMO_TR_05b_Payment_final term_single_assignment
 
-![](images/visiwikibb.16image.png)
+<img src="images/visiwikibb.16image.png" alt="" width="1000"/>
 
 DEMO transaction 06 (DEMO_TR_06_Judgment_consequences_given)
 
-![](images/visiwikibb.17image.png)
+<img src="images/visiwikibb.17image.png" alt="" width="1000"/>
 
 DEMO transaction 06 including passive (dummy) messages
 
-![](images/visiwikibb.18image.png)
+<img src="images/visiwikibb.18image.png" alt="" width="1000"/>
 
 DEMO transaction 07 (DEMO_TR_07_Advice_consequences_given)
 
-![](images/visiwikibb.19image.png)
+<img src="images/visiwikibb.19image.png" alt="" width="1000"/>
 
 DEMO transaction 07 (DEMO_TR_07_Advice_consequences_given)
 
-![](images/visiwikibb.20image.png)
+<img src="images/visiwikibb.20image.png" alt="" width="1000"/>
 
 Total scenario of all broken down DEMO compatible transactions with
 dummy messages
 
-![](images/visiwikibb.21visitodemotransactions.png)
+<img src="images/visiwikibb.21visitodemotransactions.png" alt="" width="1000"/>
 
 Notes when splitting the VISI transaction into DEMO transactions:
 
--   "DEMO_TR_02_Change_executed" is not in the scenario because
-    otherwise a message would appear twice in the scenario
-    ("DEMO_TR_01_ACCEPT - DEMO_TR_02_REQUEST - Approval: (financial)
-    consequences of change/start of implementation\")
+- "DEMO_TR_02_Change_executed" is not in the scenario because
+  otherwise a message would appear twice in the scenario
+  ("DEMO_TR_01_ACCEPT - DEMO_TR_02_REQUEST - Approval: (financial)
+  consequences of change/start of implementation\")
 
--   The message "DEMO_TR_03_04_05_QUIT - Withdraw: change by ON" now
-    appears 3 times to complete the DEMO transactions
+- The message "DEMO_TR_03_04_05_QUIT - Withdraw: change by ON" now
+  appears 3 times to complete the DEMO transactions
 
 Comments on making the split DEMO/VISI transactions DEMO compatible:
 
--   Revoke "DEMO_TR_01_REVOKE REQUEST - Withdraw: change" has been
-    removed from the transaction because revokes are automatically
-    available
+- Revoke "DEMO_TR_01_REVOKE REQUEST - Withdraw: change" has been
+  removed from the transaction because revokes are automatically
+  available
 
--   "DEMO_TR_01_ACCEPT - DEMO_TR_02_REQUEST - Approval: (financial)
-    consequences of change/start of implementation" has been renamed to
-    "DEMO_TR_01_ACCEPT - Approval: (financial) consequences of change"
+- "DEMO_TR_01_ACCEPT - DEMO_TR_02_REQUEST - Approval: (financial)
+  consequences of change/start of implementation" has been renamed to
+  "DEMO_TR_01_ACCEPT - Approval: (financial) consequences of change"
 
--   In the model of "DEMO_TR_01" you can no longer immediately go from
-    request to state, there is now a promise in between - the software
-    skips this message because it is set to passive (so the user can
-    simply request can go to state)
+- In the model of "DEMO_TR_01" you can no longer immediately go from
+  request to state, there is now a promise in between - the software
+  skips this message because it is set to passive (so the user can
+  simply request can go to state)
 
--   At "DEMO_TR_03_Betaalbaarstelling_totaal_issued" you now have 2
-    request messages so that this corresponds to the standard
-    transaction pattern in VISI - 1 request as a starting message, 1
-    request as a mutable message
+- At "DEMO_TR_03_Betaalbaarstelling_totaal_issued" you now have 2
+  request messages so that this corresponds to the standard
+  transaction pattern in VISI - 1 request as a starting message, 1
+  request as a mutable message
 
--   The problem of double states is more common, for example if you want
-    to pay at the pizzeria you can pay with cash or with PIN - these are
-    2 different ways where different information is required from the
-    payer. No information for cash, for PIN the payer needs a PIN code.
+- The problem of double states is more common, for example if you want
+  to pay at the pizzeria you can pay with cash or with PIN - these are
+  2 different ways where different information is required from the
+  payer. No information for cash, for PIN the payer needs a PIN code.
 
--   By splitting the transactions you have to set conditions on
-    subtransactions that you can only start once. From the VISI
-    transaction, some messages can only be sent once because this is
-    included in the flow of the transaction, but you can start
-    subtransactions as often as you want. So, for example, you must only
-    be able to start a payment request for the total amount once.
+- By splitting the transactions you have to set conditions on
+  subtransactions that you can only start once. From the VISI
+  transaction, some messages can only be sent once because this is
+  included in the flow of the transaction, but you can start
+  subtransactions as often as you want. So, for example, you must only
+  be able to start a payment request for the total amount once.

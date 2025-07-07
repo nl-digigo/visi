@@ -35,7 +35,12 @@ Making the communication patterns project-specific has an additional
 step, which is described in chapter 6. As an added bonus, the other
 (optional) building blocks are explained in the last chapter.\
 
-## Project specific file 
+## Project specific file
+
+Before communication can take place in accordance with the open standard VISI, a project must be set up with
+a project-specific file (psb), a framework and a message schedule generated from said framework
+
+<img src="images/visi4.1initiation2.jpg" alt="Initiation - Projectspecific message" width="1000"/>
 
 ### Project
 
@@ -302,55 +307,50 @@ indicates, it is a template that the communication must comply with.
 Based on this template, it can be verified whether the information
 provided complies with the agreements.
 
-![Initiation - VISI
-Framework](images/visi-diagram-project-initiation.jpg)
+<img src="images/visi-diagram-project-initiation.jpg" alt="Initiation - VISI Framework" width="1000"/>
 
-[]{#globaleeigenschappendefinitietabel
-label="globaleeigenschappendefinitietabel"}
+| Attribute                        | RoleType | TransactionType | MessageType | SimpleElementType | UserDefinedType | ComplexElementType | MessageInTransactionType | ElementCondition | MessageInTransactionTypeCondition | AppendixType | OrganisationType | PersonType | ProjectType | TransactionPhaseType | GroupType |
+|----------------------------------|----------|-----------------|-------------|-------------------|-----------------|--------------------|--------------------------|------------------|-----------------------------------|--------------|------------------|------------|-------------|----------------------|-----------|
+| id                               | X        | X               | X           | X                 | X               | X                  | X                        | X                | X                                 | X            | X                | X          | X           | X                    | X         |
+| description                      | X        | X               | X           | X                 | X               | X                  |                          | X                |                                   | X            | X                | X          | X           | X                    | X         |
+| ~~startDate~~                    | ~~X~~    | ~~~X~~          | ~~X~~       |                   |                 | ~~X~~              |                          |                  |                                   | ~~X~~        | ~~X~~            | ~~X~~      | ~~X~~       | ~~X~~                | ~~X~~     |
+| ~~endDate~~                      | ~~X~~    | ~~~X~~          | ~~X~~       |                   |                 | ~~X~~              |                          |                  |                                   | ~~X~~        | ~~X~~            | ~~X~~      | ~~X~~       | ~~X~~                | ~~X~~     |
+| state                            | X        | X               | X           | X                 | X               | X                  | X                        |                  | X                                 | X            | X                | X          | X           | X                    | X         |
+| dateLaMu                         | X        | X               | X           | X                 | X               | X                  | X                        |                  | X                                 | X            | X                | X          | X           | X                    | X         |
+| userLaMu                         | X        | X               | X           | X                 | X               | X                  | X                        |                  | X                                 | X            | X                | X          | X           | X                    | X         |
+| language                         | X        | X               | X           | X                 | X               | X                  |                          |                  |                                   | X            | X                | X          | X           | X                    | X         |
+| ~~category~~                     | ~~X~~    | ~~X~~           | ~~X~~       | ~~X~~             | ~~X~~           | ~~X~~              |                          |                  |                                   | ~~X~~        | ~~X~~            | ~~X~~      | ~~X~~       | ~~X~~                | ~~X~~     |
+| helpInfo                         | X        | X               | X           | X                 | X               | X                  |                          | X                | X                                 | X            | X                | X          | X           | X                    | X         |
+| code                             | X        | X               | X           |                   | X               |                    |                          |                  |                                   | X            | X                | X          | X           | X                    |           |
+| appendixMandatory                |          |                 | X           |                   |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| appendixTypes                    |          | X               | X           |                   |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| baseType                         |          |                 |             |                   | X               |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| complexElements                  |          |                 | X           |                   |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| condition                        |          |                 |             |                   |                 |                    |                          | X                |                                   |              |                  |            |             |                      |           |
+| executor                         |          | X               |             |                   |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| firstMessage                     |          |                 |             |                   |                 |                    | X                        |                  |                                   |              |                  |            |             |                      |           |
+| initiator                        |          | X               |             |                   |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| initiatorToExecutor              |          |                 |             |                   |                 |                    | X                        |                  |                                   |              |                  |            |             |                      |           |
+| ~~interfaceType~~                |          |                 |             | ~~X~~             |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| **fileChecksum**                 |          |                 |             |                   |                 |                    |                          |                  |                                   | **X**        |                  |            |             |                      |           |
+| maxOccurs                        |          |                 |             |                   |                 | X                  |                          |                  |                                   |              |                  |            |             |                      |           |
+| minOccurs                        |          |                 |             |                   |                 | X                  |                          |                  |                                   |              |                  |            |             |                      |           |
+| namespace                        |          |                 |             |                   |                 |                    |                          |                  |                                   |              |                  |            | X           |                      |           |
+| openSecondaryTransactionsAllowed |          |                 |             |                   |                 |                    | X                        |                  |                                   |              |                  |            |             |                      |           |
+| ~~received~~                     |          |                 |             |                   |                 |                    | ~~X~~                    |                  |                                   |              |                  |            |             |                      |           |
+| ~~requiredNotify~~               |          |                 |             |                   |                 |                    | ~~X~~                    |                  |                                   |              |                  |            |             |                      |           |
+| responsibilityFeedback           | X        |                 |             |                   |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| responsibilityScope              | X        |                 |             |                   |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| responsibilitySupportTask        | X        |                 |             |                   |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| responsibilityTask               | X        |                 |             |                   |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| ~~result~~                       |          | ~~X~~           |             |                   |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| ~~send~~                         |          |                 |             |                   |                 |                    | ~~X~~                    |                  |                                   |              |                  |            |             |                      |           |
+| **sequence**                     |          |                 |             |                   | **X**           |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| ~~subTransactions~~              |          | ~~X~~           |             |                   |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| ~~valueList~~                    |          |                 |             | X~~               |                 |                    |                          |                  |                                   |              |                  |            |             |                      |           |
+| xsdRestriction                   |          |                 |             |                   | X               |                    |                          |                  |                                   |              |                  |            |             |                      |           |
 
-
-  Attribute                                                                                  
-  ---------------------------------- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-  id                                  X   X   X   X   X   X   X   X   X   X   X   X   X   X   X
-  description                         X   X   X   X   X   X       X       X   X   X   X   X   X
-                                                                                             
-                                                                                             
-                                      X   X   X   X   X   X   X       X   X   X   X   X   X   X
-  dateLaMu                            X   X   X   X   X   X   X       X   X   X   X   X   X   X
-  userLaMu                            X   X   X   X   X   X   X       X   X   X   X   X   X   X
-  language                            X   X   X   X   X   X               X   X   X   X   X   X
-                                                                                             
-                                      X   X   X   X   X   X       X   X   X   X   X   X   X   X
-  code                                X   X   X       X                   X   X   X   X   X  
-  appendixMandatory                           X                                              
-  appendixTypes                           X   X                                              
-  baseType                                            X                                      
-  complexElements                             X                                              
-  condition                                                       X                          
-  executor                                X                                                  
-  firstMessage                                                X                              
-  initiator                               X                                                  
-  initiatorToExecutor                                         X                              
-                                                                                             
-                                                                                             
-  maxOccurs                                               X                                  
-  minOccurs                                               X                                  
-  namespace                                                                           X      
-  openSecondaryTransactionsAllowed                            X                              
-                                                                                             
-                                                                                             
-                                      X                                                      
-  responsibilityScope                 X                                                      
-  responsibilitySupportTask           X                                                      
-  responsibilityTask                  X                                                      
-                                                                                             
-                                                                                             
-                                                                                             
-                                                  X                                          
-                                                      X                                      
-
-  : Every VISI Type's attributes
-
+Every VISI Type's attributes
 
 ### Role Type (RoleType)
 
@@ -481,7 +481,7 @@ and what route this information takes or where this information does not
 go, for example. (think of information that must remain within a certain
 domain)\
 \
-[Message Chapters (Table Forming)]{.underline}\
+<u>Message Chapters (Table Forming)</u>
 
 It is permitted to name another chapter in a chapter in addition to
 message fields. The agreed effect of this is that the chapter is
@@ -500,29 +500,29 @@ are no agreements yet in the system about such applications and it is
 not yet applied anywhere. This is considered to be room for unknown
 future applications.\
 \
-[Message fields]{.underline}\
+<u>Message fields</u>
 Placing message fields in a certain order in a chapter creates the
 structure of that chapter, as it appears in all messages containing this
 chapter.\
-[ProjectType]{.underline}\
+<u>ProjectType</u>
 As far as we know, it is technically possible to link a chapter to a
 project type, but there is no known application yet.\
-[PersonType]{.underline}\
+<u>PersonType</u>
 This allows additional information to be entered for persons in the
 project-specific message, such as a telephone number or other personal
 information relevant to the project.\
-[OrganisationType]{.underline}\
+<u>OrganisationType</u>
 This allows additional information to be entered for organisations in
 the project-specific message, such as an address or other information
 relevant to the project.\
-[AppendixType]{.underline}\
+<u>AppendixType</u>
 Op deze manier kan er per bijlage type een andere set aan berichtvelden
 met metadata over de bijlageingevoerd worden.\
 In this way, a different set of message fields with metadata about the
 attachment can be entered per attachment type.\
-[MessageType]{.underline}\
+<u>MessageType</u>
 For building messages\
-[Message field restrictions]{.underline}\
+<u>Message field restrictions</u>
 This allows you to say about a field that it should not be editable or
 that it should be editable.\
 
@@ -556,56 +556,56 @@ are 2 MITTs. Both refer to the transaction and the message type, only
 the connection between the MITTs differs.\
 \
 References from the MITT:\
-[Messages]{.underline}\
+<u>Messages</u>
 Determines the message name and content of the element in the message
 flow\
-[previous message]{.underline}\
+<u>previous message</u>
 In this way, the flow of messages is determined. Because MITTs have the
 previous MITTs here, you know from which message this message can be
 selected as the next message. There are roughly 4 types of previous
 connections that look exactly the same in definition (this MITT is a
 previous to this MITT), but are different in operation:
 
--   Start of a new main transaction. Then the value of previous is
-    empty. This MITT may have the property "firstmessage", but since
-    this message is by definition a first message, this is not
-    necessary.
+- Start of a new main transaction. Then the value of previous is
+  empty. This MITT may have the property "firstmessage", but since
+  this message is by definition a first message, this is not
+  necessary.
 
--   An answer within the same transaction (The previous MITT is also
-    connected to the same transaction)
+- An answer within the same transaction (The previous MITT is also
+  connected to the same transaction)
 
--   A start of a new transaction based on the MITT in this transaction.
-    We also call this starting a "Sub-transaction". This MITT must
-    always have the property "firstmessage", otherwise no new
-    transaction can be started and the previous connection probably
-    won't do anything.
+- A start of a new transaction based on the MITT in this transaction.
+  We also call this starting a "Sub-transaction". This MITT must
+  always have the property "firstmessage", otherwise no new
+  transaction can be started and the previous connection probably
+  won't do anything.
 
--   A return from the sub-transaction to the parent transaction. This
-    option is only allowed from a message in a subtransaction back to
-    the transaction from which the subtransaction was initiated. This
-    message in the parent transaction must not have the property
-    "firstmessage", otherwise a subtransaction will be created under the
-    subtransaction.
+- A return from the sub-transaction to the parent transaction. This
+  option is only allowed from a message in a subtransaction back to
+  the transaction from which the subtransaction was initiated. This
+  message in the parent transaction must not have the property
+  "firstmessage", otherwise a subtransaction will be created under the
+  subtransaction.
 
-[Transaction]{.underline}\
+<u>Transaction</u>
 A MITT is always connected to a transaction. So, at a minimum, a MITT
 places a message type in a transaction.\
-[Transactionphase]{.underline}\
+<u>Transactionphase</u>
 This property is intended to indicate the transaction phases of the DEMO
 universal transaction pattern. Little use is made of this yet. The first
 DEMO software on the VISI system does use this feature as an essential
 part.\
-[Grouptypes]{.underline}\
+<u>Grouptypes</u>
 A group can be entered, but nothing has been done with this until now.\
-[Appendixtypes]{.underline}\
+<u>Appendixtypes</u>
 This is the most specific way to name which metadata set (message
 chapter) of message fields must be filled in for an appendix that is
 added to a message.\
-[Message in transaction conditions]{.underline}\
+<u>Message in transaction conditions</u>
 Conditionality when you get to choose this message.\
 \
 References to the Message in transaction type:\
-[Message field conditions (elementcondition)]{.underline}\
+<u>Message field conditions (elementcondition)</u>
 Message in transaction conditions Conditionality when you are allowed to
 choose another message based on the presence of this message.\
 Previous message in transaction If this message is a previous message to
@@ -649,11 +649,11 @@ role.\
 The transaction Approve_Change between drafting role and approving role
 consists of three messages:
 
--   Proposal_to_Change
+- Proposal_to_Change
 
--   Agree_Change
+- Agree_Change
 
--   Disagree_Change
+- Disagree_Change
 
 The message Proposal_to_Change is the first message of the transaction.
 The MITT of Proposal_to_Change has NO previous message in transaction.
@@ -680,9 +680,9 @@ Transactie: Accorderen_Wijziging
 The transaction Advise_Change between approving role and advisory role
 and consists of two messages:
 
--   Request_Advice_Change
+- Request_Advice_Change
 
--   Advice_Change
+- Advice_Change
 
 The message Request_Advice_Change is the first MITT. The MITT of
 Request_Advice_Change has NO previous MITT. The MITT of Advise_Change
@@ -720,11 +720,11 @@ Transactie: Adviseren_Wijziging
 After receiving Voorstel_tot_Wijziging the approving role can choose
 three response messages:
 
--   Akkoord_Wijziging
+- Akkoord_Wijziging
 
--   Niet_Akkkoord
+- Niet_Akkkoord
 
--   Verzoek_Advies_Wijziging
+- Verzoek_Advies_Wijziging
 
 However, after receiving the message Advies_Wijziging there is no
 response message. The connection back from advisory transaction to
@@ -826,27 +826,27 @@ field should be cleared by the software for a next message.\
 References from the Message field conditions:\
 By naming one or more of the elements below, the situation to which the
 condition applies is defined.\
-[complexElement]{.underline}\
-[simpleElement]{.underline}\
-[messageInTransaction]{.underline}\
+<u>complexElement</u>
+<u>simpleElement</u>
+<u>messageInTransaction</u>
 The basic rules are:
 
--   A field that is offered for the first time, so does not yet exist in
-    the previous message, can always be filled in and is never blocked
-    by this setting.
+- A field that is offered for the first time, so does not yet exist in
+  the previous message, can always be filled in and is never blocked
+  by this setting.
 
--   By default, a field that already exists in the previous message is
-    blocked in subsequent messages. Even if the field happened to be
-    "empty" in the previous message. So only if the field is given the
-    property "FREE" can it be modified.
+- By default, a field that already exists in the previous message is
+  blocked in subsequent messages. Even if the field happened to be
+  "empty" in the previous message. So only if the field is given the
+  property "FREE" can it be modified.
 
--   The value of a field from a previous message is filled in the next
-    message when it's the same SimpleElementType and there is no
-    condition 'EMPTY'.
+- The value of a field from a previous message is filled in the next
+  message when it's the same SimpleElementType and there is no
+  condition 'EMPTY'.
 
--   Field restrictions can be applied to ComplexElementTypes,
-    SimpleElementTypes and MessageInTransactionTypes, or a combination
-    thereof.
+- Field restrictions can be applied to ComplexElementTypes,
+  SimpleElementTypes and MessageInTransactionTypes, or a combination
+  thereof.
 
 The table below indicates which restriction to use if there are multiple
 restrictions on a field in a message:\
@@ -882,36 +882,36 @@ method\" so that a message from another transaction can be sent based on
 the message in one transaction. See !!reference to mitt link in
 documentation!!
 
--   transaction: the transaction we are currently looking at regarding
-    whether or not to offer messages. This transaction can have 1 or
-    more transactions \"before\" and also one or more \"after\".
+- transaction: the transaction we are currently looking at regarding
+  whether or not to offer messages. This transaction can have 1 or
+  more transactions \"before\" and also one or more \"after\".
 
--   direct parent transaction: The transaction from which \"the
-    transaction\" we are looking at started (via a previous mitt link).
-    By this we do not mean other transactions that are at the same level
-    next to or above this \"parent transaction\".
+- direct parent transaction: The transaction from which \"the
+  transaction\" we are looking at started (via a previous mitt link).
+  By this we do not mean other transactions that are at the same level
+  next to or above this \"parent transaction\".
 
--   direct subtransaction: which we are currently viewing. Any
-    transaction started directly from \"the transaction\" we are looking
-    at (via a previous mitt link).
+- direct subtransaction: which we are currently viewing. Any
+  transaction started directly from \"the transaction\" we are looking
+  at (via a previous mitt link).
 
--   affiliated transactions: \"the transaction\" together with its
-    direct parent transaction and its direct sub-transactions.
+- affiliated transactions: \"the transaction\" together with its
+  direct parent transaction and its direct sub-transactions.
 
 There are three reasons why certain continuations may not be offered:
 
-1.  A message may only be sent, after one or more specific messages are
-    present (already received or sent) in the transaction or its
-    *direct* subtransactions, so there is a dependency between two (or
-    more) already present messages.
+1. A message may only be sent, after one or more specific messages are
+   present (already received or sent) in the transaction or its
+   *direct* subtransactions, so there is a dependency between two (or
+   more) already present messages.
 
-2.  A message may only be sent when one or more specific messages are
-    not present (not yet received or sent) in the transaction or its
-    *direct* subtransactions, so there is a dependency between two (or
-    more) messages that are not yet present.
+2. A message may only be sent when one or more specific messages are
+   not present (not yet received or sent) in the transaction or its
+   *direct* subtransactions, so there is a dependency between two (or
+   more) messages that are not yet present.
 
-3.  A message that can only be sent once has already been sent, so there
-    is a restriction on the number of times a message can be sent.
+3. A message that can only be sent once has already been sent, so there
+   is a restriction on the number of times a message can be sent.
 
 References from message in transaction restrictions:\
 If there is more than one of the references below in a condition, there
@@ -969,84 +969,84 @@ The aim is to limit possible continuations based on a certain state in
 the message flow within a transaction and its subtransactions. There are
 three reasons why certain continuations may not be offered:
 
--   A message may only be sent after one or more specific messages are
-    present (already received or sent) in the transaction or its
-    subtransactions, so there is a dependency between two (or more)
-    already present messages.
+- A message may only be sent after one or more specific messages are
+  present (already received or sent) in the transaction or its
+  subtransactions, so there is a dependency between two (or more)
+  already present messages.
 
--   A message may only be sent when one or more specific messages are
-    not present (not yet received or sent) in the transaction or its
-    subtransactions, so there is a dependency between two (or more) not
-    yet present messages.
+- A message may only be sent when one or more specific messages are
+  not present (not yet received or sent) in the transaction or its
+  subtransactions, so there is a dependency between two (or more) not
+  yet present messages.
 
--   A message that can only be sent once has already been sent, so there
-    is a restriction on the number of times a message can be sent.
+- A message that can only be sent once has already been sent, so there
+  is a restriction on the number of times a message can be sent.
 
 #### Adjustments compared to the previous system
 
 \
 
--   The existing class "MessageInTransactionType" is extended with an
-    additional relationship "conditions" of the type "OPTIONAL SET
-    \[1:?\] OF MessageInTransactionTypeCondition";
+- The existing class "MessageInTransactionType" is extended with an
+  additional relationship "conditions" of the type "OPTIONAL SET
+  \[1:?\] OF MessageInTransactionTypeCondition";
 
--   A new class "MessageInTransactionTypeCondition" is created. This
-    determines the type of set relationship specified in the conditions
-    mentioned above. If a "conditions" relationship is specified then
-    this set must contain at least one element. If the "conditions" set
-    contains more than one element, the elements involved are evaluated
-    according to intermediate logical AND operators;
+- A new class "MessageInTransactionTypeCondition" is created. This
+  determines the type of set relationship specified in the conditions
+  mentioned above. If a "conditions" relationship is specified then
+  this set must contain at least one element. If the "conditions" set
+  contains more than one element, the elements involved are evaluated
+  according to intermediate logical AND operators;
 
--   A relationship \"sendAfter\" of type "OPTIONAL SET \[1:?\]
-    MessageInTransactionType" is added to the class
-    "MessageInTransactionTypeCondition". This relationship is optional,
-    if present the set must contain at least one MITT. If the
-    "sendAfter" set contains more than one MITT, the MITTs involved are
-    evaluated according to intermediate logical OR operators;
+- A relationship \"sendAfter\" of type "OPTIONAL SET \[1:?\]
+  MessageInTransactionType" is added to the class
+  "MessageInTransactionTypeCondition". This relationship is optional,
+  if present the set must contain at least one MITT. If the
+  "sendAfter" set contains more than one MITT, the MITTs involved are
+  evaluated according to intermediate logical OR operators;
 
--   A relationship \"sendBefore\" of type "OPTIONAL SET \[1:?\]
-    MessageInTransactionType" is added to the class
-    "MessageInTransactionTypeCondition". This relationship is optional,
-    if present the set must contain at least one MITT. If the
-    "sendBefore" set contains more than one MITT, the MITTs involved are
-    evaluated according to intermediate logical OR operators;
+- A relationship \"sendBefore\" of type "OPTIONAL SET \[1:?\]
+  MessageInTransactionType" is added to the class
+  "MessageInTransactionTypeCondition". This relationship is optional,
+  if present the set must contain at least one MITT. If the
+  "sendBefore" set contains more than one MITT, the MITTs involved are
+  evaluated according to intermediate logical OR operators;
 
--   Allowed references to \"sendAfter\" and \"sendBefore\" are
-    \"MessageInTransactionTypes\" that can be received in the current
-    transaction or from the connected transactions, where the person
-    handling the current message is the initiator or executor. Connected
-    transactions refer to the transaction from which a transaction was
-    initiated and the direct subtransactions. Direct subtransactions
-    refer to transactions that are initiated from the current
-    transaction, not subtransactions of subtransactions.
+- Allowed references to \"sendAfter\" and \"sendBefore\" are
+  \"MessageInTransactionTypes\" that can be received in the current
+  transaction or from the connected transactions, where the person
+  handling the current message is the initiator or executor. Connected
+  transactions refer to the transaction from which a transaction was
+  initiated and the direct subtransactions. Direct subtransactions
+  refer to transactions that are initiated from the current
+  transaction, not subtransactions of subtransactions.
 
--   This limitation is introduced because a VISI Framework plus PSB must
-    always behave the same way, regardless of whether all actors are
-    running on the same VISI server, or whether each actor is running on
-    a different VISI server. This is a basic principle that already
-    works this way up to and including the 1.3 standard and is therefore
-    also respected in this adjustment. In this way, the actor in
-    question always sees the messages that influence his choices,
-    because he sends or receives them.
+- This limitation is introduced because a VISI Framework plus PSB must
+  always behave the same way, regardless of whether all actors are
+  running on the same VISI server, or whether each actor is running on
+  a different VISI server. This is a basic principle that already
+  works this way up to and including the 1.3 standard and is therefore
+  also respected in this adjustment. In this way, the actor in
+  question always sees the messages that influence his choices,
+  because he sends or receives them.
 
--   This limitation is introduced because a VISI Framework plus PSB must
-    always behave the same way, regardless of whether all actors are
-    running on the same VISI server, or whether each actor is running on
-    a different VISI server. This is a basic principle that already
-    works this way up to and including the 1.3 standard and is therefore
-    also respected in this adjustment. In this way, the actor in
-    question always sees the messages that influence his choices,
-    because he sends or receives them.
+- This limitation is introduced because a VISI Framework plus PSB must
+  always behave the same way, regardless of whether all actors are
+  running on the same VISI server, or whether each actor is running on
+  a different VISI server. This is a basic principle that already
+  works this way up to and including the 1.3 standard and is therefore
+  also respected in this adjustment. In this way, the actor in
+  question always sees the messages that influence his choices,
+  because he sends or receives them.
 
--   As an example: the cook may only use Before or After relationships
-    with transactions in which he himself participates as initiator or
-    executor and these transactions must be directly linked to the
-    transaction that the cook currently wants to handle.
+- As an example: the cook may only use Before or After relationships
+  with transactions in which he himself participates as initiator or
+  executor and these transactions must be directly linked to the
+  transaction that the cook currently wants to handle.
 
--   The effect of only being allowed to send a message once is achieved
-    by placing the MiTT of the message in question in the sendBefore
-    list of the same MITT. In this specific case, a message should
-    \_not\_ be sent to multiple executors.
+- The effect of only being allowed to send a message once is achieved
+  by placing the MiTT of the message in question in the sendBefore
+  list of the same MITT. In this specific case, a message should
+  \_not\_ be sent to multiple executors.
 
 **Addition to existing class**
 
@@ -1089,13 +1089,13 @@ appendix types in a message if the framework contains more than one
 appendix type. If nothing is set on the message, the user must choose
 from all available types.\
 \
-[Transaction types]{.underline}\
+<u>Transaction types</u>
 An appendix type connected at this level is offered in all messages in
 that transaction.\
-[Message types]{.underline}\
+<u>Message types</u>
 An appendix type connected at this level is offered in this message type
 in all transactions (where this message appears).\
-[Message in transaction]{.underline}\
+<u>Message in transaction</u>
 An appendix type that is connected at this level is only offered in this
 specific message at this place in the transaction.\
 
@@ -1113,8 +1113,8 @@ creating organizations in the project specific message. Normally a
 framework contains only 1 organization type. Frameworks with more than 1
 variant have not yet been applied.\
 \
-References from organization types: \[complexElements\]
-<https://bimloket.github.io/visi/visi1.6/#groepering-van-elementencomplexelementtype>\
+References from organization types: [complexElements](<https://bimloket.github.io/visi/visi1.6/#groepering-van-elementencomplexelementtype>)
+
 An organization type can contain metadata elements, such as address,
 telephone number, etc.\
 \
@@ -1141,7 +1141,7 @@ Name, username and Id abbreviation etc. are not in the framework. See
 #verwijzing naar psb werking#.\
 \
 References from person types:\
-[complexElements]{.underline}\
+<u>complexElements</u>
 A person type can contain metadata elements, such as address, telephone
 number, etc. Due to, among other things, new privacy legislation, this
 is being entered less and less.\
@@ -1305,7 +1305,7 @@ is no further application known in VISI software.
 
 This attribute can be optionally set on many elements in a framework.
 
-### appendixMandatory {#propertiesexplanationappendixmandatory}
+### appendixMandatory
 
 With this property it can be set that it is mandatory to add at least
 one attachment to a message of this type. This prevents a message type
@@ -1332,19 +1332,19 @@ For each Field Property, you must choose from a number of basic XML
 field types to determine the basic behavior of a field. The choice is
 limited to the following basic XML field types:
 
--   BOOLEAN
+- BOOLEAN
 
--   DATE
+- DATE
 
--   DATETIME
+- DATETIME
 
--   TIME
+- TIME
 
--   DECIMAL
+- DECIMAL
 
--   INTEGER
+- INTEGER
 
--   STRING
+- STRING
 
 ### complexElements
 
@@ -1361,17 +1361,17 @@ happening to improve security for this.
 Determines the behavior of a field. You can choose from the following
 conditions:
 
--   FREE
+- FREE
 
-    -   The field may be modified.
+    - The field may be modified.
 
--   FIXED
+- FIXED
 
-    -   The field may not be modified.
+    - The field may not be modified.
 
--   EMPTY
+- EMPTY
 
-    -   The field is cleared by the software for the user.
+    - The field is cleared by the software for the user.
 
 ### executor
 
@@ -1400,7 +1400,7 @@ transaction. With True, the message goes from the person who initiated
 the transaction to whoever received the first message of the
 transaction. OPTIONAL??? See exp_2
 
-### maxOccurs {#propertiesexplanationminmax}
+### maxOccurs
 
 With this it is possible to indicate that a table may not contain more
 than x lines. By setting Min and Max to the same number, an exact number
@@ -1471,45 +1471,45 @@ This allows very exact behavior to be defined for a field of a certain
 base type. A regular expression can be defined for the base type STRING.
 Some examples that are now widely used for base type STRING are:
 
--   1 choice, so field always has this value:
+- 1 choice, so field always has this value:
 
-    ```
-        <xs:enumeration value="Automatisch gevuld"/>
-    ```
+  ```
+      <xs:enumeration value="Automatisch gevuld"/>
+  ```
 
--   Selection list with multiple values
+- Selection list with multiple values
 
-    ```
-        <xs:enumeration value="k1"/><xs:enumeration value="k2"/><xs:enumeration value="k3"/>
-    ```
+  ```
+      <xs:enumeration value="k1"/><xs:enumeration value="k2"/><xs:enumeration value="k3"/>
+  ```
 
--   Optional dropdown list:
+- Optional dropdown list:
 
-    ```
-        <xs:enumeration value=""/><xs:enumeration value="Keuze 1"/><xs:enumeration value="Keuze 2"/>
-    ```
+  ```
+      <xs:enumeration value=""/><xs:enumeration value="Keuze 1"/><xs:enumeration value="Keuze 2"/>
+  ```
 
--   Mandatory text of at least 1 character
+- Mandatory text of at least 1 character
 
-    ```
-        <xs:minLength value="1"/>
-    ```
+  ```
+      <xs:minLength value="1"/>
+  ```
 
--   Optional text no xsd restriction
+- Optional text no xsd restriction
 
--   For example a year number
+- For example a year number
 
-    ```
-        <xs:pattern value="(20\d\d)"/>
-    ```
+  ```
+      <xs:pattern value="(20\d\d)"/>
+  ```
 
-    An example that is often used for base type DECIMAL is:
+  An example that is often used for base type DECIMAL is:
 
--   Amount with two decimal places
+- Amount with two decimal places
 
-    ```
-        <xs:fractionDigits value="2"/><xs:fractionDigits value="2"/>
-    ```
+  ```
+      <xs:fractionDigits value="2"/><xs:fractionDigits value="2"/>
+  ```
 
 ## Appendix 12 Guidance for Element Conditions
 
@@ -1533,51 +1533,50 @@ in the element condition.\
 If there are 2 CEs in an element condition, the first is always the
 parent and the second the child CE.
 
+|   | **MITT** | **CE1** | **CE2** | **SE** |
+|---|----------|---------|---------|--------|
+| 0 | -        | -       | -       | -      |
+| 1 | -        | -       | -       | X      |
+| 2 | -        | X       | O       | -      |
+| 3 | -        | X       | O       | X      |
+| 4 | X        | -       | -       | -      |
+| 5 | X        | -       | -       | X      |
+| 6 | X        | X       | O       | -      |
+| 7 | X        | X       | O       | X      |
 
-       **MITT**   **CE1**   **CE2**   **SE**
-  --- ---------- --------- --------- --------
-   0      \-        \-        \-        \-
-   1      \-        \-        \-        X
-   2      \-         X         O        \-
-   3      \-         X         O        X
-   4      X         \-        \-        \-
-   5      X         \-        \-        X
-   6      X          X         O        \-
-   7      X          X         O        X
 
-  : All options for Element condition (- absent, x defined, O optional)
-
+: All options for Element condition (- absent, x defined, O optional)
 
 For example:
 
--   The SE "Comments" must always be EMPTY, you could represent this as:
-    Condition(-, -, -,'Comments') = EMPTY
+- The SE "Comments" must always be EMPTY, you could represent this as:
+  Condition(-, -, -,'Comments') = EMPTY
 
--   In MITT "MiTT01" the entire MITT must always be FREE, you could
-    represent this as: Condition('MiTT01', -, -, -) = FREE
+- In MITT "MiTT01" the entire MITT must always be FREE, you could
+  represent this as: Condition('MiTT01', -, -, -) = FREE
 
--   If 1 column of a table is \"FIXED\", no lines may be added or
-    deleted, even if it is an empty table.
+- If 1 column of a table is \"FIXED\", no lines may be added or
+  deleted, even if it is an empty table.
 
--   The CE \"verifications\" must always be FREE, regardless of whether
-    it exists in a table or as a normal CE: Condition(-,
-    'verifications', -, -) = FREE
+- The CE \"verifications\" must always be FREE, regardless of whether
+  it exists in a table or as a normal CE: Condition(-,
+  'verifications', -, -) = FREE
 
--   The CE \"checks\" must only be FREE as a table within CE \"advice\":
-    Condition(-, 'advice', 'checks', -) = FREE
+- The CE \"checks\" must only be FREE as a table within CE \"advice\":
+  Condition(-, 'advice', 'checks', -) = FREE
 
--   A message exists containing a parent CE \"CE1\" and a child CE
-    \"CE2\". For the element condition examples below, the location is
-    indicated in the table above:
+- A message exists containing a parent CE \"CE1\" and a child CE
+  \"CE2\". For the element condition examples below, the location is
+  indicated in the table above:
 
-    -   (-, 'CE1', -, -) : Position 4
+    - (-, 'CE1', -, -) : Position 4
 
-    -   (-, 'CE2', -, -) : Position 2
+    - (-, 'CE2', -, -) : Position 2
 
-    -   (-, 'CE1', 'CE2', -) : Position 6
+    - (-, 'CE1', 'CE2', -) : Position 6
 
-    -   (-, 'CE2', 'CE1', -) : No position: 1 is not a child of 2. This
-        element condition does nothing.
+    - (-, 'CE2', 'CE1', -) : No position: 1 is not a child of 2. This
+      element condition does nothing.
 
 Proposed pseudo code for determining the condition:
 
@@ -1685,12 +1684,12 @@ if Condition found(- , - , -, - ) (no condition element found)
    <Condition(- , - , -, - )>
 ```
 
--   Is the SE" Comments" in MITT "MiTT01" now EMPTY or FREE?
+- Is the SE" Comments" in MITT "MiTT01" now EMPTY or FREE?
 
-    -   According to this definition, "Comments" in "MiTT01" is FREE.
+    - According to this definition, "Comments" in "MiTT01" is FREE.
 
-    -   To make "Comments" in "MiTT01" now EMPTY, Condition('MiTT01',
-        -,'Comments') must be added.
+    - To make "Comments" in "MiTT01" now EMPTY, Condition('MiTT01',
+      -,'Comments') must be added.
 
 Backwards compatibility: Because old frameworks have element conditions
 in the same way, with the only difference that never more than 1 ce is

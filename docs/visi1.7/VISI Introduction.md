@@ -102,9 +102,7 @@ must be done, there is a \"transaction\". Each transaction has an
 initiator (the role that initiates the transaction) and an executor (the
 role that executes the transaction). Figure 2 shows a transaction. The
 arrow always runs from the initiator to the executor.\
-\![Figure 2. There are always two roles involved in a transaction: never
-more, never
-less\]([https://raw.githubusercontent.com/wiki/bimloket/visi/visi-leidraad/bijpenpen/1-doelen-thorough principles-concept framework /images/fig-2-transaction-roles.png](https://raw.githubusercontent.com/wiki/bimloket/visi/visi-leidraad/bijpenpen/1-doelen-thorough principles-concept framework /images/fig-2-transaction-roles.png){.uri})
+<img src="https://raw.githubusercontent.com/wiki/bimloket/visi/visi-leidraad/bijpenpen/1-doelen-thorough principles-concept framework /images/fig-2-transaction-roles.png)" alt="Figure 2. There are always two roles involved in a transaction: never more, never less." width="1000"/>
 
 An example is the situation in which a municipality asks an engineering
 firm to design a viaduct. The municipality fulfills the role of
@@ -118,7 +116,7 @@ states. Ideally, transactions are initiated, requested, promised,
 executed, completed, and accepted in sequence.\
 \
 Within a transaction, messages are included that are necessary to handle
-formal communication between roles. For example, messages have been
+    formal communication between roles. For example, messages have been
 developed to give orders, report changes or deviations, report progress
 and send ready notifications.
 
@@ -141,13 +139,15 @@ existing process. As mentioned, VISI distinguishes between roles that
 initiate a transaction (initiator) and roles that execute a transaction
 (executor). A transaction has only one initiator and one executor.
 
-\![Figure 3. Legend for a transaction
-map.\]([https://raw.githubusercontent.com/wiki/bimloket/visi/visi-guideline/attachments/1-goals-ground-principles-concept-framework/images/fig-3-legenda- transaction card.png](https://raw.githubusercontent.com/wiki/bimloket/visi/visi-guideline/attachments/1-goals-ground-principles-concept-framework/images/fig-3-legenda- transaction card.png){.uri})
+\
+<img src="https://raw.githubusercontent.com/wiki/bimloket/visi/visi-guideline/attachments/1-goals-ground-principles-concept-framework/images/fig-3-legenda- transaction card.png)" alt="Figure 3. Legend for a transaction map." width="1000"/>
+
 
 Figure 3. Legend for a transaction card.
 
-\![Figure 4. Example of the Interaction Map of a Simplified Design
-Office\]([https://raw.githubusercontent.com/wiki/bimloket/visi/visi-leidraad/appendagen/1-doelen-ground-beginnings-terms of understanding/images/fig-4 -transaction card-example.png](https://raw.githubusercontent.com/wiki/bimloket/visi/visi-leidraad/appendagen/1-doelen-ground-beginnings-terms of understanding/images/fig-4 -transaction card-example.png){.uri})
+\
+<img src="https://raw.githubusercontent.com/wiki/bimloket/visi/visi-leidraad/appendagen/1-doelen-ground-beginnings-terms of understanding/images/fig-4 -transaction card-example.png){.uri}" alt="Figure 4. Example of the Interaction Map of a Simplified Design Office\]([https://raw.githubusercontent.com/wiki/bimloket/visi/visi-leidraad/appendagen/1-doelen-ground-beginnings-terms of understanding/images/fig-4 -transaction card-example.png" width="1000"/>
+
 
 Figure 4. Example of the interaction map of a simplified design office\
 \
@@ -168,12 +168,12 @@ activity that the role performs in the process. The interactions can be
 summarised in a table. The example in figure 4 looks like this:
 
 
-  **Transaction Type**        **Transaction Result**
-  --------------------------- ----------------------------------
-  T1 Deliver design           Design has been delivered
-  T2 Deliver specifications   Specification has been delivered
-  T3 Deliver 3D model         3D model is delivered
-  T4 Provide Cost Estimate    Cost Estimate has been delivered
+ | **Transaction Type**      |  **Transaction Result**|
+|---------------------------|----------------------------------|
+| T1 Deliver design         | Design has been delivered        |
+| T2 Deliver specifications | Specification has been delivered |
+| T3 Deliver 3D model       | 3D model is delivered            |
+| T4 Provide Cost Estimate  | Cost Estimate has been delivered |
 
 
 #### Summary
@@ -209,8 +209,9 @@ engineer (role R3) can reply with the message 'Work done and request for
 approval'. After the message 'Work approved' or 'Work not approved' the
 transaction is completed.
 
-\![Figure 5. Transaction schema
-example\]([https://raw.githubusercontent.com/wiki/bimloket/visi/visi-leidraad/annexen/1-objectives-ground principles-concepts-framework/images/fig-5-transactionschema.png](https://raw.githubusercontent.com/wiki/bimloket/visi/visi-leidraad/annexen/1-objectives-ground principles-concepts-framework/images/fig-5-transactionschema.png){.uri}
+\
+<img src="https://raw.githubusercontent.com/wiki/bimloket/visi/visi-leidraad/annexen/1-objectives-ground principles-concepts-framework/images/fig-5-transactionschema.png" alt="Figure 5. Transaction schema example\]([https://raw.githubusercontent.com/wiki/bimloket/visi/visi-leidraad/annexen/1-objectives-ground principles-concepts-framework/images/fig-5-transactionschema.png" width="1000"/>
+{.uri}
 )
 
 Figure 5. Example of a transaction schedule\
@@ -277,8 +278,8 @@ executor, the status changes to 'promised / execution'. Within 'promised
 reporting changes and deviations, delivering progress reports, as well
 as requests for and feedback from quality tests (figure 6).
 
-\![Figure 6. The different transaction
-states\]([https://raw.githubusercontent.com/wiki/bimloket/visi/visi-guideline/attachments/1-objectives-ground principles-concepts-framework/images/fig-6-transactionstates.png](https://raw.githubusercontent.com/wiki/bimloket/visi/visi-guideline/attachments/1-objectives-ground principles-concepts-framework/images/fig-6-transactionstates.png){.uri})
+<img src="https://raw.githubusercontent.com/wiki/bimloket/visi/visi-guideline/attachments/1-objectives-ground principles-concepts-framework/images/fig-6-transactionstates.png)" alt="Figure 6. The different transaction states" width="1000"/>
+
 Figure 6. The different transaction states
 
 With the notification of order changes (by the initiator) or deviations
@@ -323,8 +324,9 @@ project.\
 By working with VISI, this information transfer is brought into the
 (formal) process context.
 
-\![Figure 7. Example of a message from a transaction
-schedule\]([https://raw.githubusercontent.com/wiki/bimloket/visi/visi-guideline/attachments/1-objectives-ground principles-concepts-framework/images/fig-7- message preview.png](https://raw.githubusercontent.com/wiki/bimloket/visi/visi-guideline/attachments/1-objectives-ground principles-concepts-framework/images/fig-7- message preview.png){.uri})
+\
+<img src="https://raw.githubusercontent.com/wiki/bimloket/visi/visi-guideline/attachments/1-objectives-ground principles-concepts-framework/images/fig-7- message preview.png)" alt="Figure 7. Example of a message from a transaction schedule" width="1000"/>
+
 Figure 7. Example of a message from a transaction schedule
 
 #### Summary
