@@ -2,21 +2,16 @@
 
 ### Templates
 
-#### AppendixGroup {#sec:AppendixGroup}
+#### AppendixGroup
 
-**Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]\
+**Attributes**: id [[sec:attr-id]](#id)
+
 **Elements**: state
-\[[\[sec:elem-state\]](#sec:elem-state){reference-type="ref"
-reference="sec:elem-state"}\], dateLaMu
-\[[\[sec:elem-dateLaMu\]](#sec:elem-dateLaMu){reference-type="ref"
-reference="sec:elem-dateLaMu"}\], userLaMu
-\[[\[sec:elem-userLaMu\]](#sec:elem-userLaMu){reference-type="ref"
-reference="sec:elem-userLaMu"}\]\
+[[[sec:elem-state]](#state), dateLaMu
+[[[sec:elem-dateLaMu]](#datelamu), userLaMu
+[[[sec:elem-userLaMu]](#userlamu)\
 **References**: group
-\[[\[sec:ref-group\]](#sec:ref-group){reference-type="ref"
-reference="sec:ref-group"}\]
+[[[sec:ref-group]](#group)
 
 ```
 ENTITY AppendixGroup;
@@ -57,47 +52,29 @@ Associated part of the framework:
 </GroupType>
 ```
 
-#### AppendixTemplate {#sec:AppendixTemplate}
+#### AppendixTemplate
 
 **Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]\
+[[[sec:attr-id]](#id)\
 **Elements**: name
-\[[\[sec:elem-name\]](#sec:elem-name){reference-type="ref"
-reference="sec:elem-name"}\], fileLocation
-\[[\[sec:elem-fileLocation\]](#sec:elem-fileLocation){reference-type="ref"
-reference="sec:elem-fileLocation"}\], fileType
-\[[\[sec:elem-fileType\]](#sec:elem-fileType){reference-type="ref"
-reference="sec:elem-fileType"}\], fileVersion
-\[[\[sec:elem-fileVersion\]](#sec:elem-fileVersion){reference-type="ref"
-reference="sec:elem-fileVersion"}\], documentIdentification
-\[[\[sec:elem-documentIdentification\]](#sec:elem-documentIdentification){reference-type="ref"
-reference="sec:elem-documentIdentification"}\], documentVersion
-\[[\[sec:elem-documentVersion\]](#sec:elem-documentVersion){reference-type="ref"
-reference="sec:elem-documentVersion"}\], documentReference
-\[[\[sec:elem-documentReference\]](#sec:elem-documentReference){reference-type="ref"
-reference="sec:elem-documentReference"}\], objectCode
-\[[\[sec:elem-objectCode\]](#sec:elem-objectCode){reference-type="ref"
-reference="sec:elem-objectCode"}\], startDate
-\[[\[sec:elem-startDate\]](#sec:elem-startDate){reference-type="ref"
-reference="sec:elem-startDate"}\], endDate
-\[[\[sec:elem-endDate\]](#sec:elem-endDate){reference-type="ref"
-reference="sec:elem-endDate"}\], state
-\[[\[sec:elem-state\]](#sec:elem-state){reference-type="ref"
-reference="sec:elem-state"}\], dateLaMu
-\[[\[sec:elem-dateLaMu\]](#sec:elem-dateLaMu){reference-type="ref"
-reference="sec:elem-dateLaMu"}\], userLaMu
-\[[\[sec:elem-userLaMu\]](#sec:elem-userLaMu){reference-type="ref"
-reference="sec:elem-userLaMu"}\], language
-\[[\[sec:elem-language\]](#sec:elem-language){reference-type="ref"
-reference="sec:elem-language"}\]\
+[[[sec:elem-name]](#name), fileLocation
+[[[sec:elem-fileLocation]](#filelocation), fileType
+[[[sec:elem-fileType]](#filetype), fileVersion
+[[[sec:elem-fileVersion]](#fileversion), documentIdentification
+[[[sec:elem-documentIdentification]](#documentidentification), documentVersion
+[[[sec:elem-documentVersion]](#documentversion), documentReference
+[[[sec:elem-documentReference]](#documentreference), objectCode
+[[[sec:elem-objectCode]](#objectcode), startDate
+[[[sec:elem-startDate]](#startdate), endDate
+[[[sec:elem-endDate]](#enddate), state
+[[[sec:elem-state]](#state), dateLaMu
+[[[sec:elem-dateLaMu]](#datelamu), userLaMu
+[[[sec:elem-userLaMu]](#userlamu), language
+[[[sec:elem-language]](#language)\
 **References**: message
-\[[0.1.1.6](#sec:MessageTemplate){reference-type="ref"
-reference="sec:MessageTemplate"}\], appendixGroup
-\[[\[sec:ref-appendixGroup\]](#sec:ref-appendixGroup){reference-type="ref"
-reference="sec:ref-appendixGroup"}\], template
-\[[0.1.1.3](#sec:ComplexElementTemplate){reference-type="ref"
-reference="sec:ComplexElementTemplate"}\]
+[[0.1.1.6](#messagetemplate), appendixGroup
+[[[sec:ref-appendixGroup]](#appendixgroup), template
+[[0.1.1.3](#complexelementtemplate)
 
 ```
 ENTITY AppendixTemplate;
@@ -164,11 +141,10 @@ Associated part of the framework:
 </AppendixType>
 ```
 
-#### ComplexElementTemplate {#sec:ComplexElementTemplate}
+#### ComplexElementTemplate
 
 **Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]
+[[[sec:attr-id]](#id)
 
 ```
 ENTITY ComplexElementTemplate;
@@ -179,30 +155,19 @@ END_ENTITY;
 #### GroupTemplate
 
 **Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]\
+[[[sec:attr-id]](#id)\
 **Elements**: name
-\[[\[sec:elem-name\]](#sec:elem-name){reference-type="ref"
-reference="sec:elem-name"}\], description
-\[[\[sec:elem-description\]](#sec:elem-description){reference-type="ref"
-reference="sec:elem-description"}\], creationDate
-\[[\[sec:elem-creationDate\]](#sec:elem-creationDate){reference-type="ref"
-reference="sec:elem-creationDate"}\], startDate
-\[[\[sec:elem-startDate\]](#sec:elem-startDate){reference-type="ref"
-reference="sec:elem-startDate"}\], endDate
-\[[\[sec:elem-endDate\]](#sec:elem-endDate){reference-type="ref"
-reference="sec:elem-endDate"}\], state
-\[[\[sec:elem-state\]](#sec:elem-state){reference-type="ref"
-reference="sec:elem-state"}\], dateLaMu
-\[[\[sec:elem-dateLaMu\]](#sec:elem-dateLaMu){reference-type="ref"
-reference="sec:elem-dateLaMu"}\], userLaMu
-\[[\[sec:elem-userLaMu\]](#sec:elem-userLaMu){reference-type="ref"
-reference="sec:elem-userLaMu"}\], versionNo
-\[[\[sec:elem-versionNo\]](#sec:elem-versionNo){reference-type="ref"
-reference="sec:elem-versionNo"}\]\
+[[[sec:elem-name]](#name), description
+[[[sec:elem-description]](#description), creationDate
+[[[sec:elem-creationDate]](#creationdate), startDate
+[[[sec:elem-startDate]](#startdate), endDate
+[[[sec:elem-endDate]](#enddate), state
+[[[sec:elem-state]](#state), dateLaMu
+[[[sec:elem-dateLaMu]](#datelamu), userLaMu
+[[[sec:elem-userLaMu]](#userlamu), versionNo
+[[[sec:elem-versionNo]](#versionno)\
 **References**: transaction
-\[[\[sec:ref-transaction\]](#sec:ref-transaction){reference-type="ref"
-reference="sec:ref-transaction"}\]
+[[[sec:ref-transaction]](#transaction)
 
 ```
 ENTITY GroupTemplate;
@@ -274,26 +239,18 @@ Associated part of the framework:
 </TransactionType>
 ```
 
-#### MessageInTransactionTemplate {#sec:MessageInTransactionTemplate}
+#### MessageInTransactionTemplate
 
 **Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]\
+[[[sec:attr-id]](#id)\
 **Elements**: identification
-\[[\[sec:elem-identification\]](#sec:elem-identification){reference-type="ref"
-reference="sec:elem-identification"}\], dateSend
-\[[\[sec:elem-dateSend\]](#sec:elem-dateSend){reference-type="ref"
-reference="sec:elem-dateSend"}\], dateRead
-\[[\[sec:elem-dateRead\]](#sec:elem-dateRead){reference-type="ref"
-reference="sec:elem-dateRead"}\], state
-\[[\[sec:elem-state\]](#sec:elem-state){reference-type="ref"
-reference="sec:elem-state"}\], dateLaMu
-\[[\[sec:elem-dateLaMu\]](#sec:elem-dateLaMu){reference-type="ref"
-reference="sec:elem-dateLaMu"}\], userLaMu
-\[[\[sec:elem-userLaMu\]](#sec:elem-userLaMu){reference-type="ref"
-reference="sec:elem-userLaMu"}\], initiatorToExecutor
-\[[\[sec:elem-initiatorToExecutor\]](#sec:elem-initiatorToExecutor){reference-type="ref"
-reference="sec:elem-initiatorToExecutor"}\]
+[[[sec:elem-identification]](#identification), dateSend
+[[[sec:elem-dateSend]](#datesend), dateRead
+[[[sec:elem-dateRead]](#dateread), state
+[[[sec:elem-state]](#state), dateLaMu
+[[[sec:elem-dateLaMu]](#datelamu), userLaMu
+[[[sec:elem-userLaMu]](#userlamu), initiatorToExecutor
+[[[sec:elem-initiatorToExecutor]](#initiatortoexecutor)
 
 ```
 ENTITY MessageInTransactionTemplate;
@@ -310,36 +267,25 @@ This is the entity that makes it possible to include the actual
 MessageInTransactionType in the message. This means that the position in
 the workflow of a transaction can always be clearly identified.
 
-#### MessageTemplate {#sec:MessageTemplate}
+#### MessageTemplate
+
 
 **Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]\
+[[[sec:attr-id]](#id)]
 **Elements**: identification
-\[[\[sec:elem-identification\]](#sec:elem-identification){reference-type="ref"
-reference="sec:elem-identification"}\], dateSend
-\[\[[\[sec:elem-dateSend\]](#sec:elem-dateSend){reference-type="ref"
-reference="sec:elem-dateSend"}\], dateRead
-\[\[[\[sec:elem-dateRead\]](#sec:elem-dateRead){reference-type="ref"
-reference="sec:elem-dateRead"}\], state
-\[\[[\[sec:elem-state\]](#sec:elem-state){reference-type="ref"
-reference="sec:elem-state"}\], dateLaMu
-\[\[[\[sec:elem-dateLaMu\]](#sec:elem-dateLaMu){reference-type="ref"
-reference="sec:elem-dateLaMu"}\], userLaMu
-\[\[[\[sec:elem-userLaMu\]](#sec:elem-userLaMu){reference-type="ref"
-reference="sec:elem-userLaMu"}\], initiatingTransactionMessageID
-\[\[[\[sec:elem-initiatingTransactionMessageID\]](#sec:elem-initiatingTransactionMessageID){reference-type="ref"
-reference="sec:elem-initiatingTransactionMessageID"}\],
+[[[sec:elem-identification]](#identification), dateSend
+[[[[sec:elem-dateSend]](#datesend), dateRead
+[[[[sec:elem-dateRead]](#dateread), state
+[[[[sec:elem-state]](#state), dateLaMu
+[[[[sec:elem-dateLaMu]](#datelamu), userLaMu
+[[[[sec:elem-userLaMu]](#userlamu), initiatingTransactionMessageID
+[[[[sec:elem-initiatingTransactionMessageID]](#initiatingtransactionmessageid),
 initiatorToExecutor
-\[\[[\[sec:elem-initiatorToExecutor\]](#sec:elem-initiatorToExecutor){reference-type="ref"
-reference="sec:elem-initiatorToExecutor"}\]\
+[[[[sec:elem-initiatorToExecutor]](#initiatortoexecutor)\
 **References**: messageInTransaction
-\[\[[\[sec:ref-messageInTransaction\]](#sec:ref-messageInTransaction){reference-type="ref"
-reference="sec:ref-messageInTransaction"}\], transaction
-\[\[[\[sec:ref-transaction\]](#sec:ref-transaction){reference-type="ref"
-reference="sec:ref-transaction"}\], template
-\[\[[0.1.1.3](#sec:ComplexElementTemplate){reference-type="ref"
-reference="sec:ComplexElementTemplate"}\]
+[[[[sec:ref-messageInTransaction]](#messageintransaction), transaction
+[[[[sec:ref-transaction]](#transaction), template
+[[[0.1.1.3](#complexelementtemplate)
 
 ```
 ENTITY MessageTemplate;
@@ -434,27 +380,19 @@ Associated part of the framework:
 </ComplexElementType>
 ```
 
-#### OrganisationTemplate {#sec:OrganisationTemplate}
+#### OrganisationTemplate
 
 **Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]\
+[[[sec:attr-id]](#id)\
 **Elements**: name
-\[[\[sec:elem-name\]](#sec:elem-name){reference-type="ref"
-reference="sec:elem-name"}\], abbreviation
-\[[\[sec:elem-abbreviation\]](#sec:elem-abbreviation){reference-type="ref"
-reference="sec:elem-abbreviation"}\], state
-\[[\[sec:elem-state\]](#sec:elem-state){reference-type="ref"
-reference="sec:elem-state"}\], dateLaMu
-\[[\[sec:elem-dateLaMu\]](#sec:elem-dateLaMu){reference-type="ref"
-reference="sec:elem-dateLaMu"}\], userLaMu
-\[[\[sec:elem-userLaMu\]](#sec:elem-userLaMu){reference-type="ref"
-reference="sec:elem-userLaMu"}\]\
+[[[sec:elem-name]](#name), abbreviation
+[[[sec:elem-abbreviation]](#abbreviation), state
+[[[sec:elem-state]](#state), dateLaMu
+[[[sec:elem-dateLaMu]](#datelamu), userLaMu
+[[[sec:elem-userLaMu]](#userlamu)\
 **References**: contactPerson
-\[[\[sec:ref-contactPerson\]](#sec:ref-contactPerson){reference-type="ref"
-reference="sec:ref-contactPerson"}\], template
-\[[0.1.1.3](#sec:ComplexElementTemplate){reference-type="ref"
-reference="sec:ComplexElementTemplate"}\]
+[[[sec:ref-contactPerson]](#contactperson), template
+[[0.1.1.3](#sec:complexelementtemplate)
 
 ```
 ENTITY OrganisationTemplate;
@@ -511,29 +449,20 @@ Associated part of the framework:
 </OrganisationType>
 ```
 
-#### PersonInRole {#sec:PersonInRole}
+#### PersonInRole
 
 **Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]\
+[[[sec:attr-id]](#id)\
 **Elements**: state
-\[[\[sec:elem-state\]](#sec:elem-state){reference-type="ref"
-reference="sec:elem-state"}\], dateLaMu
-\[[\[sec:elem-dateLaMu\]](#sec:elem-dateLaMu){reference-type="ref"
-reference="sec:elem-dateLaMu"}\], userLaMu
-\[[\[sec:elem-userLaMu\]](#sec:elem-userLaMu){reference-type="ref"
-reference="sec:elem-userLaMu"}\]\
+[[[sec:elem-state]](#state), dateLaMu
+[[[sec:elem-dateLaMu]](#datelamu), userLaMu
+[[[sec:elem-userLaMu]](#userlamu)\
 **References**: successor
-\[[\[sec:ref-successor\]](#sec:ref-successor){reference-type="ref"
-reference="sec:ref-successor"}\], substituting
-\[[\[sec:ref-substituting\]](#sec:ref-substituting){reference-type="ref"
-reference="sec:ref-substituting"}\], contactPerson
-\[[\[sec:ref-contactPerson\]](#sec:ref-contactPerson){reference-type="ref"
-reference="sec:ref-contactPerson"}\], organisation
-\[[\[sec:ref-organisation\]](#sec:ref-organisation){reference-type="ref"
-reference="sec:ref-organisation"}\], role
-\[[\[sec:ref-role\]](#sec:ref-role){reference-type="ref"
-reference="sec:ref-role"}\]
+[[[sec:ref-successor]](#successor), substituting
+[[[sec:ref-substituting]](#substituting), contactPerson
+[[[sec:ref-contactPerson]](#contactperson), organisation
+[[[sec:ref-organisation]](#organisation), role
+[[[sec:ref-role]](#role)
 
 ```
 ENTITY PersonInRole;
@@ -604,25 +533,18 @@ Associated part of the framework:
 </RoleType>
 ```
 
-#### PersonTemplate {#sec:PersonTemplate}
+#### PersonTemplate
 
 **Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]\
+[[[sec:attr-id]](#id)\
 **Elements**: userName
-\[[\[sec:elem-userName\]](#sec:elem-userName){reference-type="ref"
-reference="sec:elem-userName"}\], name
-\[[\[sec:elem-name\]](#sec:elem-name){reference-type="ref"
-reference="sec:elem-name"}\], state
-\[[\[sec:elem-state\]](#sec:elem-state){reference-type="ref"
-reference="sec:elem-state"}\], dateLaMu
-\[[\[sec:elem-dateLaMu\]](#sec:elem-dateLaMu){reference-type="ref"
-reference="sec:elem-dateLaMu"}\], userLaMu
-\[[\[sec:elem-userLaMu\]](#sec:elem-userLaMu){reference-type="ref"
-reference="sec:elem-userLaMu"}\]\
+[[[sec:elem-userName]](#username), name
+[[[sec:elem-name]](#name), state
+[[[sec:elem-state]](#state), dateLaMu
+[[[sec:elem-dateLaMu]](#datelamu), userLaMu
+[[[sec:elem-userLaMu]](#userlamu)\
 **References**: template
-\[[0.1.1.3](#sec:ComplexElementTemplate){reference-type="ref"
-reference="sec:ComplexElementTemplate"}\]
+[[0.1.1.3](#complexelementtemplate)
 
 ```
 ENTITY PersonTemplate;
@@ -663,29 +585,20 @@ Associated part of the framework:
 </PersonType>
 ```
 
-#### ProjectTypeInstance {#sec:ProjectTypeInstance}
+#### ProjectTypeInstance
 
 **Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]\
+[[[sec:attr-id]](#id)\
 **Elements**: name
-\[[\[sec:elem-name\]](#sec:elem-name){reference-type="ref"
-reference="sec:elem-name"}\], description
-\[[\[sec:elem-description\]](#sec:elem-description){reference-type="ref"
-reference="sec:elem-description"}\], startDate
-\[[\[sec:elem-startDate\]](#sec:elem-startDate){reference-type="ref"
-reference="sec:elem-startDate"}\], endDate
-\[[\[sec:elem-endDate\]](#sec:elem-endDate){reference-type="ref"
-reference="sec:elem-endDate"}\], state
-\[[\[sec:elem-state\]](#sec:elem-state){reference-type="ref"
-reference="sec:elem-state"}\], dateLaMu
-\[[\[sec:elem-dateLaMu\]](#sec:elem-dateLaMu){reference-type="ref"
-reference="sec:elem-dateLaMu"}\], userLaMu
-\[[\[sec:elem-userLaMu\]](#sec:elem-userLaMu){reference-type="ref"
-reference="sec:elem-userLaMu"}\]\
+[[[sec:elem-name]](#name), description
+[[[sec:elem-description]](#description), startDate
+[[[sec:elem-startDate]](#startdate), endDate
+[[[sec:elem-endDate]](#enddate), state
+[[[sec:elem-state]](#state), dateLaMu
+[[[sec:elem-dateLaMu]](#datelamu), userLaMu
+[[[sec:elem-userLaMu]](#userlamu)\
 **References**: template
-\[[0.1.1.3](#sec:ComplexElementTemplate){reference-type="ref"
-reference="sec:ComplexElementTemplate"}\]
+[[0.1.1.3](#complexelementtemplate)
 
 ```
 ENTITY ProjectTypeInstance;
@@ -729,24 +642,17 @@ Associated part of the framework:
 </ProjectType>
 ```
 
-#### RoleTemplate {#sec:RoleTemplate}
+#### RoleTemplate
 
 **Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]\
+[[[sec:attr-id]](#id)\
 **Elements**: name
-\[[\[sec:elem-name\]](#sec:elem-name){reference-type="ref"
-reference="sec:elem-name"}\], description
-\[[\[sec:elem-description\]](#sec:elem-description){reference-type="ref"
-reference="sec:elem-description"}\], state
-\[[\[sec:elem-state\]](#sec:elem-state){reference-type="ref"
-reference="sec:elem-state"}\], dateLaMu
-\[[\[sec:elem-dateLaMu\]](#sec:elem-dateLaMu){reference-type="ref"
-reference="sec:elem-dateLaMu"}\], userLaMu
-\[[\[sec:elem-userLaMu\]](#sec:elem-userLaMu){reference-type="ref"
-reference="sec:elem-userLaMu"}\], category
-\[[\[sec:elem-category\]](#sec:elem-category){reference-type="ref"
-reference="sec:elem-category"}\]
+[[[sec:elem-name]](#name), description
+[[[sec:elem-description]](#description), state
+[[[sec:elem-state]](#state), dateLaMu
+[[[sec:elem-dateLaMu]](#datelamu), userLaMu
+[[[sec:elem-userLaMu]](#userlamu), category
+[[[sec:elem-category]](#category)
 
 ```
 ENTITY RoleTemplate;
@@ -787,27 +693,19 @@ Associated part of the framework:
 </RoleType>
 ```
 
-#### TransactionPhaseTemplate {#sec:TransactionPhaseTemplate}
+#### TransactionPhaseTemplate
 
 **Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]\
+[[[sec:attr-id]](#id)\
 **Elements**: name
-\[[\[sec:elem-name\]](#sec:elem-name){reference-type="ref"
-reference="sec:elem-name"}\], description
-\[[\[sec:elem-description\]](#sec:elem-description){reference-type="ref"
-reference="sec:elem-description"}\], dateReached
-\[[\[sec:elem-dateReached\]](#sec:elem-dateReached){reference-type="ref"
-reference="sec:elem-dateReached"}\], state
-\[[\[sec:elem-state\]](#sec:elem-state){reference-type="ref"
-reference="sec:elem-state"}\], dateLaMu
-[\[sec:elem-dateLaMu\]](#sec:elem-dateLaMu){reference-type="ref"
-reference="sec:elem-dateLaMu"}\], userLaMu
-\[[\[sec:elem-userLaMu\]](#sec:elem-userLaMu){reference-type="ref"
-reference="sec:elem-userLaMu"}\]\
+[[[sec:elem-name]](#name), description
+[[[sec:elem-description]](#description), dateReached
+[[[sec:elem-dateReached]](#datereached), state
+[[[sec:elem-state]](#state), dateLaMu
+[[sec:elem-dateLaMu]](#datelamu), userLaMu
+[[[sec:elem-userLaMu]](#userlamu)\
 **References**: transaction
-\[[\[sec:ref-transaction\]](#sec:ref-transaction){reference-type="ref"
-reference="sec:ref-transaction"}\]
+[[[sec:ref-transaction]](#transaction)
 
 ```
 ENTITY TransactionPhaseTemplate;
@@ -865,35 +763,23 @@ Associated part of the framework:
 </TransactionPhaseType>
 ```
 
-#### TransactionTemplate {#sec:TransactionTemplate}
+#### TransactionTemplate
 
 **Attributes**: id
-\[[\[sec:attr-id\]](#sec:attr-id){reference-type="ref"
-reference="sec:attr-id"}\]\
+[[[sec:attr-id]](#id)\
 **Elements**: number
-\[[\[sec:elem-number\]](#sec:elem-number){reference-type="ref"
-reference="sec:elem-number"}\], name
-\[[\[sec:elem-name\]](#sec:elem-name){reference-type="ref"
-reference="sec:elem-name"}\], description
-\[[\[sec:elem-description\]](#sec:elem-description){reference-type="ref"
-reference="sec:elem-description"}\], startDate
-\[[\[sec:elem-startDate\]](#sec:elem-startDate){reference-type="ref"
-reference="sec:elem-startDate"}\], endDate
-\[[\[sec:elem-endDate\]](#sec:elem-endDate){reference-type="ref"
-reference="sec:elem-endDate"}\], state
-\[[\[sec:elem-state\]](#sec:elem-state){reference-type="ref"
-reference="sec:elem-state"}\], dateLaMu
-\[[\[sec:elem-dateLaMu\]](#sec:elem-dateLaMu){reference-type="ref"
-reference="sec:elem-dateLaMu"}\], userLaMu
-\[[\[sec:elem-userLaMu\]](#sec:elem-userLaMu){reference-type="ref"
-reference="sec:elem-userLaMu"}\], result
-\[[\[sec:elem-result\]](#sec:elem-result){reference-type="ref"
-reference="sec:elem-result"}\]\
+[[[sec:elem-number]](#number), name
+[[[sec:elem-name]](#name), description
+[[[sec:elem-description]](#description), startDate
+[[[sec:elem-startDate]](#startdate), endDate
+[[[sec:elem-endDate]](#enddate), state
+[[[sec:elem-state]](#state), dateLaMu
+[[[sec:elem-dateLaMu]](#datelamu), userLaMu
+[[[sec:elem-userLaMu]](#userlamu), result
+[[[sec:elem-result]](#result)\
 **References**: initiator
-\[[\[sec:ref-initiator\]](#sec:ref-initiator){reference-type="ref"
-reference="sec:ref-initiator"}\], executor
-\[[\[sec:ref-executor\]](#sec:ref-executor){reference-type="ref"
-reference="sec:ref-executor"}\]
+[[[sec:ref-initiator]](#initiator), executor
+[[[sec:ref-executor]](#executor)
 
 ```
 ENTITY TransactionTemplate;

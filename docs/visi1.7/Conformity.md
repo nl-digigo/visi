@@ -1,4 +1,4 @@
-# Conformity {#sec:Conformity}
+# Conformity
 
 In addition to items marked as non-normative, all diagrams, examples,
 and notes in this document are non-normative. Everything else in this

@@ -1,6 +1,6 @@
 ### Elements
 
-#### abbreviation {#sec:elem-abbreviation}
+#### abbreviation
 
 ```
 abbreviation: STRING;
@@ -9,7 +9,7 @@ abbreviation: STRING;
 Abbreviation of the organisation name. Is used, among other things, as a
 prefix for transaction identification.
 
-#### category {#sec:elem-category}
+#### category
 
 ```
 category : OPTIONAL STRING;
@@ -28,7 +28,7 @@ Message level example:
 </...>
 ```
 
-#### creationDate {#sec:elem-creationDate}
+#### creationDate
 
 ```
 creationDate : DATETIME;
@@ -46,7 +46,7 @@ Message level example:
 </...>
 ```
 
-#### dateLaMu {#sec:elem-dateLaMu}
+#### dateLaMu
 
 ```
 dateLaMu : OPTIONAL DATETIME;
@@ -64,7 +64,7 @@ Message level example:
 </...>
 ```
 
-#### dateReached {#sec:elem-dateReached}
+#### dateReached
 
 ```
 dateReached : DATETIME;
@@ -82,7 +82,7 @@ Message level example:
 </...>
 ```
 
-#### dateRead {#sec:elem-dateRead}
+#### dateRead
 
 ```
 dateRead : OPTIONAL DATETIME;
@@ -100,7 +100,7 @@ Message level example:
 </...>
 ```
 
-#### dateSend {#sec:elem-dateSend}
+#### dateSend
 
 ```
 dateSend : DATETIME; -- MessageTemplate
@@ -119,7 +119,7 @@ Message level example:
 </...>
 ```
 
-#### description {#sec:elem-description}
+#### description
 
 ```
 description : STRING;
@@ -137,7 +137,7 @@ Message level example:
 </Projectleverende>
 ```
 
-#### documentIdentification {#sec:elem-documentIdentification}
+#### documentIdentification
 
 ```
 documentIdentification : OPTIONAL STRING;
@@ -146,7 +146,7 @@ documentIdentification : OPTIONAL STRING;
 Unique number or characteristic of a document or file by which the
 document is identifiable.
 
-#### documentReference {#sec:elem-documentReference}
+#### documentReference
 
 ```
 documentReference : OPTIONAL STRING;
@@ -155,7 +155,7 @@ documentReference : OPTIONAL STRING;
 Reference that can be referenced as an attribute to identify a file or
 document.
 
-#### documentVersion {#sec:elem-documentVersion}
+#### documentVersion
 
 ```
 documentVersion : OPTIONAL STRING;
@@ -163,7 +163,7 @@ documentVersion : OPTIONAL STRING;
 
 Version of a document or file.
 
-#### endDate {#sec:elem-endDate}
+#### endDate
 
 ```
 endDate : DATETIME;
@@ -182,7 +182,7 @@ Message level example:
 </...>
 ```
 
-#### fileLocation {#sec:elem-fileLocation}
+#### fileLocation
 
 ```
 fileLocation : STRING;
@@ -201,7 +201,7 @@ Message level example:
 </...>
 ```
 
-#### fileType {#sec:elem-fileType}
+#### fileType
 
 ```
 fileType : STRING;
@@ -220,7 +220,7 @@ Message level example:
 </...>
 ```
 
-#### fileVersion {#sec:elem-fileVersion}
+#### fileVersion
 
 ```
 fileVersion : STRING;
@@ -235,7 +235,7 @@ following example at message level:
 </...>
 ```
 
-#### identification {#sec:elem-identification}
+#### identification
 
 ```
 identification : STRING;
@@ -251,7 +251,7 @@ more extensive identification may be useful, example at message level:
 </OpdrachtBevestiging>
 ```
 
-#### initiatingTransactionMessageID {#sec:elem-initiatingTransactionMessageID}
+#### initiatingTransactionMessageID
 
 ```
 initiatingTransactionMessageID : OPTIONAL STRING;
@@ -260,7 +260,7 @@ initiatingTransactionMessageID : OPTIONAL STRING;
 Reference to the message associated with a secondary transaction that
 initiated the message.
 
-#### initiatorToExecutor {#sec:elem-initiatorToExecutor}
+#### initiatorToExecutor
 
 ```
 initiatorToExecutor : BOOLEAN;
@@ -293,12 +293,10 @@ The direction of this specific message. Message level example:
 ```
 
 in the example above, the Sample Message is sent from B (executor
-\[[\[sec:ref-executor\]](#sec:ref-executor){reference-type="ref"
-reference="sec:ref-executor"}\]) to A (initiator
-\[[\[sec:ref-initiator\]](#sec:ref-initiator){reference-type="ref"
-reference="sec:ref-initiator"}\]).
+\[[\[sec:ref-executor\]](#executor) to A (initiator
+\[[\[sec:ref-initiator\]](#initiator).
 
-#### language {#sec:elem-language}
+#### language
 
 ```
 language : OPTIONAL STRING;
@@ -316,7 +314,7 @@ Message level example:
 </...>
 ```
 
-#### name {#sec:elem-name}
+#### name
 
 ```
 name : STRING;
@@ -324,7 +322,7 @@ name : STRING;
 
 Naming.
 
-#### number {#sec:elem-number}
+#### number
 
 ```
 number : INTEGER;
@@ -332,7 +330,7 @@ number : INTEGER;
 
 Transaction number.
 
-#### objectCode {#sec:elem-objectCode}
+#### objectCode
 
 ```
 objectCode : OPTIONAL STRING;
@@ -341,7 +339,7 @@ objectCode : OPTIONAL STRING;
 Possibility to establish a relationship with an external index. This
 includes a work breakdown structure, work packages or specifications.
 
-#### result {#sec:elem-result}
+#### result
 
 ```
 result : OPTIONAL STRING;
@@ -368,7 +366,7 @@ Message level example:
 </...>
 ```
 
-#### state {#sec:elem-state}
+#### state
 
 ```
 state : OPTIONAL STRING;
@@ -386,7 +384,7 @@ Message level example:
 </...>
 ```
 
-#### userLaMu {#sec:elem-userLaMu}
+#### userLaMu
 
 ```
 userLaMu : OPTIONAL STRING;
@@ -405,7 +403,7 @@ Message level example:
 </...>
 ```
 
-#### userName {#sec:elem-userName}
+#### userName
 
 ```
 userName : STRING;
@@ -423,7 +421,7 @@ Message level example:
 </...>
 ```
 
-#### versionNo {#sec:elem-versionNo}
+#### versionNo
 
 ```
 versionNo : STRING;

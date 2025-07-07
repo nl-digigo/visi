@@ -6,7 +6,7 @@
 
 OMG Unified Modeling Language. Open Management Group. OMG. 1 March 2015.
 Normative.\
-URL: http://www.omg.org/spec/UML/\
+URL: http://www.omg.org/spec/UML/
 \
 **\[xml\]**
 

@@ -10,16 +10,14 @@ versions.\
 \
 The history is summarised in the table below.
 
-
-   **Author**   **Version**   **Datum**    **Status**  **Remarks**
-  ------------ ------------- ------------ ------------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    TEEC2/EC        1.7       01-09-2023     Future    Translation to English documentation to support internationalisation. Changes in [0.2.6](#sec:ChangesVersion1.7){reference-type="ref+label" reference="sec:ChangesVersion1.7"}.
-                    1.6       31-03-2016    Current    Changes in [0.2.5](#sec:ChangesVersion1.6){reference-type="ref+label" reference="sec:ChangesVersion1.6"}.
-                    1.4       31-03-2014    Current    Changes in [0.2.4](#sec:ChangesVersion1.4){reference-type="ref+label" reference="sec:ChangesVersion1.4"}.
-    CROW/EC         1.3       25-11-2011    Current    The entire guide has been adapted in accordance with version 1.3 of the VISI system. The Guidance now consists of a main document with a series of normative or informative annexes, each containing a specific requirement or guideline. Version 1.3 is aligned with the ISO/DIS 29481 Part 2 (Information Delivery Manual IDM). Changes in [0.2.3](#sec:ChangesVersion1.3){reference-type="ref+label" reference="sec:ChangesVersion1.3"}
-    Gobar/EC        1.2       31-10-2008    Expired    Changes in [0.2.2](#sec:ChangesVersion1.2){reference-type="ref+label" reference="sec:ChangesVersion1.2"}.
-     Gobar        1.1(a)                    Expired    Still used in some cases.
-
+| **Author** | **Version** | **Datum**  | **Status** | **Remarks**                                                                                                    |
+   |------------|-------------|------------|------------|----------------------------------------------------------------------------------------------------------------|
+| TEEC2/EC   | 1.7         | 01-09-2023 | Future     | Translation to English documentation to support internationalisation. Changes in \cref{sec:ChangesVersion1.7}. |
+|            | 1.6         | 31-03-2016 | Current    | Changes in \cref{sec:ChangesVersion1.6}.                                                                       |
+|            | 1.4         | 31-03-2014 | Current    | Changes in \cref{sec:ChangesVersion1.4}.                                                                       |
+| CROW/EC    | 1.3         | 25-11-2011 | Current    | The entire guide has been adapted in accordance with version 1.3 of the VISI system.                           |
+| Gobar/EC   | 1.2         | 31-10-2008 | Expired    | Changes in \cref{sec:ChangesVersion1.2}.                                                                       |
+| Gobar      | 1.1(a)      |            | Expired    | Still used in some cases.                                                                                      |
 
 ## Important changes in the VISI system
 
@@ -47,25 +45,25 @@ the development process can be followed in detail. However, the latest,
 final version of a version is NOT on Github; it must be downloaded from
 the VISI website and/or the VISI toolbox.
 
-### Important changes in version 1.2 {#sec:ChangesVersion1.2}
+### Important changes in version 1.2
 
 Below are the most important changes that have already been made in
 version 1.2 compared to the previous versions (these improvements are
 now an integral part of version 1.3). These points are further explained
 in appendix 5.
 
--   Transaction link; communication across multiple transactions.
+- Transaction link; communication across multiple transactions.
 
--   Reuse and blocking data elements.
+- Reuse and blocking data elements.
 
--   DateTime format.
+- DateTime format.
 
--   Replacement of people within a project (Successor; see also TC015
-    infinite loops).
+- Replacement of people within a project (Successor; see also TC015
+  infinite loops).
 
--   Add MITT MessageInTransactionType to message.
+- Add MITT MessageInTransactionType to message.
 
-### Changes in version 1.3 vs version 1.2 {#sec:ChangesVersion1.3}
+### Changes in version 1.3 vs version 1.2
 
 The numbering is in accordance with the status overview of the EC at the
 time.\
@@ -142,11 +140,11 @@ been described (see appendix 10) that users of products with the VISI
 quality mark can expect from the product in question, as a minimum, when
 it comes to:
 
--   assurance of the authenticity of VISI messages and associated files.
+- assurance of the authenticity of VISI messages and associated files.
 
--   presentation of the communication structure in a VISI framework.
+- presentation of the communication structure in a VISI framework.
 
--   Reproduce the VISI communication afterwards.
+- Reproduce the VISI communication afterwards.
 
 **Duplicate message types (TC022)**
 
@@ -169,7 +167,7 @@ increased scalability and speed of VISI software and better readability.
 N.B. This improvement could not yet be implemented in the IDM-DIS
 (possibly in the F-DIS).
 
-### Changes in version 1.4 vs version 1.3 {#sec:ChangesVersion1.4}
+### Changes in version 1.4 vs version 1.3
 
 The numbering is in accordance with Codeplex.\
 \
@@ -236,7 +234,7 @@ obvious. If functionality is deliberately removed, or if behavior is
 changed, there is no longer any question of backwards compatibility on
 that point.
 
-### Changes in version 1.6 vs version 1.4 {#sec:ChangesVersion1.6}
+### Changes in version 1.6 vs version 1.4
 
 Belongs to:
 [\[propertiesexplanationminmax\]](#propertiesexplanationminmax){reference-type="ref+label"
@@ -313,7 +311,7 @@ the VISI Standard, BIM containers or delivery files can also be
 exchanged. These containers and delivery files can be/become very large,
 which is why the maximum has been increased to 10 GB.
 
-### Changes in version 1.7 vs version 1.6 {#sec:ChangesVersion1.7}
+### Changes in version 1.7 vs version 1.6
 
 **Framework with non-ascii characters in list boxes and descriptions
 (enumerations & descriptions) (#68)**
@@ -322,8 +320,8 @@ It used to be that messages with non-ascii characters in picklists and
 descriptions were not displayed correctly to the recipient of a VISI
 message. To prevent this, it has been stated that in
 
-1.  description of elements (SimpleElementType, ComplexElementType,
-    MessageType, TransactionType)
+1. description of elements (SimpleElementType, ComplexElementType,
+   MessageType, TransactionType)
 
-2.  enumeration (UserDefinedTYpe) non-ascii characters must be displayed
-    correctly
+2. enumeration (UserDefinedTYpe) non-ascii characters must be displayed
+   correctly

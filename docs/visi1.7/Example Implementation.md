@@ -27,47 +27,45 @@ must execute the order. If all Cooks refuse the order, the customer will
 be informed by the waiter that the order is not possible in its current
 form. The customer must then resubmit the order to the waiter.
 
-![](images/visiwiki4.1interactiekaart.png)
+<img src="images/visiwiki4.1interactiekaart.png" alt="Contract change" width="1000"/>
 
 In this example, the processing of an order is translated into VISI
 communication. The following roles and transactions are required to
 process the order.
 
+Roles
 
-  **Role**       **Responsible for:**
-  -------------- -----------------------------------
-  Customer       placing an order
-  Waiter         logistic processing of an order
-  Cook           realizing an order
-  Kitchen help   answering questions from the Cook
+| Role  | Responsible for:         |
+|--------------|---------------------------------|
+| Customer     | placing an order                |
+| Waiter       | logistic processing of an order |
+| Cook         | realizing an order              |
+| Kitchen help | answering questions from the Cook |
 
-  : Roles
+Transactions
+
+
+| Code | Name              |
+|-------------|--------------------------|
+| T1          | Order recording          |
+| T2          | Ask Waiter to Cook       |
+| T3          | Kok Assignment           |
+| T4          | Ask a Chef for Kitchen Help |
 
 
 
-  **Code**   **Name**
-  ---------- -----------------------------
-  T1         Order recording
-  T2         Ask Waiter to Cook
-  T3         Kok Assignment
-  T4         Ask a Chef for Kitchen Help
 
-  : Transactions
 
 
 **Communication**
 
-![Transactieschema T1: Opname
-bestelling](images/visiwiki4.2opnamebestelling.png)
+<img src="images/visiwiki4.2opnamebestelling.png" alt="Transactieschema T1: Opname bestelling" width="1000"/>
 
-![Transactieschema T2: Vraag ober aan
-kok](images/visiwiki4.3vraagoberaankok.png)
+<img src="images/visiwiki4.3vraagoberaankok.png" alt="Transactieschema T2: Vraag ober aan kok" width="1000"/>
 
-![Transactieschema T3: Opdracht aan
-kok](images/visiwiki4.4opdrachtaankok.png)
+<img src="images/visiwiki4.4opdrachtaankok.png" alt="Transactieschema T3: Opdracht aan kok" width="1000"/>
 
-![Transactieschema T4: Vraag kok aan
-keukenhulp](images/visiwiki4.5vraagkokaankeukenhulp.png)
+<img src="images/visiwiki4.5vraagkokaankeukenhulp.png" alt="Transactieschema T4: Vraag kok aan keukenhulp" width="1000"/>
 
 Based on the above roles and transactions, communication can proceed as
 follows:
@@ -97,8 +95,7 @@ The following diagram shows all transactions and messages from the
 example in relation to each other. **This diagram guides the test
 scenario for VISI compatible software.**
 
-![Complete restaurant
-workflow](images/visiwiki4.6restaurantfullworkflow.png)
+<img src="images/visiwiki4.6restaurantfullworkflow.png" alt="Transactieschema T4: Complete restaurant workflow" width="1000"/>
 
 ## Appendix 4 Detailed Implementation Example
 
@@ -127,17 +124,17 @@ A framework is made up of three important components:
 
 This applies to every VISI framework and therefore also to this
 framework. A digital version of the framework can be found in the file
-'\_7.xml'.\
-\
+'_7.xml'.
+
 The system itself is laid down in two so-called Express schedules1.
 These files have the extension .exp. The first file contains the express
 diagram of Systematics Part 1, in which the rules that specifically
 apply to VISI frameworks are laid down. A .xsd version that we can use
-when setting up a framework can be found in \_3.xsd. The second file
+when setting up a framework can be found in _3.xsd. The second file
 relates to Systematics Part 2. It contains the additional rules that are
 specifically important for VISI messages.
 
-![](images/visiwikib4.1uitgewerktvoorbeeld.png)
+<img src="images/visiwikib4.1uitgewerktvoorbeeld.png" alt="" width="1000"/>
 
 ### Description of example (file "\_7.xml")
 
@@ -707,17 +704,29 @@ MessageInTransaction6 can be sent even though MessageInTransaction10 has
 also been sent. The Waiter can therefore continue transaction T1 without
 completing transaction T2.
 
-![](images/visiwikib4.2image.png)
 
-![](images/visiwikib4.3image.png)
+<img src="images/visiwikib4.2image.png" alt="" width="1000"/>
 
-![](images/visiwikib4.4image.png)
 
-![](images/visiwikib4.5image.png)
 
-![](images/visiwikib4.6image.png)
+<img src="images/visiwikib4.3image.png" alt="" width="1000"/>
 
-![](images/visiwikib4.7image.png)
+
+
+<img src="images/visiwikib4.4image.png" alt="" width="1000"/>
+
+
+
+<img src="images/visiwikib4.5image.png" alt="" width="1000"/>
+
+
+
+<img src="images/visiwikib4.6image.png" alt="" width="1000"/>
+
+
+
+<img src="images/visiwikib4.7image.png" alt="" width="1000"/>
+
 
 ```
 <MessageInTransactionType id="BerichtInTransactie1">
@@ -2104,13 +2113,15 @@ which all possible messages including accessories are recorded. The
 diagram in the following figure shows the role of the Promoter in the
 creation of VISI messages.
 
-![](images/visiwikib4.8image.png)
+
+<img src="images/visiwikib4.8image.png" alt="" width="1000"/>
+
 
 The Promoter is made freely available in the form of a Dynamically
 Linked Library (DLL), which is a library with functions that can be used
 by multiple applications. This makes it possible to integrate the
 Promoter into other software. The files and additional documentation can
-be downloaded from the VISI website www.crow.nl/visi.\
+be downloaded from the VISI website www.crow.nl/visi.
 \
 By promoting the framework, the message schedules are recorded in an xsd
 file (10.xsd). The messages we will create in this section must comply

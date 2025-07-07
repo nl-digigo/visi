@@ -1,0 +1,141 @@
+.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+#stamgegevens {
+  fill: red;
+}
+
+#keuzelijst {
+  fill: red;
+}
+
+#ce {
+  fill: purple;
+}
+
+#bron {
+  fill: purple;
+}
+
+.link.bron {
+  stroke: #50ed60;
+  stroke-dasharray: 2,4 2;
+}
+.link.ce {
+  stroke: purple;
+  stroke-dasharray: 2,4 2;
+}
+
+
+.link.element {
+  stroke: red;
+}
+
+.link.property {
+  stroke: green;
+  stroke-dasharray: 0,2 1;
+}
+
+.link.keuzelijstC {
+  stroke: red;
+  stroke-dasharray: 0,2 1;
+}
+
+.link.keuzelijstK {
+  stroke: blue;
+  stroke-dasharray: 0,2 1;
+}
+
+.link.calculatie {
+  stroke: red;
+}
+
+circle {
+  fill: red;
+  stroke: red;
+  stroke-width: 2px;
+}
+
+text {
+    font-family: "NHaasGroteskDSStd-75Bd",sans-serif;
+    font-size: 11px;
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    font-family: "NHaasGroteskDSStd-75Bd",sans-serif;
+    font-size: 12px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+	border: 1px solid black;
+	width: 10%;
+}
+td {
+	background: #e1f4e6;
+	width: 10%;
+	border: 1px solid black;
+}
+
+h2 {
+    font-family: "NHaasGroteskDSStd-75Bd",sans-serif;
+    font-size: 18px;
+} 
+h3 {
+    font-family: "NHaasGroteskDSStd-75Bd",sans-serif;
+    font-size: 16px;
+} 
+
+p {
+    font-family: "NHaasGroteskDSStd-75Bd",sans-serif;
+    font-size: 12px;
+}
+
+
+/* Frames */
+
+#InfoFrame {
+	/* overflow:auto; */
+	width:600px;
+	float: right;
+	position:absolute; 
+	/* display:block;  */
+	/* top:0; right:0;  */
+    height:1100px;
+    background: #c9efd3; 
+	border:5px gray;
+	overflow:hidden;
+	z-index:11;
+	
+}
+
+#ShowFrame {
+	width:1300px; 
+	height:1100px;
+	border:3px gray;
+	/* /* margin:5px; */ 
+	/* position:right; */
+	  /* display:block;  */
+	  /* margin:0 0 0 0px; */
+	  /* /* background:transparent;  */ 
+	  overflow:hidden;
+	  z-index:10;
+}
+
+

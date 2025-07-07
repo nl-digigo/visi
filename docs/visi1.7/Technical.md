@@ -36,63 +36,33 @@ contains a user interface for the end user. The additional requirements
 also relate to obtaining the VISI quality mark.
 
 
-        **Ensuring the authenticity of exchanged VISI messages and associated files**
-  ----- ------------------------------------------------------------------------------------------------------------
-   A.1  VISI messages must comply with the system as shown when sent from a VISI product(\*).
-        described in the documentation associated with the current system.
-        (\*) A VISI product is software that a supplier offers in combination with the VISI quality mark.
-   A.2  A VISI message with any linked file(s) must be included in the VISI product as such
-        stored so that the message and associated file(s) can be retrieved in relation to each other at all times.
-   A.3  It should not be possible to retrieve originally sent and/or received VISI messages and associated
-        change or delete files in the VISI product.
-        (N.B. This does not include copying to create a new message)
-   A.4  The VISI product must check whether a user is authorised to access the system.
-        Gaining access must be done using means that the person in question
-        under his/her sole control.
-   A.5  Only the persons listed in the project-specific message may use the VISI product
-        Perform VISI communications in accordance with the VISI roles assigned to them.
+|      | Ensuring the authenticity of exchanged VISI messages and associated files                                                                                                                                                                                             |
+|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| A.1  | VISI messages must comply with the system as shown when sent from a VISI product(\*). <br/>described in the documentation associated with the current system. <br/>(*) A VISI product is software that a supplier offers in combination with the VISI quality mark.   |
+| A.2  | A VISI message with any linked file(s) must be included in the VISI product as such <br/>stored so that the message and associated file(s) can be retrieved in relation to each other at all times.                                                                   |
+| A.3  | It should not be possible to retrieve originally sent and/or received VISI messages and associated <br/>change or delete files in the VISI product. <br/>(N.B. This does not include copying to create a new message)                                                 |
+ | A.4  | The VISI product must check whether a user is authorised to access the system. <br/>Gaining access must be done using means that the person in question under his/her sole control.                                                                                   |   
+ | A.5  | Only the persons listed in the project-specific message may use the VISI product. <br/>Perform VISI communications in accordance with the VISI roles assigned to them.                                                                                                | 
+ ----- ----------------------------------------------------------------------------------
 
 
 
-  ----- ----------------------------------------------------------------------------------
-        **Presenting in a recognizable manner**
-        **the communication structure established in a VISI framework**
-   B.1  The software may only show a user those transactions
-        for which the user is responsible based on his/her role(s).
-        N.B. An exception must be made for the so-called 'viewing function'.
-        This is a facility for the administrator of the VISI product and
-        offers the possibility to make all message traffic visible
-        (without the possibility of influencing the flow of messages).
-   B.2  For a user, after selecting a VISI message
-        to have insight into which files are linked to the message.
-   B.3  Once a message has been selected, the following information should be available:
-        \- The transaction type with associated 'description'
-        \- The naming of the message type
-        \- The initiator
-        \- The executor
-        \- The date the message was sent
-   B.4  It must be possible to show transactions in relation to each other on
-        the manner as laid down in the underlying VISI framework and where
-        the user is involved as 'Person-in-Role' (initiator or executor).
-  ----- ----------------------------------------------------------------------------------
+|     | Presenting in a recognizable manner the communication structure established in a VISI framework                                                                                                                                                                                                                                                                                                             |
+|-----|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| B.1 | The software may only show a user those transactions<br/>   for which the user is responsible based on his/her role(s).<br/> N.B. An exception must be made for the so-called 'viewing function'.<br/> This is a facility for the administrator of the VISI product and <br/>offers the possibility to make all message traffic visible <br/>(without the possibility of influencing the flow of messages). |
+| B.2 | For a user, after selecting a VISI message <br/>to have insight into which files are linked to the message.                                                                                                                                                                                                                                                                                                 |
+| B.3 | Once a message has been selected, the following information should be available:  <br/>    \- The transaction type with associated 'description'   <br/>   \- The naming of the message type   <br/>   \- The initiator    <br/>  \- The executor    <br/>  \- The date the message was sent                                                                                                                |
+| B.4 | It must be possible to show transactions in relation to each other on <br/> the manner as laid down in the underlying VISI framework and where <br/> the user is involved as 'Person-in-Role' (initiator or executor).                                                                                                                                                                                      |   
+----- ----------------------------------------------------------------------------------
+
+|     | The afterwards (i.e. after closing the project)  being able to reproduce conducted VISI communications                                                                                                                                                                                                                                                                                                     |
+|-----|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C.1 | To perform an audit trail, messages must be able to be reproduced  <br/>    in the order in which they were sent or received, within the framework of    <br/>  the own organization of a VISI user, and the system used.                                                                                                                                                                                  |
+| C.2 | Linked files must be able to be exported in <br/> the format in which they were sent.                                                                                                                                                                                                                                                                                                                      |
+| C.3 | Documents (files) exchanged with VISI<br/> - within the frameworks set by the Archives Act - <br/> must remain retrievable and readable at all times (\*\*),<br/> regardless of changes to software or otherwise. <br/> http://wetten.overheid.nl/BWBR0007376/geldigheidsdatum_30-11-2010    <br/>  (\*\*) N.B. Testing of this item is not possible; <br/> agreements can be made about uniform archiving |
 
 
-
-  ----- ---------------------------------------------------------------------------
-        **The afterwards (i.e. after closing the project)**
-        **being able to reproduce conducted VISI communications**
-   C.1  To perform an audit trail, messages must be able to be reproduced
-        in the order in which they were sent or received, within the framework of
-        the own organization of a VISI user, and the system used.
-   C.2  Linked files must be able to be exported in
-        the format in which they were sent.
-   C.3  Documents (files) exchanged with VISI
-        -- within the frameworks set by the Archives Act --
-        must remain retrievable and readable at all times (\*\*),
-        regardless of changes to software or otherwise.
-        http://wetten.overheid.nl/BWBR0007376/geldigheidsdatum_30-11-2010
-        (\*\*) N.B. Testing of this item is not possible;
-        agreements can be made about uniform archiving
+ 
   ----- ---------------------------------------------------------------------------
 
 
@@ -124,43 +94,40 @@ Part 2 concerns the content of the VISI messages and project-specific
 messages.
 
 ### Part 1 (\_2.exp): VISI-framework
+Section [globale eigenschappen definitietabel](#framework-communication-template-of-a-project).
 
-[\[globaleeigenschappendefinitietabel\]](#globaleeigenschappendefinitietabel){reference-type="ref+label"
-reference="globaleeigenschappendefinitietabel"}
-
-
-  **Type**                   **Optional properties**
-  -------------------------- -------------------------
-  All elements               userLaMu
-                             dateLaMu
-                             state
-                             startDate
-                             endDate
-  SimpleElementType          interfaceType
-  MessageInTransactionType   requiredNotify
-                             received
-                             send
-                             group
+| Type                     | Optional properties |
+|--------------------------|---------------------|
+| All elements             | userLaMu            |
+|                          | dateLaMu            |
+|                          | state               |
+|                          |  startDate          |
+|                          | endDate             |
+| SimpleElementType        | interfaceType       |
+| MessageInTransactionType | requiredNotify      |
+|                          | received            |
+|                          | send                |
+|                          | group               |
 
 
 ### Part 2 (\_5.exp): VISI messages and project-specific message
 
 
-  **Type**                       **Properties to be made optional**
-  ------------------------------ ------------------------------------
-  All elements                   userLaMu
-                                 dateLaMu
-                                 state
-  AppendixTemplate               documentIdentification
-                                 documentVersion
-                                 documentReference
-                                 startDate
-                                 endDate
-                                 appendixGroup
-  MessageTemplate                dateRead
-  MessageInTransactionTemplate   dateSend
-                                 dateRead
-  AppendixGroup                  group
+| Type                         | Properties to be made optional |
+|------------------------------|--------------------------------|
+| All elements                 | userLaMu                       |
+|                              | dateLaMu                       |
+|                              | state                          |
+| AppendixTemplate             | documentIdentification         |
+|                              | documentVersion                |
+|                              | documentReference              |
+|                              | startDate                      |
+|                              | endDate                        |
+|                              | appendixGroup                  |
+| MessageTemplate              | dateRead                       |
+| MessageInTransactionTemplate | dateSend                       |
+|                              | dateRead                       |
+| AppendixGroup                | group                          |
 
 
 ### Test result

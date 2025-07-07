@@ -10,69 +10,69 @@ anticipated, and agreed-upon deadlines.
 
 **Send messages and keep appointments**
 
-1.  **VISI focuses on fulfilling agreements.**
+1. **VISI focuses on fulfilling agreements.**
 
-    Users can easily identify their required actions and initiate
-    message flows for specific transactions if they have the correct
-    role. They can also view response options and anticipate incoming
-    messages.
+   Users can easily identify their required actions and initiate
+   message flows for specific transactions if they have the correct
+   role. They can also view response options and anticipate incoming
+   messages.
 
-2.  **It is clear whether a message has arrived.**
+2. **It is clear whether a message has arrived.**
 
-    Due to the agreed-upon message traffic protocol, users can confirm
-    message delivery.
+   Due to the agreed-upon message traffic protocol, users can confirm
+   message delivery.
 
-3.  **Transferring work to a new employee is seamless.**
+3. **Transferring work to a new employee is seamless.**
 
-    Because an employee has a role, a successor can be appointed during
-    a collaboration. From that moment on, this successor takes over the
-    message flow. It is expected that, in a VISI application, the
-    successor also has the messages of the predecessor available.
+   Because an employee has a role, a successor can be appointed during
+   a collaboration. From that moment on, this successor takes over the
+   message flow. It is expected that, in a VISI application, the
+   successor also has the messages of the predecessor available.
 
-4.  **The communication can be found without mutual dependence.**
+4. **The communication can be found without mutual dependence.**
 
-    If several organisations work together, they can each use their own
-    VISI software. Due to the implemented message traffic protocol, two
-    people in different organisations each have access to the
-    information within their organisation and the message traffic at the
-    intersection of the other organisation in their own VISI software.
+   If several organisations work together, they can each use their own
+   VISI software. Due to the implemented message traffic protocol, two
+   people in different organisations each have access to the
+   information within their organisation and the message traffic at the
+   intersection of the other organisation in their own VISI software.
 
-5.  **With VISI, changes in the collaboration agreements are always
-    traceable.**
+5. **With VISI, changes in the collaboration agreements are always
+   traceable.**
 
-    During the project, the agreements about the workflow, message
-    content, roles and responsibilities can be changed.
+   During the project, the agreements about the workflow, message
+   content, roles and responsibilities can be changed.
 
 ### Preparation
 
 **Flexibility of VISI in making collaboration agreements**
 
-1.  **Agreeing on tasks and responsibilities in advance clarifies
-    expectations.**
+1. **Agreeing on tasks and responsibilities in advance clarifies
+   expectations.**
 
-    During collaboration preparation, roles and tasks are agreed upon.
+   During collaboration preparation, roles and tasks are agreed upon.
 
-2.  **Agreeing on communication flows in advance allows you to
-    anticipate responses and decisions.**
+2. **Agreeing on communication flows in advance allows you to
+   anticipate responses and decisions.**
 
-    During the preparation of a collaboration, it is important to
-    determine the roles of each team member and their communication
-    channels. This includes deciding on the message flow and the type of
-    information that is expected from each other. By setting agreements
-    and expectations beforehand, everyone involved knows their
-    responsibilities and can work more effectively. Moreover, it is
-    essential to decide on the content of each message, including any
-    attachments that need to be shared. This ensures that the messages
-    are clear, concise, and relevant to the collaboration.
+   During the preparation of a collaboration, it is important to
+   determine the roles of each team member and their communication
+   channels. This includes deciding on the message flow and the type of
+   information that is expected from each other. By setting agreements
+   and expectations beforehand, everyone involved knows their
+   responsibilities and can work more effectively. Moreover, it is
+   essential to decide on the content of each message, including any
+   attachments that need to be shared. This ensures that the messages
+   are clear, concise, and relevant to the collaboration.
 
-3.  **Parties have the freedom to shape the cooperation as desired.**
+3. **Parties have the freedom to shape the cooperation as desired.**
 
-    VISI is very flexible: The parties have the freedom to structure the
-    collaboration as is suitable for their project. VISI standardises
-    the way in which you digitally record roles, workflows and messages.
-    This requires software packages to be prepared to be able to read
-    and activate these flexible agreements per project or collaboration
-    so that VISI-based communication can be started.
+   VISI is very flexible: The parties have the freedom to structure the
+   collaboration as is suitable for their project. VISI standardises
+   the way in which you digitally record roles, workflows and messages.
+   This requires software packages to be prepared to be able to read
+   and activate these flexible agreements per project or collaboration
+   so that VISI-based communication can be started.
 
 ## VISI structures
 
@@ -95,24 +95,24 @@ called the VISI framework. During the implementation phase, project
 participants can focus on communication content rather than contract
 agreements.
 
--   Be sure that you are in the right place at the right time correct
-    process.
+- Be sure that you are in the right place at the right time correct
+  process.
 
--   Immediately see what information is available (who already said
-    something)
+- Immediately see what information is available (who already said
+  something)
 
--   Immediately see what information is needed and how it is done
-    process continues
+- Immediately see what information is needed and how it is done
+  process continues
 
--   Immediately see how much time you have to respond
+- Immediately see how much time you have to respond
 
--   Know that you are the right person participates in the process
+- Know that you are the right person participates in the process
 
--   Certainty that everything is done with the right mandate handled
-    with digital signature
+- Certainty that everything is done with the right mandate handled
+  with digital signature
 
--   Certainty that everything is secured for the future in accordance
-    with archive law
+- Certainty that everything is secured for the future in accordance
+  with archive law
 
 ### Examples of a project by means of VISI
 
@@ -126,8 +126,7 @@ amendment. After this, the Client can again send a rejection or
 acceptance, after which the contract change is stopped or accepted,
 respectively.
 
-![Contract
-change](images/visi-diagram-request-for-change-english.jpg)
+<img src="images/visi-diagram-request-for-change-english.jpg" alt="Contract change" width="1000"/>
 
 Example 2: Pizzeria\
 In this example, the interaction starts with the Waiter. The Customer
@@ -138,8 +137,7 @@ placing an order. For example, another transaction would be that the
 Customer asks for the bill to the Waiter, after which the Waiter brings
 the bill.
 
-![Pizzeria Customer
-Waiter](images/visi-diagram-customer-waiter-order.jpg)
+<img src="images/visi-diagram-customer-waiter-order.jpg" alt="Pizzeria Customer Waiter" width="1000"/>
 
 Example 3: Pizzeria\
 The waiter places the order with the cook. The Cook can accept or refuse
@@ -147,8 +145,7 @@ the order. Depending on the response of the Cook, a response is given to
 the Customer. For example, a question about order. It is structured in
 such a way that the Customer cannot communicate directly with the Cook.
 
-![Pizzeria Waiter
-Cook](images/visi-diagram-customer-waiter-cook-order.jpg)
+<img src="images/visi-diagram-customer-waiter-cook-order.jpg" alt="Pizzeria Waiter Cook" width="1000"/>
 
 ## VISI terminology
 
@@ -177,8 +174,7 @@ message consists of several fields, depending on the information
 required. Some parts of a message are fixed, such as the sender and the
 time of sending.
 
-![Message In Transaction
-Buildup](images/visi-diagram-MITT-1.jpg)
+<img src="images/visi-diagram-MITT-1.jpg" alt="Message In Transaction Buildup" width="1000"/>
 
 **Information in a message**\
 The content of a message can be compared to a form with fields. Such as:
@@ -199,11 +195,11 @@ Because appendices are added to a message, an appendix can always be
 placed in context afterwards. When was the appendix sent and with what
 state?
 
-1.  Approved/Rejected/Notification
+1. Approved/Rejected/Notification
 
-2.  Draft/Definitive
+2. Draft/Definitive
 
-3.  Date/Version
+3. Date/Version
 
 **Message sequence**\
 The messages are not only fillable, but the sequence of the messages is
@@ -222,8 +218,7 @@ transaction here refers to 'an agreement'. A transaction can be a
 request to do or deliver something. Often on the basis of pre-arranged
 agreements.
 
-![Initiator
-Executor](images/visi-diagram-transaction-1.jpg)
+<img src="images/visi-diagram-transaction-1.jpg" alt="Initiator Executor" width="1000"/>
 
 Within VISI, the so-called transaction is central: a binding agreement
 between two roles that agree on what must be done. In practice, a
@@ -239,7 +234,7 @@ Think, for example, of Ask from role A to role B to assess something.
 The framework provides the messages that can be used as a response. In
 the picture, this is message X or message Y.
 
-![Transaction buildup](images/visi-diagram-MITT-2.jpg)
+<img src="images/visi-diagram-MITT-2.jpg" alt="Transaction buildup" width="1000"/>
 
 Example 5: Construction project\
 The Projectprovider submits a document for approval, as agreed in the
@@ -247,8 +242,7 @@ contract. The Client may reject the document, after which a new document
 will be submitted. If the Client approves the document for approval, the
 transaction is completed.
 
-![Document for
-approval](images/visi-diagram-document-approval-1.jpg)
+<img src="images/visi-diagram-document-approval-1.jpg" alt="Document for approval" width="1000"/>
 
 Example 6: Construction project\
 The Project provider must submit a document for approval as agreed in
@@ -256,8 +250,7 @@ the contract. The Client wishes to ask one or more advisers to assess
 the document. We call this a connected transaction or sub-transaction.
 This transaction again takes place between two roles (no more, no less).
 
-![Document for approval-
-internal](images/visi-diagram-document-approval-2.jpg)
+<img src="images/visi-diagram-document-approval-2.jpg" alt="Document for approval-internal" width="1000"/>
 
 Example 7: Pizzeria\
 Another example is a waiter's request to a cook to prepare a certain
@@ -266,7 +259,7 @@ reported to the waiter as ready (Answer X) or it is reported that the
 pizza is ready. ingredients are not available (Answer Y) after which the
 transaction is completed.
 
-## Communicating based on a VISI framework {#sec:VisiFrameworkCommunication}
+## Communicating based on a VISI framework
 
 The whole of descriptions of roles, transactions, messages and data,
 which comprise the agreements and/or communication that can and may be
@@ -296,40 +289,34 @@ Example 8: Pizzeria\
 The role of \"waiter\" can be fulfilled by several people. A person can
 also be a waiter and dishwasher.
 
-|
-                  Person1   Person2   Person3   Person4   Person5   Person6
-  -------------- --------- --------- --------- --------- --------- ---------
-  Client             X         X                                   
-  Waiter                                 X         X               
-  Cook                                                       X     
-  Kitchen help                                     X         X         X
+|              | Person1 | Person2 | Person3 | Person4 | Person5 | Person6 |
+|--------------|---------|---------|---------|---------|---------|---------|
+| Client       | X       | X       |         |         |         |         |
+| Waiter       |         |         | X       | X       |         |         |
+| Cook         |         |         |         |         | X       |         |
+| Kitchen help |         |         |         | X       | X       | X       |
 
-  : \"Waiter\" role fulfillment
-|
+\"Waiter\" role fulfillment
 
 Example 9: Construction project\
 In a construction project, the distribution could look like this.
 
-|
-  -------- ------- ---------- ----------- -------------- ------------------- -------------------
-  Client   Advi-   Tester/    Project     Organisation   Name                Function
-           ser     Accepter   execution                                      
-  X                                       OG             Martijn Gerards     Client
-  X                                       OG             Marjon van Hagen    Project manager
-           X                              OG             WimSchilperoort     Controller
-           X                              OG             Hans Lijmbach       Contract manager
-           X                              OG             Iris Adegeest       Adviser
-                   X                      OG             Mario van Bemmel    Tester
-                   X                      OG             Peter Bloemers      Tester
-           X       X                      OG             Raj Dhaker          Cost expert
-                   X                      OG             Jose de Kwade       Technical Adviser
-                              X           ON             Arjen van der Hof   Project leader
-                              X           ON             Klaas Slot          Contractor
-                              X           ON             Jan van Geest       Planner
-  -------- ------- ---------- ----------- -------------- ------------------- -------------------
+| Client | Adviser | Tester/Accepter | Project execution | Organisation | Name              | Function          |
+|--------|---------|-----------------|-------------------|--------------|-------------------|-------------------|
+| X      |         |                 |                   | OG           | Martijn Gerards   | Client            |
+| X      |         |                 |                   | OG           | Marjon van Hagen  | Project manager   |
+|        | X       |                 |                   | OG           | WimSchilperoort   | Controller        |
+|        | X       |                 |                   | OG           | Hans Lijmbach     | Contract manager  |
+|        | X       |                 |                   | OG           | Iris Adegeest     | Adviser           |
+|        |         | X               |                   | OG           | Mario van Bemmel  | Tester            |
+|        |         | X               |                   | OG           | Peter Bloemers    | Tester            |
+|        | X       | X               |                   | OG           | Raj Dhaker        | Cost expert       |
+|        |         | X               |                   | OG           | Jose de Kwade     | Technical Adviser |
+|        |         |                 | X                 | ON           | Arjen van der Hof | Project leader    |
+|        |         |                 | X                 | ON           | Klaas Slot        | Contractor        |
+|        |         |                 | X                 | ON           | Jan van Geest     | Planner           |
 
-  : Construction project roles
-|
+Construction project roles
 
 ## Details of the framework
 
@@ -347,6 +334,7 @@ single transaction between two roles. The standard therefore offers the
 possibility to connect transactions with each other. For example, a
 business process can be supported using a set of connected
 transactions.\
+\
 Example 10: Pizzeria\
 Think of a customer of the pizzeria who enters into a transaction with a
 waiter to obtain a delicious pizza. Based on the transaction with the
@@ -360,21 +348,22 @@ something. If a role from one transaction initiates one or more
 transactions with another role, something must always come back from
 these secondary transactions. A secondary transaction must always end in
 the transaction from which it was initiated.\
+\
 **Conditions within a transaction**\
 In order to enforce certain dependencies in a transaction, conditions
 can be set at certain moments when creating a transaction. Think of the
 following:
 
--   Enforce message sequence. This means that messages can only be sent
-    after other messages have been received or that messages may only be
-    sent when other messages have not yet been received or that a
-    message may only be sent once.
+- Enforce message sequence. This means that messages can only be sent
+  after other messages have been received or that messages may only be
+  sent when other messages have not yet been received or that a
+  message may only be sent once.
 
--   You may or may not be allowed to initiate multiple secondary
-    transactions.
+- You may or may not be allowed to initiate multiple secondary
+  transactions.
 
--   You may or may not be allowed to edit or delete certain fields in a
-    message at some point in the transaction.
+- You may or may not be allowed to edit or delete certain fields in a
+  message at some point in the transaction.
 
 **Can a framework be supplemented or changed during a project?**\
 While using a VISI framework in a project or other collaboration, it is
@@ -383,12 +372,12 @@ or process requirements change or if predefined elements, such as
 selection lists in messages, need to be adjusted.\
 A number of things should always be kept in mind, namely:
 
--   Pending transactions are completed in the version of the framework
-    in which they were initiated. This means that a change to a
-    framework has no effect on current VISI communication.
+- Pending transactions are completed in the version of the framework
+  in which they were initiated. This means that a change to a
+  framework has no effect on current VISI communication.
 
--   A new version of the framework must be imported for all project
-    partners.
+- A new version of the framework must be imported for all project
+  partners.
 
 ## User guarantees
 
@@ -408,23 +397,26 @@ are archived together. A VISI application is expected to be able to read
 in a project so that a user can read the message traffic again and offer
 it as an offline project archive where the messages and appendices are
 preserved in the context of the workflow.\
+\
 **Control information: Monitoring cooperation progress**\
 You can see the progress of the collaboration for the entire project
 because you can check whether messages have been sent in accordance with
 the agreements. The delivery of monitoring data or control information
 across projects is not part of the standard, but is expected by users
 from the VISI applications.\
+\
 **Messages are not editable after sending**\
+\
 **Certification VISI compatible software**\
 Control questions:
 
--   Do reports for control information also have to be supported by
-    software or is this software dependent?
+- Do reports for control information also have to be supported by
+  software or is this software dependent?
 
--   How do you know the message content is correct?
+- How do you know the message content is correct?
 
--   How do you know your message has arrived?
+- How do you know your message has arrived?
 
--   How do you know that the right person has received the message?
+- How do you know that the right person has received the message?
 
--   How do you know that an authorised person wrote the message?
+- How do you know that an authorised person wrote the message?

@@ -8,7 +8,7 @@ a slightly different meaning than the generally accepted ones.
 Means of transferring information / exchanging data. A message is of a
 certain message type and is inextricably linked to a transaction. A
 message contains the data structure prescribed in the VISI framework.
-The message has a \"header\" that includes details of the involved
+The message has a "header" that includes details of the involved
 roles, the transaction, and the work to which the transaction relates.
 The body of the message contains the information to be transferred
 consisting of completed data elements, attached documents and references
@@ -39,9 +39,9 @@ elements.
 
 Method for modelling business processes. DEMO stands for 'Dynamic
 Essential Modelling of Organisations'. The method was developed by
-prof.dr.ir. J.L.G. Dietz of Delft University of Technology. \[see
+prof.dr.ir. J.L.G. Dietz of Delft University of Technology. [see
 "Introductie tot DEMO", 1996, Dietz, J.L.G., Samson, Alphen aan den
-Rijn; ISBN 9789014053271\]
+Rijn; ISBN 9789014053271]
 
 ### Executor
 
@@ -59,8 +59,8 @@ Role that initiates a transaction.
 
 ### Interaction Diagram (Interactiekaart)
 
-See [1.0.25](#glos:VISI-InteractionDiagram){reference-type="ref+label"
-reference="glos:VISI-InteractionDiagram"}.
+See [1.0.25](#visi-interaction-diagram-visi-interactiekaart).
+
 
 ### Project Specific Framework (Projectspecifiek raamwerk)
 
@@ -81,8 +81,7 @@ Promoter is made available by CROW.
 ### Framework (Raamwerk)
 
 Is used in this context in the sense of 'VISI framework'; see
-[1.0.28](#glos:VISI-Framework){reference-type="ref+label"
-reference="glos:VISI-Framework"}.
+[1.0.28](#visi-framework-visi-raamwerk).
 
 ### Role Description (Rolbeschrijving)
 
@@ -150,7 +149,7 @@ Software from a VISI supplier that complies with the VISI System
 Guideline as published by CROW, and which has been provided with the
 VISI quality mark by CROW.
 
-### VISI interaction diagram (VISI-interactiekaart) {#glos:VISI-InteractionDiagram}
+### VISI interaction diagram (VISI-interactiekaart)
 
 The schematic representation of a framework, intended to map the
 relevant roles and transactions for an existing process.
@@ -166,7 +165,7 @@ a positive result for the VISI compatibility feature.
 
 A supplier of VISI-compatible software.
 
-### VISI-Framework (VISI-raamwerk) {#glos:VISI-Framework}
+### VISI-Framework (VISI-raamwerk)
 
 The whole of descriptions of roles, transactions, messages and data,
 recorded in accordance with the VISI system, which contain the
@@ -196,7 +195,7 @@ exchange (such as XML, XSD and XSLT), which VISI uses.
 ### XML
 
 eXtensible Mark-up Language. The W3C standard file format for data
-exchange. XML files are readable text files with an \".xml\" extension.
+exchange. XML files are readable text files with an ".xml" extension.
 VISI frameworks and messages are captured in XML. A good introduction
 and interactive course on XML can be found on the W3C website
 (www.w3schools.com).
