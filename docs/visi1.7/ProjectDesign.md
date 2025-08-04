@@ -1441,11 +1441,6 @@ message to be sent in the primary transaction, then this way of
 responding is always allowed. So this rule restricts only the mandatory
 routes through sub-transactions.
 
-### received
-
-Boolean value indicating whether the previous message should have been
-received. In practice, this element is not used.
-
 ### responsibilityFeedback
 
 Feedback that is expected from the responsibility of the role towards
@@ -1510,6 +1505,11 @@ Some examples that are now widely used for base type STRING are:
   ```
       <xs:fractionDigits value="2"/><xs:fractionDigits value="2"/>
   ```
+
+### fileChecksum
+
+### sequence
+
 
 ## Appendix 12 Guidance for Element Conditions
 

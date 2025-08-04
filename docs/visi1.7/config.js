@@ -155,16 +155,6 @@ var respecConfig = {
           company:    "Gobar Adviseurs",
           companyURL: "https://gobar.nl/"
         },
-             {
-          name:       "Jeroen van Geijlswijk",
-          company:    "N/A",
-          companyURL: "https://www.digigo.nu/"
-        },
-       {
-          name:       "Michon Maas",
-          company:    "N/A",
-          companyURL: "https://www.digigo.nu/"
-        },
       ],
     // The github option allows you associate your specification with a repository on GitHub.
     github: "https://github.com/nl-digigo/visi",
