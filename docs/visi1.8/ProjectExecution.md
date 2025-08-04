@@ -99,10 +99,10 @@ Project: _badc9dab-807e-4319-bd56-60c57605e109;
 
 The regulations and rules that the message communication must comply with are recorded in a project communication template. This template contains the definition of roll types, message types and transaction types. The content of a message type is also defined in this template. This template is called a framework. The term template already indicates that it is a blueprint that the transactions and messages must comply with.
 
-\subsection{Attachments}
+## Attachments
 Each message can contain 0, 1 or more attachments. Attachment here means a binary file, such as a photo or document. The form is, for example, a jpg, pdf or zip file. The purpose of an attachment is to substantiate and/or clarify the information in the message.
 
-##Mandatory Attributes}
+### Mandatory Attributes
 Any binary file smaller than 10GB can be sent with a message. An additional requirement applies to the sum of all attachments of one message, namely that the combined size of the attachments is less than 10GB. There are no further requirements for the physical file. However, requirements are set for the properties/metadata of the appendix in accordance with the framework (see paragraaf 2.10 about AppendixType).
 
 In addition to the type, an attachment has a fixed set of mandatory default properties of the file, such as name, location, type, version and date. The name of the property indicates which information of the file should be recorded.
@@ -126,10 +126,10 @@ Inhoud: _04cdb00c-fd4d-4e58-b0ad-0cc19a3b07c9, _a1cd32d-ae5ed41-e0bc-1ee28b1c08d
 
 An appendix has a reference to the message of which it is a substantiation and/or clarification.
 
-##Optional properties}
+### Optional properties
 In addition to the mandatory properties, an appendix has many optional standard properties, which indicate a document as an attachment, such as: document identifier, document version, document reference.
 
-##Additional properties}
+### Additional properties
 It follows from the characterization in the project communication template (or framework) whether the appendix has additional properties. These additional properties are not mandatory. The structure of the additional properties is similar to the structure of a message. Where a message refers to 1 or more complex elements, an attachment refers to 0 or more complex elements. A complex element consists of simple elements. And a simple element has a value.
 
 
@@ -216,7 +216,7 @@ Unieke identificatie: Nummer
 Basis XML Type: INTEGER
 ```
 
-##Is an appendix required?}
+## Is an appendix required?
 For a certain type of message it can be enforced that at least 1 attachment must be added. Also which appendix type this should be can be enforced. These conditions are included in the project communication template (or framework) (zie paragraaf 2.1, 2.2, 2.7). A type of message has a flag (Yes/No) whether an appendix is required (zie paragraaf 2.2).
 
 

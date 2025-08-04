@@ -6,6 +6,7 @@ publisher of this document.\
 \
 With the publication of this version, all previous versions of the
 Guideline have expired. VISI software may still exist based on previous
+Guideline have expired. VISI software may still exist based on previous
 versions.\
 \
 The history is summarised in the table below.
