@@ -1,7 +1,7 @@
 <visiXML_MessageSchema xmlns="http://www.visi.nl/schemas/20250101/interaction_framework_visi1_8_in_1_8format_v_3h">
-	<ProjectType_testscenarios_visi id="VISI_Open_Standard_Certification_Project_for_Systematics_Version_1_8_BS_BS">
-		<name>VISI Open Standard Certification Project for Systematics Version 1.8 BS_BS</name>
-		<description>VISI Open Standard Certification Project for Systematics Version 1.8 BS_BS</description>
+	<ProjectType_testscenarios_visi id="VISI_Open_Standard_Certification_Project_for_Systematics_Version_1_8">
+		<name>VISI Open Standard Certification Project for Systematics Version 1.8</name>
+		<description>VISI Open Standard Certification Project for Systematics Version 1.8</description>
 		<state>active</state>
 		<dateLaMu>2025-03-04T14:26:27Z</dateLaMu>
 		<userLaMu>z</userLaMu>
