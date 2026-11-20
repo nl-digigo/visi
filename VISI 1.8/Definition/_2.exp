@@ -1,6 +1,6 @@
 SCHEMA visiXML_VISI_Systematics;
 
--- Complete model Part I, version 1.8, work version
+-- Complete model Part I, version 1.8
 
 ENTITY ProjectType;	--	The definition of a specific group of projects. Generally only one instance will be present in a interaction framework defining the structure of elements that each instance of project should expose.
  namespace : STRING;
@@ -118,7 +118,7 @@ ENTITY UserDefinedType;		--	A specification of a data type (to be used in a Simp
  helpInfo : OPTIONAL STRING;
 END_ENTITY;
 
-ENTITY OrganisationSequencePrefixType;	--	....
+ENTITY OrganisationSequencePrefixType;	--	The definition of a sequence prefix per organisation, used for automatic numbering of transactions.
  description : STRING; 
  dateLaMu : OPTIONAL DATETIME;
  userLaMu : OPTIONAL STRING;
