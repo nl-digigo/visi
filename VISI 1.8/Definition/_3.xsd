@@ -60,7 +60,7 @@
 	</xsd:element>
 	<xsd:element name="OrganisationSequencePrefixType" type="visi:OrganisationSequencePrefixTypeType">
 		<xsd:annotation>
-			<xsd:documentation>....</xsd:documentation>
+			<xsd:documentation>The definition of a sequence prefix per organisation, used for automatic numbering of transactions.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="OrganisationType" type="visi:OrganisationTypeType">
