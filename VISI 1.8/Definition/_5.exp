@@ -107,7 +107,7 @@ ENTITY OrganisationTemplate;
  dateLaMu : OPTIONAL DATETIME;
  userLaMu : OPTIONAL STRING;
  contactPerson : PersonTemplate;
- organisationSequencePrefixes : OrganisationSequencePrefixTemplate;
+ organisationSequencePrefixes : OPTIONAL SET [0:?] OF OrganisationSequencePrefixTemplate;
  template : ComplexElementTemplate;
 END_ENTITY;
 
