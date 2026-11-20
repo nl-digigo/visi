@@ -5455,7 +5455,7 @@
 							</xsd:choice>
 						</xsd:complexType>
 					</xsd:element>
-					<xsd:element name="organisationSequencePrefixes">
+					<xsd:element name="organisationSequencePrefixes" minOccurs="0">
 						<xsd:complexType>
 							<xsd:choice minOccurs="0" maxOccurs="unbounded">
 								<xsd:group ref="visi:OrganisationSequencePrefixTypeInstanceSet"/>
